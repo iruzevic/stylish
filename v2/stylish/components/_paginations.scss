@@ -1,0 +1,17 @@
+/* Pagination setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.pagination{
+  list-style: none; text-align: center;
+  li{
+    display: inline-block; margin: 0 3px;
+    a{
+      background-color: $pagination_item_bg; color: $pagination_item_text; font-size: 14px; padding: 10px;@include border-radius(4px);
+      &:hover{background-color: darken($pagination_item_bg, 8%)}
+    }
+
+    //Active / Current state
+    &.current a{ background-color: $pagination_item_current_bg; color:$pagination_item_current_text}
+  }
+}

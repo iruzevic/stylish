@@ -1,0 +1,58 @@
+/* GENERAL FONT DECLARATION */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Font Declaration */
+//@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
+//@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Setup Global Typography */
+body {color:$body_text_color; background:$body_background_color; font-family:$body_font_family; font-size: $p; @include font-smoothing();}
+h1 {font-size:$h1; line-height: $h1+3;}
+h2 {font-size:$h2; line-height: $h2+3;}
+h3 {font-size:$h3; line-height: $h3+3;}
+h4 {font-size:$h4; line-height: $h4+3;}
+h5 {font-size:$h5; line-height: $h5+3;}
+h6 {font-size:$h6; line-height: $h6+3;}
+p ,ul li{font-size:$p;line-height:$p+3;}
+a:not(.btn) {@include link_color();}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Setup content style for large texts */
+.content_style{
+  p{margin-bottom:$content_style_margin; font-size:$p; line-height:$p+3; }
+  img{
+    width: 100%; height: auto;
+    &.alignleft {clear: left;float: left; margin: 0 $content_style_margin $content_style_margin 0;}
+    &.alignright {clear: right;float: right;margin: 0 0 $content_style_margin $content_style_margin;}
+    &.no_res{ width: auto;}
+  }
+  ul, ol {overflow: hidden; margin-left:0; margin-bottom: $content_style_margin}
+  li{ margin-bottom: 5px}
+  ul li { margin-left:$content_style_margin+10px;font-size:$p;line-height:$p+3;}
+  ol li { margin-left:$content_style_margin+20px;font-size:$p;line-height:$p+3;}
+  h1,h2,h3,h4,h5,h6{ margin-bottom: 5px; font-weight: bold}
+  h1 {font-size:$h2; line-height: $h2+3;} //h1 is max font size on page, h1 in content style must be smaller than that.
+  h2 {font-size:$h3; line-height: $h3+3;}
+  h3 {font-size:$h4; line-height: $h4+3;}
+  h4 {font-size:$h5; line-height: $h5+3;}
+  h5 {font-size:$h6; line-height: $h6+3;}
+  h6 {font-size:$h6 - 3; line-height: $h6;}
+  address{font-size: $p;line-height: $p+3;}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Text colors */
+@include txt_color_generator;
+@include bg_color_generator;
+

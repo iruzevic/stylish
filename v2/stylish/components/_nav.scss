@@ -1,0 +1,30 @@
+/* Navigation setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+//Navigation with float left
+.nav{
+  li{
+    float: left;list-style: none;
+    a{display: block;text-align: center; padding: 0 15px 0 0}
+  }
+  @extend .clearfix
+}
+
+//Navigation with display inline
+.navi{
+  li{
+    display:inline-block; list-style: none; vertical-align: middle; margin-right: -6px;
+    a{display: block;text-align: center; padding: 0 15px 0 0}
+  }
+  @extend .clearfix
+}
+
+//Calculate navigation item width based on data-item attribute
+$i:12;
+@while $i > 0{
+  .nav[data-item="#{$i}"] li{ width:100%/$i; }
+  $i:$i - 1;
+}
+
+//Sticky Navigation
+.sticky{ position: fixed; top: 0; left: 0; width: 100%;}

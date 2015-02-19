@@ -1,0 +1,142 @@
+/* SETUP FLUID GRID */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Generate Grid ($num = number of columns) */
+@mixin col_width($num){
+  width:(100%/$grid_col_num) * $num;
+}
+
+/* Generate Pull width */
+@mixin col_pull($num){
+  margin-left:-(100%/$grid_col_num) * $num;
+}
+
+/* Generate Push width */
+@mixin col_push($num){
+  margin-left:(100%/$grid_col_num) * $num;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Grid col style */
+@mixin col_style(){
+  float: left;@include transition-property(all);@include transition-duration(.3s); min-width: 1px;min-height: 1px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Cols gutter - padding between cols */
+@mixin col_gutter($gutter:$gutter){
+  @if $gutter == 0 {
+    padding-left: 0;
+    padding-right: 0;
+  }@else{
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Grid correction for first and last col padding to align with container
+@mixin grid_correction($gutter:$gutter){
+  @if $gutter == 0 {
+    margin-left: 0;
+    margin-right: 0;
+  }@else{
+    margin-left: $gutter/2;
+    margin-right: $gutter/2;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Generate fluid grid  */
+.grid_fluid{
+
+  //grid with out gutter
+  [class*='col_']{
+    @include col_style();
+  }
+
+  //grid with default gutter between cols
+  &.gutter{
+    @include grid_correction((-$gutter));
+
+    //add gutter to col
+    [class*='col_']{
+      @include col_gutter();
+    }
+  }
+
+  //grid with quarter gutter between cols
+  &.gutter_quarter{
+    @include grid_correction(-$gutter/4);
+
+
+    [class*='col_']{
+      @include col_gutter($gutter/4);
+    }
+  }
+
+  //grid with half gutter between cols
+  &.gutter_half{
+    @include grid_correction(-$gutter/2);
+
+
+    [class*='col_']{
+      @include col_gutter($gutter/2);
+    }
+  }
+
+  //grid with double gutter between cols
+  &.gutter_double{
+    @include grid_correction(-$gutter*2);
+
+
+    [class*='col_']{
+      @include col_gutter($gutter*2);
+    }
+  }
+
+  //grid with triple gutter between cols
+  &.gutter_triple{
+    @include grid_correction(-$gutter*3);
+
+
+    [class*='col_']{
+      @include col_gutter($gutter*3);
+    }
+  }
+
+  //grid with no gutter between cols (correct gutter if you have nested classes)
+  &.no_gutter{
+    @include grid_correction(0);
+
+    [class*='col_']{
+      @include col_gutter(0);
+    }
+  }
+
+  @extend .clearfix;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Display classes for grid(cols) width
+@for $i from 1 to $grid_col_num+1{
+  .col_#{$i}{@include col_width($i)}
+  .pull_#{$i}{@include col_pull($i)}
+  .push_#{$i}{@include col_push($i)}
+}

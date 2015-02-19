@@ -1,0 +1,51 @@
+/* MY RESET STYLE */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+:focus {outline:0;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0; font-weight: normal}
+strong {font-weight:bold;}
+em, dfn {font-style:italic;}
+dfn {font-weight:bold;}
+sup, sub {line-height:0;}
+li ul, li ol {margin:0;line-height:1.8;}
+ul {list-style-type:disc;margin:0}
+ol {list-style-type:decimal;margin:0}
+
+
+/* Layout Reset Style */
+* {@include box-sizing(border-box);}
+.last   {margin-right:0}
+.first  {margin-left:0}
+.hide   {display:none}
+.show   {display:block}
+.left   {float:left}
+.right  {float:right}
+.no_br,
+.nobr   {white-space: nowrap;}
+
+
+/* Margin and Padding clear */
+.padding_clear_left   { padding-left: 0}
+.padding_clear_right  { padding-right: 0}
+.padding_clear_top    { padding-top: 0}
+.padding_clear_bottom { padding-bottom: 0}
+.padding_clear        { padding: 0}
+
+.margin_clear_left    { margin-left: 0}
+.margin_clear_right   { margin-right: 0}
+.margin_clear_top     { margin-top: 0}
+.margin_clear_bottom  { margin-bottom: 0}
+.margin_clear         { margin: 0}
+
+
+
+/* Text align */
+.aleft,   .a_left,   .a-left    {text-align:left}
+.aright,  .a_right,  .a-right   {text-align:right}
+.acenter, .a_center, .a-center  {text-align:center}
+
+
+/* Floating Clear */
+.clearfix:after {content: "";display: table;clear: both;}
+.clear {clear:both}

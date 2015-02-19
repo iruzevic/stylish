@@ -1,0 +1,19 @@
+/* GRIDS LAYOUTS */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Container */
+.container{
+  @include container();
+  &.full{padding-left: 0; padding-right: 0}
+}
+
+
+//Container with only padding
+.container_clean{
+  padding-left: $container_gutter; padding-right: $container_gutter;
+}
+
+
+//Include spacers
+@include spacers();

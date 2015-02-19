@@ -1,0 +1,75 @@
+/* Modal window setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.modal{
+  position:fixed; left:0; top:0; width:100%; height:100%;visibility:hidden;@include opacity(0);z-index:-50; display: table;
+
+  //Overlay
+  .modal_overlay{position:fixed; left:0; top:0; width:100%; height:100%; visibility: hidden;@include opacity(0);@include transition-property(opacity);@include transition-duration(.3s);}
+
+  //Position modal in the middle of the screen on scale
+  .modal_wrap{ display: table-cell; height: 100%; vertical-align: middle; padding: 0 $gutter}
+
+  //Modal content
+  .modal_content{padding: 30px; background-color: $color_white; margin: 0 auto; max-width:$container_max_width/2; position: relative;@include transition-property(all);@include transition-duration(.4s);}
+
+  //Active (opened state)
+  &.active{
+    @include opacity(1); z-index: 99999; visibility: visible;
+    .modal_overlay{@include opacity(1); visibility: visible;background-color: rgba($color_mine_shaft, 0.7);}
+  }
+
+  //Close modal button
+  .close_modal{
+    position: absolute; right: 10px; top: 10px; font-size: 20px;@extend .sy_icons;
+    &:before{@extend .sy_remove:before;}
+  }
+
+  //Load modal from the top
+  &[data-slide="top"]{
+    .modal_wrap{ vertical-align: top;}
+    .modal_content{ margin-top: -20%}
+
+    &.active{
+      .modal_content{ margin-top:80px;}
+    }
+  }
+
+  //Load modal from the bottom
+  &[data-slide="bottom"]{
+    .modal_wrap{ vertical-align: bottom;}
+    .modal_content{ margin-bottom: -20%}
+
+    &.active{
+      .modal_content{ margin-bottom:80px;}
+    }
+  }
+
+  //Load modal from the left
+  &[data-slide="left"]{
+    .modal_content{ margin:0 0 0 -20%; float: left}
+
+    &.active{
+      .modal_content{ margin:0 0 0 80px;}
+    }
+  }
+
+  //Load modal from the right
+  &[data-slide="right"]{
+    .modal_content{ margin:0 -20% 0 0;float: right}
+
+    &.active{
+      .modal_content{ margin:0 80px 0 0; }
+    }
+  }
+
+  //Load modal by scale
+  &[data-slide="scale"]{
+    .modal_content{@include scale(0.6)}
+
+    &.active{
+      .modal_content{ @include scale(1)}
+    }
+  }
+}

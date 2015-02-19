@@ -1,0 +1,47 @@
+/* BUTTONS STYLES */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.btn,
+button,
+input[type=submit],
+input[type=button],
+input[type=reset]{
+  margin: 0; font-size: 14px; padding: 10px 20px; line-height: 20px; text-transform: uppercase;border: 1px solid; text-align: center; width: 100%; display: block; text-decoration: none; cursor: pointer; font-family: $body_font_family;@include transition-property(all);@include transition-duration(.3s);@include border-radius(4px); @include btn_color(); @include appearance(none); @include font-smoothing();
+
+  // set rounded buttons to strait
+  &.no_radius{@include border-radius(0);}
+
+  //Full rounded buttons
+  &.rounded{@include border-radius(20px);}
+
+  //Disabled buttons
+  &.disabled, &:disabled{ background-color:$btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_text!important }
+
+  //Set button to auto width
+  &.auto_width{width: auto; display: inline-block;}
+
+  //Icon in button
+  &.btn_icon,
+  &.btn_icon_left,
+  &.btn_icon_right{
+    i, .icon{ font-size: 18px; vertical-align: middle; }
+  }
+
+  &.btn_icon_left{
+    i, .icon{   padding-right: 15px;  }
+  }
+
+  &.btn_icon_right{
+    i, .icon{  padding-left: 15px; }
+  }
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* Buttons Colors */
+  @include btn_color_generator();
+
+}
+
+

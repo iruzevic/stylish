@@ -1,0 +1,146 @@
+// GLOBAL VARIABLES SETUP
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Setup Colors
+// Declare color variables to use thru entire project
+//(use this page to name your colors http://chir.ag/projects/name-that-color/)
+$color_mine_shaft:       #272727;
+$color_havelock_blue:    #3a89cd;
+$color_flush_mahogany:   #cd3a3a;
+$color_emerald:          #3acd60;
+$color_earls_green:      #cdc43a;
+$color_amethyst:         #bd3acd;
+$color_raw_sienna:       #cd833a;
+$color_dove_gray:        #666666;
+$color_dove_gray_light:  #999999;
+$color_silver:           #c5c5c5;
+$color_mercury:          #e5e5e5;
+$color_white:            #fff;
+
+
+//Create color scheme for buttons and text colors
+// 1. item - color name
+// 2. item - default color
+// 3. item - hover color for buttons (not used on text color)
+$color_schemes:
+'mine_shaft'        $color_mine_shaft       $color_white,
+'havelock_blue'     $color_havelock_blue    $color_white,
+'flush_mahogany'    $color_flush_mahogany   $color_white,
+'emerald'           $color_emerald          $color_white,
+'earls_green'       $color_earls_green      $color_white,
+'amethyst'          $color_amethyst         $color_white,
+'raw_sienna'        $color_raw_sienna       $color_white,
+'dove_gray'         $color_dove_gray        $color_white,
+'dove_gray_light'   $color_dove_gray_light  $color_white,
+'silver'            $color_silver           $color_mine_shaft,
+'mercury'           $color_mercury          $color_mine_shaft,
+'white'             $color_white            $color_mine_shaft;
+
+
+
+// Default Link color - Setup color states for link_color mixin
+$primary_link_color:  $color_havelock_blue;
+$hover_link_color:    $color_flush_mahogany;
+
+
+// Default Button color setup - Setup buttons default colors btn_color mixin
+$button_background_color: $color_havelock_blue;
+$button_text_color:       $color_white;
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Typography
+$body_font_family:        Arial, Helvetica, sans-serif; //body font family
+$body_background_color:   $color_white;  //body bg color
+$body_text_color:         $color_mine_shaft;  //body text color
+
+$h1:  38px; //H1 size
+$h2:  35px; //H2 size
+$h3:  32px; //H3 size
+$h4:  29px; //H4 size
+$h5:  26px; //H5 size
+$h6:  23px; //H6 size
+$p:   20px; //P size
+
+$content_style_margin:    20px; //content style margin move for p, ul, img and other
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Grid Fluid
+$gutter:        40px; //fluid grid gutter padding
+$grid_col_num:  12;   //fluid grid max columns number
+
+
+// Grid Sidebar Fix
+$sidebar_width:   300px; //fixed sidebar grid, sidebar width
+$gutter_fix:      $gutter; //fixed sidebar grid, padding between main fluid col and fixed sidebar
+
+
+// Grid
+$container_max_width: 1440px; //max widthe for page container
+$container_gutter:    $gutter/2; //container padding left / right
+$responsive:          true; // set true or false if using responsive
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Forms
+$input_border:        $color_mercury; //input border color
+$input_text:          $color_mine_shaft; //input text color
+$input_bg:            $color_white; //input bg color
+$input_focus:         $color_havelock_blue; //input box shadow color on focus
+$input_disabled_bg:   $color_silver; //input bg color for disabled state
+$input_disabled_text: $color_dove_gray; //input text color for disabled state
+$input_placeholder:   $color_mercury; //input placeholder color
+$input_height:        42px; //input height
+
+$checkbox_bg:         $input_bg; //checkbox bg color
+$checkbox_border:     $input_border; //checkbox border color
+$checkbox_active:     $color_havelock_blue; //checkbox icon color on active state
+$checkbox_size:       24px; //checkbox width and height
+$checkbox_icon_size:  ($checkbox_size - 8); //checkbox icon size
+
+$radio_bg:            $input_bg; //radio bg color
+$radio_border:        $input_border; //radio border color
+$radio_active:        $checkbox_active; //radio icon color on active state
+$radio_size:          $checkbox_size; //radio width and height
+$radio_icon_size:     $checkbox_icon_size; //radio icon size
+
+$btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
+$btn_disabled_text:   $color_white; //button text color for disabled state
+$btn_reset_bg:        $input_disabled_bg; //button reset bg color
+$btn_reset_text:      $color_white; //button reset text color
+
+$form_error:          $color_flush_mahogany;  //form error color
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Components
+$accordion_head_color:      $color_silver; //accordion header bg color
+$accordion_content_color:   $color_mercury; //accordion content bg color
+
+$tabs_line_color:   $color_dove_gray_light;  //tabs lines color
+
+$table_head_border:   $color_havelock_blue;  //table head border bottom color
+$table_body_border:   $color_mercury; //table body border bottom color
+$table_footer_border: $table_head_border; //table footer border bottom color
+
+$pagination_item_bg:            $color_mercury;  //pagination item bg color
+$pagination_item_text:          $color_mine_shaft; //pagination item text color
+$pagination_item_current_bg:    $color_havelock_blue;  //pagination current item bg color
+$pagination_item_current_text:  $color_white; //pagination current item text color
+
+$msg_error:     #f2a89c;  //error notification color
+$msg_success:   #c4dcc0;  //success  notification color
+$msg_notice:    #c0cddc;  //notice  notification color
+$msg_warning:   #e1e696;  //warning  notification color
+
+$divider_border_color: $color_dove_gray_light; //divider border bottom color

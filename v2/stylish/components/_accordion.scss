@@ -1,0 +1,12 @@
+/* Accordion setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.accordion{
+  .a_head{
+    background-color: $accordion_head_color; padding: 10px; cursor: pointer;
+    i{ float: right}
+    &.active i{@include rotate(180deg);}
+  }
+  .a_content{ display: none; background-color: $accordion_content_color; padding: 20px 10px;}
+}

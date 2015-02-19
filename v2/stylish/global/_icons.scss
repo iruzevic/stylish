@@ -1,0 +1,113 @@
+/* STYLISH ICONS SETUP */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Font Declaration */
+@include font_face('stylish', '../fonts/stylish');
+
+
+
+[class^="sy_"], [class*=" sy_"],.sy_icon, .sy_icons {
+  font-family: 'stylish';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display:inline-block;
+  @include font-smoothing();}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Make icons spin
+.icon_spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Icons */
+.sy_arrow_down:before {
+  content: "\e600";
+}
+.sy_arrow_left:before {
+  content: "\e601";
+}
+.sy_arrow_right:before {
+  content: "\e602";
+}
+.sy_arrow_up:before {
+  content: "\e603";
+}
+.sy_check:before {
+  content: "\e604";
+}
+.sy_check_round:before {
+  content: "\e605";
+}
+.sy_circle:before {
+  content: "\e606";
+}
+.sy_info:before {
+  content: "\e607";
+}
+.sy_info_round:before {
+  content: "\e608";
+}
+.sy_menu:before {
+  content: "\e609";
+}
+.sy_plus:before {
+  content: "\e60a";
+}
+.sy_remove:before {
+  content: "\e60b";
+}
+.sy_remove_round:before {
+  content: "\e60c";
+}
+.sy_warning:before {
+  content: "\e60d";
+}

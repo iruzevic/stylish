@@ -1,0 +1,232 @@
+/* MIXINS STYLES */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Setup Link color states */
+@mixin link_color($color:$primary_link_color, $color_hover:$hover_link_color){
+  color: $color;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition-property(color);
+  @include transition-duration(.3s);
+  &:hover{
+    color: $color_hover;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Setup buttons colors */
+@mixin btn_color($bg:$button_background_color, $text:$button_text_color, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
+  background-color: $bg;
+  color: $text;
+  @if not $border{
+    border-color: $bg;
+  }@else{
+    border-color: $border;
+  }
+
+  &:hover, &.active{
+    @if not $bg_hover{
+      background-color: darken($bg, 8%);
+    }@else{
+      background-color: $bg_hover;
+    }
+
+    @if not $text_hover{
+      color: $text;
+    }@else{
+      color: $text_hover;
+    }
+
+    @if not $border_hover{
+      border-color: darken($bg, 8%);
+    }@else{
+      border-color: $border_hover;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Font Declaration mixin (not using compasses default mixin) */
+@mixin font_face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+
+  /* Font Declaration workaround for better smoothing */
+  @media screen and (-webkit-min-device-pixel-ratio:0){
+    @font-face{
+      font-family:$font-family;
+      src:url('#{$file-path}.svg') format('svg');
+      font-weight: $weight;
+      font-style: $style;}
+  }
+}
+
+/* Font Declaration */
+//@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
+//@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Placeholder mixin
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+  .placeholder,.placeholderjs {@content}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Grid Container */
+@mixin container($value: $responsive){
+  margin: 0 auto; padding-left: $container_gutter; padding-right: $container_gutter;
+  @if $value == true{
+    width: 100%; max-width: $container_max_width; 
+  } @else {
+    width: $container_max_width;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//For better font smoothing and fix button weight problem on mac
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generating text colors
+@mixin txt_color_generator(){
+  @each $scheme in $color_schemes {
+
+    $name:  nth($scheme, 1);
+    $color: nth($scheme, 2);
+    $hover: nth($scheme, 3);
+
+    .txt_#{$name}{
+      color: $color;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generating bg colors
+@mixin bg_color_generator(){
+  @each $scheme in $color_schemes {
+
+    $name:  nth($scheme, 1);
+    $color: nth($scheme, 2);
+    $hover: nth($scheme, 3);
+
+    .bg_#{$name}{
+      background-color: $color;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generating button colors
+@mixin btn_color_generator(){
+  @each $scheme in $color_schemes {
+
+    $name:  nth($scheme, 1);
+    $color: nth($scheme, 2);
+    $hover: nth($scheme, 3);
+
+    &.btn_#{$name}{
+      @include btn_color($color, $hover)
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Checkbox size
+@mixin checkbox_size($size:$checkbox_size, $size_icon:$checkbox_icon_size){
+  .checkbox{
+    line-height:$size;
+
+    label { min-height:$size; padding-left:$size+15; }
+
+    // icon
+    .checkbox_icon {
+      width: $size;height: $size; margin-top: -$size/2; line-height: $size;
+      &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; line-height: $size_icon;}
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Radio size
+@mixin radio_size($size:$radio_size, $size_icon:$radio_icon_size) {
+  .radio{
+    line-height: $size;
+
+    label{ min-height: $size; padding-left: $size+15; }
+
+    // icon
+    .radio_icon{
+      width: $size; height: $size; margin-top: -$size/2; line-height: $size; @include border-radius(50%);
+      &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; @include border-radius(50%) }
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Spacers margin and padding
+@mixin spacers(){
+  $i:100;
+  @while $i > 0{
+    .mar_bottom#{$i}{ margin-bottom:#{$i}px;}
+    .mar_top#{$i}   { margin-top:#{$i}px}
+    .pad_bottom#{$i}{ padding-bottom:#{$i}px;}
+    .pad_top#{$i}   { padding-top:#{$i}px}
+    $i:$i - 10;
+  }
+}

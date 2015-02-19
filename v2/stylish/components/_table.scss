@@ -1,0 +1,30 @@
+/* Tables setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+table{
+  width: 100%;
+  th,td{
+    padding: 10px 15px;border-bottom: 1px solid;
+    &.first{ padding-left: 0}
+    &.last{ padding-right: 0}
+  }
+
+  //Table Head
+  thead{
+    th{border-bottom-color: $table_head_border; font-weight: bold; text-transform: uppercase}
+  }
+
+  //Table Body
+  tbody:not(.no_bg_change){
+    tr{
+      th,td{ border-bottom-color:$table_body_border;}
+      &:nth-child(odd) td{ background-color: lighten($table_body_border, 7%)}
+    }
+  }
+
+  //Table Footer
+  tfoot{
+    td{ border-bottom-color: $table_footer_border;}
+  }
+}

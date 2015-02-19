@@ -1,0 +1,35 @@
+/* Messages block setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.messages, .msg{
+  margin-bottom: 30px;
+  li{
+    color: $color_mine_shaft; list-style: none;padding:10px 10px 10px 55px;@include border-radius(4px);font-size: 14px; position: relative; margin-bottom: 20px;
+    &:before{@extend .sy_icon;font-size: 30px; position: absolute; left: 15px; top: 50%; margin-top: -15px;}
+    &:last-child{ margin-bottom: 0}
+    li{
+      padding: 0; margin: 0;
+    }
+    &.error-msg,
+    &.error_msg{
+      background-color: $msg_error;
+      &:before{@extend .sy_remove_round:before; }
+    }
+    &.success-msg,
+    &.success_msg{
+      background-color: $msg_success;
+      &:before{@extend .sy_check_round:before; }
+    }
+    &.notice-msg,
+    &.notice_msg{
+      background-color: $msg_notice;
+      &:before{@extend .sy_info_round:before; }
+    }
+    &.warning-msg,
+    &.warning_msg{
+      background-color: $msg_warning;
+      &:before{@extend .sy_warning:before; }
+    }
+  }
+}
