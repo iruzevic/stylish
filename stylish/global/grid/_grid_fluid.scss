@@ -32,12 +32,14 @@
 
 /* Cols gutter - padding between cols */
 @mixin col_gutter($gutter:$gutter){
-  @if $gutter == 0 {
-    padding-left: 0;
-    padding-right: 0;
-  }@else{
-    padding-left: $gutter/2;
-    padding-right: $gutter/2;
+  [class*='col_']{
+    @if $gutter == 0{
+      padding-left: 0;
+      padding-right: 0;
+    } @else{
+      padding-left: $gutter/2;
+      padding-right: $gutter/2;
+    }
   }
 }
 
@@ -51,8 +53,8 @@
 
 
     @media screen and (max-width: $screen_large) {
-     .hide_l{ display: none}
-     .show_l{ display: block}
+      .hide_l{ display: none}
+      .show_l{ display: block}
     }
 
 
@@ -95,9 +97,7 @@
 @mixin grid_generate($grid_name:fluid, $grid_gutter: $gutter) {
   .grid_#{$grid_name}{
     @include grid_correction((-$grid_gutter));
-    [class*='col_']{
-      @include col_gutter($grid_gutter);
-    }
+    @include col_gutter($grid_gutter);
     @extend .clearfix;
   }
 }
@@ -107,13 +107,21 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+//Predefined gutter sizes
+$gutter_quarter:$gutter/4;
+$gutter_half:$gutter/2;
+$gutter_double:$gutter*2;
+$gutter_triple:$gutter*3;
+$gutter_clean:0;
+
+
 /* Generate fluid grid  */
 @include grid_generate();
-@include grid_generate(quarter,$gutter/4);
-@include grid_generate(half,$gutter/2);
-@include grid_generate(double,$gutter*2);
-@include grid_generate(triple,$gutter*3);
-@include grid_generate(clean,0);
+@include grid_generate(quarter,$gutter_quarter);
+@include grid_generate(half,   $gutter_half);
+@include grid_generate(double, $gutter_double);
+@include grid_generate(triple, $gutter_triple);
+@include grid_generate(clean,  $gutter_clean);
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

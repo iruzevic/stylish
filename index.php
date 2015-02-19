@@ -180,7 +180,7 @@
                         <div class="content content_style">
                             <p><strong>Download</strong></p>
                             <ul class="list">
-                                <li><a href="https://bitbucket.org/mustra/stylish/downloads" target="_blank">https://bitbucket.org/mustra/stylish-framework/downloads</a></li>
+                                <li><a href="https://bitbucket.org/mustra/stylish/downloads" target="_blank">https://bitbucket.org/mustra/stylish/downloads</a></li>
                             </ul>
                             <br/><br/><br/>
                             <p><strong>Bitbucket repository</strong></p>
