@@ -180,12 +180,12 @@
                         <div class="content content_style">
                             <p><strong>Download</strong></p>
                             <ul class="list">
-                                <li><a href="https://bitbucket.org/mustra/stylish-framework/downloads" target="_blank">https://bitbucket.org/mustra/stylish-framework/downloads</a></li>
+                                <li><a href="https://bitbucket.org/mustra/stylish/downloads" target="_blank">https://bitbucket.org/mustra/stylish-framework/downloads</a></li>
                             </ul>
                             <br/><br/><br/>
                             <p><strong>Bitbucket repository</strong></p>
                             <ul class="list">
-                                <li><a href="https://mustra@bitbucket.org/mustra/stylish-framework.git" target="_blank">https://mustra@bitbucket.org/mustra/stylish-framework.git</a></li>
+                                <li><a href="https://bitbucket.org/mustra/stylish" target="_blank">https://bitbucket.org/mustra/stylish</a></li>
                             </ul>
                         </div>
                     </div>
