@@ -28,7 +28,7 @@
             <h2>Versions</h2>
             <ul>
                 <li><a href="/v2" class="top_link"><i class="fa fa-star"></i>Version2</a></li>
-                <li><a href="/" class="top_link active"><i class="fa fa-star"></i>Version3</a></li>
+                <li><a href="/" class="top_link current"><i class="fa fa-star"></i>Version3</a></li>
             </ul>
             <br/><br/><br/>
             <h2>Instructions</h2>
