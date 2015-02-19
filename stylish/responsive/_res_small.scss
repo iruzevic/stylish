@@ -8,32 +8,32 @@
   @if $responsive == true{
 
 
-    /* Fluid grid stretch full width */
-    .grid_fluid
-    {
-      margin: 0;
-      [class*='col_']{
-        width: 100%; padding:0; float: none;
-      }
-    }
-
-    /* Fixed sidebar grid hide sidebar */
-
-    .grid_fix{
-      .fluid_col,
-      .fixed_col
-      {margin:0; float: none; width: 100%; position: static; height: auto }
-      &.grid_fix_left{
-        .fluid_col{
-          .fluid_wrap{ margin-left: 0;}
-        }
-      }
-      &.grid_fix_right{
-        .fluid_col{
-          .fluid_wrap{ margin-right: 0;}
-        }
-      }
-    }
+//    /* Fluid grid stretch full width */
+//    .grid_fluid
+//    {
+//      margin: 0;
+//      [class*='col_']{
+//        width: 100%; padding:0; float: none;
+//      }
+//    }
+//
+//    /* Fixed sidebar grid hide sidebar */
+//
+//    .grid_fix{
+//      .fluid_col,
+//      .fixed_col
+//      {margin:0; float: none; width: 100%; position: static; height: auto }
+//      &.grid_fix_left{
+//        .fluid_col{
+//          .fluid_wrap{ margin-left: 0;}
+//        }
+//      }
+//      &.grid_fix_right{
+//        .fluid_col{
+//          .fluid_wrap{ margin-right: 0;}
+//        }
+//      }
+//    }
 
 
 

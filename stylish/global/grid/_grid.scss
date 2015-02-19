@@ -11,8 +11,10 @@
   &.container_clean{padding-left: 0; padding-right: 0; overflow: hidden}
 
   //Override max width and push container full width (unable to use if not using responsive)
-  &.liquid{@include container_size(inherit)}
+  &.liquid,
+  &.container_liquid{@include container_size(inherit)}
 }
+
 
 //Container corrections for different types of grid
 @include container_generate(quarter,$gutter/8);

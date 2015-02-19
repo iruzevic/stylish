@@ -45,6 +45,41 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+//Grid utilities for different page sizes
+@mixin grid_utilities(){
+  @if $responsive == true{
+
+
+    @media screen and (max-width: $screen_large) {
+     .hide_l{ display: none}
+     .show_l{ display: block}
+    }
+
+
+    @media screen and (max-width: $screen_medium) {
+      .hide_m{ display: none}
+      .show_m{ display: block}
+    }
+
+
+    @media screen and (max-width: $screen_small) {
+      .hide_s{ display: none}
+      .show_s{ display: block}
+    }
+
+    @media screen and (max-width: $screen_xsmall) {
+      .hide_xs{ display: none}
+      .show_xs{ display: block}
+    }
+
+
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 // Grid correction for first and last col padding to align with container
 @mixin grid_correction($gutter:$gutter){
   @if $gutter == 0 {
@@ -84,12 +119,49 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Display classes for grid(cols) width
-@for $i from 1 to $grid_col_num+1{
-  .col_#{$i} {@include col_width($i)}
-  .pull_#{$i}{@include col_pull($i)}
-  .push_#{$i}{@include col_push($i)}
-}
 
 //Standard col style
 [class*='col_']{ @include col_style(); }
+
+@include grid_utilities();
+
+//Display classes for grid(cols) width
+@for $i from 1 to $grid_col_num+1{
+
+  .col_#{$i} {@include col_width($i)}
+  .pull_#{$i}{@include col_pull($i)}
+  .push_#{$i}{@include col_push($i)}
+
+  @if $responsive == true{
+
+
+    @media screen and (max-width: $screen_large) {
+      .col_l_#{$i} {@include col_width($i)}
+      .pull_l_#{$i}{@include col_pull($i)}
+      .push_l_#{$i}{@include col_push($i)}
+    }
+
+
+    @media screen and (max-width: $screen_medium) {
+      .col_m_#{$i} {@include col_width($i)}
+      .pull_m_#{$i}{@include col_pull($i)}
+      .push_m_#{$i}{@include col_push($i)}
+    }
+
+
+    @media screen and (max-width: $screen_small) {
+      .col_s_#{$i} {@include col_width($i)}
+      .pull_s_#{$i}{@include col_pull($i)}
+      .push_s_#{$i}{@include col_push($i)}
+    }
+
+    @media screen and (max-width: $screen_xsmall) {
+      .col_xs_#{$i} {@include col_width($i)}
+      .pull_xs_#{$i}{@include col_pull($i)}
+      .push_xs_#{$i}{@include col_push($i)}
+    }
+
+
+  }
+}
+

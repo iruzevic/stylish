@@ -40,6 +40,29 @@
             <br/><br/><br/>
             <h2>Mockups</h2>
             <ul>
+                <li><a href="/grid_fluid.php" class="top_link" target="_blank"><i class="fa fa-star"></i>Fluid Grid</a></li>
+                <li><a href="/grid_fixed.php" class="top_link" target="_blank"><i class="fa fa-star"></i>Fixed Sidebar Grid</a></li>
+                <li>
+                    <a href="#form" class="top_link"><i class="fa fa-star"></i>Form Fields</a>
+                    <ul>
+                        <li><a href="#form" class="scoll" data-scroll="select">Select field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="radio">Radio field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="checkbox">Checkbox field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="text">Text field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="tel">Tel field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="number">Number field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="email">Email field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="url">URL field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="date">Date Time field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="password">Password field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="search">Search field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="textarea">Textarea field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="upload">Upload field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="field_error">Error field</a></li>
+                        <li><a href="#form" class="scoll" data-scroll="js_form">JS manual</a></li>
+
+                    </ul>
+                </li>
                 <li>
                     <a href="#modal" class="top_link"><i class="fa fa-star"></i>Modal</a>
                     <ul>
@@ -62,36 +85,9 @@
                     </ul>
                 </li>
                 <li><a href="#tabs" class="top_link"><i class="fa fa-star"></i>Tabs</a></li>
-                <li>
-                    <a href="#grid" class="top_link"><i class="fa fa-star"></i>Grid</a>
-                    <ul>
-                        <li><a href="#grid" class="scoll" data-scroll="fluid_nogutter">Fluid Grid No Gutter</a></li>
-                        <li><a href="#grid" class="scoll" data-scroll="fluid">Fluid Grid With Gutter</a></li>
-                        <li><a href="#grid" class="scoll" data-scroll="fixed_right">Fixed Sidebar Right</a></li>
-                        <li><a href="#grid" class="scoll" data-scroll="fixed_left">Fixed Sidebar Left</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#form" class="top_link"><i class="fa fa-star"></i>Form Fields</a>
-                    <ul>
-                        <li><a href="#form" class="scoll" data-scroll="select">Select field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="radio">Radio field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="checkbox">Checkbox field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="text">Text field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="tel">Tel field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="number">Number field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="email">Email field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="url">URL field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="date">Date Time field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="password">Password field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="search">Search field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="textarea">Textarea field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="upload">Upload field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="field_error">Error field</a></li>
-                        <li><a href="#form" class="scoll" data-scroll="js_form">JS manual</a></li>
 
-                    </ul>
-                </li>
+
+
                 <li><a href="#table" class="top_link"><i class="fa fa-star"></i>Table</a></li>
                 <li><a href="#divider" class="top_link"><i class="fa fa-star"></i>Divider</a></li>
                 <li>

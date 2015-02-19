@@ -99,7 +99,8 @@ $responsive:    true; // set true or false if using responsive
 //Set break points starting from full screen scaling down to mobile
 $screen_large:  1200px;// Small Screen desktop devices
 $screen_medium: 990px; // Tablet devices
-$screen_small:  768px; // Mobile phone devices
+$screen_small:  768px; // Larger phone and smaller tablet devices
+$screen_xsmall: 550px; // Mobile phone devices
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
