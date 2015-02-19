@@ -25,6 +25,12 @@
     <div class="grid_clean">
         <aside id="sidebar" class="col_3">
             <img id="logo" src="preview/logo.png" />
+            <h2>Versions</h2>
+            <ul>
+                <li><a href="/v2" class="top_link"><i class="fa fa-star"></i>Version2</a></li>
+                <li><a href="/" class="top_link active"><i class="fa fa-star"></i>Version3</a></li>
+            </ul>
+            <br/><br/><br/>
             <h2>Instructions</h2>
             <ul>
                 <li><a href="#instructions" class="top_link"><i class="fa fa-star"></i>Instructions</a></li>
