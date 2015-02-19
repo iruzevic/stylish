@@ -16,7 +16,7 @@ $color_dove_gray:        #666666;
 $color_dove_gray_light:  #999999;
 $color_silver:           #c5c5c5;
 $color_mercury:          #e5e5e5;
-$color_white:            #fff;
+$color_white:            #ffffff;
 
 
 //Create color scheme for buttons and text colors
@@ -68,6 +68,11 @@ $p:   20px; //P size
 $content_style_margin:    20px; //content style margin move for p, ul, img and other
 
 
+//Icons
+$icons_font_family:       'stylish';
+$icons_font_location:     '../fonts/stylish';
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -82,9 +87,19 @@ $gutter_fix:      $gutter; //fixed sidebar grid, padding between main fluid col 
 
 
 // Grid
-$container_max_width: 1440px; //max widthe for page container
-$container_gutter:    $gutter/2; //container padding left / right
-$responsive:          true; // set true or false if using responsive
+$page_max_width: 1440px; //max wid for page container
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Responsive (Desktop First Layout)
+$responsive:    true; // set true or false if using responsive
+
+//Set break points starting from full screen scaling down to mobile
+$screen_large:  1200px;// Small Screen desktop devices
+$screen_medium: 990px; // Tablet devices
+$screen_small:  768px; // Mobile phone devices
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -119,6 +134,8 @@ $btn_reset_text:      $color_white; //button reset text color
 
 $form_error:          $color_flush_mahogany;  //form error color
 
+$form_field_move:     20px; //Default form field move
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -127,20 +144,25 @@ $form_error:          $color_flush_mahogany;  //form error color
 $accordion_head_color:      $color_silver; //accordion header bg color
 $accordion_content_color:   $color_mercury; //accordion content bg color
 
-$tabs_line_color:   $color_dove_gray_light;  //tabs lines color
+$tabs_head_color:           $color_mercury;  //tabs lines color
 
-$table_head_border:   $color_havelock_blue;  //table head border bottom color
-$table_body_border:   $color_mercury; //table body border bottom color
-$table_footer_border: $table_head_border; //table footer border bottom color
+$table_head_border:         $color_havelock_blue;  //table head border bottom color
+$table_body_border:         $color_mercury; //table body border bottom color
+$table_footer_border:       $table_head_border; //table footer border bottom color
 
-$pagination_item_bg:            $color_mercury;  //pagination item bg color
-$pagination_item_text:          $color_mine_shaft; //pagination item text color
-$pagination_item_current_bg:    $color_havelock_blue;  //pagination current item bg color
-$pagination_item_current_text:  $color_white; //pagination current item text color
+$pag_item_bg:               $color_mercury;  //pagination item bg color
+$pag_item_text:             $color_mine_shaft; //pagination item text color
+$pag_item_current_bg:       $color_havelock_blue;  //pagination current item bg color
+$pag_item_current_text:     $color_white; //pagination current item text color
 
-$msg_error:     #f2a89c;  //error notification color
-$msg_success:   #c4dcc0;  //success  notification color
-$msg_notice:    #c0cddc;  //notice  notification color
-$msg_warning:   #e1e696;  //warning  notification color
+$msg_error:                 #f2a89c;  //error notification color
+$msg_success:               #c4dcc0;  //success  notification color
+$msg_notice:                #c0cddc;  //notice  notification color
+$msg_warning:               #e1e696;  //warning  notification color
 
-$divider_border_color: $color_dove_gray_light; //divider border bottom color
+$modal_max_width:           $page_max_width/2; //Max width of modal window
+$modal_min_width:           600px; //Min width of modal window
+$modal_overlay_opacity:     0.7; //Overlay opacity
+
+$divider_border_color:      $color_dove_gray_light; //divider border bottom color
+

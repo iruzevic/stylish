@@ -16,10 +16,15 @@ table{
   }
 
   //Table Body
-  tbody:not(.no_bg_change){
+  tbody{
     tr{
       th,td{ border-bottom-color:$table_body_border;}
-      &:nth-child(odd) td{ background-color: lighten($table_body_border, 7%)}
+    }
+
+    &.no_bg_change{
+      tr{
+        &:nth-child(odd) td{ background-color: lighten($table_body_border, 7%) }
+      }
     }
   }
 

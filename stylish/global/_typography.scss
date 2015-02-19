@@ -12,13 +12,13 @@
 
 /* Setup Global Typography */
 body {color:$body_text_color; background:$body_background_color; font-family:$body_font_family; font-size: $p; @include font-smoothing();}
-h1 {font-size:$h1; line-height: $h1+3;}
-h2 {font-size:$h2; line-height: $h2+3;}
-h3 {font-size:$h3; line-height: $h3+3;}
-h4 {font-size:$h4; line-height: $h4+3;}
-h5 {font-size:$h5; line-height: $h5+3;}
-h6 {font-size:$h6; line-height: $h6+3;}
-p ,ul li{font-size:$p;line-height:$p+3;}
+h1   {font-size:$h1; line-height: $h1+3;}
+h2   {font-size:$h2; line-height: $h2+3;}
+h3   {font-size:$h3; line-height: $h3+3;}
+h4   {font-size:$h4; line-height: $h4+3;}
+h5   {font-size:$h5; line-height: $h5+3;}
+h6   {font-size:$h6; line-height: $h6+3;}
+p, ul li{font-size:$p;line-height:$p+3;}
 a:not(.btn) {@include link_color();}
 
 
@@ -46,6 +46,7 @@ a:not(.btn) {@include link_color();}
   h5 {font-size:$h6; line-height: $h6+3;}
   h6 {font-size:$h6 - 3; line-height: $h6;}
   address{font-size: $p;line-height: $p+3;}
+  iframe{ width: 100%; height: auto; display: block; }
 }
 
 

@@ -12,12 +12,12 @@
   .modal_wrap{ display: table-cell; height: 100%; vertical-align: middle; padding: 0 $gutter}
 
   //Modal content
-  .modal_content{padding: 30px; background-color: $color_white; margin: 0 auto; max-width:$container_max_width/2; position: relative;@include transition-property(all);@include transition-duration(.4s);}
+  .modal_content{padding: 30px; background-color: $color_white; margin: 0 auto; max-width:$modal_max_width; min-width: $modal_min_width; position: relative;@include transition-property(all);@include transition-duration(.4s);}
 
   //Active (opened state)
   &.active{
     @include opacity(1); z-index: 99999; visibility: visible;
-    .modal_overlay{@include opacity(1); visibility: visible;background-color: rgba($color_mine_shaft, 0.7);}
+    .modal_overlay{@include opacity(1); visibility: visible;background-color: rgba($color_mine_shaft, $modal_overlay_opacity);}
   }
 
   //Close modal button

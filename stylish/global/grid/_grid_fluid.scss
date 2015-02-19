@@ -23,7 +23,7 @@
 
 /* Grid col style */
 @mixin col_style(){
-  float: left;@include transition-property(all);@include transition-duration(.3s); min-width: 1px;min-height: 1px;
+  float: left; min-width: 1px; min-height: 1px;
 }
 
 
@@ -57,78 +57,28 @@
 }
 
 
+@mixin grid_generate($grid_name:fluid, $grid_gutter: $gutter) {
+  .grid_#{$grid_name}{
+    @include grid_correction((-$grid_gutter));
+    [class*='col_']{
+      @include col_gutter($grid_gutter);
+    }
+    @extend .clearfix;
+  }
+}
+
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* Generate fluid grid  */
-.grid_fluid{
-
-  //grid with out gutter
-  [class*='col_']{
-    @include col_style();
-  }
-
-  //grid with default gutter between cols
-  &.gutter{
-    @include grid_correction((-$gutter));
-
-    //add gutter to col
-    [class*='col_']{
-      @include col_gutter();
-    }
-  }
-
-  //grid with quarter gutter between cols
-  &.gutter_quarter{
-    @include grid_correction(-$gutter/4);
-
-
-    [class*='col_']{
-      @include col_gutter($gutter/4);
-    }
-  }
-
-  //grid with half gutter between cols
-  &.gutter_half{
-    @include grid_correction(-$gutter/2);
-
-
-    [class*='col_']{
-      @include col_gutter($gutter/2);
-    }
-  }
-
-  //grid with double gutter between cols
-  &.gutter_double{
-    @include grid_correction(-$gutter*2);
-
-
-    [class*='col_']{
-      @include col_gutter($gutter*2);
-    }
-  }
-
-  //grid with triple gutter between cols
-  &.gutter_triple{
-    @include grid_correction(-$gutter*3);
-
-
-    [class*='col_']{
-      @include col_gutter($gutter*3);
-    }
-  }
-
-  //grid with no gutter between cols (correct gutter if you have nested classes)
-  &.no_gutter{
-    @include grid_correction(0);
-
-    [class*='col_']{
-      @include col_gutter(0);
-    }
-  }
-
-  @extend .clearfix;
-}
+@include grid_generate();
+@include grid_generate(quarter,$gutter/4);
+@include grid_generate(half,$gutter/2);
+@include grid_generate(double,$gutter*2);
+@include grid_generate(triple,$gutter*3);
+@include grid_generate(clean,0);
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -136,7 +86,10 @@
 
 //Display classes for grid(cols) width
 @for $i from 1 to $grid_col_num+1{
-  .col_#{$i}{@include col_width($i)}
+  .col_#{$i} {@include col_width($i)}
   .pull_#{$i}{@include col_pull($i)}
   .push_#{$i}{@include col_push($i)}
 }
+
+//Standard col style
+[class*='col_']{ @include col_style(); }

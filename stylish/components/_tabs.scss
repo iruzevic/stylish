@@ -6,11 +6,11 @@
 
   //Tabs Head
   .t_head{
-    list-style: none; border-bottom: 1px solid $tabs_line_color; @extend .clearfix;
+    list-style: none; background-color: $tabs_head_color; @extend .clearfix;
     li{
-      float: left;text-align: center; cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); border:1px solid $color_white; border-bottom-color:$tabs_line_color;@include border-radius(4px 4px 0 0); color:$tabs_line_color; margin-bottom: -1px; padding: 5px 20px;
+      float: left;text-align: center; cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: 10px 20px;
       &.active{
-        color: $color_mine_shaft;  border-color:$tabs_line_color; border-bottom-color:$color_white;
+        color: $color_mine_shaft;  background-color:$color_white;
       }
     }
   }

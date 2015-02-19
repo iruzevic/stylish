@@ -1,8 +1,8 @@
-/* DESKTOP AND LAPTOPS */
+/* DESKTOP AND LAPTOPS WITH SMALLER MONITORS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: $screen_large){
 
   //Check if site uses responsive desig or not
   @if $responsive == true{

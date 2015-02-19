@@ -22,7 +22,7 @@
 <body>
 <header id="header"></header>
 <div id="content">
-    <div class="grid_fluid">
+    <div class="grid_clean">
         <aside id="sidebar" class="col_3">
             <img id="logo" src="preview/logo.png" />
             <h2>Instructions</h2>
@@ -151,7 +151,7 @@
                                 <li>edit all styles if needed for default</li>
                                 <li>now you are ready to add your css</li>
                             </ol>
-                            <div class="divider bottom80 top80"></div>
+                            <div class="divider m_bottom80 m_top80"></div>
                             <p><strong>Compass comands:</strong></p>
                             <ol class="list">
                                 <li>compass install compass (install new compass project)</li>
@@ -595,22 +595,22 @@
                         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
                         <div class="content">
                             <div class="accordion" data-active="1" data-autoclose=""> <!-- Auto Close - true or false; default:true -->
-                                <div class="a_head" data-acc="1">Title1 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="1">Content1</div>
-                                <div class="a_head" data-acc="2">Title2 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="2">Content2</div>
-                                <div class="a_head" data-acc="3">Title3 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="3">Content3</div>
                             </div>
                         </div>
                         <div class="source">
                             <pre class="brush: xml;">
                                 <div class="accordion" data-active="1" data-autoclose=""> <!-- Auto Close - true or false; default:true -->
-                                    <div class="a_head" data-acc="1">Title1 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="1">Content1</div>
-                                    <div class="a_head" data-acc="2">Title2 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="2">Content2</div>
-                                    <div class="a_head" data-acc="3">Title3 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="3">Content3</div>
                                 </div>
                             </pre>
@@ -623,22 +623,22 @@
                         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
                         <div class="content">
                             <div class="accordion" data-active="1" data-autoclose="false"> <!-- Auto Close - true or false; default:true -->
-                                <div class="a_head" data-acc="1">Title1 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="1">Content1</div>
-                                <div class="a_head" data-acc="2">Title2 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="2">Content2</div>
-                                <div class="a_head" data-acc="3">Title3 <i class="sy_arrow_down"></i></div>
+                                <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
                                 <div class="a_content" data-content="3">Content3</div>
                             </div>
                         </div>
                         <div class="source">
                             <pre class="brush: xml;">
                                 <div class="accordion" data-active="1" data-autoclose="false"> <!-- Auto Close - true or false; default:true -->
-                                    <div class="a_head" data-acc="1">Title1 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="1">Content1</div>
-                                    <div class="a_head" data-acc="2">Title2 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="2">Content2</div>
-                                    <div class="a_head" data-acc="3">Title3 <i class="sy_arrow_down"></i></div>
+                                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
                                     <div class="a_content" data-content="3">Content3</div>
                                 </div>
                             </pre>
@@ -1511,10 +1511,10 @@
                 <div id="block_divider" class="block_wrap">
                     <div class="block">
                         <h1 class="title">Divider</h1>
-                        <p class="desc">Divider with bottom border and spacing on top or bottom. Add class mar_bottom, mar_top, pad_top or pad_bottom with number from 10-100 which corresponds to margin-top and margin-bottom. General used in content styling.</p>
+                        <p class="desc">Divider with bottom border and spacing on top or bottom. Add class m_bottom, m_top, p_top or p_bottom with number from 10-100 which corresponds to margin-top and margin-bottom. General used in content styling.</p>
                         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
                         <div class="content">
-                            <div class="divider mar_bottom20 mar_top20"></div>
+                            <div class="divider m_bottom20 m_top20"></div>
 
                             <br/>
                             <br/>
@@ -1522,14 +1522,14 @@
                             <ul class="msg">
                                 <li class="notice_msg">
                                     <ul>
-                                        <li>Available Classes - bottom 10-100 (etc. mar_bottom20) and top 10-100 (etc. mar_top40).</li>
+                                        <li>Available Classes - bottom 10-100 (etc. m_bottom20) and top 10-100 (etc. m_top40).</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <div class="source">
                             <pre class="brush: xml;">
-                                <div class="divider mar_bottom20 mar_top20"></div>
+                                <div class="divider m_bottom20 m_top20"></div>
                             </pre>
                         </div>
                     </div>

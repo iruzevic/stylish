@@ -59,9 +59,9 @@
     font-family: $font-family;
     src: url('#{$file-path}.eot');
     src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg'),
     url('#{$file-path}.woff') format('woff'),
-    url('#{$file-path}.ttf') format('truetype'),
-    url('#{$file-path}.svg##{$font-family}') format('svg');
+    url('#{$file-path}.ttf') format('truetype');
     font-weight: $weight;
     font-style: $style;
   }
@@ -97,13 +97,24 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Grid Container */
-@mixin container($value: $responsive){
-  margin: 0 auto; padding-left: $container_gutter; padding-right: $container_gutter;
+/* Container size for responsive */
+@mixin container_size($max_width:$page_max_width, $value: $responsive){
   @if $value == true{
-    width: 100%; max-width: $container_max_width; 
+    width: 100%; max-width: $max_width;
   } @else {
-    width: $container_max_width;
+    width: $page_max_width;
+  }
+}
+
+/* Default container style */
+@mixin container_style($container_gutter:$gutter/2){
+  margin-left:auto; margin-right: auto; padding-left: $container_gutter; padding-right: $container_gutter;
+}
+
+//Generate different containers for different type of grid gutters
+@mixin container_generate($container_name, $container_gutter){
+  .container_#{$container_name}{
+     padding-left: $container_gutter; padding-right: $container_gutter;
   }
 }
 
@@ -223,10 +234,10 @@
 @mixin spacers(){
   $i:100;
   @while $i > 0{
-    .mar_bottom#{$i}{ margin-bottom:#{$i}px;}
-    .mar_top#{$i}   { margin-top:#{$i}px}
-    .pad_bottom#{$i}{ padding-bottom:#{$i}px;}
-    .pad_top#{$i}   { padding-top:#{$i}px}
+    .m_bottom#{$i}{ margin-bottom:#{$i}px;}
+    .m_top#{$i}   { margin-top:#{$i}px}
+    .p_bottom#{$i}{ padding-bottom:#{$i}px;}
+    .p_top#{$i}   { padding-top:#{$i}px}
     $i:$i - 10;
   }
 }

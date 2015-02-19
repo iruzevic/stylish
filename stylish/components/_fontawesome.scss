@@ -8,17 +8,10 @@
 
 
 [class^="fa-"], [class*=" fa-"],.fa-icon, .fa-icons,
-[class^="fa-_"], [class*=" fa_"],.fa_icon, .fa_icons{
-  font-family: 'FontAwesome';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  display:inline-block;
-  @include font-smoothing();}
+[class^="fa-_"], [class*=" fa_"],.fa_icon, .fa_icons{ font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; display:inline-block; @include font-smoothing();}
 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* Icons */

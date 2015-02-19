@@ -3,20 +3,11 @@
 
 
 /* Font Declaration */
-@include font_face('stylish', '../fonts/stylish');
+@include font_face($icons_font_family, $icons_font_location);
 
 
 
-[class^="sy_"], [class*=" sy_"],.sy_icon, .sy_icons {
-  font-family: 'stylish';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  display:inline-block;
-  @include font-smoothing();}
+[class^="sy_"], [class*=" sy_"],.sy_icon, .sy_icons { font-family: $icons_font_family; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; display:inline-block; @include font-smoothing();}
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -30,38 +21,20 @@
   animation: spin 2s infinite linear;
 }
 @-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-  }
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
 }
 @-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
 }
 @-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -o-transform: rotate(359deg);
-  }
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
 }
 @keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
 }
 
 

@@ -123,14 +123,21 @@ textarea{ height: 150px; padding: 12px}
 /* Setup forms layout */
 form, .form{
   .field{
-    margin-bottom: 20px; position: relative; list-style: none;
+    margin-bottom: $form_field_move; position: relative; list-style: none;
+    &.big { margin-bottom: $form_field_move*2;}
+    &.slim{ margin-bottom: $form_field_move/2;}
+
     label{
       display: block; margin-bottom: 5px; font-size: $p;
 
       //label inline with field
       &.inline{ display: inline-block; margin-bottom: 0; padding-top: 5px;}
     }
-    &:last-child,.last{margin-bottom: 0}
+
+    .checkbox,
+    .radio{ label{ margin-bottom: 0} }
+
+    &.last{margin-bottom: 0}
   }
 
   //validation error (validation-advice for magento)

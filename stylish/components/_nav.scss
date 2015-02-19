@@ -1,23 +1,25 @@
 /* Navigation setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-//Navigation with float left
-.nav{
+
+//Navigation Global Setup
+.nav,
+.navi{
   li{
-    float: left;list-style: none;
-    a{display: block;text-align: center; padding: 0 15px 0 0}
+    list-style: none;
+    a{display: block;text-align: center;}
   }
   @extend .clearfix
 }
 
+
+//Navigation with float left
+.nav li{ float: left; }
+
+
 //Navigation with display inline
-.navi{
-  li{
-    display:inline-block; list-style: none; vertical-align: middle; margin-right: -6px;
-    a{display: block;text-align: center; padding: 0 15px 0 0}
-  }
-  @extend .clearfix
-}
+.navi li{ display:inline-block; vertical-align: middle; margin-right: -6px; }
+
 
 //Calculate navigation item width based on data-item attribute
 $i:12;
@@ -26,5 +28,21 @@ $i:12;
   $i:$i - 1;
 }
 
+
 //Sticky Navigation
-.sticky{ position: fixed; top: 0; left: 0; width: 100%;}
+.sticky{
+  position: fixed; z-index: 10000;
+
+  &.top,
+  &.bottom{ width: 100%; }
+
+  &.top{    left: 0; top: 0;}
+  &.bottom{ left: 0; bottom: 0;}
+
+
+  &.left,
+  &.right{ height: 100%; top: 0; }
+
+  &.left{  left: 0; }
+  &.right{ right: 0; }
+}

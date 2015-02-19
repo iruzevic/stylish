@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 2.1.3.1
+Version: 3.0
 */
 
 /* Compass Framework Import */
@@ -70,8 +70,13 @@ Version: 2.1.3.1
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@import "responsive/res-1280";
-@import "responsive/res-990";
-@import "responsive/res-768";
-@import "responsive/res-640";
-@import "responsive/res-480";
+@import "responsive/res_large";
+@import "responsive/res_medium";
+@import "responsive/res_small";
+
+
+/* GLOBAL STYLING */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@import "global/global";

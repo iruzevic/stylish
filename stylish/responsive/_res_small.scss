@@ -1,8 +1,8 @@
-/* TABLETS AND LARGER SMARTPHONES */
+/* PHONES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $screen_small){
 
   //Check if site uses responsive desig or not
   @if $responsive == true{
