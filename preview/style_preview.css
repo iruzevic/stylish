@@ -9,7 +9,8 @@
 #sidebar a{ display: block; color:#ee4b3e; padding: 5px 30px; border-bottom: 1px solid #E7E6E6}
 #sidebar a i{ margin-right: 10px}
 #sidebar a:hover,
-#sidebar a.active{ background-color: #ee4b3e; color: #fff;}
+#sidebar a.active,
+#sidebar a.current{ background-color: #ee4b3e; color: #fff;}
 #sidebar ul ul a{ padding-left: 80px}
 #sidebar h2{ margin: 0 0 5px 30px;}
 
