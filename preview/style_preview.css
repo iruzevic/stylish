@@ -1,3 +1,5 @@
+body{ font-family: 'Open Sans', arial, helvetica, sans-serif}
+
 #header{
     background-color: #ee4b3e; height: 4px; position: fixed;left: 0; top: 0; width: 100%; z-index: 100;
 }
