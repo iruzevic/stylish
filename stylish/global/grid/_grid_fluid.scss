@@ -51,31 +51,37 @@
 @mixin grid_utilities(){
   @if $responsive == true{
 
-
     @media screen and (max-width: $screen_large) {
       .hide_l{ display: none}
       .show_l{ display: block}
+      .push_l_reset,
+      .pull_l_reset{ margin-left: 0}
     }
-
 
     @media screen and (max-width: $screen_medium) {
       .hide_m{ display: none}
       .show_m{ display: block}
+      .push_m_reset,
+      .pull_m_reset{ margin-left: 0}
     }
-
 
     @media screen and (max-width: $screen_small) {
       .hide_s{ display: none}
       .show_s{ display: block}
+      .push_s_reset,
+      .pull_s_reset{ margin-left: 0}
     }
 
     @media screen and (max-width: $screen_xsmall) {
       .hide_xs{ display: none}
       .show_xs{ display: block}
+      .push_xs_reset,
+      .pull_xs_reset{ margin-left: 0}
     }
 
-
   }
+  .push_reset,
+  .pull_reset{ margin-left: 0}
 }
 
 
@@ -131,45 +137,57 @@ $gutter_clean:0;
 //Standard col style
 [class*='col_']{ @include col_style(); }
 
-@include grid_utilities();
-
-//Display classes for grid(cols) width
+//Classes for standard grid
 @for $i from 1 to $grid_col_num+1{
-
   .col_#{$i} {@include col_width($i)}
   .pull_#{$i}{@include col_pull($i)}
   .push_#{$i}{@include col_push($i)}
+}
 
+//Classes for standard Small Screen desktop devices
+@media screen and (max-width: $screen_large) {
   @if $responsive == true{
-
-
-    @media screen and (max-width: $screen_large) {
+    @for $i from 1 to $grid_col_num+1{
       .col_l_#{$i} {@include col_width($i)}
       .pull_l_#{$i}{@include col_pull($i)}
       .push_l_#{$i}{@include col_push($i)}
     }
+  }
+}
 
-
-    @media screen and (max-width: $screen_medium) {
+//Classes for standard Tablet devices
+@media screen and (max-width: $screen_medium) {
+  @if $responsive == true{
+    @for $i from 1 to $grid_col_num+1{
       .col_m_#{$i} {@include col_width($i)}
       .pull_m_#{$i}{@include col_pull($i)}
       .push_m_#{$i}{@include col_push($i)}
     }
+  }
+}
 
-
-    @media screen and (max-width: $screen_small) {
+//Classes for standard Larger phone and smaller tablet devices
+@media screen and (max-width: $screen_small) {
+  @if $responsive == true{
+    @for $i from 1 to $grid_col_num+1{
       .col_s_#{$i} {@include col_width($i)}
       .pull_s_#{$i}{@include col_pull($i)}
       .push_s_#{$i}{@include col_push($i)}
     }
+  }
+}
 
-    @media screen and (max-width: $screen_xsmall) {
+//Classes for standard Mobile phone devices
+@media screen and (max-width: $screen_xsmall) {
+  @if $responsive == true{
+    @for $i from 1 to $grid_col_num+1{
       .col_xs_#{$i} {@include col_width($i)}
       .pull_xs_#{$i}{@include col_pull($i)}
       .push_xs_#{$i}{@include col_push($i)}
     }
-
-
   }
 }
+
+//Grid utilities (show, hide)
+@include grid_utilities();
 
