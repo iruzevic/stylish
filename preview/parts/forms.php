@@ -294,20 +294,32 @@
     <p class="desc">Custom upload field for cross-browser support.</p>
     <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
     <div class="content">
-        <div class="upload clearfix">
-            <input type="text" placeholder="Upload a file from your computer" autocomplete="off" />
-            <input size="1" type="file" name="files" />
-            <a class="btn " href="#">Browse</a>
+        <div class="upload">
+            <div class="grid_half">
+                <div class="col_8">
+                    <input type="text" placeholder="Upload a file from your computer" autocomplete="off" />
+                    <input size="1" type="file" name="files" />
+                </div>
+                <div class="col_4">
+                    <a class="btn " href="#">Browse</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="source">
-                            <pre class="brush: xml;">
-                                <div class="upload clearfix">
-                                    <input type="text" placeholder="Upload a file from your computer" autocomplete="off" />
-                                    <input size="1" type="file" name="files" />
-                                    <a class="btn " href="#">Browse</a>
-                                </div>
-                            </pre>
+        <pre class="brush: xml;">
+            <div class="upload">
+                <div class="grid_half">
+                    <div class="col_8">
+                        <input type="text" placeholder="Upload a file from your computer" autocomplete="off" />
+                        <input size="1" type="file" name="files" />
+                    </div>
+                    <div class="col_4">
+                        <a class="btn " href="#">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </pre>
     </div>
 </div>
 <div class="block scrollto_field_error">

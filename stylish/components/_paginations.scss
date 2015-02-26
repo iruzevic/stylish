@@ -3,15 +3,18 @@
 
 
 .pagination{
-  list-style: none; text-align: center;
+  text-align: center;
   li{
-    display: inline-block; margin: 0 3px;
-    a{
-      background-color: $pag_item_bg; color: $pag_item_text; font-size: 14px; padding: 10px;@include border-radius(4px);
-      &:hover{background-color: darken($pag_item_bg, 8%)}
+    margin: 0 3px;
+    a, span{
+      background-color: $pag_item_bg; color: $pag_item_text; font-size: 14px; padding: 10px 15px; display: block; @include border-radius($global_radius); @include transition-property(color, background-color); @include transition-duration(.3s);
     }
+    a:hover{background-color: darken($pag_item_bg, 8%)}
 
     //Active / Current state
-    &.current a{ background-color: $pag_item_current_bg; color:$pag_item_current_text}
+    &.current{
+      a, span
+      { background-color: $pag_item_current_bg; color:$pag_item_current_text}
+    }
   }
 }

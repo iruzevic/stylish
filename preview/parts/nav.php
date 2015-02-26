@@ -4,7 +4,7 @@
         <p class="desc">Structure for horizontal navigation</p>
         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
         <div class="content">
-            <ul class="nav">
+            <ul class="nav" data-items="5">
                 <li><a href="#">Link1</a></li>
                 <li><a href="#">Link2</a></li>
                 <li><a href="#">Link3</a></li>
@@ -13,15 +13,15 @@
             </ul>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <ul class="nav">
-                                    <li><a href="#">Link1</a></li>
-                                    <li><a href="#">Link2</a></li>
-                                    <li><a href="#">Link3</a></li>
-                                    <li><a href="#">Link4</a></li>
-                                    <li><a href="#">Link5</a></li>
-                                </ul>
-                            </pre>
+            <pre class="brush: xml;">
+                <ul class="nav" data-items="5">
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                    <li><a href="#">Link4</a></li>
+                    <li><a href="#">Link5</a></li>
+                </ul>
+            </pre>
         </div>
     </div>
     <div class="block">
@@ -29,7 +29,7 @@
         <p class="desc">Structure for horizontal navigation</p>
         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
         <div class="content">
-            <ul class="navi">
+            <ul class="navi" data-items="5">
                 <li><a href="#">Link1</a></li>
                 <li><a href="#">Link2</a></li>
                 <li><a href="#">Link3</a></li>
@@ -38,15 +38,15 @@
             </ul>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <ul class="navi">
-                                    <li><a href="#">Link1</a></li>
-                                    <li><a href="#">Link2</a></li>
-                                    <li><a href="#">Link3</a></li>
-                                    <li><a href="#">Link4</a></li>
-                                    <li><a href="#">Link5</a></li>
-                                </ul>
-                            </pre>
+            <pre class="brush: xml;">
+                <ul class="navi" data-items="5">
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                    <li><a href="#">Link4</a></li>
+                    <li><a href="#">Link5</a></li>
+                </ul>
+            </pre>
         </div>
     </div>
 </div>

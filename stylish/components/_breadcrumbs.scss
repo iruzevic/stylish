@@ -3,17 +3,9 @@
 
 
 .breadcrumbs{
-  list-style: none;
   li{
-    display: inline-block; margin-right: -6px;
-    a{
-      &:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:14px; vertical-align:baseline;padding:0 10px}
-    }
-    &:last-child{
-      a{
-        padding-right:0;
-        &:after{ content: ""; padding:0}
-      }
-    }
+    a:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:14px; vertical-align:baseline;padding:0 10px}
+
+    &:last-child a:after{ content: ""; padding:0}
   }
 }

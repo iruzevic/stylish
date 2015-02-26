@@ -19,6 +19,12 @@ $color_mercury:          #e5e5e5;
 $color_white:            #ffffff;
 
 
+$color_error:            #f2a89c;  //error notification color
+$color_success:          #c4dcc0;  //success  notification color
+$color_notice:           #c0cddc;  //notice  notification color
+$color_warning:          #e1e696;  //warning  notification color
+
+
 //Create color scheme for buttons and text colors
 // 1. item - color name
 // 2. item - default color
@@ -40,7 +46,7 @@ $color_schemes:
 
 
 // Default Link color - Setup color states for link_color mixin
-$primary_link_color:  $color_havelock_blue;
+$primary_link_color:  $color_flush_mahogany;
 $hover_link_color:    $color_flush_mahogany;
 
 
@@ -110,7 +116,7 @@ $screen_xsmall: 550px; // Mobile phone devices
 $input_border:        $color_mercury; //input border color
 $input_text:          $color_mine_shaft; //input text color
 $input_bg:            $color_white; //input bg color
-$input_focus:         $color_havelock_blue; //input box shadow color on focus
+$input_focus:         $color_flush_mahogany; //input box shadow color on focus
 $input_disabled_bg:   $color_silver; //input bg color for disabled state
 $input_disabled_text: $color_dove_gray; //input text color for disabled state
 $input_placeholder:   $color_mercury; //input placeholder color
@@ -120,7 +126,7 @@ $input_border_width:  1px; //input border width
 
 $checkbox_bg:         $input_bg; //checkbox bg color
 $checkbox_border:     $input_border; //checkbox border color
-$checkbox_active:     $color_havelock_blue; //checkbox icon color on active state
+$checkbox_active:     $color_flush_mahogany; //checkbox icon color on active state
 $checkbox_size:       24px; //checkbox width and height
 $checkbox_icon_size:  ($checkbox_size - 8); //checkbox icon size
 
@@ -134,6 +140,8 @@ $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
 $btn_disabled_text:   $color_white; //button text color for disabled state
 $btn_reset_bg:        $input_disabled_bg; //button reset bg color
 $btn_reset_text:      $color_white; //button reset text color
+$btn_padding:         10px; //Button Default padding size
+$btn_txt_size:        14px; //Button Default text size
 
 $form_error:          $color_flush_mahogany;  //form error color
 
@@ -144,24 +152,22 @@ $form_field_move:     20px; //Default form field move
 
 
 // Components
+$global_radius:             4px; //Setup global border radius (buttons, forms and etc.)
+
 $accordion_head_color:      $color_silver; //accordion header bg color
 $accordion_content_color:   $color_mercury; //accordion content bg color
 
 $tabs_head_color:           $color_mercury;  //tabs lines color
 
-$table_head_border:         $color_havelock_blue;  //table head border bottom color
+$table_head_border:         $color_flush_mahogany;  //table head border bottom color
 $table_body_border:         $color_mercury; //table body border bottom color
 $table_footer_border:       $table_head_border; //table footer border bottom color
+$table_padding:             10px; //table padding
 
 $pag_item_bg:               $color_mercury;  //pagination item bg color
 $pag_item_text:             $color_mine_shaft; //pagination item text color
-$pag_item_current_bg:       $color_havelock_blue;  //pagination current item bg color
+$pag_item_current_bg:       $color_flush_mahogany;  //pagination current item bg color
 $pag_item_current_text:     $color_white; //pagination current item text color
-
-$msg_error:                 #f2a89c;  //error notification color
-$msg_success:               #c4dcc0;  //success  notification color
-$msg_notice:                #c0cddc;  //notice  notification color
-$msg_warning:               #e1e696;  //warning  notification color
 
 $modal_max_width:           $page_max_width/2; //Max width of modal window
 $modal_min_width:           600px; //Min width of modal window

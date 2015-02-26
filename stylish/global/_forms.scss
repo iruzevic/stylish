@@ -100,7 +100,7 @@ textarea{ height: 150px; padding: 12px}
 
 /* Setup custom select input */
 .select {
-  position: relative;border: 1px solid $input_border;@include border-radius(4px);cursor: pointer;background: $input_bg url("../images/select.png") no-repeat;overflow:hidden; background-position: right 10px top 50%; display: block;
+  position: relative;border: 1px solid $input_border;@include border-radius($global_radius);cursor: pointer;background: $input_bg url("../images/select.png") no-repeat;overflow:hidden; background-position: right 10px top 50%; display: block;
   select {position: relative; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none;max-width: 150%; padding-right: 0}
   select:focus{outline: none;}
 }
@@ -111,9 +111,7 @@ textarea{ height: 150px; padding: 12px}
 
 /* Upload custom input */
 .upload{
-  width: 100%; position:relative;
-  .btn{float:left;width:20%}
-  input[type=text]{ width: 78%; float: left; margin-right: 2%}
+  position:relative;
   input[type=file]{font-size:29px;width:100%;position:absolute;top:0;cursor:pointer;left:0;display:none}
 }
 

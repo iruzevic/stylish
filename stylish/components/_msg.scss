@@ -12,34 +12,34 @@
   }
 
   > li{
-    color: $color_mine_shaft; padding:10px 10px 10px $icon_size+30px;@include border-radius(4px); position: relative; margin-bottom: 20px;
+    color: $color_mine_shaft; padding:10px 10px 10px $icon_size+30px;@include border-radius($global_radius); position: relative; margin-bottom: 20px;
     &:before{@extend .sy_icon;font-size: $icon_size; position: absolute; left: 15px; top: 50%; margin-top: -$icon_size/2;}
 
     //Error state
     &.error-msg,
     &.error_msg{
-      background-color: $msg_error;
+      background-color: $color_error;
       &:before{@extend .sy_remove_round:before; }
     }
 
     //Success state
     &.success-msg,
     &.success_msg{
-      background-color: $msg_success;
+      background-color: $color_success;
       &:before{@extend .sy_check_round:before; }
     }
 
     //Notice state
     &.notice-msg,
     &.notice_msg{
-      background-color: $msg_notice;
+      background-color: $color_notice;
       &:before{@extend .sy_info_round:before; }
     }
 
     //Warning state
     &.warning-msg,
     &.warning_msg{
-      background-color: $msg_warning;
+      background-color: $color_warning;
       &:before{@extend .sy_warning:before; }
     }
   }

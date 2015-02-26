@@ -2,34 +2,73 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+.table_responsive{
+  overflow-y: hidden; overflow-x: auto; width: 100%;
+}
+
+
 table{
   width: 100%;
   th,td{
-    padding: 10px 15px;border-bottom: 1px solid;
-    &.first{ padding-left: 0}
-    &.last{ padding-right: 0}
+    padding: $table_padding;border-bottom: 1px solid;
   }
 
   //Table Head
   thead{
-    th{border-bottom-color: $table_head_border; font-weight: bold; text-transform: uppercase}
+    th,td{border-bottom-color: $table_head_border; font-weight: bold; text-transform: uppercase}
   }
 
   //Table Body
   tbody{
-    tr{
-      th,td{ border-bottom-color:$table_body_border;}
-    }
+    th,td{ border-bottom-color:$table_body_border;}
+  }
 
-    &.no_bg_change{
+  //Table Footer
+  tfoot{
+    th,td{ border-bottom-color: $table_footer_border;}
+  }
+
+
+  //Force text not to break
+  &.word_break{
+    th, td{ @extend .nobr}
+  }
+
+  //Add odd even colors for rows
+  &.row_color{
+    tbody{
       tr{
         &:nth-child(odd) td{ background-color: lighten($table_body_border, 7%) }
       }
     }
   }
 
-  //Table Footer
-  tfoot{
-    td{ border-bottom-color: $table_footer_border;}
+  //Cozy mode (middle size)
+  &.cozy_view{
+    th,td{ padding: $table_padding/2;}
   }
+
+  //Compact mode (smallest size)
+  &.compact_view{
+    th,td{ padding: $table_padding/3;}
+  }
+
+  //Override default set padding's
+  th,td{
+    &.first{ padding-left: 0}
+    &.last{ padding-right: 0}
+  }
+
 }
+
+
+
+/* Tables status setup */
+.status{
+  @include border-radius($global_radius); padding: 2px 5px; display: inline-block; font-size: 85%;
+  &.status_error{   background-color: $color_error }
+  &.status_success{ background-color: $color_success }
+  &.status_notice{  background-color: $color_notice }
+  &.status_warning{ background-color: $color_warning }
+}
+

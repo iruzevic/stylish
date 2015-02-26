@@ -171,14 +171,14 @@ function select(id){
 //Upload script
 function upload(){
     jQuery('.upload input[type=text]').click(function() {
-        jQuery('.upload input[type=file]').trigger('click');
+        jQuery(this).closest('.upload').find('input[type=file]').trigger('click');
     });
     jQuery('.upload .btn').click(function(e) {
         e.preventDefault();
-        jQuery('.upload input[type=file]').trigger('click');
+        jQuery(this).closest('.upload').find('input[type=file]').trigger('click');
     });
     jQuery('.upload input[type=file]').change(function() {
-        jQuery('.upload input[type=text]').val(jQuery(this).val());
+        jQuery(this).closest('.upload').find('input[type=text]').val(jQuery(this).val());
     });
 }
 
@@ -192,16 +192,11 @@ function tabs(){
     tabs.each(function(){
         var id= jQuery(this).attr('data-active');
 
-        //Calculate tabs and set width
-        var count = jQuery(this).attr('data-tabs');
-        var count_width = (100/count)+'%';
-
         //if active tab is not set add active to first tab
         if(id == '' || id === undefined){
             id = jQuery(this).find('.t_head li:first-child').data('tab');
         }
 
-        jQuery(this).find('.t_head li').css('width', count_width);
         jQuery(this).find('.t_head li[data-tab="'+id+'"]').addClass('active');
         jQuery(this).find('.t_content[data-content="'+id+'"]').show();
     });
@@ -230,17 +225,19 @@ function accordion(){
     jQuery('.a_head').click(function(){
         var auto_close= jQuery(this).closest('.accordion').data('autoclose');
         if(auto_close !== false){
-            jQuery(this).closest('.accordion').find('.a_head').removeClass('active');
-            jQuery(this).closest('.accordion').find('.a_content').slideUp('fast');
-            jQuery(this).addClass('active');
-            jQuery(this).next('.a_content').slideDown('fast');
+            if(!jQuery(this).hasClass('active')) {
+                jQuery(this).closest('.accordion').find('.a_head').removeClass('active');
+                jQuery(this).closest('.accordion').find('.a_content').slideUp('fast');
+                jQuery(this).addClass('active');
+                jQuery(this).next('.a_content').slideDown('fast');
+            }else{
+                jQuery(this).closest('.accordion').find('.a_head').removeClass('active');
+                jQuery(this).closest('.accordion').find('.a_content').slideUp('fast');
+            }
         }else{
             jQuery(this).toggleClass('active');
             jQuery(this).next('.a_content').slideToggle('fast');
         }
-
-
-
     });
 };
 

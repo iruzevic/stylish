@@ -14,16 +14,16 @@
             </div>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <div class="accordion" data-active="1" data-autoclose=""> <!-- Auto Close - true or false; default:true -->
-                                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="1">Content1</div>
-                                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="2">Content2</div>
-                                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="3">Content3</div>
-                                </div>
-                            </pre>
+            <pre class="brush: xml;">
+                <div class="accordion" data-active="1" data-autoclose=""> <!-- Auto Close - true or false; default:true -->
+                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="1">Content1</div>
+                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="2">Content2</div>
+                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="3">Content3</div>
+                </div>
+            </pre>
         </div>
     </div>
 
@@ -42,16 +42,16 @@
             </div>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <div class="accordion" data-active="1" data-autoclose="false"> <!-- Auto Close - true or false; default:true -->
-                                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="1">Content1</div>
-                                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="2">Content2</div>
-                                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
-                                    <div class="a_content" data-content="3">Content3</div>
-                                </div>
-                            </pre>
+            <pre class="brush: xml;">
+                <div class="accordion" data-active="1" data-autoclose="false"> <!-- Auto Close - true or false; default:true -->
+                    <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="1">Content1</div>
+                    <div class="a_head" data-acc="2">Title2 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="2">Content2</div>
+                    <div class="a_head" data-acc="3">Title3 <i class="a_state sy_arrow_down"></i></div>
+                    <div class="a_content" data-content="3">Content3</div>
+                </div>
+            </pre>
         </div>
     </div>
 
