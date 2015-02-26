@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@media screen and (max-width: $screen_medium){
+@media screen and ($responsive_first: $screen_medium){
 
   //Check if site uses responsive desig or not
   @if $responsive == true{

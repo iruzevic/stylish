@@ -47,46 +47,6 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Grid utilities for different page sizes
-@mixin grid_utilities(){
-  @if $responsive == true{
-
-    @media screen and (max-width: $screen_large) {
-      .hide_l{ display: none}
-      .show_l{ display: block}
-      .push_l_reset,
-      .pull_l_reset{ margin-left: 0}
-    }
-
-    @media screen and (max-width: $screen_medium) {
-      .hide_m{ display: none}
-      .show_m{ display: block}
-      .push_m_reset,
-      .pull_m_reset{ margin-left: 0}
-    }
-
-    @media screen and (max-width: $screen_small) {
-      .hide_s{ display: none}
-      .show_s{ display: block}
-      .push_s_reset,
-      .pull_s_reset{ margin-left: 0}
-    }
-
-    @media screen and (max-width: $screen_xsmall) {
-      .hide_xs{ display: none}
-      .show_xs{ display: block}
-      .push_xs_reset,
-      .pull_xs_reset{ margin-left: 0}
-    }
-
-  }
-  .push_reset,
-  .pull_reset{ margin-left: 0}
-}
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
 
 // Grid correction for first and last col padding to align with container
 @mixin grid_correction($gutter:$gutter){
@@ -106,6 +66,112 @@
     @include col_gutter($grid_gutter);
     @extend .clearfix;
   }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+//Classes for standard grid
+@mixin default_col(){
+  @for $i from 1 to $grid_col_num+1{
+    .col_#{$i} {@include col_width($i)}
+    .pull_#{$i}{@include col_pull($i)}
+    .push_#{$i}{@include col_push($i)}
+  }
+  .push_reset,
+  .pull_reset{ margin-left: 0}
+}
+
+//Classes for standard Small Screen desktop devices
+@mixin l_col(){
+  @media screen and ($responsive_first: $screen_large) {
+    @if $responsive == true{
+      @for $i from 1 to $grid_col_num+1{
+        .col_l_#{$i} {@include col_width($i)}
+        .pull_l_#{$i}{@include col_pull($i)}
+        .push_l_#{$i}{@include col_push($i)}
+      }
+      .hide_l{ display: none}
+      .show_l{ display: block}
+      .push_l_reset,
+      .pull_l_reset{ margin-left: 0}
+    }
+  }
+}
+
+//Classes for standard Tablet devices
+@mixin m_col(){
+  @media screen and ($responsive_first: $screen_medium) {
+    @if $responsive == true{
+      @for $i from 1 to $grid_col_num+1{
+        .col_m_#{$i} {@include col_width($i)}
+        .pull_m_#{$i}{@include col_pull($i)}
+        .push_m_#{$i}{@include col_push($i)}
+      }
+      .hide_m{ display: none}
+      .show_m{ display: block}
+      .push_m_reset,
+      .pull_m_reset{ margin-left: 0}
+    }
+  }
+}
+
+//Classes for standard Larger phone and smaller tablet devices
+@mixin s_col(){
+  @media screen and ($responsive_first: $screen_small) {
+    @if $responsive == true{
+      @for $i from 1 to $grid_col_num+1{
+        .col_s_#{$i} {@include col_width($i)}
+        .pull_s_#{$i}{@include col_pull($i)}
+        .push_s_#{$i}{@include col_push($i)}
+      }
+      .hide_s{ display: none}
+      .show_s{ display: block}
+      .push_s_reset,
+      .pull_s_reset{ margin-left: 0}
+    }
+  }
+}
+
+//Classes for standard Mobile phone devices
+@mixin xs_col(){
+  @media screen and ($responsive_first: $screen_xsmall) {
+    @if $responsive == true{
+      @for $i from 1 to $grid_col_num+1{
+        .col_xs_#{$i} {@include col_width($i)}
+        .pull_xs_#{$i}{@include col_pull($i)}
+        .push_xs_#{$i}{@include col_push($i)}
+      }
+      .hide_xs{ display: none}
+      .show_xs{ display: block}
+      .push_xs_reset,
+      .pull_xs_reset{ margin-left: 0}
+    }
+  }
+}
+
+
+//Generate grid widths for mobile and desktop first design
+@mixin col_width_output(){
+  @if $responsive_first == max-width{
+    @include default_col();
+    @include l_col();
+    @include m_col();
+    @include s_col();
+    @include xs_col();
+  }@else{
+    @include default_col();
+    @include xs_col();
+    @include s_col();
+    @include m_col();
+    @include l_col();
+  }
+
+  .push_reset,
+  .pull_reset{ margin-left: 0}
 }
 
 
@@ -137,57 +203,5 @@ $gutter_clean:0;
 //Standard col style
 [class*='col_']{ @include col_style(); }
 
-//Classes for standard grid
-@for $i from 1 to $grid_col_num+1{
-  .col_#{$i} {@include col_width($i)}
-  .pull_#{$i}{@include col_pull($i)}
-  .push_#{$i}{@include col_push($i)}
-}
-
-//Classes for standard Small Screen desktop devices
-@media screen and (max-width: $screen_large) {
-  @if $responsive == true{
-    @for $i from 1 to $grid_col_num+1{
-      .col_l_#{$i} {@include col_width($i)}
-      .pull_l_#{$i}{@include col_pull($i)}
-      .push_l_#{$i}{@include col_push($i)}
-    }
-  }
-}
-
-//Classes for standard Tablet devices
-@media screen and (max-width: $screen_medium) {
-  @if $responsive == true{
-    @for $i from 1 to $grid_col_num+1{
-      .col_m_#{$i} {@include col_width($i)}
-      .pull_m_#{$i}{@include col_pull($i)}
-      .push_m_#{$i}{@include col_push($i)}
-    }
-  }
-}
-
-//Classes for standard Larger phone and smaller tablet devices
-@media screen and (max-width: $screen_small) {
-  @if $responsive == true{
-    @for $i from 1 to $grid_col_num+1{
-      .col_s_#{$i} {@include col_width($i)}
-      .pull_s_#{$i}{@include col_pull($i)}
-      .push_s_#{$i}{@include col_push($i)}
-    }
-  }
-}
-
-//Classes for standard Mobile phone devices
-@media screen and (max-width: $screen_xsmall) {
-  @if $responsive == true{
-    @for $i from 1 to $grid_col_num+1{
-      .col_xs_#{$i} {@include col_width($i)}
-      .pull_xs_#{$i}{@include col_pull($i)}
-      .push_xs_#{$i}{@include col_push($i)}
-    }
-  }
-}
-
-//Grid utilities (show, hide)
-@include grid_utilities();
-
+//Columns widths
+@include col_width_output();

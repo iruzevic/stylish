@@ -83,17 +83,18 @@ $icons_font_location:     '../fonts/stylish';
 
 
 // Grid Fluid
-$gutter:         40px; //fluid grid gutter padding
-$grid_col_num:   12;   //fluid grid max columns number
+$gutter:            40px; //fluid grid gutter padding
+$grid_col_num:      12;   //fluid grid max columns number
 
 
 // Grid Sidebar Fix
-$sidebar_width:  300px; //fixed sidebar grid, sidebar width
-$gutter_fix:     $gutter; //fixed sidebar grid, padding between main fluid col and fixed sidebar
+$sidebar_width:     300px; //fixed sidebar grid, sidebar width
+$gutter_fix:        $gutter; //fixed sidebar grid, padding between main fluid col and fixed sidebar
 
 
 // Grid
-$page_max_width: 1440px; //max wid for page container
+$page_max_width:    1440px; //max wid for page container
+$responsive_first:  max-width; //If using mobile first put "min-width" else for desktop first use "max-width"
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -106,7 +107,7 @@ $responsive:    true; // set true or false if using responsive
 $screen_large:  1200px;// Small Screen desktop devices
 $screen_medium: 990px; // Tablet devices
 $screen_small:  768px; // Larger phone and smaller tablet devices
-$screen_xsmall: 550px; // Mobile phone devices
+$screen_xsmall: 480px; // Mobile phone devices
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
