@@ -83,6 +83,10 @@
         .pull_l_#{$i}{ @include col_pull($i) }
         .push_l_#{$i}{ @include col_push($i) }
       }
+      .hide_l{ display: none }
+      .show_l{ display: block }
+      .push_l_reset,
+      .pull_l_reset{ margin-left: 0 }
     }
   }@else{
     @for $i from 1 to $grid_col_num+1{
@@ -94,10 +98,12 @@
       .push_#{$i}{ @include col_push($i) }
     }
   }
-  .hide_l{ display: none }
-  .show_l{ display: block }
-  .push_l_reset,
-  .pull_l_reset{ margin-left: 0 }
+  @if $responsive_first == max-width{
+    .hide_l{ display: none }
+    .show_l{ display: block }
+    .push_l_reset,
+    .pull_l_reset{ margin-left: 0 }
+  }
 }
 
 //Classes for standard Tablet devices
@@ -139,6 +145,10 @@
         .pull_xs_#{$i}{ @include col_pull($i) }
         .push_xs_#{$i}{ @include col_push($i) }
       }
+      .hide_xs{ display: none }
+      .show_xs{ display: block }
+      .push_xs_reset,
+      .pull_xs_reset{ margin-left: 0 }
     }
   }@else{
     @for $i from 1 to $grid_col_num+1{
@@ -149,11 +159,13 @@
       .push_xs_#{$i},
       .push_#{$i}{ @include col_push($i) }
     }
+    @if $responsive_first == min-width{
+      .hide_xs{ display: none }
+      .show_xs{ display: block }
+      .push_xs_reset,
+      .pull_xs_reset{ margin-left: 0 }
+    }
   }
-  .hide_xs{ display: none }
-  .show_xs{ display: block }
-  .push_xs_reset,
-  .pull_xs_reset{ margin-left: 0 }
 }
 
 

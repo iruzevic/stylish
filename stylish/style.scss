@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.1
+Version: 3.1.1
 */
 
 /* Compass Framework Import */
@@ -66,18 +66,41 @@ Version: 3.1
 @import "layout/pages/single";
 
 
-/* RESPONSIVE LAYOUT MERGE (DESKTOP FIRST DESIGN) */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-@import "responsive/res_large";
-@import "responsive/res_medium";
-@import "responsive/res_small";
-@import "responsive/res_xsmall";
-
-
 /* GLOBAL STYLING */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 @import "global/global";
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//@media screen and ($responsive_first: $screen_large){
+//  @if $responsive == true{
+//
+//  }
+//}
+//
+//
+//@media screen and ($responsive_first: $screen_medium){
+//  @if $responsive == true{
+//
+//  }
+//}
+//
+//
+//@media screen and ($responsive_first: $screen_small){
+//  @if $responsive == true{
+//
+//  }
+//}
+//
+//
+//@media screen and ($responsive_first: $screen_xsmall){
+//  @if $responsive == true{
+//
+//  }
+//}
