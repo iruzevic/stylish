@@ -173,14 +173,18 @@
 @mixin col_width_output(){
   @if $responsive_first == max-width{
     @include l_col();
-    @include m_col();
-    @include s_col();
-    @include xs_col();
+    @if $responsive == true{
+      @include m_col();
+      @include s_col();
+      @include xs_col();
+    }
   }@else{
     @include xs_col();
-    @include s_col();
-    @include m_col();
-    @include l_col();
+    @if $responsive == true{
+      @include s_col();
+      @include m_col();
+      @include l_col();
+    }
   }
 
   .push_reset,
