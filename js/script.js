@@ -7,8 +7,11 @@ jQuery(document).ready(function(){
     radio('');
     select('');
     modal('', 'open');
+    tooltip();
     //sticky('.header');
     //checkbox_unset('');
+
+    disable();
 });
 
 //Actions on window resize
@@ -18,7 +21,6 @@ jQuery(window).resize(function(){
 
 
 /////////////////////////////////////////////////////////////////////////////////
-
 
 
 //Checkbox script
@@ -297,6 +299,62 @@ function modal(ID, action){
         var modal = jQuery('.modal[data-modal="'+ID+'"]');
         modal.removeClass(active_class);
     }
+}
+
+
+//Tooltip script
+function tooltip(){
+    jQuery('.tooltip .tip').each(function(){
+        var $this = jQuery(this),
+            $position = $this.attr('data-position'),
+            $width = $this.outerWidth(),
+            $height = $this.outerHeight();
+
+        if($position == 'bottom'){
+            $this.css({
+                'width':$width,
+                'height':$height,
+                'margin-left':-($width/2),
+                'bottom':-($height+15)
+            });
+        }
+
+        if($position == 'top'){
+            $this.css({
+                'width':$width,
+                'height':$height,
+                'margin-left':-($width/2),
+                'top':-($height+15)
+            });
+        }
+
+        if($position == 'right'){
+            $this.css({
+                'width':$width,
+                'height':$height,
+                'margin-right': -($width+15),
+                'margin-top':-($height/2)
+            });
+        }
+
+        if($position == 'left'){
+            $this.css({
+                'width':$width,
+                'height':$height,
+                'margin-left': -($width+15),
+                'margin-top':-($height/2)
+            });
+        }
+    })
+}
+
+
+//Disable function
+function disable(){
+    jQuery('a.disabled').on('click', function(e){
+        e.preventDefault();
+        jQuery(this).off();
+    });
 }
 
 

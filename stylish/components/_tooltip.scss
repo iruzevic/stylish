@@ -1,0 +1,39 @@
+/* Tooltip setup */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.tooltip{
+  position: relative;
+
+  &:hover{
+    z-index: 1000;
+    .tip{ top: auto; left: auto; @include opacity(1); visibility: visible; }
+  }
+
+ .tip {
+    position: absolute; padding: 10px; text-align: center; background: $color_white; @include border-radius(4px); @include box-shadow(rgba($color_mine_shaft, 0.1) 1px 1px 2px 0px);z-index: -1; visibility: hidden; @include opacity(0);@include transition-duration(.4s); @include transition-property(opacity);
+    &:after {
+      content: ""; position: absolute; width: 0; height: 0; border-width: $tooltip_arrow; border-style: solid;
+    }
+    &[data-position="top"]{
+      left:50%;
+      &:after{bottom:-$tooltip_arrow*2; left: 50%; margin-left: -$tooltip_arrow; border-color: $color_white transparent transparent transparent;}
+    }
+    &[data-position="bottom"]{
+      left:50%;
+      &:after{top:-$tooltip_arrow*2; left: 50%; margin-left: -$tooltip_arrow; border-color: transparent transparent $color_white transparent;}
+    }
+    &[data-position="left"]{
+      left:0; top: 50%;
+      &:after{right:-$tooltip_arrow*2; top: 50%; margin-top: -$tooltip_arrow; border-color: transparent transparent transparent $color_white;}
+    }
+    &[data-position="right"]{
+      right:0; top: 50%;
+      &:after{left:-$tooltip_arrow*2; top: 50%; margin-top: -$tooltip_arrow; border-color: transparent $color_white transparent transparent;}
+    }
+  }
+
+
+}
+
+

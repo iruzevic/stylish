@@ -9,9 +9,8 @@
   cursor: pointer;
   @include transition-property(color);
   @include transition-duration(.3s);
-  &:hover{
-    color: $color_hover;
-  }
+  &:hover{ color: $color_hover; }
+  &.disabled{color: $color; cursor: default; }
 }
 
 
