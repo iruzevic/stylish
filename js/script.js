@@ -189,28 +189,32 @@ function upload(){
 function tabs(){
     //Tabs first load
 
-    var tabs = jQuery('.tabs');
+    var $tabs = jQuery('.tabs');
 
-    tabs.each(function(){
-        var id= jQuery(this).attr('data-active');
+    $tabs.each(function(){
+
+        var $this = jQuery(this),
+            $active = $this.attr('data-active');
 
         //if active tab is not set add active to first tab
-        if(id == '' || id === undefined){
-            id = jQuery(this).find('.t_head li:first-child').data('tab');
+        if($active == '' || $active === undefined){
+            $active = $this.find('.t_head li:first-child').data('tab');
         }
 
-        jQuery(this).find('.t_head li[data-tab="'+id+'"]').addClass('active');
-        jQuery(this).find('.t_content[data-content="'+id+'"]').show();
+        $this.find('.t_head li[data-tab="'+$active+'"]').addClass('active');
+        $this.find('.t_content[data-content="'+$active+'"]').addClass('active');
     });
 
 
     //Tabs click action
     jQuery('.t_head li').click(function(){
-        var id = jQuery(this).data('tab');
-        jQuery(this).closest('.tabs').find('.t_head li').removeClass('active');
-        jQuery(this).closest('.tabs').find('.t_content').hide();
-        jQuery(this).addClass('active');
-        jQuery(this).closest('.tabs').find('.t_content[data-content="'+id+'"]').show();
+        var $this = jQuery(this),
+            $active = jQuery(this).data('tab'),
+            $tabs = $this.closest('.tabs');
+        $tabs.find('.t_head li').removeClass('active');
+        $tabs.find('.t_content').removeClass('active');
+        $this.addClass('active');
+        $tabs.find('.t_content[data-content="'+$active+'"]').addClass('active');
     });
 }
 

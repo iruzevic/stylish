@@ -6,9 +6,9 @@
 
   //Tabs Head
   .t_head{
-    list-style: none; background-color: $tabs_head_color; @extend .clearfix;
+    background-color: $tabs_head_color;
     li{
-      float: left;text-align: center; cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: 10px 20px;
+      cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: 10px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       &.active{
         color: $color_mine_shaft;  background-color:$color_white;
       }
@@ -17,6 +17,9 @@
 
   //Tabs content
   .t_content{
-    padding: 20px 0; display: none;
+    height: 0; overflow: hidden;
+    &.active{ height: 100%;}
+
+    .t_content_wrap{ padding: 20px 0; }
   }
 }
