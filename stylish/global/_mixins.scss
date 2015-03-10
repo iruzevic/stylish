@@ -253,3 +253,16 @@
     $i:$i - 10;
   }
 }
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Tooltip colors
+@mixin tooltip_color($tip_color:$tooltip_bg, $tip_txt: $tooltip_txt){
+  background: $tip_color; color: $tip_txt;
+  &[data-position="top"]:after{ border-top-color: $tip_color; }
+  &[data-position="bottom"]:after{ border-bottom-color: $tip_color; }
+  &[data-position="left"]:after{ border-left-color: $tip_color; }
+  &[data-position="right"]:after{ border-right-color: $tip_color; }
+}

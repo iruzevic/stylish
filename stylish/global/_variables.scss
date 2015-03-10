@@ -172,7 +172,9 @@ $pag_item_text:             $color_mine_shaft; //pagination item text color
 $pag_item_current_bg:       $color_flush_mahogany;  //pagination current item bg color
 $pag_item_current_text:     $color_white; //pagination current item text color
 
-$tooltip_arrow: 10px;   //Tooltip arrow size
+$tooltip_arrow:             10px;   //Tooltip arrow size
+$tooltip_bg:                $color_white; //Tooltip background color
+$tooltip_txt:               $color_mine_shaft; //Tooltip text color
 
 $modal_max_width:           $page_max_width/2; //Max width of modal window
 $modal_min_width:           600px; //Min width of modal window
