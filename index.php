@@ -85,9 +85,7 @@
                     </ul>
                 </li>
                 <li><a href="#tabs" class="top_link"><i class="fa fa-star"></i>Tabs</a></li>
-
-
-
+                <li><a href="#tooltip" class="top_link"><i class="fa fa-star"></i>Tooltip</a></li>
                 <li><a href="#table" class="top_link"><i class="fa fa-star"></i>Table</a></li>
                 <li><a href="#divider" class="top_link"><i class="fa fa-star"></i>Divider</a></li>
                 <li>
@@ -222,6 +220,8 @@
                 <?php include ("preview/parts/tabs.php"); ?>
 
                 <?php include ("preview/parts/tabs.php"); ?>
+
+                <?php include ("preview/parts/tooltip.php"); ?>
 
                 <?php include ("preview/parts/forms.php"); ?>
 

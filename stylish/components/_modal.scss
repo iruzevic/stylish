@@ -12,7 +12,16 @@
   .modal_wrap{ display: table-cell; height: 100%; vertical-align: middle; padding: 0 $gutter}
 
   //Modal content
-  .modal_content{padding: 30px; background-color: $color_white; margin: 0 auto; max-width:$modal_max_width; min-width: $modal_min_width; position: relative;@include transition-property(all);@include transition-duration(.4s);}
+  .modal_content{
+    padding: 30px; background-color: $color_white; margin: 0 auto; max-width:$modal_max_width; min-width: $modal_min_width; overflow-y: auto; max-height: 100%; position: relative;@include transition-property(all);@include transition-duration(.4s);
+
+    //Content Structure
+    .m_head{
+      margin-bottom: 30px;
+      .m_title{ margin-bottom: 10px;}
+    }
+    .m_footer{ margin-top:30px; @extend .clearfix;}
+  }
 
   //Active (opened state)
   &.active{

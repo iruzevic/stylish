@@ -5,51 +5,63 @@
 .tooltip{
   position: relative;
 
-  &:hover{
-    z-index: 1000;
-    .tip{ top: auto; left: auto; @include opacity(1); visibility: visible; }
-  }
-
-  .tip {
-    position: absolute; padding: 10px; text-align: center; max-width: 300px; font-size: 14px; @include border-radius($global_radius); @include box-shadow(rgba($color_mine_shaft, 0.1) 1px 1px 2px 0px);z-index: -1; visibility: hidden; @include opacity(0);@include transition-duration(.4s); @include transition-property(opacity);
-    &:after {
-      content: ""; position: absolute; width: 0; height: 0; border: $tooltip_arrow solid transparent;
-    }
-
-
-    //Position general
-    &[data-position="top"],
-    &[data-position="bottom"]{
-      left:50%;
-      &:after{left: 50%; margin-left: -$tooltip_arrow;}
-    }
-
-    &[data-position="left"],
-    &[data-position="right"]{
-      top: 50%;
-      &:after{top: 50%; margin-top: -$tooltip_arrow; }
-    }
-
-
-    //Position specific
-    &[data-position="top"]{
-      &:after{bottom:-$tooltip_arrow*2;}
-    }
-    &[data-position="bottom"]{
-      &:after{top:-$tooltip_arrow*2;}
-    }
-    &[data-position="left"]{
-      left:0;
-      &:after{right:-$tooltip_arrow*2;}
-    }
-    &[data-position="right"]{
-      right:0;
-      &:after{left:-$tooltip_arrow*2;}
-    }
-
-    //Generate default color style
-    @include tooltip_color();
-
-  }
+  //User to trigger tip
+  .tooltip_trigger{ cursor: pointer;}
 }
+
+
+//Tooltip
+.tip {
+  position: absolute; padding: 10px; text-align: center; max-width: 300px; font-size: 14px; line-height: 18px;@include border-radius($global_radius); @include box-shadow(rgba($color_mine_shaft, 0.1) 1px 1px 2px 0px);z-index: 500;
+  &:after,
+  &:before{
+    content: ""; position: absolute; width: 0; height: 0; border: $tooltip_arrow solid transparent;
+  }
+
+
+  //Position general
+  &[data-position="top"],
+  &[data-position="bottom"]{
+   &:after,
+   &:before{left: 50%; margin-left: -$tooltip_arrow;}
+  }
+
+  &[data-position="left"],
+  &[data-position="right"]{
+   &:after,
+   &:before{top: 20px;}
+  }
+
+
+  //Position specific
+  &[data-position="top"]{
+   &:after,&:before{bottom:-$tooltip_arrow*2;}
+   &:before{ margin-bottom: -1px}
+  }
+  &[data-position="bottom"]{
+   &:after,&:before{top:-$tooltip_arrow*2;}
+   &:before{ margin-top: -1px}
+  }
+  &[data-position="left"]{
+   left:0;
+   &:after,&:before{right:-$tooltip_arrow*2;}
+   &:before{ margin-right: -1px}
+  }
+  &[data-position="right"]{
+   right:0;
+   &:after,&:before{left:-$tooltip_arrow*2;}
+   &:before{ margin-left: -1px}
+  }
+
+
+  //Generate default color style
+  @include tooltip_color();
+
+
+  //Tip Details Style
+  .tip_title{ font-size: 18px; line-height: 21px; margin-bottom: 5px; display: block}
+}
+
+
+
 

@@ -79,7 +79,7 @@ function checkbox(id){
     jQuery('.checkbox label a').on('click',function(e){
         e.stopPropagation();
     });
-};
+}
 
 
 //Force checkbox to unset
@@ -167,7 +167,80 @@ function select(id){
             container.children('select').css({minWidth: select});
         }
     });
-};
+}
+
+
+//Tooltip script
+function tooltip() {
+    jQuery('.tooltip_trigger').on({
+        mouseenter: function () {
+
+            //Set variables and selectors
+            var $this = jQuery(this).closest('.tooltip'),
+                $position = $this.attr('data-tip-position'),
+                $title = $this.attr('data-tip-title'),
+                $content = $this.attr('data-tip-content'),
+                $width = $this.attr('data-tip-width'),
+
+                $el_width = $this.width(),
+                $el_height = $this.height(),
+                $arrow = 10,
+                $arrow_move = 20,
+                $style, $top, $left,$tip = '';
+
+            //Check if attributes are set
+            if($position == '' || $position == undefined){
+                $position = 'bottom';
+            }
+            if($title == '' || $title == undefined){
+                $title = '';
+            }
+            if($content == '' || $content == undefined){
+                $content = '';
+            }
+            if($width == '' || $width == undefined){
+                $width = 280;
+            }
+
+            //Position the tip
+            if ($position == 'bottom') {
+                $top = $el_height + $arrow_move;
+                $left = ($el_width / 2) - ($width / 2);
+                $style = 'width:' + $width + 'px; top:' + $top + 'px; left:' + $left + 'px;';
+            }
+
+            if ($position == 'top') {
+                $top = $el_height + $arrow_move;
+                $left = ($el_width / 2) - ($width / 2);
+                $style = 'width:' + $width + 'px; bottom:' + $top + 'px; left:' + $left + 'px;';
+            }
+
+            if ($position == 'right') {
+                $top = ($el_height/2)-$arrow-$arrow_move;
+                $left = $el_width + $arrow_move;
+                $style = 'width:' + $width + 'px; top:' + $top + 'px; left:' + $left + 'px;';
+            }
+
+            if ($position == 'left') {
+                $top = ($el_height/2)-$arrow-$arrow_move;
+                $left = $width + $arrow_move;
+                $style = 'width:' + $width + 'px; top:' + $top + 'px; left:-' + $left + 'px;';
+            }
+
+            $tip = '<div class="tip" style="' + $style + '" data-position="' + $position + '"><div class="tip_title">' + $title + '</div>' + $content + '</div>'
+
+            jQuery($tip).hide().appendTo($this).fadeIn(200);
+
+        },
+        //Remove the tip
+        mouseleave: function () {
+            jQuery('.tip').stop(true,true).remove();
+        },
+        mouseout: function () {
+            jQuery('.tip').stop(true,true).remove();
+        }
+    });
+}
 
 
 //Upload script
@@ -245,7 +318,7 @@ function accordion(){
             jQuery(this).next('.a_content').slideToggle('fast');
         }
     });
-};
+}
 
 
 //Modal Window script
@@ -303,53 +376,6 @@ function modal(ID, action){
         var modal = jQuery('.modal[data-modal="'+ID+'"]');
         modal.removeClass(active_class);
     }
-}
-
-
-//Tooltip script
-function tooltip(){
-    jQuery('.tooltip .tip').each(function(){
-        var $this = jQuery(this),
-            $position = $this.attr('data-position'),
-            $width = $this.outerWidth(),
-            $height = $this.outerHeight();
-
-        if($position == 'bottom'){
-            $this.css({
-                'width':$width,
-                'height':$height,
-                'margin-left':-($width/2),
-                'bottom':-($height+15)
-            });
-        }
-
-        if($position == 'top'){
-            $this.css({
-                'width':$width,
-                'height':$height,
-                'margin-left':-($width/2),
-                'top':-($height+15)
-            });
-        }
-
-        if($position == 'right'){
-            $this.css({
-                'width':$width,
-                'height':$height,
-                'margin-right': -($width+15),
-                'margin-top':-($height/2)
-            });
-        }
-
-        if($position == 'left'){
-            $this.css({
-                'width':$width,
-                'height':$height,
-                'margin-left': -($width+15),
-                'margin-top':-($height/2)
-            });
-        }
-    })
 }
 
 

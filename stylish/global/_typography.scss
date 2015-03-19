@@ -28,12 +28,6 @@ a:not(.btn) {@include link_color();}
 /* Setup content style for large texts */
 .content_style{
   p{margin-bottom:$content_style_margin; font-size:$p; line-height:$p+3; }
-  img{
-    width: 100%; height: auto;
-    &.alignleft {clear: left;float: left; margin: 0 $content_style_margin $content_style_margin 0;}
-    &.alignright {clear: right;float: right;margin: 0 0 $content_style_margin $content_style_margin;}
-    &.no_res{ width: auto;}
-  }
   ul, ol {overflow: hidden; margin-left:0; margin-bottom: $content_style_margin}
   li{ margin-bottom: 5px}
   ul li { margin-left:$content_style_margin+10px;font-size:$p;line-height:$p+3;}
@@ -46,7 +40,15 @@ a:not(.btn) {@include link_color();}
   h5 {font-size:$h6; line-height: $h6+3;}
   h6 {font-size:$h6 - 3; line-height: $h6;}
   address{font-size: $p;line-height: $p+3;}
-  iframe{ width: 100%; height: auto; display: block; }
+
+  img:not(.nores){ width: 100%; height: auto;}
+  iframe:not(.nores){ width: 100%}
+
+  img,
+  iframe{
+    .alignleft {clear: left;float: left;margin: 0 $content_style_margin $content_style_margin 0;}
+    .alignright {clear: right;float: right;margin: 0 0 $content_style_margin $content_style_margin;}
+  }
 }
 
 
