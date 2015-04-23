@@ -8,6 +8,7 @@ jQuery(document).ready(function(){
     select('');
     modal('', 'open');
     tooltip();
+    scrollto('.scroll_to');
     //sticky('.header');
     //checkbox_unset('');
 
@@ -20,8 +21,8 @@ jQuery(window).resize(function(){
 });
 
 
-/////////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Checkbox script
 function checkbox(id){
@@ -81,6 +82,7 @@ function checkbox(id){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Force checkbox to unset
 function checkbox_unset(id){
@@ -89,6 +91,7 @@ function checkbox_unset(id){
     label.removeClass('checked');
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Radio script
 function radio(id){
@@ -141,6 +144,7 @@ function radio(id){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Select script
 function select(id){
@@ -169,6 +173,7 @@ function select(id){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Tooltip script
 function tooltip() {
@@ -242,6 +247,7 @@ function tooltip() {
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Upload script
 function upload(){
@@ -257,6 +263,7 @@ function upload(){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Tabs script
 function tabs(){
@@ -291,6 +298,7 @@ function tabs(){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Accordion script
 function accordion(){
@@ -320,30 +328,44 @@ function accordion(){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Modal Window script
 function modal(ID, action){
     var active_class = 'active';
 
     //function to close modal windows
-    function close_modal(modal){
+    function close_modal(modal) {
+        var close_on_overlay = modal.attr('data-close-on-overlay'),
+            close_on_esc = modal.attr('data-close-on-esc'),
+            close_on_btn = modal.attr('data-close-on-btn');
+
         //Close modal on Esc key
-        jQuery(document).keyup(function(e) {
-            if (e.keyCode == 27) {
-                modal.removeClass(active_class);
-            }
-        });
+        if(close_on_esc !== 'false') {
+            jQuery(document).keyup(function (e) {
+                if (e.keyCode == 27) {
+                    modal.removeClass(active_class);
+                    jQuery('html').removeClass('modal_active');
+                }
+            });
+        }
 
         //Close modal on overlay click
-        jQuery('.modal_overlay').on('click', function(){
-            modal.removeClass(active_class);
-        });
+        if(close_on_overlay !== 'false') {
+            jQuery('.modal_overlay').on('click', function () {
+                modal.removeClass(active_class);
+                jQuery('html').removeClass('modal_active');
+            });
+        }
 
         //Close modal on .close_modal class
-        jQuery('.close_modal').on('click', function(e){
-            e.preventDefault();
-            modal.removeClass(active_class);
-        });
+        if(close_on_btn !== 'false') {
+            jQuery('.close_modal').on('click', function (e) {
+                e.preventDefault();
+                modal.removeClass(active_class);
+                jQuery('html').removeClass('modal_active');
+            });
+        }
     }
 
     //Open modal window
@@ -359,6 +381,7 @@ function modal(ID, action){
 
                 //Show modal
                 modal.addClass(active_class);
+                jQuery('html').addClass('modal_active');
 
                 close_modal(modal);
 
@@ -368,6 +391,7 @@ function modal(ID, action){
         }else{
             modal = jQuery('.modal[data-modal="'+ID+'"]');
             modal.addClass(active_class);
+            jQuery('html').addClass('modal_active');
             close_modal(modal);
         }
 
@@ -375,18 +399,11 @@ function modal(ID, action){
     }else if(action == 'close'){
         var modal = jQuery('.modal[data-modal="'+ID+'"]');
         modal.removeClass(active_class);
+        jQuery('html').removeClass('modal_active');
     }
 }
 
-
-//Disable function
-function disable(){
-    jQuery('a.disabled').on('click', function(e){
-        e.preventDefault();
-        jQuery(this).off();
-    });
-}
-
+/////////////////////////////////////////////////////////////////////////////////
 
 //Make and object stick to the top on scroll
 function sticky(id){
@@ -400,10 +417,52 @@ function sticky(id){
     });
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
+//Global scroll to content
+function scrollto($id){
+    jQuery($id).click(function(e){
+        var $id_scroll = jQuery(this).attr('data-scroll-to');
+
+        if($id_scroll !== undefined){
+            e.preventDefault();
+            var id = jQuery($id_scroll);
+            if(id.length){
+                jQuery('html, body').animate({
+                    scrollTop: id.offset().top - 100
+                }, 500);
+                return false;
+            }
+        }
+    })
+}
+
+/////////////////////////////////////////////////////////////////////////////////
 
 //Create escape function for selectors (for magento)
 function escape_string(str) {
     return str.replace(/([;&,\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
+}
+
+//Disable function
+function disable(){
+    jQuery('a.disabled').on('click', function(e){
+        e.preventDefault();
+        jQuery(this).off();
+    });
+}
+
+//Set cookie
+function setCookie(key, value, time) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (time));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+//Get cookie value
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
 }
 
 

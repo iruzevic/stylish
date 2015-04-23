@@ -81,4 +81,10 @@
       .modal_content{ @include scale(1)}
     }
   }
+
+  //Load modal by Full width
+  &[data-size="full"]{
+    .modal_wrap{ display: block; padding: 0;}
+    .modal_content{max-width:inherit; height: 100%; padding: 0}
+  }
 }

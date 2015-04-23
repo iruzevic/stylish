@@ -3,9 +3,9 @@
 
 
 .breadcrumbs{
-  li{
-    a:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:14px; vertical-align:baseline;padding:0 10px}
+  >li{
+   >a:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:14px; vertical-align:baseline;padding:0 10px}
 
-    &:last-child a:after{ content: ""; padding:0}
+    &:last-child >a:after{ content: ""; padding:0}
   }
 }

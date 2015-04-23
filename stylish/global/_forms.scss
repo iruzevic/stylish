@@ -126,6 +126,10 @@ form, .form{
     &.big { margin-bottom: $form_field_move*2;}
     &.slim{ margin-bottom: $form_field_move/2;}
 
+    &[data-required="true"]{
+      label:after{ content: "*"; font-size: 14px; padding-left: 3px}
+    }
+
     label{
       display: block; margin-bottom: 5px; font-size: $p;
 
@@ -138,6 +142,8 @@ form, .form{
 
     &.last{margin-bottom: 0}
   }
+
+  .label_correction{}
 
   //validation error (validation-advice for magento)
   .validation-advice, .error{

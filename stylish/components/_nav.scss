@@ -5,21 +5,21 @@
 //Navigation Global Setup
 .nav,
 .navi{
-  li{
+  >li{
     list-style: none;text-align: center;
-    a{display: block;}
+    >a{display: block;}
   }
 
   //Navigation align
-  &.nav_aright li{ text-align: right}
-  &.nav_aleft  li{ text-align: left}
+  &.nav_aright >li{ text-align: right}
+  &.nav_aleft  >li{ text-align: left}
 
 
   //Calculate navigation item width based on data-item attribute
   $i:24;
   @while $i > 0{
-    &[data-item="#{$i}"] li,
-    &[data-items="#{$i}"] li{ width:100%/$i; }
+    &[data-item="#{$i}"] >li,
+    &[data-items="#{$i}"] >li{ width:100%/$i; }
     $i:$i - 1;
   }
   @extend .clearfix
@@ -28,13 +28,13 @@
 
 //Navigation with float left
 .nav{
-  li{ float: left; }
-  &.nav_right li{ float: right; }
+  >li{ float: left; }
+  &.nav_right >li{ float: right; }
 }
 
 
 //Navigation with display inline
-.navi li{ display:inline-block; vertical-align: middle ; margin-right: -6px; }
+.navi >li{ display:inline-block; vertical-align: middle ; margin-right: -6px; }
 
 
 
