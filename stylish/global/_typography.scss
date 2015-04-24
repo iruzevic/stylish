@@ -58,17 +58,18 @@ a:not(.btn) {@include link_color();}
   .underline{ text-decoration: underline;}
 
   //Images and iframe
-  img:not(.nores){ width: 100%; height: auto; margin-bottom:$cs_margin; max-width: 100%; }
-  img.alignleft,
-  img.alignright{width: auto;max-width: 100%;}
-  img.rounded{@include border-radius(50%);}
-
-  iframe:not(.nores){ width: 100%; margin-bottom:$cs_margin;max-width: 100%; }
-
   img,
   iframe{
-    &.alignleft {clear: left;float: left;margin: 0 $cs_margin $cs_margin 0;}
-    &.alignright {clear: right;float: right;margin: 0 0 $cs_margin $cs_margin;}
+    width: auto; height: auto; max-width: 100%; margin-bottom:$cs_margin;
+
+    &.alignleft {clear: left;float: left;margin-right:$cs_margin;}
+    &.alignright {clear: right;float: right;margin-left:$cs_margin;}
+
+    //Image full width
+    &.full{width: 100%; height: auto;}
+
+    //Rounded
+    &.rounded{@include border-radius(50%);}
   }
 
 }
