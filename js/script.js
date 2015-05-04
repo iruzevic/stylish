@@ -352,7 +352,7 @@ function modal(ID, action){
 
         //Close modal on overlay click
         if(close_on_overlay !== 'false') {
-            jQuery('.modal_overlay').on('click', function () {
+            jQuery('.m_overlay').on('click', function () {
                 modal.removeClass(active_class);
                 jQuery('html').removeClass('modal_active');
             });
@@ -380,6 +380,7 @@ function modal(ID, action){
                 var modal = jQuery('.modal[data-modal="'+id+'"]');
 
                 //Show modal
+                modal_calculate_center(id);
                 modal.addClass(active_class);
                 jQuery('html').addClass('modal_active');
 
@@ -390,6 +391,7 @@ function modal(ID, action){
             //ID provided open modal form JS.
         }else{
             modal = jQuery('.modal[data-modal="'+ID+'"]');
+            modal_calculate_center(ID);
             modal.addClass(active_class);
             jQuery('html').addClass('modal_active');
             close_modal(modal);
@@ -402,6 +404,37 @@ function modal(ID, action){
         jQuery('html').removeClass('modal_active');
     }
 }
+
+
+//Calculate modal center position if data-slide is scale
+function modal_calculate_center(ID){
+
+    if(ID == '') {
+        var $modal = jQuery('.modal');
+    }else {
+        var $modal = jQuery('.modal[data-modal="' + ID + '"]');
+    }
+
+    var $slide_type = $modal.attr('data-slide');
+
+    if($slide_type == 'scale') {
+        var $window_height = jQuery(window).height(),
+            $modal_height = $modal.find('.m_content').height(),
+            $move;
+
+        //Check calculations
+        if ($window_height <= $modal_height) {
+            $move = 0;
+        } else {
+            $move = ($window_height - $modal_height) / 2;
+        }
+
+        //Add value to css
+        $modal.find('.m_content_wrap').css('top', $move);
+
+    }
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////
 

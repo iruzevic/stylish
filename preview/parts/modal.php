@@ -7,11 +7,13 @@
             <a href="#" class="btn open_modal auto_width" data-modal="Modal1">Open Modal</a>
 
             <div class="modal" data-modal="Modal1" data-slide="scale">
-                <div class="modal_overlay"></div>
-                <div class="modal_wrap">
-                    <div class="modal_content">
-                        <a class="close_modal" href="#"></a>
-                        Content
+                <div class="m_overlay"></div>
+                <div class="m_wrap">
+                    <div class="m_content_wrap">
+                        <div class="m_content">
+                            <a class="close_modal" href="#"></a>
+                            Content
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,86 +21,20 @@
 
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <a href="#" class="btn open_modal" data-modal="Modal1">Open Modal</a>
-
-
-                                <div class="modal" data-modal="Modal1" data-slide="scale">
-                                    <div class="modal_overlay"></div>
-                                    <div class="modal_wrap">
-                                        <div class="modal_content">
-                                            <a class="close_modal" href="#"></a>
-                                            Content
-                                        </div>
-                                    </div>
-                                </div>
-                            </pre>
-        </div>
-    </div>
-    <div class="block scrollto_left">
-        <h1 class="title">Modal Window Left SlideIN</h1>
-        <p class="desc">Modal window to open, add data-slide="left" to slide from left.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
-        <div class="content">
-            <a href="#" class="btn open_modal auto_width" data-modal="Modal2">Open Modal</a>
-            <div class="modal" data-modal="Modal2" data-slide="left">
-                <div class="modal_overlay"></div>
-                <div class="modal_wrap">
-                    <div class="modal_content">
-                        <a class="close_modal" href="#"></a>
-                        Content
+            <pre class="brush: xml;">
+                <a href="#" class="btn open_modal" data-modal="Modal1">Open Modal</a>
+                <div class="modal" data-modal="Modal1" data-slide="scale">
+                    <div class="m_overlay"></div>
+                    <div class="m_wrap">
+                        <div class="m_content_wrap">
+                            <div class="m_content">
+                                <a class="close_modal" href="#"></a>
+                                Content
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="source">
-                            <pre class="brush: xml;">
-                                <a href="#" class="btn open_modal" data-modal="Modal2">Open Modal</a>
-
-
-                                <div class="modal" data-modal="Modal2" data-slide="left">
-                                    <div class="modal_overlay"></div>
-                                    <div class="modal_wrap">
-                                        <div class="modal_content">
-                                            <a class="close_modal" href="#"></a>
-                                            Content
-                                        </div>
-                                    </div>
-                                </div>
-                            </pre>
-        </div>
-    </div>
-    <div class="block scrollto_right">
-        <h1 class="title">Modal Window Right SlideIN</h1>
-        <p class="desc">Modal window to open, add data-slide="right" to slide from right.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
-        <div class="content">
-            <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
-            <div class="modal" data-modal="Modal3" data-slide="right">
-                <div class="modal_overlay"></div>
-                <div class="modal_wrap">
-                    <div class="modal_content">
-                        <a class="close_modal" href="#"></a>
-                        Content
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="source">
-                            <pre class="brush: xml;">
-                                <a href="#" class="btn open_modal" data-modal="Modal3">Open Modal</a>
-
-
-                                <div class="modal" data-modal="Modal3" data-slide="right">
-                                    <div class="modal_overlay"></div>
-                                    <div class="modal_wrap">
-                                        <div class="modal_content">
-                                            <a class="close_modal" href="#"></a>
-                                            Content
-                                        </div>
-                                    </div>
-                                </div>
-                            </pre>
+            </pre>
         </div>
     </div>
     <div class="block scrollto_top">
@@ -106,65 +42,71 @@
         <p class="desc">Modal window to open, add data-slide="top" to slide from top.</p>
         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
         <div class="content">
-            <a href="#" class="btn open_modal auto_width" data-modal="Modal4">Open Modal</a>
-            <div class="modal" data-modal="Modal4" data-slide="top">
-                <div class="modal_overlay"></div>
-                <div class="modal_wrap">
-                    <div class="modal_content">
-                        <a class="close_modal" href="#"></a>
-                        Content
+            <a href="#" class="btn open_modal auto_width" data-modal="Modal2">Open Modal</a>
+            <div class="modal" data-modal="Modal2" data-slide="top">
+                <div class="m_overlay"></div>
+                <div class="m_wrap">
+                    <div class="m_content_wrap">
+                        <div class="m_content">
+                            <a class="close_modal" href="#"></a>
+                            Content
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <a href="#" class="btn open_modal" data-modal="Modal4">Open Modal</a>
+            <pre class="brush: xml;">
+                <a href="#" class="btn open_modal" data-modal="Modal2">Open Modal</a>
 
-
-                                <div class="modal" data-modal="Modal4" data-slide="top">
-                                    <div class="modal_overlay"></div>
-                                    <div class="modal_wrap">
-                                        <div class="modal_content">
-                                            <a class="close_modal" href="#"></a>
-                                            Content
-                                        </div>
-                                    </div>
-                                </div>
-                            </pre>
+                <div class="modal" data-modal="Modal2" data-slide="top">
+                    <div class="m_overlay"></div>
+                    <div class="m_wrap">
+                        <div class="m_content_wrap">
+                            <div class="m_content">
+                                <a class="close_modal" href="#"></a>
+                                Content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pre>
         </div>
     </div>
-    <div class="block scrollto_bottom">
-        <h1 class="title">Modal Window Bottom SlideIN</h1>
-        <p class="desc">Modal window to open, add data-slide="bottom" to slide from bottom.</p>
+    <div class="block scrollto_full">
+        <h1 class="title">Modal Window Full size</h1>
+        <p class="desc">Modal window to open, data-size="full"</p>
         <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
         <div class="content">
-            <a href="#" class="btn open_modal auto_width" data-modal="Modal5">Open Modal</a>
-            <div class="modal" data-modal="Modal5" data-slide="bottom">
-                <div class="modal_overlay"></div>
-                <div class="modal_wrap">
-                    <div class="modal_content">
-                        <a class="close_modal" href="#"></a>
-                        Content
+            <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
+            <div class="modal" data-modal="Modal3" data-slide="scale" data-size="full">
+                <div class="m_overlay"></div>
+                <div class="m_wrap">
+                    <div class="m_content_wrap">
+                        <div class="m_content">
+                            <a class="close_modal" href="#"></a>
+                            Content
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="source">
-                            <pre class="brush: xml;">
-                                <a href="#" class="btn open_modal" data-modal="Modal5">Open Modal</a>
+            <pre class="brush: xml;">
+                <a href="#" class="btn open_modal" data-modal="Modal3">Open Modal</a>
 
-
-                                <div class="modal" data-modal="Modal5" data-slide="bottom">
-                                    <div class="modal_overlay"></div>
-                                    <div class="modal_wrap">
-                                        <div class="modal_content">
-                                            <a class="close_modal" href="#"></a>
-                                            Content
-                                        </div>
-                                    </div>
-                                </div>
-                            </pre>
+                <div class="modal" data-modal="Modal3" data-slide="scale" data-size="full">
+                    <div class="m_overlay"></div>
+                    <div class="m_wrap">
+                        <div class="m_content_wrap">
+                            <div class="m_content">
+                                <a class="close_modal" href="#"></a>
+                                Content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pre>
         </div>
     </div>
     <div class="block scrollto_js_section">
@@ -191,8 +133,10 @@
             <li class="notice_msg">
                 <ul>
                     <li>Button - Attribute <strong>data-modal</strong> must be equal to <strong>data-modal</strong> on modal.</li>
-                    <li>Modal - Attribute <strong>data-slide</strong> sets the way the modal is going to open.</li>
-                    <li>Avaiable methods - <strong>Scale, Left, Right, Top, Bottom</strong></li>
+                    <li>Modal - Attribute <strong>data-slide</strong> sets the way the modal is going to open - Scale or Top</li>
+                    <li>Modal - Attribute <strong>data-close-on-overlay</strong> true or false.</li>
+                    <li>Modal - Attribute <strong>data-close-on-esc</strong> true or false.</li>
+                    <li>Modal - Attribute <strong>data-close-on-btn</strong> true or false.</li>
                 </ul>
             </li>
         </ul>
