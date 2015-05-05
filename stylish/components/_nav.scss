@@ -41,7 +41,7 @@
 
 //Sticky Navigation
 .sticky{
-  position: fixed; z-index: 10000;
+  position: fixed; z-index: 10000;  -webkit-transform: translateZ(0);
 
   &.top{    top: 0;}
   &.bottom{ bottom: 0;}

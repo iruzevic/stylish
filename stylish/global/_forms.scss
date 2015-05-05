@@ -35,6 +35,8 @@ textarea{ height: 150px; padding: 12px}
 /* Checkbox and Radio input Global setup */
 .checkbox, .radio{
 
+  position: relative;
+
   label { cursor: pointer;@include user-select(none);position: relative; margin: 0; display: block; }
 
   //Icon
@@ -47,7 +49,7 @@ textarea{ height: 150px; padding: 12px}
 
   //move real input out from viewpoint, don't use display:none because of IE7-8
   input[type=checkbox],
-  input[type=radio] {position: absolute;left: -10000px;}
+  input[type=radio] {position: absolute;left: 5px; top: 5px; z-index: -1}
 }
 
 /* Setup custom checkbox input */
