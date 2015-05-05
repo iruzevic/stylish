@@ -3,12 +3,12 @@ jQuery(document).ready(function(){
     accordion();
     tabs();
     upload();
-    checkbox('');
-    radio('');
-    select('');
-    modal('', 'open');
+    checkbox();
+    radio();
+    select();
+    modal();
     tooltip();
-    scrollto('.scroll_to');
+    scrollto('.scroll_to', 100);
     //sticky('.header');
     //checkbox_unset('');
 
@@ -17,7 +17,7 @@ jQuery(document).ready(function(){
 
 //Actions on window resize
 jQuery(window).resize(function(){
-    select('');
+    select();
 });
 
 
@@ -26,6 +26,10 @@ jQuery(window).resize(function(){
 
 //Checkbox script
 function checkbox(id){
+
+    if(typeof id == 'undefined'){
+        id ='';
+    }
 
     id = escape_string(id);
 
@@ -96,6 +100,10 @@ function checkbox_unset(id){
 //Radio script
 function radio(id){
 
+    if(typeof id == 'undefined'){
+        id ='';
+    }
+
     id = escape_string(id);
 
     jQuery('.radio').each(function(){
@@ -148,7 +156,8 @@ function radio(id){
 
 //Select script
 function select(id){
-    if(id == ''){
+
+    if(typeof id == 'undefined'){
         id ='.select';
     }
 
@@ -334,6 +343,14 @@ function accordion(){
 function modal(ID, action){
     var active_class = 'active';
 
+    if(typeof ID == 'undefined'){
+        ID = '';
+    }
+
+    if(typeof action == 'undefined'){
+        action = 'open';
+    }
+
     //function to close modal windows
     function close_modal(modal) {
         var close_on_overlay = modal.attr('data-close-on-overlay'),
@@ -453,7 +470,12 @@ function sticky(id){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Global scroll to content
-function scrollto($id){
+function scrollto($id, $offset){
+
+    if($offset == ''){
+        $offset = 0;
+    }
+
     jQuery($id).click(function(e){
         var $id_scroll = jQuery(this).attr('data-scroll-to');
 
@@ -462,7 +484,7 @@ function scrollto($id){
             var id = jQuery($id_scroll);
             if(id.length){
                 jQuery('html, body').animate({
-                    scrollTop: id.offset().top - 100
+                    scrollTop: id.offset().top - $offset
                 }, 500);
                 return false;
             }

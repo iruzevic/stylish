@@ -387,18 +387,18 @@
 
                                     //Accepting different container name then ".select"
                                     //Use to reinitialize on ajax
-                                    select('');
+                                    select();
 
                                     //Accepting input ID for manual initialization.
                                     //Use to reinitialize on ajax
-                                    checkbox('');
+                                    checkbox();
 
                                     //Force Checbox to unset (must enter ID of input)
                                     checkbox_unset('')
 
                                     //Accepting input ID for manual initialization.
                                     //Use to reinitialize on ajax
-                                    radio('');
+                                    radio();
 
                                 });
                             </pre>

@@ -67,10 +67,9 @@
                     <a href="#modal" class="top_link"><i class="fa fa-star"></i>Modal</a>
                     <ul>
                         <li><a href="#modal" class="scoll" data-scroll="scale">Load Scale</a></li>
-                        <li><a href="#modal" class="scoll" data-scroll="left">Load Left</a></li>
-                        <li><a href="#modal" class="scoll" data-scroll="right">Load Right</a></li>
                         <li><a href="#modal" class="scoll" data-scroll="top">Load Top</a></li>
-                        <li><a href="#modal" class="scoll" data-scroll="bottom">Load Bottom</a></li>
+                        <li><a href="#modal" class="scoll" data-scroll="full">Full Size</a></li>
+                        <li><a href="#modal" class="scoll" data-scroll="legacy">Legacy Mockup</a></li>
                         <li><a href="#modal" class="scoll" data-scroll="js_section">JS manual</a></li>
                     </ul>
                 </li>
@@ -275,7 +274,7 @@
         if(hash_tag != ''){
             jQuery('#block_'+hash_tag).show();
             jQuery('#sidebar ul a[href=#'+hash_tag+'].top_link').addClass('active');
-            select('');
+            select();
         }else{
             jQuery('.block_wrap:first-child').slideDown('fast');
 
@@ -288,7 +287,7 @@
             jQuery('.block_wrap').hide();
             jQuery('#block_'+id).toggle();
             jQuery(this).addClass('active');
-            select('');
+            select();
         });
 
         //scroll to content

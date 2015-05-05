@@ -118,7 +118,7 @@
                                 jQuery(document).ready(function(){
 
                                     //Open modal window, populate id field with data-modal value
-                                    modal('id', 'open');
+                                    modal('id');
 
                                     //Close modal window, populate id field with data-modal value
                                     modal('id', 'close');
@@ -140,5 +140,38 @@
                 </ul>
             </li>
         </ul>
+    </div>
+
+    <div class="block scrollto_legacy">
+        <h1 class="title">Modal Window Legacy mockup (< v. 3.1.7)</h1>
+        <p class="desc">Modal window to open, data-size="full"</p>
+        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <div class="content">
+            <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
+            <div class="modal" data-modal="Modal4" data-slide="scale">
+                <div class="modal_overlay"></div>
+                <div class="modal_wrap">
+                    <div class="modal_content">
+                        <a class="close_modal" href="#"></a>
+                        Content
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="source">
+            <pre class="brush: xml;">
+                <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
+
+                <div class="modal" data-modal="Modal4" data-slide="scale">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_wrap">
+                        <div class="modal_content">
+                            <a class="close_modal" href="#"></a>
+                            Content
+                        </div>
+                    </div>
+                </div>
+            </pre>
+        </div>
     </div>
 </div>
