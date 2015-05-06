@@ -17,7 +17,7 @@ jQuery(document).ready(function(){
 
 //Actions on window resize
 jQuery(window).resize(function(){
-    select();
+
 });
 
 
@@ -189,30 +189,31 @@ function radio_group_unset($input_group){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Select script
-function select(id){
+function select($id){
 
-    if(typeof id == 'undefined'){
-        id ='.select';
+    if(typeof $id == 'undefined'){
+        $id ='.select';
     }
 
-    //Wrap select input to container for custom icon
+    //On init
     jQuery('select').each(function(){
-        var container = jQuery(this);
-        var style = container.attr('data-style');
+        var $this = jQuery(this),
+            $style = $this.data('style'),
+            $select = $this.closest($id).outerWidth()+50;
 
-        if(style !== 'false' && container.parents(id).length == 0){
-            container.wrap('<div class="select field-row"></div>'); //Field-row class is for magento
+        if($style !== 'false' && $this.parents($id).length == 0){
+            $this.wrap('<div class="select field-row"></div>'); //Field-row class is for magento
         }
-    });
+        if($style !== 'false') {
+            $this.css({minWidth: $select});
+        }
 
-    //Calculate the wrapper width and add some more.
-    jQuery(id).each(function(){
-        var container = jQuery(this);
-        var style = container.attr('data-style');
-        if(style !== 'false') {
-            var select = container.outerWidth() + 50;
-            container.children('select').css({minWidth: select});
-        }
+        jQuery(window).resize(function(){
+            $select = $this.closest($id).outerWidth()+50;
+            if($style !== 'false') {
+                $this.css({minWidth: $select});
+            }
+        });
     });
 }
 
@@ -309,58 +310,95 @@ function upload(){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Tabs script
-function tabs(){
-    //Tabs first load
+function tabs($tabs_id){
 
-    var $tabs = jQuery('.tabs');
+    if(typeof $tabs_id == 'undefined'){
+        $tabs_id ='.tabs';
+    }
 
-    $tabs.each(function(){
+    jQuery($tabs_id).each(function(){
 
         var $this = jQuery(this),
-            $active = $this.attr('data-active');
+            $active = $this.data('active');
 
         //if active tab is not set add active to first tab
         if($active == '' || $active === undefined){
             $active = $this.find('.t_head li:first-child').data('tab');
         }
 
-        $this.find('.t_head li[data-tab="'+$active+'"]').addClass('active');
-        $this.find('.t_content[data-content="'+$active+'"]').addClass('active');
+        tabs_set($active, this)
     });
-
 
     //Tabs click action
     jQuery('.t_head li').click(function(){
-        var $this = jQuery(this),
-            $active = jQuery(this).data('tab'),
-            $tabs = $this.closest('.tabs');
-        $tabs.find('.t_head li').removeClass('active');
-        $tabs.find('.t_content').removeClass('active');
-        $this.addClass('active');
-        $tabs.find('.t_content[data-content="'+$active+'"]').addClass('active');
+        tabs_change(this, $tabs_id);
     });
+
+    //Change tabs
+    function tabs_change($id, $tabs_id){
+        var $this = jQuery($id),
+            $active = $this.data('tab'),
+            $tabs = $this.closest($tabs_id),
+            $t_head = $tabs.find('.t_head li'),
+            $t_head_id = $tabs.find('.t_head li[data-tab="'+$active+'"]'),
+            $t_content = $tabs.find('.t_content'),
+            $t_content_id = $tabs.find('.t_content[data-content="'+$active+'"]');
+
+        $t_head.removeClass('active');
+        $t_content.removeClass('active');
+
+        $t_head_id.addClass('active');
+        $t_content_id.addClass('active');
+    }
+}
+
+//Tabs set by id
+function tabs_set($id, $tabs){
+
+    if(typeof $id == 'undefined'){
+        $id ='';
+    }
+
+    if(typeof $tabs == 'undefined'){
+        $tabs ='.tabs';
+    }
+
+    $tabs = jQuery($tabs);
+    $tabs.find('.t_head li').removeClass('active');
+    $tabs.find('.t_content').removeClass('active');
+    $tabs.find('.t_head li[data-tab="'+$id+'"]').addClass('active');
+    $tabs.find('.t_content[data-content="'+$id+'"]').addClass('active');
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 
 //Accordion script
-function accordion(){
+function accordion($accordion_id){
+
+    if(typeof $accordion_id == 'undefined'){
+        $accordion_id ='.accordion';
+    }
 
     //Accordion first load
-    jQuery('.accordion').each(function(){
+    jQuery($accordion_id).each(function(){
         var $id = jQuery(this).data('active');
         accordion_open($id, this);
     });
 
     //Accordion click action
     jQuery('.a_head').click(function(){
-        var $this = jQuery(this),
-            $id = $this.data('acc'),
-            $accordion = $this.closest('.accordion'),
+        accordion_change(this, $accordion_id);
+    });
+
+    //Change accordion
+    function accordion_change($id, $accordion_id){
+        var $this = jQuery($id),
+            $active = $this.data('acc'),
+            $accordion = $this.closest($accordion_id),
             $a_head = $accordion.find('.a_head'),
-            $a_head_id = $accordion.find('.a_head[data-acc="'+$id+'"]'),
+            $a_head_id = $accordion.find('.a_head[data-acc="'+$active+'"]'),
             $a_content = $accordion.find('.a_content'),
-            $a_content_id = $accordion.find('.a_content[data-content="'+$id+'"]'),
+            $a_content_id = $accordion.find('.a_content[data-content="'+$active+'"]'),
             $auto_close= $accordion.data('autoclose');
 
         if($auto_close !== false){
@@ -378,7 +416,7 @@ function accordion(){
             $a_head_id.toggleClass('active');
             $a_content_id.toggleClass('active');
         }
-    });
+    }
 }
 
 //Accordion open by id
@@ -416,102 +454,87 @@ function accordion_close($id, $accordion){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Modal Window script
-function modal(ID, action){
-    var active_class = 'active';
+function modal(){
 
-    if(typeof ID == 'undefined'){
-        ID = '';
+    var $modal_id = '.modal',
+        $modal = jQuery($modal_id),
+        $close_on_overlay = $modal.data('close-on-overlay'),
+        $close_on_esc = $modal.data('close-on-esc'),
+        $close_on_btn = $modal.data('close-on-btn');
+
+    //Open on click
+    jQuery('.open_modal').on('click', function(e) {
+        e.preventDefault();
+        var $id = jQuery(this).data('modal');
+        modal_open($id);
+    });
+
+    //Close modal on Esc key
+    if($close_on_esc !== 'false') {
+        jQuery(document).keyup(function (e) {
+            if (e.keyCode == 27) {
+                modal_close();
+            }
+        });
     }
 
-    if(typeof action == 'undefined'){
-        action = 'open';
+    //Close modal on overlay click
+    if($close_on_overlay !== 'false') {
+        jQuery('.m_overlay').on('click', function () {
+            var $id = jQuery(this).closest('.modal').data('modal');
+            modal_close($id);
+        });
     }
 
-    //function to close modal windows
-    function close_modal(modal) {
-        var close_on_overlay = modal.attr('data-close-on-overlay'),
-            close_on_esc = modal.attr('data-close-on-esc'),
-            close_on_btn = modal.attr('data-close-on-btn');
-
-        //Close modal on Esc key
-        if(close_on_esc !== 'false') {
-            jQuery(document).keyup(function (e) {
-                if (e.keyCode == 27) {
-                    modal.removeClass(active_class);
-                    jQuery('html').removeClass('modal_active');
-                }
-            });
-        }
-
-        //Close modal on overlay click
-        if(close_on_overlay !== 'false') {
-            jQuery('.m_overlay').on('click', function () {
-                modal.removeClass(active_class);
-                jQuery('html').removeClass('modal_active');
-            });
-        }
-
-        //Close modal on .close_modal class
-        if(close_on_btn !== 'false') {
-            jQuery('.close_modal').on('click', function (e) {
-                e.preventDefault();
-                modal.removeClass(active_class);
-                jQuery('html').removeClass('modal_active');
-            });
-        }
-    }
-
-    //Open modal window
-    if(action == 'open'){
-
-        //If no ID, open modal on button click
-        if(ID == ''){
-            //Classic on click action
-            jQuery('.open_modal').on('click', function(e){
-                e.preventDefault();
-                var id = jQuery(this).data('modal');
-                var modal = jQuery('.modal[data-modal="'+id+'"]');
-
-                //Show modal
-                modal_calculate_center(id);
-                modal.addClass(active_class);
-                jQuery('html').addClass('modal_active');
-
-                close_modal(modal);
-
-            });
-
-            //ID provided open modal form JS.
-        }else{
-            modal = jQuery('.modal[data-modal="'+ID+'"]');
-            modal_calculate_center(ID);
-            modal.addClass(active_class);
-            jQuery('html').addClass('modal_active');
-            close_modal(modal);
-        }
-
-        //Close modal window
-    }else if(action == 'close'){
-        var modal = jQuery('.modal[data-modal="'+ID+'"]');
-        modal.removeClass(active_class);
-        jQuery('html').removeClass('modal_active');
+    //Close modal on .close_modal class
+    if($close_on_btn !== 'false') {
+        jQuery('.close_modal').on('click', function (e) {
+            e.preventDefault();
+            var $id = jQuery(this).closest('.modal').data('modal');
+            modal_close($id);
+        });
     }
 }
 
-//Calculate modal center position if data-slide is scale
-function modal_calculate_center(ID){
+//Modal open by id
+function modal_open($id){
+    var $modal = jQuery('.modal[data-modal="'+$id+'"]');
+    modal_calculate_center($id);
+    $modal.addClass('active');
+    jQuery('html').addClass('modal_active');
 
-    if(ID == '') {
-        var $modal = jQuery('.modal');
-    }else {
-        var $modal = jQuery('.modal[data-modal="' + ID + '"]');
+    jQuery(window).resize(function(){
+        modal_calculate_center($id);
+    });
+}
+
+//Modal close by id
+function modal_close($id){
+
+    var $modal;
+    if(typeof $id == 'undefined'){
+        $modal = jQuery('.modal');
+    }else{
+        $modal = jQuery('.modal[data-modal="'+$id+'"]');
     }
 
-    var $slide_type = $modal.attr('data-slide');
+    $modal.removeClass('active');
+    jQuery('html').removeClass('modal_active');
+}
 
-    if($slide_type == 'scale') {
+//Modal Calculate center position if data-slide is scale
+function modal_calculate_center($id){
+
+    var $modal;
+    if(typeof $id == 'undefined'){
+        $modal = jQuery('.modal');
+    }else{
+        $modal = jQuery('.modal[data-modal="'+$id+'"]');
+    }
+
+    if($modal.data('slide') == 'scale') {
         var $window_height = jQuery(window).height(),
-            $modal_height = $modal.find('.m_content').height(),
+            $modal_height = $modal.find('.m_content').outerHeight(),
             $move;
 
         //Check calculations
@@ -523,20 +546,19 @@ function modal_calculate_center(ID){
 
         //Add value to css
         $modal.find('.m_content_wrap').css('top', $move);
-
     }
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 
 //Make and object stick to the top on scroll
-function sticky(id){
+function sticky($id){
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > 1){
-            jQuery(id).addClass("sticky");
+            jQuery($id).addClass("sticky");
         }
         else{
-            jQuery(id).removeClass("sticky");
+            jQuery($id).removeClass("sticky");
         }
     });
 }
@@ -551,17 +573,15 @@ function scrollto($id, $offset){
     }
 
     jQuery($id).click(function(e){
-        var $id_scroll = jQuery(this).attr('data-scroll-to');
+        var $id_scroll;
+        $id_scroll = jQuery(this).data('scroll-to');
 
-        if($id_scroll !== undefined){
+        if(typeof $id_scroll !== 'undefined' && $id_scroll.length){
             e.preventDefault();
-            var id = jQuery($id_scroll);
-            if(id.length){
-                jQuery('html, body').animate({
-                    scrollTop: id.offset().top - $offset
-                }, 500);
-                return false;
-            }
+            jQuery('html, body').animate({
+                scrollTop: jQuery($id_scroll).offset().top - $offset
+            }, 500);
+            return false;
         }
     })
 }
@@ -569,8 +589,8 @@ function scrollto($id, $offset){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Create escape function for selectors (for magento)
-function escape_string(str) {
-    return str.replace(/([;&,\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
+function escape_string($str) {
+    return $str.replace(/([;&,\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
 }
 
 //Disable function
@@ -582,16 +602,16 @@ function disable(){
 }
 
 //Set cookie
-function setCookie(key, value, time) {
-    var expires = new Date();
-    expires.setTime(expires.getTime() + (time));
-    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+function setCookie($key, $value, $time) {
+    var $expires = new Date();
+    $expires.setTime($expires.getTime() + ($time));
+    document.cookie = $key + '=' + $value + ';expires=' + $expires.toUTCString();
 }
 
 //Get cookie value
-function getCookie(key) {
-    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-    return keyValue ? keyValue[2] : null;
+function getCookie($key) {
+    var $keyValue = document.cookie.match('(^|;) ?' + $key + '=([^;]*)(;|$)');
+    return $keyValue ? $keyValue[2] : null;
 }
 
 
