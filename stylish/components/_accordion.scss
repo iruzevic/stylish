@@ -8,5 +8,8 @@
     i.a_state{ float: right}
     &.active i.a_state{@include rotate(180deg);}
   }
-  .a_content{ display: none; background-color: $accordion_content_color; padding: 20px 10px;}
+  .a_content{
+    display: none; background-color: $accordion_content_color; padding: 20px 10px; @include transition-property(all); @include transition-duration(.3s);
+    &.active{ display: block;}
+  }
 }

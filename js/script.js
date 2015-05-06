@@ -345,30 +345,72 @@ function tabs(){
 
 //Accordion script
 function accordion(){
+
     //Accordion first load
     jQuery('.accordion').each(function(){
-        var id= jQuery(this).data('active');
-        jQuery(this).find('.a_head[data-acc="'+id+'"]').addClass('active');
-        jQuery(this).find('.a_content[data-content="'+id+'"]').show();
+        var $id = jQuery(this).data('active');
+        accordion_open($id, this);
     });
+
     //Accordion click action
     jQuery('.a_head').click(function(){
-        var auto_close= jQuery(this).closest('.accordion').data('autoclose');
-        if(auto_close !== false){
-            if(!jQuery(this).hasClass('active')) {
-                jQuery(this).closest('.accordion').find('.a_head').removeClass('active');
-                jQuery(this).closest('.accordion').find('.a_content').slideUp('fast');
-                jQuery(this).addClass('active');
-                jQuery(this).next('.a_content').slideDown('fast');
+        var $this = jQuery(this),
+            $id = $this.data('acc'),
+            $accordion = $this.closest('.accordion'),
+            $a_head = $accordion.find('.a_head'),
+            $a_head_id = $accordion.find('.a_head[data-acc="'+$id+'"]'),
+            $a_content = $accordion.find('.a_content'),
+            $a_content_id = $accordion.find('.a_content[data-content="'+$id+'"]'),
+            $auto_close= $accordion.data('autoclose');
+
+        if($auto_close !== false){
+            if(!$a_head_id.hasClass('active')) {
+                $a_head.removeClass('active');
+                $a_content.removeClass('active');
+
+                $a_head_id.addClass('active');
+                $a_content_id.addClass('active');
             }else{
-                jQuery(this).closest('.accordion').find('.a_head').removeClass('active');
-                jQuery(this).closest('.accordion').find('.a_content').slideUp('fast');
+                $a_head_id.removeClass('active');
+                $a_content_id.removeClass('active');
             }
         }else{
-            jQuery(this).toggleClass('active');
-            jQuery(this).next('.a_content').slideToggle('fast');
+            $a_head_id.toggleClass('active');
+            $a_content_id.toggleClass('active');
         }
     });
+}
+
+//Accordion open by id
+function accordion_open($id, $accordion){
+
+    if(typeof $id == 'undefined'){
+        $id ='';
+    }
+
+    if(typeof $accordion == 'undefined'){
+        $accordion ='.accordion';
+    }
+
+    $accordion = jQuery($accordion);
+    $accordion.find('.a_head[data-acc="'+$id+'"]').addClass('active');
+    $accordion.find('.a_content[data-content="'+$id+'"]').addClass('active');
+}
+
+//Accordion close by id
+function accordion_close($id, $accordion){
+
+    if(typeof $id == 'undefined'){
+        $id ='';
+    }
+
+    if(typeof $accordion == 'undefined'){
+        $accordion ='.accordion';
+    }
+
+    $accordion = jQuery($accordion);
+    $accordion.find('.a_head[data-acc="'+$id+'"]').removeClass('active');
+    $accordion.find('.a_content[data-content="'+$id+'"]').removeClass('active');
 }
 
 /////////////////////////////////////////////////////////////////////////////////
