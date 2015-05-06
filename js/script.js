@@ -25,60 +25,36 @@ jQuery(window).resize(function(){
 /////////////////////////////////////////////////////////////////////////////////
 
 //Checkbox script
-function checkbox(id){
+function checkbox(){
 
-    if(typeof id == 'undefined'){
-        id ='';
-    }
+    //On page load set
+    jQuery('input[type=checkbox]').each(function(){
 
-    id = escape_string(id);
-
-    jQuery('.checkbox').each(function(){
-        //check if there is checked class in input
-        if(jQuery('input[type=checkbox]',this).is(':checked')){
-            jQuery('label',this).addClass('checked');
+        //Check if there is checked class in input
+        if(jQuery(this).is(':checked')){
+            var $id = jQuery(this).attr('id');
+            checkbox_set($id);
         }
 
         //Check if input is disabled
-        if(jQuery('input[type=checkbox]',this).is(':disabled')){
-            jQuery('label',this).addClass('disabled');
+        if(jQuery(this).is(':disabled')){
+            jQuery(this).closest('.checkbox').find('label').addClass('disabled');
         }
-
     });
 
-    if(id != ''){
-        //Used if there is inline onchange action (ID has to passed)
-        var input = jQuery('input[id="'+id+'"]');
-        var label = jQuery('label[for="'+id+'"]');
-        var check = label.closest('.checkbox').find('input[type=checkbox]');
-        if(!check.is(':disabled')){
-            if(input.prop('checked')){
-                label.addClass('checked');
-            }else{
-                label.removeClass('checked');
-            }
-        }else{
-            label.addClass('disabled');
-        }
-    }else{
-        //Classic on click action
-        jQuery('.checkbox label').on('click',function(e){
+    //On click action
+    jQuery('.checkbox label').on('click',function(e){
+        var $id = jQuery(this).attr('for');
+        checkbox_change($id);
+    });
 
-            var ID = jQuery(this).attr('for');
-            var input = jQuery('input[id="'+ID+'"]');
-            var label = jQuery('label[for="'+ID+'"]');
-            var check = jQuery(this).closest('.checkbox').find('input[type=checkbox]');
-            if(!check.is(':disabled')){
-                if(input.prop('checked')){
-                    label.removeClass('checked');
-                }else{
-                    label.addClass('checked');
-                }
-            }else{
-                jQuery(this).addClass('disabled');
-            }
-        });
-    }
+    //On space click action
+    jQuery('input[type="checkbox"]').keypress(function(e) {
+        if (e.keyCode == 0 || e.keyCode == 32) {
+            var $id = jQuery(this).attr('id');
+            checkbox_change($id);
+        }
+    });
 
     //Stop checkbox from activating if there is a link in label
     jQuery('.checkbox label a').on('click',function(e){
@@ -86,13 +62,42 @@ function checkbox(id){
     });
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+//Checkbox change state
+function checkbox_change($id){
+    if(typeof $id == 'undefined'){
+        $id ='';
+    }
 
-//Force checkbox to unset
-function checkbox_unset(id){
-    var input = jQuery('input[id="'+id+'"]');
-    var label = jQuery('label[for="'+id+'"]');
-    label.removeClass('checked');
+    $id = escape_string($id);
+
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $label = jQuery('label[for="'+$id+'"]');
+    if(!$input.is(':disabled')){
+        if($input.prop('checked')){
+            $label.removeClass('checked');
+        }else{
+            $label.addClass('checked');
+        }
+    }else{
+        jQuery(this).addClass('disabled');
+    }
+
+}
+
+//Checkbox set by id
+function checkbox_set($id){
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $label = jQuery('label[for="'+$id+'"]');
+    $label.addClass('checked');
+    $input.prop('checked', true);
+}
+
+//Checkbox unset by id
+function checkbox_unset($id){
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $label = jQuery('label[for="'+$id+'"]');
+    $label.removeClass('checked');
+    $input.prop('checked', false);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -100,56 +105,85 @@ function checkbox_unset(id){
 //Radio script
 function radio(id){
 
-    if(typeof id == 'undefined'){
-        id ='';
-    }
+    //On page load set
+    jQuery('input[type=radio]').each(function(){
 
-    id = escape_string(id);
-
-    jQuery('.radio').each(function(){
-        if(jQuery('input[type=radio]',this).is(':checked')){
-            jQuery('label',this).addClass('checked');
+        //Check if there is checked class in input
+        if(jQuery(this).is(':checked')){
+            var $id = jQuery(this).attr('id');
+            radio_set($id);
         }
-        if(jQuery('input[type=radio]',this).is(':disabled')){
-            jQuery('label',this).addClass('disabled');
+
+        //Check if input is disabled
+        if(jQuery(this).is(':disabled')){
+            jQuery(this).closest('.radio').find('label').addClass('disabled');
         }
     });
 
-    if(id != ''){
-        //Used if there is inline onchange action (ID has to passed)
-        var input = jQuery('input[id="'+id+'"]');
-        var input_group = input.attr('name');
-        var label = jQuery('label[for="'+id+'"]');
-        var radio = label.closest('.radio').find('input[type=radio]');
+    //On click action
+    jQuery('.radio label').on('click', function(){
+        var $id = jQuery(this).attr('for');
+        radio_change($id)
+    });
 
-        if(!radio.is(':disabled')){
-            jQuery('.radio[data-group="'+input_group+'"] label').removeClass('checked');
-            label.addClass('checked');
-        }else{
-            jQuery(this).addClass('disabled');
+    //On space click action
+    jQuery('input[type="radio"]').keypress(function(e) {
+        if (e.keyCode == 0 || e.keyCode == 32) {
+            var $id = jQuery(this).attr('id');
+            radio_change($id);
         }
-    }else{
-        //Classic on click action
-        jQuery('.radio label').on('click', function(){
-            var ID = jQuery(this).attr('for');
-            var input = jQuery('#' + escape_string(ID));
-            var input_group = input.attr('name');
-            var label = jQuery('label[for="'+ID+'"]');
-            var radio = jQuery(this).closest('.radio').find('input[type=radio]');
-
-            if(!radio.is(':disabled')){
-                jQuery('.radio[data-group="'+input_group+'"] label').removeClass('checked');
-                label.addClass('checked');
-            }else{
-                jQuery(this).addClass('disabled');
-            }
-        });
-    }
+    });
 
     //Stop radio from activating if there is a link in label
     jQuery('.radio label a').on('click',function(e){
         e.stopPropagation();
     });
+}
+
+//Radio change state
+function radio_change($id){
+    if(typeof $id == 'undefined'){
+        $id ='';
+    }
+
+    $id = escape_string($id);
+
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $input_group = $input.attr('name'),
+        $label = jQuery('label[for="'+$id+'"]');
+
+    if(!$input.is(':disabled')){
+        jQuery('.radio[data-group="'+$input_group+'"] label').removeClass('checked');
+        $label.addClass('checked');
+    }else{
+        jQuery(this).addClass('disabled');
+    }
+}
+
+//Radio set by id
+function radio_set($id){
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $input_group = $input.attr('name'),
+        $label = jQuery('label[for="'+$id+'"]');
+    jQuery('.radio[data-group="'+$input_group+'"] label').removeClass('checked');
+    $label.addClass('checked');
+    $input.prop('checked', true);
+}
+
+//Radio unset by id
+function radio_unset($id){
+    var $input = jQuery('input[id="'+$id+'"]'),
+        $input_group = $input.attr('name'),
+        $group = jQuery('.radio[data-group="'+$input_group+'"]');
+    $group.find('label').removeClass('checked');
+    $group.find('input[type="radio"]').prop('checked', false);
+}
+
+//Radio unset by group name
+function radio_group_unset($input_group){
+    var $group = jQuery('.radio[data-group="'+$input_group+'"]');
+    $group.find('label').removeClass('checked');
+    $group.find('input[type="radio"]').prop('checked', false);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -422,7 +456,6 @@ function modal(ID, action){
     }
 }
 
-
 //Calculate modal center position if data-slide is scale
 function modal_calculate_center(ID){
 
@@ -451,7 +484,6 @@ function modal_calculate_center(ID){
 
     }
 }
-
 
 /////////////////////////////////////////////////////////////////////////////////
 
