@@ -8,18 +8,44 @@ jQuery(document).ready(function(){
     select();
     modal();
     tooltip();
-    scrollto('.scroll_to', 100);
-    //sticky('.header');
-    //checkbox_unset('');
-
     disable();
+
+    scrollTo_click('.scroll_to', 100);
+    //sticky($id);
+
+
+    /////////////////////////////////////////////////////////////////////////////////
+    //Additional actons
+    //checkbox_change($id);
+    //checkbox_set($id);
+    //checkbox_unset($id);
+
+    //radio_change($id);
+    //radio_set($id);
+    //radio_unset($id);
+    //radio_group_unset($input_group);
+
+    //tabs_set($id, $tabs);
+
+    //accordion_open($id, $accordion);
+    //accordion_close($id, $accordion);
+
+    //modal_open($id);
+    //modal_close($id);
+    //modal_calculate_center($id);
+
+    //scrollTo($id, $offset)
+
+    //setCookie($key, $value, $time);
+    //getCookie($key);
+
+    //escape_string($str);
 });
 
 //Actions on window resize
 jQuery(window).resize(function(){
 
 });
-
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -198,7 +224,7 @@ function select($id){
     //On init
     jQuery('select').each(function(){
         var $this = jQuery(this),
-            $style = $this.data('style'),
+            $style = $this.attr('data-style'),
             $select = $this.closest($id).outerWidth()+50;
 
         if($style !== 'false' && $this.parents($id).length == 0){
@@ -319,11 +345,11 @@ function tabs($tabs_id){
     jQuery($tabs_id).each(function(){
 
         var $this = jQuery(this),
-            $active = $this.data('active');
+            $active = $this.attr('data-active');
 
         //if active tab is not set add active to first tab
         if($active == '' || $active === undefined){
-            $active = $this.find('.t_head li:first-child').data('tab');
+            $active = $this.find('.t_head li:first-child').attr('data-tab');
         }
 
         tabs_set($active, this)
@@ -337,7 +363,7 @@ function tabs($tabs_id){
     //Change tabs
     function tabs_change($id, $tabs_id){
         var $this = jQuery($id),
-            $active = $this.data('tab'),
+            $active = $this.attr('data-tab'),
             $tabs = $this.closest($tabs_id),
             $t_head = $tabs.find('.t_head li'),
             $t_head_id = $tabs.find('.t_head li[data-tab="'+$active+'"]'),
@@ -381,7 +407,7 @@ function accordion($accordion_id){
 
     //Accordion first load
     jQuery($accordion_id).each(function(){
-        var $id = jQuery(this).data('active');
+        var $id = jQuery(this).attr('data-active');
         accordion_open($id, this);
     });
 
@@ -393,13 +419,13 @@ function accordion($accordion_id){
     //Change accordion
     function accordion_change($id, $accordion_id){
         var $this = jQuery($id),
-            $active = $this.data('acc'),
+            $active = $this.attr('data-acc'),
             $accordion = $this.closest($accordion_id),
             $a_head = $accordion.find('.a_head'),
             $a_head_id = $accordion.find('.a_head[data-acc="'+$active+'"]'),
             $a_content = $accordion.find('.a_content'),
             $a_content_id = $accordion.find('.a_content[data-content="'+$active+'"]'),
-            $auto_close= $accordion.data('autoclose');
+            $auto_close= $accordion.attr('data-autoclose');
 
         if($auto_close !== false){
             if(!$a_head_id.hasClass('active')) {
@@ -457,43 +483,44 @@ function accordion_close($id, $accordion){
 function modal(){
 
     var $modal_id = '.modal',
-        $modal = jQuery($modal_id),
-        $close_on_overlay = $modal.data('close-on-overlay'),
-        $close_on_esc = $modal.data('close-on-esc'),
-        $close_on_btn = $modal.data('close-on-btn');
+        $modal = jQuery($modal_id);
 
     //Open on click
     jQuery('.open_modal').on('click', function(e) {
         e.preventDefault();
-        var $id = jQuery(this).data('modal');
+        var $id = jQuery(this).attr('data-modal');
         modal_open($id);
     });
 
     //Close modal on Esc key
-    if($close_on_esc !== 'false') {
-        jQuery(document).keyup(function (e) {
-            if (e.keyCode == 27) {
-                modal_close();
-            }
-        });
-    }
+    jQuery(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            modal_close();
+        }
+    });
 
     //Close modal on overlay click
-    if($close_on_overlay !== 'false') {
-        jQuery('.m_overlay').on('click', function () {
-            var $id = jQuery(this).closest('.modal').data('modal');
+    jQuery('.m_overlay').on('click', function () {
+        var $modal = jQuery(this).closest('.modal'),
+            $id = $modal.attr('data-modal'),
+            $action = $modal.attr('data-close-on-overlay');
+
+        if($action !== 'false') {
             modal_close($id);
-        });
-    }
+        }
+    });
 
     //Close modal on .close_modal class
-    if($close_on_btn !== 'false') {
-        jQuery('.close_modal').on('click', function (e) {
-            e.preventDefault();
-            var $id = jQuery(this).closest('.modal').data('modal');
+    jQuery('.close_modal').on('click', function (e) {
+        e.preventDefault();
+        var $modal = jQuery(this).closest('.modal'),
+            $id = $modal.attr('data-modal'),
+            $action = $modal.attr('data-close-on-btn');
+
+        if($action !== 'false') {
             modal_close($id);
-        });
-    }
+        }
+    });
 }
 
 //Modal open by id
@@ -532,7 +559,7 @@ function modal_calculate_center($id){
         $modal = jQuery('.modal[data-modal="'+$id+'"]');
     }
 
-    if($modal.data('slide') == 'scale') {
+    if($modal.attr('data-slide') == 'scale') {
         var $window_height = jQuery(window).height(),
             $modal_height = $modal.find('.m_content').outerHeight(),
             $move;
@@ -565,16 +592,15 @@ function sticky($id){
 
 /////////////////////////////////////////////////////////////////////////////////
 
-//Global scroll to content
-function scrollto($id, $offset){
+//Scroll to content on click
+function scrollTo_click($id, $offset){
 
-    if($offset == ''){
+    if(typeof $offset == 'undefined'){
         $offset = 0;
     }
 
     jQuery($id).click(function(e){
-        var $id_scroll;
-        $id_scroll = jQuery(this).data('scroll-to');
+        var $id_scroll = jQuery(this).attr('data-scroll-to');
 
         if(typeof $id_scroll !== 'undefined' && $id_scroll.length){
             e.preventDefault();
@@ -584,6 +610,19 @@ function scrollto($id, $offset){
             return false;
         }
     })
+}
+
+//Scroll to ID
+function scrollTo($id, $offset){
+
+    if(typeof $offset == 'undefined'){
+        $offset = 0;
+    }
+
+    jQuery('html, body').animate({
+        scrollTop: jQuery($id).offset().top - $offset
+    }, 500);
+    return false;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
