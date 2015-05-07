@@ -48,7 +48,7 @@ textarea{ height: 150px; padding: 12px}
 
   //move real input out from viewpoint, don't use display:none because of IE7-8
   input[type=checkbox],
-  input[type=radio] {position: absolute;left: 5px; top: 5px; z-index: -1}
+  input[type=radio] {position: absolute;left: 5px; top: 5px; z-index: -1; margin: 0; padding: 0; @include opacity(0)}
 }
 
 /* Setup custom checkbox input */
