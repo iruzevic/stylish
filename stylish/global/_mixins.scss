@@ -86,11 +86,12 @@
 
 // Placeholder mixin
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
-  .placeholder,.placeholderjs {@content}
+  input::-webkit-input-placeholder {@content}
+  input:-moz-placeholder           {@content}
+  input::-moz-placeholder          {@content}
+  input:-ms-input-placeholder      {@content}
+  input.placeholder                {@content}
+  input.placeholderjs              {@content}
 }
 
 
