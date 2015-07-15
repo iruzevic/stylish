@@ -38,6 +38,23 @@
 }
 
 
+//Icon in button
+.txt_icon,
+.txt_icon_left,
+.txt_icon_right{
+  i, .icon{ vertical-align: middle; }
+}
+
+.txt_icon_left{
+  i, .icon{   margin-right: 10px;  }
+}
+
+.txt_icon_right{
+  i, .icon{  margin-left: 10px; }
+}
+
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 

@@ -34,6 +34,8 @@ jQuery(document).ready(function(){
     //modal_close($id);
     //modal_calculate_center($id);
 
+    //sticky_footer($container, $id, $offset);
+
     //scrollTo($id, $offset)
 
     //setCookie($key, $value, $time);
@@ -588,6 +590,28 @@ function sticky($id){
             jQuery($id).removeClass("sticky");
         }
     });
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+function sticky_footer($container, $id, $offset){
+
+    if(typeof $offset == 'undefined'){
+        $offset = 0;
+    }
+
+    if(typeof $id == 'undefined'){
+        $id = "#footer";
+    }
+
+    var $bottom = jQuery($container).position().top+jQuery($container).outerHeight(true)+$offset,
+        $page_height = jQuery(window).height();
+
+    if($page_height >= $bottom){
+        jQuery($id).addClass('sticky');
+    }else{
+        jQuery($id).removeClass('sticky');
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////////

@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.3.3.2
+Version: 3.3.3.3
 */
 
 /* Compass Framework Import */
@@ -24,6 +24,7 @@ Version: 3.3.3.2
 @import "global/reset";
 @import "global/variables";
 @import "global/mixins";
+@import "global/project_mixins";
 @import "global/icons";
 @import "global/typography";
 @import "global/forms";

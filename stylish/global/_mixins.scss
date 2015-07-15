@@ -202,7 +202,10 @@
   .checkbox{
     line-height:$size;
 
-    label { min-height:$size; padding-left:$size+15; }
+    label {
+      min-height:$size; padding-left:$size+15;
+      &.empty{ padding-left:0; width: $size }
+    }
 
     // icon
     .checkbox_icon {
@@ -221,7 +224,10 @@
   .radio{
     line-height: $size;
 
-    label{ min-height: $size; padding-left: $size+15; }
+    label{
+      min-height: $size; padding-left: $size+15;
+      &.empty{ padding-left:0; width: $size }
+    }
 
     // icon
     .radio_icon{
