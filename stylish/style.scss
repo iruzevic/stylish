@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.3.3.3
+Version: 3.3.4
 */
 
 /* Compass Framework Import */
@@ -60,6 +60,7 @@ Version: 3.3.3.3
 
 
 @import "layout/header";
+@import "layout/common";
 @import "layout/content";
 @import "layout/sidebar";
 @import "layout/footer";

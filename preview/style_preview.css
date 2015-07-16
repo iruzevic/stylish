@@ -34,6 +34,8 @@ body{ font-family: 'Open Sans', arial, helvetica, sans-serif}
 
 .list li{ margin-bottom: 10px}
 
+.tooltip{ max-width: 300px;}
+
 @media screen and (max-width: 768px){
     #sidebar{position: relative; overflow-y: auto}
     #main_content{ margin-left: 0}
