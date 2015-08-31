@@ -3,7 +3,7 @@
 
 
 /* Font Declaration */
-@include font_face($icons_font_family, $icons_font_location);
+@include font_face($icons_font_family, $icons_font_location, $woff2:false);
 
 
 
@@ -59,6 +59,10 @@
 
 
 /* Icons */
+
+.sy_spinner:before {
+  content: "\e60e";
+}
 .sy_arrow_down:before {
   content: "\e600";
 }

@@ -52,33 +52,95 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Font Declaration mixin (not using compasses default mixin) */
-@mixin font_face($font-family, $file-path, $weight: normal, $style: normal ) {
-  @font-face {
-    font-family: $font-family;
-    src: url('#{$file-path}.eot');
-    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-    url('#{$file-path}.svg##{$font-family}') format('svg'),
-    //url('#{$file-path}.woff2') format('woff2'),
-    url('#{$file-path}.woff') format('woff'),
-    url('#{$file-path}.ttf') format('truetype');
-    font-weight: $weight;
-    font-style: $style;
+///* Font Declaration mixin (not using compasses default mixin) */
+@mixin font_face($name, $path, $weight: normal, $style: normal, $eot:true, $svg:true, $woff2:true, $woff:true, $ttf:true) {
+  $src: null;
+  $eot_extmods: null;
+  $eot_format: null;
+  $svg_extmods: null;
+  $ttf_format: null;
+
+  //Define variables
+  @if $eot == true{
+    $eot: eot;
+    $eot_extmods: "?iefix";
+    $eot_format: "embedded-opentype";
   }
 
-  /* Font Declaration workaround for better smoothing */
-  @media screen and (-webkit-min-device-pixel-ratio:0){
-    @font-face{
-      font-family:$font-family;
-      src:url('#{$file-path}.svg') format('svg');
-      font-weight: $weight;
-      font-style: $style;}
+  @if $svg == true{
+    $svg: svg;
+    $svg_extmods: "#" + $name
+  }
+
+  @if $woff2 == true{
+    $woff2: woff2;
+  }
+
+  @if $woff == true{
+    $woff: woff;
+  }
+
+  @if $ttf == true{
+    $ttf: ttf;
+    $ttf_format: "truetype";
+  }
+
+  //Create maps
+  $exts:(
+          $eot
+          $svg
+          $woff2
+          $woff
+          $ttf
+  );
+
+  $extmods: (
+          eot: $eot_extmods,
+          svg: $svg_extmods
+  );
+
+  $formats: (
+          eot: $eot_format,
+          ttf: $ttf_format
+  );
+
+  //Create src-s
+  @each $ext in $exts {
+    @if $ext{
+      $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+      $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+      $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+  }
+
+  //Print out css
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    @if $eot{
+      src: url(quote($path + "." + $eot));
+    }
+    src: $src;
+  }
+
+  @if $svg{
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      @font-face{
+        font-family: quote($name);
+        src: url(quote($path + "." + $svg)) format(quote($svg));
+        font-style: $style;
+        font-weight: $weight;
+      }
+    }
   }
 }
 
-/* Font Declaration */
+
+/* Font Declaration (if some font type is ont user just call variable and set to false) */
 //@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
 //@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

@@ -174,9 +174,12 @@ $form_field_move:     20px; //Default form field move
 $accordion_head_color:      $color_silver; //accordion header bg color
 $accordion_content_color:   $color_mercury; //accordion content bg color
 
-$tabs_head_color:           $color_mercury;  //tabs lines color
+$tabs_head_color:           $color_mercury;  //tabs head background color
+$tabs_head_active_bg_color: $color_white; //tabs head active background color
+$tabs_head_active_color:    $color_mine_shaft; //tabs head active color
 
 $msg_icon_size:             30px; //Messages icon size
+$msg_txt_color:             $color_mine_shaft; // Messages text color
 
 $table_head_border:         $color_flush_mahogany;  //table head border bottom color
 $table_body_border:         $color_mercury; //table body border bottom color
@@ -192,9 +195,12 @@ $tooltip_arrow:             10px;   //Tooltip arrow size
 $tooltip_border:            $color_mercury; //Tooltip background color
 $tooltip_bg:                $color_white; //Tooltip background color
 $tooltip_txt:               $color_mine_shaft; //Tooltip text color
+$tooltip_content_shadow:    $color_mine_shaft; //Tooltip content shadow color
 
 $modal_max_width:           600px; //Max width of modal window
 $modal_overlay_opacity:     0.7; //Overlay opacity
+$modal_overlay_bg_color:    $color_mine_shaft; //Overlay Background color
+$modal_content_bg_color:    $color_white; //Main Content Background color
 
 $divider_border_color:      $color_dove_gray_light; //divider border bottom color
 

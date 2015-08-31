@@ -11,7 +11,7 @@
   }
 
   > li{
-    color: $color_mine_shaft; padding:10px 10px 10px $msg_icon_size+30px;@include border-radius($global_radius); position: relative; margin-bottom: 20px;
+    color: $msg_txt_color; padding:10px 10px 10px $msg_icon_size+30px;@include border-radius($global_radius); position: relative; margin-bottom: 20px;
     &:before{@extend .sy_icon;font-size: $msg_icon_size; position: absolute; left: 15px; top: 50%; margin-top: -$msg_icon_size/2;}
 
     //Error state

@@ -10,7 +10,7 @@
     li{
       cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: 10px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       &.active{
-        color: $color_mine_shaft;  background-color:$color_white;
+        color: $tabs_head_active_color;  background-color:$tabs_head_active_bg_color;
       }
     }
   }
