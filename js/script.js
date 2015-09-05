@@ -76,6 +76,14 @@ function checkbox(){
         checkbox_change($id);
     });
 
+    //Fix IE11 force trigger if image is in label
+    jQuery('.checkbox label > img').on('click', function(){
+        var $label = jQuery(this).closest('label'),
+            $id = $label.attr('for');
+        $label.trigger('click');
+        checkbox_change($id);
+    });
+
     //On space click action
     jQuery('input[type="checkbox"]').keypress(function(e) {
         if (e.keyCode == 0 || e.keyCode == 32) {
@@ -152,6 +160,14 @@ function radio(id){
     jQuery('.radio label').on('click', function(){
         var $id = jQuery(this).attr('for');
         radio_change($id)
+    });
+
+    //Fix IE11 force trigger if image is in label
+    jQuery('.radio label > img').on('click', function(){
+        var $label = jQuery(this).closest('label'),
+            $id = $label.attr('for');
+        $label.trigger('click');
+        radio_change($id);
     });
 
     //On space click action

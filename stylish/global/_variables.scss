@@ -156,15 +156,22 @@ $radio_active:        $checkbox_active; //radio icon color on active state
 $radio_size:          $checkbox_size; //radio width and height
 $radio_icon_size:     $checkbox_icon_size; //radio icon size
 
+$form_error:          $color_flush_mahogany;  //form error color
+$form_field_move:     20px; //Default form field move
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+$btn_txt_size:        14px; //button Default text size
+$btn_padding:         10px; //button Default padding size
+$btn_line_height:     $btn_txt_size+6; //button line height
+$btn_transform:       uppercase; //button text transform
+$btn_radius:          $global_radius; //button radius
 $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
 $btn_disabled_text:   $color_white; //button text color for disabled state
 $btn_reset_bg:        $input_disabled_bg; //button reset bg color
 $btn_reset_text:      $color_white; //button reset text color
-$btn_padding:         10px; //Button Default padding size
-$btn_txt_size:        14px; //Button Default text size
-
-$form_error:          $color_flush_mahogany;  //form error color
-$form_field_move:     20px; //Default form field move
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -203,4 +210,8 @@ $modal_overlay_bg_color:    $color_mine_shaft; //Overlay Background color
 $modal_content_bg_color:    $color_white; //Main Content Background color
 
 $divider_border_color:      $color_dove_gray_light; //divider border bottom color
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
 

@@ -170,14 +170,14 @@
 }
 
 /* Default container style */
-@mixin container_style($container_gutter:$gutter/2){
-  margin-left:auto; margin-right: auto; padding-left: $container_gutter; padding-right: $container_gutter;
+@mixin container_padding($container_gutter:$gutter/2){
+  padding-left: $container_gutter; padding-right: $container_gutter;
 }
 
 //Generate different containers for different type of grid gutters
 @mixin container_generate($container_name, $container_gutter){
   .container_#{$container_name}{
-     padding-left: $container_gutter; padding-right: $container_gutter;
+    @include container_padding($container_gutter);
   }
 }
 
@@ -304,8 +304,17 @@
 
 
 //Default input style
-@mixin input_style($color:$input_text, $bg:$input_bg, $txt_size: $p, $padding:$input_padding, $height: $input_height, $border_width: $input_border_width, $border_color: $input_border, $margin: 0, $width:100%, $radius: $global_radius){
-  color:$color; background-color: $bg; font-size: $txt_size; padding: $padding; height: $height; border: $border_width solid $border_color; margin: $margin; width: $width; font-family:$body_font_family; @include border-radius($radius);@include appearance(none); @include font-smoothing();
+@mixin input_style($color:$input_text, $background_color:$input_bg, $text_size: $p, $padding:$input_padding, $height: $input_height, $border_width: $input_border_width, $border_style:solid, $border_color: $input_border, $margin: 0, $width:100%, $font_family:$body_font_family, $radius: $global_radius){
+  color:$color;  background-color: $background_color;  font-size: $text_size;  padding: $padding;  height: $height;  border: $border_width $border_style $border_color;  margin: $margin;  width: $width;  font-family:$font_family; @include border-radius($radius);@include appearance(none); @include font-smoothing();
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Default button style
+@mixin btn_style($padding:$btn_padding, $line_height:$btn_line_height, $font_size:$btn_txt_size, $text_transform: $btn_transform, $font_family:$body_font_family, $radius:$btn_radius, $border_width:1px, $border_style:solid,$text_align:center, $width:100%, $display:block, $white_space:nowrap, $text_decoration: none, $cursor:pointer, $margin:0){
+  padding: $padding;  line-height: $line_height;  font-size: $font_size;  text-transform: $text_transform;  font-family: $body_font_family;  @include border-radius($radius);  border: $border_width $border_style;  text-align: $text_align;  width:$width;  display: $display;  white-space: $white_space;  text-decoration: $text_decoration;  cursor: $cursor;  margin: $margin;  @include btn_color();  @include transition-property(all);  @include transition-duration(.3s);  @include appearance(none);  @include font-smoothing();
 }
 
 

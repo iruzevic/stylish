@@ -4,7 +4,7 @@
 
 /* Container */
 .container{
-  @include container_style(); @include container_size();
+  margin-left:auto; margin-right: auto;@include container_padding(); @include container_size();
 
   //Strip padding from container
   &.full,
