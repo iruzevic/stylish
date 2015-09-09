@@ -144,6 +144,10 @@ $input_height:        42px; //input height
 $input_padding:       7px 12px; //input padding
 $input_border_width:  1px; //input border width
 
+$select_icon_color:           $color_mine_shaft; //Select icons color
+$select_icon_size:            18px; //Select icon size
+$select_disabled_icon_color:  $input_disabled_bg; //Select icon color disabled state
+
 $checkbox_bg:         $input_bg; //checkbox bg color
 $checkbox_border:     $input_border; //checkbox border color
 $checkbox_active:     $color_flush_mahogany; //checkbox icon color on active state
@@ -165,6 +169,10 @@ $form_field_move:     20px; //Default form field move
 
 //Button default
 $btn_transform:       uppercase; //button text transform
+$btn_border_width:    1px; //button border width
+$btn_border_style:    solid; //button border style
+$btn_txt_align:       center; //button text align
+$btn_txt_decoration:  none; //button text decoration
 $btn_radius:          $global_radius; //button radius
 $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
 $btn_disabled_text:   $color_white; //button text color for disabled state
@@ -185,9 +193,6 @@ $btn_big_line_height:     24px; //button Big line height
 $btn_small_txt_size:      13px; //button Big text size
 $btn_small_padding:       10px; //button Big padding size
 $btn_small_line_height:   17px; //button Big line height
-
-
-
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

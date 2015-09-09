@@ -8,6 +8,7 @@ input[type=submit],
 input[type=button],
 input[type=reset]{
   @include btn_style();
+  @include btn_color();
 
   //Big size (cca 52px)
   &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding, $btn_big_txt_size, $btn_big_line_height )}

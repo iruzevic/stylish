@@ -8,7 +8,7 @@
 
   //Strip padding from container
   &.full,
-  &.container_clean{padding-left: 0; padding-right: 0; overflow: hidden}
+  &.container_clean{@include container_padding(0); overflow: hidden}
 
   //Override max width and push container full width (unable to use if not using responsive)
   &.liquid,
