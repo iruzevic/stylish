@@ -163,15 +163,31 @@ $form_field_move:     20px; //Default form field move
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-$btn_txt_size:        14px; //button Default text size
-$btn_padding:         10px; //button Default padding size
-$btn_line_height:     $btn_txt_size+6; //button line height
+//Button default
 $btn_transform:       uppercase; //button text transform
 $btn_radius:          $global_radius; //button radius
 $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
 $btn_disabled_text:   $color_white; //button text color for disabled state
 $btn_reset_bg:        $input_disabled_bg; //button reset bg color
 $btn_reset_text:      $color_white; //button reset text color
+
+//Btn size default
+$btn_default_txt_size:    16px; //button Default text size
+$btn_default_padding:     10px; //button Default padding size
+$btn_default_line_height: 20px; //button Default line height
+
+//Btn size Big
+$btn_big_txt_size:        20px; //button Big text size
+$btn_big_padding:         10px; //button Big padding size
+$btn_big_line_height:     24px; //button Big line height
+
+//Btn size Small
+$btn_small_txt_size:      13px; //button Big text size
+$btn_small_padding:       10px; //button Big padding size
+$btn_small_line_height:   17px; //button Big line height
+
+
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

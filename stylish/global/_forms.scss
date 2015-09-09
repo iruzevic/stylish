@@ -34,9 +34,9 @@ textarea{ height: 150px; padding: 12px}
 
 /* Checkbox and Radio input Global setup */
 .checkbox, .radio{
-  position: relative;
+  position: relative;display: table; table-layout: fixed;
 
-  label { cursor: pointer;@include user-select(none);position: relative; margin: 0; display: block; }
+  label { cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle }
 
   //Icon
   .checkbox_icon,
@@ -140,7 +140,11 @@ form, .form{
     }
 
     .checkbox,
-    .radio{ label{ margin-bottom: 0} }
+    &.checkbox,
+    .radio,
+    &.radio{
+      label{ margin:0; display: table-cell; }
+    }
 
     &.last{margin-bottom: 0}
   }

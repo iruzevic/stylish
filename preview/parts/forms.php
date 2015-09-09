@@ -37,25 +37,36 @@
     <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
     <div class="content">
         <form>
-            <div class="radio field" data-group="radio_name">
-                <input type="radio" name="radio_name" id="radio1"  />
-                <label for="radio1"><i class="radio_icon"></i>Radio1</label>
+            <div class="field">
+                <div class="radio" data-group="radio_name">
+                    <input type="radio" name="radio_name" id="radio1"  />
+                    <label for="radio1"><i class="radio_icon"></i>Radio1</label>
+                </div>
             </div>
-            <div class="radio field" data-group="radio_name">
-                <input type="radio" name="radio_name" id="radio2"  />
-                <label for="radio2"><i class="radio_icon"></i>Radio2</label>
+            <div class="field">
+                <div class="radio" data-group="radio_name">
+                    <input type="radio" name="radio_name" id="radio2"  />
+                    <label for="radio2"><i class="radio_icon"></i>Radio2</label>
+                </div>
+
             </div>
-            <div class="radio field" data-group="radio_name">
-                <input type="radio" name="radio_name" id="radio3"  />
-                <label for="radio3"><i class="radio_icon"></i>Radio3</label>
+            <div class="field">
+                <div class="radio" data-group="radio_name">
+                    <input type="radio" name="radio_name" id="radio3"  />
+                    <label for="radio3"><i class="radio_icon"></i>Radio3</label>
+                </div>
             </div>
-            <div class="radio field" data-group="radio_name">
-                <input type="radio" name="radio_name" id="radio4" checked="checked" />
-                <label for="radio4"><i class="radio_icon"></i>Checked</label>
+            <div class="field">
+                <div class="radio" data-group="radio_name">
+                    <input type="radio" name="radio_name" id="radio4" checked="checked" />
+                    <label for="radio4"><i class="radio_icon"></i>Checked</label>
+                </div>
             </div>
-            <div class="radio field" data-group="radio_name">
-                <input type="radio" name="radio_name" id="radio5" disabled="disabled" />
-                <label for="radio5"><i class="radio_icon"></i>Disabled</label>
+            <div class="field">
+                <div class="radio" data-group="radio_name">
+                    <input type="radio" name="radio_name" id="radio5" disabled="disabled" />
+                    <label for="radio5"><i class="radio_icon"></i>Disabled</label>
+                </div>
             </div>
         </form>
         <br/>
@@ -106,29 +117,41 @@
     <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
     <div class="content">
         <form>
-            <div class="checkbox field">
-                <input type="checkbox" id="card1" name="card_name1" />
-                <label for="card1"><i class="checkbox_icon"></i>Check1</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card1" name="card_name1" />
+                    <label for="card1"><i class="checkbox_icon"></i>Check1</label>
+                </div>
             </div>
-            <div class="checkbox field">
-                <input type="checkbox" id="card2" name="card_name2" />
-                <label for="card2"><i class="checkbox_icon"></i>Check2</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card2" name="card_name2" />
+                    <label for="card2"><i class="checkbox_icon"></i>Check2</label>
+                </div>
             </div>
-            <div class="checkbox field">
-                <input type="checkbox" id="card3" name="card_name3" />
-                <label for="card3"><i class="checkbox_icon"></i>Check3</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card3" name="card_name3" />
+                    <label for="card3"><i class="checkbox_icon"></i>Check3</label>
+                </div>
             </div>
-            <div class="checkbox field">
-                <input type="checkbox" id="card4" name="card_name4" checked="checked" />
-                <label for="card4"><i class="checkbox_icon"></i>Checked</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card4" name="card_name4" checked="checked" />
+                    <label for="card4"><i class="checkbox_icon"></i>Checked</label>
+                </div>
             </div>
-            <div class="checkbox field">
-                <input type="checkbox" id="card5" name="card_name5" disabled="disabled"/>
-                <label for="card5"><i class="checkbox_icon"></i>Disabled</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card5" name="card_name5" disabled="disabled"/>
+                    <label for="card5"><i class="checkbox_icon"></i>Disabled</label>
+                </div>
             </div>
-            <div class="checkbox field">
-                <input type="checkbox" id="card6" name="card_name6" checked="checked" disabled="disabled" />
-                <label for="card6"><i class="checkbox_icon"></i>Checked and Disabled</label>
+            <div class="field">
+                <div class="checkbox">
+                    <input type="checkbox" id="card6" name="card_name6" checked="checked" disabled="disabled" />
+                    <label for="card6"><i class="checkbox_icon"></i>Checked and Disabled</label>
+                </div>
             </div>
         </form>
         <br/>

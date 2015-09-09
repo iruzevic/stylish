@@ -262,10 +262,15 @@
 //Checkbox size
 @mixin checkbox_size($size:$checkbox_size, $size_icon:$checkbox_icon_size){
   .checkbox{
-    line-height:$size;
+    min-height:$size;
+
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      height: $size;
+    }
 
     label {
-      min-height:$size; padding-left:$size+15;
+      height:100%; padding-left:$size+15;
       &.empty{ padding-left:0; width: $size }
     }
 
@@ -284,10 +289,15 @@
 //Radio size
 @mixin radio_size($size:$radio_size, $size_icon:$radio_icon_size) {
   .radio{
-    line-height: $size;
+    min-height:$size;
+
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      height: $size;
+    }
 
     label{
-      min-height: $size; padding-left: $size+15;
+      height: 100%; padding-left: $size+15;
       &.empty{ padding-left:0; width: $size }
     }
 
@@ -312,9 +322,14 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+//Button size
+@mixin btn_size($padding:$btn_default_padding, $font_size:$btn_default_txt_size, $line_height:$btn_default_line_height){
+  padding: $padding;  line-height: $line_height;  font-size: $font_size;
+}
+
 //Default button style
-@mixin btn_style($padding:$btn_padding, $line_height:$btn_line_height, $font_size:$btn_txt_size, $text_transform: $btn_transform, $font_family:$body_font_family, $radius:$btn_radius, $border_width:1px, $border_style:solid,$text_align:center, $width:100%, $display:block, $white_space:nowrap, $text_decoration: none, $cursor:pointer, $margin:0){
-  padding: $padding;  line-height: $line_height;  font-size: $font_size;  text-transform: $text_transform;  font-family: $body_font_family;  @include border-radius($radius);  border: $border_width $border_style;  text-align: $text_align;  width:$width;  display: $display;  white-space: $white_space;  text-decoration: $text_decoration;  cursor: $cursor;  margin: $margin;  @include btn_color();  @include transition-property(all);  @include transition-duration(.3s);  @include appearance(none);  @include font-smoothing();
+@mixin btn_style($text_transform: $btn_transform, $font_family:$body_font_family, $radius:$btn_radius, $border_width:1px, $border_style:solid,$text_align:center, $width:100%, $display:block, $white_space:nowrap, $text_decoration: none, $cursor:pointer, $margin:0){
+   @include btn_size(); text-transform: $text_transform;  font-family: $body_font_family;  @include border-radius($radius);  border: $border_width $border_style;  text-align: $text_align;  width:$width;  display: $display;  white-space: $white_space;  text-decoration: $text_decoration;  cursor: $cursor;  margin: $margin;  @include btn_color();  @include transition-property(all);  @include transition-duration(.3s);  @include appearance(none);  @include font-smoothing();
 }
 
 

@@ -12,6 +12,6 @@ javascripts_dir = "../js"
 relative_assets = true
 
 #setup environment you are working on
-#environment = :development
-environment = :production
+environment = :development
+#environment = :production
 output_style = (environment == :production) ? :compressed : :expanded

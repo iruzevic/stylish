@@ -250,16 +250,16 @@
 
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/equalHeight.js"></script>
+<script type="text/javascript" src="js/equalHeight.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/placeholder.js"></script>
+<script type="text/javascript" src="js/placeholder.min.js"></script>
 
 
 <script src="preview/syntaxhighlighter/js/shCore.js" type="text/javascript"></script>
 <script src="preview/syntaxhighlighter/js/shBrushJScript.js" type="text/javascript"></script>
 <script src="preview/syntaxhighlighter/js/shBrushXml.js" type="text/javascript"></script>
 <script src="preview/syntaxhighlighter/js/shBrushSass.js" type="text/javascript"></script>
-<link href="preview/syntaxhighlighter/shCoreDefault.css"type="text/css" rel="stylesheet"/>
+<link href="preview/syntaxhighlighter/shCoreDefault.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript">
     SyntaxHighlighter.all();
     jQuery(document).ready(function(){

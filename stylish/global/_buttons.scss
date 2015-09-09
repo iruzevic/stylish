@@ -10,10 +10,10 @@ input[type=reset]{
   @include btn_style();
 
   //Big size (cca 52px)
-  &.btn_big, &[data-size="big"]{ padding: $btn_padding*1.5 $btn_padding; font-size: $btn_txt_size + 6; }
+  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding, $btn_big_txt_size, $btn_big_line_height )}
 
   //Small size (cca 32px)
-  &.btn_small, &[data-size="small"]{ padding: $btn_padding/2 $btn_padding;}
+  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_padding, $btn_small_txt_size, $btn_small_line_height)}
 
   //Set rounded buttons to strait
   &.no_radius{@include border-radius(0);}
