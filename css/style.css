@@ -972,14 +972,13 @@ input.placeholderjs {
   height: 42px;
   position: relative;
   border: 1px solid #e5e5e5;
-  height: 42px;
   cursor: pointer;
   overflow: hidden;
   background-color: #ffffff;
   display: block;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 /* line 328, ../stylish/global/_mixins.scss */
 .select:after {
@@ -989,15 +988,15 @@ input.placeholderjs {
 /* line 106, ../stylish/global/_forms.scss */
 .select:after {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 42px;
+  right: 15px;
+  top: 50%;
   z-index: 5;
-  line-height: 42px;
-  width: 40px;
   text-align: center;
   background-color: #ffffff;
   color: #272727;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* line 107, ../stylish/global/_forms.scss */
 .select select {
@@ -1115,6 +1114,7 @@ input[type=reset] {
   font-size: 16px;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -3032,7 +3032,7 @@ html.modal_active body {
 }
 /* line 25, ../stylish/components/_modal.scss */
 .modal .m_content_wrap .m_content {
-  padding: 30px;
+  padding: 35px;
   background-color: #ffffff;
   position: relative;
   z-index: 2;
@@ -3553,16 +3553,20 @@ table th.last, table td.last {
 }
 /* line 19, ../stylish/components/_tabs.scss */
 .tabs .t_content {
-  height: 0;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   overflow: hidden;
 }
 /* line 21, ../stylish/components/_tabs.scss */
-.tabs .t_content.active {
-  height: 100%;
-}
-/* line 23, ../stylish/components/_tabs.scss */
-.tabs .t_content .t_content_wrap {
-  padding: 20px 0;
+.tabs .t_content .t_content_item {
+  padding: 40px;
+  display: none;
 }
 
 /* Tooltip setup */
@@ -3721,7 +3725,7 @@ table th.last, table td.last {
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/fontawesome.eot");
-  src: url("../fonts/fontawesome.eot?iefix") format("embedded-opentype"), url("../fonts/fontawesome.svg#FontAwesome") format("svg"), url("../fonts/fontawesome.woff2") format("woff2"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
+  src: url("../fonts/fontawesome.eot?iefix") format("embedded-opentype"), url("../fonts/fontawesome.svg#FontAwesome") format("svg"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {

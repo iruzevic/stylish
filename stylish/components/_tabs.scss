@@ -17,9 +17,10 @@
 
   //Tabs content
   .t_content{
-    height: 0; overflow: hidden;
-    &.active{ height: 100%;}
-
-    .t_content_wrap{ padding: 20px 0; }
+    @include transition-property(height); @include transition-duration(.4s); overflow: hidden;
+    .t_content_item{
+      padding: $gutter; display: none;
+    }
   }
+
 }

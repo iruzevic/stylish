@@ -218,8 +218,6 @@
 
                 <?php include ("preview/parts/tabs.php"); ?>
 
-                <?php include ("preview/parts/tabs.php"); ?>
-
                 <?php include ("preview/parts/tooltip.php"); ?>
 
                 <?php include ("preview/parts/forms.php"); ?>

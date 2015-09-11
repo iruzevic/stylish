@@ -3,7 +3,7 @@
 
 
 /* Font Declaration */
-@include font_face('FontAwesome', '../fonts/fontawesome');
+@include font_face('FontAwesome', '../fonts/fontawesome', $woff2:false);
 
 
 

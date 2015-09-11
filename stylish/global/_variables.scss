@@ -173,6 +173,7 @@ $btn_border_width:    1px; //button border width
 $btn_border_style:    solid; //button border style
 $btn_txt_align:       center; //button text align
 $btn_txt_decoration:  none; //button text decoration
+$btn_txt_weight:      normal; //button font weight
 $btn_radius:          $global_radius; //button radius
 $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
 $btn_disabled_text:   $color_white; //button text color for disabled state
@@ -229,6 +230,7 @@ $modal_max_width:           600px; //Max width of modal window
 $modal_overlay_opacity:     0.7; //Overlay opacity
 $modal_overlay_bg_color:    $color_mine_shaft; //Overlay Background color
 $modal_content_bg_color:    $color_white; //Main Content Background color
+$modal_content_padding:     35px; //modal content padding
 
 $divider_border_color:      $color_dove_gray_light; //divider border bottom color
 

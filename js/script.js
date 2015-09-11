@@ -408,49 +408,62 @@ function tabs($tabs_id){
         if($active == '' || $active === undefined){
             $active = $this.find('.t_head li:first-child').attr('data-tab');
         }
+        tabs_set($active, this);
 
-        tabs_set($active, this)
+
     });
 
     //Tabs click action
     jQuery('.t_head li').click(function(){
-        tabs_change(this, $tabs_id);
+        var $active = jQuery(this).attr('data-tab');
+        tabs_change($active, $tabs_id);
     });
 
     //Change tabs
-    function tabs_change($id, $tabs_id){
-        var $this = jQuery($id),
-            $active = $this.attr('data-tab'),
-            $tabs = $this.closest($tabs_id),
+    function tabs_change($active, $tabs_id){
+
+        if(typeof $active == 'undefined'){
+            $active ='';
+        }
+
+        if(typeof $tabs_id == 'undefined'){
+            $tabs_id ='.tabs';
+        }
+
+        var $tabs = jQuery($tabs_id),
             $t_head = $tabs.find('.t_head li'),
-            $t_head_id = $tabs.find('.t_head li[data-tab="'+$active+'"]'),
+            $t_head_active = $tabs.find('.t_head li[data-tab="'+$active+'"]'),
+            $t_content_item = $tabs.find('.t_content_item'),
             $t_content = $tabs.find('.t_content'),
-            $t_content_id = $tabs.find('.t_content[data-content="'+$active+'"]');
+            $t_content_item_active = $tabs.find('.t_content_item[data-content="'+$active+'"]'),
+            $t_content_height = $t_content_item_active.outerHeight();
 
-        $t_head.removeClass('active');
-        $t_content.removeClass('active');
+            $t_head.removeClass('active');
+            $t_content_item.fadeOut(250);
 
-        $t_head_id.addClass('active');
-        $t_content_id.addClass('active');
+        $t_head_active.addClass('active');
+        $t_content_item_active.delay(150).fadeIn(300);
+
+        $t_content.css('height', $t_content_height);
     }
 }
 
 //Tabs set by id
-function tabs_set($id, $tabs){
+function tabs_set($active, $tabs_id){
 
-    if(typeof $id == 'undefined'){
-        $id ='';
+    if(typeof $active == 'undefined'){
+        $active ='';
     }
 
-    if(typeof $tabs == 'undefined'){
-        $tabs ='.tabs';
+    if(typeof $tabs_id == 'undefined'){
+        $tabs_id ='.tabs';
     }
 
-    $tabs = jQuery($tabs);
+    var $tabs = jQuery($tabs_id);
     $tabs.find('.t_head li').removeClass('active');
-    $tabs.find('.t_content').removeClass('active');
-    $tabs.find('.t_head li[data-tab="'+$id+'"]').addClass('active');
-    $tabs.find('.t_content[data-content="'+$id+'"]').addClass('active');
+    $tabs.find('.t_content_item').hide();
+    $tabs.find('.t_head li[data-tab="'+$active+'"]').addClass('active');
+    $tabs.find('.t_content_item[data-content="'+$active+'"]').show();
 }
 
 /////////////////////////////////////////////////////////////////////////////////
