@@ -2,7 +2,16 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=url],
+input[type=datetime],
+input[type=search],
+textarea,
+select{
   @include input_style(); @include appearance(none); @include font-smoothing();
 
   //Default size
@@ -124,7 +133,16 @@ textarea{ height: 150px; }
 
 //Input Big size
 .input_big{
-  input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+  input[type=text],
+  input[type=tel],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=url],
+  input[type=datetime],
+  input[type=search],
+  textarea,
+  select{
     @include input_size($input_big_height, $input_big_txt_size, $input_big_padding);
   }
   .select   { @include select_size($input_big_height, $select_big_icon_size); }
@@ -134,7 +152,16 @@ textarea{ height: 150px; }
 
 //Input small size
 .input_small{
-  input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+  input[type=text],
+  input[type=tel],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=url],
+  input[type=datetime],
+  input[type=search],
+  textarea,
+  select{
     @include input_size($input_small_height, $input_small_txt_size, $input_small_padding);
   }
   .select   { @include select_size($input_small_height, $select_small_icon_size); }
