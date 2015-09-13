@@ -3,14 +3,16 @@
 
 
 /* Setup Link color states */
-@mixin link_color($color:$primary_link_color, $color_hover:$hover_link_color){
+@mixin link_color($color:$link_color, $color_hover:$link_color_hover, $text_decoration: none, $cursor:pointer){
   color: $color;
-  text-decoration: none;
-  cursor: pointer;
-  @include transition-property(color);
-  @include transition-duration(.3s);
-  &:hover{ color: $color_hover; }
-  &.disabled{color: $color; cursor: default; }
+  @if $text_decoration  {text-decoration:$text_decoration}
+  @if $cursor           {cursor:$cursor}
+
+  @if $color_hover {
+    &:hover,
+    &.active {  color: $color_hover;  }
+  }
+  &.disabled{ color: $color; }
 }
 
 
@@ -18,7 +20,7 @@
 
 
 /* Setup buttons colors */
-@mixin btn_color($bg:$button_background_color, $text:$button_text_color, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
+@mixin btn_color($bg:$button_background_color, $text:$button_txt_color, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
   background-color: $bg;
   color: $text;
   @if not $border{
@@ -261,24 +263,22 @@
 
 //Checkbox size
 @mixin checkbox_size($size:$checkbox_size, $size_icon:$checkbox_icon_size){
-  .checkbox{
-    min-height:$size;
+  min-height:$size;
 
-    //Firefox min-height bug fix
-    @-moz-document url-prefix() {
-      height: $size;
-    }
+  //Firefox min-height bug fix
+  @-moz-document url-prefix() {
+    height: $size;
+  }
 
-    label {
-      height:100%; padding-left:$size+15;
-      &.empty{ padding-left:0; width: $size }
-    }
+  label {
+    padding-left:$size+15;
+    &.empty{ padding-left:0; width: $size }
+  }
 
-    // icon
-    .checkbox_icon {
-      width: $size;height: $size; margin-top: -$size/2; line-height: $size;
-      &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; line-height: $size_icon;}
-    }
+  // icon
+  .checkbox_icon {
+    width: $size;height: $size; margin-top: -$size/2; line-height: $size;
+    &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; line-height: $size_icon;}
   }
 }
 
@@ -288,34 +288,23 @@
 
 //Radio size
 @mixin radio_size($size:$radio_size, $size_icon:$radio_icon_size) {
-  .radio{
-    min-height:$size;
+  min-height:$size;
 
-    //Firefox min-height bug fix
-    @-moz-document url-prefix() {
-      height: $size;
-    }
-
-    label{
-      height: 100%; padding-left: $size+15;
-      &.empty{ padding-left:0; width: $size }
-    }
-
-    // icon
-    .radio_icon{
-      width: $size; height: $size; margin-top: -$size/2; line-height: $size; @include border-radius(50%);
-      &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; @include border-radius(50%) }
-    }
+  //Firefox min-height bug fix
+  @-moz-document url-prefix() {
+    height: $size;
   }
-}
 
+  label{
+    padding-left: $size+15;
+    &.empty{ padding-left:0; width: $size }
+  }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//Default input style
-@mixin input_style($color:$input_text, $background_color:$input_bg, $text_size: $p, $padding:$input_padding, $height: $input_height, $border_width: $input_border_width, $border_style:solid, $border_color: $input_border, $margin: 0, $width:100%, $font_family:$body_font_family, $radius: $global_radius){
-  color:$color;  background-color: $background_color;  font-size: $text_size;  padding: $padding;  height: $height;  border: $border_width $border_style $border_color;  margin: $margin;  width: $width;  font-family:$font_family; @include border-radius($radius);@include appearance(none); @include font-smoothing();
+  // icon
+  .radio_icon{
+    width: $size; height: $size; margin-top: -$size/2; line-height: $size;
+    &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; }
+  }
 }
 
 
@@ -324,8 +313,34 @@
 
 //Select size
 @mixin select_size($height: $input_height, $icon_size:$select_icon_size){
-  height: $height;
-  &:after{ font-size:$icon_size; margin-top: -($select_icon_size/2)}
+  @if $height   {height:$height;}
+  @if $icon_size{
+    &:after{ font-size:$icon_size; margin-top: -($icon_size/2)}
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Default input style
+@mixin input_style( $color:$input_txt_color, $background_color:$input_bg_color, $border_width: $input_border_width, $border_style:$input_border_style, $border_color: $input_border_color, $margin: $input_margin, $width:$input_width, $font_family:$input_font_family, $radius: $input_radius){
+  @if $color            {color:$color;}
+  @if $background_color {background-color:$background_color;}
+  @if $border_width     {border-width:$border_width;}
+  @if $border_style     {border-style:$border_style;}
+  @if $border_color     {border-color:$border_color;}
+  @if $margin           {margin:$margin;}
+  @if $width            {width:$width;}
+  @if $font_family      {font-family:$font_family;}
+  @if $radius           {@include border-radius($radius);}
+}
+
+
+@mixin input_size( $height: $input_height, $text_size: $input_txt_size, $padding:$input_padding ){
+    @if $height     { height: $height; }
+    @if $text_size  { font-size: $text_size; }
+    @if $padding    { padding: $padding; }
 }
 
 
@@ -334,13 +349,28 @@
 
 //Button size
 @mixin btn_size($padding:$btn_default_padding, $font_size:$btn_default_txt_size, $line_height:$btn_default_line_height){
-  padding: $padding;  line-height: $line_height;  font-size: $font_size;
+  @if $padding      {padding:$padding;}
+  @if $font_size    {font-size:$font_size;}
+  @if $line_height  {line-height:$line_height;}
 }
 
 //Default button style
-@mixin btn_style($text_transform: $btn_transform, $font_family:$body_font_family, $radius:$btn_radius, $border_width:$btn_border_width, $border_style:$btn_border_style,$text_align:$btn_txt_align, $width:100%, $display:block, $white_space:nowrap, $text_decoration: $btn_txt_decoration, $cursor:pointer, $margin:0){
-  @include btn_size(); text-transform: $text_transform;  font-family: $body_font_family;  @include border-radius($radius);  border: $border_width $border_style;  text-align: $text_align;  width:$width;  display: $display;  white-space: $white_space;  text-decoration: $text_decoration;  cursor: $cursor;  margin: $margin;  @include transition-property(all);  @include transition-duration(.3s);  @include appearance(none);  @include font-smoothing();
+@mixin btn_style($text_transform: $btn_transform, $font_family:$btn_font_family, $radius:$btn_radius, $border_width:$btn_border_width, $border_style:$btn_border_style,$text_align:$btn_txt_align, $width:$btn_width, $font_weight:$btn_txt_weight, $display:$btn_display, $white_space:$btn_white_space, $text_decoration: $btn_txt_decoration, $cursor:$btn_cursor, $margin:$btn_margin){
+  @if $text_transform    {text-transform:$text_transform;}
+  @if $font_family       {font-family:$font_family;}
+  @if $radius            {@include border-radius($radius);}
+  @if $border_width      {border-width:$border_width;}
+  @if $border_style      {border-style:$border_style;}
+  @if $text_align        {text-align:$text_align;}
+  @if $width             {width:$width;}
+  @if $font_weight       {font-weight:$font_weight;}
+  @if $display           {display:$display;}
+  @if $white_space       {white-space:$white_space;}
+  @if $text_decoration   {text-decoration:$text_decoration;}
+  @if $cursor            {cursor:$cursor;}
+  @if $margin            {margin:$margin;}
 }
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -382,20 +412,9 @@
 
 //Font style
 @mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false){
-
-  @if $font_size{
-    font-size: $font_size;
-  }
-  @if $line_height{
-    line-height: $line_height;
-  }
-  @if $font_weight{
-    font-weight: $font_weight;
-  }
-  @if $font_style{
-    font-style: $font_style;
-  }
-  @if $font_family{
-    font-family: $font_family;
-  }
+  @if $font_size    {font-size: $font_size;}
+  @if $line_height  {line-height: $line_height;}
+  @if $font_weight  {font-weight: $font_weight;}
+  @if $font_style   {font-style: $font_style;}
+  @if $font_family  {font-family: $font_family;}
 }

@@ -9,11 +9,18 @@ input[type=button],
 input[type=reset]{
   @include btn_style();
   @include btn_color();
+  @include appearance(none);
+  @include font-smoothing();
+  @include transition-property(all);
+  @include transition-duration(.3s);
 
-  //Big size (cca 52px)
+  //Default size
+  @include btn_size();
+
+  //Big size
   &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding, $btn_big_txt_size, $btn_big_line_height )}
 
-  //Small size (cca 32px)
+  //Small size
   &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_padding, $btn_small_txt_size, $btn_small_line_height)}
 
   //Set rounded buttons to strait
@@ -23,7 +30,7 @@ input[type=reset]{
   &.rounded{@include border-radius(20px);}
 
   //Disabled buttons
-  &.disabled, &:disabled{ background-color:$btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_text!important }
+  &.disabled, &:disabled{ background-color:$btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_txt!important }
 
   //Set button to auto width
   &.auto_width{width: auto; display: inline-block;}

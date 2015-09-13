@@ -46,13 +46,13 @@ $color_schemes:
 
 
 // Default Link color - Setup color states for link_color mixin
-$primary_link_color:  $color_flush_mahogany;
-$hover_link_color:    $color_flush_mahogany;
+$link_color:        $color_flush_mahogany;
+$link_color_hover:  $color_flush_mahogany;
 
 
 // Default Button color setup - Setup buttons default colors btn_color mixin
 $button_background_color: $color_havelock_blue;
-$button_text_color:       $color_white;
+$button_txt_color:       $color_white;
 
 
 //Common
@@ -133,35 +133,69 @@ $screen_xsmall: 480px; // Mobile phone devices
 
 
 // Forms
-$input_border:        $color_mercury; //input border color
-$input_text:          $color_mine_shaft; //input text color
-$input_bg:            $color_white; //input bg color
-$input_focus:         $color_flush_mahogany; //input box shadow color on focus
-$input_disabled_bg:   $color_silver; //input bg color for disabled state
-$input_disabled_text: $color_dove_gray; //input text color for disabled state
-$input_placeholder:   $color_mercury; //input placeholder color
-$input_height:        42px; //input height
-$input_padding:       7px 12px; //input padding
-$input_border_width:  1px; //input border width
+$input_txt_color:       $color_mine_shaft; //input text color
+$input_bg_color:        $color_white; //input bg color
+$input_border_width:    1px; //input border width
+$input_border_style:    solid; //input border style
+$input_border_color:    $color_mercury; //input border color
+$input_margin:          0; //input margin
+$input_width:           100%; //input width
+$input_font_family:     $body_font_family; //input font family (use web safe font for cross-browser compatibility)
+$input_radius:          $global_radius; //input radius
+$input_focus:           $color_flush_mahogany; //input box shadow color on focus
+$input_disabled_bg:     $color_silver; //input bg color for disabled state
+$input_disabled_txt:    $color_dove_gray; //input text color for disabled state
+$input_placeholder:     $color_mercury; //input placeholder color
 
 $select_icon_color:           $color_mine_shaft; //Select icons color
-$select_icon_size:            18px; //Select icon size
 $select_disabled_icon_color:  $input_disabled_bg; //Select icon color disabled state
 
-$checkbox_bg:         $input_bg; //checkbox bg color
-$checkbox_border:     $input_border; //checkbox border color
-$checkbox_active:     $color_flush_mahogany; //checkbox icon color on active state
-$checkbox_size:       24px; //checkbox width and height
-$checkbox_icon_size:  ($checkbox_size - 8); //checkbox icon size
+$checkbox_bg:           $input_bg_color; //checkbox bg color
+$checkbox_border:       $input_border_color; //checkbox border color
+$checkbox_active:       $color_flush_mahogany; //checkbox icon color on active state
 
-$radio_bg:            $input_bg; //radio bg color
-$radio_border:        $input_border; //radio border color
-$radio_active:        $checkbox_active; //radio icon color on active state
-$radio_size:          $checkbox_size; //radio width and height
-$radio_icon_size:     $checkbox_icon_size; //radio icon size
+$radio_bg:              $input_bg_color; //radio bg color
+$radio_border:          $input_border_color; //radio border color
+$radio_active:          $checkbox_active; //radio icon color on active state
 
-$form_error:          $color_flush_mahogany;  //form error color
-$form_field_move:     20px; //Default form field move
+$form_error:            $color_flush_mahogany;  //form error color
+$form_field_move:       20px; //Default form field move
+$form_field_move_big:   $form_field_move*2;//Big form field move
+$form_field_move_small: $form_field_move/2;//Small form field move
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Input Default size
+$input_height:              42px; //input height
+$input_txt_size:            $p; //input font size
+$input_padding:             7px 10px; //input padding
+$checkbox_size:             $input_height; //checkbox width and height
+$checkbox_icon_size:        ($input_height - 8); //checkbox icon size
+$radio_size:                $checkbox_size; //radio width and height
+$radio_icon_size:           $checkbox_icon_size; //radio icon size
+$select_icon_size:          18px; //Select icon size
+
+//Input Big size
+$input_big_height:          50px; //input height
+$input_big_txt_size:        $p; //input font size
+$input_big_padding:         9px 10px; //input padding
+$checkbox_big_size:         $input_big_height; //checkbox width and height
+$checkbox_big_icon_size:    ($input_big_height - 8); //checkbox icon size
+$radio_big_size:            $checkbox_big_size; //radio width and height
+$radio_big_icon_size:       $checkbox_big_icon_size; //radio icon size
+$select_big_icon_size:      22px; //Select icon size
+
+//Input Small size
+$input_small_height:        32px; //input height
+$input_small_txt_size:      $p; //input font size
+$input_small_padding:       5px 10px; //input padding
+$checkbox_small_size:       $input_small_height; //checkbox width and height
+$checkbox_small_icon_size:  ($input_small_height - 8); //checkbox icon size
+$radio_small_size:          $checkbox_small_size; //radio width and height
+$radio_small_icon_size:     $checkbox_small_icon_size; //radio icon size
+$select_small_icon_size:    15px; //Select icon size
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -169,13 +203,20 @@ $form_field_move:     20px; //Default form field move
 
 //Button default
 $btn_transform:       uppercase; //button text transform
+$btn_font_family:     $body_font_family; //font-family
+$btn_radius:          $global_radius; //button radius
 $btn_border_width:    1px; //button border width
 $btn_border_style:    solid; //button border style
 $btn_txt_align:       center; //button text align
+$btn_width:           100%; //button width
+$btn_txt_weight:      normal; //button text width
+$btn_display:         block; //Display
+$btn_white_space:     nowrap; //white space
 $btn_txt_decoration:  none; //button text decoration
-$btn_radius:          $global_radius; //button radius
+$btn_cursor:          pointer; //cursor
+$btn_margin:          0; //margin
 $btn_disabled_bg:     $input_disabled_bg; //button bg color for disabled state
-$btn_disabled_text:   $color_white; //button text color for disabled state
+$btn_disabled_txt:    $color_white; //button text color for disabled state
 $btn_reset_bg:        $input_disabled_bg; //button reset bg color
 $btn_reset_text:      $color_white; //button reset text color
 

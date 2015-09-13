@@ -2,30 +2,37 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-input[type=text],
-input[type=tel],
-input[type=password],
-input[type=email],
-input[type=number],
-input[type=url],
-input[type=datetime],
-input[type=search],
-select,
-textarea{
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+  @include input_style(); @include appearance(none); @include font-smoothing();
 
-  @include input_style();
+  //Default size
+  @include input_size();
 
   &.auto_width{ width: auto}
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
-  &:disabled{background-color:$input_disabled_bg; color:$input_disabled_text }
+  &:disabled{background-color:$input_disabled_bg; color:$input_disabled_txt }
 }
+textarea{ height: 150px; }
 
-select{ font-family: Arial, Helvetica, sans-serif; }
-textarea{ height: 150px; padding: 12px}
 
 /* Stylize Placeholder */
 @include placeholder{
   color: $input_placeholder
+}
+
+
+/* Setup custom select input */
+.select {
+  @include select_size();
+  position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
+
+  &:after{ position: absolute; right: 0; top: 50%;  z-index: 5; width: 40px; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow_down:before;}
+  select{
+    position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; width: 100%; left: 0; top: 0; font-family: Arial, Helvetica, sans-serif;
+    &:focus{outline: none;}
+  }
+
+  &.disabled:after{ color:$select_disabled_icon_color;}
 }
 
 
@@ -36,7 +43,7 @@ textarea{ height: 150px; padding: 12px}
 .checkbox, .radio{
   position: relative;display: table; table-layout: fixed;
 
-  label { cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle }
+  label { cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle; height:100%; }
 
   //Icon
   .checkbox_icon,
@@ -53,6 +60,9 @@ textarea{ height: 150px; padding: 12px}
 
 /* Setup custom checkbox input */
 .checkbox{
+
+  //Default size
+  @include checkbox_size();
 
   // icon
   .checkbox_icon { color:$checkbox_bg;background-color: $checkbox_bg;border-color: $checkbox_border; }
@@ -72,14 +82,18 @@ textarea{ height: 150px; padding: 12px}
     }
   }
 }
-@include checkbox_size();
-
 
 /* Setup custom radio input */
 .radio{
 
+  //Default size
+  @include radio_size();
+
   // icon
-  .radio_icon { background-color: $radio_bg;border-color: $radio_border; }
+  .radio_icon {
+    background-color: $radio_bg;border-color: $radio_border; @include border-radius(50%);
+    &:before{@include border-radius(50%)}
+  }
 
   // checked state
   label.checked{
@@ -92,24 +106,6 @@ textarea{ height: 150px; padding: 12px}
   label.disabled{
     .radio_icon:before{ background-color: $radio_border; }
   }
-}
-@include radio_size();
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-/* Setup custom select input */
-.select {
-  @include select_size();
-  position: relative;border: 1px solid $input_border;height:$input_height;cursor: pointer;overflow:hidden; background-color: $input_bg; display: block;@include border-radius($global_radius);
-  &:after{ position: absolute; right: 0; top: 0; height: $input_height; z-index: 5; line-height: $input_height; width: 40px; text-align: center;  background-color: $input_bg; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow_down:before;}
-  select{
-    position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; padding-right: 0; width: 100%; height: 100%;left: 0; top: 0;
-    &:focus{outline: none;}
-  }
-
-  &.disabled:after{ color:$select_disabled_icon_color;}
 }
 
 
@@ -126,12 +122,36 @@ textarea{ height: 150px; padding: 12px}
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+//Input Big size
+.input_big{
+  input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+    @include input_size($input_big_height, $input_big_txt_size, $input_big_padding);
+  }
+  .select   { @include select_size($input_big_height, $select_big_icon_size); }
+  .checkbox { @include checkbox_size($checkbox_big_size, $checkbox_big_icon_size); }
+  .radio    { @include radio_size($radio_big_size, $radio_big_icon_size); }
+}
+
+//Input small size
+.input_small{
+  input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select{
+    @include input_size($input_small_height, $input_small_txt_size, $input_small_padding);
+  }
+  .select   { @include select_size($input_small_height, $select_small_icon_size); }
+  .checkbox { @include checkbox_size($checkbox_small_size, $checkbox_small_icon_size);}
+  .radio    { @include radio_size($radio_small_size, $radio_small_icon_size);}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* Setup forms layout */
 form, .form{
   .field{
     margin-bottom: $form_field_move; position: relative; list-style: none;
-    &.big { margin-bottom: $form_field_move*2;}
-    &.slim{ margin-bottom: $form_field_move/2;}
+    &.big { margin-bottom: $form_field_move_big;}
+    &.slim{ margin-bottom: $form_field_move_small;}
 
     &[data-required="true"] label,
     label.required{

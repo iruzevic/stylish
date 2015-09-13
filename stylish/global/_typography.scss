@@ -20,7 +20,13 @@ h5   {@include font_style($h5, ($h5+$lh) )}
 h6   {@include font_style($h6, ($h6+$lh) )}
 p,
 ul li{@include font_style($p, $p+$lh)}
-a:not(.btn) {@include link_color();}
+a:not(.btn) {
+  @include link_color();
+  @include transition-property(color);
+  @include transition-duration(.3s);
+
+  &.disabled{ cursor: default;}
+}
 
 
 

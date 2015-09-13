@@ -5,11 +5,11 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.3.7
+Version: 3.4
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,45 +31,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -165,6 +165,7 @@ table.word_break td {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* MIXINS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup Link color states */
@@ -209,9 +210,9 @@ table.word_break td {
   }
 }
 /* line 10, ../stylish/global/_icons.scss */
-[class^="sy_"], [class*=" sy_"], .sy_icon, .checkbox .checkbox_icon,
+[class^="sy_"], [class*=" sy_"], .sy_icon, .select:after, .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
-.radio .radio_icon, .select:after, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li:before, .msg > li:before, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
+.radio .radio_icon, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li:before, .msg > li:before, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
   font-family: "stylish";
   speak: none;
   font-style: normal;
@@ -314,7 +315,7 @@ table.word_break td {
 }
 
 /* line 78, ../stylish/global/_icons.scss */
-.sy_check:before, .checkbox .checkbox_icon:before {
+.sy_check:before, .checkbox .checkbox_icon:before, .input_big .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before {
   content: "\e604";
 }
 
@@ -437,98 +438,101 @@ a:not(.btn) {
   transition-duration: 0.3s;
 }
 /* line 12, ../stylish/global/_mixins.scss */
-a:not(.btn):hover {
+a:not(.btn):hover, a:not(.btn).active {
   color: #cd3a3a;
 }
-/* line 13, ../stylish/global/_mixins.scss */
+/* line 15, ../stylish/global/_mixins.scss */
 a:not(.btn).disabled {
   color: #cd3a3a;
+}
+/* line 28, ../stylish/global/_typography.scss */
+a:not(.btn).disabled {
   cursor: default;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup content style for large texts */
-/* line 36, ../stylish/global/_typography.scss */
+/* line 42, ../stylish/global/_typography.scss */
 .content_style h1, .content_style h2, .content_style h3, .content_style h4, .content_style h5, .content_style h6 {
   margin-bottom: 5px;
 }
-/* line 37, ../stylish/global/_typography.scss */
+/* line 43, ../stylish/global/_typography.scss */
 .content_style h1 {
   font-size: 38px;
   line-height: 43px;
 }
-/* line 38, ../stylish/global/_typography.scss */
+/* line 44, ../stylish/global/_typography.scss */
 .content_style h2 {
   font-size: 35px;
   line-height: 40px;
 }
-/* line 39, ../stylish/global/_typography.scss */
+/* line 45, ../stylish/global/_typography.scss */
 .content_style h3 {
   font-size: 32px;
   line-height: 37px;
 }
-/* line 40, ../stylish/global/_typography.scss */
+/* line 46, ../stylish/global/_typography.scss */
 .content_style h4 {
   font-size: 29px;
   line-height: 34px;
 }
-/* line 41, ../stylish/global/_typography.scss */
+/* line 47, ../stylish/global/_typography.scss */
 .content_style h5 {
   font-size: 26px;
   line-height: 31px;
 }
-/* line 42, ../stylish/global/_typography.scss */
+/* line 48, ../stylish/global/_typography.scss */
 .content_style h6 {
   font-size: 23px;
   line-height: 28px;
 }
-/* line 43, ../stylish/global/_typography.scss */
+/* line 49, ../stylish/global/_typography.scss */
 .content_style p {
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 20px;
 }
-/* line 46, ../stylish/global/_typography.scss */
+/* line 52, ../stylish/global/_typography.scss */
 .content_style ul, .content_style ol {
   overflow: hidden;
   margin-left: 0;
   margin-bottom: 20px;
 }
-/* line 48, ../stylish/global/_typography.scss */
+/* line 54, ../stylish/global/_typography.scss */
 .content_style ul li, .content_style ol li {
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 5px;
 }
-/* line 50, ../stylish/global/_typography.scss */
+/* line 56, ../stylish/global/_typography.scss */
 .content_style ul li {
   margin-left: 30px;
 }
-/* line 51, ../stylish/global/_typography.scss */
+/* line 57, ../stylish/global/_typography.scss */
 .content_style ol li {
   margin-left: 40px;
   font-size: 20px;
   line-height: 25px;
 }
-/* line 54, ../stylish/global/_typography.scss */
+/* line 60, ../stylish/global/_typography.scss */
 .content_style address {
   font-size: 20px;
   line-height: 25px;
 }
-/* line 55, ../stylish/global/_typography.scss */
+/* line 61, ../stylish/global/_typography.scss */
 .content_style .italic {
   font-style: italic;
 }
-/* line 56, ../stylish/global/_typography.scss */
+/* line 62, ../stylish/global/_typography.scss */
 .content_style strong,
 .content_style .bold {
   font-weight: bold;
 }
-/* line 58, ../stylish/global/_typography.scss */
+/* line 64, ../stylish/global/_typography.scss */
 .content_style .underline {
   text-decoration: underline;
 }
-/* line 61, ../stylish/global/_typography.scss */
+/* line 67, ../stylish/global/_typography.scss */
 .content_style img,
 .content_style iframe {
   width: auto;
@@ -536,27 +540,27 @@ a:not(.btn).disabled {
   max-width: 100%;
   margin-bottom: 20px;
 }
-/* line 65, ../stylish/global/_typography.scss */
+/* line 71, ../stylish/global/_typography.scss */
 .content_style img.alignleft,
 .content_style iframe.alignleft {
   clear: left;
   float: left;
   margin-right: 20px;
 }
-/* line 66, ../stylish/global/_typography.scss */
+/* line 72, ../stylish/global/_typography.scss */
 .content_style img.alignright,
 .content_style iframe.alignright {
   clear: right;
   float: right;
   margin-left: 20px;
 }
-/* line 69, ../stylish/global/_typography.scss */
+/* line 75, ../stylish/global/_typography.scss */
 .content_style img.full,
 .content_style iframe.full {
   width: 100%;
   height: auto;
 }
-/* line 72, ../stylish/global/_typography.scss */
+/* line 78, ../stylish/global/_typography.scss */
 .content_style img.rounded,
 .content_style iframe.rounded {
   -moz-border-radius: 50%;
@@ -566,122 +570,122 @@ a:not(.btn).disabled {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Text colors */
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_mine_shaft {
   color: #272727;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_havelock_blue {
   color: #3a89cd;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_flush_mahogany {
   color: #cd3a3a;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_emerald {
   color: #3acd60;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_earls_green {
   color: #cdc43a;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_amethyst {
   color: #bd3acd;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_raw_sienna {
   color: #cd833a;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_dove_gray {
   color: #666666;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_dove_gray_light {
   color: #999999;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_silver {
   color: #c5c5c5;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_mercury {
   color: #e5e5e5;
 }
 
-/* line 212, ../stylish/global/_mixins.scss */
+/* line 214, ../stylish/global/_mixins.scss */
 .txt_white {
   color: #ffffff;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_mine_shaft {
   background-color: #272727;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_havelock_blue {
   background-color: #3a89cd;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_flush_mahogany {
   background-color: #cd3a3a;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_emerald {
   background-color: #3acd60;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_earls_green {
   background-color: #cdc43a;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_amethyst {
   background-color: #bd3acd;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_raw_sienna {
   background-color: #cd833a;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_dove_gray {
   background-color: #666666;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_dove_gray_light {
   background-color: #999999;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_silver {
   background-color: #c5c5c5;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_mercury {
   background-color: #e5e5e5;
 }
 
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 .bg_white {
   background-color: #ffffff;
 }
@@ -689,22 +693,12 @@ a:not(.btn).disabled {
 /* FORMS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 5, ../stylish/global/_forms.scss */
-input[type=text],
-input[type=tel],
-input[type=password],
-input[type=email],
-input[type=number],
-input[type=url],
-input[type=datetime],
-input[type=search],
-select,
-textarea {
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea, select {
   color: #272727;
   background-color: #ffffff;
-  font-size: 20px;
-  padding: 7px 12px;
-  height: 42px;
-  border: 1px solid #e5e5e5;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
   margin: 0;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -715,101 +709,124 @@ textarea {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 42px;
+  font-size: 20px;
+  padding: 7px 10px;
 }
-/* line 18, ../stylish/global/_forms.scss */
-input[type=text].auto_width,
-input[type=tel].auto_width,
-input[type=password].auto_width,
-input[type=email].auto_width,
-input[type=number].auto_width,
-input[type=url].auto_width,
-input[type=datetime].auto_width,
-input[type=search].auto_width,
-select.auto_width,
-textarea.auto_width {
+/* line 11, ../stylish/global/_forms.scss */
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]).auto_width, textarea.auto_width, select.auto_width {
   width: auto;
 }
-/* line 19, ../stylish/global/_forms.scss */
-input[type=text]:focus,
-input[type=tel]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=url]:focus,
-input[type=datetime]:focus,
-input[type=search]:focus,
-select:focus,
-textarea:focus {
+/* line 12, ../stylish/global/_forms.scss */
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):focus, textarea:focus, select:focus {
   -moz-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
   -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
   box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
 }
-/* line 20, ../stylish/global/_forms.scss */
-input[type=text]:disabled,
-input[type=tel]:disabled,
-input[type=password]:disabled,
-input[type=email]:disabled,
-input[type=number]:disabled,
-input[type=url]:disabled,
-input[type=datetime]:disabled,
-input[type=search]:disabled,
-select:disabled,
-textarea:disabled {
+/* line 13, ../stylish/global/_forms.scss */
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):disabled, textarea:disabled, select:disabled {
   background-color: #c5c5c5;
   color: #666666;
 }
 
-/* line 23, ../stylish/global/_forms.scss */
-select {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* line 24, ../stylish/global/_forms.scss */
+/* line 15, ../stylish/global/_forms.scss */
 textarea {
   height: 150px;
-  padding: 12px;
 }
 
 /* Stylize Placeholder */
-/* line 151, ../stylish/global/_mixins.scss */
+/* line 153, ../stylish/global/_mixins.scss */
 input::-webkit-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 152, ../stylish/global/_mixins.scss */
+/* line 154, ../stylish/global/_mixins.scss */
 input:-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 153, ../stylish/global/_mixins.scss */
+/* line 155, ../stylish/global/_mixins.scss */
 input::-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 154, ../stylish/global/_mixins.scss */
+/* line 156, ../stylish/global/_mixins.scss */
 input:-ms-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 155, ../stylish/global/_mixins.scss */
+/* line 157, ../stylish/global/_mixins.scss */
 input.placeholder {
   color: #e5e5e5;
 }
 
-/* line 156, ../stylish/global/_mixins.scss */
+/* line 158, ../stylish/global/_mixins.scss */
 input.placeholderjs {
   color: #e5e5e5;
 }
 
+/* Setup custom select input */
+/* line 25, ../stylish/global/_forms.scss */
+.select {
+  height: 42px;
+  position: relative;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 318, ../stylish/global/_mixins.scss */
+.select:after {
+  font-size: 18px;
+  margin-top: -9px;
+}
+/* line 29, ../stylish/global/_forms.scss */
+.select:after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 5;
+  width: 40px;
+  text-align: center;
+  color: #272727;
+}
+/* line 30, ../stylish/global/_forms.scss */
+.select select {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 32, ../stylish/global/_forms.scss */
+.select select:focus {
+  outline: none;
+}
+/* line 35, ../stylish/global/_forms.scss */
+.select.disabled:after {
+  color: #c5c5c5;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Checkbox and Radio input Global setup */
-/* line 36, ../stylish/global/_forms.scss */
+/* line 43, ../stylish/global/_forms.scss */
 .checkbox, .radio {
   position: relative;
   display: table;
   table-layout: fixed;
 }
-/* line 39, ../stylish/global/_forms.scss */
+/* line 46, ../stylish/global/_forms.scss */
 .checkbox label, .radio label {
   cursor: pointer;
   -moz-user-select: -moz-none;
@@ -819,8 +836,9 @@ input.placeholderjs {
   margin: 0;
   display: table-cell;
   vertical-align: middle;
+  height: 100%;
 }
-/* line 42, ../stylish/global/_forms.scss */
+/* line 49, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon {
@@ -830,7 +848,7 @@ input.placeholderjs {
   left: 0;
   top: 50%;
 }
-/* line 46, ../stylish/global/_forms.scss */
+/* line 53, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon:before,
 .checkbox .radio_icon:before, .radio .checkbox_icon:before,
 .radio .radio_icon:before {
@@ -838,7 +856,7 @@ input.placeholderjs {
   left: 50%;
   top: 50%;
 }
-/* line 50, ../stylish/global/_forms.scss */
+/* line 57, ../stylish/global/_forms.scss */
 .checkbox input[type=checkbox],
 .checkbox input[type=radio], .radio input[type=checkbox],
 .radio input[type=radio] {
@@ -853,184 +871,124 @@ input.placeholderjs {
 }
 
 /* Setup custom checkbox input */
-/* line 58, ../stylish/global/_forms.scss */
+/* line 62, ../stylish/global/_forms.scss */
+.checkbox {
+  min-height: 42px;
+}
+@-moz-document url-prefix() {
+  /* line 62, ../stylish/global/_forms.scss */
+  .checkbox {
+    height: 42px;
+  }
+}
+/* line 273, ../stylish/global/_mixins.scss */
+.checkbox label {
+  padding-left: 57px;
+}
+/* line 275, ../stylish/global/_mixins.scss */
+.checkbox label.empty {
+  padding-left: 0;
+  width: 42px;
+}
+/* line 279, ../stylish/global/_mixins.scss */
+.checkbox .checkbox_icon {
+  width: 42px;
+  height: 42px;
+  margin-top: -21px;
+  line-height: 42px;
+}
+/* line 281, ../stylish/global/_mixins.scss */
+.checkbox .checkbox_icon:before {
+  font-size: 34px;
+  margin: -17px 0 0 -17px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+}
+/* line 68, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
-/* line 62, ../stylish/global/_forms.scss */
+/* line 72, ../stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
   color: #cd3a3a;
 }
-/* line 69, ../stylish/global/_forms.scss */
+/* line 79, ../stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
   background-color: #e5e5e5;
   color: #e5e5e5;
 }
-/* line 71, ../stylish/global/_forms.scss */
+/* line 81, ../stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
   color: #cd3a3a;
 }
 
-/* line 264, ../stylish/global/_mixins.scss */
-.checkbox {
-  min-height: 24px;
+/* Setup custom radio input */
+/* line 87, ../stylish/global/_forms.scss */
+.radio {
+  min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 264, ../stylish/global/_mixins.scss */
-  .checkbox {
-    height: 24px;
+  /* line 87, ../stylish/global/_forms.scss */
+  .radio {
+    height: 42px;
   }
 }
-/* line 272, ../stylish/global/_mixins.scss */
-.checkbox label {
-  height: 100%;
-  padding-left: 39px;
+/* line 298, ../stylish/global/_mixins.scss */
+.radio label {
+  padding-left: 57px;
 }
-/* line 274, ../stylish/global/_mixins.scss */
-.checkbox label.empty {
+/* line 300, ../stylish/global/_mixins.scss */
+.radio label.empty {
   padding-left: 0;
-  width: 24px;
+  width: 42px;
 }
-/* line 278, ../stylish/global/_mixins.scss */
-.checkbox .checkbox_icon {
-  width: 24px;
-  height: 24px;
-  margin-top: -12px;
-  line-height: 24px;
+/* line 304, ../stylish/global/_mixins.scss */
+.radio .radio_icon {
+  width: 42px;
+  height: 42px;
+  margin-top: -21px;
+  line-height: 42px;
 }
-/* line 280, ../stylish/global/_mixins.scss */
-.checkbox .checkbox_icon:before {
-  font-size: 16px;
-  margin: -8px 0 0 -8px;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
+/* line 306, ../stylish/global/_mixins.scss */
+.radio .radio_icon:before {
+  content: "";
+  margin: -17px 0 0 -17px;
+  width: 34px;
+  height: 34px;
 }
-
-/* Setup custom radio input */
-/* line 82, ../stylish/global/_forms.scss */
+/* line 93, ../stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
   border-color: #e5e5e5;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
-/* line 86, ../stylish/global/_forms.scss */
+/* line 95, ../stylish/global/_forms.scss */
+.radio .radio_icon:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 100, ../stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
   background-color: #cd3a3a;
 }
-/* line 93, ../stylish/global/_forms.scss */
+/* line 107, ../stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
   background-color: #e5e5e5;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
-.radio {
-  min-height: 24px;
-}
-@-moz-document url-prefix() {
-  /* line 291, ../stylish/global/_mixins.scss */
-  .radio {
-    height: 24px;
-  }
-}
-/* line 299, ../stylish/global/_mixins.scss */
-.radio label {
-  height: 100%;
-  padding-left: 39px;
-}
-/* line 301, ../stylish/global/_mixins.scss */
-.radio label.empty {
-  padding-left: 0;
-  width: 24px;
-}
-/* line 305, ../stylish/global/_mixins.scss */
-.radio .radio_icon {
-  width: 24px;
-  height: 24px;
-  margin-top: -12px;
-  line-height: 24px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-/* line 307, ../stylish/global/_mixins.scss */
-.radio .radio_icon:before {
-  content: "";
-  margin: -8px 0 0 -8px;
-  width: 16px;
-  height: 16px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup custom select input */
-/* line 103, ../stylish/global/_forms.scss */
-.select {
-  height: 42px;
-  position: relative;
-  border: 1px solid #e5e5e5;
-  height: 42px;
-  cursor: pointer;
-  overflow: hidden;
-  background-color: #ffffff;
-  display: block;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 328, ../stylish/global/_mixins.scss */
-.select:after {
-  font-size: 18px;
-  margin-top: -9px;
-}
-/* line 106, ../stylish/global/_forms.scss */
-.select:after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 42px;
-  z-index: 5;
-  line-height: 42px;
-  width: 40px;
-  text-align: center;
-  background-color: #ffffff;
-  color: #272727;
-}
-/* line 107, ../stylish/global/_forms.scss */
-.select select {
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
-  background-color: transparent;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border: none;
-  padding-right: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-/* line 109, ../stylish/global/_forms.scss */
-.select select:focus {
-  outline: none;
-}
-/* line 112, ../stylish/global/_forms.scss */
-.select.disabled:after {
-  color: #c5c5c5;
-}
-
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Upload custom input */
-/* line 120, ../stylish/global/_forms.scss */
+/* line 116, ../stylish/global/_forms.scss */
 .upload {
   position: relative;
 }
-/* line 122, ../stylish/global/_forms.scss */
+/* line 118, ../stylish/global/_forms.scss */
 .upload input[type=file] {
   font-size: 29px;
   width: 100%;
@@ -1042,22 +1000,189 @@ input.placeholderjs {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup forms layout */
+/* line 127, ../stylish/global/_forms.scss */
+.input_big input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), .input_big textarea, .input_big select {
+  height: 50px;
+  font-size: 20px;
+  padding: 9px 10px;
+}
+/* line 130, ../stylish/global/_forms.scss */
+.input_big .select {
+  height: 50px;
+}
+/* line 318, ../stylish/global/_mixins.scss */
+.input_big .select:after {
+  font-size: 22px;
+  margin-top: -11px;
+}
 /* line 131, ../stylish/global/_forms.scss */
+.input_big .checkbox {
+  min-height: 50px;
+}
+@-moz-document url-prefix() {
+  /* line 131, ../stylish/global/_forms.scss */
+  .input_big .checkbox {
+    height: 50px;
+  }
+}
+/* line 273, ../stylish/global/_mixins.scss */
+.input_big .checkbox label {
+  padding-left: 65px;
+}
+/* line 275, ../stylish/global/_mixins.scss */
+.input_big .checkbox label.empty {
+  padding-left: 0;
+  width: 50px;
+}
+/* line 279, ../stylish/global/_mixins.scss */
+.input_big .checkbox .checkbox_icon {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  line-height: 50px;
+}
+/* line 281, ../stylish/global/_mixins.scss */
+.input_big .checkbox .checkbox_icon:before {
+  font-size: 42px;
+  margin: -21px 0 0 -21px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+}
+/* line 132, ../stylish/global/_forms.scss */
+.input_big .radio {
+  min-height: 50px;
+}
+@-moz-document url-prefix() {
+  /* line 132, ../stylish/global/_forms.scss */
+  .input_big .radio {
+    height: 50px;
+  }
+}
+/* line 298, ../stylish/global/_mixins.scss */
+.input_big .radio label {
+  padding-left: 65px;
+}
+/* line 300, ../stylish/global/_mixins.scss */
+.input_big .radio label.empty {
+  padding-left: 0;
+  width: 50px;
+}
+/* line 304, ../stylish/global/_mixins.scss */
+.input_big .radio .radio_icon {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  line-height: 50px;
+}
+/* line 306, ../stylish/global/_mixins.scss */
+.input_big .radio .radio_icon:before {
+  content: "";
+  margin: -21px 0 0 -21px;
+  width: 42px;
+  height: 42px;
+}
+
+/* line 137, ../stylish/global/_forms.scss */
+.input_small input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), .input_small textarea, .input_small select {
+  height: 32px;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+/* line 140, ../stylish/global/_forms.scss */
+.input_small .select {
+  height: 32px;
+}
+/* line 318, ../stylish/global/_mixins.scss */
+.input_small .select:after {
+  font-size: 15px;
+  margin-top: -7.5px;
+}
+/* line 141, ../stylish/global/_forms.scss */
+.input_small .checkbox {
+  min-height: 32px;
+}
+@-moz-document url-prefix() {
+  /* line 141, ../stylish/global/_forms.scss */
+  .input_small .checkbox {
+    height: 32px;
+  }
+}
+/* line 273, ../stylish/global/_mixins.scss */
+.input_small .checkbox label {
+  padding-left: 47px;
+}
+/* line 275, ../stylish/global/_mixins.scss */
+.input_small .checkbox label.empty {
+  padding-left: 0;
+  width: 32px;
+}
+/* line 279, ../stylish/global/_mixins.scss */
+.input_small .checkbox .checkbox_icon {
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  line-height: 32px;
+}
+/* line 281, ../stylish/global/_mixins.scss */
+.input_small .checkbox .checkbox_icon:before {
+  font-size: 24px;
+  margin: -12px 0 0 -12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+/* line 142, ../stylish/global/_forms.scss */
+.input_small .radio {
+  min-height: 32px;
+}
+@-moz-document url-prefix() {
+  /* line 142, ../stylish/global/_forms.scss */
+  .input_small .radio {
+    height: 32px;
+  }
+}
+/* line 298, ../stylish/global/_mixins.scss */
+.input_small .radio label {
+  padding-left: 47px;
+}
+/* line 300, ../stylish/global/_mixins.scss */
+.input_small .radio label.empty {
+  padding-left: 0;
+  width: 32px;
+}
+/* line 304, ../stylish/global/_mixins.scss */
+.input_small .radio .radio_icon {
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  line-height: 32px;
+}
+/* line 306, ../stylish/global/_mixins.scss */
+.input_small .radio .radio_icon:before {
+  content: "";
+  margin: -12px 0 0 -12px;
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Setup forms layout */
+/* line 151, ../stylish/global/_forms.scss */
 form .field, .form .field {
   margin-bottom: 20px;
   position: relative;
   list-style: none;
 }
-/* line 133, ../stylish/global/_forms.scss */
+/* line 153, ../stylish/global/_forms.scss */
 form .field.big, .form .field.big {
   margin-bottom: 40px;
 }
-/* line 134, ../stylish/global/_forms.scss */
+/* line 154, ../stylish/global/_forms.scss */
 form .field.slim, .form .field.slim {
   margin-bottom: 10px;
 }
-/* line 138, ../stylish/global/_forms.scss */
+/* line 158, ../stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
@@ -1065,30 +1190,30 @@ form .field label.required:after, .form .field[data-required="true"] label:after
   font-size: 14px;
   padding-left: 3px;
 }
-/* line 141, ../stylish/global/_forms.scss */
+/* line 161, ../stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
   font-size: 20px;
 }
-/* line 145, ../stylish/global/_forms.scss */
+/* line 165, ../stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 152, ../stylish/global/_forms.scss */
+/* line 172, ../stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
   margin: 0;
   display: table-cell;
 }
-/* line 155, ../stylish/global/_forms.scss */
+/* line 175, ../stylish/global/_forms.scss */
 form .field.last, .form .field.last {
   margin-bottom: 0;
 }
-/* line 161, ../stylish/global/_forms.scss */
+/* line 181, ../stylish/global/_forms.scss */
 form .validation-advice, form .error, .form .validation-advice, .form .error {
   color: #cd3a3a;
   font-size: 15px;
@@ -1096,7 +1221,7 @@ form .validation-advice, form .error, .form .validation-advice, .form .error {
   right: 15px;
   bottom: 15px;
 }
-/* line 163, ../stylish/global/_forms.scss */
+/* line 183, ../stylish/global/_forms.scss */
 form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before {
   padding-right: 10px;
   vertical-align: bottom;
@@ -1110,22 +1235,28 @@ button,
 input[type=submit],
 input[type=button],
 input[type=reset] {
-  padding: 10px;
-  line-height: 20px;
-  font-size: 16px;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid;
+  border-width: 1px;
+  border-style: solid;
   text-align: center;
   width: 100%;
+  font-weight: normal;
   display: block;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
   margin: 0;
+  background-color: #3a89cd;
+  color: #ffffff;
+  border-color: #3a89cd;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -1134,17 +1265,13 @@ input[type=reset] {
   -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #3a89cd;
-  color: #ffffff;
-  border-color: #3a89cd;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
   /* Buttons Colors */
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn:hover, .btn.active,
 button:hover,
 button.active,
@@ -1158,7 +1285,7 @@ input[type=reset].active {
   color: #ffffff;
   border-color: #2d74b1;
 }
-/* line 14, ../stylish/global/_buttons.scss */
+/* line 21, ../stylish/global/_buttons.scss */
 .btn.btn_big, .btn[data-size="big"],
 button.btn_big,
 button[data-size="big"],
@@ -1169,10 +1296,10 @@ input[type=button][data-size="big"],
 input[type=reset].btn_big,
 input[type=reset][data-size="big"] {
   padding: 10px;
-  line-height: 24px;
   font-size: 20px;
+  line-height: 24px;
 }
-/* line 17, ../stylish/global/_buttons.scss */
+/* line 24, ../stylish/global/_buttons.scss */
 .btn.btn_small, .btn[data-size="small"],
 button.btn_small,
 button[data-size="small"],
@@ -1183,10 +1310,10 @@ input[type=button][data-size="small"],
 input[type=reset].btn_small,
 input[type=reset][data-size="small"] {
   padding: 10px;
-  line-height: 17px;
   font-size: 13px;
+  line-height: 17px;
 }
-/* line 20, ../stylish/global/_buttons.scss */
+/* line 27, ../stylish/global/_buttons.scss */
 .btn.no_radius,
 button.no_radius,
 input[type=submit].no_radius,
@@ -1196,7 +1323,7 @@ input[type=reset].no_radius {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* line 23, ../stylish/global/_buttons.scss */
+/* line 30, ../stylish/global/_buttons.scss */
 .btn.rounded,
 button.rounded,
 input[type=submit].rounded,
@@ -1206,7 +1333,7 @@ input[type=reset].rounded {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 26, ../stylish/global/_buttons.scss */
+/* line 33, ../stylish/global/_buttons.scss */
 .btn.disabled, .btn:disabled,
 button.disabled,
 button:disabled,
@@ -1220,7 +1347,7 @@ input[type=reset]:disabled {
   border-color: #c5c5c5 !important;
   color: #ffffff !important;
 }
-/* line 29, ../stylish/global/_buttons.scss */
+/* line 36, ../stylish/global/_buttons.scss */
 .btn.auto_width,
 button.auto_width,
 input[type=submit].auto_width,
@@ -1229,7 +1356,7 @@ input[type=reset].auto_width {
   width: auto;
   display: inline-block;
 }
-/* line 32, ../stylish/global/_buttons.scss */
+/* line 39, ../stylish/global/_buttons.scss */
 .btn.no_word_break,
 button.no_word_break,
 input[type=submit].no_word_break,
@@ -1237,7 +1364,7 @@ input[type=button].no_word_break,
 input[type=reset].no_word_break {
   word-break: normal;
 }
-/* line 38, ../stylish/global/_buttons.scss */
+/* line 45, ../stylish/global/_buttons.scss */
 .btn.btn_icon i, .btn.btn_icon .icon, .btn.btn_icon_left i, .btn.btn_icon_left .icon, .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon i,
 button.btn_icon .icon,
@@ -1266,7 +1393,7 @@ input[type=reset].btn_icon_right .icon {
   font-size: 18px;
   vertical-align: middle;
 }
-/* line 42, ../stylish/global/_buttons.scss */
+/* line 49, ../stylish/global/_buttons.scss */
 .btn.btn_icon_left i, .btn.btn_icon_left .icon,
 button.btn_icon_left i,
 button.btn_icon_left .icon,
@@ -1278,7 +1405,7 @@ input[type=reset].btn_icon_left i,
 input[type=reset].btn_icon_left .icon {
   margin-right: 15px;
 }
-/* line 46, ../stylish/global/_buttons.scss */
+/* line 53, ../stylish/global/_buttons.scss */
 .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon_right i,
 button.btn_icon_right .icon,
@@ -1290,7 +1417,7 @@ input[type=reset].btn_icon_right i,
 input[type=reset].btn_icon_right .icon {
   margin-left: 15px;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft,
 button.btn_mine_shaft,
 input[type=submit].btn_mine_shaft,
@@ -1300,7 +1427,7 @@ input[type=reset].btn_mine_shaft {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft:hover, .btn.btn_mine_shaft.active,
 button.btn_mine_shaft:hover,
 button.btn_mine_shaft.active,
@@ -1314,7 +1441,7 @@ input[type=reset].btn_mine_shaft.active {
   color: #ffffff;
   border-color: #131313;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border,
 button.btn_mine_shaft_border,
 input[type=submit].btn_mine_shaft_border,
@@ -1324,7 +1451,7 @@ input[type=reset].btn_mine_shaft_border {
   color: #272727;
   border-color: #272727;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border:hover, .btn.btn_mine_shaft_border.active,
 button.btn_mine_shaft_border:hover,
 button.btn_mine_shaft_border.active,
@@ -1338,7 +1465,7 @@ input[type=reset].btn_mine_shaft_border.active {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue,
 button.btn_havelock_blue,
 input[type=submit].btn_havelock_blue,
@@ -1348,7 +1475,7 @@ input[type=reset].btn_havelock_blue {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue:hover, .btn.btn_havelock_blue.active,
 button.btn_havelock_blue:hover,
 button.btn_havelock_blue.active,
@@ -1362,7 +1489,7 @@ input[type=reset].btn_havelock_blue.active {
   color: #ffffff;
   border-color: #2d74b1;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border,
 button.btn_havelock_blue_border,
 input[type=submit].btn_havelock_blue_border,
@@ -1372,7 +1499,7 @@ input[type=reset].btn_havelock_blue_border {
   color: #3a89cd;
   border-color: #3a89cd;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border:hover, .btn.btn_havelock_blue_border.active,
 button.btn_havelock_blue_border:hover,
 button.btn_havelock_blue_border.active,
@@ -1386,7 +1513,7 @@ input[type=reset].btn_havelock_blue_border.active {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany,
 button.btn_flush_mahogany,
 input[type=submit].btn_flush_mahogany,
@@ -1396,7 +1523,7 @@ input[type=reset].btn_flush_mahogany {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany:hover, .btn.btn_flush_mahogany.active,
 button.btn_flush_mahogany:hover,
 button.btn_flush_mahogany.active,
@@ -1410,7 +1537,7 @@ input[type=reset].btn_flush_mahogany.active {
   color: #ffffff;
   border-color: #b12d2d;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border,
 button.btn_flush_mahogany_border,
 input[type=submit].btn_flush_mahogany_border,
@@ -1420,7 +1547,7 @@ input[type=reset].btn_flush_mahogany_border {
   color: #cd3a3a;
   border-color: #cd3a3a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border:hover, .btn.btn_flush_mahogany_border.active,
 button.btn_flush_mahogany_border:hover,
 button.btn_flush_mahogany_border.active,
@@ -1434,7 +1561,7 @@ input[type=reset].btn_flush_mahogany_border.active {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_emerald,
 button.btn_emerald,
 input[type=submit].btn_emerald,
@@ -1444,7 +1571,7 @@ input[type=reset].btn_emerald {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_emerald:hover, .btn.btn_emerald.active,
 button.btn_emerald:hover,
 button.btn_emerald.active,
@@ -1458,7 +1585,7 @@ input[type=reset].btn_emerald.active {
   color: #ffffff;
   border-color: #2db14f;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_emerald_border,
 button.btn_emerald_border,
 input[type=submit].btn_emerald_border,
@@ -1468,7 +1595,7 @@ input[type=reset].btn_emerald_border {
   color: #3acd60;
   border-color: #3acd60;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_emerald_border:hover, .btn.btn_emerald_border.active,
 button.btn_emerald_border:hover,
 button.btn_emerald_border.active,
@@ -1482,7 +1609,7 @@ input[type=reset].btn_emerald_border.active {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green,
 button.btn_earls_green,
 input[type=submit].btn_earls_green,
@@ -1492,7 +1619,7 @@ input[type=reset].btn_earls_green {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green:hover, .btn.btn_earls_green.active,
 button.btn_earls_green:hover,
 button.btn_earls_green.active,
@@ -1506,7 +1633,7 @@ input[type=reset].btn_earls_green.active {
   color: #ffffff;
   border-color: #b1a92d;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green_border,
 button.btn_earls_green_border,
 input[type=submit].btn_earls_green_border,
@@ -1516,7 +1643,7 @@ input[type=reset].btn_earls_green_border {
   color: #cdc43a;
   border-color: #cdc43a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green_border:hover, .btn.btn_earls_green_border.active,
 button.btn_earls_green_border:hover,
 button.btn_earls_green_border.active,
@@ -1530,7 +1657,7 @@ input[type=reset].btn_earls_green_border.active {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst,
 button.btn_amethyst,
 input[type=submit].btn_amethyst,
@@ -1540,7 +1667,7 @@ input[type=reset].btn_amethyst {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst:hover, .btn.btn_amethyst.active,
 button.btn_amethyst:hover,
 button.btn_amethyst.active,
@@ -1554,7 +1681,7 @@ input[type=reset].btn_amethyst.active {
   color: #ffffff;
   border-color: #a32db1;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst_border,
 button.btn_amethyst_border,
 input[type=submit].btn_amethyst_border,
@@ -1564,7 +1691,7 @@ input[type=reset].btn_amethyst_border {
   color: #bd3acd;
   border-color: #bd3acd;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst_border:hover, .btn.btn_amethyst_border.active,
 button.btn_amethyst_border:hover,
 button.btn_amethyst_border.active,
@@ -1578,7 +1705,7 @@ input[type=reset].btn_amethyst_border.active {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna,
 button.btn_raw_sienna,
 input[type=submit].btn_raw_sienna,
@@ -1588,7 +1715,7 @@ input[type=reset].btn_raw_sienna {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna:hover, .btn.btn_raw_sienna.active,
 button.btn_raw_sienna:hover,
 button.btn_raw_sienna.active,
@@ -1602,7 +1729,7 @@ input[type=reset].btn_raw_sienna.active {
   color: #ffffff;
   border-color: #b16f2d;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border,
 button.btn_raw_sienna_border,
 input[type=submit].btn_raw_sienna_border,
@@ -1612,7 +1739,7 @@ input[type=reset].btn_raw_sienna_border {
   color: #cd833a;
   border-color: #cd833a;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border:hover, .btn.btn_raw_sienna_border.active,
 button.btn_raw_sienna_border:hover,
 button.btn_raw_sienna_border.active,
@@ -1626,7 +1753,7 @@ input[type=reset].btn_raw_sienna_border.active {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray,
 button.btn_dove_gray,
 input[type=submit].btn_dove_gray,
@@ -1636,7 +1763,7 @@ input[type=reset].btn_dove_gray {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray:hover, .btn.btn_dove_gray.active,
 button.btn_dove_gray:hover,
 button.btn_dove_gray.active,
@@ -1650,7 +1777,7 @@ input[type=reset].btn_dove_gray.active {
   color: #ffffff;
   border-color: #525252;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border,
 button.btn_dove_gray_border,
 input[type=submit].btn_dove_gray_border,
@@ -1660,7 +1787,7 @@ input[type=reset].btn_dove_gray_border {
   color: #666666;
   border-color: #666666;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border:hover, .btn.btn_dove_gray_border.active,
 button.btn_dove_gray_border:hover,
 button.btn_dove_gray_border.active,
@@ -1674,7 +1801,7 @@ input[type=reset].btn_dove_gray_border.active {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light,
 button.btn_dove_gray_light,
 input[type=submit].btn_dove_gray_light,
@@ -1684,7 +1811,7 @@ input[type=reset].btn_dove_gray_light {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light:hover, .btn.btn_dove_gray_light.active,
 button.btn_dove_gray_light:hover,
 button.btn_dove_gray_light.active,
@@ -1698,7 +1825,7 @@ input[type=reset].btn_dove_gray_light.active {
   color: #ffffff;
   border-color: #858585;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border,
 button.btn_dove_gray_light_border,
 input[type=submit].btn_dove_gray_light_border,
@@ -1708,7 +1835,7 @@ input[type=reset].btn_dove_gray_light_border {
   color: #999999;
   border-color: #999999;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border:hover, .btn.btn_dove_gray_light_border.active,
 button.btn_dove_gray_light_border:hover,
 button.btn_dove_gray_light_border.active,
@@ -1722,7 +1849,7 @@ input[type=reset].btn_dove_gray_light_border.active {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_silver,
 button.btn_silver,
 input[type=submit].btn_silver,
@@ -1732,7 +1859,7 @@ input[type=reset].btn_silver {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_silver:hover, .btn.btn_silver.active,
 button.btn_silver:hover,
 button.btn_silver.active,
@@ -1746,7 +1873,7 @@ input[type=reset].btn_silver.active {
   color: #272727;
   border-color: #b1b1b1;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_silver_border,
 button.btn_silver_border,
 input[type=submit].btn_silver_border,
@@ -1756,7 +1883,7 @@ input[type=reset].btn_silver_border {
   color: #c5c5c5;
   border-color: #c5c5c5;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_silver_border:hover, .btn.btn_silver_border.active,
 button.btn_silver_border:hover,
 button.btn_silver_border.active,
@@ -1770,7 +1897,7 @@ input[type=reset].btn_silver_border.active {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_mercury,
 button.btn_mercury,
 input[type=submit].btn_mercury,
@@ -1780,7 +1907,7 @@ input[type=reset].btn_mercury {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_mercury:hover, .btn.btn_mercury.active,
 button.btn_mercury:hover,
 button.btn_mercury.active,
@@ -1794,7 +1921,7 @@ input[type=reset].btn_mercury.active {
   color: #272727;
   border-color: #d1d1d1;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_mercury_border,
 button.btn_mercury_border,
 input[type=submit].btn_mercury_border,
@@ -1804,7 +1931,7 @@ input[type=reset].btn_mercury_border {
   color: #e5e5e5;
   border-color: #e5e5e5;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_mercury_border:hover, .btn.btn_mercury_border.active,
 button.btn_mercury_border:hover,
 button.btn_mercury_border.active,
@@ -1818,7 +1945,7 @@ input[type=reset].btn_mercury_border.active {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 248, ../stylish/global/_mixins.scss */
+/* line 250, ../stylish/global/_mixins.scss */
 .btn.btn_white,
 button.btn_white,
 input[type=submit].btn_white,
@@ -1828,7 +1955,7 @@ input[type=reset].btn_white {
   color: #272727;
   border-color: #ffffff;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_white:hover, .btn.btn_white.active,
 button.btn_white:hover,
 button.btn_white.active,
@@ -1842,7 +1969,7 @@ input[type=reset].btn_white.active {
   color: #272727;
   border-color: #ebebeb;
 }
-/* line 252, ../stylish/global/_mixins.scss */
+/* line 254, ../stylish/global/_mixins.scss */
 .btn.btn_white_border,
 button.btn_white_border,
 input[type=submit].btn_white_border,
@@ -1852,7 +1979,7 @@ input[type=reset].btn_white_border {
   color: #ffffff;
   border-color: #ffffff;
 }
-/* line 30, ../stylish/global/_mixins.scss */
+/* line 32, ../stylish/global/_mixins.scss */
 .btn.btn_white_border:hover, .btn.btn_white_border.active,
 button.btn_white_border:hover,
 button.btn_white_border.active,
@@ -1891,25 +2018,25 @@ input[type=reset].btn_white_border.active {
   max-width: inherit;
 }
 
-/* line 179, ../stylish/global/_mixins.scss */
+/* line 181, ../stylish/global/_mixins.scss */
 .container_quarter {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 179, ../stylish/global/_mixins.scss */
+/* line 181, ../stylish/global/_mixins.scss */
 .container_half {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 179, ../stylish/global/_mixins.scss */
+/* line 181, ../stylish/global/_mixins.scss */
 .container_double {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* line 179, ../stylish/global/_mixins.scss */
+/* line 181, ../stylish/global/_mixins.scss */
 .container_triple {
   padding-left: 60px;
   padding-right: 60px;
@@ -3673,35 +3800,35 @@ table th.last, table td.last {
 .tip[data-tip-position="right"]:before {
   margin-left: -1px;
 }
-/* line 368, ../stylish/global/_mixins.scss */
+/* line 398, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:after {
   border-top-color: #ffffff;
 }
-/* line 369, ../stylish/global/_mixins.scss */
+/* line 399, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:after {
   border-bottom-color: #ffffff;
 }
-/* line 370, ../stylish/global/_mixins.scss */
+/* line 400, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:after {
   border-left-color: #ffffff;
 }
-/* line 371, ../stylish/global/_mixins.scss */
+/* line 401, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:after {
   border-right-color: #ffffff;
 }
-/* line 373, ../stylish/global/_mixins.scss */
+/* line 403, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:before {
   border-top-color: #e5e5e5;
 }
-/* line 374, ../stylish/global/_mixins.scss */
+/* line 404, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:before {
   border-bottom-color: #e5e5e5;
 }
-/* line 375, ../stylish/global/_mixins.scss */
+/* line 405, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:before {
   border-left-color: #e5e5e5;
 }
-/* line 376, ../stylish/global/_mixins.scss */
+/* line 406, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:before {
   border-right-color: #e5e5e5;
 }
@@ -6263,202 +6390,202 @@ table th.last, table td.last {
   height: auto;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom100 {
   margin-bottom: 100px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top100 {
   margin-top: 100px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom100 {
   padding-bottom: 100px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top100 {
   padding-top: 100px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom90 {
   margin-bottom: 90px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top90 {
   margin-top: 90px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom90 {
   padding-bottom: 90px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top90 {
   padding-top: 90px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom80 {
   margin-bottom: 80px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top80 {
   margin-top: 80px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom80 {
   padding-bottom: 80px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top80 {
   padding-top: 80px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom70 {
   margin-bottom: 70px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top70 {
   margin-top: 70px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom70 {
   padding-bottom: 70px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top70 {
   padding-top: 70px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom60 {
   margin-bottom: 60px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top60 {
   margin-top: 60px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom60 {
   padding-bottom: 60px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top60 {
   padding-top: 60px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom50 {
   margin-bottom: 50px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top50 {
   margin-top: 50px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom50 {
   padding-bottom: 50px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top50 {
   padding-top: 50px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom40 {
   margin-bottom: 40px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top40 {
   margin-top: 40px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom40 {
   padding-bottom: 40px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top40 {
   padding-top: 40px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom30 {
   margin-bottom: 30px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top30 {
   margin-top: 30px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom30 {
   padding-bottom: 30px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top30 {
   padding-top: 30px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom20 {
   margin-bottom: 20px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top20 {
   margin-top: 20px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom20 {
   padding-bottom: 20px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top20 {
   padding-top: 20px;
 }
 
-/* line 353, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .m_bottom10 {
   margin-bottom: 10px;
 }
 
-/* line 354, ../stylish/global/_mixins.scss */
+/* line 384, ../stylish/global/_mixins.scss */
 .m_top10 {
   margin-top: 10px;
 }
 
-/* line 355, ../stylish/global/_mixins.scss */
+/* line 385, ../stylish/global/_mixins.scss */
 .p_bottom10 {
   padding-bottom: 10px;
 }
 
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 386, ../stylish/global/_mixins.scss */
 .p_top10 {
   padding-top: 10px;
 }
