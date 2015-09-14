@@ -30,6 +30,9 @@ textarea{ height: 150px; }
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* Setup custom select input */
 .select {
   @include select_size();
@@ -179,6 +182,7 @@ form, .form{
     margin-bottom: $form_field_move; position: relative; list-style: none;
     &.big { margin-bottom: $form_field_move_big;}
     &.slim{ margin-bottom: $form_field_move_small;}
+    &.last{margin-bottom: 0}
 
     &[data-required="true"] label,
     label.required{
@@ -199,7 +203,7 @@ form, .form{
       label{ margin:0; display: table-cell; }
     }
 
-    &.last{margin-bottom: 0}
+
   }
 
   .label_correction{}

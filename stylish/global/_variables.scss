@@ -172,7 +172,7 @@ $input_height:              42px; //input height
 $input_txt_size:            $p; //input font size
 $input_padding:             7px 10px; //input padding
 $checkbox_size:             $input_height; //checkbox width and height
-$checkbox_icon_size:        ($input_height - 8); //checkbox icon size
+$checkbox_icon_size:        ($checkbox_size - 8); //checkbox icon size
 $radio_size:                $checkbox_size; //radio width and height
 $radio_icon_size:           $checkbox_icon_size; //radio icon size
 $select_icon_size:          18px; //Select icon size
@@ -182,7 +182,7 @@ $input_big_height:          50px; //input height
 $input_big_txt_size:        $p; //input font size
 $input_big_padding:         9px 10px; //input padding
 $checkbox_big_size:         $input_big_height; //checkbox width and height
-$checkbox_big_icon_size:    ($input_big_height - 8); //checkbox icon size
+$checkbox_big_icon_size:    ($checkbox_big_size - 8); //checkbox icon size
 $radio_big_size:            $checkbox_big_size; //radio width and height
 $radio_big_icon_size:       $checkbox_big_icon_size; //radio icon size
 $select_big_icon_size:      22px; //Select icon size
@@ -192,7 +192,7 @@ $input_small_height:        32px; //input height
 $input_small_txt_size:      $p; //input font size
 $input_small_padding:       5px 10px; //input padding
 $checkbox_small_size:       $input_small_height; //checkbox width and height
-$checkbox_small_icon_size:  ($input_small_height - 8); //checkbox icon size
+$checkbox_small_icon_size:  ($checkbox_small_size - 8); //checkbox icon size
 $radio_small_size:          $checkbox_small_size; //radio width and height
 $radio_small_icon_size:     $checkbox_small_icon_size; //radio icon size
 $select_small_icon_size:    15px; //Select icon size

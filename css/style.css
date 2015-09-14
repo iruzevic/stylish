@@ -9,7 +9,7 @@ Version: 3.4
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,45 +31,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -801,8 +801,9 @@ input.placeholderjs {
   color: #e5e5e5;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup custom select input */
-/* line 34, ../stylish/global/_forms.scss */
+/* line 37, ../stylish/global/_forms.scss */
 .select {
   height: 42px;
   position: relative;
@@ -820,7 +821,7 @@ input.placeholderjs {
   font-size: 18px;
   margin-top: -9px;
 }
-/* line 38, ../stylish/global/_forms.scss */
+/* line 41, ../stylish/global/_forms.scss */
 .select:after {
   position: absolute;
   right: 0;
@@ -830,7 +831,7 @@ input.placeholderjs {
   text-align: center;
   color: #272727;
 }
-/* line 39, ../stylish/global/_forms.scss */
+/* line 42, ../stylish/global/_forms.scss */
 .select select {
   position: absolute;
   cursor: pointer;
@@ -845,24 +846,24 @@ input.placeholderjs {
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 41, ../stylish/global/_forms.scss */
+/* line 44, ../stylish/global/_forms.scss */
 .select select:focus {
   outline: none;
 }
-/* line 44, ../stylish/global/_forms.scss */
+/* line 47, ../stylish/global/_forms.scss */
 .select.disabled:after {
   color: #c5c5c5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Checkbox and Radio input Global setup */
-/* line 52, ../stylish/global/_forms.scss */
+/* line 55, ../stylish/global/_forms.scss */
 .checkbox, .radio {
   position: relative;
   display: table;
   table-layout: fixed;
 }
-/* line 55, ../stylish/global/_forms.scss */
+/* line 58, ../stylish/global/_forms.scss */
 .checkbox label, .radio label {
   cursor: pointer;
   -moz-user-select: -moz-none;
@@ -874,7 +875,7 @@ input.placeholderjs {
   vertical-align: middle;
   height: 100%;
 }
-/* line 58, ../stylish/global/_forms.scss */
+/* line 61, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon {
@@ -884,7 +885,7 @@ input.placeholderjs {
   left: 0;
   top: 50%;
 }
-/* line 62, ../stylish/global/_forms.scss */
+/* line 65, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon:before,
 .checkbox .radio_icon:before, .radio .checkbox_icon:before,
 .radio .radio_icon:before {
@@ -892,7 +893,7 @@ input.placeholderjs {
   left: 50%;
   top: 50%;
 }
-/* line 66, ../stylish/global/_forms.scss */
+/* line 69, ../stylish/global/_forms.scss */
 .checkbox input[type=checkbox],
 .checkbox input[type=radio], .radio input[type=checkbox],
 .radio input[type=radio] {
@@ -907,12 +908,12 @@ input.placeholderjs {
 }
 
 /* Setup custom checkbox input */
-/* line 71, ../stylish/global/_forms.scss */
+/* line 74, ../stylish/global/_forms.scss */
 .checkbox {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 71, ../stylish/global/_forms.scss */
+  /* line 74, ../stylish/global/_forms.scss */
   .checkbox {
     height: 42px;
   }
@@ -941,33 +942,33 @@ input.placeholderjs {
   height: 34px;
   line-height: 34px;
 }
-/* line 77, ../stylish/global/_forms.scss */
+/* line 80, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
-/* line 81, ../stylish/global/_forms.scss */
+/* line 84, ../stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
   color: #cd3a3a;
 }
-/* line 88, ../stylish/global/_forms.scss */
+/* line 91, ../stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
   background-color: #e5e5e5;
   color: #e5e5e5;
 }
-/* line 90, ../stylish/global/_forms.scss */
+/* line 93, ../stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
   color: #cd3a3a;
 }
 
 /* Setup custom radio input */
-/* line 96, ../stylish/global/_forms.scss */
+/* line 99, ../stylish/global/_forms.scss */
 .radio {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 96, ../stylish/global/_forms.scss */
+  /* line 99, ../stylish/global/_forms.scss */
   .radio {
     height: 42px;
   }
@@ -995,7 +996,7 @@ input.placeholderjs {
   width: 34px;
   height: 34px;
 }
-/* line 102, ../stylish/global/_forms.scss */
+/* line 105, ../stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
   border-color: #e5e5e5;
@@ -1003,28 +1004,28 @@ input.placeholderjs {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 104, ../stylish/global/_forms.scss */
+/* line 107, ../stylish/global/_forms.scss */
 .radio .radio_icon:before {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 109, ../stylish/global/_forms.scss */
+/* line 112, ../stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
   background-color: #cd3a3a;
 }
-/* line 116, ../stylish/global/_forms.scss */
+/* line 119, ../stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
   background-color: #e5e5e5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Upload custom input */
-/* line 125, ../stylish/global/_forms.scss */
+/* line 128, ../stylish/global/_forms.scss */
 .upload {
   position: relative;
 }
-/* line 127, ../stylish/global/_forms.scss */
+/* line 130, ../stylish/global/_forms.scss */
 .upload input[type=file] {
   font-size: 29px;
   width: 100%;
@@ -1036,7 +1037,7 @@ input.placeholderjs {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 136, ../stylish/global/_forms.scss */
+/* line 139, ../stylish/global/_forms.scss */
 .input_big input[type=text],
 .input_big input[type=tel],
 .input_big input[type=password],
@@ -1051,7 +1052,7 @@ input.placeholderjs {
   font-size: 20px;
   padding: 9px 10px;
 }
-/* line 148, ../stylish/global/_forms.scss */
+/* line 151, ../stylish/global/_forms.scss */
 .input_big .select {
   height: 50px;
 }
@@ -1060,12 +1061,12 @@ input.placeholderjs {
   font-size: 22px;
   margin-top: -11px;
 }
-/* line 149, ../stylish/global/_forms.scss */
+/* line 152, ../stylish/global/_forms.scss */
 .input_big .checkbox {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 149, ../stylish/global/_forms.scss */
+  /* line 152, ../stylish/global/_forms.scss */
   .input_big .checkbox {
     height: 50px;
   }
@@ -1094,12 +1095,12 @@ input.placeholderjs {
   height: 42px;
   line-height: 42px;
 }
-/* line 150, ../stylish/global/_forms.scss */
+/* line 153, ../stylish/global/_forms.scss */
 .input_big .radio {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 150, ../stylish/global/_forms.scss */
+  /* line 153, ../stylish/global/_forms.scss */
   .input_big .radio {
     height: 50px;
   }
@@ -1128,7 +1129,7 @@ input.placeholderjs {
   height: 42px;
 }
 
-/* line 155, ../stylish/global/_forms.scss */
+/* line 158, ../stylish/global/_forms.scss */
 .input_small input[type=text],
 .input_small input[type=tel],
 .input_small input[type=password],
@@ -1143,7 +1144,7 @@ input.placeholderjs {
   font-size: 20px;
   padding: 5px 10px;
 }
-/* line 167, ../stylish/global/_forms.scss */
+/* line 170, ../stylish/global/_forms.scss */
 .input_small .select {
   height: 32px;
 }
@@ -1152,12 +1153,12 @@ input.placeholderjs {
   font-size: 15px;
   margin-top: -7.5px;
 }
-/* line 168, ../stylish/global/_forms.scss */
+/* line 171, ../stylish/global/_forms.scss */
 .input_small .checkbox {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 168, ../stylish/global/_forms.scss */
+  /* line 171, ../stylish/global/_forms.scss */
   .input_small .checkbox {
     height: 32px;
   }
@@ -1186,12 +1187,12 @@ input.placeholderjs {
   height: 24px;
   line-height: 24px;
 }
-/* line 169, ../stylish/global/_forms.scss */
+/* line 172, ../stylish/global/_forms.scss */
 .input_small .radio {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 169, ../stylish/global/_forms.scss */
+  /* line 172, ../stylish/global/_forms.scss */
   .input_small .radio {
     height: 32px;
   }
@@ -1222,21 +1223,25 @@ input.placeholderjs {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup forms layout */
-/* line 178, ../stylish/global/_forms.scss */
+/* line 181, ../stylish/global/_forms.scss */
 form .field, .form .field {
   margin-bottom: 20px;
   position: relative;
   list-style: none;
 }
-/* line 180, ../stylish/global/_forms.scss */
+/* line 183, ../stylish/global/_forms.scss */
 form .field.big, .form .field.big {
   margin-bottom: 40px;
 }
-/* line 181, ../stylish/global/_forms.scss */
+/* line 184, ../stylish/global/_forms.scss */
 form .field.slim, .form .field.slim {
   margin-bottom: 10px;
 }
 /* line 185, ../stylish/global/_forms.scss */
+form .field.last, .form .field.last {
+  margin-bottom: 0;
+}
+/* line 189, ../stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
@@ -1244,30 +1249,26 @@ form .field label.required:after, .form .field[data-required="true"] label:after
   font-size: 14px;
   padding-left: 3px;
 }
-/* line 188, ../stylish/global/_forms.scss */
+/* line 192, ../stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
   font-size: 20px;
 }
-/* line 192, ../stylish/global/_forms.scss */
+/* line 196, ../stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 199, ../stylish/global/_forms.scss */
+/* line 203, ../stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
   margin: 0;
   display: table-cell;
 }
-/* line 202, ../stylish/global/_forms.scss */
-form .field.last, .form .field.last {
-  margin-bottom: 0;
-}
-/* line 208, ../stylish/global/_forms.scss */
+/* line 212, ../stylish/global/_forms.scss */
 form .validation-advice, form .error, .form .validation-advice, .form .error {
   color: #cd3a3a;
   font-size: 15px;
@@ -1275,7 +1276,7 @@ form .validation-advice, form .error, .form .validation-advice, .form .error {
   right: 15px;
   bottom: 15px;
 }
-/* line 210, ../stylish/global/_forms.scss */
+/* line 214, ../stylish/global/_forms.scss */
 form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before {
   padding-right: 10px;
   vertical-align: bottom;
