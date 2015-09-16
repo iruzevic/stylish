@@ -66,7 +66,7 @@
   @if $eot == true{
     $eot: eot;
     $eot_extmods: "?iefix";
-    $eot_format: "embedded-opentype";
+    $eot_format: "eot";
   }
 
   @if $svg == true{
@@ -130,7 +130,7 @@
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       @font-face{
         font-family: quote($name);
-        src: url(quote($path + "." + $svg)) format(quote($svg));
+        src: url(quote($path + "." + $svg + $svg_extmods)) format(quote($svg));
         font-style: $style;
         font-weight: $weight;
       }
