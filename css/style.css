@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.4.1
+Version: 3.5
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -146,7 +146,7 @@ table.word_break td {
 /* Floating Clear */
 /* line 23, ../stylish/global/_reset.scss */
 .clearfix:after, .grid_fluid:after, .grid_quarter:after, .grid_half:after, .grid_double:after, .grid_triple:after, .grid_clean:after, .modal .m_content_wrap .m_footer:after, .nav:after,
-.navi:after {
+.navi:after, .grid_correction .grid_fluid:after {
   content: "";
   display: table;
   clear: both;
@@ -168,10 +168,16 @@ table.word_break td {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* MIXINS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/*
+---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup Link color states */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup buttons colors */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Font Declaration mixin (not using compasses default mixin) */
 /* Font Declaration (if some font type is ont user just call variable and set to false) */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -370,60 +376,77 @@ table.word_break td {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup Global Typography */
 /* line 14, ../stylish/global/_typography.scss */
+html {
+  font-size: 18px;
+}
+
+/* line 15, ../stylish/global/_typography.scss */
 body {
   color: #272727;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 15, ../stylish/global/_typography.scss */
+/* line 16, ../stylish/global/_typography.scss */
 h1 {
   font-size: 38px;
+  font-size: 2.11111rem;
   line-height: 43px;
-}
-
-/* line 16, ../stylish/global/_typography.scss */
-h2 {
-  font-size: 35px;
-  line-height: 40px;
+  line-height: 2.38889rem;
 }
 
 /* line 17, ../stylish/global/_typography.scss */
-h3 {
-  font-size: 32px;
-  line-height: 37px;
+h2 {
+  font-size: 35px;
+  font-size: 1.94444rem;
+  line-height: 40px;
+  line-height: 2.22222rem;
 }
 
 /* line 18, ../stylish/global/_typography.scss */
-h4 {
-  font-size: 29px;
-  line-height: 34px;
+h3 {
+  font-size: 32px;
+  font-size: 1.77778rem;
+  line-height: 37px;
+  line-height: 2.05556rem;
 }
 
 /* line 19, ../stylish/global/_typography.scss */
-h5 {
-  font-size: 26px;
-  line-height: 31px;
+h4 {
+  font-size: 29px;
+  font-size: 1.61111rem;
+  line-height: 34px;
+  line-height: 1.88889rem;
 }
 
 /* line 20, ../stylish/global/_typography.scss */
-h6 {
-  font-size: 23px;
-  line-height: 28px;
+h5 {
+  font-size: 26px;
+  font-size: 1.44444rem;
+  line-height: 31px;
+  line-height: 1.72222rem;
 }
 
 /* line 21, ../stylish/global/_typography.scss */
-p,
-ul li {
-  font-size: 20px;
-  line-height: 25px;
+h6 {
+  font-size: 23px;
+  font-size: 1.27778rem;
+  line-height: 28px;
+  line-height: 1.55556rem;
 }
 
-/* line 23, ../stylish/global/_typography.scss */
+/* line 22, ../stylish/global/_typography.scss */
+p,
+ul li {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 23px;
+  line-height: 1.27778rem;
+}
+
+/* line 24, ../stylish/global/_typography.scss */
 a:not(.btn) {
   color: #cd3a3a;
   text-decoration: none;
@@ -437,102 +460,126 @@ a:not(.btn) {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 12, ../stylish/global/_mixins.scss */
+/* line 88, ../stylish/global/_mixins.scss */
 a:not(.btn):hover, a:not(.btn).active {
   color: #cd3a3a;
 }
-/* line 15, ../stylish/global/_mixins.scss */
+/* line 91, ../stylish/global/_mixins.scss */
 a:not(.btn).disabled {
   color: #cd3a3a;
 }
 /* line 28, ../stylish/global/_typography.scss */
+a:not(.btn).underline {
+  text-decoration: underline;
+}
+/* line 29, ../stylish/global/_typography.scss */
 a:not(.btn).disabled {
   cursor: default;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup content style for large texts */
-/* line 42, ../stylish/global/_typography.scss */
+/* line 43, ../stylish/global/_typography.scss */
 .content_style h1, .content_style h2, .content_style h3, .content_style h4, .content_style h5, .content_style h6 {
   margin-bottom: 5px;
 }
-/* line 43, ../stylish/global/_typography.scss */
+/* line 44, ../stylish/global/_typography.scss */
 .content_style h1 {
   font-size: 38px;
-  line-height: 43px;
-}
-/* line 44, ../stylish/global/_typography.scss */
-.content_style h2 {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 2.11111rem;
+  line-height: 41px;
+  line-height: 2.27778rem;
 }
 /* line 45, ../stylish/global/_typography.scss */
-.content_style h3 {
-  font-size: 32px;
-  line-height: 37px;
+.content_style h2 {
+  font-size: 35px;
+  font-size: 1.94444rem;
+  line-height: 38px;
+  line-height: 2.11111rem;
 }
 /* line 46, ../stylish/global/_typography.scss */
-.content_style h4 {
-  font-size: 29px;
-  line-height: 34px;
+.content_style h3 {
+  font-size: 32px;
+  font-size: 1.77778rem;
+  line-height: 35px;
+  line-height: 1.94444rem;
 }
 /* line 47, ../stylish/global/_typography.scss */
-.content_style h5 {
-  font-size: 26px;
-  line-height: 31px;
+.content_style h4 {
+  font-size: 29px;
+  font-size: 1.61111rem;
+  line-height: 32px;
+  line-height: 1.77778rem;
 }
 /* line 48, ../stylish/global/_typography.scss */
-.content_style h6 {
-  font-size: 23px;
-  line-height: 28px;
+.content_style h5 {
+  font-size: 26px;
+  font-size: 1.44444rem;
+  line-height: 29px;
+  line-height: 1.61111rem;
 }
 /* line 49, ../stylish/global/_typography.scss */
+.content_style h6 {
+  font-size: 23px;
+  font-size: 1.27778rem;
+  line-height: 26px;
+  line-height: 1.44444rem;
+}
+/* line 50, ../stylish/global/_typography.scss */
 .content_style p {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.16667rem;
   margin-bottom: 20px;
 }
-/* line 52, ../stylish/global/_typography.scss */
+/* line 53, ../stylish/global/_typography.scss */
 .content_style ul, .content_style ol {
   overflow: hidden;
   margin-left: 0;
   margin-bottom: 20px;
 }
-/* line 54, ../stylish/global/_typography.scss */
+/* line 55, ../stylish/global/_typography.scss */
 .content_style ul li, .content_style ol li {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.16667rem;
   margin-bottom: 5px;
 }
-/* line 56, ../stylish/global/_typography.scss */
+/* line 57, ../stylish/global/_typography.scss */
 .content_style ul li {
   margin-left: 30px;
 }
-/* line 57, ../stylish/global/_typography.scss */
+/* line 58, ../stylish/global/_typography.scss */
 .content_style ol li {
   margin-left: 40px;
-  font-size: 20px;
-  line-height: 25px;
-}
-/* line 60, ../stylish/global/_typography.scss */
-.content_style address {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.16667rem;
 }
 /* line 61, ../stylish/global/_typography.scss */
+.content_style address {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.16667rem;
+}
+/* line 62, ../stylish/global/_typography.scss */
 .content_style .italic {
   font-style: italic;
 }
-/* line 62, ../stylish/global/_typography.scss */
+/* line 63, ../stylish/global/_typography.scss */
 .content_style strong,
 .content_style .bold {
   font-weight: bold;
 }
-/* line 64, ../stylish/global/_typography.scss */
+/* line 65, ../stylish/global/_typography.scss */
 .content_style .underline {
   text-decoration: underline;
 }
-/* line 67, ../stylish/global/_typography.scss */
+/* line 68, ../stylish/global/_typography.scss */
 .content_style img,
 .content_style iframe {
   width: auto;
@@ -540,27 +587,27 @@ a:not(.btn).disabled {
   max-width: 100%;
   margin-bottom: 20px;
 }
-/* line 71, ../stylish/global/_typography.scss */
+/* line 72, ../stylish/global/_typography.scss */
 .content_style img.alignleft,
 .content_style iframe.alignleft {
   clear: left;
   float: left;
   margin-right: 20px;
 }
-/* line 72, ../stylish/global/_typography.scss */
+/* line 73, ../stylish/global/_typography.scss */
 .content_style img.alignright,
 .content_style iframe.alignright {
   clear: right;
   float: right;
   margin-left: 20px;
 }
-/* line 75, ../stylish/global/_typography.scss */
+/* line 76, ../stylish/global/_typography.scss */
 .content_style img.full,
 .content_style iframe.full {
   width: 100%;
   height: auto;
 }
-/* line 78, ../stylish/global/_typography.scss */
+/* line 79, ../stylish/global/_typography.scss */
 .content_style img.rounded,
 .content_style iframe.rounded {
   -moz-border-radius: 50%;
@@ -570,126 +617,144 @@ a:not(.btn).disabled {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Text colors */
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_mine_shaft {
   color: #272727;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_havelock_blue {
   color: #3a89cd;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_flush_mahogany {
   color: #cd3a3a;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_emerald {
   color: #3acd60;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_earls_green {
   color: #cdc43a;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_amethyst {
   color: #bd3acd;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_raw_sienna {
   color: #cd833a;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_dove_gray {
   color: #666666;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_dove_gray_light {
   color: #999999;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_silver {
   color: #c5c5c5;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_mercury {
   color: #e5e5e5;
 }
 
-/* line 214, ../stylish/global/_mixins.scss */
+/* line 291, ../stylish/global/_mixins.scss */
 .txt_white {
   color: #ffffff;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_mine_shaft {
   background-color: #272727;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_havelock_blue {
   background-color: #3a89cd;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_flush_mahogany {
   background-color: #cd3a3a;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_emerald {
   background-color: #3acd60;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_earls_green {
   background-color: #cdc43a;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_amethyst {
   background-color: #bd3acd;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_raw_sienna {
   background-color: #cd833a;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_dove_gray {
   background-color: #666666;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_dove_gray_light {
   background-color: #999999;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_silver {
   background-color: #c5c5c5;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_mercury {
   background-color: #e5e5e5;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 309, ../stylish/global/_mixins.scss */
 .bg_white {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 989px) {
+  /* line 98, ../stylish/global/_typography.scss */
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 103, ../stylish/global/_typography.scss */
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 319px) {
+  /* line 108, ../stylish/global/_typography.scss */
+  html {
+    font-size: 14px;
+  }
+}
 /* FORMS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 5, ../stylish/global/_forms.scss */
@@ -719,10 +784,13 @@ select {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 42px;
-  font-size: 20px;
-  padding: 7px 10px;
+  font-size: 18px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-/* line 20, ../stylish/global/_forms.scss */
+/* line 22, ../stylish/global/_forms.scss */
 input[type=text].auto_width,
 input[type=tel].auto_width,
 input[type=password].auto_width,
@@ -735,7 +803,7 @@ textarea.auto_width,
 select.auto_width {
   width: auto;
 }
-/* line 21, ../stylish/global/_forms.scss */
+/* line 23, ../stylish/global/_forms.scss */
 input[type=text]:focus,
 input[type=tel]:focus,
 input[type=password]:focus,
@@ -750,7 +818,7 @@ select:focus {
   -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
   box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
 }
-/* line 22, ../stylish/global/_forms.scss */
+/* line 24, ../stylish/global/_forms.scss */
 input[type=text]:disabled,
 input[type=tel]:disabled,
 input[type=password]:disabled,
@@ -765,45 +833,45 @@ select:disabled {
   color: #666666;
 }
 
-/* line 24, ../stylish/global/_forms.scss */
+/* line 26, ../stylish/global/_forms.scss */
 textarea {
   height: 150px;
 }
 
 /* Stylize Placeholder */
-/* line 153, ../stylish/global/_mixins.scss */
+/* line 230, ../stylish/global/_mixins.scss */
 input::-webkit-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 154, ../stylish/global/_mixins.scss */
+/* line 231, ../stylish/global/_mixins.scss */
 input:-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 155, ../stylish/global/_mixins.scss */
+/* line 232, ../stylish/global/_mixins.scss */
 input::-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 156, ../stylish/global/_mixins.scss */
+/* line 233, ../stylish/global/_mixins.scss */
 input:-ms-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 157, ../stylish/global/_mixins.scss */
+/* line 234, ../stylish/global/_mixins.scss */
 input.placeholder {
   color: #e5e5e5;
 }
 
-/* line 158, ../stylish/global/_mixins.scss */
+/* line 235, ../stylish/global/_mixins.scss */
 input.placeholderjs {
   color: #e5e5e5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup custom select input */
-/* line 37, ../stylish/global/_forms.scss */
+/* line 39, ../stylish/global/_forms.scss */
 .select {
   height: 42px;
   position: relative;
@@ -816,22 +884,22 @@ input.placeholderjs {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 318, ../stylish/global/_mixins.scss */
+/* line 395, ../stylish/global/_mixins.scss */
 .select:after {
   font-size: 18px;
+  font-size: 1rem;
   margin-top: -9px;
 }
-/* line 41, ../stylish/global/_forms.scss */
+/* line 43, ../stylish/global/_forms.scss */
 .select:after {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 50%;
   z-index: 5;
-  width: 40px;
   text-align: center;
   color: #272727;
 }
-/* line 42, ../stylish/global/_forms.scss */
+/* line 44, ../stylish/global/_forms.scss */
 .select select {
   position: absolute;
   cursor: pointer;
@@ -846,24 +914,24 @@ input.placeholderjs {
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 44, ../stylish/global/_forms.scss */
+/* line 46, ../stylish/global/_forms.scss */
 .select select:focus {
   outline: none;
 }
-/* line 47, ../stylish/global/_forms.scss */
+/* line 49, ../stylish/global/_forms.scss */
 .select.disabled:after {
   color: #c5c5c5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Checkbox and Radio input Global setup */
-/* line 55, ../stylish/global/_forms.scss */
+/* line 57, ../stylish/global/_forms.scss */
 .checkbox, .radio {
   position: relative;
   display: table;
   table-layout: fixed;
 }
-/* line 58, ../stylish/global/_forms.scss */
+/* line 60, ../stylish/global/_forms.scss */
 .checkbox label, .radio label {
   cursor: pointer;
   -moz-user-select: -moz-none;
@@ -875,7 +943,11 @@ input.placeholderjs {
   vertical-align: middle;
   height: 100%;
 }
-/* line 61, ../stylish/global/_forms.scss */
+/* line 62, ../stylish/global/_forms.scss */
+.checkbox label a, .radio label a {
+  text-decoration: underline;
+}
+/* line 66, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon {
@@ -885,7 +957,7 @@ input.placeholderjs {
   left: 0;
   top: 50%;
 }
-/* line 65, ../stylish/global/_forms.scss */
+/* line 70, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon:before,
 .checkbox .radio_icon:before, .radio .checkbox_icon:before,
 .radio .radio_icon:before {
@@ -893,7 +965,7 @@ input.placeholderjs {
   left: 50%;
   top: 50%;
 }
-/* line 69, ../stylish/global/_forms.scss */
+/* line 74, ../stylish/global/_forms.scss */
 .checkbox input[type=checkbox],
 .checkbox input[type=radio], .radio input[type=checkbox],
 .radio input[type=radio] {
@@ -908,95 +980,94 @@ input.placeholderjs {
 }
 
 /* Setup custom checkbox input */
-/* line 74, ../stylish/global/_forms.scss */
+/* line 79, ../stylish/global/_forms.scss */
 .checkbox {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 74, ../stylish/global/_forms.scss */
+  /* line 79, ../stylish/global/_forms.scss */
   .checkbox {
     height: 42px;
   }
 }
-/* line 273, ../stylish/global/_mixins.scss */
+/* line 350, ../stylish/global/_mixins.scss */
 .checkbox label {
   padding-left: 57px;
 }
-/* line 275, ../stylish/global/_mixins.scss */
+/* line 352, ../stylish/global/_mixins.scss */
 .checkbox label.empty {
   padding-left: 0;
   width: 42px;
 }
-/* line 279, ../stylish/global/_mixins.scss */
+/* line 356, ../stylish/global/_mixins.scss */
 .checkbox .checkbox_icon {
   width: 42px;
   height: 42px;
   margin-top: -21px;
   line-height: 42px;
 }
-/* line 281, ../stylish/global/_mixins.scss */
+/* line 358, ../stylish/global/_mixins.scss */
 .checkbox .checkbox_icon:before {
   font-size: 34px;
   margin: -17px 0 0 -17px;
   width: 34px;
   height: 34px;
-  line-height: 34px;
 }
-/* line 80, ../stylish/global/_forms.scss */
+/* line 85, ../stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
-/* line 84, ../stylish/global/_forms.scss */
+/* line 89, ../stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
   color: #cd3a3a;
 }
-/* line 91, ../stylish/global/_forms.scss */
+/* line 96, ../stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
   background-color: #e5e5e5;
   color: #e5e5e5;
 }
-/* line 93, ../stylish/global/_forms.scss */
+/* line 98, ../stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
   color: #cd3a3a;
 }
 
 /* Setup custom radio input */
-/* line 99, ../stylish/global/_forms.scss */
+/* line 104, ../stylish/global/_forms.scss */
 .radio {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 99, ../stylish/global/_forms.scss */
+  /* line 104, ../stylish/global/_forms.scss */
   .radio {
     height: 42px;
   }
 }
-/* line 298, ../stylish/global/_mixins.scss */
+/* line 375, ../stylish/global/_mixins.scss */
 .radio label {
   padding-left: 57px;
 }
-/* line 300, ../stylish/global/_mixins.scss */
+/* line 377, ../stylish/global/_mixins.scss */
 .radio label.empty {
   padding-left: 0;
   width: 42px;
 }
-/* line 304, ../stylish/global/_mixins.scss */
+/* line 381, ../stylish/global/_mixins.scss */
 .radio .radio_icon {
   width: 42px;
   height: 42px;
   margin-top: -21px;
   line-height: 42px;
 }
-/* line 306, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .radio .radio_icon:before {
   content: "";
   margin: -17px 0 0 -17px;
   width: 34px;
   height: 34px;
 }
-/* line 105, ../stylish/global/_forms.scss */
+/* line 110, ../stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
   border-color: #e5e5e5;
@@ -1004,28 +1075,28 @@ input.placeholderjs {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 107, ../stylish/global/_forms.scss */
+/* line 112, ../stylish/global/_forms.scss */
 .radio .radio_icon:before {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 112, ../stylish/global/_forms.scss */
+/* line 117, ../stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
   background-color: #cd3a3a;
 }
-/* line 119, ../stylish/global/_forms.scss */
+/* line 124, ../stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
   background-color: #e5e5e5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Upload custom input */
-/* line 128, ../stylish/global/_forms.scss */
+/* line 133, ../stylish/global/_forms.scss */
 .upload {
   position: relative;
 }
-/* line 130, ../stylish/global/_forms.scss */
+/* line 135, ../stylish/global/_forms.scss */
 .upload input[type=file] {
   font-size: 29px;
   width: 100%;
@@ -1037,7 +1108,7 @@ input.placeholderjs {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 139, ../stylish/global/_forms.scss */
+/* line 144, ../stylish/global/_forms.scss */
 .input_big input[type=text],
 .input_big input[type=tel],
 .input_big input[type=password],
@@ -1049,79 +1120,82 @@ input.placeholderjs {
 .input_big textarea,
 .input_big select {
   height: 50px;
-  font-size: 20px;
-  padding: 9px 10px;
+  font-size: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-/* line 151, ../stylish/global/_forms.scss */
+/* line 156, ../stylish/global/_forms.scss */
 .input_big .select {
   height: 50px;
 }
-/* line 318, ../stylish/global/_mixins.scss */
+/* line 395, ../stylish/global/_mixins.scss */
 .input_big .select:after {
   font-size: 22px;
+  font-size: 1.22222rem;
   margin-top: -11px;
 }
-/* line 152, ../stylish/global/_forms.scss */
+/* line 157, ../stylish/global/_forms.scss */
 .input_big .checkbox {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 152, ../stylish/global/_forms.scss */
+  /* line 157, ../stylish/global/_forms.scss */
   .input_big .checkbox {
     height: 50px;
   }
 }
-/* line 273, ../stylish/global/_mixins.scss */
+/* line 350, ../stylish/global/_mixins.scss */
 .input_big .checkbox label {
   padding-left: 65px;
 }
-/* line 275, ../stylish/global/_mixins.scss */
+/* line 352, ../stylish/global/_mixins.scss */
 .input_big .checkbox label.empty {
   padding-left: 0;
   width: 50px;
 }
-/* line 279, ../stylish/global/_mixins.scss */
+/* line 356, ../stylish/global/_mixins.scss */
 .input_big .checkbox .checkbox_icon {
   width: 50px;
   height: 50px;
   margin-top: -25px;
   line-height: 50px;
 }
-/* line 281, ../stylish/global/_mixins.scss */
+/* line 358, ../stylish/global/_mixins.scss */
 .input_big .checkbox .checkbox_icon:before {
   font-size: 42px;
   margin: -21px 0 0 -21px;
   width: 42px;
   height: 42px;
-  line-height: 42px;
 }
-/* line 153, ../stylish/global/_forms.scss */
+/* line 158, ../stylish/global/_forms.scss */
 .input_big .radio {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 153, ../stylish/global/_forms.scss */
+  /* line 158, ../stylish/global/_forms.scss */
   .input_big .radio {
     height: 50px;
   }
 }
-/* line 298, ../stylish/global/_mixins.scss */
+/* line 375, ../stylish/global/_mixins.scss */
 .input_big .radio label {
   padding-left: 65px;
 }
-/* line 300, ../stylish/global/_mixins.scss */
+/* line 377, ../stylish/global/_mixins.scss */
 .input_big .radio label.empty {
   padding-left: 0;
   width: 50px;
 }
-/* line 304, ../stylish/global/_mixins.scss */
+/* line 381, ../stylish/global/_mixins.scss */
 .input_big .radio .radio_icon {
   width: 50px;
   height: 50px;
   margin-top: -25px;
   line-height: 50px;
 }
-/* line 306, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .input_big .radio .radio_icon:before {
   content: "";
   margin: -21px 0 0 -21px;
@@ -1129,7 +1203,7 @@ input.placeholderjs {
   height: 42px;
 }
 
-/* line 158, ../stylish/global/_forms.scss */
+/* line 163, ../stylish/global/_forms.scss */
 .input_small input[type=text],
 .input_small input[type=tel],
 .input_small input[type=password],
@@ -1141,79 +1215,82 @@ input.placeholderjs {
 .input_small textarea,
 .input_small select {
   height: 32px;
-  font-size: 20px;
-  padding: 5px 10px;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-/* line 170, ../stylish/global/_forms.scss */
+/* line 175, ../stylish/global/_forms.scss */
 .input_small .select {
   height: 32px;
 }
-/* line 318, ../stylish/global/_mixins.scss */
+/* line 395, ../stylish/global/_mixins.scss */
 .input_small .select:after {
   font-size: 15px;
+  font-size: 0.83333rem;
   margin-top: -7.5px;
 }
-/* line 171, ../stylish/global/_forms.scss */
+/* line 176, ../stylish/global/_forms.scss */
 .input_small .checkbox {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 171, ../stylish/global/_forms.scss */
+  /* line 176, ../stylish/global/_forms.scss */
   .input_small .checkbox {
     height: 32px;
   }
 }
-/* line 273, ../stylish/global/_mixins.scss */
+/* line 350, ../stylish/global/_mixins.scss */
 .input_small .checkbox label {
   padding-left: 47px;
 }
-/* line 275, ../stylish/global/_mixins.scss */
+/* line 352, ../stylish/global/_mixins.scss */
 .input_small .checkbox label.empty {
   padding-left: 0;
   width: 32px;
 }
-/* line 279, ../stylish/global/_mixins.scss */
+/* line 356, ../stylish/global/_mixins.scss */
 .input_small .checkbox .checkbox_icon {
   width: 32px;
   height: 32px;
   margin-top: -16px;
   line-height: 32px;
 }
-/* line 281, ../stylish/global/_mixins.scss */
+/* line 358, ../stylish/global/_mixins.scss */
 .input_small .checkbox .checkbox_icon:before {
   font-size: 24px;
   margin: -12px 0 0 -12px;
   width: 24px;
   height: 24px;
-  line-height: 24px;
 }
-/* line 172, ../stylish/global/_forms.scss */
+/* line 177, ../stylish/global/_forms.scss */
 .input_small .radio {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 172, ../stylish/global/_forms.scss */
+  /* line 177, ../stylish/global/_forms.scss */
   .input_small .radio {
     height: 32px;
   }
 }
-/* line 298, ../stylish/global/_mixins.scss */
+/* line 375, ../stylish/global/_mixins.scss */
 .input_small .radio label {
   padding-left: 47px;
 }
-/* line 300, ../stylish/global/_mixins.scss */
+/* line 377, ../stylish/global/_mixins.scss */
 .input_small .radio label.empty {
   padding-left: 0;
   width: 32px;
 }
-/* line 304, ../stylish/global/_mixins.scss */
+/* line 381, ../stylish/global/_mixins.scss */
 .input_small .radio .radio_icon {
   width: 32px;
   height: 32px;
   margin-top: -16px;
   line-height: 32px;
 }
-/* line 306, ../stylish/global/_mixins.scss */
+/* line 383, ../stylish/global/_mixins.scss */
 .input_small .radio .radio_icon:before {
   content: "";
   margin: -12px 0 0 -12px;
@@ -1223,60 +1300,67 @@ input.placeholderjs {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup forms layout */
-/* line 181, ../stylish/global/_forms.scss */
+/* line 187, ../stylish/global/_forms.scss */
 form .field, .form .field {
   margin-bottom: 20px;
   position: relative;
   list-style: none;
 }
-/* line 183, ../stylish/global/_forms.scss */
+/* line 189, ../stylish/global/_forms.scss */
 form .field.big, .form .field.big {
   margin-bottom: 40px;
 }
-/* line 184, ../stylish/global/_forms.scss */
-form .field.slim, .form .field.slim {
+/* line 190, ../stylish/global/_forms.scss */
+form .field.slim, form .field.narrow, .form .field.slim, .form .field.narrow {
   margin-bottom: 10px;
 }
-/* line 185, ../stylish/global/_forms.scss */
+/* line 192, ../stylish/global/_forms.scss */
 form .field.last, .form .field.last {
   margin-bottom: 0;
 }
-/* line 189, ../stylish/global/_forms.scss */
+/* line 196, ../stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
   content: "*";
   font-size: 14px;
+  font-size: 0.77778rem;
   padding-left: 3px;
 }
-/* line 192, ../stylish/global/_forms.scss */
+/* line 199, ../stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 18px;
+  font-size: 1rem;
 }
-/* line 196, ../stylish/global/_forms.scss */
+/* line 203, ../stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 203, ../stylish/global/_forms.scss */
+/* line 210, ../stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
   margin: 0;
   display: table-cell;
+  line-height: 23px;
+  line-height: 1.27778rem;
 }
-/* line 212, ../stylish/global/_forms.scss */
+/* line 216, ../stylish/global/_forms.scss */
+form .label_correction, .form .label_correction {
+  padding-top: 5px;
+}
+/* line 219, ../stylish/global/_forms.scss */
 form .validation-advice, form .error, .form .validation-advice, .form .error {
   color: #cd3a3a;
-  font-size: 15px;
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
+  font-size: 14px;
+  font-size: 0.77778rem;
+  margin-top: 10px;
 }
-/* line 214, ../stylish/global/_forms.scss */
+/* line 221, ../stylish/global/_forms.scss */
 form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before {
   padding-right: 10px;
   vertical-align: bottom;
@@ -1320,13 +1404,18 @@ input[type=reset] {
   -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 16px;
+  font-size: 0.88889rem;
   line-height: 20px;
+  line-height: 1.11111rem;
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
   /* Buttons Colors */
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn:hover, .btn.active,
 button:hover,
 button.active,
@@ -1350,9 +1439,14 @@ input[type=button].btn_big,
 input[type=button][data-size="big"],
 input[type=reset].btn_big,
 input[type=reset][data-size="big"] {
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 20px;
+  font-size: 1.11111rem;
   line-height: 24px;
+  line-height: 1.33333rem;
 }
 /* line 24, ../stylish/global/_buttons.scss */
 .btn.btn_small, .btn[data-size="small"],
@@ -1364,9 +1458,14 @@ input[type=button].btn_small,
 input[type=button][data-size="small"],
 input[type=reset].btn_small,
 input[type=reset][data-size="small"] {
-  padding: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 13px;
+  font-size: 0.72222rem;
   line-height: 17px;
+  line-height: 0.94444rem;
 }
 /* line 27, ../stylish/global/_buttons.scss */
 .btn.no_radius,
@@ -1401,6 +1500,7 @@ input[type=reset]:disabled {
   background-color: #c5c5c5 !important;
   border-color: #c5c5c5 !important;
   color: #ffffff !important;
+  cursor: default !important;
 }
 /* line 36, ../stylish/global/_buttons.scss */
 .btn.auto_width,
@@ -1446,6 +1546,7 @@ input[type=reset].btn_icon_left .icon,
 input[type=reset].btn_icon_right i,
 input[type=reset].btn_icon_right .icon {
   font-size: 18px;
+  font-size: 1rem;
   vertical-align: middle;
 }
 /* line 49, ../stylish/global/_buttons.scss */
@@ -1458,7 +1559,7 @@ input[type=button].btn_icon_left i,
 input[type=button].btn_icon_left .icon,
 input[type=reset].btn_icon_left i,
 input[type=reset].btn_icon_left .icon {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 /* line 53, ../stylish/global/_buttons.scss */
 .btn.btn_icon_right i, .btn.btn_icon_right .icon,
@@ -1470,9 +1571,9 @@ input[type=button].btn_icon_right i,
 input[type=button].btn_icon_right .icon,
 input[type=reset].btn_icon_right i,
 input[type=reset].btn_icon_right .icon {
-  margin-left: 15px;
+  margin-left: 10px;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft,
 button.btn_mine_shaft,
 input[type=submit].btn_mine_shaft,
@@ -1482,7 +1583,7 @@ input[type=reset].btn_mine_shaft {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft:hover, .btn.btn_mine_shaft.active,
 button.btn_mine_shaft:hover,
 button.btn_mine_shaft.active,
@@ -1496,7 +1597,7 @@ input[type=reset].btn_mine_shaft.active {
   color: #ffffff;
   border-color: #131313;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border,
 button.btn_mine_shaft_border,
 input[type=submit].btn_mine_shaft_border,
@@ -1506,7 +1607,7 @@ input[type=reset].btn_mine_shaft_border {
   color: #272727;
   border-color: #272727;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border:hover, .btn.btn_mine_shaft_border.active,
 button.btn_mine_shaft_border:hover,
 button.btn_mine_shaft_border.active,
@@ -1520,7 +1621,7 @@ input[type=reset].btn_mine_shaft_border.active {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue,
 button.btn_havelock_blue,
 input[type=submit].btn_havelock_blue,
@@ -1530,7 +1631,7 @@ input[type=reset].btn_havelock_blue {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue:hover, .btn.btn_havelock_blue.active,
 button.btn_havelock_blue:hover,
 button.btn_havelock_blue.active,
@@ -1544,7 +1645,7 @@ input[type=reset].btn_havelock_blue.active {
   color: #ffffff;
   border-color: #2d74b1;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border,
 button.btn_havelock_blue_border,
 input[type=submit].btn_havelock_blue_border,
@@ -1554,7 +1655,7 @@ input[type=reset].btn_havelock_blue_border {
   color: #3a89cd;
   border-color: #3a89cd;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border:hover, .btn.btn_havelock_blue_border.active,
 button.btn_havelock_blue_border:hover,
 button.btn_havelock_blue_border.active,
@@ -1568,7 +1669,7 @@ input[type=reset].btn_havelock_blue_border.active {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany,
 button.btn_flush_mahogany,
 input[type=submit].btn_flush_mahogany,
@@ -1578,7 +1679,7 @@ input[type=reset].btn_flush_mahogany {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany:hover, .btn.btn_flush_mahogany.active,
 button.btn_flush_mahogany:hover,
 button.btn_flush_mahogany.active,
@@ -1592,7 +1693,7 @@ input[type=reset].btn_flush_mahogany.active {
   color: #ffffff;
   border-color: #b12d2d;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border,
 button.btn_flush_mahogany_border,
 input[type=submit].btn_flush_mahogany_border,
@@ -1602,7 +1703,7 @@ input[type=reset].btn_flush_mahogany_border {
   color: #cd3a3a;
   border-color: #cd3a3a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border:hover, .btn.btn_flush_mahogany_border.active,
 button.btn_flush_mahogany_border:hover,
 button.btn_flush_mahogany_border.active,
@@ -1616,7 +1717,7 @@ input[type=reset].btn_flush_mahogany_border.active {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_emerald,
 button.btn_emerald,
 input[type=submit].btn_emerald,
@@ -1626,7 +1727,7 @@ input[type=reset].btn_emerald {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_emerald:hover, .btn.btn_emerald.active,
 button.btn_emerald:hover,
 button.btn_emerald.active,
@@ -1640,7 +1741,7 @@ input[type=reset].btn_emerald.active {
   color: #ffffff;
   border-color: #2db14f;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_emerald_border,
 button.btn_emerald_border,
 input[type=submit].btn_emerald_border,
@@ -1650,7 +1751,7 @@ input[type=reset].btn_emerald_border {
   color: #3acd60;
   border-color: #3acd60;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_emerald_border:hover, .btn.btn_emerald_border.active,
 button.btn_emerald_border:hover,
 button.btn_emerald_border.active,
@@ -1664,7 +1765,7 @@ input[type=reset].btn_emerald_border.active {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green,
 button.btn_earls_green,
 input[type=submit].btn_earls_green,
@@ -1674,7 +1775,7 @@ input[type=reset].btn_earls_green {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green:hover, .btn.btn_earls_green.active,
 button.btn_earls_green:hover,
 button.btn_earls_green.active,
@@ -1688,7 +1789,7 @@ input[type=reset].btn_earls_green.active {
   color: #ffffff;
   border-color: #b1a92d;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green_border,
 button.btn_earls_green_border,
 input[type=submit].btn_earls_green_border,
@@ -1698,7 +1799,7 @@ input[type=reset].btn_earls_green_border {
   color: #cdc43a;
   border-color: #cdc43a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_earls_green_border:hover, .btn.btn_earls_green_border.active,
 button.btn_earls_green_border:hover,
 button.btn_earls_green_border.active,
@@ -1712,7 +1813,7 @@ input[type=reset].btn_earls_green_border.active {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst,
 button.btn_amethyst,
 input[type=submit].btn_amethyst,
@@ -1722,7 +1823,7 @@ input[type=reset].btn_amethyst {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst:hover, .btn.btn_amethyst.active,
 button.btn_amethyst:hover,
 button.btn_amethyst.active,
@@ -1736,7 +1837,7 @@ input[type=reset].btn_amethyst.active {
   color: #ffffff;
   border-color: #a32db1;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst_border,
 button.btn_amethyst_border,
 input[type=submit].btn_amethyst_border,
@@ -1746,7 +1847,7 @@ input[type=reset].btn_amethyst_border {
   color: #bd3acd;
   border-color: #bd3acd;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_amethyst_border:hover, .btn.btn_amethyst_border.active,
 button.btn_amethyst_border:hover,
 button.btn_amethyst_border.active,
@@ -1760,7 +1861,7 @@ input[type=reset].btn_amethyst_border.active {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna,
 button.btn_raw_sienna,
 input[type=submit].btn_raw_sienna,
@@ -1770,7 +1871,7 @@ input[type=reset].btn_raw_sienna {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna:hover, .btn.btn_raw_sienna.active,
 button.btn_raw_sienna:hover,
 button.btn_raw_sienna.active,
@@ -1784,7 +1885,7 @@ input[type=reset].btn_raw_sienna.active {
   color: #ffffff;
   border-color: #b16f2d;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border,
 button.btn_raw_sienna_border,
 input[type=submit].btn_raw_sienna_border,
@@ -1794,7 +1895,7 @@ input[type=reset].btn_raw_sienna_border {
   color: #cd833a;
   border-color: #cd833a;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border:hover, .btn.btn_raw_sienna_border.active,
 button.btn_raw_sienna_border:hover,
 button.btn_raw_sienna_border.active,
@@ -1808,7 +1909,7 @@ input[type=reset].btn_raw_sienna_border.active {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray,
 button.btn_dove_gray,
 input[type=submit].btn_dove_gray,
@@ -1818,7 +1919,7 @@ input[type=reset].btn_dove_gray {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray:hover, .btn.btn_dove_gray.active,
 button.btn_dove_gray:hover,
 button.btn_dove_gray.active,
@@ -1832,7 +1933,7 @@ input[type=reset].btn_dove_gray.active {
   color: #ffffff;
   border-color: #525252;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border,
 button.btn_dove_gray_border,
 input[type=submit].btn_dove_gray_border,
@@ -1842,7 +1943,7 @@ input[type=reset].btn_dove_gray_border {
   color: #666666;
   border-color: #666666;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border:hover, .btn.btn_dove_gray_border.active,
 button.btn_dove_gray_border:hover,
 button.btn_dove_gray_border.active,
@@ -1856,7 +1957,7 @@ input[type=reset].btn_dove_gray_border.active {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light,
 button.btn_dove_gray_light,
 input[type=submit].btn_dove_gray_light,
@@ -1866,7 +1967,7 @@ input[type=reset].btn_dove_gray_light {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light:hover, .btn.btn_dove_gray_light.active,
 button.btn_dove_gray_light:hover,
 button.btn_dove_gray_light.active,
@@ -1880,7 +1981,7 @@ input[type=reset].btn_dove_gray_light.active {
   color: #ffffff;
   border-color: #858585;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border,
 button.btn_dove_gray_light_border,
 input[type=submit].btn_dove_gray_light_border,
@@ -1890,7 +1991,7 @@ input[type=reset].btn_dove_gray_light_border {
   color: #999999;
   border-color: #999999;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border:hover, .btn.btn_dove_gray_light_border.active,
 button.btn_dove_gray_light_border:hover,
 button.btn_dove_gray_light_border.active,
@@ -1904,7 +2005,7 @@ input[type=reset].btn_dove_gray_light_border.active {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_silver,
 button.btn_silver,
 input[type=submit].btn_silver,
@@ -1914,7 +2015,7 @@ input[type=reset].btn_silver {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_silver:hover, .btn.btn_silver.active,
 button.btn_silver:hover,
 button.btn_silver.active,
@@ -1928,7 +2029,7 @@ input[type=reset].btn_silver.active {
   color: #272727;
   border-color: #b1b1b1;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_silver_border,
 button.btn_silver_border,
 input[type=submit].btn_silver_border,
@@ -1938,7 +2039,7 @@ input[type=reset].btn_silver_border {
   color: #c5c5c5;
   border-color: #c5c5c5;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_silver_border:hover, .btn.btn_silver_border.active,
 button.btn_silver_border:hover,
 button.btn_silver_border.active,
@@ -1952,7 +2053,7 @@ input[type=reset].btn_silver_border.active {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_mercury,
 button.btn_mercury,
 input[type=submit].btn_mercury,
@@ -1962,7 +2063,7 @@ input[type=reset].btn_mercury {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_mercury:hover, .btn.btn_mercury.active,
 button.btn_mercury:hover,
 button.btn_mercury.active,
@@ -1976,7 +2077,7 @@ input[type=reset].btn_mercury.active {
   color: #272727;
   border-color: #d1d1d1;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_mercury_border,
 button.btn_mercury_border,
 input[type=submit].btn_mercury_border,
@@ -1986,7 +2087,7 @@ input[type=reset].btn_mercury_border {
   color: #e5e5e5;
   border-color: #e5e5e5;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_mercury_border:hover, .btn.btn_mercury_border.active,
 button.btn_mercury_border:hover,
 button.btn_mercury_border.active,
@@ -2000,7 +2101,7 @@ input[type=reset].btn_mercury_border.active {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 250, ../stylish/global/_mixins.scss */
+/* line 327, ../stylish/global/_mixins.scss */
 .btn.btn_white,
 button.btn_white,
 input[type=submit].btn_white,
@@ -2010,7 +2111,7 @@ input[type=reset].btn_white {
   color: #272727;
   border-color: #ffffff;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_white:hover, .btn.btn_white.active,
 button.btn_white:hover,
 button.btn_white.active,
@@ -2024,7 +2125,7 @@ input[type=reset].btn_white.active {
   color: #272727;
   border-color: #ebebeb;
 }
-/* line 254, ../stylish/global/_mixins.scss */
+/* line 331, ../stylish/global/_mixins.scss */
 .btn.btn_white_border,
 button.btn_white_border,
 input[type=submit].btn_white_border,
@@ -2034,7 +2135,7 @@ input[type=reset].btn_white_border {
   color: #ffffff;
   border-color: #ffffff;
 }
-/* line 32, ../stylish/global/_mixins.scss */
+/* line 108, ../stylish/global/_mixins.scss */
 .btn.btn_white_border:hover, .btn.btn_white_border.active,
 button.btn_white_border:hover,
 button.btn_white_border.active,
@@ -2073,25 +2174,25 @@ input[type=reset].btn_white_border.active {
   max-width: inherit;
 }
 
-/* line 181, ../stylish/global/_mixins.scss */
+/* line 258, ../stylish/global/_mixins.scss */
 .container_quarter {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 181, ../stylish/global/_mixins.scss */
+/* line 258, ../stylish/global/_mixins.scss */
 .container_half {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 181, ../stylish/global/_mixins.scss */
+/* line 258, ../stylish/global/_mixins.scss */
 .container_double {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* line 181, ../stylish/global/_mixins.scss */
+/* line 258, ../stylish/global/_mixins.scss */
 .container_triple {
   padding-left: 60px;
   padding-right: 60px;
@@ -2417,7 +2518,7 @@ input[type=reset].btn_white_border.active {
   margin-left: 0;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 989px) {
   /* line 118, ../stylish/global/grid/_grid_fluid.scss */
   .col_m_1 {
     width: 8.33333%;
@@ -2614,7 +2715,7 @@ input[type=reset].btn_white_border.active {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* line 133, ../stylish/global/grid/_grid_fluid.scss */
   .col_s_1 {
     width: 8.33333%;
@@ -2811,7 +2912,7 @@ input[type=reset].btn_white_border.active {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 319px) {
   /* line 149, ../stylish/global/grid/_grid_fluid.scss */
   .col_xs_1 {
     width: 8.33333%;
@@ -3063,7 +3164,7 @@ input[type=reset].btn_white_border.active {
   left: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* Fixed sidebar grid hide sidebar */
   /* line 39, ../stylish/global/grid/_grid_fixed_col.scss */
   .grid_fix {
@@ -3115,7 +3216,7 @@ input[type=reset].btn_white_border.active {
 .accordion .a_content {
   display: none;
   background-color: #e5e5e5;
-  padding: 20px 10px;
+  padding: 20px;
 }
 /* line 13, ../stylish/components/_accordion.scss */
 .accordion .a_content.active {
@@ -3155,13 +3256,17 @@ input[type=reset].btn_white_border.active {
 html.modal_active {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 /* line 7, ../stylish/components/_modal.scss */
 html.modal_active body {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 /* line 11, ../stylish/components/_modal.scss */
@@ -3184,7 +3289,7 @@ html.modal_active body {
   width: 100%;
   height: 100%;
   visibility: hidden;
-  z-index: 1;
+  z-index: 2;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transition-property: opacity;
@@ -3210,14 +3315,14 @@ html.modal_active body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  z-index: 2;
 }
 /* line 25, ../stylish/components/_modal.scss */
 .modal .m_content_wrap .m_content {
-  padding: 30px;
+  padding: 35px;
   background-color: #ffffff;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -3264,38 +3369,43 @@ html.modal_active body {
 .modal[data-slide="top"].active .m_content {
   margin-top: 15px;
 }
-/* line 57, ../stylish/components/_modal.scss */
-.modal[data-slide="scale"] .m_wrap {
-  max-width: 600px;
-}
 /* line 58, ../stylish/components/_modal.scss */
-.modal[data-slide="scale"] .m_content {
+.modal[data-slide="scale"] .m_content_wrap .m_content {
   -moz-transform: scale(0.6, 0.6);
   -ms-transform: scale(0.6, 0.6);
   -webkit-transform: scale(0.6, 0.6);
   transform: scale(0.6, 0.6);
 }
-/* line 60, ../stylish/components/_modal.scss */
-.modal[data-slide="scale"].active .m_content {
+/* line 63, ../stylish/components/_modal.scss */
+.modal[data-slide="scale"].active .m_content_wrap .m_content {
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 66, ../stylish/components/_modal.scss */
+/* line 70, ../stylish/components/_modal.scss */
 .modal[data-size="full"] .m_wrap {
   max-width: initial;
 }
-/* line 67, ../stylish/components/_modal.scss */
+/* line 71, ../stylish/components/_modal.scss */
 .modal[data-size="full"] .m_content_wrap {
   top: 0 !important;
 }
-/* line 68, ../stylish/components/_modal.scss */
-.modal[data-size="full"] .m_content {
+/* line 73, ../stylish/components/_modal.scss */
+.modal[data-size="full"] .m_content_wrap .m_content {
   height: 100%;
   margin-top: 0 !important;
 }
 
+/* RESPONSIVE MEDIA QUERIES (Desktop first) */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  /* line 95, ../stylish/components/_modal.scss */
+  .modal .m_content_wrap {
+    top: 0 !important;
+    overflow-y: auto;
+  }
+}
 /* Messages block setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 5, ../stylish/components/_msg.scss */
@@ -3306,7 +3416,8 @@ html.modal_active body {
 /* line 8, ../stylish/components/_msg.scss */
 .messages li, .msg li {
   list-style: none;
-  font-size: 14px;
+  font-size: 18px;
+  font-size: 1rem;
 }
 /* line 10, ../stylish/components/_msg.scss */
 .messages li:last-child, .msg li:last-child {
@@ -3315,7 +3426,7 @@ html.modal_active body {
 /* line 13, ../stylish/components/_msg.scss */
 .messages > li, .msg > li {
   color: #272727;
-  padding: 10px 10px 10px 60px;
+  padding: 10px 10px 10px 50px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -3326,7 +3437,7 @@ html.modal_active body {
 .messages > li:before, .msg > li:before {
   font-size: 30px;
   position: absolute;
-  left: 15px;
+  left: 10px;
   top: 50%;
   margin-top: -15px;
 }
@@ -3601,7 +3712,8 @@ html.modal_active body {
 .pagination > li > a, .pagination > li > span {
   background-color: #e5e5e5;
   color: #272727;
-  font-size: 14px;
+  font-size: 18px;
+  font-size: 1rem;
   padding: 10px 15px;
   display: block;
   -moz-border-radius: 4px;
@@ -3764,8 +3876,10 @@ table th.last, table td.last {
   padding: 10px;
   text-align: center;
   max-width: 300px;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 23px;
+  line-height: 1.27778rem;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -3855,2544 +3969,46 @@ table th.last, table td.last {
 .tip[data-tip-position="right"]:before {
   margin-left: -1px;
 }
-/* line 398, ../stylish/global/_mixins.scss */
+/* line 478, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:after {
   border-top-color: #ffffff;
 }
-/* line 399, ../stylish/global/_mixins.scss */
+/* line 479, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:after {
   border-bottom-color: #ffffff;
 }
-/* line 400, ../stylish/global/_mixins.scss */
+/* line 480, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:after {
   border-left-color: #ffffff;
 }
-/* line 401, ../stylish/global/_mixins.scss */
+/* line 481, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:after {
   border-right-color: #ffffff;
 }
-/* line 403, ../stylish/global/_mixins.scss */
+/* line 483, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:before {
   border-top-color: #e5e5e5;
 }
-/* line 404, ../stylish/global/_mixins.scss */
+/* line 484, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:before {
   border-bottom-color: #e5e5e5;
 }
-/* line 405, ../stylish/global/_mixins.scss */
+/* line 485, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:before {
   border-left-color: #e5e5e5;
 }
-/* line 406, ../stylish/global/_mixins.scss */
+/* line 486, ../stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:before {
   border-right-color: #e5e5e5;
 }
 /* line 83, ../stylish/components/_tooltip.scss */
 .tip .tip_title {
   font-size: 18px;
-  line-height: 21px;
+  font-size: 1rem;
+  line-height: 23px;
+  line-height: 1.27778rem;
   margin-bottom: 5px;
   display: block;
-}
-
-/* FONTAWESOME ICONS SETUP */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Font Declaration */
-@font-face {
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/fontawesome.eot");
-  src: url("../fonts/fontawesome.eot?iefix") format("eot"), url("../fonts/fontawesome.svg#FontAwesome") format("svg"), url("../fonts/fontawesome.woff2") format("woff2"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "FontAwesome";
-    src: url("../fonts/fontawesome.svg#FontAwesome") format("svg");
-    font-style: normal;
-    font-weight: normal;
-  }
-}
-/* line 10, ../stylish/components/_fontawesome.scss */
-[class^="fa-"], [class*=" fa-"], .fa-icon, .fa-icons,
-[class^="fa-_"], [class*=" fa_"], .fa_icon, .fa_icons {
-  font-family: 'FontAwesome';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Icons */
-/* line 18, ../stylish/components/_fontawesome.scss */
-.fa-glass:before {
-  content: "\f000";
-}
-
-/* line 21, ../stylish/components/_fontawesome.scss */
-.fa-music:before {
-  content: "\f001";
-}
-
-/* line 24, ../stylish/components/_fontawesome.scss */
-.fa-search:before {
-  content: "\f002";
-}
-
-/* line 27, ../stylish/components/_fontawesome.scss */
-.fa-envelope-o:before {
-  content: "\f003";
-}
-
-/* line 30, ../stylish/components/_fontawesome.scss */
-.fa-heart:before {
-  content: "\f004";
-}
-
-/* line 33, ../stylish/components/_fontawesome.scss */
-.fa-star:before {
-  content: "\f005";
-}
-
-/* line 36, ../stylish/components/_fontawesome.scss */
-.fa-star-o:before {
-  content: "\f006";
-}
-
-/* line 39, ../stylish/components/_fontawesome.scss */
-.fa-user:before {
-  content: "\f007";
-}
-
-/* line 42, ../stylish/components/_fontawesome.scss */
-.fa-film:before {
-  content: "\f008";
-}
-
-/* line 45, ../stylish/components/_fontawesome.scss */
-.fa-th-large:before {
-  content: "\f009";
-}
-
-/* line 48, ../stylish/components/_fontawesome.scss */
-.fa-th:before {
-  content: "\f00a";
-}
-
-/* line 51, ../stylish/components/_fontawesome.scss */
-.fa-th-list:before {
-  content: "\f00b";
-}
-
-/* line 54, ../stylish/components/_fontawesome.scss */
-.fa-check:before {
-  content: "\f00c";
-}
-
-/* line 57, ../stylish/components/_fontawesome.scss */
-.fa-remove:before,
-.fa-close:before,
-.fa-times:before {
-  content: "\f00d";
-}
-
-/* line 62, ../stylish/components/_fontawesome.scss */
-.fa-search-plus:before {
-  content: "\f00e";
-}
-
-/* line 65, ../stylish/components/_fontawesome.scss */
-.fa-search-minus:before {
-  content: "\f010";
-}
-
-/* line 68, ../stylish/components/_fontawesome.scss */
-.fa-power-off:before {
-  content: "\f011";
-}
-
-/* line 71, ../stylish/components/_fontawesome.scss */
-.fa-signal:before {
-  content: "\f012";
-}
-
-/* line 74, ../stylish/components/_fontawesome.scss */
-.fa-gear:before,
-.fa-cog:before {
-  content: "\f013";
-}
-
-/* line 78, ../stylish/components/_fontawesome.scss */
-.fa-trash-o:before {
-  content: "\f014";
-}
-
-/* line 81, ../stylish/components/_fontawesome.scss */
-.fa-home:before {
-  content: "\f015";
-}
-
-/* line 84, ../stylish/components/_fontawesome.scss */
-.fa-file-o:before {
-  content: "\f016";
-}
-
-/* line 87, ../stylish/components/_fontawesome.scss */
-.fa-clock-o:before {
-  content: "\f017";
-}
-
-/* line 90, ../stylish/components/_fontawesome.scss */
-.fa-road:before {
-  content: "\f018";
-}
-
-/* line 93, ../stylish/components/_fontawesome.scss */
-.fa-download:before {
-  content: "\f019";
-}
-
-/* line 96, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-o-down:before {
-  content: "\f01a";
-}
-
-/* line 99, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-o-up:before {
-  content: "\f01b";
-}
-
-/* line 102, ../stylish/components/_fontawesome.scss */
-.fa-inbox:before {
-  content: "\f01c";
-}
-
-/* line 105, ../stylish/components/_fontawesome.scss */
-.fa-play-circle-o:before {
-  content: "\f01d";
-}
-
-/* line 108, ../stylish/components/_fontawesome.scss */
-.fa-rotate-right:before,
-.fa-repeat:before {
-  content: "\f01e";
-}
-
-/* line 112, ../stylish/components/_fontawesome.scss */
-.fa-refresh:before {
-  content: "\f021";
-}
-
-/* line 115, ../stylish/components/_fontawesome.scss */
-.fa-list-alt:before {
-  content: "\f022";
-}
-
-/* line 118, ../stylish/components/_fontawesome.scss */
-.fa-lock:before {
-  content: "\f023";
-}
-
-/* line 121, ../stylish/components/_fontawesome.scss */
-.fa-flag:before {
-  content: "\f024";
-}
-
-/* line 124, ../stylish/components/_fontawesome.scss */
-.fa-headphones:before {
-  content: "\f025";
-}
-
-/* line 127, ../stylish/components/_fontawesome.scss */
-.fa-volume-off:before {
-  content: "\f026";
-}
-
-/* line 130, ../stylish/components/_fontawesome.scss */
-.fa-volume-down:before {
-  content: "\f027";
-}
-
-/* line 133, ../stylish/components/_fontawesome.scss */
-.fa-volume-up:before {
-  content: "\f028";
-}
-
-/* line 136, ../stylish/components/_fontawesome.scss */
-.fa-qrcode:before {
-  content: "\f029";
-}
-
-/* line 139, ../stylish/components/_fontawesome.scss */
-.fa-barcode:before {
-  content: "\f02a";
-}
-
-/* line 142, ../stylish/components/_fontawesome.scss */
-.fa-tag:before {
-  content: "\f02b";
-}
-
-/* line 145, ../stylish/components/_fontawesome.scss */
-.fa-tags:before {
-  content: "\f02c";
-}
-
-/* line 148, ../stylish/components/_fontawesome.scss */
-.fa-book:before {
-  content: "\f02d";
-}
-
-/* line 151, ../stylish/components/_fontawesome.scss */
-.fa-bookmark:before {
-  content: "\f02e";
-}
-
-/* line 154, ../stylish/components/_fontawesome.scss */
-.fa-print:before {
-  content: "\f02f";
-}
-
-/* line 157, ../stylish/components/_fontawesome.scss */
-.fa-camera:before {
-  content: "\f030";
-}
-
-/* line 160, ../stylish/components/_fontawesome.scss */
-.fa-font:before {
-  content: "\f031";
-}
-
-/* line 163, ../stylish/components/_fontawesome.scss */
-.fa-bold:before {
-  content: "\f032";
-}
-
-/* line 166, ../stylish/components/_fontawesome.scss */
-.fa-italic:before {
-  content: "\f033";
-}
-
-/* line 169, ../stylish/components/_fontawesome.scss */
-.fa-text-height:before {
-  content: "\f034";
-}
-
-/* line 172, ../stylish/components/_fontawesome.scss */
-.fa-text-width:before {
-  content: "\f035";
-}
-
-/* line 175, ../stylish/components/_fontawesome.scss */
-.fa-align-left:before {
-  content: "\f036";
-}
-
-/* line 178, ../stylish/components/_fontawesome.scss */
-.fa-align-center:before {
-  content: "\f037";
-}
-
-/* line 181, ../stylish/components/_fontawesome.scss */
-.fa-align-right:before {
-  content: "\f038";
-}
-
-/* line 184, ../stylish/components/_fontawesome.scss */
-.fa-align-justify:before {
-  content: "\f039";
-}
-
-/* line 187, ../stylish/components/_fontawesome.scss */
-.fa-list:before {
-  content: "\f03a";
-}
-
-/* line 190, ../stylish/components/_fontawesome.scss */
-.fa-dedent:before,
-.fa-outdent:before {
-  content: "\f03b";
-}
-
-/* line 194, ../stylish/components/_fontawesome.scss */
-.fa-indent:before {
-  content: "\f03c";
-}
-
-/* line 197, ../stylish/components/_fontawesome.scss */
-.fa-video-camera:before {
-  content: "\f03d";
-}
-
-/* line 200, ../stylish/components/_fontawesome.scss */
-.fa-photo:before,
-.fa-image:before,
-.fa-picture-o:before {
-  content: "\f03e";
-}
-
-/* line 205, ../stylish/components/_fontawesome.scss */
-.fa-pencil:before {
-  content: "\f040";
-}
-
-/* line 208, ../stylish/components/_fontawesome.scss */
-.fa-map-marker:before {
-  content: "\f041";
-}
-
-/* line 211, ../stylish/components/_fontawesome.scss */
-.fa-adjust:before {
-  content: "\f042";
-}
-
-/* line 214, ../stylish/components/_fontawesome.scss */
-.fa-tint:before {
-  content: "\f043";
-}
-
-/* line 217, ../stylish/components/_fontawesome.scss */
-.fa-edit:before,
-.fa-pencil-square-o:before {
-  content: "\f044";
-}
-
-/* line 221, ../stylish/components/_fontawesome.scss */
-.fa-share-square-o:before {
-  content: "\f045";
-}
-
-/* line 224, ../stylish/components/_fontawesome.scss */
-.fa-check-square-o:before {
-  content: "\f046";
-}
-
-/* line 227, ../stylish/components/_fontawesome.scss */
-.fa-arrows:before {
-  content: "\f047";
-}
-
-/* line 230, ../stylish/components/_fontawesome.scss */
-.fa-step-backward:before {
-  content: "\f048";
-}
-
-/* line 233, ../stylish/components/_fontawesome.scss */
-.fa-fast-backward:before {
-  content: "\f049";
-}
-
-/* line 236, ../stylish/components/_fontawesome.scss */
-.fa-backward:before {
-  content: "\f04a";
-}
-
-/* line 239, ../stylish/components/_fontawesome.scss */
-.fa-play:before {
-  content: "\f04b";
-}
-
-/* line 242, ../stylish/components/_fontawesome.scss */
-.fa-pause:before {
-  content: "\f04c";
-}
-
-/* line 245, ../stylish/components/_fontawesome.scss */
-.fa-stop:before {
-  content: "\f04d";
-}
-
-/* line 248, ../stylish/components/_fontawesome.scss */
-.fa-forward:before {
-  content: "\f04e";
-}
-
-/* line 251, ../stylish/components/_fontawesome.scss */
-.fa-fast-forward:before {
-  content: "\f050";
-}
-
-/* line 254, ../stylish/components/_fontawesome.scss */
-.fa-step-forward:before {
-  content: "\f051";
-}
-
-/* line 257, ../stylish/components/_fontawesome.scss */
-.fa-eject:before {
-  content: "\f052";
-}
-
-/* line 260, ../stylish/components/_fontawesome.scss */
-.fa-chevron-left:before {
-  content: "\f053";
-}
-
-/* line 263, ../stylish/components/_fontawesome.scss */
-.fa-chevron-right:before {
-  content: "\f054";
-}
-
-/* line 266, ../stylish/components/_fontawesome.scss */
-.fa-plus-circle:before {
-  content: "\f055";
-}
-
-/* line 269, ../stylish/components/_fontawesome.scss */
-.fa-minus-circle:before {
-  content: "\f056";
-}
-
-/* line 272, ../stylish/components/_fontawesome.scss */
-.fa-times-circle:before {
-  content: "\f057";
-}
-
-/* line 275, ../stylish/components/_fontawesome.scss */
-.fa-check-circle:before {
-  content: "\f058";
-}
-
-/* line 278, ../stylish/components/_fontawesome.scss */
-.fa-question-circle:before {
-  content: "\f059";
-}
-
-/* line 281, ../stylish/components/_fontawesome.scss */
-.fa-info-circle:before {
-  content: "\f05a";
-}
-
-/* line 284, ../stylish/components/_fontawesome.scss */
-.fa-crosshairs:before {
-  content: "\f05b";
-}
-
-/* line 287, ../stylish/components/_fontawesome.scss */
-.fa-times-circle-o:before {
-  content: "\f05c";
-}
-
-/* line 290, ../stylish/components/_fontawesome.scss */
-.fa-check-circle-o:before {
-  content: "\f05d";
-}
-
-/* line 293, ../stylish/components/_fontawesome.scss */
-.fa-ban:before {
-  content: "\f05e";
-}
-
-/* line 296, ../stylish/components/_fontawesome.scss */
-.fa-arrow-left:before {
-  content: "\f060";
-}
-
-/* line 299, ../stylish/components/_fontawesome.scss */
-.fa-arrow-right:before {
-  content: "\f061";
-}
-
-/* line 302, ../stylish/components/_fontawesome.scss */
-.fa-arrow-up:before {
-  content: "\f062";
-}
-
-/* line 305, ../stylish/components/_fontawesome.scss */
-.fa-arrow-down:before {
-  content: "\f063";
-}
-
-/* line 308, ../stylish/components/_fontawesome.scss */
-.fa-mail-forward:before,
-.fa-share:before {
-  content: "\f064";
-}
-
-/* line 312, ../stylish/components/_fontawesome.scss */
-.fa-expand:before {
-  content: "\f065";
-}
-
-/* line 315, ../stylish/components/_fontawesome.scss */
-.fa-compress:before {
-  content: "\f066";
-}
-
-/* line 318, ../stylish/components/_fontawesome.scss */
-.fa-plus:before {
-  content: "\f067";
-}
-
-/* line 321, ../stylish/components/_fontawesome.scss */
-.fa-minus:before {
-  content: "\f068";
-}
-
-/* line 324, ../stylish/components/_fontawesome.scss */
-.fa-asterisk:before {
-  content: "\f069";
-}
-
-/* line 327, ../stylish/components/_fontawesome.scss */
-.fa-exclamation-circle:before {
-  content: "\f06a";
-}
-
-/* line 330, ../stylish/components/_fontawesome.scss */
-.fa-gift:before {
-  content: "\f06b";
-}
-
-/* line 333, ../stylish/components/_fontawesome.scss */
-.fa-leaf:before {
-  content: "\f06c";
-}
-
-/* line 336, ../stylish/components/_fontawesome.scss */
-.fa-fire:before {
-  content: "\f06d";
-}
-
-/* line 339, ../stylish/components/_fontawesome.scss */
-.fa-eye:before {
-  content: "\f06e";
-}
-
-/* line 342, ../stylish/components/_fontawesome.scss */
-.fa-eye-slash:before {
-  content: "\f070";
-}
-
-/* line 345, ../stylish/components/_fontawesome.scss */
-.fa-warning:before,
-.fa-exclamation-triangle:before {
-  content: "\f071";
-}
-
-/* line 349, ../stylish/components/_fontawesome.scss */
-.fa-plane:before {
-  content: "\f072";
-}
-
-/* line 352, ../stylish/components/_fontawesome.scss */
-.fa-calendar:before {
-  content: "\f073";
-}
-
-/* line 355, ../stylish/components/_fontawesome.scss */
-.fa-random:before {
-  content: "\f074";
-}
-
-/* line 358, ../stylish/components/_fontawesome.scss */
-.fa-comment:before {
-  content: "\f075";
-}
-
-/* line 361, ../stylish/components/_fontawesome.scss */
-.fa-magnet:before {
-  content: "\f076";
-}
-
-/* line 364, ../stylish/components/_fontawesome.scss */
-.fa-chevron-up:before {
-  content: "\f077";
-}
-
-/* line 367, ../stylish/components/_fontawesome.scss */
-.fa-chevron-down:before {
-  content: "\f078";
-}
-
-/* line 370, ../stylish/components/_fontawesome.scss */
-.fa-retweet:before {
-  content: "\f079";
-}
-
-/* line 373, ../stylish/components/_fontawesome.scss */
-.fa-shopping-cart:before {
-  content: "\f07a";
-}
-
-/* line 376, ../stylish/components/_fontawesome.scss */
-.fa-folder:before {
-  content: "\f07b";
-}
-
-/* line 379, ../stylish/components/_fontawesome.scss */
-.fa-folder-open:before {
-  content: "\f07c";
-}
-
-/* line 382, ../stylish/components/_fontawesome.scss */
-.fa-arrows-v:before {
-  content: "\f07d";
-}
-
-/* line 385, ../stylish/components/_fontawesome.scss */
-.fa-arrows-h:before {
-  content: "\f07e";
-}
-
-/* line 388, ../stylish/components/_fontawesome.scss */
-.fa-bar-chart-o:before,
-.fa-bar-chart:before {
-  content: "\f080";
-}
-
-/* line 392, ../stylish/components/_fontawesome.scss */
-.fa-twitter-square:before {
-  content: "\f081";
-}
-
-/* line 395, ../stylish/components/_fontawesome.scss */
-.fa-facebook-square:before {
-  content: "\f082";
-}
-
-/* line 398, ../stylish/components/_fontawesome.scss */
-.fa-camera-retro:before {
-  content: "\f083";
-}
-
-/* line 401, ../stylish/components/_fontawesome.scss */
-.fa-key:before {
-  content: "\f084";
-}
-
-/* line 404, ../stylish/components/_fontawesome.scss */
-.fa-gears:before,
-.fa-cogs:before {
-  content: "\f085";
-}
-
-/* line 408, ../stylish/components/_fontawesome.scss */
-.fa-comments:before {
-  content: "\f086";
-}
-
-/* line 411, ../stylish/components/_fontawesome.scss */
-.fa-thumbs-o-up:before {
-  content: "\f087";
-}
-
-/* line 414, ../stylish/components/_fontawesome.scss */
-.fa-thumbs-o-down:before {
-  content: "\f088";
-}
-
-/* line 417, ../stylish/components/_fontawesome.scss */
-.fa-star-half:before {
-  content: "\f089";
-}
-
-/* line 420, ../stylish/components/_fontawesome.scss */
-.fa-heart-o:before {
-  content: "\f08a";
-}
-
-/* line 423, ../stylish/components/_fontawesome.scss */
-.fa-sign-out:before {
-  content: "\f08b";
-}
-
-/* line 426, ../stylish/components/_fontawesome.scss */
-.fa-linkedin-square:before {
-  content: "\f08c";
-}
-
-/* line 429, ../stylish/components/_fontawesome.scss */
-.fa-thumb-tack:before {
-  content: "\f08d";
-}
-
-/* line 432, ../stylish/components/_fontawesome.scss */
-.fa-external-link:before {
-  content: "\f08e";
-}
-
-/* line 435, ../stylish/components/_fontawesome.scss */
-.fa-sign-in:before {
-  content: "\f090";
-}
-
-/* line 438, ../stylish/components/_fontawesome.scss */
-.fa-trophy:before {
-  content: "\f091";
-}
-
-/* line 441, ../stylish/components/_fontawesome.scss */
-.fa-github-square:before {
-  content: "\f092";
-}
-
-/* line 444, ../stylish/components/_fontawesome.scss */
-.fa-upload:before {
-  content: "\f093";
-}
-
-/* line 447, ../stylish/components/_fontawesome.scss */
-.fa-lemon-o:before {
-  content: "\f094";
-}
-
-/* line 450, ../stylish/components/_fontawesome.scss */
-.fa-phone:before {
-  content: "\f095";
-}
-
-/* line 453, ../stylish/components/_fontawesome.scss */
-.fa-square-o:before {
-  content: "\f096";
-}
-
-/* line 456, ../stylish/components/_fontawesome.scss */
-.fa-bookmark-o:before {
-  content: "\f097";
-}
-
-/* line 459, ../stylish/components/_fontawesome.scss */
-.fa-phone-square:before {
-  content: "\f098";
-}
-
-/* line 462, ../stylish/components/_fontawesome.scss */
-.fa-twitter:before {
-  content: "\f099";
-}
-
-/* line 465, ../stylish/components/_fontawesome.scss */
-.fa-facebook:before {
-  content: "\f09a";
-}
-
-/* line 468, ../stylish/components/_fontawesome.scss */
-.fa-github:before {
-  content: "\f09b";
-}
-
-/* line 471, ../stylish/components/_fontawesome.scss */
-.fa-unlock:before {
-  content: "\f09c";
-}
-
-/* line 474, ../stylish/components/_fontawesome.scss */
-.fa-credit-card:before {
-  content: "\f09d";
-}
-
-/* line 477, ../stylish/components/_fontawesome.scss */
-.fa-rss:before {
-  content: "\f09e";
-}
-
-/* line 480, ../stylish/components/_fontawesome.scss */
-.fa-hdd-o:before {
-  content: "\f0a0";
-}
-
-/* line 483, ../stylish/components/_fontawesome.scss */
-.fa-bullhorn:before {
-  content: "\f0a1";
-}
-
-/* line 486, ../stylish/components/_fontawesome.scss */
-.fa-bell:before {
-  content: "\f0f3";
-}
-
-/* line 489, ../stylish/components/_fontawesome.scss */
-.fa-certificate:before {
-  content: "\f0a3";
-}
-
-/* line 492, ../stylish/components/_fontawesome.scss */
-.fa-hand-o-right:before {
-  content: "\f0a4";
-}
-
-/* line 495, ../stylish/components/_fontawesome.scss */
-.fa-hand-o-left:before {
-  content: "\f0a5";
-}
-
-/* line 498, ../stylish/components/_fontawesome.scss */
-.fa-hand-o-up:before {
-  content: "\f0a6";
-}
-
-/* line 501, ../stylish/components/_fontawesome.scss */
-.fa-hand-o-down:before {
-  content: "\f0a7";
-}
-
-/* line 504, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-left:before {
-  content: "\f0a8";
-}
-
-/* line 507, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-right:before {
-  content: "\f0a9";
-}
-
-/* line 510, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-up:before {
-  content: "\f0aa";
-}
-
-/* line 513, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-down:before {
-  content: "\f0ab";
-}
-
-/* line 516, ../stylish/components/_fontawesome.scss */
-.fa-globe:before {
-  content: "\f0ac";
-}
-
-/* line 519, ../stylish/components/_fontawesome.scss */
-.fa-wrench:before {
-  content: "\f0ad";
-}
-
-/* line 522, ../stylish/components/_fontawesome.scss */
-.fa-tasks:before {
-  content: "\f0ae";
-}
-
-/* line 525, ../stylish/components/_fontawesome.scss */
-.fa-filter:before {
-  content: "\f0b0";
-}
-
-/* line 528, ../stylish/components/_fontawesome.scss */
-.fa-briefcase:before {
-  content: "\f0b1";
-}
-
-/* line 531, ../stylish/components/_fontawesome.scss */
-.fa-arrows-alt:before {
-  content: "\f0b2";
-}
-
-/* line 534, ../stylish/components/_fontawesome.scss */
-.fa-group:before,
-.fa-users:before {
-  content: "\f0c0";
-}
-
-/* line 538, ../stylish/components/_fontawesome.scss */
-.fa-chain:before,
-.fa-link:before {
-  content: "\f0c1";
-}
-
-/* line 542, ../stylish/components/_fontawesome.scss */
-.fa-cloud:before {
-  content: "\f0c2";
-}
-
-/* line 545, ../stylish/components/_fontawesome.scss */
-.fa-flask:before {
-  content: "\f0c3";
-}
-
-/* line 548, ../stylish/components/_fontawesome.scss */
-.fa-cut:before,
-.fa-scissors:before {
-  content: "\f0c4";
-}
-
-/* line 552, ../stylish/components/_fontawesome.scss */
-.fa-copy:before,
-.fa-files-o:before {
-  content: "\f0c5";
-}
-
-/* line 556, ../stylish/components/_fontawesome.scss */
-.fa-paperclip:before {
-  content: "\f0c6";
-}
-
-/* line 559, ../stylish/components/_fontawesome.scss */
-.fa-save:before,
-.fa-floppy-o:before {
-  content: "\f0c7";
-}
-
-/* line 563, ../stylish/components/_fontawesome.scss */
-.fa-square:before {
-  content: "\f0c8";
-}
-
-/* line 566, ../stylish/components/_fontawesome.scss */
-.fa-navicon:before,
-.fa-reorder:before,
-.fa-bars:before {
-  content: "\f0c9";
-}
-
-/* line 571, ../stylish/components/_fontawesome.scss */
-.fa-list-ul:before {
-  content: "\f0ca";
-}
-
-/* line 574, ../stylish/components/_fontawesome.scss */
-.fa-list-ol:before {
-  content: "\f0cb";
-}
-
-/* line 577, ../stylish/components/_fontawesome.scss */
-.fa-strikethrough:before {
-  content: "\f0cc";
-}
-
-/* line 580, ../stylish/components/_fontawesome.scss */
-.fa-underline:before {
-  content: "\f0cd";
-}
-
-/* line 583, ../stylish/components/_fontawesome.scss */
-.fa-table:before {
-  content: "\f0ce";
-}
-
-/* line 586, ../stylish/components/_fontawesome.scss */
-.fa-magic:before {
-  content: "\f0d0";
-}
-
-/* line 589, ../stylish/components/_fontawesome.scss */
-.fa-truck:before {
-  content: "\f0d1";
-}
-
-/* line 592, ../stylish/components/_fontawesome.scss */
-.fa-pinterest:before {
-  content: "\f0d2";
-}
-
-/* line 595, ../stylish/components/_fontawesome.scss */
-.fa-pinterest-square:before {
-  content: "\f0d3";
-}
-
-/* line 598, ../stylish/components/_fontawesome.scss */
-.fa-google-plus-square:before {
-  content: "\f0d4";
-}
-
-/* line 601, ../stylish/components/_fontawesome.scss */
-.fa-google-plus:before {
-  content: "\f0d5";
-}
-
-/* line 604, ../stylish/components/_fontawesome.scss */
-.fa-money:before {
-  content: "\f0d6";
-}
-
-/* line 607, ../stylish/components/_fontawesome.scss */
-.fa-caret-down:before {
-  content: "\f0d7";
-}
-
-/* line 610, ../stylish/components/_fontawesome.scss */
-.fa-caret-up:before {
-  content: "\f0d8";
-}
-
-/* line 613, ../stylish/components/_fontawesome.scss */
-.fa-caret-left:before {
-  content: "\f0d9";
-}
-
-/* line 616, ../stylish/components/_fontawesome.scss */
-.fa-caret-right:before {
-  content: "\f0da";
-}
-
-/* line 619, ../stylish/components/_fontawesome.scss */
-.fa-columns:before {
-  content: "\f0db";
-}
-
-/* line 622, ../stylish/components/_fontawesome.scss */
-.fa-unsorted:before,
-.fa-sort:before {
-  content: "\f0dc";
-}
-
-/* line 626, ../stylish/components/_fontawesome.scss */
-.fa-sort-down:before,
-.fa-sort-desc:before {
-  content: "\f0dd";
-}
-
-/* line 630, ../stylish/components/_fontawesome.scss */
-.fa-sort-up:before,
-.fa-sort-asc:before {
-  content: "\f0de";
-}
-
-/* line 634, ../stylish/components/_fontawesome.scss */
-.fa-envelope:before {
-  content: "\f0e0";
-}
-
-/* line 637, ../stylish/components/_fontawesome.scss */
-.fa-linkedin:before {
-  content: "\f0e1";
-}
-
-/* line 640, ../stylish/components/_fontawesome.scss */
-.fa-rotate-left:before,
-.fa-undo:before {
-  content: "\f0e2";
-}
-
-/* line 644, ../stylish/components/_fontawesome.scss */
-.fa-legal:before,
-.fa-gavel:before {
-  content: "\f0e3";
-}
-
-/* line 648, ../stylish/components/_fontawesome.scss */
-.fa-dashboard:before,
-.fa-tachometer:before {
-  content: "\f0e4";
-}
-
-/* line 652, ../stylish/components/_fontawesome.scss */
-.fa-comment-o:before {
-  content: "\f0e5";
-}
-
-/* line 655, ../stylish/components/_fontawesome.scss */
-.fa-comments-o:before {
-  content: "\f0e6";
-}
-
-/* line 658, ../stylish/components/_fontawesome.scss */
-.fa-flash:before,
-.fa-bolt:before {
-  content: "\f0e7";
-}
-
-/* line 662, ../stylish/components/_fontawesome.scss */
-.fa-sitemap:before {
-  content: "\f0e8";
-}
-
-/* line 665, ../stylish/components/_fontawesome.scss */
-.fa-umbrella:before {
-  content: "\f0e9";
-}
-
-/* line 668, ../stylish/components/_fontawesome.scss */
-.fa-paste:before,
-.fa-clipboard:before {
-  content: "\f0ea";
-}
-
-/* line 672, ../stylish/components/_fontawesome.scss */
-.fa-lightbulb-o:before {
-  content: "\f0eb";
-}
-
-/* line 675, ../stylish/components/_fontawesome.scss */
-.fa-exchange:before {
-  content: "\f0ec";
-}
-
-/* line 678, ../stylish/components/_fontawesome.scss */
-.fa-cloud-download:before {
-  content: "\f0ed";
-}
-
-/* line 681, ../stylish/components/_fontawesome.scss */
-.fa-cloud-upload:before {
-  content: "\f0ee";
-}
-
-/* line 684, ../stylish/components/_fontawesome.scss */
-.fa-user-md:before {
-  content: "\f0f0";
-}
-
-/* line 687, ../stylish/components/_fontawesome.scss */
-.fa-stethoscope:before {
-  content: "\f0f1";
-}
-
-/* line 690, ../stylish/components/_fontawesome.scss */
-.fa-suitcase:before {
-  content: "\f0f2";
-}
-
-/* line 693, ../stylish/components/_fontawesome.scss */
-.fa-bell-o:before {
-  content: "\f0a2";
-}
-
-/* line 696, ../stylish/components/_fontawesome.scss */
-.fa-coffee:before {
-  content: "\f0f4";
-}
-
-/* line 699, ../stylish/components/_fontawesome.scss */
-.fa-cutlery:before {
-  content: "\f0f5";
-}
-
-/* line 702, ../stylish/components/_fontawesome.scss */
-.fa-file-text-o:before {
-  content: "\f0f6";
-}
-
-/* line 705, ../stylish/components/_fontawesome.scss */
-.fa-building-o:before {
-  content: "\f0f7";
-}
-
-/* line 708, ../stylish/components/_fontawesome.scss */
-.fa-hospital-o:before {
-  content: "\f0f8";
-}
-
-/* line 711, ../stylish/components/_fontawesome.scss */
-.fa-ambulance:before {
-  content: "\f0f9";
-}
-
-/* line 714, ../stylish/components/_fontawesome.scss */
-.fa-medkit:before {
-  content: "\f0fa";
-}
-
-/* line 717, ../stylish/components/_fontawesome.scss */
-.fa-fighter-jet:before {
-  content: "\f0fb";
-}
-
-/* line 720, ../stylish/components/_fontawesome.scss */
-.fa-beer:before {
-  content: "\f0fc";
-}
-
-/* line 723, ../stylish/components/_fontawesome.scss */
-.fa-h-square:before {
-  content: "\f0fd";
-}
-
-/* line 726, ../stylish/components/_fontawesome.scss */
-.fa-plus-square:before {
-  content: "\f0fe";
-}
-
-/* line 729, ../stylish/components/_fontawesome.scss */
-.fa-angle-double-left:before {
-  content: "\f100";
-}
-
-/* line 732, ../stylish/components/_fontawesome.scss */
-.fa-angle-double-right:before {
-  content: "\f101";
-}
-
-/* line 735, ../stylish/components/_fontawesome.scss */
-.fa-angle-double-up:before {
-  content: "\f102";
-}
-
-/* line 738, ../stylish/components/_fontawesome.scss */
-.fa-angle-double-down:before {
-  content: "\f103";
-}
-
-/* line 741, ../stylish/components/_fontawesome.scss */
-.fa-angle-left:before {
-  content: "\f104";
-}
-
-/* line 744, ../stylish/components/_fontawesome.scss */
-.fa-angle-right:before {
-  content: "\f105";
-}
-
-/* line 747, ../stylish/components/_fontawesome.scss */
-.fa-angle-up:before {
-  content: "\f106";
-}
-
-/* line 750, ../stylish/components/_fontawesome.scss */
-.fa-angle-down:before {
-  content: "\f107";
-}
-
-/* line 753, ../stylish/components/_fontawesome.scss */
-.fa-desktop:before {
-  content: "\f108";
-}
-
-/* line 756, ../stylish/components/_fontawesome.scss */
-.fa-laptop:before {
-  content: "\f109";
-}
-
-/* line 759, ../stylish/components/_fontawesome.scss */
-.fa-tablet:before {
-  content: "\f10a";
-}
-
-/* line 762, ../stylish/components/_fontawesome.scss */
-.fa-mobile-phone:before,
-.fa-mobile:before {
-  content: "\f10b";
-}
-
-/* line 766, ../stylish/components/_fontawesome.scss */
-.fa-circle-o:before {
-  content: "\f10c";
-}
-
-/* line 769, ../stylish/components/_fontawesome.scss */
-.fa-quote-left:before {
-  content: "\f10d";
-}
-
-/* line 772, ../stylish/components/_fontawesome.scss */
-.fa-quote-right:before {
-  content: "\f10e";
-}
-
-/* line 775, ../stylish/components/_fontawesome.scss */
-.fa-spinner:before {
-  content: "\f110";
-}
-
-/* line 778, ../stylish/components/_fontawesome.scss */
-.fa-circle:before {
-  content: "\f111";
-}
-
-/* line 781, ../stylish/components/_fontawesome.scss */
-.fa-mail-reply:before,
-.fa-reply:before {
-  content: "\f112";
-}
-
-/* line 785, ../stylish/components/_fontawesome.scss */
-.fa-github-alt:before {
-  content: "\f113";
-}
-
-/* line 788, ../stylish/components/_fontawesome.scss */
-.fa-folder-o:before {
-  content: "\f114";
-}
-
-/* line 791, ../stylish/components/_fontawesome.scss */
-.fa-folder-open-o:before {
-  content: "\f115";
-}
-
-/* line 794, ../stylish/components/_fontawesome.scss */
-.fa-smile-o:before {
-  content: "\f118";
-}
-
-/* line 797, ../stylish/components/_fontawesome.scss */
-.fa-frown-o:before {
-  content: "\f119";
-}
-
-/* line 800, ../stylish/components/_fontawesome.scss */
-.fa-meh-o:before {
-  content: "\f11a";
-}
-
-/* line 803, ../stylish/components/_fontawesome.scss */
-.fa-gamepad:before {
-  content: "\f11b";
-}
-
-/* line 806, ../stylish/components/_fontawesome.scss */
-.fa-keyboard-o:before {
-  content: "\f11c";
-}
-
-/* line 809, ../stylish/components/_fontawesome.scss */
-.fa-flag-o:before {
-  content: "\f11d";
-}
-
-/* line 812, ../stylish/components/_fontawesome.scss */
-.fa-flag-checkered:before {
-  content: "\f11e";
-}
-
-/* line 815, ../stylish/components/_fontawesome.scss */
-.fa-terminal:before {
-  content: "\f120";
-}
-
-/* line 818, ../stylish/components/_fontawesome.scss */
-.fa-code:before {
-  content: "\f121";
-}
-
-/* line 821, ../stylish/components/_fontawesome.scss */
-.fa-mail-reply-all:before,
-.fa-reply-all:before {
-  content: "\f122";
-}
-
-/* line 825, ../stylish/components/_fontawesome.scss */
-.fa-star-half-empty:before,
-.fa-star-half-full:before,
-.fa-star-half-o:before {
-  content: "\f123";
-}
-
-/* line 830, ../stylish/components/_fontawesome.scss */
-.fa-location-arrow:before {
-  content: "\f124";
-}
-
-/* line 833, ../stylish/components/_fontawesome.scss */
-.fa-crop:before {
-  content: "\f125";
-}
-
-/* line 836, ../stylish/components/_fontawesome.scss */
-.fa-code-fork:before {
-  content: "\f126";
-}
-
-/* line 839, ../stylish/components/_fontawesome.scss */
-.fa-unlink:before,
-.fa-chain-broken:before {
-  content: "\f127";
-}
-
-/* line 843, ../stylish/components/_fontawesome.scss */
-.fa-question:before {
-  content: "\f128";
-}
-
-/* line 846, ../stylish/components/_fontawesome.scss */
-.fa-info:before {
-  content: "\f129";
-}
-
-/* line 849, ../stylish/components/_fontawesome.scss */
-.fa-exclamation:before {
-  content: "\f12a";
-}
-
-/* line 852, ../stylish/components/_fontawesome.scss */
-.fa-superscript:before {
-  content: "\f12b";
-}
-
-/* line 855, ../stylish/components/_fontawesome.scss */
-.fa-subscript:before {
-  content: "\f12c";
-}
-
-/* line 858, ../stylish/components/_fontawesome.scss */
-.fa-eraser:before {
-  content: "\f12d";
-}
-
-/* line 861, ../stylish/components/_fontawesome.scss */
-.fa-puzzle-piece:before {
-  content: "\f12e";
-}
-
-/* line 864, ../stylish/components/_fontawesome.scss */
-.fa-microphone:before {
-  content: "\f130";
-}
-
-/* line 867, ../stylish/components/_fontawesome.scss */
-.fa-microphone-slash:before {
-  content: "\f131";
-}
-
-/* line 870, ../stylish/components/_fontawesome.scss */
-.fa-shield:before {
-  content: "\f132";
-}
-
-/* line 873, ../stylish/components/_fontawesome.scss */
-.fa-calendar-o:before {
-  content: "\f133";
-}
-
-/* line 876, ../stylish/components/_fontawesome.scss */
-.fa-fire-extinguisher:before {
-  content: "\f134";
-}
-
-/* line 879, ../stylish/components/_fontawesome.scss */
-.fa-rocket:before {
-  content: "\f135";
-}
-
-/* line 882, ../stylish/components/_fontawesome.scss */
-.fa-maxcdn:before {
-  content: "\f136";
-}
-
-/* line 885, ../stylish/components/_fontawesome.scss */
-.fa-chevron-circle-left:before {
-  content: "\f137";
-}
-
-/* line 888, ../stylish/components/_fontawesome.scss */
-.fa-chevron-circle-right:before {
-  content: "\f138";
-}
-
-/* line 891, ../stylish/components/_fontawesome.scss */
-.fa-chevron-circle-up:before {
-  content: "\f139";
-}
-
-/* line 894, ../stylish/components/_fontawesome.scss */
-.fa-chevron-circle-down:before {
-  content: "\f13a";
-}
-
-/* line 897, ../stylish/components/_fontawesome.scss */
-.fa-html5:before {
-  content: "\f13b";
-}
-
-/* line 900, ../stylish/components/_fontawesome.scss */
-.fa-css3:before {
-  content: "\f13c";
-}
-
-/* line 903, ../stylish/components/_fontawesome.scss */
-.fa-anchor:before {
-  content: "\f13d";
-}
-
-/* line 906, ../stylish/components/_fontawesome.scss */
-.fa-unlock-alt:before {
-  content: "\f13e";
-}
-
-/* line 909, ../stylish/components/_fontawesome.scss */
-.fa-bullseye:before {
-  content: "\f140";
-}
-
-/* line 912, ../stylish/components/_fontawesome.scss */
-.fa-ellipsis-h:before {
-  content: "\f141";
-}
-
-/* line 915, ../stylish/components/_fontawesome.scss */
-.fa-ellipsis-v:before {
-  content: "\f142";
-}
-
-/* line 918, ../stylish/components/_fontawesome.scss */
-.fa-rss-square:before {
-  content: "\f143";
-}
-
-/* line 921, ../stylish/components/_fontawesome.scss */
-.fa-play-circle:before {
-  content: "\f144";
-}
-
-/* line 924, ../stylish/components/_fontawesome.scss */
-.fa-ticket:before {
-  content: "\f145";
-}
-
-/* line 927, ../stylish/components/_fontawesome.scss */
-.fa-minus-square:before {
-  content: "\f146";
-}
-
-/* line 930, ../stylish/components/_fontawesome.scss */
-.fa-minus-square-o:before {
-  content: "\f147";
-}
-
-/* line 933, ../stylish/components/_fontawesome.scss */
-.fa-level-up:before {
-  content: "\f148";
-}
-
-/* line 936, ../stylish/components/_fontawesome.scss */
-.fa-level-down:before {
-  content: "\f149";
-}
-
-/* line 939, ../stylish/components/_fontawesome.scss */
-.fa-check-square:before {
-  content: "\f14a";
-}
-
-/* line 942, ../stylish/components/_fontawesome.scss */
-.fa-pencil-square:before {
-  content: "\f14b";
-}
-
-/* line 945, ../stylish/components/_fontawesome.scss */
-.fa-external-link-square:before {
-  content: "\f14c";
-}
-
-/* line 948, ../stylish/components/_fontawesome.scss */
-.fa-share-square:before {
-  content: "\f14d";
-}
-
-/* line 951, ../stylish/components/_fontawesome.scss */
-.fa-compass:before {
-  content: "\f14e";
-}
-
-/* line 954, ../stylish/components/_fontawesome.scss */
-.fa-toggle-down:before,
-.fa-caret-square-o-down:before {
-  content: "\f150";
-}
-
-/* line 958, ../stylish/components/_fontawesome.scss */
-.fa-toggle-up:before,
-.fa-caret-square-o-up:before {
-  content: "\f151";
-}
-
-/* line 962, ../stylish/components/_fontawesome.scss */
-.fa-toggle-right:before,
-.fa-caret-square-o-right:before {
-  content: "\f152";
-}
-
-/* line 966, ../stylish/components/_fontawesome.scss */
-.fa-euro:before,
-.fa-eur:before {
-  content: "\f153";
-}
-
-/* line 970, ../stylish/components/_fontawesome.scss */
-.fa-gbp:before {
-  content: "\f154";
-}
-
-/* line 973, ../stylish/components/_fontawesome.scss */
-.fa-dollar:before,
-.fa-usd:before {
-  content: "\f155";
-}
-
-/* line 977, ../stylish/components/_fontawesome.scss */
-.fa-rupee:before,
-.fa-inr:before {
-  content: "\f156";
-}
-
-/* line 981, ../stylish/components/_fontawesome.scss */
-.fa-cny:before,
-.fa-rmb:before,
-.fa-yen:before,
-.fa-jpy:before {
-  content: "\f157";
-}
-
-/* line 987, ../stylish/components/_fontawesome.scss */
-.fa-ruble:before,
-.fa-rouble:before,
-.fa-rub:before {
-  content: "\f158";
-}
-
-/* line 992, ../stylish/components/_fontawesome.scss */
-.fa-won:before,
-.fa-krw:before {
-  content: "\f159";
-}
-
-/* line 996, ../stylish/components/_fontawesome.scss */
-.fa-bitcoin:before,
-.fa-btc:before {
-  content: "\f15a";
-}
-
-/* line 1000, ../stylish/components/_fontawesome.scss */
-.fa-file:before {
-  content: "\f15b";
-}
-
-/* line 1003, ../stylish/components/_fontawesome.scss */
-.fa-file-text:before {
-  content: "\f15c";
-}
-
-/* line 1006, ../stylish/components/_fontawesome.scss */
-.fa-sort-alpha-asc:before {
-  content: "\f15d";
-}
-
-/* line 1009, ../stylish/components/_fontawesome.scss */
-.fa-sort-alpha-desc:before {
-  content: "\f15e";
-}
-
-/* line 1012, ../stylish/components/_fontawesome.scss */
-.fa-sort-amount-asc:before {
-  content: "\f160";
-}
-
-/* line 1015, ../stylish/components/_fontawesome.scss */
-.fa-sort-amount-desc:before {
-  content: "\f161";
-}
-
-/* line 1018, ../stylish/components/_fontawesome.scss */
-.fa-sort-numeric-asc:before {
-  content: "\f162";
-}
-
-/* line 1021, ../stylish/components/_fontawesome.scss */
-.fa-sort-numeric-desc:before {
-  content: "\f163";
-}
-
-/* line 1024, ../stylish/components/_fontawesome.scss */
-.fa-thumbs-up:before {
-  content: "\f164";
-}
-
-/* line 1027, ../stylish/components/_fontawesome.scss */
-.fa-thumbs-down:before {
-  content: "\f165";
-}
-
-/* line 1030, ../stylish/components/_fontawesome.scss */
-.fa-youtube-square:before {
-  content: "\f166";
-}
-
-/* line 1033, ../stylish/components/_fontawesome.scss */
-.fa-youtube:before {
-  content: "\f167";
-}
-
-/* line 1036, ../stylish/components/_fontawesome.scss */
-.fa-xing:before {
-  content: "\f168";
-}
-
-/* line 1039, ../stylish/components/_fontawesome.scss */
-.fa-xing-square:before {
-  content: "\f169";
-}
-
-/* line 1042, ../stylish/components/_fontawesome.scss */
-.fa-youtube-play:before {
-  content: "\f16a";
-}
-
-/* line 1045, ../stylish/components/_fontawesome.scss */
-.fa-dropbox:before {
-  content: "\f16b";
-}
-
-/* line 1048, ../stylish/components/_fontawesome.scss */
-.fa-stack-overflow:before {
-  content: "\f16c";
-}
-
-/* line 1051, ../stylish/components/_fontawesome.scss */
-.fa-instagram:before {
-  content: "\f16d";
-}
-
-/* line 1054, ../stylish/components/_fontawesome.scss */
-.fa-flickr:before {
-  content: "\f16e";
-}
-
-/* line 1057, ../stylish/components/_fontawesome.scss */
-.fa-adn:before {
-  content: "\f170";
-}
-
-/* line 1060, ../stylish/components/_fontawesome.scss */
-.fa-bitbucket:before {
-  content: "\f171";
-}
-
-/* line 1063, ../stylish/components/_fontawesome.scss */
-.fa-bitbucket-square:before {
-  content: "\f172";
-}
-
-/* line 1066, ../stylish/components/_fontawesome.scss */
-.fa-tumblr:before {
-  content: "\f173";
-}
-
-/* line 1069, ../stylish/components/_fontawesome.scss */
-.fa-tumblr-square:before {
-  content: "\f174";
-}
-
-/* line 1072, ../stylish/components/_fontawesome.scss */
-.fa-long-arrow-down:before {
-  content: "\f175";
-}
-
-/* line 1075, ../stylish/components/_fontawesome.scss */
-.fa-long-arrow-up:before {
-  content: "\f176";
-}
-
-/* line 1078, ../stylish/components/_fontawesome.scss */
-.fa-long-arrow-left:before {
-  content: "\f177";
-}
-
-/* line 1081, ../stylish/components/_fontawesome.scss */
-.fa-long-arrow-right:before {
-  content: "\f178";
-}
-
-/* line 1084, ../stylish/components/_fontawesome.scss */
-.fa-apple:before {
-  content: "\f179";
-}
-
-/* line 1087, ../stylish/components/_fontawesome.scss */
-.fa-windows:before {
-  content: "\f17a";
-}
-
-/* line 1090, ../stylish/components/_fontawesome.scss */
-.fa-android:before {
-  content: "\f17b";
-}
-
-/* line 1093, ../stylish/components/_fontawesome.scss */
-.fa-linux:before {
-  content: "\f17c";
-}
-
-/* line 1096, ../stylish/components/_fontawesome.scss */
-.fa-dribbble:before {
-  content: "\f17d";
-}
-
-/* line 1099, ../stylish/components/_fontawesome.scss */
-.fa-skype:before {
-  content: "\f17e";
-}
-
-/* line 1102, ../stylish/components/_fontawesome.scss */
-.fa-foursquare:before {
-  content: "\f180";
-}
-
-/* line 1105, ../stylish/components/_fontawesome.scss */
-.fa-trello:before {
-  content: "\f181";
-}
-
-/* line 1108, ../stylish/components/_fontawesome.scss */
-.fa-female:before {
-  content: "\f182";
-}
-
-/* line 1111, ../stylish/components/_fontawesome.scss */
-.fa-male:before {
-  content: "\f183";
-}
-
-/* line 1114, ../stylish/components/_fontawesome.scss */
-.fa-gittip:before {
-  content: "\f184";
-}
-
-/* line 1117, ../stylish/components/_fontawesome.scss */
-.fa-sun-o:before {
-  content: "\f185";
-}
-
-/* line 1120, ../stylish/components/_fontawesome.scss */
-.fa-moon-o:before {
-  content: "\f186";
-}
-
-/* line 1123, ../stylish/components/_fontawesome.scss */
-.fa-archive:before {
-  content: "\f187";
-}
-
-/* line 1126, ../stylish/components/_fontawesome.scss */
-.fa-bug:before {
-  content: "\f188";
-}
-
-/* line 1129, ../stylish/components/_fontawesome.scss */
-.fa-vk:before {
-  content: "\f189";
-}
-
-/* line 1132, ../stylish/components/_fontawesome.scss */
-.fa-weibo:before {
-  content: "\f18a";
-}
-
-/* line 1135, ../stylish/components/_fontawesome.scss */
-.fa-renren:before {
-  content: "\f18b";
-}
-
-/* line 1138, ../stylish/components/_fontawesome.scss */
-.fa-pagelines:before {
-  content: "\f18c";
-}
-
-/* line 1141, ../stylish/components/_fontawesome.scss */
-.fa-stack-exchange:before {
-  content: "\f18d";
-}
-
-/* line 1144, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-o-right:before {
-  content: "\f18e";
-}
-
-/* line 1147, ../stylish/components/_fontawesome.scss */
-.fa-arrow-circle-o-left:before {
-  content: "\f190";
-}
-
-/* line 1150, ../stylish/components/_fontawesome.scss */
-.fa-toggle-left:before,
-.fa-caret-square-o-left:before {
-  content: "\f191";
-}
-
-/* line 1154, ../stylish/components/_fontawesome.scss */
-.fa-dot-circle-o:before {
-  content: "\f192";
-}
-
-/* line 1157, ../stylish/components/_fontawesome.scss */
-.fa-wheelchair:before {
-  content: "\f193";
-}
-
-/* line 1160, ../stylish/components/_fontawesome.scss */
-.fa-vimeo-square:before {
-  content: "\f194";
-}
-
-/* line 1163, ../stylish/components/_fontawesome.scss */
-.fa-turkish-lira:before,
-.fa-try:before {
-  content: "\f195";
-}
-
-/* line 1167, ../stylish/components/_fontawesome.scss */
-.fa-plus-square-o:before {
-  content: "\f196";
-}
-
-/* line 1170, ../stylish/components/_fontawesome.scss */
-.fa-space-shuttle:before {
-  content: "\f197";
-}
-
-/* line 1173, ../stylish/components/_fontawesome.scss */
-.fa-slack:before {
-  content: "\f198";
-}
-
-/* line 1176, ../stylish/components/_fontawesome.scss */
-.fa-envelope-square:before {
-  content: "\f199";
-}
-
-/* line 1179, ../stylish/components/_fontawesome.scss */
-.fa-wordpress:before {
-  content: "\f19a";
-}
-
-/* line 1182, ../stylish/components/_fontawesome.scss */
-.fa-openid:before {
-  content: "\f19b";
-}
-
-/* line 1185, ../stylish/components/_fontawesome.scss */
-.fa-institution:before,
-.fa-bank:before,
-.fa-university:before {
-  content: "\f19c";
-}
-
-/* line 1190, ../stylish/components/_fontawesome.scss */
-.fa-mortar-board:before,
-.fa-graduation-cap:before {
-  content: "\f19d";
-}
-
-/* line 1194, ../stylish/components/_fontawesome.scss */
-.fa-yahoo:before {
-  content: "\f19e";
-}
-
-/* line 1197, ../stylish/components/_fontawesome.scss */
-.fa-google:before {
-  content: "\f1a0";
-}
-
-/* line 1200, ../stylish/components/_fontawesome.scss */
-.fa-reddit:before {
-  content: "\f1a1";
-}
-
-/* line 1203, ../stylish/components/_fontawesome.scss */
-.fa-reddit-square:before {
-  content: "\f1a2";
-}
-
-/* line 1206, ../stylish/components/_fontawesome.scss */
-.fa-stumbleupon-circle:before {
-  content: "\f1a3";
-}
-
-/* line 1209, ../stylish/components/_fontawesome.scss */
-.fa-stumbleupon:before {
-  content: "\f1a4";
-}
-
-/* line 1212, ../stylish/components/_fontawesome.scss */
-.fa-delicious:before {
-  content: "\f1a5";
-}
-
-/* line 1215, ../stylish/components/_fontawesome.scss */
-.fa-digg:before {
-  content: "\f1a6";
-}
-
-/* line 1218, ../stylish/components/_fontawesome.scss */
-.fa-pied-piper:before {
-  content: "\f1a7";
-}
-
-/* line 1221, ../stylish/components/_fontawesome.scss */
-.fa-pied-piper-alt:before {
-  content: "\f1a8";
-}
-
-/* line 1224, ../stylish/components/_fontawesome.scss */
-.fa-drupal:before {
-  content: "\f1a9";
-}
-
-/* line 1227, ../stylish/components/_fontawesome.scss */
-.fa-joomla:before {
-  content: "\f1aa";
-}
-
-/* line 1230, ../stylish/components/_fontawesome.scss */
-.fa-language:before {
-  content: "\f1ab";
-}
-
-/* line 1233, ../stylish/components/_fontawesome.scss */
-.fa-fax:before {
-  content: "\f1ac";
-}
-
-/* line 1236, ../stylish/components/_fontawesome.scss */
-.fa-building:before {
-  content: "\f1ad";
-}
-
-/* line 1239, ../stylish/components/_fontawesome.scss */
-.fa-child:before {
-  content: "\f1ae";
-}
-
-/* line 1242, ../stylish/components/_fontawesome.scss */
-.fa-paw:before {
-  content: "\f1b0";
-}
-
-/* line 1245, ../stylish/components/_fontawesome.scss */
-.fa-spoon:before {
-  content: "\f1b1";
-}
-
-/* line 1248, ../stylish/components/_fontawesome.scss */
-.fa-cube:before {
-  content: "\f1b2";
-}
-
-/* line 1251, ../stylish/components/_fontawesome.scss */
-.fa-cubes:before {
-  content: "\f1b3";
-}
-
-/* line 1254, ../stylish/components/_fontawesome.scss */
-.fa-behance:before {
-  content: "\f1b4";
-}
-
-/* line 1257, ../stylish/components/_fontawesome.scss */
-.fa-behance-square:before {
-  content: "\f1b5";
-}
-
-/* line 1260, ../stylish/components/_fontawesome.scss */
-.fa-steam:before {
-  content: "\f1b6";
-}
-
-/* line 1263, ../stylish/components/_fontawesome.scss */
-.fa-steam-square:before {
-  content: "\f1b7";
-}
-
-/* line 1266, ../stylish/components/_fontawesome.scss */
-.fa-recycle:before {
-  content: "\f1b8";
-}
-
-/* line 1269, ../stylish/components/_fontawesome.scss */
-.fa-automobile:before,
-.fa-car:before {
-  content: "\f1b9";
-}
-
-/* line 1273, ../stylish/components/_fontawesome.scss */
-.fa-cab:before,
-.fa-taxi:before {
-  content: "\f1ba";
-}
-
-/* line 1277, ../stylish/components/_fontawesome.scss */
-.fa-tree:before {
-  content: "\f1bb";
-}
-
-/* line 1280, ../stylish/components/_fontawesome.scss */
-.fa-spotify:before {
-  content: "\f1bc";
-}
-
-/* line 1283, ../stylish/components/_fontawesome.scss */
-.fa-deviantart:before {
-  content: "\f1bd";
-}
-
-/* line 1286, ../stylish/components/_fontawesome.scss */
-.fa-soundcloud:before {
-  content: "\f1be";
-}
-
-/* line 1289, ../stylish/components/_fontawesome.scss */
-.fa-database:before {
-  content: "\f1c0";
-}
-
-/* line 1292, ../stylish/components/_fontawesome.scss */
-.fa-file-pdf-o:before {
-  content: "\f1c1";
-}
-
-/* line 1295, ../stylish/components/_fontawesome.scss */
-.fa-file-word-o:before {
-  content: "\f1c2";
-}
-
-/* line 1298, ../stylish/components/_fontawesome.scss */
-.fa-file-excel-o:before {
-  content: "\f1c3";
-}
-
-/* line 1301, ../stylish/components/_fontawesome.scss */
-.fa-file-powerpoint-o:before {
-  content: "\f1c4";
-}
-
-/* line 1304, ../stylish/components/_fontawesome.scss */
-.fa-file-photo-o:before,
-.fa-file-picture-o:before,
-.fa-file-image-o:before {
-  content: "\f1c5";
-}
-
-/* line 1309, ../stylish/components/_fontawesome.scss */
-.fa-file-zip-o:before,
-.fa-file-archive-o:before {
-  content: "\f1c6";
-}
-
-/* line 1313, ../stylish/components/_fontawesome.scss */
-.fa-file-sound-o:before,
-.fa-file-audio-o:before {
-  content: "\f1c7";
-}
-
-/* line 1317, ../stylish/components/_fontawesome.scss */
-.fa-file-movie-o:before,
-.fa-file-video-o:before {
-  content: "\f1c8";
-}
-
-/* line 1321, ../stylish/components/_fontawesome.scss */
-.fa-file-code-o:before {
-  content: "\f1c9";
-}
-
-/* line 1324, ../stylish/components/_fontawesome.scss */
-.fa-vine:before {
-  content: "\f1ca";
-}
-
-/* line 1327, ../stylish/components/_fontawesome.scss */
-.fa-codepen:before {
-  content: "\f1cb";
-}
-
-/* line 1330, ../stylish/components/_fontawesome.scss */
-.fa-jsfiddle:before {
-  content: "\f1cc";
-}
-
-/* line 1333, ../stylish/components/_fontawesome.scss */
-.fa-life-bouy:before,
-.fa-life-buoy:before,
-.fa-life-saver:before,
-.fa-support:before,
-.fa-life-ring:before {
-  content: "\f1cd";
-}
-
-/* line 1340, ../stylish/components/_fontawesome.scss */
-.fa-circle-o-notch:before {
-  content: "\f1ce";
-}
-
-/* line 1343, ../stylish/components/_fontawesome.scss */
-.fa-ra:before,
-.fa-rebel:before {
-  content: "\f1d0";
-}
-
-/* line 1347, ../stylish/components/_fontawesome.scss */
-.fa-ge:before,
-.fa-empire:before {
-  content: "\f1d1";
-}
-
-/* line 1351, ../stylish/components/_fontawesome.scss */
-.fa-git-square:before {
-  content: "\f1d2";
-}
-
-/* line 1354, ../stylish/components/_fontawesome.scss */
-.fa-git:before {
-  content: "\f1d3";
-}
-
-/* line 1357, ../stylish/components/_fontawesome.scss */
-.fa-hacker-news:before {
-  content: "\f1d4";
-}
-
-/* line 1360, ../stylish/components/_fontawesome.scss */
-.fa-tencent-weibo:before {
-  content: "\f1d5";
-}
-
-/* line 1363, ../stylish/components/_fontawesome.scss */
-.fa-qq:before {
-  content: "\f1d6";
-}
-
-/* line 1366, ../stylish/components/_fontawesome.scss */
-.fa-wechat:before,
-.fa-weixin:before {
-  content: "\f1d7";
-}
-
-/* line 1370, ../stylish/components/_fontawesome.scss */
-.fa-send:before,
-.fa-paper-plane:before {
-  content: "\f1d8";
-}
-
-/* line 1374, ../stylish/components/_fontawesome.scss */
-.fa-send-o:before,
-.fa-paper-plane-o:before {
-  content: "\f1d9";
-}
-
-/* line 1378, ../stylish/components/_fontawesome.scss */
-.fa-history:before {
-  content: "\f1da";
-}
-
-/* line 1381, ../stylish/components/_fontawesome.scss */
-.fa-circle-thin:before {
-  content: "\f1db";
-}
-
-/* line 1384, ../stylish/components/_fontawesome.scss */
-.fa-header:before {
-  content: "\f1dc";
-}
-
-/* line 1387, ../stylish/components/_fontawesome.scss */
-.fa-paragraph:before {
-  content: "\f1dd";
-}
-
-/* line 1390, ../stylish/components/_fontawesome.scss */
-.fa-sliders:before {
-  content: "\f1de";
-}
-
-/* line 1393, ../stylish/components/_fontawesome.scss */
-.fa-share-alt:before {
-  content: "\f1e0";
-}
-
-/* line 1396, ../stylish/components/_fontawesome.scss */
-.fa-share-alt-square:before {
-  content: "\f1e1";
-}
-
-/* line 1399, ../stylish/components/_fontawesome.scss */
-.fa-bomb:before {
-  content: "\f1e2";
-}
-
-/* line 1402, ../stylish/components/_fontawesome.scss */
-.fa-soccer-ball-o:before,
-.fa-futbol-o:before {
-  content: "\f1e3";
-}
-
-/* line 1406, ../stylish/components/_fontawesome.scss */
-.fa-tty:before {
-  content: "\f1e4";
-}
-
-/* line 1409, ../stylish/components/_fontawesome.scss */
-.fa-binoculars:before {
-  content: "\f1e5";
-}
-
-/* line 1412, ../stylish/components/_fontawesome.scss */
-.fa-plug:before {
-  content: "\f1e6";
-}
-
-/* line 1415, ../stylish/components/_fontawesome.scss */
-.fa-slideshare:before {
-  content: "\f1e7";
-}
-
-/* line 1418, ../stylish/components/_fontawesome.scss */
-.fa-twitch:before {
-  content: "\f1e8";
-}
-
-/* line 1421, ../stylish/components/_fontawesome.scss */
-.fa-yelp:before {
-  content: "\f1e9";
-}
-
-/* line 1424, ../stylish/components/_fontawesome.scss */
-.fa-newspaper-o:before {
-  content: "\f1ea";
-}
-
-/* line 1427, ../stylish/components/_fontawesome.scss */
-.fa-wifi:before {
-  content: "\f1eb";
-}
-
-/* line 1430, ../stylish/components/_fontawesome.scss */
-.fa-calculator:before {
-  content: "\f1ec";
-}
-
-/* line 1433, ../stylish/components/_fontawesome.scss */
-.fa-paypal:before {
-  content: "\f1ed";
-}
-
-/* line 1436, ../stylish/components/_fontawesome.scss */
-.fa-google-wallet:before {
-  content: "\f1ee";
-}
-
-/* line 1439, ../stylish/components/_fontawesome.scss */
-.fa-cc-visa:before {
-  content: "\f1f0";
-}
-
-/* line 1442, ../stylish/components/_fontawesome.scss */
-.fa-cc-mastercard:before {
-  content: "\f1f1";
-}
-
-/* line 1445, ../stylish/components/_fontawesome.scss */
-.fa-cc-discover:before {
-  content: "\f1f2";
-}
-
-/* line 1448, ../stylish/components/_fontawesome.scss */
-.fa-cc-amex:before {
-  content: "\f1f3";
-}
-
-/* line 1451, ../stylish/components/_fontawesome.scss */
-.fa-cc-paypal:before {
-  content: "\f1f4";
-}
-
-/* line 1454, ../stylish/components/_fontawesome.scss */
-.fa-cc-stripe:before {
-  content: "\f1f5";
-}
-
-/* line 1457, ../stylish/components/_fontawesome.scss */
-.fa-bell-slash:before {
-  content: "\f1f6";
-}
-
-/* line 1460, ../stylish/components/_fontawesome.scss */
-.fa-bell-slash-o:before {
-  content: "\f1f7";
-}
-
-/* line 1463, ../stylish/components/_fontawesome.scss */
-.fa-trash:before {
-  content: "\f1f8";
-}
-
-/* line 1466, ../stylish/components/_fontawesome.scss */
-.fa-copyright:before {
-  content: "\f1f9";
-}
-
-/* line 1469, ../stylish/components/_fontawesome.scss */
-.fa-at:before {
-  content: "\f1fa";
-}
-
-/* line 1472, ../stylish/components/_fontawesome.scss */
-.fa-eyedropper:before {
-  content: "\f1fb";
-}
-
-/* line 1475, ../stylish/components/_fontawesome.scss */
-.fa-paint-brush:before {
-  content: "\f1fc";
-}
-
-/* line 1478, ../stylish/components/_fontawesome.scss */
-.fa-birthday-cake:before {
-  content: "\f1fd";
-}
-
-/* line 1481, ../stylish/components/_fontawesome.scss */
-.fa-area-chart:before {
-  content: "\f1fe";
-}
-
-/* line 1484, ../stylish/components/_fontawesome.scss */
-.fa-pie-chart:before {
-  content: "\f200";
-}
-
-/* line 1487, ../stylish/components/_fontawesome.scss */
-.fa-line-chart:before {
-  content: "\f201";
-}
-
-/* line 1490, ../stylish/components/_fontawesome.scss */
-.fa-lastfm:before {
-  content: "\f202";
-}
-
-/* line 1493, ../stylish/components/_fontawesome.scss */
-.fa-lastfm-square:before {
-  content: "\f203";
-}
-
-/* line 1496, ../stylish/components/_fontawesome.scss */
-.fa-toggle-off:before {
-  content: "\f204";
-}
-
-/* line 1499, ../stylish/components/_fontawesome.scss */
-.fa-toggle-on:before {
-  content: "\f205";
-}
-
-/* line 1502, ../stylish/components/_fontawesome.scss */
-.fa-bicycle:before {
-  content: "\f206";
-}
-
-/* line 1505, ../stylish/components/_fontawesome.scss */
-.fa-bus:before {
-  content: "\f207";
-}
-
-/* line 1508, ../stylish/components/_fontawesome.scss */
-.fa-ioxhost:before {
-  content: "\f208";
-}
-
-/* line 1511, ../stylish/components/_fontawesome.scss */
-.fa-angellist:before {
-  content: "\f209";
-}
-
-/* line 1514, ../stylish/components/_fontawesome.scss */
-.fa-cc:before {
-  content: "\f20a";
-}
-
-/* line 1517, ../stylish/components/_fontawesome.scss */
-.fa-shekel:before,
-.fa-sheqel:before,
-.fa-ils:before {
-  content: "\f20b";
-}
-
-/* line 1522, ../stylish/components/_fontawesome.scss */
-.fa-meanpath:before {
-  content: "\f20c";
 }
 
 /* LAYOUT FILES MERGE */
@@ -6400,6 +4016,20 @@ table th.last, table td.last {
 /* HEADER LAYOUT */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* COMMON STUFF */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+.grid_correction .grid_fluid {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+.grid_correction .grid_fluid [class*='col_'] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* MAIN CONTENT LAYOUT */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -6413,302 +4043,303 @@ table th.last, table td.last {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* FOOTER LAYOUT */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* SINGLE LAYOUT */
+/* LAYOUT PROJECT FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* GLOBAL STYLING */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /*  GLOBAL OVERRIDE STYLE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 5, ../stylish/global/_global.scss */
-.hide {
+.hide,
+.no-display {
   display: none;
 }
 
-/* line 6, ../stylish/global/_global.scss */
+/* line 7, ../stylish/global/_global.scss */
 .show {
   display: block;
 }
 
-/* line 8, ../stylish/global/_global.scss */
+/* line 9, ../stylish/global/_global.scss */
 .left {
   float: left;
 }
 
-/* line 9, ../stylish/global/_global.scss */
+/* line 10, ../stylish/global/_global.scss */
 .right {
   float: right;
 }
 
-/* line 11, ../stylish/global/_global.scss */
+/* line 12, ../stylish/global/_global.scss */
 .no_res {
   width: auto;
   height: auto;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom100 {
   margin-bottom: 100px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top100 {
   margin-top: 100px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom100 {
   padding-bottom: 100px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top100 {
   padding-top: 100px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom90 {
   margin-bottom: 90px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top90 {
   margin-top: 90px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom90 {
   padding-bottom: 90px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top90 {
   padding-top: 90px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom80 {
   margin-bottom: 80px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top80 {
   margin-top: 80px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom80 {
   padding-bottom: 80px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top80 {
   padding-top: 80px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom70 {
   margin-bottom: 70px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top70 {
   margin-top: 70px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom70 {
   padding-bottom: 70px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top70 {
   padding-top: 70px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom60 {
   margin-bottom: 60px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top60 {
   margin-top: 60px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom60 {
   padding-bottom: 60px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top60 {
   padding-top: 60px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom50 {
   margin-bottom: 50px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top50 {
   margin-top: 50px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom50 {
   padding-bottom: 50px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top50 {
   padding-top: 50px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom40 {
   margin-bottom: 40px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top40 {
   margin-top: 40px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom40 {
   padding-bottom: 40px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top40 {
   padding-top: 40px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom30 {
   margin-bottom: 30px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top30 {
   margin-top: 30px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom30 {
   padding-bottom: 30px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top30 {
   padding-top: 30px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom20 {
   margin-bottom: 20px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top20 {
   margin-top: 20px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom20 {
   padding-bottom: 20px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top20 {
   padding-top: 20px;
 }
 
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 463, ../stylish/global/_mixins.scss */
 .m_bottom10 {
   margin-bottom: 10px;
 }
 
-/* line 384, ../stylish/global/_mixins.scss */
+/* line 464, ../stylish/global/_mixins.scss */
 .m_top10 {
   margin-top: 10px;
 }
 
-/* line 385, ../stylish/global/_mixins.scss */
+/* line 465, ../stylish/global/_mixins.scss */
 .p_bottom10 {
   padding-bottom: 10px;
 }
 
-/* line 386, ../stylish/global/_mixins.scss */
+/* line 466, ../stylish/global/_mixins.scss */
 .p_top10 {
   padding-top: 10px;
 }
 
 /* Padding clear */
-/* line 19, ../stylish/global/_global.scss */
+/* line 20, ../stylish/global/_global.scss */
 .p_clear_left {
   padding-left: 0;
 }
 
-/* line 20, ../stylish/global/_global.scss */
+/* line 21, ../stylish/global/_global.scss */
 .p_clear_right {
   padding-right: 0;
 }
 
-/* line 21, ../stylish/global/_global.scss */
+/* line 22, ../stylish/global/_global.scss */
 .p_clear_top {
   padding-top: 0;
 }
 
-/* line 22, ../stylish/global/_global.scss */
+/* line 23, ../stylish/global/_global.scss */
 .p_clear_bottom {
   padding-bottom: 0;
 }
 
-/* line 23, ../stylish/global/_global.scss */
+/* line 24, ../stylish/global/_global.scss */
 .p_clear {
   padding: 0;
 }
 
 /* Margin clear */
-/* line 27, ../stylish/global/_global.scss */
+/* line 28, ../stylish/global/_global.scss */
 .m_clear_left {
   margin-left: 0;
 }
 
-/* line 28, ../stylish/global/_global.scss */
+/* line 29, ../stylish/global/_global.scss */
 .m_clear_right {
   margin-right: 0;
 }
 
-/* line 29, ../stylish/global/_global.scss */
+/* line 30, ../stylish/global/_global.scss */
 .m_clear_top {
   margin-top: 0;
 }
 
-/* line 30, ../stylish/global/_global.scss */
+/* line 31, ../stylish/global/_global.scss */
 .m_clear_bottom {
   margin-bottom: 0;
 }
 
-/* line 31, ../stylish/global/_global.scss */
+/* line 32, ../stylish/global/_global.scss */
 .m_clear {
   margin: 0;
 }
 
 /* Text align */
-/* line 36, ../stylish/global/_global.scss */
+/* line 37, ../stylish/global/_global.scss */
 .aleft, .a_left, .a-left {
   text-align: left;
 }
 
-/* line 37, ../stylish/global/_global.scss */
+/* line 38, ../stylish/global/_global.scss */
 .aright, .a_right, .a-right {
   text-align: right;
 }
 
-/* line 38, ../stylish/global/_global.scss */
+/* line 39, ../stylish/global/_global.scss */
 .acenter, .a_center, .a-center {
   text-align: center;
 }

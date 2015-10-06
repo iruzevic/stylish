@@ -6,7 +6,7 @@
         <div class="content">
 
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position left, Arrow top</a>
+                <div class="disabled btn tooltip_trigger">Position left, Arrow top</div>
                 <div class="tip inactive" data-tip-position="left" data-tip-arrow="top">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -15,16 +15,16 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position left, Arrow center</a>
+                <div class="disabled btn tooltip_trigger">Position left, Arrow center</div>
                 <div class="tip inactive" data-tip-position="left" data-tip-arrow="center">
                     <h4>This is title</h4>
                     <p>This is content</p>
                 </div>
-            </div>
+            </div >
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position left, Arrow bottom</a>
+                <div class="disabled btn tooltip_trigger">Position left, Arrow bottom</div>
                 <div class="tip inactive" data-tip-position="left" data-tip-arrow="bottom">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -33,7 +33,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position right, Arrow top</a>
+                <div class="disabled btn tooltip_trigger">Position right, Arrow top</div>
                 <div class="tip inactive" data-tip-position="right" data-tip-arrow="top">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -42,7 +42,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position right, Arrow center</a>
+                <div class="disabled btn tooltip_trigger">Position right, Arrow center</div>
                 <div class="tip inactive" data-tip-position="right" data-tip-arrow="center">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -51,7 +51,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position right, Arrow bottom</a>
+                <div class="disabled btn tooltip_trigger">Position right, Arrow bottom</div>
                 <div class="tip inactive" data-tip-position="right" data-tip-arrow="bottom">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -60,7 +60,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position top, Arrow left</a>
+                <div class="disabled btn tooltip_trigger">Position top, Arrow left</div>
                 <div class="tip inactive" data-tip-position="top" data-tip-arrow="left">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -69,7 +69,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position top, Arrow center</a>
+                <div class="disabled btn tooltip_trigger">Position top, Arrow center</div>
                 <div class="tip inactive" data-tip-position="top" data-tip-arrow="center">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -78,7 +78,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position top, Arrow right</a>
+                <div class="disabled btn tooltip_trigger">Position top, Arrow right</div>
                 <div class="tip inactive" data-tip-position="top" data-tip-arrow="right">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -87,7 +87,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position bottom, Arrow left</a>
+                <div class="disabled btn tooltip_trigger">Position bottom, Arrow left</div>
                 <div class="tip inactive" data-tip-position="bottom" data-tip-arrow="left">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -96,7 +96,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position bottom, Arrow center</a>
+                <div class="disabled btn tooltip_trigger">Position bottom, Arrow center</div>
                 <div class="tip inactive" data-tip-position="bottom" data-tip-arrow="center">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -105,7 +105,7 @@
             <br/>
             <br/>
             <div class="tooltip">
-                <a href="#" class="disabled btn tooltip_trigger">Position bottom, Arrow right</a>
+                <div class="disabled btn tooltip_trigger">Position bottom, Arrow right</div>
                 <div class="tip inactive" data-tip-position="bottom" data-tip-arrow="right">
                     <h4>This is title</h4>
                     <p>This is content</p>
@@ -130,7 +130,7 @@
         <div class="source">
             <pre class="brush: xml;">
                 <div class="tooltip">
-                    <a href="#" class="disabled btn tooltip_trigger">Position left, Arrow top</a>
+                    <div class="disabled btn tooltip_trigger">Position left, Arrow top</div>
                     <div class="tip inactive" data-tip-position="left" data-tip-arrow="top">
                         <h4>This is title</h4>
                         <p>This is content</p>

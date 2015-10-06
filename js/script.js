@@ -265,113 +265,145 @@ function select($id){
 
 //Tooltip script
 function tooltip() {
-    jQuery('.tooltip_trigger').on({
-        mouseover: function () {
+    var $trigger = jQuery('.tooltip_trigger');
 
-            //Set variables and selectors
+    if (Modernizr.touch) {
+        $trigger.on('click', function (e) {
+            e.preventDefault();
             var $this = jQuery(this),
-                $tip = $this.closest('.tooltip').find('.tip'),
-                $position = $tip.attr('data-tip-position'),
-                $arrow = $tip.attr('data-tip-arrow'),
-                $el_width = $this.outerWidth(),
-                $el_height = $this.outerHeight(),
-                $tip_width = $tip.outerWidth(),
-                $tip_height = $tip.outerHeight(),
-                $arrow_size = 10,
-                $arrow_move = $arrow_size*2,
-                $style, $top, $left, $bottom, $right = '';
+                $tip = $this.closest('.tooltip').find('.tip');
 
-
-            //Check if attributes are set
-            if($position == '' || $position == undefined){
-                $position = 'bottom';
-                $tip.attr('data-tip-position', $position)
-            }
-            if($arrow == '' || $arrow == undefined){
-                $arrow = 'center';
-                $tip.attr('data-tip-arrow', $arrow)
-            }
-            if($arrow_size == '' || $arrow_size == undefined){
-                $arrow_size = 10;
+            if($tip.hasClass('inactive')){
+                hide_all_tips();
+                show_tip(this);
+            }else{
+                hide_tip(this);
             }
 
-            //Set positions of tip
-            if ($position == 'top') {
-                $bottom = $el_height + $arrow_move;
-                $top = 'auto'
+        });
+    }else{
+        $trigger.on({
+            mouseover: function (e) {
+                e.preventDefault();
+                show_tip(this);
+            },
+            mouseout: function (e) {
+                e.preventDefault();
+                hide_tip(this);
             }
-            //Set positions of tip
-            if ($position == 'bottom') {
-                $top = $el_height + $arrow_move;
-                $bottom = 'auto'
-            }
-            //Set positions of tip
-            if ($position == 'right') {
-                $right = -($tip_width + $arrow_move);
-                $left = 'auto'
-            }
-            //Set positions of tip
-            if ($position == 'left') {
-                $left = -($tip_width + $arrow_move);
-                $right = 'auto'
-            }
+        });
+    }
 
-            //Set positions of arrow
-            if ($position == 'top' || $position == 'bottom') {
-                switch ($arrow){
-                    case 'left':
-                        $left = ($el_width/2)-$arrow_size-$arrow_move;
-                        $right = 'auto';
-                        break;
-                    case 'center':
-                        $left = ($el_width/2)-($tip_width/2);
-                        $right = 'auto';
-                        break;
-                    case 'right':
-                        $left = 'auto';
-                        $right = ($el_width/2)-$arrow_size-$arrow_move;
-                        break;
-                }
-            }
 
-            //Set positions of arrow
-            if ($position == 'left' || $position == 'right') {
-                switch ($arrow){
-                    case 'top':
-                        $top = ($el_height/2)-$arrow_size-$arrow_move;
-                        $bottom = 'auto';
-                        break;
-                    case 'center':
-                        $top = ($el_height/2)-($tip_height/2);
-                        $bottom = 'auto';
-                        break;
-                    case 'bottom':
-                        $top = 'auto';
-                        $bottom = ($el_height/2)-$arrow_size-$arrow_move;
-                        break;
-                }
-            }
+    function show_tip($this){
+        //Set variables and selectors
+        $this = jQuery($this);
+        var $tip = $this.closest('.tooltip').find('.tip'),
+            $position = $tip.attr('data-tip-position'),
+            $arrow = $tip.attr('data-tip-arrow'),
+            $el_width = $this.outerWidth(),
+            $el_height = $this.outerHeight(),
+            $tip_width = $tip.outerWidth(),
+            $tip_height = $tip.outerHeight(),
+            $arrow_size = 10,
+            $arrow_move = $arrow_size*2,
+            $style, $top, $left, $bottom, $right = '';
 
-            $style = {
-                'width':  $tip_width,
-                'top':    $top,
-                'bottom': $bottom,
-                'left':   $left,
-                'right':  $right
-            };
 
-            jQuery($tip).css($style).removeClass('inactive');
-        },
-        mouseout: function () {
-            var $this = jQuery(this),
-                $tip = $this.closest('.tooltip').find('.tip'),
-                $dont_hide = $tip.attr('data-hide');
+        //Check if attributes are set
+        if($position == '' || $position == undefined){
+            $position = 'bottom';
+            $tip.attr('data-tip-position', $position)
+        }
+        if($arrow == '' || $arrow == undefined){
+            $arrow = 'center';
+            $tip.attr('data-tip-arrow', $arrow)
+        }
+        if($arrow_size == '' || $arrow_size == undefined){
+            $arrow_size = 10;
+        }
 
-            if($dont_hide == '' || $dont_hide == undefined || $dont_hide == 'true' ){
-                $tip.addClass('inactive');
+        //Set positions of tip
+        if ($position == 'top') {
+            $bottom = $el_height + $arrow_move;
+            $top = 'auto'
+        }
+        //Set positions of tip
+        if ($position == 'bottom') {
+            $top = $el_height + $arrow_move;
+            $bottom = 'auto'
+        }
+        //Set positions of tip
+        if ($position == 'right') {
+            $right = -($tip_width + $arrow_move);
+            $left = 'auto'
+        }
+        //Set positions of tip
+        if ($position == 'left') {
+            $left = -($tip_width + $arrow_move);
+            $right = 'auto'
+        }
+
+        //Set positions of arrow
+        if ($position == 'top' || $position == 'bottom') {
+            switch ($arrow){
+                case 'left':
+                    $left = ($el_width/2)-$arrow_size-$arrow_move;
+                    $right = 'auto';
+                    break;
+                case 'center':
+                    $left = ($el_width/2)-($tip_width/2);
+                    $right = 'auto';
+                    break;
+                case 'right':
+                    $left = 'auto';
+                    $right = ($el_width/2)-$arrow_size-$arrow_move;
+                    break;
             }
         }
-    });
+
+        //Set positions of arrow
+        if ($position == 'left' || $position == 'right') {
+            switch ($arrow){
+                case 'top':
+                    $top = ($el_height/2)-$arrow_size-$arrow_move;
+                    $bottom = 'auto';
+                    break;
+                case 'center':
+                    $top = ($el_height/2)-($tip_height/2);
+                    $bottom = 'auto';
+                    break;
+                case 'bottom':
+                    $top = 'auto';
+                    $bottom = ($el_height/2)-$arrow_size-$arrow_move;
+                    break;
+            }
+        }
+
+        $style = {
+            'width':  $tip_width,
+            'top':    $top,
+            'bottom': $bottom,
+            'left':   $left,
+            'right':  $right
+        };
+
+        jQuery($tip).css($style).removeClass('inactive');
+    }
+
+    function hide_tip($this){
+        $this = jQuery($this);
+        var $tip = $this.closest('.tooltip').find('.tip'),
+            $dont_hide = $tip.attr('data-hide');
+
+        if($dont_hide == '' || $dont_hide == undefined || $dont_hide == 'true' ){
+            $tip.addClass('inactive');
+        }
+    }
+
+    function hide_all_tips(){
+        jQuery('.tip').addClass('inactive');
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -543,7 +575,7 @@ function modal(){
         $modal = jQuery($modal_id);
 
     //Open on click
-    jQuery('.open_modal').on('click', function(e) {
+    jQuery('.open_modal, .modal_open').on('click', function(e) {
         e.preventDefault();
         var $id = jQuery(this).attr('data-modal');
         modal_open($id);
@@ -568,7 +600,7 @@ function modal(){
     });
 
     //Close modal on .close_modal class
-    jQuery('.close_modal').on('click', function (e) {
+    jQuery('.close_modal, .modal_close').on('click', function (e) {
         e.preventDefault();
         var $modal = jQuery(this).closest('.modal'),
             $id = $modal.attr('data-modal'),
@@ -637,14 +669,20 @@ function modal_calculate_center($id){
 
 //Make and object stick to the top on scroll
 function sticky($id){
-    jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > 1){
-            jQuery($id).addClass("sticky");
-        }
-        else{
-            jQuery($id).removeClass("sticky");
-        }
-    });
+
+    $id = jQuery($id);
+
+    if($id.length){
+        var $item = $id.offset().top;
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() >= $item){
+                $id.addClass("sticky");
+            }
+            else{
+                $id.removeClass("sticky");
+            }
+        });
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////////

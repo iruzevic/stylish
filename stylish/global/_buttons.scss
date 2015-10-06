@@ -7,7 +7,7 @@ button,
 input[type=submit],
 input[type=button],
 input[type=reset]{
-  @include btn_style();
+  @include btn_style($btn_transform, $btn_font_family, $btn_radius, $btn_border_width, $btn_border_style, $btn_txt_align, $btn_width, $btn_txt_weight, $btn_display, $btn_white_space, $btn_txt_decoration, $btn_cursor, $btn_margin);
   @include btn_color();
   @include appearance(none);
   @include font-smoothing();
@@ -15,13 +15,13 @@ input[type=reset]{
   @include transition-duration(.3s);
 
   //Default size
-  @include btn_size();
+  @include btn_size($btn_default_padding_v, $btn_default_padding_h, $btn_default_txt_size, $btn_default_line_height);
 
-  //Big size
-  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding, $btn_big_txt_size, $btn_big_line_height )}
+  //Big size (cca 52px)
+  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding_v, $btn_big_padding_h, $btn_big_txt_size, $btn_big_line_height )}
 
-  //Small size
-  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_padding, $btn_small_txt_size, $btn_small_line_height)}
+  //Small size (cca 32px)
+  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_padding_v, $btn_small_padding_h, $btn_small_txt_size, $btn_small_line_height)}
 
   //Set rounded buttons to strait
   &.no_radius{@include border-radius(0);}
@@ -30,7 +30,7 @@ input[type=reset]{
   &.rounded{@include border-radius(20px);}
 
   //Disabled buttons
-  &.disabled, &:disabled{ background-color:$btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_txt!important }
+  &.disabled, &:disabled{ background-color: $btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_txt!important; cursor: default!important}
 
   //Set button to auto width
   &.auto_width{width: auto; display: inline-block;}
@@ -42,15 +42,15 @@ input[type=reset]{
   &.btn_icon,
   &.btn_icon_left,
   &.btn_icon_right{
-    i, .icon{ font-size: 18px; vertical-align: middle; }
+    i, .icon{ @include font_style($btn_icon_size); vertical-align: middle; }
   }
 
   &.btn_icon_left{
-    i, .icon{   margin-right: 15px;  }
+    i, .icon{   margin-right: $btn_icon_move;  }
   }
 
   &.btn_icon_right{
-    i, .icon{  margin-left: 15px; }
+    i, .icon{  margin-left: $btn_icon_move; }
   }
 
 

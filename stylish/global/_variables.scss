@@ -51,8 +51,8 @@ $link_color_hover:  $color_flush_mahogany;
 
 
 // Default Button color setup - Setup buttons default colors btn_color mixin
-$button_background_color: $color_havelock_blue;
-$button_txt_color:       $color_white;
+$btn_bg_color:        $color_havelock_blue;
+$btn_txt_color:       $color_white;
 
 
 //Common
@@ -69,29 +69,36 @@ $icons_font_location:     '../fonts/stylish';
 
 // Typography
 $body_font_family:        Arial, Helvetica, sans-serif; //body font family
-$body_background_color:   $color_white;  //body bg color
-$body_text_color:         $color_mine_shaft;  //body text color
+$body_font_family_serif:  Georgia, sans-serif;
+$body_bg_color:           $color_white;  //body bg color
+$body_txt_color:          $color_mine_shaft;  //body text color
 
 //Global Headers and paragraph
+$body_base_size:    18px!default;
+$l_body_base_size:  17px;
+$m_body_base_size:  16px;
+$s_body_base_size:  15px;
+$xs_body_base_size: 14px;
+
 $h1:  38px;
 $h2:  35px;
 $h3:  32px;
 $h4:  29px;
 $h5:  26px;
 $h6:  23px;
-$p:   20px;
+$p:   $body_base_size;
 $lh:  5; //number added up to headers and paragraph to setup line height
 
 
 //Headers and paragraph in content_style continer
-$cs_h1:  38px;
-$cs_h2:  35px;
-$cs_h3:  32px;
-$cs_h4:  29px;
-$cs_h5:  26px;
-$cs_h6:  23px;
-$cs_p:   20px;
-$cs_lh:  5; //number added up to headers and paragraph to setup line height in content style
+$cs_h1:  $h1;
+$cs_h2:  $h2;
+$cs_h3:  $h3;
+$cs_h4:  $h4;
+$cs_h5:  $h5;
+$cs_h6:  $h6;
+$cs_p:   $p;
+$cs_lh:  3; //number added up to headers and paragraph to setup line height in content style
 
 
 $cs_margin:    20px; //content style margin move for p, ul, img and other
@@ -102,8 +109,12 @@ $cs_margin:    20px; //content style margin move for p, ul, img and other
 
 
 // Grid Fluid
-$gutter:            40px; //fluid grid gutter padding
-$grid_col_num:      12;   //fluid grid max columns number
+$gutter:          40px; //gutter padding
+$gutter_l:        30px;
+$gutter_m:        20px;
+$gutter_s:        15px;
+$gutter_xs:       10px;
+$grid_col_num:    12;   //fluid grid max columns number
 
 
 // Grid Sidebar Fix
@@ -123,10 +134,10 @@ $responsive_first:  max-width; //If using mobile first put "min-width" else for 
 $responsive:    true; // set true or false if using responsive
 
 //Set break points starting from full screen scaling down to mobile
-$screen_large:  1200px;// Small Screen desktop devices
-$screen_medium: 990px; // Tablet devices
-$screen_small:  768px; // Larger phone and smaller tablet devices
-$screen_xsmall: 480px; // Mobile phone devices
+$screen_large:  $page_max_width;// Small Screen desktop devices
+$screen_medium: 989px; // Tablet devices
+$screen_small:  767px; // Larger phone and smaller tablet devices
+$screen_xsmall: 319px; // Mobile phone devices
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -159,9 +170,13 @@ $radio_border:          $input_border_color; //radio border color
 $radio_active:          $checkbox_active; //radio icon color on active state
 
 $form_error:            $color_flush_mahogany;  //form error color
+$form_error_move:       10px;  //form error color
 $form_field_move:       20px; //Default form field move
 $form_field_move_big:   $form_field_move*2;//Big form field move
 $form_field_move_small: $form_field_move/2;//Small form field move
+$form_required_move:    3px;
+$form_required_size:    14px;
+$form_label_move:       5px;
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -170,7 +185,8 @@ $form_field_move_small: $form_field_move/2;//Small form field move
 //Input Default size
 $input_height:              42px; //input height
 $input_txt_size:            $p; //input font size
-$input_padding:             7px 10px; //input padding
+$input_padding_v:           7px; //input padding
+$input_padding_h:           10px; //input padding
 $checkbox_size:             $input_height; //checkbox width and height
 $checkbox_icon_size:        ($checkbox_size - 8); //checkbox icon size
 $radio_size:                $checkbox_size; //radio width and height
@@ -180,7 +196,8 @@ $select_icon_size:          18px; //Select icon size
 //Input Big size
 $input_big_height:          50px; //input height
 $input_big_txt_size:        $p; //input font size
-$input_big_padding:         9px 10px; //input padding
+$input_big_padding_v:       9px; //input padding
+$input_big_padding_h:       10px; //input padding
 $checkbox_big_size:         $input_big_height; //checkbox width and height
 $checkbox_big_icon_size:    ($checkbox_big_size - 8); //checkbox icon size
 $radio_big_size:            $checkbox_big_size; //radio width and height
@@ -190,7 +207,8 @@ $select_big_icon_size:      22px; //Select icon size
 //Input Small size
 $input_small_height:        32px; //input height
 $input_small_txt_size:      $p; //input font size
-$input_small_padding:       5px 10px; //input padding
+$input_small_padding_v:     5px; //input padding
+$input_small_padding_h:     10px; //input padding
 $checkbox_small_size:       $input_small_height; //checkbox width and height
 $checkbox_small_icon_size:  ($checkbox_small_size - 8); //checkbox icon size
 $radio_small_size:          $checkbox_small_size; //radio width and height
@@ -220,57 +238,96 @@ $btn_disabled_txt:    $color_white; //button text color for disabled state
 $btn_reset_bg:        $input_disabled_bg; //button reset bg color
 $btn_reset_text:      $color_white; //button reset text color
 
+$btn_icon_size:       18px; //icon in button
+$btn_icon_move:       10px; //move icon from text in button
+
 //Btn size default
 $btn_default_txt_size:    16px; //button Default text size
-$btn_default_padding:     10px; //button Default padding size
+$btn_default_padding_v:   10px; //button Default padding vertical
+$btn_default_padding_h:   40px; //button Default padding horizontal
 $btn_default_line_height: 20px; //button Default line height
 
 //Btn size Big
 $btn_big_txt_size:        20px; //button Big text size
-$btn_big_padding:         10px; //button Big padding size
+$btn_big_padding_v:       10px; //button Big padding vertical
+$btn_big_padding_h:       40px; //button Big padding horizontal
 $btn_big_line_height:     24px; //button Big line height
 
 //Btn size Small
-$btn_small_txt_size:      13px; //button Big text size
-$btn_small_padding:       10px; //button Big padding size
-$btn_small_line_height:   17px; //button Big line height
+$btn_small_txt_size:      13px; //button Small text size
+$btn_small_padding_v:     7px; //button Small padding vertical
+$btn_small_padding_h:     40px; //button Small padding horizontal
+$btn_small_line_height:   17px; //button Small line height
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 // Components
-$accordion_head_color:      $color_silver; //accordion header bg color
-$accordion_content_color:   $color_mercury; //accordion content bg color
+$acc_head_color:            $color_silver; //accordion header bg color
+$acc_head_padding:          10px;
+$acc_content_color:         $color_mercury; //accordion content bg color
+$acc_content_padding:       20px;
+
+$crumb_separator_size:      14px;
+$crumb_separator_padding:   10px;
 
 $tabs_head_color:           $color_mercury;  //tabs head background color
 $tabs_head_active_bg_color: $color_white; //tabs head active background color
 $tabs_head_active_color:    $color_mine_shaft; //tabs head active color
+$tabs_head_item_padding_v:  10px;
+$tabs_head_item_padding_h:  0;
+$tabs_content_padding_v:    20px;
+$tabs_content_padding_h:    0;
 
+$msg_move:                  30px;
+$msg_item_padding:          10px;
+$msg_item_move:             20px;
 $msg_icon_size:             30px; //Messages icon size
 $msg_txt_color:             $color_mine_shaft; // Messages text color
+$msg_txt_size:              $p;
 
 $table_head_border:         $color_flush_mahogany;  //table head border bottom color
 $table_body_border:         $color_mercury; //table body border bottom color
 $table_footer_border:       $table_head_border; //table footer border bottom color
 $table_padding:             10px; //table padding
 
+$status_item_padding_v:     2px;
+$status_item_padding_h:     5px;
+
+$block_move:                30px;
+
+$pag_item_move:             3px;
+$pag_item_txt_size:         $p;
 $pag_item_bg:               $color_mercury;  //pagination item bg color
 $pag_item_text:             $color_mine_shaft; //pagination item text color
 $pag_item_current_bg:       $color_flush_mahogany;  //pagination current item bg color
 $pag_item_current_text:     $color_white; //pagination current item text color
+$pag_item_padding_v:        10px;
+$pag_item_padding_h:        15px;
 
 $tooltip_arrow:             10px;   //Tooltip arrow size
 $tooltip_border:            $color_mercury; //Tooltip background color
 $tooltip_bg:                $color_white; //Tooltip background color
 $tooltip_txt:               $color_mine_shaft; //Tooltip text color
 $tooltip_content_shadow:    $color_mine_shaft; //Tooltip content shadow color
+$tip_padding:               10px;
+$tip_max_width:             300px;
 
 $modal_max_width:           600px; //Max width of modal window
 $modal_overlay_opacity:     0.7; //Overlay opacity
 $modal_overlay_bg_color:    $color_mine_shaft; //Overlay Background color
-$modal_content_bg_color:    $color_white; //Main Content Background color
+$modal_bg_color:            $color_white; //Main Content Background color
+$modal_close_position:      10px;
+$modal_close_size:          20px;
+$modal_slide_top_move:      15px;
+$modal_content_padding:     35px; //modal content padding
+$modal_head_move:           30px;
+$modal_title_move:          10px;
+$modal_footer_move:         30px;
 
+$divider_border_size:       1px;
+$divider_border_style:      solid;
 $divider_border_color:      $color_dove_gray_light; //divider border bottom color
 
 

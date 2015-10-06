@@ -11,7 +11,8 @@
 
 
 /* Setup Global Typography */
-body {color:$body_text_color; background:$body_background_color; font-family:$body_font_family; font-size: $p; line-height: $p+$lh; @include font-smoothing();}
+html {font-size: $body_base_size;}
+body {color:$body_txt_color; background:$body_bg_color; font-family:$body_font_family; @include font-smoothing();}
 h1   {@include font_style($h1, ($h1+$lh) )}
 h2   {@include font_style($h2, ($h2+$lh) )}
 h3   {@include font_style($h3, ($h3+$lh) )}
@@ -21,10 +22,10 @@ h6   {@include font_style($h6, ($h6+$lh) )}
 p,
 ul li{@include font_style($p, $p+$lh)}
 a:not(.btn) {
-  @include link_color();
+  @include link_color($link_color, $link_color_hover, none, pointer);
   @include transition-property(color);
   @include transition-duration(.3s);
-
+  &.underline{ text-decoration: underline;}
   &.disabled{ cursor: default;}
 }
 
@@ -87,4 +88,23 @@ a:not(.btn) {
 /* Text colors */
 @include txt_color_generator;
 @include bg_color_generator;
+
+
+@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
+}}
+
+
+@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
+  html{font-size: $m_body_base_size;}
+}}
+
+
+@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
+  html{font-size: $s_body_base_size;}
+}}
+
+
+@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
+  html{font-size: $xs_body_base_size;}
+}}
 

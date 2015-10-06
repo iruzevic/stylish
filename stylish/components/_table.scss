@@ -65,7 +65,7 @@ table{
 
 /* Tables status setup */
 .status{
-  @include border-radius($global_radius); padding: 2px 5px; display: inline-block; font-size: 85%;
+  @include border-radius($global_radius); padding: $status_item_padding_v $status_item_padding_h; display: inline-block; font-size: 85%;
   &.status_error{   background-color: $color_error }
   &.status_success{ background-color: $color_success }
   &.status_notice{  background-color: $color_notice }

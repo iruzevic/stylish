@@ -8,7 +8,7 @@
   .t_head{
     background-color: $tabs_head_color;
     li{
-      cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: 10px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: $tabs_head_item_padding_v $tabs_head_item_padding_h; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       &.active{
         color: $tabs_head_active_color;  background-color:$tabs_head_active_bg_color;
       }
@@ -20,6 +20,6 @@
     height: 0; overflow: hidden;
     &.active{ height: 100%;}
 
-    .t_content_wrap{ padding: 20px 0; }
+    .t_content_wrap{ padding: $tabs_content_padding_v $tabs_content_padding_h; }
   }
 }

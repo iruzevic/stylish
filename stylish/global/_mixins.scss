@@ -2,11 +2,87 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+@function strip_unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+//PX to REM Calculator
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+
+  @each $value in $values {
+
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);
+      $val: strip_unit($value);
+
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / strip_unit($body_base_size) + rem));
+      }
+
+      @if $unit == "rem" {
+        $px : append($px,  ($val * strip_unit($body_base_size) + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//PX to EM Calculator
+@function em($pixels, $context: $body_base_size) {
+  @return #{strip_unit($pixels)/strip_unit($context)}em
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//PX to EM Calculator
+@function rem($pixels, $context: $body_base_size) {
+  @return #{strip_unit($pixels)/strip_unit($context)}rem
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Font style
+@mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false){
+  @if $font_size    {@include rem(font-size, $font_size);}
+  @if $line_height  {@include rem(line-height, $line_height);}
+  @if $font_weight  {font-weight: $font_weight;}
+  @if $font_style   {font-style: $font_style;}
+  @if $font_family  {font-family: $font_family;}
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* Setup Link color states */
-@mixin link_color($color:$link_color, $color_hover:$link_color_hover, $text_decoration: none, $cursor:pointer){
-  color: $color;
-  @if $text_decoration  {text-decoration:$text_decoration}
-  @if $cursor           {cursor:$cursor}
+@mixin link_color($color:false, $color_hover:false, $text_decoration: false, $cursor:false){
+  @if $color            {color: $color;}
+  @if $text_decoration  {text-decoration:$text_decoration;}
+  @if $cursor           {cursor:$cursor;}
 
   @if $color_hover {
     &:hover,
@@ -20,7 +96,7 @@
 
 
 /* Setup buttons colors */
-@mixin btn_color($bg:$button_background_color, $text:$button_txt_color, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
+@mixin btn_color($bg:$btn_bg_color, $text:$btn_txt_color, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
   background-color: $bg;
   color: $text;
   @if not $border{
@@ -54,7 +130,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-///* Font Declaration mixin (not using compasses default mixin) */
+/* Font Declaration mixin (not using compasses default mixin) */
 @mixin font_face($name, $path, $weight: normal, $style: normal, $eot:true, $svg:true, $woff2:true, $woff:true, $ttf:true) {
   $src: null;
   $eot_extmods: null;
@@ -142,6 +218,7 @@
 /* Font Declaration (if some font type is ont user just call variable and set to false) */
 //@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
 //@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
+
 
 
 
@@ -278,7 +355,7 @@
   // icon
   .checkbox_icon {
     width: $size;height: $size; margin-top: -$size/2; line-height: $size;
-    &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; line-height: $size_icon;}
+    &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon;}
   }
 }
 
@@ -315,7 +392,7 @@
 @mixin select_size($height: $input_height, $icon_size:$select_icon_size){
   @if $height   {height:$height;}
   @if $icon_size{
-    &:after{ font-size:$icon_size; margin-top: -($icon_size/2)}
+    &:after{ @include font_style($icon_size); margin-top: -($icon_size/2)}
   }
 }
 
@@ -324,7 +401,7 @@
 
 
 //Default input style
-@mixin input_style( $color:$input_txt_color, $background_color:$input_bg_color, $border_width: $input_border_width, $border_style:$input_border_style, $border_color: $input_border_color, $margin: $input_margin, $width:$input_width, $font_family:$input_font_family, $radius: $input_radius){
+@mixin input_style( $color:false, $background_color:false, $border_width: false, $border_style:false, $border_color: false, $margin: false, $width:false, $font_family:false, $radius: false){
   @if $color            {color:$color;}
   @if $background_color {background-color:$background_color;}
   @if $border_width     {border-width:$border_width;}
@@ -337,10 +414,11 @@
 }
 
 
-@mixin input_size( $height: $input_height, $text_size: $input_txt_size, $padding:$input_padding ){
-    @if $height     { height: $height; }
-    @if $text_size  { font-size: $text_size; }
-    @if $padding    { padding: $padding; }
+@mixin input_size( $height: false, $text_size: false, $padding_vertical:false, $padding_horizontal:false ){
+  @if $height     { height: $height; }
+  @if $text_size  { font-size: $text_size; }
+  @if $padding_vertical   { padding-top:$padding_vertical; padding-bottom: $padding_vertical; }
+  @if $padding_horizontal { padding-left:$padding_horizontal; padding-right: $padding_horizontal; }
 }
 
 
@@ -348,14 +426,17 @@
 
 
 //Button size
-@mixin btn_size($padding:$btn_default_padding, $font_size:$btn_default_txt_size, $line_height:$btn_default_line_height){
-  @if $padding      {padding:$padding;}
-  @if $font_size    {font-size:$font_size;}
-  @if $line_height  {line-height:$line_height;}
+@mixin btn_size($padding_vertical:false, $padding_horizontal:false, $font_size:false, $line_height:false){
+  @if $padding_vertical   { padding-top:$padding_vertical; padding-bottom: $padding_vertical; }
+  @if $padding_horizontal { padding-left:$padding_horizontal; padding-right: $padding_horizontal; }
+  @if $font_size          { @include rem(font-size, $font_size); }
+  @if $line_height        { @include rem(line-height, $line_height); }
+
+
 }
 
 //Default button style
-@mixin btn_style($text_transform: $btn_transform, $font_family:$btn_font_family, $radius:$btn_radius, $border_width:$btn_border_width, $border_style:$btn_border_style,$text_align:$btn_txt_align, $width:$btn_width, $font_weight:$btn_txt_weight, $display:$btn_display, $white_space:$btn_white_space, $text_decoration: $btn_txt_decoration, $cursor:$btn_cursor, $margin:$btn_margin){
+@mixin btn_style($text_transform: false, $font_family:false, $radius:false, $border_width:false, $border_style:false,$text_align:false, $width:false, $font_weight:false, $display:false, $white_space:false, $text_decoration: false, $cursor:false, $margin:false){
   @if $text_transform    {text-transform:$text_transform;}
   @if $font_family       {font-family:$font_family;}
   @if $radius            {@include border-radius($radius);}
@@ -370,7 +451,6 @@
   @if $cursor            {cursor:$cursor;}
   @if $margin            {margin:$margin;}
 }
-
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -408,13 +488,3 @@
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//Font style
-@mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false){
-  @if $font_size    {font-size: $font_size;}
-  @if $line_height  {line-height: $line_height;}
-  @if $font_weight  {font-weight: $font_weight;}
-  @if $font_style   {font-style: $font_style;}
-  @if $font_family  {font-family: $font_family;}
-}

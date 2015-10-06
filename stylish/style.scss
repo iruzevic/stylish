@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.4.1
+Version: 3.5
 */
 
 /* Compass Framework Import */
@@ -51,7 +51,6 @@ Version: 3.4.1
 @import "components/table";
 @import "components/tabs";
 @import "components/tooltip";
-@import "components/fontawesome";
 
 
 
@@ -66,7 +65,22 @@ Version: 3.4.1
 @import "layout/footer";
 
 
-@import "layout/pages/single";
+/* LAYOUT PROJECT FILES MERGE */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+//@import "layout/magento/cart";
+//@import "layout/magento/category";
+//@import "layout/magento/checkout";
+//@import "layout/magento/customer";
+//@import "layout/magento/product";
+//@import "layout/magento/static";
+//
+//
+//@import "layout/wordpress/category";
+//@import "layout/wordpress/error";
+//@import "layout/wordpress/home";
+//@import "layout/wordpress/page";
+//@import "layout/wordpress/single";
 
 
 /* GLOBAL STYLING */

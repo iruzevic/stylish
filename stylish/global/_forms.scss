@@ -12,10 +12,12 @@ input[type=datetime],
 input[type=search],
 textarea,
 select{
-  @include input_style(); @include appearance(none); @include font-smoothing();
+  @include input_style($input_txt_color, $input_bg_color, $input_border_width, $input_border_style, $input_border_color, $input_margin, $input_width, $input_font_family, $input_radius);
+  @include appearance(none);
+  @include font-smoothing();
 
   //Default size
-  @include input_size();
+  @include input_size($input_height, $input_txt_size, $input_padding_v, $input_padding_h);
 
   &.auto_width{ width: auto}
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
@@ -38,7 +40,7 @@ textarea{ height: 150px; }
   @include select_size();
   position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
 
-  &:after{ position: absolute; right: 0; top: 50%;  z-index: 5; width: 40px; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow_down:before;}
+  &:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow_down:before;}
   select{
     position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; width: 100%; left: 0; top: 0; font-family: Arial, Helvetica, sans-serif;
     &:focus{outline: none;}
@@ -55,7 +57,10 @@ textarea{ height: 150px; }
 .checkbox, .radio{
   position: relative;display: table; table-layout: fixed;
 
-  label { cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle; height:100%; }
+  label {
+    cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle; height:100%;
+    a{ text-decoration: underline}
+  }
 
   //Icon
   .checkbox_icon,
@@ -146,7 +151,7 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_big_height, $input_big_txt_size, $input_big_padding);
+    @include input_size($input_big_height, $input_big_txt_size, $input_big_padding_v, $input_big_padding_h);
   }
   .select   { @include select_size($input_big_height, $select_big_icon_size); }
   .checkbox { @include checkbox_size($checkbox_big_size, $checkbox_big_icon_size); }
@@ -165,12 +170,13 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_small_height, $input_small_txt_size, $input_small_padding);
+    @include input_size($input_small_height, $input_small_txt_size, $input_small_padding_v, $input_small_padding_h);
   }
   .select   { @include select_size($input_small_height, $select_small_icon_size); }
   .checkbox { @include checkbox_size($checkbox_small_size, $checkbox_small_icon_size);}
   .radio    { @include radio_size($radio_small_size, $radio_small_icon_size);}
 }
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -181,16 +187,17 @@ form, .form{
   .field{
     margin-bottom: $form_field_move; position: relative; list-style: none;
     &.big { margin-bottom: $form_field_move_big;}
-    &.slim{ margin-bottom: $form_field_move_small;}
-    &.last{margin-bottom: 0}
+    &.slim,
+    &.narrow{ margin-bottom: $form_field_move_small;}
+    &.last{ margin-bottom: 0}
 
     &[data-required="true"] label,
     label.required{
-      &:after{ content: "*"; font-size: 14px; padding-left: 3px}
+      &:after{ content: "*"; @include font_style($form_required_size); padding-left: $form_required_move}
     }
 
     label{
-      display: block; margin-bottom: 5px; font-size: $p;
+      display: block; margin-bottom: $form_label_move; @include font_style($p);
 
       //label inline with field
       &.inline{ display: inline-block; margin-bottom: 0; padding-top: 5px;}
@@ -200,17 +207,17 @@ form, .form{
     &.checkbox,
     .radio,
     &.radio{
-      label{ margin:0; display: table-cell; }
+      label{ margin:0; display: table-cell;@include rem(line-height, $p+$lh) }
     }
 
 
   }
 
-  .label_correction{}
+  .label_correction{padding-top: 5px}
 
   //validation error (validation-advice for magento)
   .validation-advice, .error{
-    color: $form_error; font-size: 15px; position: absolute; right: 15px; bottom: 15px;
+    color: $form_error; @include font_style(14px); margin-top: $form_error_move;
     &:before{@extend .sy_icon; @extend .sy_remove_round:before; padding-right: 10px; vertical-align: bottom}
   }
 }
