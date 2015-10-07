@@ -1,15 +1,7 @@
 module.exports = function(grunt){
 
-    //For Magento
-    //var skinDir = 'theme/skin/frontend/my-theme/default/';
-    //var appDir = 'theme/app/design/frontend/my-theme/default/';
-
     //Default
-    var skinDir = '';
-    var appDir = '/';
     var rootDir = '../';
-
-    //require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
