@@ -75,19 +75,26 @@ module.exports = function(grunt){
             dev: {
                 options: {
                     mangle: false,
-                    beautify: true
+                    beautify: true,
+                    sourceMap : true,
+                    sourceMapName : rootDir + '/js/sourceMap.map'
                 },
-                files: [{
-                    expand: true,
-                    cwd: 'js',
-                    src: '**/*.js',
-                    dest: rootDir + 'js'
-                }]
+                files : {
+                    '../js/combine.min.js' : [
+                        'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
+                        'js/placeholder.js',
+                        'js/equalHeight.js',
+                        'js/script.js',
+                        'js/custom.js'
+                    ]
+                }
             },
             prod: {
                 options: {
                     mangle: false,
-                    beautify: false
+                    beautify: false,
+                    sourceMap : true,
+                    sourceMapName : 'sourceMap.map'
                 },
                 files: [{
                     expand: true,
@@ -101,24 +108,20 @@ module.exports = function(grunt){
         watch: {
             compass: {
                 files: ['stylish/**/*.scss'],
-                tasks: ['compass:dev']
+                tasks: ['newer:compass:dev']
             },
             scripts: {
                 files: ['js/*.js'],
-                tasks: ['uglify:dev']
+                tasks: ['newer:uglify:dev']
             },
             images: {
                 files: ['images/*.{png,jpg,gif}'],
-                tasks: ['imagemin']
+                tasks: ['newer:imagemin']
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    require('load-grunt-tasks')(grunt);
 
     //DEV task
     grunt.registerTask('dev', [
