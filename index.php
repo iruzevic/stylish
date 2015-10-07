@@ -124,38 +124,32 @@
                         <div class="content content_style">
                             <p><strong>If this is your first installation:</strong></p>
                             <ol class="list">
-                                <li>install ruby (https://www.ruby-lang.org/en/downloads/)</li>
-                                <li>set path variable in phpstorm settings (gem - C:\Ruby193\bin)</li>
+                                <li>install ruby</li>
+                                <li>install nodeJS</li>
                                 <li>install compass "gem install compass"</li>
                                 <li>install sass "gem install sass"</li>
+                                <li>install grunt "npm install -g grunt-cli"</li>
+                                <li>go to assets folder and install dependencies "npm install grunt"</li>
                             </ol>
                             <br/><br/><br/>
                             <p><strong>Steps for installation:</strong></p>
                             <ol class="list">
                                 <li>copy framework folders and files in your project folder</li>
-                                <li>delete index.php, README.md and preview folder - you don't need this because is used only for preview page</li>
-                                <li>open config.rb in sass folder and check settings</li>
-                                <li>after any change on config file enter "compass clean" i console to clear cache</li>
-                                <li>open console and move to sass folder with "cd"</li>
-                                <li>in console enter "compass watch" for watching the changes in creating sass</li>
+                                <li>in console go to assets folder an enter "grunt dev"</li>
+                                <li>after that enter "grunt watch"</li>
                                 <li>and that is it, you are ready to edit files</li>
                             </ol>
-                            <br/><br/><br/>
-                            <p><strong>Steps initial setup:</strong></p>
-                            <ol class="list">
-                                <li>open sass/global/variables.scss and edit colors and all variables</li>
-                                <li>open sass/global/buttons.scss and edit button colors</li>
-                                <li>open sass/global/typography.scss and edit text colors</li>
-                                <li>edit all styles if needed for default</li>
-                                <li>now you are ready to add your css</li>
-                            </ol>
                             <div class="divider m_bottom80 m_top80"></div>
-                            <p><strong>Compass comands:</strong></p>
+                            <p><strong>Terminal comands:</strong></p>
                             <ol class="list">
-                                <li>compass install compass (install new compass project)</li>
-                                <li>comapss watch (watching changes in sass folders)</li>
-                                <li>compass clean (erase sass cache and add new changes)</li>
-                                <li>compass version (view version of installed compass)</li>
+                                <li>gem install compass</li>
+                                <li>gem install sass</li>
+                                <li>npm install -g grunt-cli</li>
+                                <li>npm install grunt</li>
+                                <li>grunt dev</li>
+                                <li>grunt prod</li>
+                                <li>grunt clean</li>
+                                <li>grunt watch</li>
                             </ol>
                         </div>
                         <br/>
