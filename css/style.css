@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.5
+Version: 3.6
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -78,64 +78,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* MY RESET STYLE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/global/_reset.scss */
+/* line 5, ../assets/stylish/global/_reset.scss */
 :focus {
   outline: 0;
 }
 
-/* line 6, ../stylish/global/_reset.scss */
+/* line 6, ../assets/stylish/global/_reset.scss */
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 7, ../stylish/global/_reset.scss */
+/* line 7, ../assets/stylish/global/_reset.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 8, ../stylish/global/_reset.scss */
+/* line 8, ../assets/stylish/global/_reset.scss */
 em, dfn {
   font-style: italic;
 }
 
-/* line 9, ../stylish/global/_reset.scss */
+/* line 9, ../assets/stylish/global/_reset.scss */
 dfn {
   font-weight: bold;
 }
 
-/* line 10, ../stylish/global/_reset.scss */
+/* line 10, ../assets/stylish/global/_reset.scss */
 sup, sub {
   line-height: 0;
 }
 
-/* line 11, ../stylish/global/_reset.scss */
+/* line 11, ../assets/stylish/global/_reset.scss */
 li ul, li ol {
   margin: 0;
   line-height: 1.8;
 }
 
-/* line 12, ../stylish/global/_reset.scss */
+/* line 12, ../assets/stylish/global/_reset.scss */
 ul {
   list-style-type: disc;
   margin: 0;
 }
 
-/* line 13, ../stylish/global/_reset.scss */
+/* line 13, ../assets/stylish/global/_reset.scss */
 ol {
   list-style-type: decimal;
   margin: 0;
 }
 
 /* Layout Reset Style */
-/* line 17, ../stylish/global/_reset.scss */
+/* line 17, ../assets/stylish/global/_reset.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../stylish/global/_reset.scss */
+/* line 19, ../assets/stylish/global/_reset.scss */
 .no_br,
 .nobr,
 table.word_break th,
@@ -144,7 +144,7 @@ table.word_break td {
 }
 
 /* Floating Clear */
-/* line 23, ../stylish/global/_reset.scss */
+/* line 23, ../assets/stylish/global/_reset.scss */
 .clearfix:after, .grid_fluid:after, .grid_quarter:after, .grid_half:after, .grid_double:after, .grid_triple:after, .grid_clean:after, .modal .m_content_wrap .m_footer:after, .nav:after,
 .navi:after, .grid_correction .grid_fluid:after {
   content: "";
@@ -152,7 +152,7 @@ table.word_break td {
   clear: both;
 }
 
-/* line 24, ../stylish/global/_reset.scss */
+/* line 24, ../assets/stylish/global/_reset.scss */
 .clear {
   clear: both;
 }
@@ -215,7 +215,7 @@ table.word_break td {
     font-weight: normal;
   }
 }
-/* line 10, ../stylish/global/_icons.scss */
+/* line 10, ../assets/stylish/global/_icons.scss */
 [class^="sy_"], [class*=" sy_"], .sy_icon, .select:after, .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li:before, .msg > li:before, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
@@ -232,7 +232,7 @@ table.word_break td {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 17, ../stylish/global/_icons.scss */
+/* line 17, ../assets/stylish/global/_icons.scss */
 .icon_spin {
   -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
@@ -274,7 +274,7 @@ table.word_break td {
     transform: rotate(359deg);
   }
 }
-/* line 45, ../stylish/global/_icons.scss */
+/* line 45, ../assets/stylish/global/_icons.scss */
 .txt_icon i, .txt_icon .icon,
 .txt_icon_left i,
 .txt_icon_left .icon,
@@ -283,89 +283,89 @@ table.word_break td {
   vertical-align: middle;
 }
 
-/* line 49, ../stylish/global/_icons.scss */
+/* line 49, ../assets/stylish/global/_icons.scss */
 .txt_icon_left i, .txt_icon_left .icon {
   margin-right: 10px;
 }
 
-/* line 53, ../stylish/global/_icons.scss */
+/* line 53, ../assets/stylish/global/_icons.scss */
 .txt_icon_right i, .txt_icon_right .icon {
   margin-left: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Icons */
-/* line 63, ../stylish/global/_icons.scss */
+/* line 63, ../assets/stylish/global/_icons.scss */
 .sy_spinner:before {
   content: "\e60e";
 }
 
-/* line 66, ../stylish/global/_icons.scss */
+/* line 66, ../assets/stylish/global/_icons.scss */
 .sy_arrow_down:before, .select:after {
   content: "\e600";
 }
 
-/* line 69, ../stylish/global/_icons.scss */
+/* line 69, ../assets/stylish/global/_icons.scss */
 .sy_arrow_left:before {
   content: "\e601";
 }
 
-/* line 72, ../stylish/global/_icons.scss */
+/* line 72, ../assets/stylish/global/_icons.scss */
 .sy_arrow_right:before, .breadcrumbs > li > a:after {
   content: "\e602";
 }
 
-/* line 75, ../stylish/global/_icons.scss */
+/* line 75, ../assets/stylish/global/_icons.scss */
 .sy_arrow_up:before {
   content: "\e603";
 }
 
-/* line 78, ../stylish/global/_icons.scss */
+/* line 78, ../assets/stylish/global/_icons.scss */
 .sy_check:before, .checkbox .checkbox_icon:before, .input_big .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before {
   content: "\e604";
 }
 
-/* line 81, ../stylish/global/_icons.scss */
+/* line 81, ../assets/stylish/global/_icons.scss */
 .sy_check_round:before, .messages > li.success-msg:before, .messages > li.success_msg:before, .msg > li.success-msg:before, .msg > li.success_msg:before {
   content: "\e605";
 }
 
-/* line 84, ../stylish/global/_icons.scss */
+/* line 84, ../assets/stylish/global/_icons.scss */
 .sy_circle:before {
   content: "\e606";
 }
 
-/* line 87, ../stylish/global/_icons.scss */
+/* line 87, ../assets/stylish/global/_icons.scss */
 .sy_info:before {
   content: "\e607";
 }
 
-/* line 90, ../stylish/global/_icons.scss */
+/* line 90, ../assets/stylish/global/_icons.scss */
 .sy_info_round:before, .messages > li.notice-msg:before, .messages > li.notice_msg:before, .msg > li.notice-msg:before, .msg > li.notice_msg:before {
   content: "\e608";
 }
 
-/* line 93, ../stylish/global/_icons.scss */
+/* line 93, ../assets/stylish/global/_icons.scss */
 .sy_menu:before {
   content: "\e609";
 }
 
-/* line 96, ../stylish/global/_icons.scss */
+/* line 96, ../assets/stylish/global/_icons.scss */
 .sy_plus:before {
   content: "\e60a";
 }
 
-/* line 99, ../stylish/global/_icons.scss */
+/* line 99, ../assets/stylish/global/_icons.scss */
 .sy_remove:before, .modal .close_modal:before {
   content: "\e60b";
 }
 
-/* line 102, ../stylish/global/_icons.scss */
+/* line 102, ../assets/stylish/global/_icons.scss */
 .sy_remove_round:before, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li.error-msg:before, .messages > li.error_msg:before, .msg > li.error-msg:before, .msg > li.error_msg:before {
   content: "\e60c";
 }
 
-/* line 105, ../stylish/global/_icons.scss */
+/* line 105, ../assets/stylish/global/_icons.scss */
 .sy_warning:before, .messages > li.warning-msg:before, .messages > li.warning_msg:before, .msg > li.warning-msg:before, .msg > li.warning_msg:before {
   content: "\e60d";
 }
@@ -375,12 +375,12 @@ table.word_break td {
 /* Font Declaration */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup Global Typography */
-/* line 14, ../stylish/global/_typography.scss */
+/* line 14, ../assets/stylish/global/_typography.scss */
 html {
   font-size: 18px;
 }
 
-/* line 15, ../stylish/global/_typography.scss */
+/* line 15, ../assets/stylish/global/_typography.scss */
 body {
   color: #272727;
   background: #ffffff;
@@ -389,7 +389,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 16, ../stylish/global/_typography.scss */
+/* line 16, ../assets/stylish/global/_typography.scss */
 h1 {
   font-size: 38px;
   font-size: 2.11111rem;
@@ -397,7 +397,7 @@ h1 {
   line-height: 2.38889rem;
 }
 
-/* line 17, ../stylish/global/_typography.scss */
+/* line 17, ../assets/stylish/global/_typography.scss */
 h2 {
   font-size: 35px;
   font-size: 1.94444rem;
@@ -405,7 +405,7 @@ h2 {
   line-height: 2.22222rem;
 }
 
-/* line 18, ../stylish/global/_typography.scss */
+/* line 18, ../assets/stylish/global/_typography.scss */
 h3 {
   font-size: 32px;
   font-size: 1.77778rem;
@@ -413,7 +413,7 @@ h3 {
   line-height: 2.05556rem;
 }
 
-/* line 19, ../stylish/global/_typography.scss */
+/* line 19, ../assets/stylish/global/_typography.scss */
 h4 {
   font-size: 29px;
   font-size: 1.61111rem;
@@ -421,7 +421,7 @@ h4 {
   line-height: 1.88889rem;
 }
 
-/* line 20, ../stylish/global/_typography.scss */
+/* line 20, ../assets/stylish/global/_typography.scss */
 h5 {
   font-size: 26px;
   font-size: 1.44444rem;
@@ -429,7 +429,7 @@ h5 {
   line-height: 1.72222rem;
 }
 
-/* line 21, ../stylish/global/_typography.scss */
+/* line 21, ../assets/stylish/global/_typography.scss */
 h6 {
   font-size: 23px;
   font-size: 1.27778rem;
@@ -437,7 +437,7 @@ h6 {
   line-height: 1.55556rem;
 }
 
-/* line 22, ../stylish/global/_typography.scss */
+/* line 22, ../assets/stylish/global/_typography.scss */
 p,
 ul li {
   font-size: 18px;
@@ -446,7 +446,7 @@ ul li {
   line-height: 1.27778rem;
 }
 
-/* line 24, ../stylish/global/_typography.scss */
+/* line 24, ../assets/stylish/global/_typography.scss */
 a:not(.btn) {
   color: #cd3a3a;
   text-decoration: none;
@@ -460,72 +460,72 @@ a:not(.btn) {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 88, ../stylish/global/_mixins.scss */
+/* line 88, ../assets/stylish/global/_mixins.scss */
 a:not(.btn):hover, a:not(.btn).active {
   color: #cd3a3a;
 }
-/* line 91, ../stylish/global/_mixins.scss */
+/* line 91, ../assets/stylish/global/_mixins.scss */
 a:not(.btn).disabled {
   color: #cd3a3a;
 }
-/* line 28, ../stylish/global/_typography.scss */
+/* line 28, ../assets/stylish/global/_typography.scss */
 a:not(.btn).underline {
   text-decoration: underline;
 }
-/* line 29, ../stylish/global/_typography.scss */
+/* line 29, ../assets/stylish/global/_typography.scss */
 a:not(.btn).disabled {
   cursor: default;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup content style for large texts */
-/* line 43, ../stylish/global/_typography.scss */
+/* line 43, ../assets/stylish/global/_typography.scss */
 .content_style h1, .content_style h2, .content_style h3, .content_style h4, .content_style h5, .content_style h6 {
   margin-bottom: 5px;
 }
-/* line 44, ../stylish/global/_typography.scss */
+/* line 44, ../assets/stylish/global/_typography.scss */
 .content_style h1 {
   font-size: 38px;
   font-size: 2.11111rem;
   line-height: 41px;
   line-height: 2.27778rem;
 }
-/* line 45, ../stylish/global/_typography.scss */
+/* line 45, ../assets/stylish/global/_typography.scss */
 .content_style h2 {
   font-size: 35px;
   font-size: 1.94444rem;
   line-height: 38px;
   line-height: 2.11111rem;
 }
-/* line 46, ../stylish/global/_typography.scss */
+/* line 46, ../assets/stylish/global/_typography.scss */
 .content_style h3 {
   font-size: 32px;
   font-size: 1.77778rem;
   line-height: 35px;
   line-height: 1.94444rem;
 }
-/* line 47, ../stylish/global/_typography.scss */
+/* line 47, ../assets/stylish/global/_typography.scss */
 .content_style h4 {
   font-size: 29px;
   font-size: 1.61111rem;
   line-height: 32px;
   line-height: 1.77778rem;
 }
-/* line 48, ../stylish/global/_typography.scss */
+/* line 48, ../assets/stylish/global/_typography.scss */
 .content_style h5 {
   font-size: 26px;
   font-size: 1.44444rem;
   line-height: 29px;
   line-height: 1.61111rem;
 }
-/* line 49, ../stylish/global/_typography.scss */
+/* line 49, ../assets/stylish/global/_typography.scss */
 .content_style h6 {
   font-size: 23px;
   font-size: 1.27778rem;
   line-height: 26px;
   line-height: 1.44444rem;
 }
-/* line 50, ../stylish/global/_typography.scss */
+/* line 50, ../assets/stylish/global/_typography.scss */
 .content_style p {
   font-size: 18px;
   font-size: 1rem;
@@ -533,13 +533,13 @@ a:not(.btn).disabled {
   line-height: 1.16667rem;
   margin-bottom: 20px;
 }
-/* line 53, ../stylish/global/_typography.scss */
+/* line 53, ../assets/stylish/global/_typography.scss */
 .content_style ul, .content_style ol {
   overflow: hidden;
   margin-left: 0;
   margin-bottom: 20px;
 }
-/* line 55, ../stylish/global/_typography.scss */
+/* line 55, ../assets/stylish/global/_typography.scss */
 .content_style ul li, .content_style ol li {
   font-size: 18px;
   font-size: 1rem;
@@ -547,11 +547,11 @@ a:not(.btn).disabled {
   line-height: 1.16667rem;
   margin-bottom: 5px;
 }
-/* line 57, ../stylish/global/_typography.scss */
+/* line 57, ../assets/stylish/global/_typography.scss */
 .content_style ul li {
   margin-left: 30px;
 }
-/* line 58, ../stylish/global/_typography.scss */
+/* line 58, ../assets/stylish/global/_typography.scss */
 .content_style ol li {
   margin-left: 40px;
   font-size: 18px;
@@ -559,27 +559,27 @@ a:not(.btn).disabled {
   line-height: 21px;
   line-height: 1.16667rem;
 }
-/* line 61, ../stylish/global/_typography.scss */
+/* line 61, ../assets/stylish/global/_typography.scss */
 .content_style address {
   font-size: 18px;
   font-size: 1rem;
   line-height: 21px;
   line-height: 1.16667rem;
 }
-/* line 62, ../stylish/global/_typography.scss */
+/* line 62, ../assets/stylish/global/_typography.scss */
 .content_style .italic {
   font-style: italic;
 }
-/* line 63, ../stylish/global/_typography.scss */
+/* line 63, ../assets/stylish/global/_typography.scss */
 .content_style strong,
 .content_style .bold {
   font-weight: bold;
 }
-/* line 65, ../stylish/global/_typography.scss */
+/* line 65, ../assets/stylish/global/_typography.scss */
 .content_style .underline {
   text-decoration: underline;
 }
-/* line 68, ../stylish/global/_typography.scss */
+/* line 68, ../assets/stylish/global/_typography.scss */
 .content_style img,
 .content_style iframe {
   width: auto;
@@ -587,27 +587,27 @@ a:not(.btn).disabled {
   max-width: 100%;
   margin-bottom: 20px;
 }
-/* line 72, ../stylish/global/_typography.scss */
+/* line 72, ../assets/stylish/global/_typography.scss */
 .content_style img.alignleft,
 .content_style iframe.alignleft {
   clear: left;
   float: left;
   margin-right: 20px;
 }
-/* line 73, ../stylish/global/_typography.scss */
+/* line 73, ../assets/stylish/global/_typography.scss */
 .content_style img.alignright,
 .content_style iframe.alignright {
   clear: right;
   float: right;
   margin-left: 20px;
 }
-/* line 76, ../stylish/global/_typography.scss */
+/* line 76, ../assets/stylish/global/_typography.scss */
 .content_style img.full,
 .content_style iframe.full {
   width: 100%;
   height: auto;
 }
-/* line 79, ../stylish/global/_typography.scss */
+/* line 79, ../assets/stylish/global/_typography.scss */
 .content_style img.rounded,
 .content_style iframe.rounded {
   -moz-border-radius: 50%;
@@ -617,147 +617,147 @@ a:not(.btn).disabled {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Text colors */
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_mine_shaft {
   color: #272727;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_havelock_blue {
   color: #3a89cd;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_flush_mahogany {
   color: #cd3a3a;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_emerald {
   color: #3acd60;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_earls_green {
   color: #cdc43a;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_amethyst {
   color: #bd3acd;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_raw_sienna {
   color: #cd833a;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_dove_gray {
   color: #666666;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_dove_gray_light {
   color: #999999;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_silver {
   color: #c5c5c5;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_mercury {
   color: #e5e5e5;
 }
 
-/* line 291, ../stylish/global/_mixins.scss */
+/* line 291, ../assets/stylish/global/_mixins.scss */
 .txt_white {
   color: #ffffff;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_mine_shaft {
   background-color: #272727;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_havelock_blue {
   background-color: #3a89cd;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_flush_mahogany {
   background-color: #cd3a3a;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_emerald {
   background-color: #3acd60;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_earls_green {
   background-color: #cdc43a;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_amethyst {
   background-color: #bd3acd;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_raw_sienna {
   background-color: #cd833a;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_dove_gray {
   background-color: #666666;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_dove_gray_light {
   background-color: #999999;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_silver {
   background-color: #c5c5c5;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_mercury {
   background-color: #e5e5e5;
 }
 
-/* line 309, ../stylish/global/_mixins.scss */
+/* line 309, ../assets/stylish/global/_mixins.scss */
 .bg_white {
   background-color: #ffffff;
 }
 
 @media screen and (max-width: 989px) {
-  /* line 98, ../stylish/global/_typography.scss */
+  /* line 98, ../assets/stylish/global/_typography.scss */
   html {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 103, ../stylish/global/_typography.scss */
+  /* line 103, ../assets/stylish/global/_typography.scss */
   html {
     font-size: 15px;
   }
 }
 @media screen and (max-width: 319px) {
-  /* line 108, ../stylish/global/_typography.scss */
+  /* line 108, ../assets/stylish/global/_typography.scss */
   html {
     font-size: 14px;
   }
 }
 /* FORMS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/global/_forms.scss */
+/* line 5, ../assets/stylish/global/_forms.scss */
 input[type=text],
 input[type=tel],
 input[type=password],
@@ -790,7 +790,7 @@ select {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 22, ../stylish/global/_forms.scss */
+/* line 22, ../assets/stylish/global/_forms.scss */
 input[type=text].auto_width,
 input[type=tel].auto_width,
 input[type=password].auto_width,
@@ -803,7 +803,7 @@ textarea.auto_width,
 select.auto_width {
   width: auto;
 }
-/* line 23, ../stylish/global/_forms.scss */
+/* line 23, ../assets/stylish/global/_forms.scss */
 input[type=text]:focus,
 input[type=tel]:focus,
 input[type=password]:focus,
@@ -818,7 +818,7 @@ select:focus {
   -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
   box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
 }
-/* line 24, ../stylish/global/_forms.scss */
+/* line 24, ../assets/stylish/global/_forms.scss */
 input[type=text]:disabled,
 input[type=tel]:disabled,
 input[type=password]:disabled,
@@ -833,45 +833,45 @@ select:disabled {
   color: #666666;
 }
 
-/* line 26, ../stylish/global/_forms.scss */
+/* line 26, ../assets/stylish/global/_forms.scss */
 textarea {
   height: 150px;
 }
 
 /* Stylize Placeholder */
-/* line 230, ../stylish/global/_mixins.scss */
+/* line 230, ../assets/stylish/global/_mixins.scss */
 input::-webkit-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 231, ../stylish/global/_mixins.scss */
+/* line 231, ../assets/stylish/global/_mixins.scss */
 input:-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 232, ../stylish/global/_mixins.scss */
+/* line 232, ../assets/stylish/global/_mixins.scss */
 input::-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 233, ../stylish/global/_mixins.scss */
+/* line 233, ../assets/stylish/global/_mixins.scss */
 input:-ms-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 234, ../stylish/global/_mixins.scss */
+/* line 234, ../assets/stylish/global/_mixins.scss */
 input.placeholder {
   color: #e5e5e5;
 }
 
-/* line 235, ../stylish/global/_mixins.scss */
+/* line 235, ../assets/stylish/global/_mixins.scss */
 input.placeholderjs {
   color: #e5e5e5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup custom select input */
-/* line 39, ../stylish/global/_forms.scss */
+/* line 39, ../assets/stylish/global/_forms.scss */
 .select {
   height: 42px;
   position: relative;
@@ -884,13 +884,13 @@ input.placeholderjs {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 395, ../stylish/global/_mixins.scss */
+/* line 395, ../assets/stylish/global/_mixins.scss */
 .select:after {
   font-size: 18px;
   font-size: 1rem;
   margin-top: -9px;
 }
-/* line 43, ../stylish/global/_forms.scss */
+/* line 43, ../assets/stylish/global/_forms.scss */
 .select:after {
   position: absolute;
   right: 15px;
@@ -899,7 +899,7 @@ input.placeholderjs {
   text-align: center;
   color: #272727;
 }
-/* line 44, ../stylish/global/_forms.scss */
+/* line 44, ../assets/stylish/global/_forms.scss */
 .select select {
   position: absolute;
   cursor: pointer;
@@ -914,24 +914,24 @@ input.placeholderjs {
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 46, ../stylish/global/_forms.scss */
+/* line 46, ../assets/stylish/global/_forms.scss */
 .select select:focus {
   outline: none;
 }
-/* line 49, ../stylish/global/_forms.scss */
+/* line 49, ../assets/stylish/global/_forms.scss */
 .select.disabled:after {
   color: #c5c5c5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Checkbox and Radio input Global setup */
-/* line 57, ../stylish/global/_forms.scss */
+/* line 57, ../assets/stylish/global/_forms.scss */
 .checkbox, .radio {
   position: relative;
   display: table;
   table-layout: fixed;
 }
-/* line 60, ../stylish/global/_forms.scss */
+/* line 60, ../assets/stylish/global/_forms.scss */
 .checkbox label, .radio label {
   cursor: pointer;
   -moz-user-select: -moz-none;
@@ -943,11 +943,11 @@ input.placeholderjs {
   vertical-align: middle;
   height: 100%;
 }
-/* line 62, ../stylish/global/_forms.scss */
+/* line 62, ../assets/stylish/global/_forms.scss */
 .checkbox label a, .radio label a {
   text-decoration: underline;
 }
-/* line 66, ../stylish/global/_forms.scss */
+/* line 66, ../assets/stylish/global/_forms.scss */
 .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon {
@@ -957,7 +957,7 @@ input.placeholderjs {
   left: 0;
   top: 50%;
 }
-/* line 70, ../stylish/global/_forms.scss */
+/* line 70, ../assets/stylish/global/_forms.scss */
 .checkbox .checkbox_icon:before,
 .checkbox .radio_icon:before, .radio .checkbox_icon:before,
 .radio .radio_icon:before {
@@ -965,7 +965,7 @@ input.placeholderjs {
   left: 50%;
   top: 50%;
 }
-/* line 74, ../stylish/global/_forms.scss */
+/* line 74, ../assets/stylish/global/_forms.scss */
 .checkbox input[type=checkbox],
 .checkbox input[type=radio], .radio input[type=checkbox],
 .radio input[type=radio] {
@@ -980,94 +980,94 @@ input.placeholderjs {
 }
 
 /* Setup custom checkbox input */
-/* line 79, ../stylish/global/_forms.scss */
+/* line 79, ../assets/stylish/global/_forms.scss */
 .checkbox {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 79, ../stylish/global/_forms.scss */
+  /* line 79, ../assets/stylish/global/_forms.scss */
   .checkbox {
     height: 42px;
   }
 }
-/* line 350, ../stylish/global/_mixins.scss */
+/* line 350, ../assets/stylish/global/_mixins.scss */
 .checkbox label {
   padding-left: 57px;
 }
-/* line 352, ../stylish/global/_mixins.scss */
+/* line 352, ../assets/stylish/global/_mixins.scss */
 .checkbox label.empty {
   padding-left: 0;
   width: 42px;
 }
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 356, ../assets/stylish/global/_mixins.scss */
 .checkbox .checkbox_icon {
   width: 42px;
   height: 42px;
   margin-top: -21px;
   line-height: 42px;
 }
-/* line 358, ../stylish/global/_mixins.scss */
+/* line 358, ../assets/stylish/global/_mixins.scss */
 .checkbox .checkbox_icon:before {
   font-size: 34px;
   margin: -17px 0 0 -17px;
   width: 34px;
   height: 34px;
 }
-/* line 85, ../stylish/global/_forms.scss */
+/* line 85, ../assets/stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
-/* line 89, ../stylish/global/_forms.scss */
+/* line 89, ../assets/stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
   color: #cd3a3a;
 }
-/* line 96, ../stylish/global/_forms.scss */
+/* line 96, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
   background-color: #e5e5e5;
   color: #e5e5e5;
 }
-/* line 98, ../stylish/global/_forms.scss */
+/* line 98, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
   color: #cd3a3a;
 }
 
 /* Setup custom radio input */
-/* line 104, ../stylish/global/_forms.scss */
+/* line 104, ../assets/stylish/global/_forms.scss */
 .radio {
   min-height: 42px;
 }
 @-moz-document url-prefix() {
-  /* line 104, ../stylish/global/_forms.scss */
+  /* line 104, ../assets/stylish/global/_forms.scss */
   .radio {
     height: 42px;
   }
 }
-/* line 375, ../stylish/global/_mixins.scss */
+/* line 375, ../assets/stylish/global/_mixins.scss */
 .radio label {
   padding-left: 57px;
 }
-/* line 377, ../stylish/global/_mixins.scss */
+/* line 377, ../assets/stylish/global/_mixins.scss */
 .radio label.empty {
   padding-left: 0;
   width: 42px;
 }
-/* line 381, ../stylish/global/_mixins.scss */
+/* line 381, ../assets/stylish/global/_mixins.scss */
 .radio .radio_icon {
   width: 42px;
   height: 42px;
   margin-top: -21px;
   line-height: 42px;
 }
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 383, ../assets/stylish/global/_mixins.scss */
 .radio .radio_icon:before {
   content: "";
   margin: -17px 0 0 -17px;
   width: 34px;
   height: 34px;
 }
-/* line 110, ../stylish/global/_forms.scss */
+/* line 110, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
   border-color: #e5e5e5;
@@ -1075,28 +1075,28 @@ input.placeholderjs {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 112, ../stylish/global/_forms.scss */
+/* line 112, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon:before {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 117, ../stylish/global/_forms.scss */
+/* line 117, ../assets/stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
   background-color: #cd3a3a;
 }
-/* line 124, ../stylish/global/_forms.scss */
+/* line 124, ../assets/stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
   background-color: #e5e5e5;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Upload custom input */
-/* line 133, ../stylish/global/_forms.scss */
+/* line 133, ../assets/stylish/global/_forms.scss */
 .upload {
   position: relative;
 }
-/* line 135, ../stylish/global/_forms.scss */
+/* line 135, ../assets/stylish/global/_forms.scss */
 .upload input[type=file] {
   font-size: 29px;
   width: 100%;
@@ -1108,7 +1108,7 @@ input.placeholderjs {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 144, ../stylish/global/_forms.scss */
+/* line 144, ../assets/stylish/global/_forms.scss */
 .input_big input[type=text],
 .input_big input[type=tel],
 .input_big input[type=password],
@@ -1126,76 +1126,76 @@ input.placeholderjs {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 156, ../stylish/global/_forms.scss */
+/* line 156, ../assets/stylish/global/_forms.scss */
 .input_big .select {
   height: 50px;
 }
-/* line 395, ../stylish/global/_mixins.scss */
+/* line 395, ../assets/stylish/global/_mixins.scss */
 .input_big .select:after {
   font-size: 22px;
   font-size: 1.22222rem;
   margin-top: -11px;
 }
-/* line 157, ../stylish/global/_forms.scss */
+/* line 157, ../assets/stylish/global/_forms.scss */
 .input_big .checkbox {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 157, ../stylish/global/_forms.scss */
+  /* line 157, ../assets/stylish/global/_forms.scss */
   .input_big .checkbox {
     height: 50px;
   }
 }
-/* line 350, ../stylish/global/_mixins.scss */
+/* line 350, ../assets/stylish/global/_mixins.scss */
 .input_big .checkbox label {
   padding-left: 65px;
 }
-/* line 352, ../stylish/global/_mixins.scss */
+/* line 352, ../assets/stylish/global/_mixins.scss */
 .input_big .checkbox label.empty {
   padding-left: 0;
   width: 50px;
 }
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 356, ../assets/stylish/global/_mixins.scss */
 .input_big .checkbox .checkbox_icon {
   width: 50px;
   height: 50px;
   margin-top: -25px;
   line-height: 50px;
 }
-/* line 358, ../stylish/global/_mixins.scss */
+/* line 358, ../assets/stylish/global/_mixins.scss */
 .input_big .checkbox .checkbox_icon:before {
   font-size: 42px;
   margin: -21px 0 0 -21px;
   width: 42px;
   height: 42px;
 }
-/* line 158, ../stylish/global/_forms.scss */
+/* line 158, ../assets/stylish/global/_forms.scss */
 .input_big .radio {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 158, ../stylish/global/_forms.scss */
+  /* line 158, ../assets/stylish/global/_forms.scss */
   .input_big .radio {
     height: 50px;
   }
 }
-/* line 375, ../stylish/global/_mixins.scss */
+/* line 375, ../assets/stylish/global/_mixins.scss */
 .input_big .radio label {
   padding-left: 65px;
 }
-/* line 377, ../stylish/global/_mixins.scss */
+/* line 377, ../assets/stylish/global/_mixins.scss */
 .input_big .radio label.empty {
   padding-left: 0;
   width: 50px;
 }
-/* line 381, ../stylish/global/_mixins.scss */
+/* line 381, ../assets/stylish/global/_mixins.scss */
 .input_big .radio .radio_icon {
   width: 50px;
   height: 50px;
   margin-top: -25px;
   line-height: 50px;
 }
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 383, ../assets/stylish/global/_mixins.scss */
 .input_big .radio .radio_icon:before {
   content: "";
   margin: -21px 0 0 -21px;
@@ -1203,7 +1203,7 @@ input.placeholderjs {
   height: 42px;
 }
 
-/* line 163, ../stylish/global/_forms.scss */
+/* line 163, ../assets/stylish/global/_forms.scss */
 .input_small input[type=text],
 .input_small input[type=tel],
 .input_small input[type=password],
@@ -1221,76 +1221,76 @@ input.placeholderjs {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 175, ../stylish/global/_forms.scss */
+/* line 175, ../assets/stylish/global/_forms.scss */
 .input_small .select {
   height: 32px;
 }
-/* line 395, ../stylish/global/_mixins.scss */
+/* line 395, ../assets/stylish/global/_mixins.scss */
 .input_small .select:after {
   font-size: 15px;
   font-size: 0.83333rem;
   margin-top: -7.5px;
 }
-/* line 176, ../stylish/global/_forms.scss */
+/* line 176, ../assets/stylish/global/_forms.scss */
 .input_small .checkbox {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 176, ../stylish/global/_forms.scss */
+  /* line 176, ../assets/stylish/global/_forms.scss */
   .input_small .checkbox {
     height: 32px;
   }
 }
-/* line 350, ../stylish/global/_mixins.scss */
+/* line 350, ../assets/stylish/global/_mixins.scss */
 .input_small .checkbox label {
   padding-left: 47px;
 }
-/* line 352, ../stylish/global/_mixins.scss */
+/* line 352, ../assets/stylish/global/_mixins.scss */
 .input_small .checkbox label.empty {
   padding-left: 0;
   width: 32px;
 }
-/* line 356, ../stylish/global/_mixins.scss */
+/* line 356, ../assets/stylish/global/_mixins.scss */
 .input_small .checkbox .checkbox_icon {
   width: 32px;
   height: 32px;
   margin-top: -16px;
   line-height: 32px;
 }
-/* line 358, ../stylish/global/_mixins.scss */
+/* line 358, ../assets/stylish/global/_mixins.scss */
 .input_small .checkbox .checkbox_icon:before {
   font-size: 24px;
   margin: -12px 0 0 -12px;
   width: 24px;
   height: 24px;
 }
-/* line 177, ../stylish/global/_forms.scss */
+/* line 177, ../assets/stylish/global/_forms.scss */
 .input_small .radio {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 177, ../stylish/global/_forms.scss */
+  /* line 177, ../assets/stylish/global/_forms.scss */
   .input_small .radio {
     height: 32px;
   }
 }
-/* line 375, ../stylish/global/_mixins.scss */
+/* line 375, ../assets/stylish/global/_mixins.scss */
 .input_small .radio label {
   padding-left: 47px;
 }
-/* line 377, ../stylish/global/_mixins.scss */
+/* line 377, ../assets/stylish/global/_mixins.scss */
 .input_small .radio label.empty {
   padding-left: 0;
   width: 32px;
 }
-/* line 381, ../stylish/global/_mixins.scss */
+/* line 381, ../assets/stylish/global/_mixins.scss */
 .input_small .radio .radio_icon {
   width: 32px;
   height: 32px;
   margin-top: -16px;
   line-height: 32px;
 }
-/* line 383, ../stylish/global/_mixins.scss */
+/* line 383, ../assets/stylish/global/_mixins.scss */
 .input_small .radio .radio_icon:before {
   content: "";
   margin: -12px 0 0 -12px;
@@ -1300,25 +1300,25 @@ input.placeholderjs {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup forms layout */
-/* line 187, ../stylish/global/_forms.scss */
+/* line 187, ../assets/stylish/global/_forms.scss */
 form .field, .form .field {
   margin-bottom: 20px;
   position: relative;
   list-style: none;
 }
-/* line 189, ../stylish/global/_forms.scss */
+/* line 189, ../assets/stylish/global/_forms.scss */
 form .field.big, .form .field.big {
   margin-bottom: 40px;
 }
-/* line 190, ../stylish/global/_forms.scss */
+/* line 190, ../assets/stylish/global/_forms.scss */
 form .field.slim, form .field.narrow, .form .field.slim, .form .field.narrow {
   margin-bottom: 10px;
 }
-/* line 192, ../stylish/global/_forms.scss */
+/* line 192, ../assets/stylish/global/_forms.scss */
 form .field.last, .form .field.last {
   margin-bottom: 0;
 }
-/* line 196, ../stylish/global/_forms.scss */
+/* line 196, ../assets/stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
@@ -1327,20 +1327,20 @@ form .field label.required:after, .form .field[data-required="true"] label:after
   font-size: 0.77778rem;
   padding-left: 3px;
 }
-/* line 199, ../stylish/global/_forms.scss */
+/* line 199, ../assets/stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
   font-size: 1rem;
 }
-/* line 203, ../stylish/global/_forms.scss */
+/* line 203, ../assets/stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 210, ../stylish/global/_forms.scss */
+/* line 210, ../assets/stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
@@ -1349,18 +1349,18 @@ form .field .radio label, form .field.radio label, .form .field .checkbox label,
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 216, ../stylish/global/_forms.scss */
+/* line 216, ../assets/stylish/global/_forms.scss */
 form .label_correction, .form .label_correction {
   padding-top: 5px;
 }
-/* line 219, ../stylish/global/_forms.scss */
+/* line 219, ../assets/stylish/global/_forms.scss */
 form .validation-advice, form .error, .form .validation-advice, .form .error {
   color: #cd3a3a;
   font-size: 14px;
   font-size: 0.77778rem;
   margin-top: 10px;
 }
-/* line 221, ../stylish/global/_forms.scss */
+/* line 221, ../assets/stylish/global/_forms.scss */
 form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before {
   padding-right: 10px;
   vertical-align: bottom;
@@ -1368,7 +1368,7 @@ form .validation-advice:before, form .error:before, .form .validation-advice:bef
 
 /* BUTTONS STYLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/global/_buttons.scss */
+/* line 5, ../assets/stylish/global/_buttons.scss */
 .btn,
 button,
 input[type=submit],
@@ -1415,7 +1415,7 @@ input[type=reset] {
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
   /* Buttons Colors */
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn:hover, .btn.active,
 button:hover,
 button.active,
@@ -1429,7 +1429,7 @@ input[type=reset].active {
   color: #ffffff;
   border-color: #2d74b1;
 }
-/* line 21, ../stylish/global/_buttons.scss */
+/* line 21, ../assets/stylish/global/_buttons.scss */
 .btn.btn_big, .btn[data-size="big"],
 button.btn_big,
 button[data-size="big"],
@@ -1448,7 +1448,7 @@ input[type=reset][data-size="big"] {
   line-height: 24px;
   line-height: 1.33333rem;
 }
-/* line 24, ../stylish/global/_buttons.scss */
+/* line 24, ../assets/stylish/global/_buttons.scss */
 .btn.btn_small, .btn[data-size="small"],
 button.btn_small,
 button[data-size="small"],
@@ -1467,7 +1467,7 @@ input[type=reset][data-size="small"] {
   line-height: 17px;
   line-height: 0.94444rem;
 }
-/* line 27, ../stylish/global/_buttons.scss */
+/* line 27, ../assets/stylish/global/_buttons.scss */
 .btn.no_radius,
 button.no_radius,
 input[type=submit].no_radius,
@@ -1477,7 +1477,7 @@ input[type=reset].no_radius {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* line 30, ../stylish/global/_buttons.scss */
+/* line 30, ../assets/stylish/global/_buttons.scss */
 .btn.rounded,
 button.rounded,
 input[type=submit].rounded,
@@ -1487,7 +1487,7 @@ input[type=reset].rounded {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 33, ../stylish/global/_buttons.scss */
+/* line 33, ../assets/stylish/global/_buttons.scss */
 .btn.disabled, .btn:disabled,
 button.disabled,
 button:disabled,
@@ -1502,7 +1502,7 @@ input[type=reset]:disabled {
   color: #ffffff !important;
   cursor: default !important;
 }
-/* line 36, ../stylish/global/_buttons.scss */
+/* line 36, ../assets/stylish/global/_buttons.scss */
 .btn.auto_width,
 button.auto_width,
 input[type=submit].auto_width,
@@ -1511,7 +1511,7 @@ input[type=reset].auto_width {
   width: auto;
   display: inline-block;
 }
-/* line 39, ../stylish/global/_buttons.scss */
+/* line 39, ../assets/stylish/global/_buttons.scss */
 .btn.no_word_break,
 button.no_word_break,
 input[type=submit].no_word_break,
@@ -1519,7 +1519,7 @@ input[type=button].no_word_break,
 input[type=reset].no_word_break {
   word-break: normal;
 }
-/* line 45, ../stylish/global/_buttons.scss */
+/* line 45, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon i, .btn.btn_icon .icon, .btn.btn_icon_left i, .btn.btn_icon_left .icon, .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon i,
 button.btn_icon .icon,
@@ -1549,7 +1549,7 @@ input[type=reset].btn_icon_right .icon {
   font-size: 1rem;
   vertical-align: middle;
 }
-/* line 49, ../stylish/global/_buttons.scss */
+/* line 49, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon_left i, .btn.btn_icon_left .icon,
 button.btn_icon_left i,
 button.btn_icon_left .icon,
@@ -1561,7 +1561,7 @@ input[type=reset].btn_icon_left i,
 input[type=reset].btn_icon_left .icon {
   margin-right: 10px;
 }
-/* line 53, ../stylish/global/_buttons.scss */
+/* line 53, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon_right i,
 button.btn_icon_right .icon,
@@ -1573,7 +1573,7 @@ input[type=reset].btn_icon_right i,
 input[type=reset].btn_icon_right .icon {
   margin-left: 10px;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mine_shaft,
 button.btn_mine_shaft,
 input[type=submit].btn_mine_shaft,
@@ -1583,7 +1583,7 @@ input[type=reset].btn_mine_shaft {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mine_shaft:hover, .btn.btn_mine_shaft.active,
 button.btn_mine_shaft:hover,
 button.btn_mine_shaft.active,
@@ -1597,7 +1597,7 @@ input[type=reset].btn_mine_shaft.active {
   color: #ffffff;
   border-color: #131313;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border,
 button.btn_mine_shaft_border,
 input[type=submit].btn_mine_shaft_border,
@@ -1607,7 +1607,7 @@ input[type=reset].btn_mine_shaft_border {
   color: #272727;
   border-color: #272727;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mine_shaft_border:hover, .btn.btn_mine_shaft_border.active,
 button.btn_mine_shaft_border:hover,
 button.btn_mine_shaft_border.active,
@@ -1621,7 +1621,7 @@ input[type=reset].btn_mine_shaft_border.active {
   color: #ffffff;
   border-color: #272727;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_havelock_blue,
 button.btn_havelock_blue,
 input[type=submit].btn_havelock_blue,
@@ -1631,7 +1631,7 @@ input[type=reset].btn_havelock_blue {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_havelock_blue:hover, .btn.btn_havelock_blue.active,
 button.btn_havelock_blue:hover,
 button.btn_havelock_blue.active,
@@ -1645,7 +1645,7 @@ input[type=reset].btn_havelock_blue.active {
   color: #ffffff;
   border-color: #2d74b1;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border,
 button.btn_havelock_blue_border,
 input[type=submit].btn_havelock_blue_border,
@@ -1655,7 +1655,7 @@ input[type=reset].btn_havelock_blue_border {
   color: #3a89cd;
   border-color: #3a89cd;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_havelock_blue_border:hover, .btn.btn_havelock_blue_border.active,
 button.btn_havelock_blue_border:hover,
 button.btn_havelock_blue_border.active,
@@ -1669,7 +1669,7 @@ input[type=reset].btn_havelock_blue_border.active {
   color: #ffffff;
   border-color: #3a89cd;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany,
 button.btn_flush_mahogany,
 input[type=submit].btn_flush_mahogany,
@@ -1679,7 +1679,7 @@ input[type=reset].btn_flush_mahogany {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany:hover, .btn.btn_flush_mahogany.active,
 button.btn_flush_mahogany:hover,
 button.btn_flush_mahogany.active,
@@ -1693,7 +1693,7 @@ input[type=reset].btn_flush_mahogany.active {
   color: #ffffff;
   border-color: #b12d2d;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border,
 button.btn_flush_mahogany_border,
 input[type=submit].btn_flush_mahogany_border,
@@ -1703,7 +1703,7 @@ input[type=reset].btn_flush_mahogany_border {
   color: #cd3a3a;
   border-color: #cd3a3a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_flush_mahogany_border:hover, .btn.btn_flush_mahogany_border.active,
 button.btn_flush_mahogany_border:hover,
 button.btn_flush_mahogany_border.active,
@@ -1717,7 +1717,7 @@ input[type=reset].btn_flush_mahogany_border.active {
   color: #ffffff;
   border-color: #cd3a3a;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_emerald,
 button.btn_emerald,
 input[type=submit].btn_emerald,
@@ -1727,7 +1727,7 @@ input[type=reset].btn_emerald {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_emerald:hover, .btn.btn_emerald.active,
 button.btn_emerald:hover,
 button.btn_emerald.active,
@@ -1741,7 +1741,7 @@ input[type=reset].btn_emerald.active {
   color: #ffffff;
   border-color: #2db14f;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_emerald_border,
 button.btn_emerald_border,
 input[type=submit].btn_emerald_border,
@@ -1751,7 +1751,7 @@ input[type=reset].btn_emerald_border {
   color: #3acd60;
   border-color: #3acd60;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_emerald_border:hover, .btn.btn_emerald_border.active,
 button.btn_emerald_border:hover,
 button.btn_emerald_border.active,
@@ -1765,7 +1765,7 @@ input[type=reset].btn_emerald_border.active {
   color: #ffffff;
   border-color: #3acd60;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_earls_green,
 button.btn_earls_green,
 input[type=submit].btn_earls_green,
@@ -1775,7 +1775,7 @@ input[type=reset].btn_earls_green {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_earls_green:hover, .btn.btn_earls_green.active,
 button.btn_earls_green:hover,
 button.btn_earls_green.active,
@@ -1789,7 +1789,7 @@ input[type=reset].btn_earls_green.active {
   color: #ffffff;
   border-color: #b1a92d;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_earls_green_border,
 button.btn_earls_green_border,
 input[type=submit].btn_earls_green_border,
@@ -1799,7 +1799,7 @@ input[type=reset].btn_earls_green_border {
   color: #cdc43a;
   border-color: #cdc43a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_earls_green_border:hover, .btn.btn_earls_green_border.active,
 button.btn_earls_green_border:hover,
 button.btn_earls_green_border.active,
@@ -1813,7 +1813,7 @@ input[type=reset].btn_earls_green_border.active {
   color: #ffffff;
   border-color: #cdc43a;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_amethyst,
 button.btn_amethyst,
 input[type=submit].btn_amethyst,
@@ -1823,7 +1823,7 @@ input[type=reset].btn_amethyst {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_amethyst:hover, .btn.btn_amethyst.active,
 button.btn_amethyst:hover,
 button.btn_amethyst.active,
@@ -1837,7 +1837,7 @@ input[type=reset].btn_amethyst.active {
   color: #ffffff;
   border-color: #a32db1;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_amethyst_border,
 button.btn_amethyst_border,
 input[type=submit].btn_amethyst_border,
@@ -1847,7 +1847,7 @@ input[type=reset].btn_amethyst_border {
   color: #bd3acd;
   border-color: #bd3acd;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_amethyst_border:hover, .btn.btn_amethyst_border.active,
 button.btn_amethyst_border:hover,
 button.btn_amethyst_border.active,
@@ -1861,7 +1861,7 @@ input[type=reset].btn_amethyst_border.active {
   color: #ffffff;
   border-color: #bd3acd;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_raw_sienna,
 button.btn_raw_sienna,
 input[type=submit].btn_raw_sienna,
@@ -1871,7 +1871,7 @@ input[type=reset].btn_raw_sienna {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_raw_sienna:hover, .btn.btn_raw_sienna.active,
 button.btn_raw_sienna:hover,
 button.btn_raw_sienna.active,
@@ -1885,7 +1885,7 @@ input[type=reset].btn_raw_sienna.active {
   color: #ffffff;
   border-color: #b16f2d;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border,
 button.btn_raw_sienna_border,
 input[type=submit].btn_raw_sienna_border,
@@ -1895,7 +1895,7 @@ input[type=reset].btn_raw_sienna_border {
   color: #cd833a;
   border-color: #cd833a;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_raw_sienna_border:hover, .btn.btn_raw_sienna_border.active,
 button.btn_raw_sienna_border:hover,
 button.btn_raw_sienna_border.active,
@@ -1909,7 +1909,7 @@ input[type=reset].btn_raw_sienna_border.active {
   color: #ffffff;
   border-color: #cd833a;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray,
 button.btn_dove_gray,
 input[type=submit].btn_dove_gray,
@@ -1919,7 +1919,7 @@ input[type=reset].btn_dove_gray {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray:hover, .btn.btn_dove_gray.active,
 button.btn_dove_gray:hover,
 button.btn_dove_gray.active,
@@ -1933,7 +1933,7 @@ input[type=reset].btn_dove_gray.active {
   color: #ffffff;
   border-color: #525252;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border,
 button.btn_dove_gray_border,
 input[type=submit].btn_dove_gray_border,
@@ -1943,7 +1943,7 @@ input[type=reset].btn_dove_gray_border {
   color: #666666;
   border-color: #666666;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_border:hover, .btn.btn_dove_gray_border.active,
 button.btn_dove_gray_border:hover,
 button.btn_dove_gray_border.active,
@@ -1957,7 +1957,7 @@ input[type=reset].btn_dove_gray_border.active {
   color: #ffffff;
   border-color: #666666;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light,
 button.btn_dove_gray_light,
 input[type=submit].btn_dove_gray_light,
@@ -1967,7 +1967,7 @@ input[type=reset].btn_dove_gray_light {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light:hover, .btn.btn_dove_gray_light.active,
 button.btn_dove_gray_light:hover,
 button.btn_dove_gray_light.active,
@@ -1981,7 +1981,7 @@ input[type=reset].btn_dove_gray_light.active {
   color: #ffffff;
   border-color: #858585;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border,
 button.btn_dove_gray_light_border,
 input[type=submit].btn_dove_gray_light_border,
@@ -1991,7 +1991,7 @@ input[type=reset].btn_dove_gray_light_border {
   color: #999999;
   border-color: #999999;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_dove_gray_light_border:hover, .btn.btn_dove_gray_light_border.active,
 button.btn_dove_gray_light_border:hover,
 button.btn_dove_gray_light_border.active,
@@ -2005,7 +2005,7 @@ input[type=reset].btn_dove_gray_light_border.active {
   color: #ffffff;
   border-color: #999999;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_silver,
 button.btn_silver,
 input[type=submit].btn_silver,
@@ -2015,7 +2015,7 @@ input[type=reset].btn_silver {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_silver:hover, .btn.btn_silver.active,
 button.btn_silver:hover,
 button.btn_silver.active,
@@ -2029,7 +2029,7 @@ input[type=reset].btn_silver.active {
   color: #272727;
   border-color: #b1b1b1;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_silver_border,
 button.btn_silver_border,
 input[type=submit].btn_silver_border,
@@ -2039,7 +2039,7 @@ input[type=reset].btn_silver_border {
   color: #c5c5c5;
   border-color: #c5c5c5;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_silver_border:hover, .btn.btn_silver_border.active,
 button.btn_silver_border:hover,
 button.btn_silver_border.active,
@@ -2053,7 +2053,7 @@ input[type=reset].btn_silver_border.active {
   color: #272727;
   border-color: #c5c5c5;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mercury,
 button.btn_mercury,
 input[type=submit].btn_mercury,
@@ -2063,7 +2063,7 @@ input[type=reset].btn_mercury {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mercury:hover, .btn.btn_mercury.active,
 button.btn_mercury:hover,
 button.btn_mercury.active,
@@ -2077,7 +2077,7 @@ input[type=reset].btn_mercury.active {
   color: #272727;
   border-color: #d1d1d1;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mercury_border,
 button.btn_mercury_border,
 input[type=submit].btn_mercury_border,
@@ -2087,7 +2087,7 @@ input[type=reset].btn_mercury_border {
   color: #e5e5e5;
   border-color: #e5e5e5;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_mercury_border:hover, .btn.btn_mercury_border.active,
 button.btn_mercury_border:hover,
 button.btn_mercury_border.active,
@@ -2101,7 +2101,7 @@ input[type=reset].btn_mercury_border.active {
   color: #272727;
   border-color: #e5e5e5;
 }
-/* line 327, ../stylish/global/_mixins.scss */
+/* line 327, ../assets/stylish/global/_mixins.scss */
 .btn.btn_white,
 button.btn_white,
 input[type=submit].btn_white,
@@ -2111,7 +2111,7 @@ input[type=reset].btn_white {
   color: #272727;
   border-color: #ffffff;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_white:hover, .btn.btn_white.active,
 button.btn_white:hover,
 button.btn_white.active,
@@ -2125,7 +2125,7 @@ input[type=reset].btn_white.active {
   color: #272727;
   border-color: #ebebeb;
 }
-/* line 331, ../stylish/global/_mixins.scss */
+/* line 331, ../assets/stylish/global/_mixins.scss */
 .btn.btn_white_border,
 button.btn_white_border,
 input[type=submit].btn_white_border,
@@ -2135,7 +2135,7 @@ input[type=reset].btn_white_border {
   color: #ffffff;
   border-color: #ffffff;
 }
-/* line 108, ../stylish/global/_mixins.scss */
+/* line 108, ../assets/stylish/global/_mixins.scss */
 .btn.btn_white_border:hover, .btn.btn_white_border.active,
 button.btn_white_border:hover,
 button.btn_white_border.active,
@@ -2153,7 +2153,7 @@ input[type=reset].btn_white_border.active {
 /* GRIDS LAYOUTS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Container */
-/* line 6, ../stylish/global/grid/_grid.scss */
+/* line 6, ../assets/stylish/global/grid/_grid.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -2162,37 +2162,37 @@ input[type=reset].btn_white_border.active {
   width: 100%;
   max-width: 1440px;
 }
-/* line 10, ../stylish/global/grid/_grid.scss */
+/* line 10, ../assets/stylish/global/grid/_grid.scss */
 .container.full, .container.container_clean {
   padding-left: 0;
   padding-right: 0;
   overflow: hidden;
 }
-/* line 14, ../stylish/global/grid/_grid.scss */
+/* line 14, ../assets/stylish/global/grid/_grid.scss */
 .container.liquid, .container.container_liquid {
   width: 100%;
   max-width: inherit;
 }
 
-/* line 258, ../stylish/global/_mixins.scss */
+/* line 258, ../assets/stylish/global/_mixins.scss */
 .container_quarter {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 258, ../stylish/global/_mixins.scss */
+/* line 258, ../assets/stylish/global/_mixins.scss */
 .container_half {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 258, ../stylish/global/_mixins.scss */
+/* line 258, ../assets/stylish/global/_mixins.scss */
 .container_double {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* line 258, ../stylish/global/_mixins.scss */
+/* line 258, ../assets/stylish/global/_mixins.scss */
 .container_triple {
   padding-left: 60px;
   padding-right: 60px;
@@ -2212,904 +2212,904 @@ input[type=reset].btn_white_border.active {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Generate fluid grid  */
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_fluid {
   margin-left: -20px;
   margin-right: -20px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_fluid [class*='col_'] {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_quarter {
   margin-left: -5px;
   margin-right: -5px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_quarter [class*='col_'] {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_half {
   margin-left: -10px;
   margin-right: -10px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_half [class*='col_'] {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_double {
   margin-left: -40px;
   margin-right: -40px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_double [class*='col_'] {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_triple {
   margin-left: -60px;
   margin-right: -60px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_triple [class*='col_'] {
   padding-left: 60px;
   padding-right: 60px;
 }
 
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_clean {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_clean [class*='col_'] {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 227, ../stylish/global/grid/_grid_fluid.scss */
+/* line 227, ../assets/stylish/global/grid/_grid_fluid.scss */
 [class*='col_'] {
   float: left;
   min-width: 1px;
   min-height: 1px;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_1,
 .col_1 {
   width: 8.33333%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_1,
 .pull_1 {
   margin-left: -8.33333%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_1,
 .push_1 {
   margin-left: 8.33333%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_2,
 .col_2 {
   width: 16.66667%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_2,
 .pull_2 {
   margin-left: -16.66667%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_2,
 .push_2 {
   margin-left: 16.66667%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_3,
 .col_3 {
   width: 25%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_3,
 .pull_3 {
   margin-left: -25%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_3,
 .push_3 {
   margin-left: 25%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_4,
 .col_4 {
   width: 33.33333%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_4,
 .pull_4 {
   margin-left: -33.33333%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_4,
 .push_4 {
   margin-left: 33.33333%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_5,
 .col_5 {
   width: 41.66667%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_5,
 .pull_5 {
   margin-left: -41.66667%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_5,
 .push_5 {
   margin-left: 41.66667%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_6,
 .col_6 {
   width: 50%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_6,
 .pull_6 {
   margin-left: -50%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_6,
 .push_6 {
   margin-left: 50%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_7,
 .col_7 {
   width: 58.33333%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_7,
 .pull_7 {
   margin-left: -58.33333%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_7,
 .push_7 {
   margin-left: 58.33333%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_8,
 .col_8 {
   width: 66.66667%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_8,
 .pull_8 {
   margin-left: -66.66667%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_8,
 .push_8 {
   margin-left: 66.66667%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_9,
 .col_9 {
   width: 75%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_9,
 .pull_9 {
   margin-left: -75%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_9,
 .push_9 {
   margin-left: 75%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_10,
 .col_10 {
   width: 83.33333%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_10,
 .pull_10 {
   margin-left: -83.33333%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_10,
 .push_10 {
   margin-left: 83.33333%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_11,
 .col_11 {
   width: 91.66667%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_11,
 .pull_11 {
   margin-left: -91.66667%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_11,
 .push_11 {
   margin-left: 91.66667%;
 }
 
-/* line 98, ../stylish/global/grid/_grid_fluid.scss */
+/* line 98, ../assets/stylish/global/grid/_grid_fluid.scss */
 .col_l_12,
 .col_12 {
   width: 100%;
 }
 
-/* line 100, ../stylish/global/grid/_grid_fluid.scss */
+/* line 100, ../assets/stylish/global/grid/_grid_fluid.scss */
 .pull_l_12,
 .pull_12 {
   margin-left: -100%;
 }
 
-/* line 102, ../stylish/global/grid/_grid_fluid.scss */
+/* line 102, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_12,
 .push_12 {
   margin-left: 100%;
 }
 
-/* line 107, ../stylish/global/grid/_grid_fluid.scss */
+/* line 107, ../assets/stylish/global/grid/_grid_fluid.scss */
 .hide_l {
   display: none;
 }
 
-/* line 108, ../stylish/global/grid/_grid_fluid.scss */
+/* line 108, ../assets/stylish/global/grid/_grid_fluid.scss */
 .show_l {
   display: block;
 }
 
-/* line 109, ../stylish/global/grid/_grid_fluid.scss */
+/* line 109, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_l_reset,
 .pull_l_reset {
   margin-left: 0;
 }
 
 @media screen and (max-width: 989px) {
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_1 {
     width: 8.33333%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_1 {
     margin-left: -8.33333%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_1 {
     margin-left: 8.33333%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_2 {
     width: 16.66667%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_2 {
     margin-left: -16.66667%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_2 {
     margin-left: 16.66667%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_3 {
     width: 25%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_3 {
     margin-left: -25%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_3 {
     margin-left: 25%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_4 {
     width: 33.33333%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_4 {
     margin-left: -33.33333%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_4 {
     margin-left: 33.33333%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_5 {
     width: 41.66667%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_5 {
     margin-left: -41.66667%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_5 {
     margin-left: 41.66667%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_6 {
     width: 50%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_6 {
     margin-left: -50%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_6 {
     margin-left: 50%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_7 {
     width: 58.33333%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_7 {
     margin-left: -58.33333%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_7 {
     margin-left: 58.33333%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_8 {
     width: 66.66667%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_8 {
     margin-left: -66.66667%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_8 {
     margin-left: 66.66667%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_9 {
     width: 75%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_9 {
     margin-left: -75%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_9 {
     margin-left: 75%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_10 {
     width: 83.33333%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_10 {
     margin-left: -83.33333%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_10 {
     margin-left: 83.33333%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_11 {
     width: 91.66667%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_11 {
     margin-left: -91.66667%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_11 {
     margin-left: 91.66667%;
   }
 
-  /* line 118, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 118, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_m_12 {
     width: 100%;
   }
 
-  /* line 119, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 119, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_m_12 {
     margin-left: -100%;
   }
 
-  /* line 120, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 120, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_12 {
     margin-left: 100%;
   }
 
-  /* line 122, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 122, ../assets/stylish/global/grid/_grid_fluid.scss */
   .hide_m {
     display: none;
   }
 
-  /* line 123, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 123, ../assets/stylish/global/grid/_grid_fluid.scss */
   .show_m {
     display: block;
   }
 
-  /* line 124, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 124, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_m_reset,
   .pull_m_reset {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_1 {
     width: 8.33333%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_1 {
     margin-left: -8.33333%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_1 {
     margin-left: 8.33333%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_2 {
     width: 16.66667%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_2 {
     margin-left: -16.66667%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_2 {
     margin-left: 16.66667%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_3 {
     width: 25%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_3 {
     margin-left: -25%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_3 {
     margin-left: 25%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_4 {
     width: 33.33333%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_4 {
     margin-left: -33.33333%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_4 {
     margin-left: 33.33333%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_5 {
     width: 41.66667%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_5 {
     margin-left: -41.66667%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_5 {
     margin-left: 41.66667%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_6 {
     width: 50%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_6 {
     margin-left: -50%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_6 {
     margin-left: 50%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_7 {
     width: 58.33333%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_7 {
     margin-left: -58.33333%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_7 {
     margin-left: 58.33333%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_8 {
     width: 66.66667%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_8 {
     margin-left: -66.66667%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_8 {
     margin-left: 66.66667%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_9 {
     width: 75%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_9 {
     margin-left: -75%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_9 {
     margin-left: 75%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_10 {
     width: 83.33333%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_10 {
     margin-left: -83.33333%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_10 {
     margin-left: 83.33333%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_11 {
     width: 91.66667%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_11 {
     margin-left: -91.66667%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_11 {
     margin-left: 91.66667%;
   }
 
-  /* line 133, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 133, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_s_12 {
     width: 100%;
   }
 
-  /* line 134, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 134, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_s_12 {
     margin-left: -100%;
   }
 
-  /* line 135, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 135, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_12 {
     margin-left: 100%;
   }
 
-  /* line 137, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 137, ../assets/stylish/global/grid/_grid_fluid.scss */
   .hide_s {
     display: none;
   }
 
-  /* line 138, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 138, ../assets/stylish/global/grid/_grid_fluid.scss */
   .show_s {
     display: block;
   }
 
-  /* line 139, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 139, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_s_reset,
   .pull_s_reset {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 319px) {
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_1 {
     width: 8.33333%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_1 {
     margin-left: -8.33333%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_1 {
     margin-left: 8.33333%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_2 {
     width: 16.66667%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_2 {
     margin-left: -16.66667%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_2 {
     margin-left: 16.66667%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_3 {
     width: 25%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_3 {
     margin-left: -25%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_3 {
     margin-left: 25%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_4 {
     width: 33.33333%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_4 {
     margin-left: -33.33333%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_4 {
     margin-left: 33.33333%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_5 {
     width: 41.66667%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_5 {
     margin-left: -41.66667%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_5 {
     margin-left: 41.66667%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_6 {
     width: 50%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_6 {
     margin-left: -50%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_6 {
     margin-left: 50%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_7 {
     width: 58.33333%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_7 {
     margin-left: -58.33333%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_7 {
     margin-left: 58.33333%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_8 {
     width: 66.66667%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_8 {
     margin-left: -66.66667%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_8 {
     margin-left: 66.66667%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_9 {
     width: 75%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_9 {
     margin-left: -75%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_9 {
     margin-left: 75%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_10 {
     width: 83.33333%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_10 {
     margin-left: -83.33333%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_10 {
     margin-left: 83.33333%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_11 {
     width: 91.66667%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_11 {
     margin-left: -91.66667%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_11 {
     margin-left: 91.66667%;
   }
 
-  /* line 149, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 149, ../assets/stylish/global/grid/_grid_fluid.scss */
   .col_xs_12 {
     width: 100%;
   }
 
-  /* line 150, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 150, ../assets/stylish/global/grid/_grid_fluid.scss */
   .pull_xs_12 {
     margin-left: -100%;
   }
 
-  /* line 151, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 151, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_12 {
     margin-left: 100%;
   }
 
-  /* line 153, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 153, ../assets/stylish/global/grid/_grid_fluid.scss */
   .hide_xs {
     display: none;
   }
 
-  /* line 154, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 154, ../assets/stylish/global/grid/_grid_fluid.scss */
   .show_xs {
     display: block;
   }
 
-  /* line 155, ../stylish/global/grid/_grid_fluid.scss */
+  /* line 155, ../assets/stylish/global/grid/_grid_fluid.scss */
   .push_xs_reset,
   .pull_xs_reset {
     margin-left: 0;
   }
 }
-/* line 195, ../stylish/global/grid/_grid_fluid.scss */
+/* line 195, ../assets/stylish/global/grid/_grid_fluid.scss */
 .push_reset,
 .pull_reset {
   margin-left: 0;
@@ -3117,7 +3117,7 @@ input[type=reset].btn_white_border.active {
 
 /* SETUP FIXED SIDEBAR GRID */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 5, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix {
   width: 100%;
   display: inline-block;
@@ -3126,52 +3126,52 @@ input[type=reset].btn_white_border.active {
   /* Right Sidebar */
   /* Left Sidebar */
 }
-/* line 8, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 8, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix .fluid_col {
   float: left;
   width: 100%;
 }
-/* line 10, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 10, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix .fluid_col .fluid_wrap {
   width: auto;
 }
-/* line 12, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 12, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix .fixed_col {
   width: 300px;
   position: absolute;
   height: 100%;
 }
-/* line 16, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 16, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix.grid_fix_right .fluid_col {
   margin-right: -300px;
 }
-/* line 18, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 18, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix.grid_fix_right .fluid_col .fluid_wrap {
   margin-right: 300px;
   padding-right: 40px;
 }
-/* line 20, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 20, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix.grid_fix_right .fixed_col {
   right: 0;
 }
-/* line 26, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 26, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix.grid_fix_left .fluid_wrap {
   margin-left: 300px;
   padding-left: 40px;
 }
-/* line 27, ../stylish/global/grid/_grid_fixed_col.scss */
+/* line 27, ../assets/stylish/global/grid/_grid_fixed_col.scss */
 .grid_fix.grid_fix_left .fixed_col {
   left: 0;
 }
 
 @media screen and (max-width: 767px) {
   /* Fixed sidebar grid hide sidebar */
-  /* line 39, ../stylish/global/grid/_grid_fixed_col.scss */
+  /* line 39, ../assets/stylish/global/grid/_grid_fixed_col.scss */
   .grid_fix {
     /* Right Sidebar */
     /* Left Sidebar */
   }
-  /* line 40, ../stylish/global/grid/_grid_fixed_col.scss */
+  /* line 40, ../assets/stylish/global/grid/_grid_fixed_col.scss */
   .grid_fix .fluid_col,
   .grid_fix .fixed_col {
     margin: 0;
@@ -3180,12 +3180,12 @@ input[type=reset].btn_white_border.active {
     position: static;
     height: auto;
   }
-  /* line 46, ../stylish/global/grid/_grid_fixed_col.scss */
+  /* line 46, ../assets/stylish/global/grid/_grid_fixed_col.scss */
   .grid_fix.grid_fix_right .fluid_col .fluid_wrap {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 53, ../stylish/global/grid/_grid_fixed_col.scss */
+  /* line 53, ../assets/stylish/global/grid/_grid_fixed_col.scss */
   .grid_fix.grid_fix_left .fluid_col .fluid_wrap {
     margin-left: 0;
     padding-left: 0;
@@ -3195,30 +3195,30 @@ input[type=reset].btn_white_border.active {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Accordion setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 6, ../stylish/components/_accordion.scss */
+/* line 6, ../assets/stylish/components/_accordion.scss */
 .accordion .a_head {
   background-color: #c5c5c5;
   padding: 10px;
   cursor: pointer;
 }
-/* line 8, ../stylish/components/_accordion.scss */
+/* line 8, ../assets/stylish/components/_accordion.scss */
 .accordion .a_head i.a_state {
   float: right;
 }
-/* line 9, ../stylish/components/_accordion.scss */
+/* line 9, ../assets/stylish/components/_accordion.scss */
 .accordion .a_head.active i.a_state {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 11, ../stylish/components/_accordion.scss */
+/* line 11, ../assets/stylish/components/_accordion.scss */
 .accordion .a_content {
   display: none;
   background-color: #e5e5e5;
   padding: 20px;
 }
-/* line 13, ../stylish/components/_accordion.scss */
+/* line 13, ../assets/stylish/components/_accordion.scss */
 .accordion .a_content.active {
   display: block;
   -moz-animation: fadeIn 0.5s;
@@ -3228,13 +3228,13 @@ input[type=reset].btn_white_border.active {
 
 /* Breadcrumbs setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 7, ../stylish/components/_breadcrumbs.scss */
+/* line 7, ../assets/stylish/components/_breadcrumbs.scss */
 .breadcrumbs > li > a:after {
   font-size: 14px;
   vertical-align: baseline;
   padding: 0 10px;
 }
-/* line 9, ../stylish/components/_breadcrumbs.scss */
+/* line 9, ../assets/stylish/components/_breadcrumbs.scss */
 .breadcrumbs > li:last-child > a:after {
   content: "";
   padding: 0;
@@ -3243,7 +3243,7 @@ input[type=reset].btn_white_border.active {
 /* Divider setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Content divider with top and bottom margin classes */
-/* line 6, ../stylish/components/_divider.scss */
+/* line 6, ../assets/stylish/components/_divider.scss */
 .divider {
   border-bottom: 1px solid #999999;
   width: 100%;
@@ -3252,7 +3252,7 @@ input[type=reset].btn_white_border.active {
 
 /* Modal window setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/components/_modal.scss */
+/* line 5, ../assets/stylish/components/_modal.scss */
 html.modal_active {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -3260,7 +3260,7 @@ html.modal_active {
   height: 100%;
   width: 100%;
 }
-/* line 7, ../stylish/components/_modal.scss */
+/* line 7, ../assets/stylish/components/_modal.scss */
 html.modal_active body {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -3269,7 +3269,7 @@ html.modal_active body {
   width: 100%;
 }
 
-/* line 11, ../stylish/components/_modal.scss */
+/* line 11, ../assets/stylish/components/_modal.scss */
 .modal {
   position: fixed;
   left: 0;
@@ -3281,7 +3281,7 @@ html.modal_active body {
   opacity: 0;
   z-index: -50;
 }
-/* line 15, ../stylish/components/_modal.scss */
+/* line 15, ../assets/stylish/components/_modal.scss */
 .modal .m_overlay {
   position: fixed;
   left: 0;
@@ -3301,7 +3301,7 @@ html.modal_active body {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 18, ../stylish/components/_modal.scss */
+/* line 18, ../assets/stylish/components/_modal.scss */
 .modal .m_wrap {
   display: block;
   height: 100%;
@@ -3309,7 +3309,7 @@ html.modal_active body {
   max-width: 600px;
   margin: 0 auto;
 }
-/* line 21, ../stylish/components/_modal.scss */
+/* line 21, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap {
   position: absolute;
   top: 0;
@@ -3317,7 +3317,7 @@ html.modal_active body {
   height: 100%;
   z-index: 2;
 }
-/* line 25, ../stylish/components/_modal.scss */
+/* line 25, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap .m_content {
   padding: 35px;
   background-color: #ffffff;
@@ -3332,66 +3332,66 @@ html.modal_active body {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 28, ../stylish/components/_modal.scss */
+/* line 28, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap .m_head {
   margin-bottom: 30px;
 }
-/* line 30, ../stylish/components/_modal.scss */
+/* line 30, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap .m_head .m_title {
   margin-bottom: 10px;
 }
-/* line 32, ../stylish/components/_modal.scss */
+/* line 32, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap .m_footer {
   margin-top: 30px;
 }
-/* line 36, ../stylish/components/_modal.scss */
+/* line 36, ../assets/stylish/components/_modal.scss */
 .modal.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   z-index: 99999;
   visibility: visible;
 }
-/* line 38, ../stylish/components/_modal.scss */
+/* line 38, ../assets/stylish/components/_modal.scss */
 .modal.active .m_overlay {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible;
   background-color: rgba(39, 39, 39, 0.7);
 }
-/* line 42, ../stylish/components/_modal.scss */
+/* line 42, ../assets/stylish/components/_modal.scss */
 .modal .close_modal {
   position: absolute;
   right: 10px;
   top: 10px;
   font-size: 20px;
 }
-/* line 51, ../stylish/components/_modal.scss */
+/* line 51, ../assets/stylish/components/_modal.scss */
 .modal[data-slide="top"].active .m_content {
   margin-top: 15px;
 }
-/* line 58, ../stylish/components/_modal.scss */
+/* line 58, ../assets/stylish/components/_modal.scss */
 .modal[data-slide="scale"] .m_content_wrap .m_content {
   -moz-transform: scale(0.6, 0.6);
   -ms-transform: scale(0.6, 0.6);
   -webkit-transform: scale(0.6, 0.6);
   transform: scale(0.6, 0.6);
 }
-/* line 63, ../stylish/components/_modal.scss */
+/* line 63, ../assets/stylish/components/_modal.scss */
 .modal[data-slide="scale"].active .m_content_wrap .m_content {
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 70, ../stylish/components/_modal.scss */
+/* line 70, ../assets/stylish/components/_modal.scss */
 .modal[data-size="full"] .m_wrap {
   max-width: initial;
 }
-/* line 71, ../stylish/components/_modal.scss */
+/* line 71, ../assets/stylish/components/_modal.scss */
 .modal[data-size="full"] .m_content_wrap {
   top: 0 !important;
 }
-/* line 73, ../stylish/components/_modal.scss */
+/* line 73, ../assets/stylish/components/_modal.scss */
 .modal[data-size="full"] .m_content_wrap .m_content {
   height: 100%;
   margin-top: 0 !important;
@@ -3400,7 +3400,7 @@ html.modal_active body {
 /* RESPONSIVE MEDIA QUERIES (Desktop first) */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
-  /* line 95, ../stylish/components/_modal.scss */
+  /* line 95, ../assets/stylish/components/_modal.scss */
   .modal .m_content_wrap {
     top: 0 !important;
     overflow-y: auto;
@@ -3408,22 +3408,22 @@ html.modal_active body {
 }
 /* Messages block setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/components/_msg.scss */
+/* line 5, ../assets/stylish/components/_msg.scss */
 .messages, .msg {
   margin-bottom: 30px;
   list-style: none;
 }
-/* line 8, ../stylish/components/_msg.scss */
+/* line 8, ../assets/stylish/components/_msg.scss */
 .messages li, .msg li {
   list-style: none;
   font-size: 18px;
   font-size: 1rem;
 }
-/* line 10, ../stylish/components/_msg.scss */
+/* line 10, ../assets/stylish/components/_msg.scss */
 .messages li:last-child, .msg li:last-child {
   margin-bottom: 0;
 }
-/* line 13, ../stylish/components/_msg.scss */
+/* line 13, ../assets/stylish/components/_msg.scss */
 .messages > li, .msg > li {
   color: #272727;
   padding: 10px 10px 10px 50px;
@@ -3433,7 +3433,7 @@ html.modal_active body {
   position: relative;
   margin-bottom: 20px;
 }
-/* line 15, ../stylish/components/_msg.scss */
+/* line 15, ../assets/stylish/components/_msg.scss */
 .messages > li:before, .msg > li:before {
   font-size: 30px;
   position: absolute;
@@ -3441,226 +3441,226 @@ html.modal_active body {
   top: 50%;
   margin-top: -15px;
 }
-/* line 18, ../stylish/components/_msg.scss */
+/* line 18, ../assets/stylish/components/_msg.scss */
 .messages > li.error-msg, .messages > li.error_msg, .msg > li.error-msg, .msg > li.error_msg {
   background-color: #f2a89c;
 }
-/* line 25, ../stylish/components/_msg.scss */
+/* line 25, ../assets/stylish/components/_msg.scss */
 .messages > li.success-msg, .messages > li.success_msg, .msg > li.success-msg, .msg > li.success_msg {
   background-color: #c4dcc0;
 }
-/* line 32, ../stylish/components/_msg.scss */
+/* line 32, ../assets/stylish/components/_msg.scss */
 .messages > li.notice-msg, .messages > li.notice_msg, .msg > li.notice-msg, .msg > li.notice_msg {
   background-color: #c0cddc;
 }
-/* line 39, ../stylish/components/_msg.scss */
+/* line 39, ../assets/stylish/components/_msg.scss */
 .messages > li.warning-msg, .messages > li.warning_msg, .msg > li.warning-msg, .msg > li.warning_msg {
   background-color: #e1e696;
 }
 
 /* Navigation setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 8, ../stylish/components/_nav.scss */
+/* line 8, ../assets/stylish/components/_nav.scss */
 .nav > li,
 .navi > li {
   list-style: none;
   text-align: center;
 }
-/* line 10, ../stylish/components/_nav.scss */
+/* line 10, ../assets/stylish/components/_nav.scss */
 .nav > li > a,
 .navi > li > a {
   display: block;
 }
-/* line 14, ../stylish/components/_nav.scss */
+/* line 14, ../assets/stylish/components/_nav.scss */
 .nav.nav_aright > li,
 .navi.nav_aright > li {
   text-align: right;
 }
-/* line 15, ../stylish/components/_nav.scss */
+/* line 15, ../assets/stylish/components/_nav.scss */
 .nav.nav_aleft > li,
 .navi.nav_aleft > li {
   text-align: left;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="24"] > li, .nav[data-items="24"] > li,
 .navi[data-item="24"] > li,
 .navi[data-items="24"] > li {
   width: 4.16667%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="23"] > li, .nav[data-items="23"] > li,
 .navi[data-item="23"] > li,
 .navi[data-items="23"] > li {
   width: 4.34783%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="22"] > li, .nav[data-items="22"] > li,
 .navi[data-item="22"] > li,
 .navi[data-items="22"] > li {
   width: 4.54545%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="21"] > li, .nav[data-items="21"] > li,
 .navi[data-item="21"] > li,
 .navi[data-items="21"] > li {
   width: 4.7619%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="20"] > li, .nav[data-items="20"] > li,
 .navi[data-item="20"] > li,
 .navi[data-items="20"] > li {
   width: 5%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="19"] > li, .nav[data-items="19"] > li,
 .navi[data-item="19"] > li,
 .navi[data-items="19"] > li {
   width: 5.26316%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="18"] > li, .nav[data-items="18"] > li,
 .navi[data-item="18"] > li,
 .navi[data-items="18"] > li {
   width: 5.55556%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="17"] > li, .nav[data-items="17"] > li,
 .navi[data-item="17"] > li,
 .navi[data-items="17"] > li {
   width: 5.88235%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="16"] > li, .nav[data-items="16"] > li,
 .navi[data-item="16"] > li,
 .navi[data-items="16"] > li {
   width: 6.25%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="15"] > li, .nav[data-items="15"] > li,
 .navi[data-item="15"] > li,
 .navi[data-items="15"] > li {
   width: 6.66667%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="14"] > li, .nav[data-items="14"] > li,
 .navi[data-item="14"] > li,
 .navi[data-items="14"] > li {
   width: 7.14286%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="13"] > li, .nav[data-items="13"] > li,
 .navi[data-item="13"] > li,
 .navi[data-items="13"] > li {
   width: 7.69231%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="12"] > li, .nav[data-items="12"] > li,
 .navi[data-item="12"] > li,
 .navi[data-items="12"] > li {
   width: 8.33333%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="11"] > li, .nav[data-items="11"] > li,
 .navi[data-item="11"] > li,
 .navi[data-items="11"] > li {
   width: 9.09091%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="10"] > li, .nav[data-items="10"] > li,
 .navi[data-item="10"] > li,
 .navi[data-items="10"] > li {
   width: 10%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="9"] > li, .nav[data-items="9"] > li,
 .navi[data-item="9"] > li,
 .navi[data-items="9"] > li {
   width: 11.11111%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="8"] > li, .nav[data-items="8"] > li,
 .navi[data-item="8"] > li,
 .navi[data-items="8"] > li {
   width: 12.5%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="7"] > li, .nav[data-items="7"] > li,
 .navi[data-item="7"] > li,
 .navi[data-items="7"] > li {
   width: 14.28571%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="6"] > li, .nav[data-items="6"] > li,
 .navi[data-item="6"] > li,
 .navi[data-items="6"] > li {
   width: 16.66667%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="5"] > li, .nav[data-items="5"] > li,
 .navi[data-item="5"] > li,
 .navi[data-items="5"] > li {
   width: 20%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="4"] > li, .nav[data-items="4"] > li,
 .navi[data-item="4"] > li,
 .navi[data-items="4"] > li {
   width: 25%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="3"] > li, .nav[data-items="3"] > li,
 .navi[data-item="3"] > li,
 .navi[data-items="3"] > li {
   width: 33.33333%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="2"] > li, .nav[data-items="2"] > li,
 .navi[data-item="2"] > li,
 .navi[data-items="2"] > li {
   width: 50%;
 }
-/* line 21, ../stylish/components/_nav.scss */
+/* line 21, ../assets/stylish/components/_nav.scss */
 .nav[data-item="1"] > li, .nav[data-items="1"] > li,
 .navi[data-item="1"] > li,
 .navi[data-items="1"] > li {
   width: 100%;
 }
 
-/* line 31, ../stylish/components/_nav.scss */
+/* line 31, ../assets/stylish/components/_nav.scss */
 .nav > li {
   float: left;
 }
-/* line 32, ../stylish/components/_nav.scss */
+/* line 32, ../assets/stylish/components/_nav.scss */
 .nav.nav_right > li {
   float: right;
 }
 
-/* line 37, ../stylish/components/_nav.scss */
+/* line 37, ../assets/stylish/components/_nav.scss */
 .navi > li {
   display: inline-block;
   vertical-align: middle;
   margin-right: -6px;
 }
 
-/* line 43, ../stylish/components/_nav.scss */
+/* line 43, ../assets/stylish/components/_nav.scss */
 .sticky {
   position: fixed;
   z-index: 10000;
   -webkit-transform: translateZ(0);
 }
-/* line 46, ../stylish/components/_nav.scss */
+/* line 46, ../assets/stylish/components/_nav.scss */
 .sticky.top {
   top: 0;
 }
-/* line 47, ../stylish/components/_nav.scss */
+/* line 47, ../assets/stylish/components/_nav.scss */
 .sticky.bottom {
   bottom: 0;
 }
-/* line 49, ../stylish/components/_nav.scss */
+/* line 49, ../assets/stylish/components/_nav.scss */
 .sticky.left {
   left: 0;
 }
-/* line 50, ../stylish/components/_nav.scss */
+/* line 50, ../assets/stylish/components/_nav.scss */
 .sticky.right {
   right: 0;
 }
@@ -3668,7 +3668,7 @@ html.modal_active body {
 /* Undefined components setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Block or widget move */
-/* line 6, ../stylish/components/_other.scss */
+/* line 6, ../assets/stylish/components/_other.scss */
 .block,
 .widget {
   margin-bottom: 30px;
@@ -3700,15 +3700,15 @@ html.modal_active body {
 }
 /* Pagination setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/components/_paginations.scss */
+/* line 5, ../assets/stylish/components/_paginations.scss */
 .pagination {
   text-align: center;
 }
-/* line 7, ../stylish/components/_paginations.scss */
+/* line 7, ../assets/stylish/components/_paginations.scss */
 .pagination > li {
   margin: 0 3px;
 }
-/* line 9, ../stylish/components/_paginations.scss */
+/* line 9, ../assets/stylish/components/_paginations.scss */
 .pagination > li > a, .pagination > li > span {
   background-color: #e5e5e5;
   color: #272727;
@@ -3728,11 +3728,11 @@ html.modal_active body {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 12, ../stylish/components/_paginations.scss */
+/* line 12, ../assets/stylish/components/_paginations.scss */
 .pagination > li > a:hover {
   background-color: #d1d1d1;
 }
-/* line 16, ../stylish/components/_paginations.scss */
+/* line 16, ../assets/stylish/components/_paginations.scss */
 .pagination > li.current > a, .pagination > li.current > span {
   background-color: #cd3a3a;
   color: #ffffff;
@@ -3740,59 +3740,59 @@ html.modal_active body {
 
 /* Tables setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/components/_table.scss */
+/* line 5, ../assets/stylish/components/_table.scss */
 .table_responsive {
   overflow-y: hidden;
   overflow-x: auto;
   width: 100%;
 }
 
-/* line 10, ../stylish/components/_table.scss */
+/* line 10, ../assets/stylish/components/_table.scss */
 table {
   width: 100%;
 }
-/* line 12, ../stylish/components/_table.scss */
+/* line 12, ../assets/stylish/components/_table.scss */
 table th, table td {
   padding: 10px;
   border-bottom: 1px solid;
 }
-/* line 18, ../stylish/components/_table.scss */
+/* line 18, ../assets/stylish/components/_table.scss */
 table thead th, table thead td {
   border-bottom-color: #cd3a3a;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 23, ../stylish/components/_table.scss */
+/* line 23, ../assets/stylish/components/_table.scss */
 table tbody th, table tbody td {
   border-bottom-color: #e5e5e5;
 }
-/* line 28, ../stylish/components/_table.scss */
+/* line 28, ../assets/stylish/components/_table.scss */
 table tfoot th, table tfoot td {
   border-bottom-color: #cd3a3a;
 }
-/* line 41, ../stylish/components/_table.scss */
+/* line 41, ../assets/stylish/components/_table.scss */
 table.row_color tbody tr:nth-child(odd) td {
   background-color: #f7f7f7;
 }
-/* line 48, ../stylish/components/_table.scss */
+/* line 48, ../assets/stylish/components/_table.scss */
 table.cozy_view th, table.cozy_view td {
   padding: 5px;
 }
-/* line 53, ../stylish/components/_table.scss */
+/* line 53, ../assets/stylish/components/_table.scss */
 table.compact_view th, table.compact_view td {
   padding: 3.33333px;
 }
-/* line 58, ../stylish/components/_table.scss */
+/* line 58, ../assets/stylish/components/_table.scss */
 table th.first, table td.first {
   padding-left: 0;
 }
-/* line 59, ../stylish/components/_table.scss */
+/* line 59, ../assets/stylish/components/_table.scss */
 table th.last, table td.last {
   padding-right: 0;
 }
 
 /* Tables status setup */
-/* line 67, ../stylish/components/_table.scss */
+/* line 67, ../assets/stylish/components/_table.scss */
 .status {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -3801,30 +3801,30 @@ table th.last, table td.last {
   display: inline-block;
   font-size: 85%;
 }
-/* line 69, ../stylish/components/_table.scss */
+/* line 69, ../assets/stylish/components/_table.scss */
 .status.status_error {
   background-color: #f2a89c;
 }
-/* line 70, ../stylish/components/_table.scss */
+/* line 70, ../assets/stylish/components/_table.scss */
 .status.status_success {
   background-color: #c4dcc0;
 }
-/* line 71, ../stylish/components/_table.scss */
+/* line 71, ../assets/stylish/components/_table.scss */
 .status.status_notice {
   background-color: #c0cddc;
 }
-/* line 72, ../stylish/components/_table.scss */
+/* line 72, ../assets/stylish/components/_table.scss */
 .status.status_warning {
   background-color: #e1e696;
 }
 
 /* Tabs setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 8, ../stylish/components/_tabs.scss */
+/* line 8, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head {
   background-color: #e5e5e5;
 }
-/* line 10, ../stylish/components/_tabs.scss */
+/* line 10, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head li {
   cursor: pointer;
   -moz-transition-property: background-color;
@@ -3840,37 +3840,37 @@ table th.last, table td.last {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 12, ../stylish/components/_tabs.scss */
+/* line 12, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head li.active {
   color: #272727;
   background-color: #ffffff;
 }
-/* line 19, ../stylish/components/_tabs.scss */
+/* line 19, ../assets/stylish/components/_tabs.scss */
 .tabs .t_content {
   height: 0;
   overflow: hidden;
 }
-/* line 21, ../stylish/components/_tabs.scss */
+/* line 21, ../assets/stylish/components/_tabs.scss */
 .tabs .t_content.active {
   height: 100%;
 }
-/* line 23, ../stylish/components/_tabs.scss */
+/* line 23, ../assets/stylish/components/_tabs.scss */
 .tabs .t_content .t_content_wrap {
   padding: 20px 0;
 }
 
 /* Tooltip setup */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/components/_tooltip.scss */
+/* line 5, ../assets/stylish/components/_tooltip.scss */
 .tooltip {
   position: relative;
 }
-/* line 9, ../stylish/components/_tooltip.scss */
+/* line 9, ../assets/stylish/components/_tooltip.scss */
 .tooltip .tooltip_trigger {
   cursor: pointer;
 }
 
-/* line 14, ../stylish/components/_tooltip.scss */
+/* line 14, ../assets/stylish/components/_tooltip.scss */
 .tip {
   position: absolute;
   padding: 10px;
@@ -3891,7 +3891,7 @@ table th.last, table td.last {
   color: #272727;
   border: 1px solid #e5e5e5;
 }
-/* line 16, ../stylish/components/_tooltip.scss */
+/* line 16, ../assets/stylish/components/_tooltip.scss */
 .tip:after, .tip:before {
   content: "";
   position: absolute;
@@ -3899,109 +3899,109 @@ table th.last, table td.last {
   height: 0;
   border: 10px solid transparent;
 }
-/* line 21, ../stylish/components/_tooltip.scss */
+/* line 21, ../assets/stylish/components/_tooltip.scss */
 .tip.inactive {
   left: -500000px !important;
 }
-/* line 27, ../stylish/components/_tooltip.scss */
+/* line 27, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="top"][data-tip-arrow="left"]:after, .tip[data-tip-position="top"][data-tip-arrow="left"]:before, .tip[data-tip-position="bottom"][data-tip-arrow="left"]:after, .tip[data-tip-position="bottom"][data-tip-arrow="left"]:before {
   left: 20px;
 }
-/* line 31, ../stylish/components/_tooltip.scss */
+/* line 31, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="top"][data-tip-arrow="center"]:after, .tip[data-tip-position="top"][data-tip-arrow="center"]:before, .tip[data-tip-position="bottom"][data-tip-arrow="center"]:after, .tip[data-tip-position="bottom"][data-tip-arrow="center"]:before {
   left: 50%;
   margin-left: -10px;
 }
-/* line 35, ../stylish/components/_tooltip.scss */
+/* line 35, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="top"][data-tip-arrow="right"]:after, .tip[data-tip-position="top"][data-tip-arrow="right"]:before, .tip[data-tip-position="bottom"][data-tip-arrow="right"]:after, .tip[data-tip-position="bottom"][data-tip-arrow="right"]:before {
   right: 20px;
 }
-/* line 43, ../stylish/components/_tooltip.scss */
+/* line 43, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"][data-tip-arrow="top"]:after, .tip[data-tip-position="left"][data-tip-arrow="top"]:before, .tip[data-tip-position="right"][data-tip-arrow="top"]:after, .tip[data-tip-position="right"][data-tip-arrow="top"]:before {
   top: 20px;
 }
-/* line 47, ../stylish/components/_tooltip.scss */
+/* line 47, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"][data-tip-arrow="center"]:after, .tip[data-tip-position="left"][data-tip-arrow="center"]:before, .tip[data-tip-position="right"][data-tip-arrow="center"]:after, .tip[data-tip-position="right"][data-tip-arrow="center"]:before {
   top: 50%;
   margin-top: -10px;
 }
-/* line 51, ../stylish/components/_tooltip.scss */
+/* line 51, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"][data-tip-arrow="bottom"]:after, .tip[data-tip-position="left"][data-tip-arrow="bottom"]:before, .tip[data-tip-position="right"][data-tip-arrow="bottom"]:after, .tip[data-tip-position="right"][data-tip-arrow="bottom"]:before {
   bottom: 20px;
 }
-/* line 59, ../stylish/components/_tooltip.scss */
+/* line 59, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="top"]:after, .tip[data-tip-position="top"]:before {
   bottom: -20px;
 }
-/* line 60, ../stylish/components/_tooltip.scss */
+/* line 60, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="top"]:before {
   margin-bottom: -1px;
 }
-/* line 63, ../stylish/components/_tooltip.scss */
+/* line 63, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="bottom"]:after, .tip[data-tip-position="bottom"]:before {
   top: -20px;
 }
-/* line 64, ../stylish/components/_tooltip.scss */
+/* line 64, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="bottom"]:before {
   margin-top: -1px;
 }
-/* line 66, ../stylish/components/_tooltip.scss */
+/* line 66, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"] {
   left: 0;
 }
-/* line 68, ../stylish/components/_tooltip.scss */
+/* line 68, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"]:after, .tip[data-tip-position="left"]:before {
   right: -20px;
 }
-/* line 69, ../stylish/components/_tooltip.scss */
+/* line 69, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="left"]:before {
   margin-right: -1px;
 }
-/* line 71, ../stylish/components/_tooltip.scss */
+/* line 71, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="right"] {
   right: 0;
 }
-/* line 73, ../stylish/components/_tooltip.scss */
+/* line 73, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="right"]:after, .tip[data-tip-position="right"]:before {
   left: -20px;
 }
-/* line 74, ../stylish/components/_tooltip.scss */
+/* line 74, ../assets/stylish/components/_tooltip.scss */
 .tip[data-tip-position="right"]:before {
   margin-left: -1px;
 }
-/* line 478, ../stylish/global/_mixins.scss */
+/* line 478, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:after {
   border-top-color: #ffffff;
 }
-/* line 479, ../stylish/global/_mixins.scss */
+/* line 479, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:after {
   border-bottom-color: #ffffff;
 }
-/* line 480, ../stylish/global/_mixins.scss */
+/* line 480, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:after {
   border-left-color: #ffffff;
 }
-/* line 481, ../stylish/global/_mixins.scss */
+/* line 481, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:after {
   border-right-color: #ffffff;
 }
-/* line 483, ../stylish/global/_mixins.scss */
+/* line 483, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="top"]:before {
   border-top-color: #e5e5e5;
 }
-/* line 484, ../stylish/global/_mixins.scss */
+/* line 484, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="bottom"]:before {
   border-bottom-color: #e5e5e5;
 }
-/* line 485, ../stylish/global/_mixins.scss */
+/* line 485, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="left"]:before {
   border-left-color: #e5e5e5;
 }
-/* line 486, ../stylish/global/_mixins.scss */
+/* line 486, ../assets/stylish/global/_mixins.scss */
 .tip[data-tip-position="right"]:before {
   border-right-color: #e5e5e5;
 }
-/* line 83, ../stylish/components/_tooltip.scss */
+/* line 83, ../assets/stylish/components/_tooltip.scss */
 .tip .tip_title {
   font-size: 18px;
   font-size: 1rem;
@@ -4017,12 +4017,12 @@ table th.last, table td.last {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* COMMON STUFF */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 69, ../stylish/global/grid/_grid_fluid.scss */
+/* line 69, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_correction .grid_fluid {
   margin-left: -20px;
   margin-right: -20px;
 }
-/* line 40, ../stylish/global/grid/_grid_fluid.scss */
+/* line 40, ../assets/stylish/global/grid/_grid_fluid.scss */
 .grid_correction .grid_fluid [class*='col_'] {
   padding-left: 20px;
   padding-right: 20px;
@@ -4033,7 +4033,7 @@ table th.last, table td.last {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* MAIN CONTENT LAYOUT */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/layout/_content.scss */
+/* line 5, ../assets/stylish/layout/_content.scss */
 #content {
   min-height: 500px;
   margin-bottom: 50px;
@@ -4049,297 +4049,297 @@ table th.last, table td.last {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /*  GLOBAL OVERRIDE STYLE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../stylish/global/_global.scss */
+/* line 5, ../assets/stylish/global/_global.scss */
 .hide,
 .no-display {
   display: none;
 }
 
-/* line 7, ../stylish/global/_global.scss */
+/* line 7, ../assets/stylish/global/_global.scss */
 .show {
   display: block;
 }
 
-/* line 9, ../stylish/global/_global.scss */
+/* line 9, ../assets/stylish/global/_global.scss */
 .left {
   float: left;
 }
 
-/* line 10, ../stylish/global/_global.scss */
+/* line 10, ../assets/stylish/global/_global.scss */
 .right {
   float: right;
 }
 
-/* line 12, ../stylish/global/_global.scss */
+/* line 12, ../assets/stylish/global/_global.scss */
 .no_res {
   width: auto;
   height: auto;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom100 {
   margin-bottom: 100px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top100 {
   margin-top: 100px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom100 {
   padding-bottom: 100px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top100 {
   padding-top: 100px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom90 {
   margin-bottom: 90px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top90 {
   margin-top: 90px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom90 {
   padding-bottom: 90px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top90 {
   padding-top: 90px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom80 {
   margin-bottom: 80px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top80 {
   margin-top: 80px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom80 {
   padding-bottom: 80px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top80 {
   padding-top: 80px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom70 {
   margin-bottom: 70px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top70 {
   margin-top: 70px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom70 {
   padding-bottom: 70px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top70 {
   padding-top: 70px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom60 {
   margin-bottom: 60px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top60 {
   margin-top: 60px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom60 {
   padding-bottom: 60px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top60 {
   padding-top: 60px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom50 {
   margin-bottom: 50px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top50 {
   margin-top: 50px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom50 {
   padding-bottom: 50px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top50 {
   padding-top: 50px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom40 {
   margin-bottom: 40px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top40 {
   margin-top: 40px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom40 {
   padding-bottom: 40px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top40 {
   padding-top: 40px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom30 {
   margin-bottom: 30px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top30 {
   margin-top: 30px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom30 {
   padding-bottom: 30px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top30 {
   padding-top: 30px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom20 {
   margin-bottom: 20px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top20 {
   margin-top: 20px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom20 {
   padding-bottom: 20px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top20 {
   padding-top: 20px;
 }
 
-/* line 463, ../stylish/global/_mixins.scss */
+/* line 463, ../assets/stylish/global/_mixins.scss */
 .m_bottom10 {
   margin-bottom: 10px;
 }
 
-/* line 464, ../stylish/global/_mixins.scss */
+/* line 464, ../assets/stylish/global/_mixins.scss */
 .m_top10 {
   margin-top: 10px;
 }
 
-/* line 465, ../stylish/global/_mixins.scss */
+/* line 465, ../assets/stylish/global/_mixins.scss */
 .p_bottom10 {
   padding-bottom: 10px;
 }
 
-/* line 466, ../stylish/global/_mixins.scss */
+/* line 466, ../assets/stylish/global/_mixins.scss */
 .p_top10 {
   padding-top: 10px;
 }
 
 /* Padding clear */
-/* line 20, ../stylish/global/_global.scss */
+/* line 20, ../assets/stylish/global/_global.scss */
 .p_clear_left {
   padding-left: 0;
 }
 
-/* line 21, ../stylish/global/_global.scss */
+/* line 21, ../assets/stylish/global/_global.scss */
 .p_clear_right {
   padding-right: 0;
 }
 
-/* line 22, ../stylish/global/_global.scss */
+/* line 22, ../assets/stylish/global/_global.scss */
 .p_clear_top {
   padding-top: 0;
 }
 
-/* line 23, ../stylish/global/_global.scss */
+/* line 23, ../assets/stylish/global/_global.scss */
 .p_clear_bottom {
   padding-bottom: 0;
 }
 
-/* line 24, ../stylish/global/_global.scss */
+/* line 24, ../assets/stylish/global/_global.scss */
 .p_clear {
   padding: 0;
 }
 
 /* Margin clear */
-/* line 28, ../stylish/global/_global.scss */
+/* line 28, ../assets/stylish/global/_global.scss */
 .m_clear_left {
   margin-left: 0;
 }
 
-/* line 29, ../stylish/global/_global.scss */
+/* line 29, ../assets/stylish/global/_global.scss */
 .m_clear_right {
   margin-right: 0;
 }
 
-/* line 30, ../stylish/global/_global.scss */
+/* line 30, ../assets/stylish/global/_global.scss */
 .m_clear_top {
   margin-top: 0;
 }
 
-/* line 31, ../stylish/global/_global.scss */
+/* line 31, ../assets/stylish/global/_global.scss */
 .m_clear_bottom {
   margin-bottom: 0;
 }
 
-/* line 32, ../stylish/global/_global.scss */
+/* line 32, ../assets/stylish/global/_global.scss */
 .m_clear {
   margin: 0;
 }
 
 /* Text align */
-/* line 37, ../stylish/global/_global.scss */
+/* line 37, ../assets/stylish/global/_global.scss */
 .aleft, .a_left, .a-left {
   text-align: left;
 }
 
-/* line 38, ../stylish/global/_global.scss */
+/* line 38, ../assets/stylish/global/_global.scss */
 .aright, .a_right, .a-right {
   text-align: right;
 }
 
-/* line 39, ../stylish/global/_global.scss */
+/* line 39, ../assets/stylish/global/_global.scss */
 .acenter, .a_center, .a-center {
   text-align: center;
 }
