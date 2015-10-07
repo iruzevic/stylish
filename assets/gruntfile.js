@@ -100,7 +100,7 @@ module.exports = function(grunt){
 
         watch: {
             compass: {
-                files: ['stylish/{,*/}*.scss'],
+                files: ['stylish/**/*.scss'],
                 tasks: ['compass:dev']
             },
             scripts: {
