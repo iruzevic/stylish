@@ -125,7 +125,7 @@ module.exports = function(grunt){
         'clean:images', 'clean:js', 'clean:css', 'compass:dev', 'imagemin', 'uglify:dev'
     ]);
 
-    //Prodcutio
+    //Production
     grunt.registerTask('prod', [
         'clean:images', 'clean:js', 'clean:css', 'compass:prod', 'imagemin', 'uglify:prod'
     ]);

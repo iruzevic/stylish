@@ -145,7 +145,7 @@
                                 <li>gem install compass</li>
                                 <li>gem install sass</li>
                                 <li>npm install -g grunt-cli</li>
-                                <li>npm install grunt</li>
+                                <li>npm install</li>
                                 <li>grunt dev</li>
                                 <li>grunt prod</li>
                                 <li>grunt clean</li>

@@ -1,6 +1,6 @@
 {
-  "name": "StylishFramewor",
-  "version": "3.6",
+  "name": "StylishFramework",
+  "version": "0.1.0",
   "author": "Ivan Ružević",
   "private": true,
   "devDependencies": {
