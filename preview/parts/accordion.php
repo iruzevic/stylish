@@ -2,7 +2,7 @@
     <div class="block  scrollto_auto">
         <h1 class="title">Accordion Auto Close</h1>
         <p class="desc">Accordion style classic behavior</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="accordion" data-active="1" data-autoclose=""> <!-- Auto Close - true or false; default:true -->
                 <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>
@@ -30,7 +30,7 @@
     <div class="block  scrollto_manual">
         <h1 class="title">Accordion Manual Close</h1>
         <p class="desc">Accordion style if data-autoclose is false on head click won't close previous active state.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="accordion" data-active="1" data-autoclose="false"> <!-- Auto Close - true or false; default:true -->
                 <div class="a_head" data-acc="1">Title1 <i class="a_state sy_arrow_down"></i></div>

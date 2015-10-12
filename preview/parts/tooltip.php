@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Tooltip</h1>
         <p class="desc"></p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
 
             <div class="tooltip">

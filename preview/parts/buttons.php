@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Buttons</h1>
         <p class="desc">Different buttons style mockup.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
 
             <!-- Button Black -->

@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Divider</h1>
         <p class="desc">Divider with bottom border and spacing on top or bottom. Add class m_bottom, m_top, p_top or p_bottom with number from 10-100 which corresponds to margin-top and margin-bottom. General used in content styling.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="divider m_bottom20 m_top20"></div>
 
@@ -151,7 +151,7 @@
     <div class="block">
         <h1 class="title">Cols Equal Height calculator</h1>
         <p class="desc">To add col to equal height calculator just add data-mh="" tag and input value. You need equalHeight.js script for this to work.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="grid_fluid gutter">
                 <div class="col_4" data-mh="group">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus urna lectus, sed tincidunt velit bibendum id. Cras placerat vel arcu interdum condimentum. Donec lacinia elit mi, non vestibulum justo sollicitudin non. Vivamus erat orci, iaculis vitae odio sed, efficitur tincidunt sem</div>

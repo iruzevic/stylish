@@ -2,7 +2,7 @@
     <div class="block scrollto_msg_error">
         <h1 class="title">Msg Error</h1>
         <p class="desc">Messages with Error color</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="msg">
                 <li class="error_msg">
@@ -31,7 +31,7 @@
     <div class="block scrollto_msg_success">
         <h1 class="title">Msg Success</h1>
         <p class="desc">Messages with Success color</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="msg">
                 <li class="success_msg">
@@ -60,7 +60,7 @@
     <div class="block scrollto_msg_notice">
         <h1 class="title">Msg Notice</h1>
         <p class="desc">Messages with Notice color</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="msg">
                 <li class="notice_msg">
@@ -89,7 +89,7 @@
     <div class="block scrollto_msg_warning">
         <h1 class="title">Msg Warning</h1>
         <p class="desc">Messages with Warning color</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="msg">
                 <li class="warning_msg">

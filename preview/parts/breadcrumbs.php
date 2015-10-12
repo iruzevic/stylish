@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Breadcrumbs</h1>
         <p class="desc">Breadcrumbs style mockup</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="breadcrumbs nav">
                 <li><a href="#">Home</a></li>

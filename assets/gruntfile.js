@@ -71,21 +71,37 @@ module.exports = function(grunt){
         },
 
         //Compress js
+        concat: {
+            js: {
+                options: {
+                    block: true,
+                    line: true,
+                    stripBanners: true,
+                    sourceMap: true,
+                    sourceMapName : rootDir + '/js/sourceMap.map'
+                },
+                files: {
+                    '../js/combine.min.js' : [
+                        'js/modernizr.js',
+                        'js/placeholder.js',
+                        'js/equalHeight.js',
+                        'js/script.js',
+                        'js/custom.js'
+                    ]
+                }
+            }
+        },
         uglify: {
             dev: {
                 options: {
                     mangle: false,
                     beautify: true,
-                    sourceMap : true,
-                    sourceMapName : rootDir + '/js/sourceMap.map'
+                    sourceMap: true,
+                    sourceMapName: rootDir + '/js/sourceMap.map'
                 },
-                files : {
-                    '../js/combine.min.js' : [
-                        'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-                        'js/placeholder.js',
-                        'js/equalHeight.js',
-                        'js/script.js',
-                        'js/custom.js'
+                files: {
+                    '../js/combine.min.js': [
+                        '../js/combine.min.js'
                     ]
                 }
             },
@@ -94,14 +110,13 @@ module.exports = function(grunt){
                     mangle: false,
                     beautify: false,
                     sourceMap : true,
-                    sourceMapName : 'sourceMap.map'
+                    sourceMapName : rootDir + '/js/sourceMap.map'
                 },
-                files: [{
-                    expand: true,
-                    cwd: 'js',
-                    src: '**/*.js',
-                    dest: rootDir + 'js'
-                }]
+                files: {
+                    '../js/combine.min.js': [
+                        '../js/combine.min.js'
+                    ]
+                }
             }
         },
 
@@ -125,12 +140,12 @@ module.exports = function(grunt){
 
     //DEV task
     grunt.registerTask('dev', [
-        'clean:images', 'clean:js', 'clean:css', 'compass:dev', 'imagemin', 'uglify:dev'
+        'clean:images', 'clean:js', 'clean:css', 'compass:dev', 'imagemin', 'concat', 'uglify:dev'
     ]);
 
     //Production
     grunt.registerTask('prod', [
-        'clean:images', 'clean:js', 'clean:css', 'compass:prod', 'imagemin', 'uglify:prod'
+        'clean:images', 'clean:js', 'clean:css', 'compass:prod', 'imagemin', 'concat', 'uglify:prod'
     ]);
 
 };

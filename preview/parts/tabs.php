@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Tabs</h1>
         <p class="desc">Tabs layout structure.  and </p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="tabs" data-active="1">
                 <ul class="t_head nav" data-items="5">

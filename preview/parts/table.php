@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Table</h1>
         <p class="desc">Table layout styling</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <div class="table_responsive">
                 <table>

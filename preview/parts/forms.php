@@ -2,7 +2,7 @@
 <div class="block scrollto_select">
     <h1 class="title">Select field</h1>
     <p class="desc">Custom select field for cross-browser suppoert.</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <select>
             <option value="1">Value 1</option>
@@ -34,7 +34,7 @@
 <div class="block scrollto_radio">
     <h1 class="title">Radio field</h1>
     <p class="desc">Custom radio fields for cross-browser support, checked and disabled states are supported.</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <form>
             <div class="field">
@@ -114,7 +114,7 @@
 <div class="block scrollto_checkbox">
     <h1 class="title">Checkbox field</h1>
     <p class="desc">Custom checkbox fields for cross-browser support, checked and disabled states are supported.</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <form>
             <div class="field">
@@ -198,7 +198,7 @@
 <div class="block scrollto_text">
     <h1 class="title">Text field</h1>
     <p class="desc">Text field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="text" placeholder="Enter text here..." />
     </div>
@@ -211,7 +211,7 @@
 <div class="block scrollto_tel">
     <h1 class="title">Telephone field</h1>
     <p class="desc">Telephone field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="tel" placeholder="Enter phone number..." />
     </div>
@@ -224,7 +224,7 @@
 <div class="block scrollto_number">
     <h1 class="title">Number field</h1>
     <p class="desc">Number field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="number" placeholder="Enter number only..." />
     </div>
@@ -237,7 +237,7 @@
 <div class="block scrollto_email">
     <h1 class="title">Email field</h1>
     <p class="desc">Email field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="email" placeholder="Enter email..." />
     </div>
@@ -250,7 +250,7 @@
 <div class="block scrollto_url">
     <h1 class="title">Url field</h1>
     <p class="desc">Url field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="url" placeholder="Enter url..." />
     </div>
@@ -263,7 +263,7 @@
 <div class="block scrollto_date">
     <h1 class="title">Date and time field</h1>
     <p class="desc">Date and time field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="datetime" placeholder="Enter date time..." />
     </div>
@@ -276,7 +276,7 @@
 <div class="block scrollto_password">
     <h1 class="title">Password field</h1>
     <p class="desc">Password field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="password" placeholder="Enter password..." />
     </div>
@@ -289,7 +289,7 @@
 <div class="block scrollto_search">
     <h1 class="title">Search field</h1>
     <p class="desc">Search field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <input type="search" placeholder="Enter search text..." />
     </div>
@@ -302,7 +302,7 @@
 <div class="block scrollto_textarea">
     <h1 class="title">Textarea field</h1>
     <p class="desc">Textarea field layout</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <textarea placeholder="Enter large text..."></textarea>
     </div>
@@ -315,7 +315,7 @@
 <div class="block scrollto_upload">
     <h1 class="title">Upload field</h1>
     <p class="desc">Custom upload field for cross-browser support.</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <div class="upload">
             <div class="grid_half">
@@ -348,7 +348,7 @@
 <div class="block scrollto_field_error">
     <h1 class="title">Error state on field</h1>
     <p class="desc">Error state on field on submiting form.</p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <form>
             <div class="field">
@@ -371,7 +371,7 @@
 <div class="block scrollto_form_field">
     <h1 class="title">Form field</h1>
     <p class="desc">Every field in the form should be wrapped in div.field </p>
-    <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+    <a class="open_source" href="#"><i class="sy_menu"></i></a>
     <div class="content">
         <form>
             <div class="field">

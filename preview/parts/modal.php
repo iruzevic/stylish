@@ -2,7 +2,7 @@
     <div class="block scrollto_scale">
         <h1 class="title">Modal Window Scale Show</h1>
         <p class="desc">Modal window to open, add data-slide="scale" to scale open.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <a href="#" class="btn open_modal auto_width" data-modal="Modal1">Open Modal</a>
 
@@ -40,7 +40,7 @@
     <div class="block scrollto_top">
         <h1 class="title">Modal Window Top SlideIN</h1>
         <p class="desc">Modal window to open, add data-slide="top" to slide from top.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <a href="#" class="btn open_modal auto_width" data-modal="Modal2">Open Modal</a>
             <div class="modal" data-modal="Modal2" data-slide="top">
@@ -76,7 +76,7 @@
     <div class="block scrollto_full">
         <h1 class="title">Modal Window Full size</h1>
         <p class="desc">Modal window to open, data-size="full"</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
             <div class="modal" data-modal="Modal3" data-slide="scale" data-size="full">
@@ -112,7 +112,7 @@
     <div class="block scrollto_js_section">
         <h1 class="title">Modal Window - Manual actions using JS</h1>
         <p class="desc">Functions to use in Js, in id add data-module value and on action add open or close.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="source">
                             <pre class="brush: js;">
                                 jQuery(document).ready(function(){
@@ -145,7 +145,7 @@
     <div class="block scrollto_legacy">
         <h1 class="title">Modal Window Legacy mockup (< v. 3.1.7)</h1>
         <p class="desc">Modal window to open, data-size="full"</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <a href="#" class="btn open_modal auto_width" data-modal="Modal3">Open Modal</a>
             <div class="modal" data-modal="Modal4" data-slide="scale">

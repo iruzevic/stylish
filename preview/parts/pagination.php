@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Pagination</h1>
         <p class="desc">Pagination style mockup, add class current for current state.</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="pagination navi">
                 <li><a href="#">First</a></li>

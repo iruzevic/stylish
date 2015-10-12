@@ -2,7 +2,7 @@
     <div class="block">
         <h1 class="title">Navigation with float</h1>
         <p class="desc">Structure for horizontal navigation</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="nav" data-items="5">
                 <li><a href="#">Link1</a></li>
@@ -27,7 +27,7 @@
     <div class="block">
         <h1 class="title">Navigation with display inline</h1>
         <p class="desc">Structure for horizontal navigation</p>
-        <a class="open_source" href="#"><i class="fa fa-file-code-o"></i></a>
+        <a class="open_source" href="#"><i class="sy_menu"></i></a>
         <div class="content">
             <ul class="navi" data-items="5">
                 <li><a href="#">Link1</a></li>
