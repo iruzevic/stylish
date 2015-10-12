@@ -1,7 +1,32 @@
 module.exports = function(grunt){
 
     //Default
-    var rootDir = '../';
+    var $outputDir = '../';
+
+    var $frameworkDir = 'stylish/';
+    var $jsDir = 'js/';
+    var $cssDir = 'css/';
+    var $imgDir = 'images/';
+    var $fontsDir = 'fonts/';
+
+
+    var $jsOutputDir = $outputDir + $jsDir;
+    var $cssOutputDir = $outputDir + $cssDir;
+    var $imgOutputDir = $outputDir + $imgDir;
+    var $fontsOutputDir = $outputDir + $fontsDir;
+
+    var $jsFiles = [
+        $jsDir + 'modernizr.min.js',
+        $jsDir + 'equalHeight.min.js',
+        $jsDir + 'placeholder.min.js',
+        $jsDir + 'script.js',
+        $jsDir + 'custom.js'
+    ];
+
+    var $jsSource = $jsOutputDir + 'sourceMap.map';
+
+    var $jsCombine = [ $jsOutputDir + 'global_script.min.js'];
+
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -11,12 +36,12 @@ module.exports = function(grunt){
             dev: {
                 options: {
                     httpPath: '/',
-                    sassDir: 'stylish',
-                    cssDir: rootDir + 'css',
-                    imagesDir: rootDir + 'images',
-                    javascriptsDir: rootDir + 'js',
-                    fontsDir: rootDir + 'fonts',
-                    cacheDir:  'stylish/.sass_cache',
+                    sassDir: $frameworkDir,
+                    cssDir: $cssOutputDir,
+                    imagesDir: $imgOutputDir,
+                    javascriptsDir: $jsOutputDir,
+                    fontsDir: $fontsOutputDir,
+                    cacheDir:  $frameworkDir + '.sass_cache',
                     relativeAssets: true,
                     environment: 'development'
                 }
@@ -24,12 +49,12 @@ module.exports = function(grunt){
             prod: {
                 options: {
                     httpPath: '/',
-                    sassDir: 'stylish',
-                    cssDir: rootDir + 'css',
-                    imagesDir: rootDir + 'images',
-                    javascriptsDir: rootDir + 'js',
-                    fontsDir: rootDir + 'fonts',
-                    cacheDir:  'stylish/.sass_cache',
+                    sassDir: $frameworkDir,
+                    cssDir: $cssOutputDir,
+                    imagesDir: $imgOutputDir,
+                    javascriptsDir: $jsOutputDir,
+                    fontsDir: $fontsOutputDir,
+                    cacheDir:  $frameworkDir + '.sass_cache',
                     relativeAssets: true,
                     environment: 'production'
                 }
@@ -41,9 +66,9 @@ module.exports = function(grunt){
             default: {
                 files: [{
                     expand: true,
-                    cwd: 'images/',
+                    cwd: $imgDir,
                     src: '**/*.{png,jpg,gif}',
-                    dest: rootDir + 'images/'
+                    dest: $imgOutputDir
                 }]
             }
         },
@@ -54,40 +79,35 @@ module.exports = function(grunt){
                 options: {
                     force: true
                 },
-                src: [rootDir + 'images']
+                src: [$imgOutputDir]
             },
             js: {
                 options: {
                     force: true
                 },
-                src: [rootDir + 'js']
+                src: [$jsOutputDir]
             },
             css: {
                 options: {
                     force: true
                 },
-                src: [rootDir + 'css']
+                src: [$cssOutputDir]
             }
         },
 
         //Compress js
         concat: {
-            js: {
+            dist:{
                 options: {
+                    separator: ';',
                     block: true,
                     line: true,
                     stripBanners: true,
                     sourceMap: true,
-                    sourceMapName : rootDir + '/js/sourceMap.map'
+                    sourceMapName : $jsSource
                 },
                 files: {
-                    '../js/combine.min.js' : [
-                        'js/modernizr.js',
-                        'js/placeholder.js',
-                        'js/equalHeight.js',
-                        'js/script.js',
-                        'js/custom.js'
-                    ]
+                    '../js/global_script.min.js': $jsFiles
                 }
             }
         },
@@ -97,40 +117,36 @@ module.exports = function(grunt){
                     mangle: false,
                     beautify: true,
                     sourceMap: true,
-                    sourceMapName: rootDir + '/js/sourceMap.map'
+                    sourceMapName: $jsSource
                 },
                 files: {
-                    '../js/combine.min.js': [
-                        '../js/combine.min.js'
-                    ]
+                    '../js/global_script.min.js': $jsCombine
                 }
             },
             prod: {
                 options: {
                     mangle: false,
                     beautify: false,
-                    sourceMap : true,
-                    sourceMapName : rootDir + '/js/sourceMap.map'
+                    sourceMap: true,
+                    sourceMapName: $jsSource
                 },
                 files: {
-                    '../js/combine.min.js': [
-                        '../js/combine.min.js'
-                    ]
+                    '../js/global_script.min.js': $jsCombine
                 }
             }
         },
 
         watch: {
             compass: {
-                files: ['stylish/**/*.scss'],
-                tasks: ['newer:compass:dev']
+                files: [$frameworkDir + '**/*.scss'],
+                tasks: ['compass:dev']
             },
             scripts: {
-                files: ['js/*.js'],
-                tasks: ['newer:uglify:dev']
+                files: [$jsDir + '*.js'],
+                tasks: ['concat']
             },
             images: {
-                files: ['images/*.{png,jpg,gif}'],
+                files: [$imgDir + '*.{png,jpg,gif}'],
                 tasks: ['newer:imagemin']
             }
         }
@@ -147,5 +163,4 @@ module.exports = function(grunt){
     grunt.registerTask('prod', [
         'clean:images', 'clean:js', 'clean:css', 'compass:prod', 'imagemin', 'concat', 'uglify:prod'
     ]);
-
 };

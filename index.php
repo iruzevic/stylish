@@ -243,7 +243,7 @@
 
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/combine.min.js"></script>
+<script type="text/javascript" src="js/global_script.min.js"></script>
 
 <script src="preview/syntaxhighlighter/js/shCore.js" type="text/javascript"></script>
 <script src="preview/syntaxhighlighter/js/shBrushJScript.js" type="text/javascript"></script>
