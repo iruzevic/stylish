@@ -1,20 +1,22 @@
 module.exports = function(grunt){
 
     //Default
-    var $outputDir = '../';
+    var $outputDir      = '../';
 
-    var $frameworkDir = 'stylish/';
-    var $jsDir = 'js/';
-    var $cssDir = 'css/';
-    var $imgDir = 'images/';
-    var $fontsDir = 'fonts/';
+    //Defining assets folders
+    var $frameworkDir   = 'stylish/';
+    var $jsDir          = 'js/';
+    var $cssDir         = 'css/';
+    var $imgDir         = 'images/';
+    var $fontsDir       = 'fonts/';
 
-
-    var $jsOutputDir = $outputDir + $jsDir;
-    var $cssOutputDir = $outputDir + $cssDir;
-    var $imgOutputDir = $outputDir + $imgDir;
+    //Defining output folders
+    var $jsOutputDir    = $outputDir + $jsDir;
+    var $cssOutputDir   = $outputDir + $cssDir;
+    var $imgOutputDir   = $outputDir + $imgDir;
     var $fontsOutputDir = $outputDir + $fontsDir;
 
+    //Js files to combine
     var $jsFiles = [
         $jsDir + 'modernizr.min.js',
         $jsDir + 'equalHeight.min.js',
@@ -23,15 +25,19 @@ module.exports = function(grunt){
         $jsDir + 'custom.js'
     ];
 
+    //Combine file map file
     var $jsSource = $jsOutputDir + 'sourceMap.map';
 
-    var $jsCombine = [ $jsOutputDir + 'global_script.min.js'];
+    //Combined file output
+    var $jsCombineOutput          = $jsOutputDir + 'global_script.min.js';
+
+    var $jsCombine          = [ $jsCombineOutput ];
 
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        //Generate
+        //Generate Css files
         compass: {
             dev: {
                 options: {
@@ -95,47 +101,37 @@ module.exports = function(grunt){
             }
         },
 
-        //Compress js
+        //Combine Js into single file
         concat: {
-            dist:{
-                options: {
-                    separator: ';',
-                    block: true,
-                    line: true,
-                    stripBanners: true,
-                    sourceMap: true,
-                    sourceMapName : $jsSource
-                },
-                files: {
-                    '../js/global_script.min.js': $jsFiles
-                }
-            }
-        },
-        uglify: {
-            dev: {
-                options: {
-                    mangle: false,
-                    beautify: true,
-                    sourceMap: true,
-                    sourceMapName: $jsSource
-                },
-                files: {
-                    '../js/global_script.min.js': $jsCombine
-                }
+            options: {
+                separator: ';',
+                block: true,
+                line: true,
+                stripBanners: true,
+                sourceMap: true,
+                sourceMapName : $jsSource
             },
-            prod: {
-                options: {
-                    mangle: false,
-                    beautify: false,
-                    sourceMap: true,
-                    sourceMapName: $jsSource
-                },
-                files: {
-                    '../js/global_script.min.js': $jsCombine
-                }
+            global: {
+                src: $jsFiles,
+                dest: $jsCombineOutput
             }
         },
 
+        //Compress combined files
+        uglify: {
+            options: {
+                mangle: false,
+                beautify: false,
+                sourceMap: true,
+                sourceMapName: $jsSource
+            },
+            global: {
+                src: $jsCombine,
+                dest: $jsCombineOutput
+            }
+        },
+
+        //Watch changes to files
         watch: {
             compass: {
                 files: [$frameworkDir + '**/*.scss'],
@@ -156,11 +152,22 @@ module.exports = function(grunt){
 
     //DEV task
     grunt.registerTask('dev', [
-        'clean:images', 'clean:js', 'clean:css', 'compass:dev', 'imagemin', 'concat', 'uglify:dev'
+        'clean:images',
+        'clean:js',
+        'clean:css',
+        'compass:dev',
+        'imagemin',
+        'concat:global'
     ]);
 
-    //Production
+    //Production task
     grunt.registerTask('prod', [
-        'clean:images', 'clean:js', 'clean:css', 'compass:prod', 'imagemin', 'concat', 'uglify:prod'
+        'clean:images',
+        'clean:js',
+        'clean:css',
+        'compass:prod',
+        'imagemin',
+        'concat:global',
+        'uglify:global'
     ]);
 };
