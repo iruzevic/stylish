@@ -123,7 +123,10 @@ module.exports = function(grunt){
                 mangle: false,
                 beautify: false,
                 sourceMap: true,
-                sourceMapName: $jsSource
+                sourceMapName: $jsSource,
+                compress: {
+                    drop_console: true
+                }
             },
             global: {
                 src: $jsCombine,
@@ -138,11 +141,11 @@ module.exports = function(grunt){
                 tasks: ['compass:dev']
             },
             scripts: {
-                files: [$jsDir + '*.js'],
+                files: [$jsDir + '**/*.js'],
                 tasks: ['concat']
             },
             images: {
-                files: [$imgDir + '*.{png,jpg,gif}'],
+                files: [$imgDir + '**/*.{png,jpg,gif}'],
                 tasks: ['newer:imagemin']
             }
         }
