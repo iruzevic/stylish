@@ -145,7 +145,7 @@ module.exports = function(grunt){
                 tasks: ['concat']
             },
             images: {
-                files: [$imgDir + '**/*.{png,jpg,gif}'],
+                files: [$imgDir + '**/*.{png,jpg,jpeg,gif,ico}'],
                 tasks: ['newer:imagemin']
             }
         }
