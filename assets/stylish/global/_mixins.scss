@@ -66,9 +66,21 @@
 
 
 //Font style
-@mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false){
-  @if $font_size    {@include rem(font-size, $font_size);}
-  @if $line_height  {@include rem(line-height, $line_height);}
+@mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false, $rem:true){
+  @if $font_size    {
+    @if $rem == true{
+      @include rem(font-size, $font_size);
+    }@else{
+      font-size: $font_size;
+    }
+  }
+  @if $line_height    {
+    @if $rem == true{
+      @include rem(line-height, $line_height);
+    }@else{
+      line-height: $line_height;
+    }
+  }
   @if $font_weight  {font-weight: $font_weight;}
   @if $font_style   {font-style: $font_style;}
   @if $font_family  {font-family: $font_family;}
