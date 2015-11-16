@@ -88,23 +88,3 @@ a:not(.btn) {
 /* Text colors */
 @include txt_color_generator;
 @include bg_color_generator;
-
-
-@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
-}}
-
-
-@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
-  html{font-size: $m_body_base_size;}
-}}
-
-
-@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
-  html{font-size: $s_body_base_size;}
-}}
-
-
-@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
-  html{font-size: $xs_body_base_size;}
-}}
-

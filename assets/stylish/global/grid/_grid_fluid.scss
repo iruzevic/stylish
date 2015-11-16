@@ -78,119 +78,140 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-
-//Classes for standard Small Screen desktop devices
 @mixin l_col(){
-  @if $responsive_first == min-width{
-    @media screen and ($responsive_first: $screen_large) {
-      @for $i from 1 to $grid_col_num+1{
-        .col_l_#{$i}{ @include col_width($i) }
-        .pull_l_#{$i}{ @include col_pull($i) }
-        .push_l_#{$i}{ @include col_push($i) }
-      }
-      .hide_l{ display: none }
-      .show_l{ display: block }
-      .push_l_reset,
-      .pull_l_reset{ margin-left: 0 }
-    }
-  }@else{
-    @for $i from 1 to $grid_col_num+1{
-      .col_l_#{$i},
-      .col_#{$i}{ @include col_width($i) }
-      .pull_l_#{$i},
-      .pull_#{$i}{ @include col_pull($i) }
-      .push_l_#{$i},
-      .push_#{$i}{ @include col_push($i) }
-    }
+  @for $i from 1 to $grid_col_num+1{
+    .col_l_#{$i} {@include col_width($i)}
+    .pull_l_#{$i}{@include col_pull($i)}
+    .push_l_#{$i}{@include col_push($i)}
   }
-  @if $responsive_first == max-width{
-    .hide_l{ display: none }
-    .show_l{ display: block }
-    .push_l_reset,
-    .pull_l_reset{ margin-left: 0 }
-  }
+  .hide_l{ display: none}
+  .show_l{ display: block}
+  .push_l_reset,
+  .pull_l_reset{ margin-left: 0}
 }
 
-//Classes for standard Tablet devices
+@mixin d_col(){
+  @for $i from 1 to $grid_col_num+1{
+    .col_d_#{$i} {@include col_width($i)}
+    .pull_d_#{$i}{@include col_pull($i)}
+    .push_d_#{$i}{@include col_push($i)}
+  }
+  .hide_d{ display: none}
+  .show_d{ display: block}
+  .push_d_reset,
+  .pull_d_reset{ margin-left: 0}
+}
+
 @mixin m_col(){
-  @media screen and ($responsive_first: $screen_medium) {
-    @for $i from 1 to $grid_col_num+1{
-      .col_m_#{$i} {@include col_width($i)}
-      .pull_m_#{$i}{@include col_pull($i)}
-      .push_m_#{$i}{@include col_push($i)}
-    }
-    .hide_m{ display: none}
-    .show_m{ display: block}
-    .push_m_reset,
-    .pull_m_reset{ margin-left: 0}
+  @for $i from 1 to $grid_col_num+1{
+    .col_m_#{$i} {@include col_width($i)}
+    .pull_m_#{$i}{@include col_pull($i)}
+    .push_m_#{$i}{@include col_push($i)}
   }
+  .hide_m{ display: none}
+  .show_m{ display: block}
+  .push_m_reset,
+  .pull_m_reset{ margin-left: 0}
 }
 
-//Classes for standard Larger phone and smaller tablet devices
 @mixin s_col(){
-  @media screen and ($responsive_first: $screen_small) {
-    @for $i from 1 to $grid_col_num+1{
-      .col_s_#{$i} {@include col_width($i)}
-      .pull_s_#{$i}{@include col_pull($i)}
-      .push_s_#{$i}{@include col_push($i)}
-    }
-    .hide_s{ display: none}
-    .show_s{ display: block}
-    .push_s_reset,
-    .pull_s_reset{ margin-left: 0}
+  @for $i from 1 to $grid_col_num+1{
+    .col_s_#{$i} {@include col_width($i)}
+    .pull_s_#{$i}{@include col_pull($i)}
+    .push_s_#{$i}{@include col_push($i)}
   }
+  .hide_s{ display: none}
+  .show_s{ display: block}
+  .push_s_reset,
+  .pull_s_reset{ margin-left: 0}
 }
 
-//Classes for standard Mobile phone devices
-@mixin xs_col(){
-  @if $responsive_first == max-width{
-    @media screen and ($responsive_first: $screen_xsmall) {
-      @for $i from 1 to $grid_col_num+1{
-        .col_xs_#{$i}{ @include col_width($i) }
-        .pull_xs_#{$i}{ @include col_pull($i) }
-        .push_xs_#{$i}{ @include col_push($i) }
-      }
-      .hide_xs{ display: none }
-      .show_xs{ display: block }
-      .push_xs_reset,
-      .pull_xs_reset{ margin-left: 0 }
-    }
-  }@else{
-    @for $i from 1 to $grid_col_num+1{
-      .col_xs_#{$i},
-      .col_#{$i}{ @include col_width($i) }
-      .pull_xs_#{$i},
-      .pull_#{$i}{ @include col_pull($i) }
-      .push_xs_#{$i},
-      .push_#{$i}{ @include col_push($i) }
-    }
-    @if $responsive_first == min-width{
-      .hide_xs{ display: none }
-      .show_xs{ display: block }
-      .push_xs_reset,
-      .pull_xs_reset{ margin-left: 0 }
-    }
+@mixin h_col(){
+  @for $i from 1 to $grid_col_num+1{
+    .col_h_#{$i} {@include col_width($i)}
+    .pull_h_#{$i}{@include col_pull($i)}
+    .push_h_#{$i}{@include col_push($i)}
   }
+  .hide_h{ display: none}
+  .show_h{ display: block}
+  .push_h_reset,
+  .pull_h_reset{ margin-left: 0}
+}
+
+@mixin xs_col(){
+  @for $i from 1 to $grid_col_num+1{
+    .col_xs_#{$i} {@include col_width($i)}
+    .pull_xs_#{$i}{@include col_pull($i)}
+    .push_xs_#{$i}{@include col_push($i)}
+  }
+  .hide_xs{ display: none}
+  .show_xs{ display: block}
+  .push_xs_reset,
+  .pull_xs_reset{ margin-left: 0}
 }
 
 
 //Generate grid widths for mobile and desktop first design
 @mixin col_width_output(){
-  @if $responsive_first == max-width{
-    @include l_col();
-    @if $responsive == true{
-      @include m_col();
-      @include s_col();
-      @include xs_col();
-    }
-  }@else{
-    @include xs_col();
-    @if $responsive == true{
-      @include s_col();
-      @include m_col();
+
+  @if $responsive == true{
+
+    @if $responsive_first == max-width {
+
       @include l_col();
+
+      @media screen and ($responsive_first: $screen_desk) {
+        @include d_col();
+      }
+
+      @media screen and ($responsive_first: $screen_medium) {
+        @include m_col();
+      }
+
+      @media screen and ($responsive_first: $screen_hybrid) {
+        @include h_col();
+      }
+
+      @media screen and ($responsive_first: $screen_small) {
+        @include s_col();
+      }
+
+      @media screen and ($responsive_first: $screen_xsmall) {
+        @include xs_col();
+      }
+
+    }@else{
+
+      @include xs_col();
+
+      @media screen and ($responsive_first: $screen_small) {
+        @include s_col();
+      }
+
+      @media screen and ($responsive_first: $screen_hybrid) {
+        @include h_col();
+      }
+
+      @media screen and ($responsive_first: $screen_medium) {
+        @include m_col();
+      }
+
+      @media screen and ($responsive_first: $screen_desk) {
+        @include d_col();
+      }
+
+      @media screen and ($responsive_first: $screen_large) {
+        @include l_col();
+      }
+
     }
+
+  }@else{
+
+    @include l_col();
+
   }
+
 
   .push_reset,
   .pull_reset{ margin-left: 0}

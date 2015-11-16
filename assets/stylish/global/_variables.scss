@@ -77,8 +77,9 @@ $body_txt_color:          $color_mine_shaft;  //body text color
 $body_base_size:    18px!default;
 $l_body_base_size:  17px;
 $m_body_base_size:  16px;
-$s_body_base_size:  15px;
-$xs_body_base_size: 14px;
+$h_body_base_size:  15px;
+$s_body_base_size:  14px;
+$xs_body_base_size: 13px;
 
 $h1:  38px;
 $h2:  35px;
@@ -110,10 +111,6 @@ $cs_margin:    20px; //content style margin move for p, ul, img and other
 
 // Grid Fluid
 $gutter:          40px; //gutter padding
-$gutter_l:        30px;
-$gutter_m:        20px;
-$gutter_s:        15px;
-$gutter_xs:       10px;
 $grid_col_num:    12;   //fluid grid max columns number
 
 
@@ -123,21 +120,30 @@ $gutter_fix:        $gutter; //fixed sidebar grid, padding between main fluid co
 
 
 // Grid
-$page_max_width:    1440px; //max wid for page container
+$page_max_width:    1200px; //max wid for page container
 $responsive_first:  max-width; //If using mobile first put "min-width" else for desktop first use "max-width"
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Responsive (Desktop First Layout)
-$responsive:    true; // set true or false if using responsive
+//Responsive ()
+$responsive:    true; // set true or false if using responsive (if set to false use only "col_l_" grid)
 
-//Set break points starting from full screen scaling down to mobile
-$screen_large:  $page_max_width;// Small Screen desktop devices
-$screen_medium: 989px; // Tablet devices
-$screen_small:  767px; // Larger phone and smaller tablet devices
-$screen_xsmall: 319px; // Mobile phone devices
+//Desktop First Layout
+$screen_desk:   1199px;
+$screen_medium: 989px;
+$screen_hybrid: 767px;
+$screen_small:  549px;
+$screen_xsmall: 319px;
+
+
+//Mobile First Layout
+//$screen_small:  319px;
+//$screen_hybrid: 549px;
+//$screen_medium: 767px;
+//$screen_desk:   989px;
+//$screen_large:  1199px;
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

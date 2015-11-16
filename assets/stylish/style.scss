@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.6.3
+Version: 3.7
 */
 
 /* Compass Framework Import */
@@ -96,23 +96,19 @@ Version: 3.6.3
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
-//
+//@media screen and ($responsive_first: $screen_desk){ @if $responsive == true{
 //}}
-//
 //
 //@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
-//
 //}}
 //
+//@media screen and ($responsive_first: $screen_hybrid){ @if $responsive == true{
+//}}
 //
 //@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
-//
 //}}
 //
-//
 //@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
-//
 //}}
 
 
@@ -120,19 +116,18 @@ Version: 3.6.3
 /* RESPONSIVE MEDIA QUERIES (Mobile first) */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-
-//@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
-//
-//}}
 //
 //@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
+//}}
 //
+//@media screen and ($responsive_first: $screen_hybrid){ @if $responsive == true{
 //}}
 //
 //@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
+//}}
 //
+//@media screen and ($responsive_first: $screen_desk){ @if $responsive == true{
 //}}
 //
 //@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
-//
 //}}

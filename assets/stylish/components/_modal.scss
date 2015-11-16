@@ -74,31 +74,3 @@ html.modal_active{
     }
   }
 }
-
-
-/* RESPONSIVE MEDIA QUERIES (Desktop first) */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
-//
-//}}
-//
-//
-//@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
-//
-//}}
-//
-//
-@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
-  .modal{
-    .m_content_wrap{
-      top: 0 !important; overflow-y: auto;
-    }
-  }
-}}
-//
-//
-//@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
-//
-//}}

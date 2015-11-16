@@ -23,7 +23,19 @@
         <h5>Standard grid</h5>
         <div class="grid_fluid">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <br/><br/><br/><br/>
+
+
+    <div class="container">
+        <h5>Standard grid</h5>
+        <div class="grid_fluid">
+            <?php for($i=1;$i<=6;$i++){ ?>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -34,7 +46,7 @@
         <h5>Double grid</h5>
         <div class="grid_double">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -45,7 +57,7 @@
         <h5>Triple grid</h5>
         <div class="grid_triple">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="ccol_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -56,7 +68,7 @@
         <h5>Half grid</h5>
         <div class="grid_half">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -67,7 +79,7 @@
         <h5>Quarter grid</h5>
         <div class="grid_quarter">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -78,7 +90,7 @@
         <h5>Clean grid (no gutter)</h5>
         <div class="grid_clean">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -89,7 +101,7 @@
         <h5>Full width container</h5>
         <div class="grid_fluid">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
@@ -100,7 +112,7 @@
         <h5>Full width container with no gutter</h5>
         <div class="grid_fluid">
             <?php for($i=1;$i<=6;$i++){ ?>
-                <div class="col_l_2 col_m_4 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
+                <div class="col_l_2 col_d_3 col_m_4 col_h_5 col_s_6 col_xs_12"><strong><?php echo $i; ?></strong> - <?php echo $txt; ?></div>
             <?php } ?>
         </div>
     </div>
