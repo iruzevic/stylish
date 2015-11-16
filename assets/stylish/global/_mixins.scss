@@ -252,12 +252,8 @@
 
 
 /* Container size for responsive */
-@mixin container_size($max_width:$page_max_width, $value: $responsive){
-  //@if $value == true{
+@mixin container_size($max_width:$page_max_width){
     width: 100%; max-width: $max_width;
-  //} @else {
-  //  width: $page_max_width;
-  //}
 }
 
 /* Default container style */
