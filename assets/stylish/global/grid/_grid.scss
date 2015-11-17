@@ -18,6 +18,8 @@ body{
   //Override max width and push container full width (unable to use if not using responsive)
   &.liquid,
   &.container_liquid{@include container_size(inherit)}
+
+  &.container_overflow{overflow: hidden}
 }
 
 
