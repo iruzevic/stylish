@@ -17,6 +17,7 @@ body{ font-family: 'Open Sans', arial, helvetica, sans-serif}
 #sidebar h2{ margin: 0 0 5px 30px;}
 
 
+#main_content{ padding-left: 280px}
 #main_content .container{ padding: 50px 100px}
 #main_content .desc{ color:#B1B0B0; font-size: 14px;}
 #main_content .content{ margin-top: 45px;}
