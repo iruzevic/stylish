@@ -191,7 +191,8 @@ $form_label_move:       5px;
 //Input Default size
 $input_height:              42px; //input height
 $input_txt_size:            $p; //input font size
-$input_padding_v:           7px; //input padding
+$input_line_height:         $p; //input font size
+$input_padding_v:           ($input_height - $input_line_height)/2; //input padding
 $input_padding_h:           10px; //input padding
 $checkbox_size:             $input_height; //checkbox width and height
 $checkbox_icon_size:        ($checkbox_size - 8); //checkbox icon size
@@ -202,7 +203,8 @@ $select_icon_size:          18px; //Select icon size
 //Input Big size
 $input_big_height:          50px; //input height
 $input_big_txt_size:        $p; //input font size
-$input_big_padding_v:       9px; //input padding
+$input_big_line_height:     $p; //input font size
+$input_big_padding_v:       ($input_big_height - $input_big_line_height)/2; //input padding
 $input_big_padding_h:       10px; //input padding
 $checkbox_big_size:         $input_big_height; //checkbox width and height
 $checkbox_big_icon_size:    ($checkbox_big_size - 8); //checkbox icon size
@@ -213,7 +215,8 @@ $select_big_icon_size:      22px; //Select icon size
 //Input Small size
 $input_small_height:        32px; //input height
 $input_small_txt_size:      $p; //input font size
-$input_small_padding_v:     5px; //input padding
+$input_small_line_height:   $p; //input font size
+$input_small_padding_v:     ($input_small_height - $input_small_line_height)/2; //input padding; //input padding
 $input_small_padding_h:     10px; //input padding
 $checkbox_small_size:       $input_small_height; //checkbox width and height
 $checkbox_small_icon_size:  ($checkbox_small_size - 8); //checkbox icon size
@@ -248,22 +251,25 @@ $btn_icon_size:       18px; //icon in button
 $btn_icon_move:       10px; //move icon from text in button
 
 //Btn size default
+$btn_default_height:      $input_height; //button Default height
 $btn_default_txt_size:    16px; //button Default text size
-$btn_default_padding_v:   10px; //button Default padding vertical
-$btn_default_padding_h:   40px; //button Default padding horizontal
 $btn_default_line_height: 20px; //button Default line height
+$btn_default_padding_v:   ($btn_default_height - $btn_default_line_height)/2; //button Default padding vertical
+$btn_default_padding_h:   40px; //button Default padding horizontal
 
 //Btn size Big
+$btn_big_height:          $input_big_height; //button Big height
 $btn_big_txt_size:        20px; //button Big text size
-$btn_big_padding_v:       10px; //button Big padding vertical
-$btn_big_padding_h:       40px; //button Big padding horizontal
 $btn_big_line_height:     24px; //button Big line height
+$btn_big_padding_v:       ($btn_big_height - $btn_big_line_height)/2; //button Default padding vertical
+$btn_big_padding_h:       40px; //button Big padding horizontal
 
 //Btn size Small
+$btn_small_height:        $input_small_height; //button Small height
 $btn_small_txt_size:      13px; //button Small text size
-$btn_small_padding_v:     7px; //button Small padding vertical
-$btn_small_padding_h:     40px; //button Small padding horizontal
 $btn_small_line_height:   17px; //button Small line height
+$btn_small_padding_v:     ($btn_small_height - $btn_small_line_height)/2; //button Small padding vertical
+$btn_small_padding_h:     40px; //button Small padding horizontal
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

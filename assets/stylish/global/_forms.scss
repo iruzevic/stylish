@@ -17,7 +17,7 @@ select{
   @include font-smoothing();
 
   //Default size
-  @include input_size($input_height, $input_txt_size, $input_padding_v, $input_padding_h);
+  @include input_size($input_height, $input_txt_size, $input_line_height, $input_padding_v, $input_padding_h);
 
   &.auto_width{ width: auto}
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
@@ -151,7 +151,7 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_big_height, $input_big_txt_size, $input_big_padding_v, $input_big_padding_h);
+    @include input_size($input_big_height, $input_big_txt_size, $input_big_line_height, $input_big_padding_v, $input_big_padding_h);
   }
   .select   { @include select_size($input_big_height, $select_big_icon_size); }
   .checkbox { @include checkbox_size($checkbox_big_size, $checkbox_big_icon_size); }
@@ -170,7 +170,7 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_small_height, $input_small_txt_size, $input_small_padding_v, $input_small_padding_h);
+    @include input_size($input_small_height, $input_small_txt_size, $input_small_line_height, $input_small_padding_v, $input_small_padding_h);
   }
   .select   { @include select_size($input_small_height, $select_small_icon_size); }
   .checkbox { @include checkbox_size($checkbox_small_size, $checkbox_small_icon_size);}

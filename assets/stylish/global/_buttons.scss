@@ -15,13 +15,13 @@ input[type=reset]{
   @include transition-duration(.3s);
 
   //Default size
-  @include btn_size($btn_default_padding_v, $btn_default_padding_h, $btn_default_txt_size, $btn_default_line_height);
+  @include btn_size($btn_default_height, $btn_default_padding_v, $btn_default_padding_h, $btn_default_txt_size, $btn_default_line_height);
 
   //Big size (cca 52px)
-  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_padding_v, $btn_big_padding_h, $btn_big_txt_size, $btn_big_line_height )}
+  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_height, $btn_big_padding_v, $btn_big_padding_h, $btn_big_txt_size, $btn_big_line_height )}
 
   //Small size (cca 32px)
-  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_padding_v, $btn_small_padding_h, $btn_small_txt_size, $btn_small_line_height)}
+  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_height, $btn_small_padding_v, $btn_small_padding_h, $btn_small_txt_size, $btn_small_line_height)}
 
   //Set rounded buttons to strait
   &.no_radius{@include border-radius(0);}
