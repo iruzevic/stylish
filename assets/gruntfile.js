@@ -73,7 +73,7 @@ module.exports = function(grunt){
                 files: [{
                     expand: true,
                     cwd: $imgDir,
-                    src: '**/*.{png,jpg,jpeg,gif,ico}',
+                    src: '**/*.{png,jpg,jpeg,gif,ico,svg}',
                     dest: $imgOutputDir
                 }]
             }
@@ -145,7 +145,7 @@ module.exports = function(grunt){
                 tasks: ['concat']
             },
             images: {
-                files: [$imgDir + '**/*.{png,jpg,jpeg,gif,ico}'],
+                files: [$imgDir + '**/*.{png,jpg,jpeg,gif,ico,svg}'],
                 tasks: ['newer:imagemin']
             }
         }
