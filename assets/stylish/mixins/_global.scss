@@ -1,0 +1,29 @@
+/* GLOBAL */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@mixin move($margin:false, $padding:false, $border_width:false, $border_style:false, $border_color:false){
+
+  @if $margin{
+    &.move_small{ margin-bottom: $margin/2}
+    &.move_large{ margin-bottom: $margin*2}
+    &.move_clear,
+    &.move_clean{ margin-bottom: 0; }
+  }
+
+  @if $padding{
+    &.move_in_small{ padding-bottom: $padding/2 }
+    &.move_in_large{ padding-bottom: $padding*2 }
+    &.move_in_clear,
+    &.move_in_clean{ padding-bottom: 0;}
+  }
+
+  @if $border_width and $border_style and $border_color{
+    &.border_bottom{ border-bottom: $border_width $border_style $border_color; }
+  }
+
+  @if $margin and $padding{
+    &.clean,
+    &.clear{ margin-bottom: 0; padding-bottom: 0;}
+  }
+}

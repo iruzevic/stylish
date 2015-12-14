@@ -1,0 +1,101 @@
+/* FORMS */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Placeholder mixin
+@mixin placeholder {
+  input::-webkit-input-placeholder {@content}
+  input:-moz-placeholder           {@content}
+  input::-moz-placeholder          {@content}
+  input:-ms-input-placeholder      {@content}
+  input.placeholder                {@content}
+  input.placeholderjs              {@content}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Checkbox size
+@mixin checkbox_size($size:$checkbox_height, $size_icon:$checkbox_icon_size){
+  min-height:$size;
+
+  //Firefox min-height bug fix
+  @-moz-document url-prefix() {
+    height: $size;
+  }
+
+  label {
+    padding-left:$size+15;
+    &.empty{ padding-left:0; width: $size }
+  }
+
+  // icon
+  .checkbox_icon {
+    width: $size;height: $size; margin-top: -$size/2; line-height: $size_icon;
+    &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon;}
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Radio size
+@mixin radio_size($size:$radio_height, $size_icon:$radio_icon_size) {
+  min-height:$size;
+
+  //Firefox min-height bug fix
+  @-moz-document url-prefix() {
+    height: $size;
+  }
+
+  label{
+    padding-left: $size+15;
+    &.empty{ padding-left:0; width: $size }
+  }
+
+  // icon
+  .radio_icon{
+    width: $size; height: $size; margin-top: -$size/2; line-height: $size_icon;
+    &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Select size
+@mixin select_size($height: $input_height, $icon_size:$select_icon_size){
+  @if $height   {height:$height;}
+  @if $icon_size{
+    &:after{ @include font_style($icon_size); margin-top: -($icon_size/2)}
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Default input style
+@mixin input_style( $color:false, $background_color:false, $border_width: false, $border_style:false, $border_color: false, $margin: false, $width:false, $font_family:false, $radius: false){
+  @if $color            {color:$color;}
+  @if $background_color {background-color:$background_color;}
+  @if $border_width     {border-width:$border_width;}
+  @if $border_style     {border-style:$border_style;}
+  @if $border_color     {border-color:$border_color;}
+  @if $margin           {margin:$margin;}
+  @if $width            {width:$width;}
+  @if $font_family      {font-family:$font_family;}
+  @if $radius           {@include border-radius($radius);}
+}
+
+
+@mixin input_size( $height: false, $text_size: false, $line_height:false, $padding_vertical:false, $padding_horizontal:false ){
+  @if $height             { height: $height; }
+  @if $text_size          { @include rem(font-size, $text_size); }
+  @if $line_height        { @include rem(line-height, $line_height); }
+  @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
+  @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+}

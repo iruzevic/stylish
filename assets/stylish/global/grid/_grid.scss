@@ -1,19 +1,14 @@
-/* GRIDS LAYOUTS */
+/* GRID */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-body{
-  @if $responsive != true{
-    min-width: $page_max_width;
-  }
-}
 
-/* Container */
 .container{
   margin-left:auto; margin-right: auto;@include container_padding(); @include container_size();
 
   //Strip padding from container
   &.full,
-  &.container_clean{@include container_padding(0); overflow: hidden}
+  &.container_clean,
+  &.container_full  {@include container_padding(0); overflow: hidden}
 
   //Override max width and push container full width (unable to use if not using responsive)
   &.liquid,
@@ -28,3 +23,11 @@ body{
 @include container_generate(half,$gutter/4);
 @include container_generate(double,$gutter);
 @include container_generate(triple,$gutter*1.5);
+
+
+//Grid lockout for no responsive layout
+body{
+  @if $responsive != true{
+    min-width: $page_max_width;
+  }
+}

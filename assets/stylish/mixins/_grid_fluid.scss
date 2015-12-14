@@ -1,4 +1,4 @@
-/* SETUP FLUID GRID */
+/* GRID FLUID */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -224,11 +224,11 @@
 
 
 //Predefined gutter sizes
-$gutter_quarter:$gutter/4;
-$gutter_half:$gutter/2;
-$gutter_double:$gutter*2;
-$gutter_triple:$gutter*3;
-$gutter_clean:0;
+$gutter_quarter:  $gutter/4;
+$gutter_half:     $gutter/2;
+$gutter_double:   $gutter*2;
+$gutter_triple:   $gutter*3;
+$gutter_clean:    0;
 
 
 /* Generate fluid grid  */

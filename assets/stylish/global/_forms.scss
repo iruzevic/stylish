@@ -1,4 +1,4 @@
-/* FORMS STYLES */
+/* FORMS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -21,7 +21,7 @@ select{
 
   &.auto_width{ width: auto}
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
-  &:disabled{background-color:$input_disabled_bg; color:$input_disabled_txt }
+  &:disabled{ }
 }
 textarea{ height: 150px; }
 
@@ -46,7 +46,6 @@ textarea{ height: 150px; }
     &:focus{outline: none;}
   }
 
-  &.disabled:after{ color:$select_disabled_icon_color;}
 }
 
 
@@ -151,11 +150,11 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_big_height, $input_big_txt_size, $input_big_line_height, $input_big_padding_v, $input_big_padding_h);
+    @include input_size($input_height_large, $input_txt_size_large, $input_line_height_large, $input_padding_v_large, $input_padding_h_large);
   }
-  .select   { @include select_size($input_big_height, $select_big_icon_size); }
-  .checkbox { @include checkbox_size($checkbox_big_size, $checkbox_big_icon_size); }
-  .radio    { @include radio_size($radio_big_size, $radio_big_icon_size); }
+  .select   { @include select_size($input_height_large, $select_icon_size_large); }
+  .checkbox { @include checkbox_size($checkbox_height_large, $checkbox_icon_size_large); }
+  .radio    { @include radio_size($radio_height_large, $radio_icon_size_large); }
 }
 
 //Input small size
@@ -170,11 +169,11 @@ textarea{ height: 150px; }
   input[type=search],
   textarea,
   select{
-    @include input_size($input_small_height, $input_small_txt_size, $input_small_line_height, $input_small_padding_v, $input_small_padding_h);
+    @include input_size($input_height_small, $input_txt_size_small, $input_line_height_small, $input_padding_v_small, $input_padding_h_small);
   }
-  .select   { @include select_size($input_small_height, $select_small_icon_size); }
-  .checkbox { @include checkbox_size($checkbox_small_size, $checkbox_small_icon_size);}
-  .radio    { @include radio_size($radio_small_size, $radio_small_icon_size);}
+  .select   { @include select_size($input_height_small, $select_icon_size_small); }
+  .checkbox { @include checkbox_size($checkbox_height_small, $checkbox_icon_size_small);}
+  .radio    { @include radio_size($radio_height_small, $radio_icon_size_small);}
 }
 
 
@@ -186,9 +185,8 @@ textarea{ height: 150px; }
 form, .form{
   .field{
     margin-bottom: $form_field_move; position: relative; list-style: none;
-    &.big { margin-bottom: $form_field_move_big;}
-    &.slim,
-    &.narrow{ margin-bottom: $form_field_move_small;}
+    &.large { margin-bottom: $form_field_move_large;}
+    &.small { margin-bottom: $form_field_move_small;}
     &.last{ margin-bottom: 0}
 
     &[data-required="true"] label,
@@ -207,7 +205,7 @@ form, .form{
     &.checkbox,
     .radio,
     &.radio{
-      label{ margin:0; display: table-cell;@include rem(line-height, $p+$lh) }
+      label{ margin:0; display: table-cell;@include rem(line-height, $p+$plh) }
     }
 
 

@@ -1,10 +1,10 @@
-/*  GLOBAL OVERRIDE STYLE */
+/*  HELPERS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 .hide,
-.no-display{display:none}
-.show   {display:block}
+.no-display {display:none}
+.show       {display:block}
 
 .left   {float:left}
 .right  {float:right}
@@ -12,11 +12,7 @@
 .no_res { width: auto; height: auto}
 
 
-//Include spacers
-@include spacers();
-
-
-/* Padding clear */
+// Padding clear
 .p_clear_left   { padding-left: 0}
 .p_clear_right  { padding-right: 0}
 .p_clear_top    { padding-top: 0}
@@ -24,7 +20,7 @@
 .p_clear        { padding: 0}
 
 
-/* Margin clear */
+// Margin clear
 .m_clear_left    { margin-left: 0}
 .m_clear_right   { margin-right: 0}
 .m_clear_top     { margin-top: 0}
@@ -32,8 +28,12 @@
 .m_clear         { margin: 0}
 
 
-
-/* Text align */
+// Text align
 .aleft,   .a_left,   .a-left    {text-align:left}
 .aright,  .a_right,  .a-right   {text-align:right}
 .acenter, .a_center, .a-center  {text-align:center}
+
+
+// Position relative for padding correction
+.wrap_inner,
+.inner_wrap{position: relative}

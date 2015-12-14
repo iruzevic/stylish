@@ -1,10 +1,5 @@
-/* Tables setup */
+/* TABLES */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-.table_responsive{
-  overflow-y: hidden; overflow-x: auto; width: 100%;
-}
 
 
 table{
@@ -62,8 +57,13 @@ table{
 }
 
 
+// Add scroll bar if table can't fit the screen
+.table_responsive{
+  overflow-y: hidden; overflow-x: auto; width: 100%;
+}
 
-/* Tables status setup */
+
+// Tables status setup
 .status{
   @include border-radius($global_radius); padding: $status_item_padding_v $status_item_padding_h; display: inline-block; font-size: 85%;
   &.status_error{   background-color: $color_error }

@@ -1,0 +1,14 @@
+/* DIVIDER AND SPACER */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+//Spacers margin and padding
+@mixin spacers(){
+  $i:100;
+  @while $i > 0{
+    .m_bottom#{$i}{ margin-bottom:#{$i}px;}
+    .m_top#{$i}   { margin-top:#{$i}px}
+    .p_bottom#{$i}{ padding-bottom:#{$i}px;}
+    .p_top#{$i}   { padding-top:#{$i}px}
+    $i:$i - 10;
+  }
+}

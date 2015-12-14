@@ -1,8 +1,7 @@
-/* Navigation setup */
+/* NAVIGATION */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Navigation Global Setup
 .nav,
 .navi{
   >li{
@@ -34,9 +33,9 @@
 
 
 //Navigation with display inline
-.navi >li{ display:inline-block; vertical-align: middle ; margin-right: -6px; }
-
-
+.navi{
+  > li{ display: inline-block; vertical-align: middle; margin-right: -6px; }
+}
 
 
 //Sticky Navigation
@@ -49,3 +48,4 @@
   &.left{  left: 0; }
   &.right{ right: 0; }
 }
+

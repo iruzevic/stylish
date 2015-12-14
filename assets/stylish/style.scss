@@ -5,41 +5,52 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 3.7.2
+Version: 3.8
 */
 
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
 
 
+
 /* GLOBAL FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 @import "global/reset";
 @import "global/variables";
-@import "global/mixins";
-@import "global/project_mixins";
+@import "global/variables_project";
+
+
+
+/* MIXINS FILES MERGE */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+@import "mixins/global";
+@import "mixins/buttons";
+@import "mixins/divider";
+@import "mixins/forms";
+@import "mixins/grid";
+@import "mixins/grid_fluid";
+@import "mixins/tooltip";
+@import "mixins/typography";
+@import "mixins/mixins_project";
+
+
+
+/* GLOBAL FOLDER MERGE */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 @import "global/icons";
 @import "global/typography";
 @import "global/forms";
 @import "global/buttons";
-
-
 @import "global/grid/grid";
-@import "global/grid/grid_fluid";
-@import "global/grid/grid_fixed_col";
+@import "global/grid/grid_fixed";
+
 
 
 /* COMPONENTS FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 @import "components/accordion";
 @import "components/breadcrumbs";
 @import "components/divider";
@@ -56,8 +67,6 @@ Version: 3.7.2
 
 /* LAYOUT FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 @import "layout/header";
 @import "layout/common";
 @import "layout/content";
@@ -65,9 +74,9 @@ Version: 3.7.2
 @import "layout/footer";
 
 
+
 /* LAYOUT PROJECT FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
 //@import "layout/magento/cart";
 //@import "layout/magento/category";
 //@import "layout/magento/checkout";
@@ -83,19 +92,15 @@ Version: 3.7.2
 //@import "layout/wordpress/single";
 
 
-/* GLOBAL STYLING */
+
+/* HELPERS GLOBAL */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-@import "global/global";
-
+@import "global/helpers";
 
 
 
 /* RESPONSIVE MEDIA QUERIES (Desktop first) */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 //@media screen and ($responsive_first: $screen_desk){ @if $responsive == true{
 //}}
 //
@@ -113,10 +118,9 @@ Version: 3.7.2
 
 
 
+
 /* RESPONSIVE MEDIA QUERIES (Mobile first) */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-//
 //@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
 //}}
 //

@@ -1,0 +1,20 @@
+/* BLOCK */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.block{
+  @include move();
+
+  .b_title{
+    position: relative;
+    @include move();
+
+    .title{
+      position: relative;
+      @include move();
+    }
+    .subtitle{ }
+  }
+}
+
+

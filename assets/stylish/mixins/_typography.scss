@@ -1,0 +1,245 @@
+/* TYPOGRAPHY */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@function strip_unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+//PX to REM Calculator
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+
+  @each $value in $values {
+
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);
+      $val: strip_unit($value);
+
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / strip_unit($body_base_size) + rem));
+      }
+
+      @if $unit == "rem" {
+        $px : append($px,  ($val * strip_unit($body_base_size) + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//PX to EM Calculator
+@function em($pixels, $context: $body_base_size) {
+  @return #{strip_unit($pixels)/strip_unit($context)}em
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//PX to EM Calculator
+@function rem($pixels, $context: $body_base_size) {
+  @return #{strip_unit($pixels)/strip_unit($context)}rem
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Font style
+@mixin font_style($font_size:false, $line_height:false, $font_weight:false, $font_style:false, $font_family:false, $rem:true){
+  @if $font_size    {
+    @if $rem == true{
+      @include rem(font-size, $font_size);
+    }@else{
+      font-size: $font_size;
+    }
+  }
+  @if $line_height    {
+    @if $rem == true{
+      @include rem(line-height, $line_height);
+    }@else{
+      line-height: $line_height;
+    }
+  }
+  @if $font_weight  {font-weight: $font_weight;}
+  @if $font_style   {font-style: $font_style;}
+  @if $font_family  {font-family: $font_family;}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Setup Link color states */
+@mixin link_color($color:false, $color_hover:false, $text_decoration: false, $cursor:false){
+  @if $color            {color: $color;}
+  @if $text_decoration  {text-decoration:$text_decoration;}
+  @if $cursor           {cursor:$cursor;}
+
+  @if $color_hover {
+    &:hover,
+    &.active {  color: $color_hover;  }
+  }
+  &.disabled{ color: $color; }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Font Declaration mixin (not using compasses default mixin) */
+@mixin font_face($name, $path, $weight: normal, $style: normal, $eot:true, $svg:true, $woff2:true, $woff:true, $ttf:true) {
+  $src: null;
+  $eot_extmods: null;
+  $eot_format: null;
+  $svg_extmods: null;
+  $ttf_format: null;
+
+  //Define variables
+  @if $eot == true{
+    $eot: eot;
+    $eot_extmods: "?iefix";
+    $eot_format: "eot";
+  }
+
+  @if $svg == true{
+    $svg: svg;
+    $svg_extmods: "#" + $name
+  }
+
+  @if $woff2 == true{
+    $woff2: woff2;
+  }
+
+  @if $woff == true{
+    $woff: woff;
+  }
+
+  @if $ttf == true{
+    $ttf: ttf;
+    $ttf_format: "truetype";
+  }
+
+  //Create maps
+  $exts:(
+          $eot
+          $svg
+          $woff2
+          $woff
+          $ttf
+  );
+
+  $extmods: (
+          eot: $eot_extmods,
+          svg: $svg_extmods
+  );
+
+  $formats: (
+          eot: $eot_format,
+          ttf: $ttf_format
+  );
+
+  //Create src-s
+  @each $ext in $exts {
+    @if $ext{
+      $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+      $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+      $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+  }
+
+  //Print out css
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    @if $eot{
+      src: url(quote($path + "." + $eot));
+    }
+    src: $src;
+  }
+
+  @if $svg{
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      @font-face{
+        font-family: quote($name);
+        src: url(quote($path + "." + $svg + $svg_extmods)) format(quote($svg));
+        font-style: $style;
+        font-weight: $weight;
+      }
+    }
+  }
+}
+/* Font Declaration (if some font type is ont user just call variable and set to false) */
+//@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
+//@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//For better font smoothing and fix button weight problem on mac
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generating text colors
+@mixin txt_color_generator(){
+  @each $scheme in $color_schemes {
+
+    $name:  nth($scheme, 1);
+    $color: nth($scheme, 2);
+
+    .txt_#{$name}{
+      color: $color;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generating bg colors
+@mixin bg_color_generator(){
+  @each $scheme in $color_schemes {
+
+    $name:  nth($scheme, 1);
+    $color: nth($scheme, 2);
+
+    .bg_#{$name}{
+      background-color: $color;
+    }
+  }
+}

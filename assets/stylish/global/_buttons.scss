@@ -1,4 +1,4 @@
-/* BUTTONS STYLES */
+/* BUTTONS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -15,13 +15,13 @@ input[type=reset]{
   @include transition-duration(.3s);
 
   //Default size
-  @include btn_size($btn_default_height, $btn_default_padding_v, $btn_default_padding_h, $btn_default_txt_size, $btn_default_line_height);
+  @include btn_size($btn_height, $btn_padding_v, $btn_padding_h, $btn_txt_size, $btn_line_height);
 
   //Big size (cca 52px)
-  &.btn_big, &[data-size="big"]{ @include btn_size($btn_big_height, $btn_big_padding_v, $btn_big_padding_h, $btn_big_txt_size, $btn_big_line_height )}
+  &.btn_large, &[data-size="large"]{ @include btn_size($btn_height_large, $btn_padding_v_large, $btn_padding_h_large, $btn_txt_size_large, $btn_line_height_large )}
 
   //Small size (cca 32px)
-  &.btn_small, &[data-size="small"]{ @include btn_size($btn_small_height, $btn_small_padding_v, $btn_small_padding_h, $btn_small_txt_size, $btn_small_line_height)}
+  &.btn_small, &[data-size="small"]{ @include btn_size($btn_height_small, $btn_padding_v_small, $btn_padding_h_small, $btn_txt_size_small, $btn_line_height_small)}
 
   //Set rounded buttons to strait
   &.no_radius{@include border-radius(0);}
@@ -30,7 +30,7 @@ input[type=reset]{
   &.rounded{@include border-radius(20px);}
 
   //Disabled buttons
-  &.disabled, &:disabled{ background-color: $btn_disabled_bg!important; border-color:$btn_disabled_bg!important; color:$btn_disabled_txt!important; cursor: default!important}
+  &.disabled, &:disabled{ }
 
   //Set button to auto width
   &.auto_width{width: auto; display: inline-block;}
@@ -57,7 +57,7 @@ input[type=reset]{
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
   /* Buttons Colors */
-  @include btn_color_generator();
+  &.btn_mine_shaft{@include btn_color($color_mine_shaft, $color_white, $color_mine_shaft, lighten($color_mine_shaft, .5), $color_white, lighten($color_mine_shaft, .5) )}
 
 }
 

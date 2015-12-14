@@ -1,14 +1,13 @@
-/* Undefined components setup */
+/* GENERAL */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Block or widget move */
-.block,
-.widget{ margin-bottom: $block_move}
-
-
-//Fade in Animation
-@include  keyframes(fadeIn) {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+//Loader
+.loader,
+.loading{
+  &.active{
+    position: absolute; z-index: 5; width: 100%; height: 100%; top: 0; left: 0;background-color: rgba($color_white, .7); @include transition-duration(.3s); @include transition-property(all);
+    &.bg_color{background-color: rgba($color_white, .4);}
+    &:after{@extend .sy_icon; @extend .sy_spinner:before; @extend .icon_spin; position: absolute; left: 50%; top: 50%; margin-top: -($loading_size/2);margin-left:-($loading_size/2); @include font_style($loading_size, $rem:false); color: $color_mine_shaft;}
+  }
 }
