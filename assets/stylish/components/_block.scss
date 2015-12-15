@@ -3,15 +3,22 @@
 
 
 .block{
-  @include move();
+  @include move($block_move, $block_small, $block_large);
+  @include move_in($block_move_in, $block_small, $block_large);
+  @include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
+
 
   .b_title{
     position: relative;
-    @include move();
+    @include move($block_b_title_move, $block_small, $block_large);
+    @include move_in($block_b_title_move_in, $block_small, $block_large);
+    @include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
 
     .title{
       position: relative;
-      @include move();
+      @include move($block_title_move, $block_small, $block_large);
+      @include move_in($block_title_move_in, $block_small, $block_large);
+      @include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
     }
     .subtitle{ }
   }

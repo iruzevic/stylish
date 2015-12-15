@@ -2,22 +2,22 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Generate Grid ($num = number of columns) */
+// Generate Grid ($num = number of columns)
 @mixin col_width($num){
   width:(100%/$grid_col_num) * $num;
 }
 
-/* Generate grid based on items */
+// Generate grid based on items
 @mixin cols_count($num){
   width:(100%/$num);
 }
 
-/* Generate Pull width */
+// Generate Pull width
 @mixin col_pull($num){
   margin-left:-(100%/$grid_col_num) * $num;
 }
 
-/* Generate Push width */
+// Generate Push width
 @mixin col_push($num){
   margin-left:(100%/$grid_col_num) * $num;
 }
@@ -26,7 +26,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Grid col style */
+// Grid col style
 @mixin col_style(){
   float: left; min-width: 1px; min-height: 1px;
 }
@@ -35,7 +35,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Cols gutter - padding between cols */
+// Cols gutter - padding between cols
 @mixin col_gutter($gutter:$gutter){
   [class*='col_']{
     @if $gutter == 0{
@@ -65,7 +65,7 @@
 }
 
 
-@mixin grid_generate($grid_name:fluid, $grid_gutter: $gutter) {
+@mixin grid_generate($grid_name:false, $grid_gutter: false) {
   .grid_#{$grid_name}{
     @include grid_correction((-$grid_gutter));
     @include col_gutter($grid_gutter);
@@ -78,174 +78,106 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@mixin l_col(){
+// Generate different col sizes
+@mixin col_generate($size){
   @for $i from 1 to $grid_col_num+1{
-    .col_l_#{$i} {@include col_width($i)}
-    .pull_l_#{$i}{@include col_pull($i)}
-    .push_l_#{$i}{@include col_push($i)}
+    .col_#{$size}_#{$i} {@include col_width($i)}
+    .pull_#{$size}_#{$i}{@include col_pull($i)}
+    .push_#{$size}_#{$i}{@include col_push($i)}
   }
-  .hide_l{ display: none}
-  .show_l{ display: block}
-  .push_l_reset,
-  .pull_l_reset{ margin-left: 0}
-}
-
-@mixin d_col(){
-  @for $i from 1 to $grid_col_num+1{
-    .col_d_#{$i} {@include col_width($i)}
-    .pull_d_#{$i}{@include col_pull($i)}
-    .push_d_#{$i}{@include col_push($i)}
-  }
-  .hide_d{ display: none}
-  .show_d{ display: block}
-  .push_d_reset,
-  .pull_d_reset{ margin-left: 0}
-}
-
-@mixin m_col(){
-  @for $i from 1 to $grid_col_num+1{
-    .col_m_#{$i} {@include col_width($i)}
-    .pull_m_#{$i}{@include col_pull($i)}
-    .push_m_#{$i}{@include col_push($i)}
-  }
-  .hide_m{ display: none}
-  .show_m{ display: block}
-  .push_m_reset,
-  .pull_m_reset{ margin-left: 0}
-}
-
-@mixin s_col(){
-  @for $i from 1 to $grid_col_num+1{
-    .col_s_#{$i} {@include col_width($i)}
-    .pull_s_#{$i}{@include col_pull($i)}
-    .push_s_#{$i}{@include col_push($i)}
-  }
-  .hide_s{ display: none}
-  .show_s{ display: block}
-  .push_s_reset,
-  .pull_s_reset{ margin-left: 0}
-}
-
-@mixin h_col(){
-  @for $i from 1 to $grid_col_num+1{
-    .col_h_#{$i} {@include col_width($i)}
-    .pull_h_#{$i}{@include col_pull($i)}
-    .push_h_#{$i}{@include col_push($i)}
-  }
-  .hide_h{ display: none}
-  .show_h{ display: block}
-  .push_h_reset,
-  .pull_h_reset{ margin-left: 0}
-}
-
-@mixin xs_col(){
-  @for $i from 1 to $grid_col_num+1{
-    .col_xs_#{$i} {@include col_width($i)}
-    .pull_xs_#{$i}{@include col_pull($i)}
-    .push_xs_#{$i}{@include col_push($i)}
-  }
-  .hide_xs{ display: none}
-  .show_xs{ display: block}
-  .push_xs_reset,
-  .pull_xs_reset{ margin-left: 0}
+  .hide_#{$size}{ display: none}
+  .show_#{$size}{ display: block}
+  .push_#{$size}_reset,
+  .pull_#{$size}_reset{ margin-left: 0}
 }
 
 
-//Generate grid widths for mobile and desktop first design
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Generate grid widths for mobile and desktop first design
 @mixin col_width_output(){
 
   @if $responsive == true{
 
     @if $responsive_first == max-width {
 
-      @include l_col();
+      @include col_generate(l);
 
       @media screen and ($responsive_first: $screen_desk) {
-        @include d_col();
+        @include col_generate(d);
       }
 
       @media screen and ($responsive_first: $screen_medium) {
-        @include m_col();
+        @include col_generate(m);
       }
 
       @media screen and ($responsive_first: $screen_hybrid) {
-        @include h_col();
+        @include col_generate(h);
       }
 
       @media screen and ($responsive_first: $screen_small) {
-        @include s_col();
+        @include col_generate(s);
       }
 
       @media screen and ($responsive_first: $screen_xsmall) {
-        @include xs_col();
+        @include col_generate(xs);
       }
 
     }@else{
 
-      @include xs_col();
+      @include col_generate(xs);
 
       @media screen and ($responsive_first: $screen_small) {
-        @include s_col();
+        @include col_generate(s);
       }
 
       @media screen and ($responsive_first: $screen_hybrid) {
-        @include h_col();
+        @include col_generate(h);
       }
 
       @media screen and ($responsive_first: $screen_medium) {
-        @include m_col();
+        @include col_generate(m);
       }
 
       @media screen and ($responsive_first: $screen_desk) {
-        @include d_col();
+        @include col_generate(d);
       }
 
       @media screen and ($responsive_first: $screen_large) {
-        @include l_col();
+        @include col_generate(l);
       }
 
     }
 
   }@else{
 
-    @include l_col();
+    @include col_generate(l);
 
   }
-
 
   .push_reset,
   .pull_reset{ margin-left: 0}
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// Generate grid
+@include grid_generate(fluid,   $gutter);
+@include grid_generate(quarter, $gutter_quarter);
+@include grid_generate(half,    $gutter_half);
+@include grid_generate(double,  $gutter_double);
+@include grid_generate(triple,  $gutter_triple);
+@include grid_generate(clean,   $gutter_clean);
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Predefined gutter sizes
-$gutter_quarter:  $gutter/4;
-$gutter_half:     $gutter/2;
-$gutter_double:   $gutter*2;
-$gutter_triple:   $gutter*3;
-$gutter_clean:    0;
-
-
-/* Generate fluid grid  */
-@include grid_generate();
-@include grid_generate(quarter,$gutter_quarter);
-@include grid_generate(half,   $gutter_half);
-@include grid_generate(double, $gutter_double);
-@include grid_generate(triple, $gutter_triple);
-@include grid_generate(clean,  $gutter_clean);
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
-//Standard col style
+// Standard col style
 [class*='col_']{ @include col_style(); }
 
-//Columns widths
+// Columns widths
 @include col_width_output();

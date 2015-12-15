@@ -3,7 +3,7 @@
 
 
 .container{
-  margin-left:auto; margin-right: auto;@include container_padding(); @include container_size();
+  width: 100%; margin-left:auto; margin-right: auto; @include container_size();
 
   //Strip padding from container
   &.full,
@@ -19,10 +19,11 @@
 
 
 //Container corrections for different types of grid
-@include container_generate(quarter,$gutter/8);
-@include container_generate(half,$gutter/4);
-@include container_generate(double,$gutter);
-@include container_generate(triple,$gutter*1.5);
+@include container_generate(fluid,    $gutter/2);
+@include container_generate(quarter,  $gutter_quarter/2);
+@include container_generate(half,     $gutter_half/2);
+@include container_generate(double,   $gutter_double/2);
+@include container_generate(triple,   $gutter_triple/2);
 
 
 //Grid lockout for no responsive layout

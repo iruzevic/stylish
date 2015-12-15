@@ -30,16 +30,11 @@
 
     //Notice state
     &.notice-msg,
-    &.notice_msg{
+    &.notice_msg,
+    &.info_msg,
+    &.info-msg{
       background-color: $color_notice;
       &:before{@extend .sy_info_round:before; }
-    }
-
-    //Warning state
-    &.warning-msg,
-    &.warning_msg{
-      background-color: $color_warning;
-      &:before{@extend .sy_warning:before; }
     }
   }
 }

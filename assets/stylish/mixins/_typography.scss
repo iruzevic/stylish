@@ -97,8 +97,7 @@
   @if $cursor           {cursor:$cursor;}
 
   @if $color_hover {
-    &:hover,
-    &.active {  color: $color_hover;  }
+    &:hover, &.active, &.current{  color: $color_hover;  }
   }
   &.disabled{ color: $color; }
 }
@@ -189,10 +188,6 @@
     }
   }
 }
-/* Font Declaration (if some font type is ont user just call variable and set to false) */
-//@include font_face('FONT NAME', 'LOCATION RELATIVE TO CSS FILE WITHOUT EXTENSION', WEIGHT, STYLE);
-//@include font_face('Dosis', '../fonts/dosis_bold_italic_webfont', bold, italic);
-
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */

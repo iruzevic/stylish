@@ -5,22 +5,22 @@
 table{
   width: 100%;
   th,td{
-    padding: $table_padding;border-bottom: 1px solid;
+    padding: $table_padding_v $table_padding_h; border-bottom: 1px solid;
   }
 
   //Table Head
   thead{
-    th,td{border-bottom-color: $table_head_border; font-weight: bold; text-transform: uppercase}
+    th,td{border-bottom-color: $table_head_border; padding: $table_head_padding_v $table_head_padding_h; font-weight: bold; text-transform: uppercase; }
   }
 
   //Table Body
   tbody{
-    th,td{ border-bottom-color:$table_body_border;}
+    th,td{ border-bottom-color:$table_body_border; padding: $table_body_padding_v $table_body_padding_h; }
   }
 
   //Table Footer
   tfoot{
-    th,td{ border-bottom-color: $table_footer_border;}
+    th,td{ border-bottom-color: $table_foot_border; padding: $table_foot_padding_v $table_foot_padding_h; }
   }
 
 
@@ -40,12 +40,12 @@ table{
 
   //Cozy mode (middle size)
   &.cozy_view{
-    th,td{ padding: $table_padding/2;}
+    th,td{ padding: $table_padding_v/2 $table_padding_h/2; }
   }
 
   //Compact mode (smallest size)
   &.compact_view{
-    th,td{ padding: $table_padding/3;}
+    th,td{ padding: $table_padding_v/3 $table_padding_h/3; }
   }
 
   //Override default set padding's
@@ -69,6 +69,5 @@ table{
   &.status_error{   background-color: $color_error }
   &.status_success{ background-color: $color_success }
   &.status_notice{  background-color: $color_notice }
-  &.status_warning{ background-color: $color_warning }
 }
 

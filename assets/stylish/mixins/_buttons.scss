@@ -11,7 +11,7 @@
 
 
   @if $bg_hover OR $text_hover OR $border_hover{
-    &:hover, &.active{
+    &:hover, &.active, &.current{
       @if $bg_hover     { background-color: $bg_hover;}
       @if $text_hover   { color: $text_hover;}
       @if $border_hover { border-color: $border_hover}
@@ -24,12 +24,21 @@
 
 
 //Button size
-@mixin btn_size($height: false, $padding_vertical:false, $padding_horizontal:false, $font_size:false, $line_height:false){
-  @if $height             { @include rem(height, $height); }
-  @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
-  @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
-  @if $font_size          { @include rem(font-size, $font_size); }
-  @if $line_height        { @include rem(line-height, $line_height); }
+@mixin btn_size($height: false, $padding_vertical:false, $padding_horizontal:false, $font_size:false, $line_height:false, $rem:false){
+  @if $rem{
+    @if $height             { @include rem(height, $height); }
+    @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
+    @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+    @if $font_size          { @include rem(font-size, $font_size); }
+    @if $line_height        { @include rem(line-height, $line_height); }
+  }@else{
+    @if $height             { height: $height; }
+    @if $padding_vertical   { padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
+    @if $padding_horizontal { padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
+    @if $font_size          { font-size: $font_size; }
+    @if $line_height        { line-height: $line_height; }
+  }
+
 }
 
 

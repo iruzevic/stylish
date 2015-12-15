@@ -2,16 +2,8 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-input[type=text],
-input[type=tel],
-input[type=password],
-input[type=email],
-input[type=number],
-input[type=url],
-input[type=datetime],
-input[type=search],
-textarea,
-select{
+@include form_fields{
+
   @include input_style($input_txt_color, $input_bg_color, $input_border_width, $input_border_style, $input_border_color, $input_margin, $input_width, $input_font_family, $input_radius);
   @include appearance(none);
   @include font-smoothing();
@@ -140,16 +132,7 @@ textarea{ height: 150px; }
 
 //Input Big size
 .input_big{
-  input[type=text],
-  input[type=tel],
-  input[type=password],
-  input[type=email],
-  input[type=number],
-  input[type=url],
-  input[type=datetime],
-  input[type=search],
-  textarea,
-  select{
+  @include form_fields{
     @include input_size($input_height_large, $input_txt_size_large, $input_line_height_large, $input_padding_v_large, $input_padding_h_large);
   }
   .select   { @include select_size($input_height_large, $select_icon_size_large); }
@@ -159,21 +142,15 @@ textarea{ height: 150px; }
 
 //Input small size
 .input_small{
-  input[type=text],
-  input[type=tel],
-  input[type=password],
-  input[type=email],
-  input[type=number],
-  input[type=url],
-  input[type=datetime],
-  input[type=search],
-  textarea,
-  select{
+  @include form_fields{
     @include input_size($input_height_small, $input_txt_size_small, $input_line_height_small, $input_padding_v_small, $input_padding_h_small);
   }
   .select   { @include select_size($input_height_small, $select_icon_size_small); }
   .checkbox { @include checkbox_size($checkbox_height_small, $checkbox_icon_size_small);}
   .radio    { @include radio_size($radio_height_small, $radio_icon_size_small);}
+
+
+
 }
 
 

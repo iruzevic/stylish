@@ -8,7 +8,6 @@ input[type=submit],
 input[type=button],
 input[type=reset]{
   @include btn_style($btn_transform, $btn_font_family, $btn_radius, $btn_border_width, $btn_border_style, $btn_txt_align, $btn_width, $btn_txt_weight, $btn_display, $btn_white_space, $btn_txt_decoration, $btn_cursor, $btn_margin);
-  @include btn_color();
   @include appearance(none);
   @include font-smoothing();
   @include transition-property(all);
@@ -17,10 +16,10 @@ input[type=reset]{
   //Default size
   @include btn_size($btn_height, $btn_padding_v, $btn_padding_h, $btn_txt_size, $btn_line_height);
 
-  //Big size (cca 52px)
+  //Large size
   &.btn_large, &[data-size="large"]{ @include btn_size($btn_height_large, $btn_padding_v_large, $btn_padding_h_large, $btn_txt_size_large, $btn_line_height_large )}
 
-  //Small size (cca 32px)
+  //Small size
   &.btn_small, &[data-size="small"]{ @include btn_size($btn_height_small, $btn_padding_v_small, $btn_padding_h_small, $btn_txt_size_small, $btn_line_height_small)}
 
   //Set rounded buttons to strait

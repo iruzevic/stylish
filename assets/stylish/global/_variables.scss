@@ -3,96 +3,90 @@
 
 
 // Setup Colors (http://chir.ag/projects/name-that-color/)
-$color_mine_shaft:       #272727;
-$color_havelock_blue:    #3a89cd;
-$color_flush_mahogany:   #cd3a3a;
-$color_emerald:          #3acd60;
-$color_earls_green:      #cdc43a;
-$color_amethyst:         #bd3acd;
-$color_raw_sienna:       #cd833a;
-$color_dove_gray:        #666666;
-$color_dove_gray_light:  #999999;
-$color_silver:           #c5c5c5;
-$color_mercury:          #e5e5e5;
-$color_white:            #ffffff;
+$color_mine_shaft:            #272727;
+$color_havelock_blue:         #3a89cd;
+$color_flush_mahogany:        #cd3a3a;
+$color_emerald:               #3acd60;
+$color_earls_green:           #cdc43a;
+$color_amethyst:              #bd3acd;
+$color_raw_sienna:            #cd833a;
+$color_dove_gray:             #666666;
+$color_dove_gray_light:       #999999;
+$color_silver:                #c5c5c5;
+$color_mercury:               #e5e5e5;
+$color_white:                 #ffffff;
 
 
-$color_error:            #f2a89c;  //error notification color
-$color_success:          #c4dcc0;  //success  notification color
-$color_notice:           #c0cddc;  //notice  notification color
-$color_warning:          #e1e696;  //warning  notification color
+$color_error:                 #f2a89c;  //error notification color
+$color_success:               #c4dcc0;  //success  notification color
+$color_notice:                #c0cddc;  //notice  notification color
 
 
 //Create color scheme
 // 1. item - color name
 // 2. item - default color
 $color_schemes:
-'mine_shaft'        $color_mine_shaft,
-'havelock_blue'     $color_havelock_blue,
-'flush_mahogany'    $color_flush_mahogany,
-'emerald'           $color_emerald,
-'earls_green'       $color_earls_green,
-'amethyst'          $color_amethyst,
-'raw_sienna'        $color_raw_sienna,
-'dove_gray'         $color_dove_gray,
-'dove_gray_light'   $color_dove_gray_light,
-'silver'            $color_silver,
-'mercury'           $color_mercury,
-'white'             $color_white;
+'mine_shaft'                  $color_mine_shaft,
+'havelock_blue'               $color_havelock_blue,
+'flush_mahogany'              $color_flush_mahogany,
+'emerald'                     $color_emerald,
+'earls_green'                 $color_earls_green,
+'amethyst'                    $color_amethyst,
+'raw_sienna'                  $color_raw_sienna,
+'dove_gray'                   $color_dove_gray,
+'dove_gray_light'             $color_dove_gray_light,
+'silver'                      $color_silver,
+'mercury'                     $color_mercury,
+'white'                       $color_white;
 
 
-
-// Default Link color - Setup color states for link_color mixin
-$link_color:        $color_flush_mahogany;
-$link_color_hover:  $color_flush_mahogany;
-
-
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 //Common
-$global_radius:           4px; //Setup global border radius (buttons, forms and etc.)
-
-
-//Icons
-$icons_font_family:       'stylish';
-$icons_font_location:     '../fonts/stylish';
+$global_radius:               4px; //Setup global border radius (buttons, forms and etc.)
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 // TYPOGRAPHY GLOBAL
 
 
-$body_font_family:        Arial, Helvetica, sans-serif; //body font family
-$body_font_family_serif:  Georgia, sans-serif;
-$body_bg_color:           $color_white;  //body bg color
-$body_txt_color:          $color_mine_shaft;  //body text color
+// Default Link color
+$link_color:                  $color_flush_mahogany;
+$link_color_hover:            $color_flush_mahogany;
+
+
+$body_font_family:            Arial, Helvetica, sans-serif; //body font family
+$body_font_family_serif:      Georgia, sans-serif;
+$body_bg_color:               $color_white;  //body bg color
+$body_txt_color:              $color_mine_shaft;  //body text color
 
 
 //Html base size
-$body_base_size:    18px!default;
-$body_base_size_d:  17px;
-$body_base_size_m:  16px;
-$body_base_size_h:  15px;
-$body_base_size_s:  14px;
-$body_base_size_xs: 13px;
+$body_base_size:              18px!default;
+$body_base_size_d:            17px;
+$body_base_size_m:            16px;
+$body_base_size_h:            15px;
+$body_base_size_s:            14px;
+$body_base_size_xs:           13px;
 
 
 //Headers and paragraph
-$h1:  38px;
-$h2:  35px;
-$h3:  32px;
-$h4:  29px;
-$h5:  26px;
-$h6:  23px;
-$p :  $body_base_size;
+$h1:                          38px;
+$h2:                          35px;
+$h3:                          32px;
+$h4:                          29px;
+$h5:                          26px;
+$h6:                          23px;
+$p :                          $body_base_size;
 
 
 // Line heights
-$h1lh: $h1+5;
-$h2lh: $h2+5;
-$h3lh: $h3+5;
-$h4lh: $h4+5;
-$h5lh: $h5+5;
-$h6lh: $h6+5;
-$plh : $p +5;
+$h1lh:                        $h1+5;
+$h2lh:                        $h2+5;
+$h3lh:                        $h3+5;
+$h4lh:                        $h4+5;
+$h5lh:                        $h5+5;
+$h6lh:                        $h6+5;
+$plh :                        $p +5;
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -100,29 +94,36 @@ $plh : $p +5;
 
 
 //Headers and paragraph
-$cs_h1:  $h1;
-$cs_h2:  $h2;
-$cs_h3:  $h3;
-$cs_h4:  $h4;
-$cs_h5:  $h5;
-$cs_h6:  $h6;
-$cs_p :   $p;
+$cs_h1:                       $h1;
+$cs_h2:                       $h2;
+$cs_h3:                       $h3;
+$cs_h4:                       $h4;
+$cs_h5:                       $h5;
+$cs_h6:                       $h6;
+$cs_p :                       $p;
 
 
 // Line heights
-$cs_h1lh: $cs_h1+5;
-$cs_h2lh: $cs_h2+5;
-$cs_h3lh: $cs_h3+5;
-$cs_h4lh: $cs_h4+5;
-$cs_h5lh: $cs_h5+5;
-$cs_h6lh: $cs_h6+5;
-$cs_plh : $cs_p+5;
+$cs_h1lh:                     $cs_h1+5;
+$cs_h2lh:                     $cs_h2+5;
+$cs_h3lh:                     $cs_h3+5;
+$cs_h4lh:                     $cs_h4+5;
+$cs_h5lh:                     $cs_h5+5;
+$cs_h6lh:                     $cs_h6+5;
+$cs_plh :                     $cs_p+5;
 
 
 //margin move for p, ul, img and other
-$cs_move_headers: 5px;
-$cs_move:         20px;
-$cs_move_li:      5px;
+$cs_move_headers:             5px;
+$cs_move:                     20px;
+$cs_move_li:                  5px;
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+// ICONS
+
+$icons_font_family:           'stylish';
+$icons_font_location:         '../fonts/stylish';
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -130,37 +131,43 @@ $cs_move_li:      5px;
 
 
 // Grid Fluid
-$gutter:          40px; //gutter padding
-$grid_col_num:    12;   //fluid grid max columns number
+$gutter:                      40px; //gutter padding
+$grid_col_num:                12;   //fluid grid max columns number
+
+$gutter_quarter:              $gutter/4;
+$gutter_half:                 $gutter/2;
+$gutter_double:               $gutter*2;
+$gutter_triple:               $gutter*3;
+$gutter_clean:                0;
 
 
 // Grid Sidebar Fix
-$sidebar_width:     300px; //fixed sidebar grid, sidebar width
-$gutter_fix:        $gutter; //fixed sidebar grid, padding between main fluid col and fixed sidebar
+$sidebar_width:               300px; //fixed sidebar grid, sidebar width
+$gutter_fix:                  $gutter; //fixed sidebar grid, padding between main fluid col and fixed sidebar
 
 
 // Grid
-$page_max_width:    1200px; //max wid for page container
-$responsive_first:  max-width; //If using mobile first put "min-width" else for desktop first use "max-width"
+$page_max_width:              1200px; //max wid for page container
+$responsive_first:            max-width; //If using mobile first put "min-width" else for desktop first use "max-width"
 
 
 //Responsive
-$responsive:    true; // set true or false if using responsive (if set to false use only "col_l_" grid)
+$responsive:                  true; // set true or false if using responsive (if set to false use only "col_l_" grid)
 
 //Desktop First Layout
-$screen_desk:     1199px;
-$screen_medium:   989px;
-$screen_hybrid:   767px;
-$screen_small:    549px;
-$screen_xsmall:   319px;
+$screen_desk:                 $page_max_width - 1;
+$screen_medium:               989px;
+$screen_hybrid:               767px;
+$screen_small:                549px;
+$screen_xsmall:               319px;
 
 
 //Mobile First Layout
-//$screen_small:  319px;
-//$screen_hybrid: 549px;
-//$screen_medium: 767px;
-//$screen_desk:   989px;
-//$screen_large:  1199px;
+//$screen_small:              319px;
+//$screen_hybrid:             549px;
+//$screen_medium:             767px;
+//$screen_desk:               989px;
+//$screen_large:              $page_max_width - 1;
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -168,72 +175,72 @@ $screen_xsmall:   319px;
 
 
 //input fields
-$input_txt_color:       $color_mine_shaft; //input text color
-$input_bg_color:        $color_white; //input bg color
-$input_border_width:    1px; //input border width
-$input_border_style:    solid; //input border style
-$input_border_color:    $color_mercury; //input border color
-$input_margin:          0; //input margin
-$input_width:           100%; //input width
-$input_font_family:     $body_font_family; //input font family (use web safe font for cross-browser compatibility)
-$input_radius:          $global_radius; //input radius
-$input_focus:           $color_flush_mahogany; //input box shadow color on focus
-$input_placeholder:     $color_mercury; //input placeholder color
-$input_rem:             false;
+$input_txt_color:             $color_mine_shaft; //input text color
+$input_bg_color:              $color_white; //input bg color
+$input_border_width:          1px; //input border width
+$input_border_style:          solid; //input border style
+$input_border_color:          $color_mercury; //input border color
+$input_margin:                0; //input margin
+$input_width:                 100%; //input width
+$input_font_family:           $body_font_family; //input font family (use web safe font for cross-browser compatibility)
+$input_radius:                $global_radius; //input radius
+$input_focus:                 $color_flush_mahogany; //input box shadow color on focus
+$input_placeholder:           $color_mercury; //input placeholder color
+$input_rem:                   false;
 
-$input_bg_disabled:     $color_silver; //input bg color for disabled state
-$input_txt_disabled:    $color_dove_gray; //input text color for disabled state
+$input_bg_disabled:           $color_silver; //input bg color for disabled state
+$input_txt_disabled:          $color_dove_gray; //input text color for disabled state
 
 
 // ---------------------------------------- //
 //select fields
-$select_icon_color:     $color_mine_shaft; //Select icons color
+$select_icon_color:           $color_mine_shaft; //Select icons color
 
 
 // ---------------------------------------- //
 //checkbox
-$checkbox_bg:           $input_bg_color; //checkbox bg color
-$checkbox_border:       $input_border_color; //checkbox border color
-$checkbox_active:       $color_flush_mahogany; //checkbox icon color on active state
+$checkbox_bg:                 $input_bg_color; //checkbox bg color
+$checkbox_border:             $input_border_color; //checkbox border color
+$checkbox_active:             $color_flush_mahogany; //checkbox icon color on active state
 
 
 // ---------------------------------------- //
 //radio
-$radio_bg:              $input_bg_color; //radio bg color
-$radio_border:          $input_border_color; //radio border color
-$radio_active:          $checkbox_active; //radio icon color on active state
+$radio_bg:                    $input_bg_color; //radio bg color
+$radio_border:                $input_border_color; //radio border color
+$radio_active:                $checkbox_active; //radio icon color on active state
 
 
 // ---------------------------------------- //
 //form style
-$form_error:            $color_flush_mahogany;  //form error color
-$form_error_move:       10px;  //form error color
+$form_error:                  $color_flush_mahogany;  //form error color
+$form_error_move:             10px;  //form error color
 
-$form_field_move:       20px; //Default form field move
-$form_field_move_large: $form_field_move*2;//Big form field move
-$form_field_move_small: $form_field_move/2;//Small form field move
+$form_field_move:             20px; //Default form field move
+$form_field_move_large:       $form_field_move*2;//Big form field move
+$form_field_move_small:       $form_field_move/2;//Small form field move
 
-$form_required_move:    3px;
-$form_required_size:    14px;
+$form_required_move:          3px;
+$form_required_size:          14px;
 
-$form_label_move:       5px;
+$form_label_move:             5px;
 
 
 // ---------------------------------------- //
 //Input Default size
-$input_height:              42px; //input height
-$input_txt_size:            $p; //input font size
-$input_line_height:         $p; //input font size
-$input_padding_v:           ($input_height - $input_line_height)/2; //input padding
-$input_padding_h:           10px; //input padding
+$input_height:                42px; //input height
+$input_txt_size:              $p; //input font size
+$input_line_height:           $p; //input font size
+$input_padding_v:             ($input_height - $input_line_height)/2; //input padding
+$input_padding_h:             10px; //input padding
 
-$checkbox_height:           $input_height; //checkbox width and height
-$checkbox_icon_size:        ($checkbox_height - 8); //checkbox icon size
+$checkbox_height:             $input_height; //checkbox width and height
+$checkbox_icon_size:          ($checkbox_height - 8); //checkbox icon size
 
-$radio_height:              $checkbox_height; //radio width and height
-$radio_icon_size:           $checkbox_icon_size; //radio icon size
+$radio_height:                $checkbox_height; //radio width and height
+$radio_icon_size:             $checkbox_icon_size; //radio icon size
 
-$select_icon_size:          18px; //Select icon size
+$select_icon_size:            18px; //Select icon size
 
 
 // ---------------------------------------- //
@@ -255,69 +262,69 @@ $select_icon_size_large:      22px; //Select icon size
 
 // ---------------------------------------- //
 //Input Small size
-$input_height_small:        32px; //input height
-$input_txt_size_small:      $p; //input font size
-$input_line_height_small:   $p; //input font size
-$input_padding_v_small:     ($input_height_small - $input_line_height_small)/2; //input padding; //input padding
-$input_padding_h_small:     10px; //input padding
+$input_height_small:          32px; //input height
+$input_txt_size_small:        $p; //input font size
+$input_line_height_small:     $p; //input font size
+$input_padding_v_small:       ($input_height_small - $input_line_height_small)/2; //input padding; //input padding
+$input_padding_h_small:       10px; //input padding
 
-$checkbox_height_small:     $input_height_small; //checkbox width and height
-$checkbox_icon_size_small:  ($checkbox_height_small - 8); //checkbox icon size
+$checkbox_height_small:       $input_height_small; //checkbox width and height
+$checkbox_icon_size_small:    ($checkbox_height_small - 8); //checkbox icon size
 
-$radio_height_small:        $checkbox_height_small; //radio width and height
-$radio_icon_size_small:     $checkbox_icon_size_small; //radio icon size
+$radio_height_small:          $checkbox_height_small; //radio width and height
+$radio_icon_size_small:       $checkbox_icon_size_small; //radio icon size
 
-$select_icon_size_small:    15px; //Select icon size
+$select_icon_size_small:      15px; //Select icon size
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 // BUTTONS
 
 
-$btn_transform:           uppercase; //button text transform
-$btn_font_family:         $body_font_family; //font-family
-$btn_radius:              $global_radius; //button radius
-$btn_border_width:        1px; //button border width
-$btn_border_style:        solid; //button border style
-$btn_txt_align:           center; //button text align
-$btn_width:               100%; //button width
-$btn_txt_weight:          normal; //button text width
-$btn_display:             block; //Display
-$btn_white_space:         nowrap; //white space
-$btn_txt_decoration:      none; //button text decoration
-$btn_cursor:              pointer; //cursor
-$btn_margin:              0; //margin
-$btn_rem:                 false;
+$btn_transform:               uppercase; //button text transform
+$btn_font_family:             $body_font_family; //font-family
+$btn_radius:                  $global_radius; //button radius
+$btn_border_width:            1px; //button border width
+$btn_border_style:            solid; //button border style
+$btn_txt_align:               center; //button text align
+$btn_width:                   100%; //button width
+$btn_txt_weight:              normal; //button text width
+$btn_display:                 block; //Display
+$btn_white_space:             nowrap; //white space
+$btn_txt_decoration:          none; //button text decoration
+$btn_cursor:                  pointer; //cursor
+$btn_margin:                  0; //margin
+$btn_rem:                     false;
 
-$btn_icon_size:           18px; //icon in button
-$btn_icon_move:           10px; //move icon from text in button
+$btn_icon_size:               18px; //icon in button
+$btn_icon_move:               10px; //move icon from text in button
 
 
 // ---------------------------------------- //
 //Btn size Default
-$btn_height:              $input_height; //button Default height
-$btn_txt_size:            16px; //button Default text size
-$btn_line_height:         20px; //button Default line height
-$btn_padding_v:           ($btn_height - $btn_line_height)/2; //button Default padding vertical
-$btn_padding_h:           40px; //button Default padding horizontal
+$btn_height:                  $input_height; //button Default height
+$btn_txt_size:                16px; //button Default text size
+$btn_line_height:             20px; //button Default line height
+$btn_padding_v:               ($btn_height - $btn_line_height)/2; //button Default padding vertical
+$btn_padding_h:               40px; //button Default padding horizontal
 
 
 // ---------------------------------------- //
 //Btn size Large
-$btn_height_large:        $input_height_large; //button Big height
-$btn_txt_size_large:      20px; //button Big text size
-$btn_line_height_large:   24px; //button Big line height
-$btn_padding_v_large:     ($btn_height_large - $btn_line_height_large)/2; //button Default padding vertical
-$btn_padding_h_large:     40px; //button Big padding horizontal
+$btn_height_large:            $input_height_large; //button Big height
+$btn_txt_size_large:          20px; //button Big text size
+$btn_line_height_large:       24px; //button Big line height
+$btn_padding_v_large:         ($btn_height_large - $btn_line_height_large)/2; //button Default padding vertical
+$btn_padding_h_large:         40px; //button Big padding horizontal
 
 
 // ---------------------------------------- //
 //Btn size Small
-$btn_height_small:        $input_height_small; //button Small height
-$btn_txt_size_small:      13px; //button Small text size
-$btn_line_height_small:   17px; //button Small line height
-$btn_padding_v_small:     ($btn_height_small - $btn_line_height_small)/2; //button Small padding vertical
-$btn_padding_h_small:     40px; //button Small padding horizontal
+$btn_height_small:            $input_height_small; //button Small height
+$btn_txt_size_small:          13px; //button Small text size
+$btn_line_height_small:       17px; //button Small line height
+$btn_padding_v_small:         ($btn_height_small - $btn_line_height_small)/2; //button Small padding vertical
+$btn_padding_h_small:         40px; //button Small padding horizontal
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -325,96 +332,137 @@ $btn_padding_h_small:     40px; //button Small padding horizontal
 
 
 //Accordion
-$acc_head_color:            $color_silver; //accordion header bg color
-$acc_head_padding:          10px;
-$acc_content_color:         $color_mercury; //accordion content bg color
-$acc_content_padding:       20px;
-
-
-// ---------------------------------------- //
-//Breadcrumbs
-$crumb_separator_size:      14px;
-$crumb_separator_padding:   10px;
-
-
-// ---------------------------------------- //
-//Tabs
-$tabs_head_color:           $color_mercury;  //tabs head background color
-$tabs_head_active_bg_color: $color_white; //tabs head active background color
-$tabs_head_active_color:    $color_mine_shaft; //tabs head active color
-$tabs_head_item_padding_v:  10px;
-$tabs_head_item_padding_h:  0;
-$tabs_content_padding_v:    20px;
-$tabs_content_padding_h:    0;
-
-
-// ---------------------------------------- //
-//Messages
-$msg_move:                  30px;
-$msg_item_padding:          10px;
-$msg_item_move:             20px;
-$msg_icon_size:             30px; //Messages icon size
-$msg_txt_color:             $color_mine_shaft; // Messages text color
-$msg_txt_size:              $p;
-
-
-// ---------------------------------------- //
-//Table
-$table_head_border:         $color_flush_mahogany;  //table head border bottom color
-$table_body_border:         $color_mercury; //table body border bottom color
-$table_footer_border:       $table_head_border; //table footer border bottom color
-$table_padding:             10px; //table padding
-
-$status_item_padding_v:     2px;
-$status_item_padding_h:     5px;
+$acc_head_color:              $color_silver; //accordion header bg color
+$acc_head_padding:            10px;
+$acc_content_color:           $color_white; //accordion content bg color
+$acc_content_padding:         20px;
 
 
 // ---------------------------------------- //
 //Block
-$block_move:                30px;
-$loading_size:              50px;
+$block_move:                  50px;
+$block_b_title_move:          50px;
+$block_title_move:            50px;
+
+$block_move_in:               25px;
+$block_b_title_move_in:       25px;
+$block_title_move_in:         25px;
+
+$block_border_position:       bottom;
+$block_border_width:          1px;
+$block_border_style:          solid;
+$block_border_color:          $color_mine_shaft;
+
+$block_small:                 2; //Divide by this number
+$block_large:                 2; //Multiply by this number
 
 
 // ---------------------------------------- //
-//Pagination
-$pag_item_move:             3px;
-$pag_item_txt_size:         $p;
-$pag_item_bg:               $color_mercury;  //pagination item bg color
-$pag_item_text:             $color_mine_shaft; //pagination item text color
-$pag_item_current_bg:       $color_flush_mahogany;  //pagination current item bg color
-$pag_item_current_text:     $color_white; //pagination current item text color
-$pag_item_padding_v:        10px;
-$pag_item_padding_h:        15px;
-
-
-// ---------------------------------------- //
-//Tooltip
-$tooltip_arrow:             10px;   //Tooltip arrow size
-$tooltip_border:            $color_mercury; //Tooltip background color
-$tooltip_bg:                $color_white; //Tooltip background color
-$tooltip_txt:               $color_mine_shaft; //Tooltip text color
-$tooltip_content_shadow:    $color_mine_shaft; //Tooltip content shadow color
-$tip_padding:               10px;
-$tip_max_width:             300px;
-
-
-// ---------------------------------------- //
-//Modal
-$modal_max_width:           600px; //Max width of modal window
-$modal_overlay_opacity:     0.7; //Overlay opacity
-$modal_overlay_bg_color:    $color_mine_shaft; //Overlay Background color
-$modal_bg_color:            $color_white; //Main Content Background color
-$modal_close_position:      10px;
-$modal_close_size:          20px;
-$modal_slide_top_move:      15px;
-$modal_content_padding:     35px; //modal content padding
-$modal_head_move:           30px;
-$modal_title_move:          10px;
-$modal_footer_move:         30px;
+//Breadcrumbs
+$crumb_separator_size:        14px;
+$crumb_separator_padding:     10px;
 
 
 // ---------------------------------------- //
 //Divider and spacer
-$divider_border_size:       1px;
-$divider_border_style:      solid;
-$divider_border_color:      $color_dove_gray_light; //divider border bottom color
+$divider_move:                50px;
+$divider_border_position:     bottom;
+$divider_border_width:        1px;
+$divider_border_style:        solid;
+$divider_border_color:        $color_dove_gray_light; //divider border bottom color
+
+$divider_small:               2; //Divide by this number
+$divider_large:               2; //Multiply by this number
+
+
+$spacer_height:               50px;
+$spacer_small:                2; //Divide by this number
+$spacer_large:                2; //Multiply by this number
+
+
+// ---------------------------------------- //
+//Modal
+$modal_max_width:             600px; //Max width of modal window
+$modal_overlay_opacity:       0.7; //Overlay opacity
+$modal_overlay_bg_color:      $color_mine_shaft; //Overlay Background color
+$modal_bg_color:              $color_white; //Main Content Background color
+$modal_close_position:        10px;
+$modal_close_size:            20px;
+$modal_slide_top_move:        15px;
+$modal_content_padding:       35px; //modal content padding
+$modal_head_move:             30px;
+$modal_title_move:            10px;
+$modal_footer_move:           30px;
+
+
+// ---------------------------------------- //
+//Messages
+$msg_move:                    30px;
+$msg_item_padding:            10px;
+$msg_item_move:               20px;
+$msg_icon_size:               30px; //Messages icon size
+$msg_txt_color:               $color_mine_shaft; // Messages text color
+$msg_txt_size:                $p;
+
+
+// ---------------------------------------- //
+//Other
+$loading_size:                50px;
+
+
+// ---------------------------------------- //
+//Pagination
+$pag_item_move:               3px;
+$pag_item_txt_size:           $p;
+$pag_item_bg:                 $color_mercury;  //pagination item bg color
+$pag_item_text:               $color_mine_shaft; //pagination item text color
+$pag_item_current_bg:         $color_flush_mahogany;  //pagination current item bg color
+$pag_item_current_text:       $color_white; //pagination current item text color
+$pag_item_padding_v:          10px;
+$pag_item_padding_h:          15px;
+
+
+// ---------------------------------------- //
+//Table
+$table_padding_v:             5px;
+$table_padding_h:             10px;
+
+$table_head_border:           $color_flush_mahogany;  //table head border bottom color
+$table_head_padding_v:        5px;
+$table_head_padding_h:        10px;
+
+$table_body_border:           $color_mercury; //table body border bottom color
+$table_body_padding_v:        5px;
+$table_body_padding_h:        10px;
+
+$table_foot_border:           $table_head_border; //table footer border bottom color
+$table_foot_padding_v:        5px;
+$table_foot_padding_h:        10px;
+
+
+$status_item_padding_v:       2px;
+$status_item_padding_h:       5px;
+
+
+// ---------------------------------------- //
+//Tabs
+$tabs_head_color:             $color_mercury;  //tabs head background color
+$tabs_head_bg_color_active:   $color_white; //tabs head active background color
+$tabs_head_color_active:      $color_mine_shaft; //tabs head active color
+$tabs_head_item_padding_v:    10px;
+$tabs_head_item_padding_h:    0;
+$tabs_content_padding_v:      20px;
+$tabs_content_padding_h:      0;
+
+
+// ---------------------------------------- //
+//Tooltip
+$tooltip_arrow:               10px;   //Tooltip arrow size
+$tooltip_border:              $color_mercury; //Tooltip background color
+$tooltip_bg:                  $color_white; //Tooltip background color
+$tooltip_txt:                 $color_mine_shaft; //Tooltip text color
+$tooltip_content_shadow:      $color_mine_shaft; //Tooltip content shadow color
+$tip_padding:                 10px;
+$tip_max_width:               300px;
+
+

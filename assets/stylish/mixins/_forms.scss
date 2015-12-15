@@ -4,12 +4,31 @@
 
 // Placeholder mixin
 @mixin placeholder {
-  input::-webkit-input-placeholder {@content}
-  input:-moz-placeholder           {@content}
-  input::-moz-placeholder          {@content}
-  input:-ms-input-placeholder      {@content}
-  input.placeholder                {@content}
-  input.placeholderjs              {@content}
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+  .placeholder                {@content}
+  .placeholderjs              {@content}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@mixin form_fields{
+  input[type=text],
+  input[type=tel],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=url],
+  input[type=datetime],
+  input[type=search],
+  textarea,
+  select{
+    @content
+  }
 }
 
 
@@ -17,23 +36,45 @@
 
 
 //Checkbox size
-@mixin checkbox_size($size:$checkbox_height, $size_icon:$checkbox_icon_size){
-  min-height:$size;
+@mixin checkbox_size($size:$checkbox_height, $size_icon:$checkbox_icon_size, $rem:false){
+  @if $rem{ // if using rem
 
-  //Firefox min-height bug fix
-  @-moz-document url-prefix() {
-    height: $size;
-  }
+    @include rem(min-height, $size);
 
-  label {
-    padding-left:$size+15;
-    &.empty{ padding-left:0; width: $size }
-  }
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      @include rem(height, $size);
+    }
 
-  // icon
-  .checkbox_icon {
-    width: $size;height: $size; margin-top: -$size/2; line-height: $size_icon;
-    &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon;}
+    label {
+      @include rem(padding-left, $size+15);
+      &.empty{ padding-left:0; @include rem(width, $size) }
+    }
+
+    // icon
+    .checkbox_icon {
+      @include rem(width, $size);@include rem(height, $size); @include rem(margin-top, -$size/2); @include rem(line-height, $size_icon);
+      &:before{@extend .sy_check:before; @include rem(font-size, $size_icon); @include rem(margin, (-$size_icon/2) 0 0 (-$size_icon/2)); @include rem(width, $size_icon); @include rem(height, $size_icon);}
+    }
+
+  } @else { // if not using rem
+    min-height:$size;
+
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      height: $size;
+    }
+
+    label {
+      padding-left:$size+15;
+      &.empty{ padding-left:0; width: $size }
+    }
+
+    // icon
+    .checkbox_icon {
+      width: $size;height: $size; margin-top: -$size/2; line-height: $size_icon;
+      &:before{@extend .sy_check:before; font-size: $size_icon; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon;}
+    }
   }
 }
 
@@ -42,24 +83,46 @@
 
 
 //Radio size
-@mixin radio_size($size:$radio_height, $size_icon:$radio_icon_size) {
-  min-height:$size;
+@mixin radio_size($size:$radio_height, $size_icon:$radio_icon_size, $rem:false) {
+  @if $rem{ // if using rem
+    @include rem(min-height, $size);
 
-  //Firefox min-height bug fix
-  @-moz-document url-prefix() {
-    height: $size;
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      @include rem(height, $size);
+    }
+
+    label {
+      @include rem(padding-left, $size+15);
+      &.empty{ padding-left:0; @include rem(width, $size) }
+    }
+
+    // icon
+    .radio_icon{
+      @include rem(width, $size);@include rem(height, $size); @include rem(margin-top, -$size/2); @include rem(line-height, $size_icon);
+      &:before{content: ""; @include rem(margin, (-$size_icon/2) 0 0 (-$size_icon/2)); @include rem(width, $size_icon); @include rem(height, $size_icon);}
+    }
+
+  }@else{  // if not using rem
+    min-height:$size;
+
+    //Firefox min-height bug fix
+    @-moz-document url-prefix() {
+      height: $size;
+    }
+
+    label{
+      padding-left: $size+15;
+      &.empty{ padding-left:0; width: $size }
+    }
+
+    // icon
+    .radio_icon{
+      width: $size; height: $size; margin-top: -$size/2; line-height: $size_icon;
+      &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; }
+    }
   }
 
-  label{
-    padding-left: $size+15;
-    &.empty{ padding-left:0; width: $size }
-  }
-
-  // icon
-  .radio_icon{
-    width: $size; height: $size; margin-top: -$size/2; line-height: $size_icon;
-    &:before{ content: ""; margin: (-$size_icon/2) 0 0 (-$size_icon/2); width: $size_icon; height: $size_icon; }
-  }
 }
 
 
@@ -67,11 +130,19 @@
 
 
 //Select size
-@mixin select_size($height: $input_height, $icon_size:$select_icon_size){
-  @if $height   {height:$height;}
-  @if $icon_size{
-    &:after{ @include font_style($icon_size); margin-top: -($icon_size/2)}
+@mixin select_size($height: $input_height, $icon_size:$select_icon_size, $rem:false){
+  @if $rem{
+    @if $height   {@include rem(height,$height);}
+    @if $icon_size{
+      &:after{ @include font_style($icon_size); @include rem(margin-top, -($icon_size/2));}
+    }
+  }@else{
+    @if $height   {height:$height;}
+    @if $icon_size{
+      &:after{ @include font_style($icon_size, $rem:false); margin-top: -($icon_size/2);}
+    }
   }
+
 }
 
 
@@ -92,10 +163,18 @@
 }
 
 
-@mixin input_size( $height: false, $text_size: false, $line_height:false, $padding_vertical:false, $padding_horizontal:false ){
-  @if $height             { height: $height; }
-  @if $text_size          { @include rem(font-size, $text_size); }
-  @if $line_height        { @include rem(line-height, $line_height); }
-  @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
-  @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+@mixin input_size( $height: false, $text_size: false, $line_height:false, $padding_vertical:false, $padding_horizontal:false, $rem: false ){
+  @if $rem{
+    @if $height             { @include rem(height, $height); }
+    @if $text_size          { @include rem(font-size, $text_size); }
+    @if $line_height        { @include rem(line-height, $line_height); }
+    @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
+    @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+  }@else{
+    @if $height             { height: $height; }
+    @if $text_size          { font-size: $text_size; }
+    @if $line_height        { line-height: $line_height; }
+    @if $padding_vertical   { padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
+    @if $padding_horizontal { padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
+  }
 }

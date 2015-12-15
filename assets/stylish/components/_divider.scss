@@ -4,12 +4,13 @@
 
 // Divider
 .divider{
-  border-bottom: $divider_border_size $divider_border_style $divider_border_color; width: 100%; display: block;
-  @include move();
+  width: 100%; display: block; margin-right: auto; margin-left: auto;
+  @include move($divider_move, $divider_small, $divider_large );
+  @include border($divider_border_position, $divider_border_width, $divider_border_style, $divider_border_color);
 }
 
 
 //Spacer
 .spacer{
-  @include move();
+  @include height($spacer_height, $spacer_small, $spacer_large);
 }

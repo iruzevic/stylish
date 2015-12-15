@@ -4,17 +4,23 @@
 
 /* Container size for responsive */
 @mixin container_size($max_width:$page_max_width){
-  width: 100%; max-width: $max_width;
+   max-width: $max_width;
 }
 
 /* Default container style */
-@mixin container_padding($container_gutter:$gutter/2){
+@mixin container_padding($container_gutter:false){
   padding-left: $container_gutter; padding-right: $container_gutter;
 }
 
 //Generate different containers for different type of grid gutters
-@mixin container_generate($container_name, $container_gutter){
-  .container_#{$container_name}{
-    @include container_padding($container_gutter);
+@mixin container_generate($container_name:false, $container_gutter:false){
+  @if $container_name == fluid{
+    .container{
+      @include container_padding($container_gutter);
+    }
+  }@else{
+    .container_#{$container_name}{
+      @include container_padding($container_gutter);
+    }
   }
 }

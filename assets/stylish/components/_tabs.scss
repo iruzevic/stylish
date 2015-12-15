@@ -7,10 +7,10 @@
   //Tabs Head
   .t_head{
     background-color: $tabs_head_color;
-    li{
+    >li{
       cursor: pointer;@include transition-property(background-color);@include transition-duration(.3s); padding: $tabs_head_item_padding_v $tabs_head_item_padding_h; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       &.active{
-        color: $tabs_head_active_color;  background-color:$tabs_head_active_bg_color;
+        color: $tabs_head_color_active;  background-color:$tabs_head_bg_color_active;
       }
     }
   }
