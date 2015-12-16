@@ -150,7 +150,7 @@
 
 
 //Default input style
-@mixin input_style( $color:false, $background_color:false, $border_width: false, $border_style:false, $border_color: false, $margin: false, $width:false, $font_family:false, $radius: false){
+@mixin input_style( $color:false, $background_color:false, $border_width: false, $border_style:false, $border_color: false, $margin: false, $width:false, $font_family:false, $radius: false, $weight: false){
   @if $color            {color:$color;}
   @if $background_color {background-color:$background_color;}
   @if $border_width     {border-width:$border_width;}
@@ -160,6 +160,7 @@
   @if $width            {width:$width;}
   @if $font_family      {font-family:$font_family;}
   @if $radius           {@include border-radius($radius);}
+  @if $weight           {font-weight: $weight}
 }
 
 

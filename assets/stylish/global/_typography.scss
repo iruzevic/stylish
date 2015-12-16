@@ -12,7 +12,7 @@
 
 /* Setup Global Typography */
 html {font-size: $body_base_size;}
-body {color:$body_txt_color; background:$body_bg_color; font-family:$body_font_family; @include font-smoothing();}
+body {color:$body_txt_color; background:$body_bg_color; font-family:$body_font_family; font-weight: $body_font_weight; @include font-smoothing();}
 h1   {@include font_style($h1, $h1lh )}
 h2   {@include font_style($h2, $h2lh )}
 h3   {@include font_style($h3, $h3lh )}

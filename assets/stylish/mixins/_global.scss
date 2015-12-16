@@ -3,7 +3,7 @@
 
 
 //Margin
-@mixin move($margin_top:false, $margin_bottom:false, $small:false, $large:false){
+@mixin move($margin_bottom:false, $margin_top:false, $small:false, $large:false){
 
   //Margin top
   @if $margin_top{
@@ -40,7 +40,7 @@
 
 
 //Padding
-@mixin move_in($padding_top:false, $padding_bottom:false, $small:false, $large:false){
+@mixin move_in($padding_bottom:false, $padding_top:false, $small:false, $large:false){
   //Padding top
   @if $padding_top{
 

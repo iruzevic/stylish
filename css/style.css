@@ -1500,7 +1500,9 @@ table.word_break td {
 /* line 10, ../assets/stylish/global/_icons.scss */
 [class^="sy_"], [class*=" sy_"], .sy_icon, .select:after, .checkbox .checkbox_icon,
 .checkbox .radio_icon, .radio .checkbox_icon,
-.radio .radio_icon, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li:before, .msg > li:before, .loader.active:after,
+.radio .radio_icon, form .validation-advice:before,
+form .error:before, .form .validation-advice:before,
+.form .error:before, .messages > li:before, .msg > li:before, .loader.active:after,
 .loading.active:after, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
   font-family: "stylish";
   speak: none;
@@ -1646,7 +1648,9 @@ table.word_break td {
 }
 
 /* line 102, ../assets/stylish/global/_icons.scss */
-.sy_remove_round:before, form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before, .messages > li.error-msg:before, .messages > li.error_msg:before, .msg > li.error-msg:before, .msg > li.error_msg:before {
+.sy_remove_round:before, form .validation-advice:before,
+form .error:before, .form .validation-advice:before,
+.form .error:before, .messages > li.error-msg:before, .messages > li.error_msg:before, .msg > li.error-msg:before, .msg > li.error_msg:before {
   content: "\e60c";
 }
 
@@ -1670,6 +1674,7 @@ body {
   color: #272727;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2045,6 +2050,7 @@ select {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  font-weight: normal;
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
@@ -2252,14 +2258,14 @@ textarea {
   width: 42px;
   height: 42px;
   margin-top: -21px;
-  line-height: 34px;
+  line-height: 28px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
 .checkbox .checkbox_icon:before {
-  font-size: 34px;
-  margin: -17px 0 0 -17px;
-  width: 34px;
-  height: 34px;
+  font-size: 28px;
+  margin: -14px 0 0 -14px;
+  width: 28px;
+  height: 28px;
 }
 /* line 76, ../assets/stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
@@ -2306,14 +2312,14 @@ textarea {
   width: 42px;
   height: 42px;
   margin-top: -21px;
-  line-height: 34px;
+  line-height: 28px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
 .radio .radio_icon:before {
   content: "";
-  margin: -17px 0 0 -17px;
-  width: 34px;
-  height: 34px;
+  margin: -14px 0 0 -14px;
+  width: 28px;
+  height: 28px;
 }
 /* line 101, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon {
@@ -2356,6 +2362,78 @@ textarea {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Setup forms layout */
+/* line 135, ../assets/stylish/global/_forms.scss */
+form .field, .form .field {
+  margin-bottom: 20px;
+  position: relative;
+  list-style: none;
+}
+/* line 137, ../assets/stylish/global/_forms.scss */
+form .field.large, .form .field.large {
+  margin-bottom: 40px;
+}
+/* line 138, ../assets/stylish/global/_forms.scss */
+form .field.small, .form .field.small {
+  margin-bottom: 10px;
+}
+/* line 139, ../assets/stylish/global/_forms.scss */
+form .field.last, .form .field.last {
+  margin-bottom: 0;
+}
+/* line 143, ../assets/stylish/global/_forms.scss */
+form .field[data-required="true"] label:after,
+form .field label.required:after, .form .field[data-required="true"] label:after,
+.form .field label.required:after {
+  content: "*";
+  font-size: 14px;
+  font-size: 0.77778rem;
+  padding-left: 3px;
+}
+/* line 146, ../assets/stylish/global/_forms.scss */
+form .field label, .form .field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-size: 1rem;
+}
+/* line 150, ../assets/stylish/global/_forms.scss */
+form .field label.inline, .form .field label.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+/* line 157, ../assets/stylish/global/_forms.scss */
+form .field .checkbox label, form .field.checkbox label,
+form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
+.form .field .radio label, .form .field.radio label {
+  margin: 0;
+  display: table-cell;
+  line-height: 41px;
+  line-height: 2.27778rem;
+}
+/* line 163, ../assets/stylish/global/_forms.scss */
+form .label_correction, .form .label_correction {
+  padding-top: 5px;
+}
+/* line 166, ../assets/stylish/global/_forms.scss */
+form .validation-advice,
+form .error, .form .validation-advice,
+.form .error {
+  color: #cd3a3a;
+  font-size: 14px;
+  font-size: 0.77778rem;
+  margin-top: 10px;
+}
+/* line 169, ../assets/stylish/global/_forms.scss */
+form .validation-advice:before,
+form .error:before, .form .validation-advice:before,
+.form .error:before {
+  padding-right: 10px;
+  vertical-align: bottom;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 20, ../assets/stylish/mixins/_forms.scss */
 .input_big input[type=text],
 .input_big input[type=tel],
@@ -2375,7 +2453,7 @@ textarea {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 138, ../assets/stylish/global/_forms.scss */
+/* line 182, ../assets/stylish/global/_forms.scss */
 .input_big .select {
   height: 50px;
 }
@@ -2384,12 +2462,12 @@ textarea {
   font-size: 22px;
   margin-top: -11px;
 }
-/* line 139, ../assets/stylish/global/_forms.scss */
+/* line 183, ../assets/stylish/global/_forms.scss */
 .input_big .checkbox {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 139, ../assets/stylish/global/_forms.scss */
+  /* line 183, ../assets/stylish/global/_forms.scss */
   .input_big .checkbox {
     height: 50px;
   }
@@ -2408,21 +2486,21 @@ textarea {
   width: 50px;
   height: 50px;
   margin-top: -25px;
-  line-height: 42px;
+  line-height: 36px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
 .input_big .checkbox .checkbox_icon:before {
-  font-size: 42px;
-  margin: -21px 0 0 -21px;
-  width: 42px;
-  height: 42px;
+  font-size: 36px;
+  margin: -18px 0 0 -18px;
+  width: 36px;
+  height: 36px;
 }
-/* line 140, ../assets/stylish/global/_forms.scss */
+/* line 184, ../assets/stylish/global/_forms.scss */
 .input_big .radio {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 140, ../assets/stylish/global/_forms.scss */
+  /* line 184, ../assets/stylish/global/_forms.scss */
   .input_big .radio {
     height: 50px;
   }
@@ -2441,14 +2519,14 @@ textarea {
   width: 50px;
   height: 50px;
   margin-top: -25px;
-  line-height: 42px;
+  line-height: 36px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
 .input_big .radio .radio_icon:before {
   content: "";
-  margin: -21px 0 0 -21px;
-  width: 42px;
-  height: 42px;
+  margin: -18px 0 0 -18px;
+  width: 36px;
+  height: 36px;
 }
 
 /* line 20, ../assets/stylish/mixins/_forms.scss */
@@ -2470,7 +2548,7 @@ textarea {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 148, ../assets/stylish/global/_forms.scss */
+/* line 192, ../assets/stylish/global/_forms.scss */
 .input_small .select {
   height: 32px;
 }
@@ -2479,12 +2557,12 @@ textarea {
   font-size: 15px;
   margin-top: -7.5px;
 }
-/* line 149, ../assets/stylish/global/_forms.scss */
+/* line 193, ../assets/stylish/global/_forms.scss */
 .input_small .checkbox {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 149, ../assets/stylish/global/_forms.scss */
+  /* line 193, ../assets/stylish/global/_forms.scss */
   .input_small .checkbox {
     height: 32px;
   }
@@ -2503,21 +2581,21 @@ textarea {
   width: 32px;
   height: 32px;
   margin-top: -16px;
-  line-height: 24px;
+  line-height: 18px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
 .input_small .checkbox .checkbox_icon:before {
-  font-size: 24px;
-  margin: -12px 0 0 -12px;
-  width: 24px;
-  height: 24px;
+  font-size: 18px;
+  margin: -9px 0 0 -9px;
+  width: 18px;
+  height: 18px;
 }
-/* line 150, ../assets/stylish/global/_forms.scss */
+/* line 194, ../assets/stylish/global/_forms.scss */
 .input_small .radio {
   min-height: 32px;
 }
 @-moz-document url-prefix() {
-  /* line 150, ../assets/stylish/global/_forms.scss */
+  /* line 194, ../assets/stylish/global/_forms.scss */
   .input_small .radio {
     height: 32px;
   }
@@ -2536,82 +2614,14 @@ textarea {
   width: 32px;
   height: 32px;
   margin-top: -16px;
-  line-height: 24px;
+  line-height: 18px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
 .input_small .radio .radio_icon:before {
   content: "";
-  margin: -12px 0 0 -12px;
-  width: 24px;
-  height: 24px;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup forms layout */
-/* line 163, ../assets/stylish/global/_forms.scss */
-form .field, .form .field {
-  margin-bottom: 20px;
-  position: relative;
-  list-style: none;
-}
-/* line 165, ../assets/stylish/global/_forms.scss */
-form .field.large, .form .field.large {
-  margin-bottom: 40px;
-}
-/* line 166, ../assets/stylish/global/_forms.scss */
-form .field.small, .form .field.small {
-  margin-bottom: 10px;
-}
-/* line 167, ../assets/stylish/global/_forms.scss */
-form .field.last, .form .field.last {
-  margin-bottom: 0;
-}
-/* line 171, ../assets/stylish/global/_forms.scss */
-form .field[data-required="true"] label:after,
-form .field label.required:after, .form .field[data-required="true"] label:after,
-.form .field label.required:after {
-  content: "*";
-  font-size: 14px;
-  font-size: 0.77778rem;
-  padding-left: 3px;
-}
-/* line 174, ../assets/stylish/global/_forms.scss */
-form .field label, .form .field label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-size: 1rem;
-}
-/* line 178, ../assets/stylish/global/_forms.scss */
-form .field label.inline, .form .field label.inline {
-  display: inline-block;
-  margin-bottom: 0;
-  padding-top: 5px;
-}
-/* line 185, ../assets/stylish/global/_forms.scss */
-form .field .checkbox label, form .field.checkbox label,
-form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
-.form .field .radio label, .form .field.radio label {
-  margin: 0;
-  display: table-cell;
-  line-height: 41px;
-  line-height: 2.27778rem;
-}
-/* line 191, ../assets/stylish/global/_forms.scss */
-form .label_correction, .form .label_correction {
-  padding-top: 5px;
-}
-/* line 194, ../assets/stylish/global/_forms.scss */
-form .validation-advice, form .error, .form .validation-advice, .form .error {
-  color: #cd3a3a;
-  font-size: 14px;
-  font-size: 0.77778rem;
-  margin-top: 10px;
-}
-/* line 196, ../assets/stylish/global/_forms.scss */
-form .validation-advice:before, form .error:before, .form .validation-advice:before, .form .error:before {
-  padding-right: 10px;
-  vertical-align: bottom;
+  margin: -9px 0 0 -9px;
+  width: 18px;
+  height: 18px;
 }
 
 /* BUTTONS */
@@ -2975,12 +2985,12 @@ input[type=reset].btn_mine_shaft.current {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 50px;
-  margin-bottom: 2;
+  margin-top: 2;
+  margin-bottom: 50px;
 }
 /* line 13, ../assets/stylish/mixins/_global.scss */
 .divider.move_small_top {
-  margin-top: 25px;
+  margin-top: 1;
 }
 /* line 18, ../assets/stylish/mixins/_global.scss */
 .divider.move_clear_top, .divider.move_clean_top {
@@ -2988,7 +2998,7 @@ input[type=reset].btn_mine_shaft.current {
 }
 /* line 28, ../assets/stylish/mixins/_global.scss */
 .divider.move_small_bottom {
-  margin-bottom: 1;
+  margin-bottom: 25px;
 }
 /* line 33, ../assets/stylish/mixins/_global.scss */
 .divider.move_clear_bottom, .divider.move_clean_bottom {
@@ -3442,7 +3452,7 @@ html.modal_active body {
 /* line 10, ../assets/stylish/components/_other.scss */
 .loader.active.bg_color,
 .loading.active.bg_color {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(39, 39, 39, 0.4);
 }
 /* line 11, ../assets/stylish/components/_other.scss */
 .loader.active:after,
@@ -3454,6 +3464,19 @@ html.modal_active body {
   margin-left: -25px;
   font-size: 50px;
   color: #272727;
+}
+
+/* line 18, ../assets/stylish/components/_other.scss */
+.overlay.active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 20, ../assets/stylish/components/_other.scss */
+.overlay.active.bg_color {
+  background-color: rgba(39, 39, 39, 0.4);
 }
 
 /* PAGINATION */
