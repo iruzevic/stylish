@@ -97,7 +97,7 @@
   @if $cursor           {cursor:$cursor;}
 
   @if $color_hover {
-    &:hover, &.active, &.current{  color: $color_hover;  }
+    &:hover, &.active, &.current, &:focus{  color: $color_hover;  }
   }
   &.disabled{ color: $color; }
 }
