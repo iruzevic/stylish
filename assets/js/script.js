@@ -8,7 +8,9 @@ jQuery(function(){
     select();
     modal();
     tooltip();
+    //fields_focus();
     disable();
+    disable_link();
 
     scrollTo_click('.scroll_to', 100);
     //sticky($id);
@@ -55,8 +57,10 @@ jQuery(window).resize(function(){
 //Checkbox script
 function checkbox(){
 
+    var $input = jQuery('input[type=checkbox]');
+
     //On page load set
-    jQuery('input[type=checkbox]').each(function(){
+    $input.each(function(){
 
         //Check if there is checked class in input
         if(jQuery(this).is(':checked')){
@@ -85,7 +89,7 @@ function checkbox(){
     });
 
     //On space click action
-    jQuery('input[type="checkbox"]').keypress(function(e) {
+    $input.keypress(function(e) {
         if (e.keyCode == 0 || e.keyCode == 32) {
             var $id = jQuery(this).attr('id');
             checkbox_change($id);
@@ -96,6 +100,16 @@ function checkbox(){
     jQuery('.checkbox label a').on('click',function(e){
         e.stopPropagation();
     });
+
+    //On focus add class to display focus style
+    $input.bind('focus', function(){
+        jQuery(this).closest('.checkbox').addClass('focus');
+    });
+
+    //On blur remove class to display focus style
+    $input.bind('blur', function(){
+        jQuery(this).closest('.checkbox').removeClass('focus');
+    })
 }
 
 //Checkbox change state
@@ -141,8 +155,10 @@ function checkbox_unset($id){
 //Radio script
 function radio(id){
 
+    var $input = jQuery('input[type=radio]');
+
     //On page load set
-    jQuery('input[type=radio]').each(function(){
+    $input.each(function(){
 
         //Check if there is checked class in input
         if(jQuery(this).is(':checked')){
@@ -171,8 +187,19 @@ function radio(id){
     });
 
     //On space click action
-    jQuery('input[type="radio"]').keypress(function(e) {
+    $input.keypress(function(e) {
         if (e.keyCode == 0 || e.keyCode == 32) {
+            var $id = jQuery(this).attr('id');
+            radio_change($id);
+
+            console.log(e.keyCode);
+            return false;
+        }
+    });
+
+    //On left, right, up, down change radio state
+    $input.keyup(function(e) {
+        if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
             var $id = jQuery(this).attr('id');
             radio_change($id);
         }
@@ -182,6 +209,16 @@ function radio(id){
     jQuery('.radio label a').on('click',function(e){
         e.stopPropagation();
     });
+
+    //On focus add class to display focus style
+    $input.bind('focus', function(){
+        jQuery(this).closest('.radio').addClass('focus');
+    });
+
+    //On blur remove class to display focus style
+    $input.bind('blur', function(){
+        jQuery(this).closest('.radio').removeClass('focus');
+    })
 }
 
 //Radio change state
@@ -239,8 +276,10 @@ function select($id){
         $id ='.select';
     }
 
+    var $input = jQuery('select');
+
     //On init
-    jQuery('select').each(function(){
+    $input.each(function(){
         var $this = jQuery(this),
             $style = $this.attr('data-style'),
             $select = $this.closest($id).outerWidth()+50;
@@ -259,6 +298,16 @@ function select($id){
             }
         });
     });
+
+    //On focus add class to display focus style
+    $input.bind('focus', function(){
+        jQuery(this).closest($id).addClass('focus');
+    });
+
+    //On blur remove class to display focus style
+    $input.bind('blur', function(){
+        jQuery(this).closest($id).removeClass('focus');
+    })
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -717,7 +766,16 @@ function scrollTo_click($id, $offset){
     }
 
     jQuery($id).click(function(e){
-        var $id_scroll = jQuery(this).attr('data-scroll-to');
+        var $self = jQuery(this),
+            $id_scroll,
+            $href_scroll = $self.attr('href'),
+            $attr_scroll = $self.attr('data-scroll-to');
+
+        if(typeof $attr_scroll !== 'undefined'){
+            $id_scroll = $attr_scroll;
+        }else{
+            $id_scroll = $href_scroll;
+        }
 
         if(typeof $id_scroll !== 'undefined' && $id_scroll.length){
             e.preventDefault();
@@ -744,6 +802,20 @@ function scrollTo($id, $offset){
 
 /////////////////////////////////////////////////////////////////////////////////
 
+//On focus add class to field
+function fields_focus(){
+    var $selector = jQuery('input, select, textarea');
+    $selector.bind('focus', function(){
+        jQuery(this).closest('.field').addClass('focus');
+    });
+
+    $selector.bind('blur', function(){
+        jQuery(this).closest('.field').removeClass('focus');
+    })
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
 //Create escape function for selectors (for magento)
 function escape_string($str) {
     return $str.replace(/([;&,\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
@@ -754,6 +826,13 @@ function disable(){
     jQuery('a.disabled').on('click', function(e){
         e.preventDefault();
         jQuery(this).off();
+    });
+}
+
+//Disable empty links
+function disable_link(){
+    jQuery('a[href="#"]').on('click', function(e){
+        e.preventDefault();
     });
 }
 

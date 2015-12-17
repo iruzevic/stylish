@@ -25,3 +25,17 @@
 }
 
 
+//Wrapper to correct for block margin
+.block_wrap
+&.block_wrapper{
+  @include move(-$block_move_bottom, -$block_move_top, $block_small, $block_large);
+}
+
+
+//Button set to move btn on responsive
+.btn_set{
+  margin-bottom: -($btn_set_btn_move); overflow: hidden;
+  .btn,
+  .btn_link{ margin-bottom:$btn_set_btn_move }
+  .btn_link{ display: block}
+}

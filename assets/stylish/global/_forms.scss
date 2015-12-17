@@ -12,8 +12,12 @@
   @include input_size($input_height, $input_txt_size, $input_line_height, $input_padding_v, $input_padding_h);
 
   &.auto_width{ width: auto}
+
+  //Focus state
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
-  &:disabled{ }
+
+  //Disabled state
+  &:disabled, .disabled{ }
 }
 textarea{ height: 150px; }
 
@@ -38,6 +42,11 @@ textarea{ height: 150px; }
     &:focus{outline: none;}
   }
 
+  //Focus state
+  &.focus{
+    @include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
+  }
+
 }
 
 
@@ -59,6 +68,14 @@ textarea{ height: 150px; }
     text-align:center; border: 1px solid; @extend .sy_icon; position: absolute; left: 0; top: 50%;
 
     &:before{ position: absolute; left: 50%; top: 50%; }
+  }
+
+  //Focus state
+  &.focus{
+    .checkbox_icon,
+    .radio_icon{
+      @include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
+    }
   }
 
   //move real input out from viewpoint, don't use display:none because of IE7-8
@@ -117,6 +134,15 @@ textarea{ height: 150px; }
 }
 
 
+//Show for debug
+html.show_input{
+  .checkbox, .radio{
+    input[type=checkbox],
+    input[type=radio]{ left: -20px; @include opacity(1); z-index: auto; }
+  }
+}
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -157,7 +183,6 @@ form, .form{
       label{ margin:0; display: table-cell;@include rem(line-height, $p+$plh) }
     }
 
-
   }
 
   .label_correction{padding-top: 5px}
@@ -182,6 +207,10 @@ form, .form{
   .select   { @include select_size($input_height_large, $select_icon_size_large); }
   .checkbox { @include checkbox_size($checkbox_height_large, $checkbox_icon_size_large); }
   .radio    { @include radio_size($radio_height_large, $radio_icon_size_large); }
+
+  //validation error (validation-advice for magento)
+  .validation-advice,
+  .error{}
 }
 
 //Input small size
@@ -192,4 +221,8 @@ form, .form{
   .select   { @include select_size($input_height_small, $select_icon_size_small); }
   .checkbox { @include checkbox_size($checkbox_height_small, $checkbox_icon_size_small);}
   .radio    { @include radio_size($radio_height_small, $radio_icon_size_small);}
+
+  //validation error (validation-advice for magento)
+  .validation-advice,
+  .error{}
 }

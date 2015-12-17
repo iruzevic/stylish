@@ -22,6 +22,9 @@ input[type=reset]{
   //Small size
   &.btn_small, &[data-size="small"]{ @include btn_size($btn_height_small, $btn_padding_v_small, $btn_padding_h_small, $btn_txt_size_small, $btn_line_height_small)}
 
+  //Focus state
+  &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
+
   //Set rounded buttons to strait
   &.no_radius{@include border-radius(0);}
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
     <title>Stylish Framework</title>
     <meta charset="UTF-8" />
