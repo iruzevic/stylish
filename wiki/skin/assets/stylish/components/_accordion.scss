@@ -1,0 +1,17 @@
+/* ACCORDION */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.accordion{
+  .a_head{
+    background-color: $acc_head_color; padding: $acc_head_padding; cursor: pointer;
+    .a_state{ float: right}
+    &.active{
+      .a_state{@include rotate(180deg);}
+    }
+  }
+  .a_content{
+    display: none; background-color: $acc_content_color; padding: $acc_content_padding;
+    &.active{ display: block;@include animation(fadeIn .5s);}
+  }
+}

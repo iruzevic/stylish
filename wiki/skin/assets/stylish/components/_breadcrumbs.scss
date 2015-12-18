@@ -1,0 +1,11 @@
+/* BREADCRUMBS */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.breadcrumbs{
+  >li{
+   >a:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:$crumb_separator_size; vertical-align:baseline;padding:0 $crumb_separator_padding}
+
+    &:last-child >a:after{ content: ""; padding:0}
+  }
+}

@@ -1,0 +1,61 @@
+/* SIDEBAR */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+#sidebar{
+  width: $sidebar_width; height: 100%; z-index: $sidebar_z_index; overflow-x: hidden; background-color:$color_tundora; position: fixed; left: 0; top: 0; padding-top: $header_height; @include transition-duration(.3s); @include transition-property(width);
+
+  .navigation{
+    width: $sidebar_width;
+    list-style: none;
+    >li{
+      display: block; position:relative;
+      &[data-has-drop="true"] > a:after{ @extend .sy_icon; @extend .sy_arrow_down:before; position: absolute; right: 30px; top:50%; margin-top:-9px; color:$color_white;  }
+
+      >a{
+        position: relative; border-bottom:1px solid $color_chicago; padding: 12px 50px 12px $gutter/2; display: block; font-weight: 300; @include link_color($color_white, $color_sushi); @include font_style($medium, $mediumlh, 500);@extend .nobr;
+        i{ margin-right:10px; vertical-align: middle; font-size: 24px; @include transition-duration(.3s); @include transition-property(margin-right);}
+        &:hover{ background-color: $color_mine_shaft; }
+      }
+
+      //Drop down menu
+      ul.drop{
+        background-color:$color_mine_shaft; padding: 20px 0; position: relative; display: none; border-bottom:1px solid $color_chicago;
+        &:after,
+        &:before{
+          content: ""; position: absolute; top:-1px; left:($gutter/2)-6;  width: 0; height: 0; border:12px solid transparent; border-top-color:$color_tundora;
+        }
+        &:before{ border-top-color: $color_chicago; top:0;}
+        >li{
+          >a{ display: block; @include font_style($small, $smalllh, 300); padding: 7px $gutter/2;@include link_color($color_white, lighten($link_color, 10%)); }
+        }
+      }
+
+      //Open/active state
+      &.active{
+        >a{
+          color:$link_color;
+          &:after{@include rotate(180deg)
+          };
+        }
+        ul.drop{ display: block}
+      }
+
+    }
+  }
+}
+
+
+//Menu open/close
+//html.menu_closed{
+//  #sidebar{
+//    //left: -$sidebar_width;
+//    width: $sidebar_collapsed_width;
+//    .navigation > li > a i{ margin-right: 50px}
+//  }
+//  #header #menu_toggle{ color:$color_sushi; }
+//  #wrapper{
+//    padding-left: $sidebar_collapsed_width;
+//
+//  }
+//}

@@ -1,0 +1,73 @@
+/* TABLES */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+table{
+  width: 100%;
+  th,td{
+    padding: $table_padding_v $table_padding_h; border-bottom: 1px solid;
+  }
+
+  //Table Head
+  thead{
+    th,td{border-bottom-color: $table_head_border; padding: $table_head_padding_v $table_head_padding_h; font-weight: bold; text-transform: uppercase; }
+  }
+
+  //Table Body
+  tbody{
+    th,td{ border-bottom-color:$table_body_border; padding: $table_body_padding_v $table_body_padding_h; }
+  }
+
+  //Table Footer
+  tfoot{
+    th,td{ border-bottom-color: $table_foot_border; padding: $table_foot_padding_v $table_foot_padding_h; }
+  }
+
+
+  //Force text not to break
+  &.word_break{
+    th, td{ @extend .nobr}
+  }
+
+  //Add odd even colors for rows
+  &.row_color{
+    tbody{
+      tr{
+        &:nth-child(odd) td{ background-color: lighten($table_body_border, 7%) }
+      }
+    }
+  }
+
+  //Cozy mode (middle size)
+  &.cozy_view{
+    th,td{ padding: $table_padding_v/2 $table_padding_h/2; }
+  }
+
+  //Compact mode (smallest size)
+  &.compact_view{
+    th,td{ padding: $table_padding_v/3 $table_padding_h/3; }
+  }
+
+  //Override default set padding's
+  th,td{
+    &.first{ padding-left: 0}
+    &.last{ padding-right: 0}
+  }
+
+}
+
+
+// Add scroll bar if table can't fit the screen
+.table_responsive{
+  overflow-y: hidden; overflow-x: auto; width: 100%;
+}
+
+
+// Tables status setup
+.status{
+  @include border-radius($global_radius); padding: $status_item_padding_v $status_item_padding_h; display: inline-block; font-size: 85%;
+  &.status_error{   background-color: $color_error }
+  &.status_success{ background-color: $color_success }
+  &.status_notice{  background-color: $color_notice }
+}
+

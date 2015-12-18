@@ -1,0 +1,35 @@
+/* HEADER */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+#header{
+  background-color:$color_white; height: $header_height; border-bottom: 1px solid $color_gallery; width: 100%; left: 0; top: 0; z-index: $header_z_index;
+;
+
+  #logo{
+    display: block; padding:12px 0; height: $header_height;
+    img{ width: auto; height: 100%; max-height: $header_height;}
+  }
+
+  .nav{
+    border-left: 1px solid $color_gallery;
+    >li{
+      border-right: 1px solid $color_gallery; padding: 0 25px;
+      &.link{
+        a{ padding-top: $header_nav_link_padding; padding-bottom: $header_nav_link_padding; height:$header_height; @include font_style($medium, $mediumlh); @include link_color($color_silver, $color_sushi)}
+      }
+
+      &.link_btn{
+        padding-top: $header_nav_link_btn_padding; padding-bottom: $header_nav_link_btn_padding;
+        a{}
+      }
+
+      &.clear_border{ border-right: none;}
+      &.clear_padding_right{ padding-right: 0}
+    }
+  }
+
+}
+
+

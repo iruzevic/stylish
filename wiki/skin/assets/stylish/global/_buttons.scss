@@ -1,0 +1,72 @@
+/* BUTTONS */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.btn,
+button,
+input[type=submit],
+input[type=button],
+input[type=reset]{
+  @include btn_style($btn_transform, $btn_font_family, $btn_radius, $btn_border_width, $btn_border_style, $btn_txt_align, $btn_width, $btn_txt_weight, $btn_display, $btn_white_space, $btn_txt_decoration, $btn_cursor, $btn_margin);
+  @include appearance(none);
+  @include font-smoothing();
+  @include transition-property(all);
+  @include transition-duration(.3s);
+
+  //Default size
+  @include btn_size($btn_height, $btn_padding_v, $btn_padding_h, $btn_txt_size, $btn_line_height);
+
+  //Large size
+  &.btn_large, &[data-size="large"]{ @include btn_size($btn_height_large, $btn_padding_v_large, $btn_padding_h_large, $btn_txt_size_large, $btn_line_height_large )}
+
+  //Small size
+  &.btn_small, &[data-size="small"]{ @include btn_size($btn_height_small, $btn_padding_v_small, $btn_padding_h_small, $btn_txt_size_small, $btn_line_height_small)}
+
+  //Focus state
+  &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
+
+  //Set rounded buttons to strait
+  &.no_radius{@include border-radius(0);}
+
+  //Full rounded buttons
+  &.rounded{@include border-radius(20px);}
+
+  //Disabled buttons
+  &.disabled, &:disabled{ }
+
+  //Set button to auto width
+  &.auto_width{width: auto; display: inline-block;}
+
+  //Force btn not to break
+  &.no_word_break{ word-break: normal }
+
+  //Icon in button
+  &.btn_icon,
+  &.btn_icon_left,
+  &.btn_icon_right{
+    i, .icon{ @include font_style($btn_icon_size); vertical-align: middle; }
+  }
+
+  &.btn_icon_left{
+    i, .icon{   margin-right: $btn_icon_move;  }
+  }
+
+  &.btn_icon_right{
+    i, .icon{  margin-left: $btn_icon_move; }
+  }
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* Buttons Colors */
+  &.btn_mine_shaft{@include btn_color($color_mine_shaft, $color_white, $color_mine_shaft, transparent, $color_mine_shaft, $color_mine_shaft)}
+
+  &.btn_mine_shaft_border{@include btn_color(transparent, $color_mine_shaft, $color_mine_shaft, $color_mine_shaft, $color_white, $color_mine_shaft)}
+
+  &.btn_sushi{@include btn_color($color_sushi, $color_white, $color_sushi, transparent, $color_sushi, $color_sushi)}
+
+  &.btn_sushi_border{@include btn_color(transparent, $color_sushi, $color_sushi, $color_sushi, $color_white, $color_sushi)}
+
+}
+
+

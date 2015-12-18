@@ -1,0 +1,59 @@
+/* GRID FIXED */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.grid_fix{
+  width: 100%;display: inline-block; position: relative;
+  /* Cols Setup */
+  .fluid_col{
+    float:left;width:100%;
+    .fluid_wrap{width: auto}
+  }
+  .fixed_col{width:$sidebar_width;position: absolute;height: 100%;}
+
+  /* Right Sidebar */
+  &.grid_fix_right{
+    .fluid_col{
+      margin-right:-$sidebar_width;
+      .fluid_wrap{margin-right:$sidebar_width; padding-right:$gutter_fix;}}
+
+    .fixed_col{right: 0}
+
+  }
+
+  /* Left Sidebar */
+  &.grid_fix_left{
+    .fluid_wrap{margin-left:$sidebar_width;padding-left:$gutter_fix;}
+    .fixed_col{left: 0}
+  }
+}
+
+
+//
+//@media screen and ($responsive_first: $screen_small) {
+//
+//  //Check if site uses responsive design or not
+//  @if $responsive == true{
+//
+//    /* Fixed sidebar grid hide sidebar */
+//    .grid_fix{
+//      .fluid_col,
+//      .fixed_col{ margin: 0; float: none; width: 100%; position: static; height: auto }
+//
+//      /* Right Sidebar */
+//      &.grid_fix_right{
+//        .fluid_col{
+//          .fluid_wrap{ margin-right: 0; padding-right: 0}
+//        }
+//      }
+//
+//      /* Left Sidebar */
+//      &.grid_fix_left{
+//        .fluid_col{
+//          .fluid_wrap{ margin-left: 0; padding-left: 0; }
+//        }
+//      }
+//    }
+//
+//  }
+//}

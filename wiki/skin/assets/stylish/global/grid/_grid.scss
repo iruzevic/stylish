@@ -1,0 +1,34 @@
+/* GRID */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.container{
+  width: 100%; margin-left:auto; margin-right: auto; @include container_size();
+
+  //Strip padding from container
+  &.full,
+  &.container_clean,
+  &.container_full  {@include container_padding(0); overflow: hidden}
+
+  //Override max width and push container full width (unable to use if not using responsive)
+  &.liquid,
+  &.container_liquid{@include container_size(inherit)}
+
+  &.container_overflow{overflow: hidden}
+}
+
+
+//Container corrections for different types of grid
+@include container_generate(fluid,    $gutter/2);
+@include container_generate(quarter,  $gutter_quarter/2);
+@include container_generate(half,     $gutter_half/2);
+@include container_generate(double,   $gutter_double/2);
+@include container_generate(triple,   $gutter_triple/2);
+
+
+//Grid lockout for no responsive layout
+body{
+  @if $responsive != true{
+    min-width: $page_max_width;
+  }
+}

@@ -1,0 +1,77 @@
+/* MODAL */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.modal{
+  position:fixed; left:0; top:0; width:100%; height:100%;visibility:hidden;@include opacity(0);z-index:-50;
+
+  //Overlay
+  .m_overlay{position:fixed; left:0; top:0; width:100%; height:100%; visibility: hidden; z-index: 2;@include opacity(0);@include transition-property(opacity);@include transition-duration(.3s);}
+
+  //Position modal in the middle of the screen on scale
+  .m_wrap{ display: block; height: 100%; position: relative; max-width: $modal_max_width; margin: 0 auto}
+
+  //Content
+  .m_content_wrap{
+    position:absolute; top:0;width: 100%; height: 100%; z-index: 2;
+
+    //Content wrapper to input content
+    .m_content{ padding: $modal_content_padding; background-color: $modal_bg_color; position: relative; z-index: 3; @include transition-property(all);@include transition-duration(.4s);}
+
+    //Content Structure
+    .m_head{
+      margin-bottom: $modal_head_move;
+      .m_title{ margin-bottom: $modal_title_move;}
+    }
+    .m_footer{ margin-top:$modal_footer_move; @extend .clearfix;}
+  }
+
+  //Active (opened state)
+  &.active{
+    @include opacity(1); z-index: 99999; visibility: visible;
+    .m_overlay{@include opacity(1); visibility: visible;background-color: rgba($modal_overlay_bg_color, $modal_overlay_opacity);}
+  }
+
+  //Close modal button
+  .close_modal{
+    position: absolute; right: $modal_close_position; top: $modal_close_position; font-size: $modal_close_size;@extend .sy_icons;
+    &:before{@extend .sy_remove:before;}
+  }
+
+
+  //Load modal from the top
+  &[data-slide="top"]{
+    &.active{
+      .m_content{ margin-top:$modal_slide_top_move;}
+    }
+  }
+
+  //Load modal by scale
+  &[data-slide="scale"]{
+    .m_content_wrap{
+      .m_content{@include scale(0.6)}
+    }
+
+    &.active{
+      .m_content_wrap{
+        .m_content{ @include scale(1)}
+      }
+    }
+  }
+
+  //Load modal by Full width
+  &[data-size="full"]{
+    .m_wrap{ max-width: initial;}
+    .m_content_wrap{
+      top: 0!important;
+      .m_content{height: 100%;margin-top: 0!important}
+    }
+  }
+}
+
+
+// Remove scroll on all platforms
+html.modal_active{
+  overflow-y: hidden;-webkit-overflow-scrolling:touch; position: absolute; height: 100%; width: 100%;
+  body{overflow-y: hidden;-webkit-overflow-scrolling:touch; position: absolute; height: 100%; width: 100%;}
+}
