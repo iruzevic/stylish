@@ -4,7 +4,7 @@
 
 .breadcrumbs{
   >li{
-   >a:after{@extend .sy_icons; @extend .sy_arrow_right:before; font-size:$crumb_separator_size; vertical-align:baseline;padding:0 $crumb_separator_padding}
+   >a:after{@extend .sy_icons; @extend .sy_arrow:before; @extend .icon_orientation_right; font-size:$crumb_separator_size; vertical-align:baseline;padding:0 $crumb_separator_padding}
 
     &:last-child >a:after{ content: ""; padding:0}
   }

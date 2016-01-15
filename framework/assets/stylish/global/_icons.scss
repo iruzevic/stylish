@@ -38,6 +38,9 @@
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 //Icon in button
 .txt_icon,
 .txt_icon_left,
@@ -54,6 +57,14 @@
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Icons Rotate */
+.icon_orientation_right{ @include rotate( 90deg); }
+.icon_orientation_down { @include rotate( 180deg);}
+.icon_orientation_left { @include rotate(-90deg); }
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -63,16 +74,7 @@
 .sy_spinner:before {
   content: "\e60e";
 }
-.sy_arrow_down:before {
-  content: "\e600";
-}
-.sy_arrow_left:before {
-  content: "\e601";
-}
-.sy_arrow_right:before {
-  content: "\e602";
-}
-.sy_arrow_up:before {
+.sy_arrow:before {
   content: "\e603";
 }
 .sy_check:before {
@@ -105,3 +107,4 @@
 .sy_warning:before {
   content: "\e60d";
 }
+

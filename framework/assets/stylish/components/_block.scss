@@ -17,7 +17,7 @@
       @include move_bottom($block_title_move_bottom, $block_small, $block_large);
       @include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
     }
-    .subtitle{@include font_style($medium, $mediumlh); color:$color_gray; }
+    .subtitle{@include font_style($medium, $mediumlh);}
   }
 }
 

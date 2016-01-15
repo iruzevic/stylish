@@ -36,7 +36,7 @@ textarea{ height: 150px; }
   @include select_size();
   position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
 
-  &:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow_down:before;}
+  &:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; }
   select{
     position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; width: 100%; left: 0; top: 0; font-family: Arial, Helvetica, sans-serif;
     &:focus{outline: none;}

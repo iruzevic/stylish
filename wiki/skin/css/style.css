@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 4
+Version: 4.0.1
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -1561,7 +1561,8 @@ form .error:before, .form .validation-advice:before,
     transform: rotate(359deg);
   }
 }
-/* line 45, ../assets/stylish/global/_icons.scss */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* line 48, ../assets/stylish/global/_icons.scss */
 .txt_icon i, .txt_icon .icon,
 .txt_icon_left i,
 .txt_icon_left .icon,
@@ -1570,207 +1571,218 @@ form .error:before, .form .validation-advice:before,
   vertical-align: middle;
 }
 
-/* line 49, ../assets/stylish/global/_icons.scss */
+/* line 52, ../assets/stylish/global/_icons.scss */
 .txt_icon_left i, .txt_icon_left .icon {
   margin-right: 10px;
 }
 
-/* line 53, ../assets/stylish/global/_icons.scss */
+/* line 56, ../assets/stylish/global/_icons.scss */
 .txt_icon_right i, .txt_icon_right .icon {
   margin-left: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Icons Rotate */
+/* line 64, ../assets/stylish/global/_icons.scss */
+.icon_orientation_right, .breadcrumbs > li > a:after {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 65, ../assets/stylish/global/_icons.scss */
+.icon_orientation_down, .select:after, #sidebar .navigation > li[data-has-drop="true"] > a:after {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 66, ../assets/stylish/global/_icons.scss */
+.icon_orientation_left {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Icons */
-/* line 63, ../assets/stylish/global/_icons.scss */
+/* line 74, ../assets/stylish/global/_icons.scss */
 .sy_Pagination:before {
   content: "\e911";
 }
 
-/* line 66, ../assets/stylish/global/_icons.scss */
+/* line 77, ../assets/stylish/global/_icons.scss */
 .sy_Tables_2:before {
   content: "\e912";
 }
 
-/* line 69, ../assets/stylish/global/_icons.scss */
+/* line 80, ../assets/stylish/global/_icons.scss */
 .sy_Accordion:before {
   content: "\e900";
 }
 
-/* line 72, ../assets/stylish/global/_icons.scss */
+/* line 83, ../assets/stylish/global/_icons.scss */
 .sy_Block_1:before {
   content: "\e901";
 }
 
-/* line 75, ../assets/stylish/global/_icons.scss */
+/* line 86, ../assets/stylish/global/_icons.scss */
 .sy_Block_2:before {
   content: "\e902";
 }
 
-/* line 78, ../assets/stylish/global/_icons.scss */
+/* line 89, ../assets/stylish/global/_icons.scss */
 .sy_Breadcrumbs:before {
   content: "\e903";
 }
 
-/* line 81, ../assets/stylish/global/_icons.scss */
+/* line 92, ../assets/stylish/global/_icons.scss */
 .sy_Buttons:before {
   content: "\e904";
 }
 
-/* line 84, ../assets/stylish/global/_icons.scss */
+/* line 95, ../assets/stylish/global/_icons.scss */
 .sy_Dividers:before {
   content: "\e905";
 }
 
-/* line 87, ../assets/stylish/global/_icons.scss */
+/* line 98, ../assets/stylish/global/_icons.scss */
 .sy_Forms_2:before {
   content: "\e906";
 }
 
-/* line 90, ../assets/stylish/global/_icons.scss */
+/* line 101, ../assets/stylish/global/_icons.scss */
 .sy_Forms:before {
   content: "\e907";
 }
 
-/* line 93, ../assets/stylish/global/_icons.scss */
+/* line 104, ../assets/stylish/global/_icons.scss */
 .sy_Grid:before {
   content: "\e908";
 }
 
-/* line 96, ../assets/stylish/global/_icons.scss */
+/* line 107, ../assets/stylish/global/_icons.scss */
 .sy_Helpers:before {
   content: "\e909";
 }
 
-/* line 99, ../assets/stylish/global/_icons.scss */
+/* line 110, ../assets/stylish/global/_icons.scss */
 .sy_Icons:before {
   content: "\e90a";
 }
 
-/* line 102, ../assets/stylish/global/_icons.scss */
+/* line 113, ../assets/stylish/global/_icons.scss */
 .sy_Messages:before {
   content: "\e90b";
 }
 
-/* line 105, ../assets/stylish/global/_icons.scss */
+/* line 116, ../assets/stylish/global/_icons.scss */
 .sy_Mixins:before {
   content: "\e90c";
 }
 
-/* line 108, ../assets/stylish/global/_icons.scss */
+/* line 119, ../assets/stylish/global/_icons.scss */
 .sy_Modal_2:before {
   content: "\e90d";
 }
 
-/* line 111, ../assets/stylish/global/_icons.scss */
+/* line 122, ../assets/stylish/global/_icons.scss */
 .sy_Modal:before {
   content: "\e90e";
 }
 
-/* line 114, ../assets/stylish/global/_icons.scss */
+/* line 125, ../assets/stylish/global/_icons.scss */
 .sy_Navigation:before {
   content: "\e90f";
 }
 
-/* line 117, ../assets/stylish/global/_icons.scss */
+/* line 128, ../assets/stylish/global/_icons.scss */
 .sy_Other:before {
   content: "\e910";
 }
 
-/* line 120, ../assets/stylish/global/_icons.scss */
+/* line 131, ../assets/stylish/global/_icons.scss */
 .sy_Tables:before {
   content: "\e913";
 }
 
-/* line 123, ../assets/stylish/global/_icons.scss */
+/* line 134, ../assets/stylish/global/_icons.scss */
 .sy_Tabs:before {
   content: "\e914";
 }
 
-/* line 126, ../assets/stylish/global/_icons.scss */
+/* line 137, ../assets/stylish/global/_icons.scss */
 .sy_Tooltips:before {
   content: "\e915";
 }
 
-/* line 129, ../assets/stylish/global/_icons.scss */
+/* line 140, ../assets/stylish/global/_icons.scss */
 .sy_Typography:before {
   content: "\e916";
 }
 
-/* line 132, ../assets/stylish/global/_icons.scss */
+/* line 143, ../assets/stylish/global/_icons.scss */
 .sy_spinner:before, .loader.active:after,
 .loading.active:after {
   content: "\e60e";
 }
 
-/* line 135, ../assets/stylish/global/_icons.scss */
-.sy_arrow_down:before, .select:after, #sidebar .navigation > li[data-has-drop="true"] > a:after {
-  content: "\e600";
-}
-
-/* line 138, ../assets/stylish/global/_icons.scss */
-.sy_arrow_left:before {
-  content: "\e601";
-}
-
-/* line 141, ../assets/stylish/global/_icons.scss */
-.sy_arrow_right:before, .breadcrumbs > li > a:after {
-  content: "\e602";
-}
-
-/* line 144, ../assets/stylish/global/_icons.scss */
-.sy_arrow_up:before {
+/* line 146, ../assets/stylish/global/_icons.scss */
+.sy_arrow:before, .select:after, .breadcrumbs > li > a:after, #sidebar .navigation > li[data-has-drop="true"] > a:after {
   content: "\e603";
 }
 
-/* line 147, ../assets/stylish/global/_icons.scss */
+/* line 149, ../assets/stylish/global/_icons.scss */
 .sy_check:before, .checkbox .checkbox_icon:before, .input_large .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before {
   content: "\e604";
 }
 
-/* line 150, ../assets/stylish/global/_icons.scss */
+/* line 152, ../assets/stylish/global/_icons.scss */
 .sy_check_round:before, .messages > li.success-msg:before, .messages > li.success_msg:before, .msg > li.success-msg:before, .msg > li.success_msg:before {
   content: "\e605";
 }
 
-/* line 153, ../assets/stylish/global/_icons.scss */
+/* line 155, ../assets/stylish/global/_icons.scss */
 .sy_circle:before {
   content: "\e606";
 }
 
-/* line 156, ../assets/stylish/global/_icons.scss */
+/* line 158, ../assets/stylish/global/_icons.scss */
 .sy_info:before {
   content: "\e607";
 }
 
-/* line 159, ../assets/stylish/global/_icons.scss */
+/* line 161, ../assets/stylish/global/_icons.scss */
 .sy_info_round:before, .messages > li.notice-msg:before, .messages > li.notice_msg:before, .messages > li.info_msg:before, .messages > li.info-msg:before, .msg > li.notice-msg:before, .msg > li.notice_msg:before, .msg > li.info_msg:before, .msg > li.info-msg:before {
   content: "\e608";
 }
 
-/* line 162, ../assets/stylish/global/_icons.scss */
+/* line 164, ../assets/stylish/global/_icons.scss */
 .sy_menu:before {
   content: "\e609";
 }
 
-/* line 165, ../assets/stylish/global/_icons.scss */
+/* line 167, ../assets/stylish/global/_icons.scss */
 .sy_plus:before {
   content: "\e60a";
 }
 
-/* line 168, ../assets/stylish/global/_icons.scss */
+/* line 170, ../assets/stylish/global/_icons.scss */
 .sy_remove:before, .modal .close_modal:before {
   content: "\e60b";
 }
 
-/* line 171, ../assets/stylish/global/_icons.scss */
+/* line 173, ../assets/stylish/global/_icons.scss */
 .sy_remove_round:before, form .validation-advice:before,
 form .error:before, .form .validation-advice:before,
 .form .error:before, .messages > li.error-msg:before, .messages > li.error_msg:before, .msg > li.error-msg:before, .msg > li.error_msg:before {
   content: "\e60c";
 }
 
-/* line 174, ../assets/stylish/global/_icons.scss */
+/* line 176, ../assets/stylish/global/_icons.scss */
 .sy_warning:before {
   content: "\e60d";
 }

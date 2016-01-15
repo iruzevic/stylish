@@ -10,7 +10,7 @@
     list-style: none;
     >li{
       display: block; position:relative;
-      &[data-has-drop="true"] > a:after{ @extend .sy_icon; @extend .sy_arrow_down:before; position: absolute; right: 30px; top:50%; margin-top:-9px; color:$color_white;  }
+      &[data-has-drop="true"] > a:after{ @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; position: absolute; right: 30px; top:50%; margin-top:-9px; color:$color_white;  }
 
       >a{
         position: relative; border-bottom:1px solid $color_chicago; padding: 12px 50px 12px $gutter/2; display: block; font-weight: 300; @include link_color($color_white, $color_sushi); @include font_style($medium, $mediumlh, 500);@extend .nobr;
