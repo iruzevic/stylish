@@ -180,7 +180,7 @@ form, .form{
     &.checkbox,
     .radio,
     &.radio{
-      label{ margin:0; display: table-cell;@include rem(line-height, $p+$plh) }
+      label{ margin:0; display: table-cell;@include rem(line-height, $plh) }
     }
 
   }
