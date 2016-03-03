@@ -8,10 +8,7 @@
   @include appearance(none);
   @include font-smoothing();
 
-  //Default size
-  @include input_size($input_height, $input_txt_size, $input_line_height, $input_padding_v, $input_padding_h);
-
-  &.auto_width{ width: auto}
+  &.auto_width{ width: auto }
 
   //Focus state
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
@@ -30,10 +27,15 @@ textarea{ height: 150px; }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
+//Input generate sizes
+@include input_sizes_generate();
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
 
 /* Setup custom select input */
 .select {
-  @include select_size();
   position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
 
   &:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; }
@@ -86,9 +88,6 @@ textarea{ height: 150px; }
 /* Setup custom checkbox input */
 .checkbox{
 
-  //Default size
-  @include checkbox_size();
-
   // icon
   .checkbox_icon { color:$checkbox_bg;background-color: $checkbox_bg;border-color: $checkbox_border; }
 
@@ -110,9 +109,6 @@ textarea{ height: 150px; }
 
 /* Setup custom radio input */
 .radio{
-
-  //Default size
-  @include radio_size();
 
   // icon
   .radio_icon {
@@ -197,32 +193,3 @@ form, .form{
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//Input Big size
-.input_large{
-  @include form_fields{
-    @include input_size($input_height_large, $input_txt_size_large, $input_line_height_large, $input_padding_v_large, $input_padding_h_large);
-  }
-  .select   { @include select_size($input_height_large, $select_icon_size_large); }
-  .checkbox { @include checkbox_size($checkbox_height_large, $checkbox_icon_size_large); }
-  .radio    { @include radio_size($radio_height_large, $radio_icon_size_large); }
-
-  //validation error (validation-advice for magento)
-  .validation-advice,
-  .error{}
-}
-
-//Input small size
-.input_small{
-  @include form_fields{
-    @include input_size($input_height_small, $input_txt_size_small, $input_line_height_small, $input_padding_v_small, $input_padding_h_small);
-  }
-  .select   { @include select_size($input_height_small, $select_icon_size_small); }
-  .checkbox { @include checkbox_size($checkbox_height_small, $checkbox_icon_size_small);}
-  .radio    { @include radio_size($radio_height_small, $radio_icon_size_small);}
-
-  //validation error (validation-advice for magento)
-  .validation-advice,
-  .error{}
-}

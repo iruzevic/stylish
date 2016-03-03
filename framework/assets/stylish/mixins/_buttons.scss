@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Setup buttons colors */
+//Button single color item
 @mixin btn_color($bg:false, $text:false, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
 
   @if $bg     { background-color: $bg;}
@@ -23,26 +23,106 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Button size
-@mixin btn_size($height: false, $padding_vertical:false, $padding_horizontal:false, $font_size:false, $line_height:false, $rem:false){
-  @if $rem{
-    @if $height             { @include rem(height, $height); }
-    @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
-    @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
-    @if $font_size          { @include rem(font-size, $font_size); }
-    @if $line_height        { @include rem(line-height, $line_height); }
-  }@else{
-    @if $height             { height: $height; }
-    @if $padding_vertical   { padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
-    @if $padding_horizontal { padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
-    @if $font_size          { font-size: $font_size; }
-    @if $line_height        { line-height: $line_height; }
+//Button generate colors based on scheme
+@mixin btn_colors_generate(){
+
+  @each $color in $btn_colors{
+    $name:          nth($color, 1);
+    $bg:            nth($color, 2);
+    $text:          nth($color, 3);
+    $border:        nth($color, 4);
+    $bg_hover:      nth($color, 5);
+    $text_hover:    nth($color, 6);
+    $border_hover:  nth($color, 7);
+
+    &.btn_#{$name}{@include btn_color($bg, $text, $border, $bg_hover, $text_hover, $border_hover)}
   }
 
 }
 
 
-//Default button style
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Button size
+@mixin btn_size($height: false, $font_size:false, $line_height:false, $rem:false){
+  @if $rem{
+    @if $height             { @include rem(height, $height); }
+    @if $font_size          { @include rem(font-size, $font_size); }
+    @if $line_height        { @include rem(line-height, $line_height); }
+  }@else{
+    @if $height             { height: $height; }
+    @if $font_size          { font-size: $font_size; }
+    @if $line_height        { line-height: $line_height; }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Button generate sizes based on scheme
+@mixin btn_sizes_generate(){
+
+  @each $size in $btn_sizes{
+
+    $name:        nth($size, 1);
+    $height:      nth($size, 2);
+    $text_size:   nth($size, 3);
+    $line_height: nth($size, 4);
+    $move_in_v:   nth($size, 5);
+    $move_in_h:   nth($size, 6);
+    $border_width:nth($size, 7);
+
+    @if $name == default{
+      @include btn_size($height, $text_size, $line_height);
+      @include btn_move($padding_horizontal : $move_in_h);
+      @include btn_move($padding_vertical : $move_in_v);
+
+      @each $size_in in $btn_sizes{
+
+        $name_in:        nth($size_in, 1);
+        $move_in_h_in:   nth($size_in, 5);
+        &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
+      }
+
+    }@else{
+      &.btn_#{$name}{
+        @include btn_size($height, $text_size, $line_height);
+        @include btn_move($padding_horizontal : $move_in_h);
+        @include btn_move($padding_vertical : $move_in_v);
+
+        @each $size_in in $btn_sizes{
+
+          $name_in:        nth($size_in, 1);
+          $move_in_h_in:   nth($size_in, 5);
+          &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
+        }
+
+      }
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+//Button Move padding
+@mixin btn_move( $padding_horizontal:false, $padding_vertical:false, $rem:false){
+  @if $rem{
+    @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
+    @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+  }@else{
+    @if $padding_vertical{ padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
+    @if $padding_horizontal{ padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Button default style
 @mixin btn_style($text_transform: false, $font_family:false, $radius:false, $border_width:false, $border_style:false,$text_align:false, $width:false, $font_weight:false, $display:false, $white_space:false, $text_decoration: false, $cursor:false, $margin:false){
   @if $text_transform    {text-transform:$text_transform;}
   @if $font_family       {font-family:$font_family;}
@@ -58,3 +138,6 @@
   @if $cursor            {cursor:$cursor;}
   @if $margin            {margin:$margin;}
 }
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */

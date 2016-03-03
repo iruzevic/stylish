@@ -36,7 +36,7 @@
 
 
 //Checkbox size
-@mixin checkbox_size($size:$checkbox_height, $size_icon:$checkbox_icon_size, $rem:false){
+@mixin checkbox_size($size:false, $size_icon:false, $rem:false){
   @if $rem{ // if using rem
 
     @include rem(min-height, $size);
@@ -83,7 +83,7 @@
 
 
 //Radio size
-@mixin radio_size($size:$radio_height, $size_icon:$radio_icon_size, $rem:false) {
+@mixin radio_size($size:false, $size_icon:false, $rem:false) {
   @if $rem{ // if using rem
     @include rem(min-height, $size);
 
@@ -130,7 +130,7 @@
 
 
 //Select size
-@mixin select_size($height: $input_height, $icon_size:$select_icon_size, $rem:false){
+@mixin select_size($height: false, $icon_size:false, $rem:false){
   @if $rem{
     @if $height   {@include rem(height,$height);}
     @if $icon_size{
@@ -164,6 +164,9 @@
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
 @mixin input_size( $height: false, $text_size: false, $line_height:false, $padding_vertical:false, $padding_horizontal:false, $rem: false ){
   @if $rem{
     @if $height             { @include rem(height, $height); }
@@ -177,5 +180,48 @@
     @if $line_height        { line-height: $line_height; }
     @if $padding_vertical   { padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
     @if $padding_horizontal { padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+//Button generate sizes based on scheme
+@mixin input_sizes_generate(){
+
+  @each $size in $input_sizes{
+
+    $name:                nth($size, 1);
+    $height:              nth($size, 2);
+    $text_size:           nth($size, 3);
+    $line_height:         nth($size, 4);
+    $move_in_v:           nth($size, 5);
+    $move_in_h:           nth($size, 6);
+    $border_width:        nth($size, 7);
+    $checkbox_icon_size:  nth($size, 8);
+    $radio_icon_size:     nth($size, 9);
+    $select_icon_size:    nth($size, 10);
+
+    @if $name == default{
+
+      @include form_fields{
+        @include input_size($height, $text_size, $line_height, $move_in_v, $move_in_h);
+      }
+      .checkbox { @include checkbox_size($height, $checkbox_icon_size); }
+      .radio    { @include radio_size($height, $radio_icon_size); }
+      .select   { @include select_size($height, $select_icon_size); }
+
+    }@else{
+
+      .input_#{$name}{
+        @include form_fields{
+          @include input_size($height, $text_size, $line_height, $move_in_v, $move_in_h);
+        }
+        .checkbox { @include checkbox_size($height, $checkbox_icon_size); }
+        .radio    { @include radio_size($height, $radio_icon_size); }
+        .select   { @include select_size($height, $select_icon_size); }
+      }
+
+    }
   }
 }

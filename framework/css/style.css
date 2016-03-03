@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 4.0.1
+Version: 4.1
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -177,11 +177,18 @@ table.word_break td {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* BUTTONS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup buttons colors */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* FORMS */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -1502,8 +1509,7 @@ table.word_break td {
 .checkbox .radio_icon, .radio .checkbox_icon,
 .radio .radio_icon, form .validation-advice:before,
 form .error:before, .form .validation-advice:before,
-.form .error:before, .messages > li:before, .msg > li:before, .loader.active:after,
-.loading.active:after, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
+.form .error:before, .messages > li:before, .msg > li:before, .sy_icons, .breadcrumbs > li > a:after, .modal .close_modal {
   font-family: "stylish";
   speak: none;
   font-style: normal;
@@ -1518,8 +1524,7 @@ form .error:before, .form .validation-advice:before,
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 17, ../assets/stylish/global/_icons.scss */
-.icon_spin, .loader.active:after,
-.loading.active:after {
+.icon_spin {
   -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
@@ -1609,8 +1614,7 @@ form .error:before, .form .validation-advice:before,
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Icons */
 /* line 74, ../assets/stylish/global/_icons.scss */
-.sy_spinner:before, .loader.active:after,
-.loading.active:after {
+.sy_spinner:before {
   content: "\e60e";
 }
 
@@ -1620,7 +1624,7 @@ form .error:before, .form .validation-advice:before,
 }
 
 /* line 80, ../assets/stylish/global/_icons.scss */
-.sy_check:before, .checkbox .checkbox_icon:before, .input_large .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before {
+.sy_check:before, .input_tiny .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before, .input_medium .checkbox .checkbox_icon:before, .checkbox .checkbox_icon:before, .input_large .checkbox .checkbox_icon:before, .input_huge .checkbox .checkbox_icon:before, .input_giant .checkbox .checkbox_icon:before {
   content: "\e604";
 }
 
@@ -1776,14 +1780,10 @@ a:not(.btn) {
   color: #cd3a3a;
   text-decoration: none;
   cursor: pointer;
-  -moz-transition-property: color;
-  -o-transition-property: color;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -moz-transition: color 0.35s ease-in;
+  -o-transition: color 0.35s ease-in;
+  -webkit-transition: color 0.35s ease-in;
+  transition: color 0.35s ease-in;
 }
 /* line 100, ../assets/stylish/mixins/_typography.scss */
 a:not(.btn):hover, a:not(.btn).active, a:not(.btn).current, a:not(.btn):focus {
@@ -1793,64 +1793,64 @@ a:not(.btn):hover, a:not(.btn).active, a:not(.btn).current, a:not(.btn):focus {
 a:not(.btn).disabled {
   color: #cd3a3a;
 }
-/* line 33, ../assets/stylish/global/_typography.scss */
+/* line 32, ../assets/stylish/global/_typography.scss */
 a:not(.btn).underline {
   text-decoration: underline;
 }
-/* line 34, ../assets/stylish/global/_typography.scss */
+/* line 33, ../assets/stylish/global/_typography.scss */
 a:not(.btn).disabled {
   cursor: default;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup content style for large texts */
-/* line 46, ../assets/stylish/global/_typography.scss */
+/* line 45, ../assets/stylish/global/_typography.scss */
 .content_style h1, .content_style h2, .content_style h3, .content_style h4, .content_style h5, .content_style h6 {
   margin-bottom: 5px;
 }
-/* line 47, ../assets/stylish/global/_typography.scss */
+/* line 46, ../assets/stylish/global/_typography.scss */
 .content_style h1 {
   font-size: 38px;
   font-size: 2.11111rem;
   line-height: 43px;
   line-height: 2.38889rem;
 }
-/* line 48, ../assets/stylish/global/_typography.scss */
+/* line 47, ../assets/stylish/global/_typography.scss */
 .content_style h2 {
   font-size: 35px;
   font-size: 1.94444rem;
   line-height: 40px;
   line-height: 2.22222rem;
 }
-/* line 49, ../assets/stylish/global/_typography.scss */
+/* line 48, ../assets/stylish/global/_typography.scss */
 .content_style h3 {
   font-size: 32px;
   font-size: 1.77778rem;
   line-height: 37px;
   line-height: 2.05556rem;
 }
-/* line 50, ../assets/stylish/global/_typography.scss */
+/* line 49, ../assets/stylish/global/_typography.scss */
 .content_style h4 {
   font-size: 29px;
   font-size: 1.61111rem;
   line-height: 34px;
   line-height: 1.88889rem;
 }
-/* line 51, ../assets/stylish/global/_typography.scss */
+/* line 50, ../assets/stylish/global/_typography.scss */
 .content_style h5 {
   font-size: 26px;
   font-size: 1.44444rem;
   line-height: 31px;
   line-height: 1.72222rem;
 }
-/* line 52, ../assets/stylish/global/_typography.scss */
+/* line 51, ../assets/stylish/global/_typography.scss */
 .content_style h6 {
   font-size: 23px;
   font-size: 1.27778rem;
   line-height: 28px;
   line-height: 1.55556rem;
 }
-/* line 53, ../assets/stylish/global/_typography.scss */
+/* line 52, ../assets/stylish/global/_typography.scss */
 .content_style p {
   font-size: 18px;
   font-size: 1rem;
@@ -1858,34 +1858,34 @@ a:not(.btn).disabled {
   line-height: 1.27778rem;
   margin-bottom: 20px;
 }
-/* line 55, ../assets/stylish/global/_typography.scss */
+/* line 54, ../assets/stylish/global/_typography.scss */
 .content_style .medium {
   font-size: 16px;
   font-size: 0.88889rem;
   line-height: 21px;
   line-height: 1.16667rem;
 }
-/* line 56, ../assets/stylish/global/_typography.scss */
+/* line 55, ../assets/stylish/global/_typography.scss */
 .content_style .small {
   font-size: 14px;
   font-size: 0.77778rem;
   line-height: 19px;
   line-height: 1.05556rem;
 }
-/* line 57, ../assets/stylish/global/_typography.scss */
+/* line 56, ../assets/stylish/global/_typography.scss */
 .content_style .tiny {
   font-size: 12px;
   font-size: 0.66667rem;
   line-height: 17px;
   line-height: 0.94444rem;
 }
-/* line 60, ../assets/stylish/global/_typography.scss */
+/* line 59, ../assets/stylish/global/_typography.scss */
 .content_style ul, .content_style ol {
   overflow: hidden;
   margin-left: 0;
   margin-bottom: 20px;
 }
-/* line 62, ../assets/stylish/global/_typography.scss */
+/* line 61, ../assets/stylish/global/_typography.scss */
 .content_style ul li, .content_style ol li {
   font-size: 18px;
   font-size: 1rem;
@@ -1893,11 +1893,11 @@ a:not(.btn).disabled {
   line-height: 1.27778rem;
   margin-bottom: 5px;
 }
-/* line 64, ../assets/stylish/global/_typography.scss */
+/* line 63, ../assets/stylish/global/_typography.scss */
 .content_style ul li {
   margin-left: 30px;
 }
-/* line 65, ../assets/stylish/global/_typography.scss */
+/* line 64, ../assets/stylish/global/_typography.scss */
 .content_style ol li {
   margin-left: 40px;
   font-size: 18px;
@@ -1905,27 +1905,27 @@ a:not(.btn).disabled {
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 68, ../assets/stylish/global/_typography.scss */
+/* line 67, ../assets/stylish/global/_typography.scss */
 .content_style address {
   font-size: 18px;
   font-size: 1rem;
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 69, ../assets/stylish/global/_typography.scss */
+/* line 68, ../assets/stylish/global/_typography.scss */
 .content_style .italic {
   font-style: italic;
 }
-/* line 70, ../assets/stylish/global/_typography.scss */
+/* line 69, ../assets/stylish/global/_typography.scss */
 .content_style strong,
 .content_style .bold {
   font-weight: bold;
 }
-/* line 72, ../assets/stylish/global/_typography.scss */
+/* line 71, ../assets/stylish/global/_typography.scss */
 .content_style .underline {
   text-decoration: underline;
 }
-/* line 75, ../assets/stylish/global/_typography.scss */
+/* line 74, ../assets/stylish/global/_typography.scss */
 .content_style img,
 .content_style iframe {
   width: auto;
@@ -1933,27 +1933,27 @@ a:not(.btn).disabled {
   max-width: 100%;
   margin-bottom: 20px;
 }
-/* line 79, ../assets/stylish/global/_typography.scss */
+/* line 78, ../assets/stylish/global/_typography.scss */
 .content_style img.alignleft,
 .content_style iframe.alignleft {
   clear: left;
   float: left;
   margin-right: 20px;
 }
-/* line 80, ../assets/stylish/global/_typography.scss */
+/* line 79, ../assets/stylish/global/_typography.scss */
 .content_style img.alignright,
 .content_style iframe.alignright {
   clear: right;
   float: right;
   margin-left: 20px;
 }
-/* line 83, ../assets/stylish/global/_typography.scss */
+/* line 82, ../assets/stylish/global/_typography.scss */
 .content_style img.full,
 .content_style iframe.full {
   width: 100%;
   height: auto;
 }
-/* line 86, ../assets/stylish/global/_typography.scss */
+/* line 85, ../assets/stylish/global/_typography.scss */
 .content_style img.rounded,
 .content_style iframe.rounded {
   -moz-border-radius: 50%;
@@ -1962,7 +1962,6 @@ a:not(.btn).disabled {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Text colors */
 /* line 219, ../assets/stylish/mixins/_typography.scss */
 .txt_mine_shaft {
   color: #272727;
@@ -2023,6 +2022,7 @@ a:not(.btn).disabled {
   color: #ffffff;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 236, ../assets/stylish/mixins/_typography.scss */
 .bg_mine_shaft {
   background-color: #272727;
@@ -2083,6 +2083,7 @@ a:not(.btn).disabled {
   background-color: #ffffff;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* FORMS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 20, ../assets/stylish/mixins/_forms.scss */
@@ -2112,15 +2113,8 @@ select {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 42px;
-  font-size: 18px;
-  line-height: 18px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
-/* line 14, ../assets/stylish/global/_forms.scss */
+/* line 11, ../assets/stylish/global/_forms.scss */
 input[type=text].auto_width,
 input[type=tel].auto_width,
 input[type=password].auto_width,
@@ -2133,7 +2127,7 @@ textarea.auto_width,
 select.auto_width {
   width: auto;
 }
-/* line 17, ../assets/stylish/global/_forms.scss */
+/* line 14, ../assets/stylish/global/_forms.scss */
 input[type=text]:focus,
 input[type=tel]:focus,
 input[type=password]:focus,
@@ -2149,7 +2143,7 @@ select:focus {
   box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
 }
 
-/* line 22, ../assets/stylish/global/_forms.scss */
+/* line 19, ../assets/stylish/global/_forms.scss */
 textarea {
   height: 150px;
 }
@@ -2186,335 +2180,389 @@ textarea {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup custom select input */
-/* line 35, ../assets/stylish/global/_forms.scss */
-.select {
-  height: 42px;
-  position: relative;
-  border: 1px solid #e5e5e5;
-  cursor: pointer;
-  overflow: hidden;
-  background-color: #ffffff;
-  display: block;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 142, ../assets/stylish/mixins/_forms.scss */
-.select:after {
+/* line 20, ../assets/stylish/mixins/_forms.scss */
+.input_tiny input[type=text],
+.input_tiny input[type=tel],
+.input_tiny input[type=password],
+.input_tiny input[type=email],
+.input_tiny input[type=number],
+.input_tiny input[type=url],
+.input_tiny input[type=datetime],
+.input_tiny input[type=search],
+.input_tiny textarea,
+.input_tiny select {
+  height: 10px;
   font-size: 18px;
-  margin-top: -9px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-/* line 39, ../assets/stylish/global/_forms.scss */
-.select:after {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  z-index: 5;
-  text-align: center;
-  color: #272727;
-}
-/* line 40, ../assets/stylish/global/_forms.scss */
-.select select {
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
-  background-color: transparent;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* line 42, ../assets/stylish/global/_forms.scss */
-.select select:focus {
-  outline: none;
-}
-/* line 46, ../assets/stylish/global/_forms.scss */
-.select.focus {
-  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Checkbox and Radio input Global setup */
-/* line 57, ../assets/stylish/global/_forms.scss */
-.checkbox, .radio {
-  position: relative;
-  display: table;
-  table-layout: fixed;
-}
-/* line 60, ../assets/stylish/global/_forms.scss */
-.checkbox label, .radio label {
-  cursor: pointer;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  margin: 0;
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-}
-/* line 62, ../assets/stylish/global/_forms.scss */
-.checkbox label a, .radio label a {
-  text-decoration: underline;
-}
-/* line 66, ../assets/stylish/global/_forms.scss */
-.checkbox .checkbox_icon,
-.checkbox .radio_icon, .radio .checkbox_icon,
-.radio .radio_icon {
-  text-align: center;
-  border: 1px solid;
-  position: absolute;
-  left: 0;
-  top: 50%;
-}
-/* line 70, ../assets/stylish/global/_forms.scss */
-.checkbox .checkbox_icon:before,
-.checkbox .radio_icon:before, .radio .checkbox_icon:before,
-.radio .radio_icon:before {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-/* line 75, ../assets/stylish/global/_forms.scss */
-.checkbox.focus .checkbox_icon,
-.checkbox.focus .radio_icon, .radio.focus .checkbox_icon,
-.radio.focus .radio_icon {
-  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-}
-/* line 82, ../assets/stylish/global/_forms.scss */
-.checkbox input[type=checkbox],
-.checkbox input[type=radio], .radio input[type=checkbox],
-.radio input[type=radio] {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  z-index: -1;
-  margin: 0;
-  padding: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-
-/* Setup custom checkbox input */
-/* line 87, ../assets/stylish/global/_forms.scss */
-.checkbox {
-  min-height: 42px;
+/* line 220, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .checkbox {
+  min-height: 10px;
 }
 @-moz-document url-prefix() {
-  /* line 87, ../assets/stylish/global/_forms.scss */
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
+  .input_tiny .checkbox {
+    height: 10px;
+  }
+}
+/* line 68, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .checkbox label {
+  padding-left: 25px;
+}
+/* line 70, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .checkbox label.empty {
+  padding-left: 0;
+  width: 10px;
+}
+/* line 74, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .checkbox .checkbox_icon {
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  line-height: 5px;
+}
+/* line 76, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .checkbox .checkbox_icon:before {
+  font-size: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  width: 5px;
+  height: 5px;
+}
+/* line 221, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .radio {
+  min-height: 10px;
+}
+@-moz-document url-prefix() {
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
+  .input_tiny .radio {
+    height: 10px;
+  }
+}
+/* line 114, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .radio label {
+  padding-left: 25px;
+}
+/* line 116, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .radio label.empty {
+  padding-left: 0;
+  width: 10px;
+}
+/* line 120, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .radio .radio_icon {
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  line-height: 5px;
+}
+/* line 122, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .radio .radio_icon:before {
+  content: "";
+  margin: -2.5px 0 0 -2.5px;
+  width: 5px;
+  height: 5px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .select {
+  height: 10px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_tiny .select:after {
+  font-size: 5px;
+  margin-top: -2.5px;
+}
+
+/* line 20, ../assets/stylish/mixins/_forms.scss */
+.input_small input[type=text],
+.input_small input[type=tel],
+.input_small input[type=password],
+.input_small input[type=email],
+.input_small input[type=number],
+.input_small input[type=url],
+.input_small input[type=datetime],
+.input_small input[type=search],
+.input_small textarea,
+.input_small select {
+  height: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 220, ../assets/stylish/mixins/_forms.scss */
+.input_small .checkbox {
+  min-height: 20px;
+}
+@-moz-document url-prefix() {
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
+  .input_small .checkbox {
+    height: 20px;
+  }
+}
+/* line 68, ../assets/stylish/mixins/_forms.scss */
+.input_small .checkbox label {
+  padding-left: 35px;
+}
+/* line 70, ../assets/stylish/mixins/_forms.scss */
+.input_small .checkbox label.empty {
+  padding-left: 0;
+  width: 20px;
+}
+/* line 74, ../assets/stylish/mixins/_forms.scss */
+.input_small .checkbox .checkbox_icon {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  line-height: 10px;
+}
+/* line 76, ../assets/stylish/mixins/_forms.scss */
+.input_small .checkbox .checkbox_icon:before {
+  font-size: 10px;
+  margin: -5px 0 0 -5px;
+  width: 10px;
+  height: 10px;
+}
+/* line 221, ../assets/stylish/mixins/_forms.scss */
+.input_small .radio {
+  min-height: 20px;
+}
+@-moz-document url-prefix() {
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
+  .input_small .radio {
+    height: 20px;
+  }
+}
+/* line 114, ../assets/stylish/mixins/_forms.scss */
+.input_small .radio label {
+  padding-left: 35px;
+}
+/* line 116, ../assets/stylish/mixins/_forms.scss */
+.input_small .radio label.empty {
+  padding-left: 0;
+  width: 20px;
+}
+/* line 120, ../assets/stylish/mixins/_forms.scss */
+.input_small .radio .radio_icon {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  line-height: 10px;
+}
+/* line 122, ../assets/stylish/mixins/_forms.scss */
+.input_small .radio .radio_icon:before {
+  content: "";
+  margin: -5px 0 0 -5px;
+  width: 10px;
+  height: 10px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_small .select {
+  height: 20px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_small .select:after {
+  font-size: 10px;
+  margin-top: -5px;
+}
+
+/* line 20, ../assets/stylish/mixins/_forms.scss */
+.input_medium input[type=text],
+.input_medium input[type=tel],
+.input_medium input[type=password],
+.input_medium input[type=email],
+.input_medium input[type=number],
+.input_medium input[type=url],
+.input_medium input[type=datetime],
+.input_medium input[type=search],
+.input_medium textarea,
+.input_medium select {
+  height: 30px;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 220, ../assets/stylish/mixins/_forms.scss */
+.input_medium .checkbox {
+  min-height: 30px;
+}
+@-moz-document url-prefix() {
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
+  .input_medium .checkbox {
+    height: 30px;
+  }
+}
+/* line 68, ../assets/stylish/mixins/_forms.scss */
+.input_medium .checkbox label {
+  padding-left: 45px;
+}
+/* line 70, ../assets/stylish/mixins/_forms.scss */
+.input_medium .checkbox label.empty {
+  padding-left: 0;
+  width: 30px;
+}
+/* line 74, ../assets/stylish/mixins/_forms.scss */
+.input_medium .checkbox .checkbox_icon {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  line-height: 20px;
+}
+/* line 76, ../assets/stylish/mixins/_forms.scss */
+.input_medium .checkbox .checkbox_icon:before {
+  font-size: 20px;
+  margin: -10px 0 0 -10px;
+  width: 20px;
+  height: 20px;
+}
+/* line 221, ../assets/stylish/mixins/_forms.scss */
+.input_medium .radio {
+  min-height: 30px;
+}
+@-moz-document url-prefix() {
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
+  .input_medium .radio {
+    height: 30px;
+  }
+}
+/* line 114, ../assets/stylish/mixins/_forms.scss */
+.input_medium .radio label {
+  padding-left: 45px;
+}
+/* line 116, ../assets/stylish/mixins/_forms.scss */
+.input_medium .radio label.empty {
+  padding-left: 0;
+  width: 30px;
+}
+/* line 120, ../assets/stylish/mixins/_forms.scss */
+.input_medium .radio .radio_icon {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  line-height: 20px;
+}
+/* line 122, ../assets/stylish/mixins/_forms.scss */
+.input_medium .radio .radio_icon:before {
+  content: "";
+  margin: -10px 0 0 -10px;
+  width: 20px;
+  height: 20px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_medium .select {
+  height: 30px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_medium .select:after {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+/* line 20, ../assets/stylish/mixins/_forms.scss */
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=url],
+input[type=datetime],
+input[type=search],
+textarea,
+select {
+  height: 40px;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 210, ../assets/stylish/mixins/_forms.scss */
+.checkbox {
+  min-height: 40px;
+}
+@-moz-document url-prefix() {
+  /* line 210, ../assets/stylish/mixins/_forms.scss */
   .checkbox {
-    height: 42px;
+    height: 40px;
   }
 }
 /* line 68, ../assets/stylish/mixins/_forms.scss */
 .checkbox label {
-  padding-left: 57px;
+  padding-left: 55px;
 }
 /* line 70, ../assets/stylish/mixins/_forms.scss */
 .checkbox label.empty {
   padding-left: 0;
-  width: 42px;
+  width: 40px;
 }
 /* line 74, ../assets/stylish/mixins/_forms.scss */
 .checkbox .checkbox_icon {
-  width: 42px;
-  height: 42px;
-  margin-top: -21px;
-  line-height: 28px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  line-height: 30px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
 .checkbox .checkbox_icon:before {
-  font-size: 28px;
-  margin: -14px 0 0 -14px;
-  width: 28px;
-  height: 28px;
-}
-/* line 93, ../assets/stylish/global/_forms.scss */
-.checkbox .checkbox_icon {
-  color: #ffffff;
-  background-color: #ffffff;
-  border-color: #e5e5e5;
-}
-/* line 97, ../assets/stylish/global/_forms.scss */
-.checkbox label.checked .checkbox_icon {
-  color: #cd3a3a;
-}
-/* line 104, ../assets/stylish/global/_forms.scss */
-.checkbox label.disabled .checkbox_icon {
-  background-color: #e5e5e5;
-  color: #e5e5e5;
-}
-/* line 106, ../assets/stylish/global/_forms.scss */
-.checkbox label.disabled.checked .checkbox_icon {
-  color: #cd3a3a;
+  font-size: 30px;
+  margin: -15px 0 0 -15px;
+  width: 30px;
+  height: 30px;
 }
 
-/* Setup custom radio input */
-/* line 112, ../assets/stylish/global/_forms.scss */
+/* line 211, ../assets/stylish/mixins/_forms.scss */
 .radio {
-  min-height: 42px;
+  min-height: 40px;
 }
 @-moz-document url-prefix() {
-  /* line 112, ../assets/stylish/global/_forms.scss */
+  /* line 211, ../assets/stylish/mixins/_forms.scss */
   .radio {
-    height: 42px;
+    height: 40px;
   }
 }
 /* line 114, ../assets/stylish/mixins/_forms.scss */
 .radio label {
-  padding-left: 57px;
+  padding-left: 55px;
 }
 /* line 116, ../assets/stylish/mixins/_forms.scss */
 .radio label.empty {
   padding-left: 0;
-  width: 42px;
+  width: 40px;
 }
 /* line 120, ../assets/stylish/mixins/_forms.scss */
 .radio .radio_icon {
-  width: 42px;
-  height: 42px;
-  margin-top: -21px;
-  line-height: 28px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  line-height: 30px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
 .radio .radio_icon:before {
   content: "";
-  margin: -14px 0 0 -14px;
-  width: 28px;
-  height: 28px;
-}
-/* line 118, ../assets/stylish/global/_forms.scss */
-.radio .radio_icon {
-  background-color: #ffffff;
-  border-color: #e5e5e5;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-/* line 120, ../assets/stylish/global/_forms.scss */
-.radio .radio_icon:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-/* line 125, ../assets/stylish/global/_forms.scss */
-.radio label.checked .radio_icon:before {
-  background-color: #cd3a3a;
-}
-/* line 132, ../assets/stylish/global/_forms.scss */
-.radio label.disabled .radio_icon:before {
-  background-color: #e5e5e5;
+  margin: -15px 0 0 -15px;
+  width: 30px;
+  height: 30px;
 }
 
-/* line 140, ../assets/stylish/global/_forms.scss */
-html.show_input .checkbox input[type=checkbox],
-html.show_input .checkbox input[type=radio], html.show_input .radio input[type=checkbox],
-html.show_input .radio input[type=radio] {
-  left: -20px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  z-index: auto;
+/* line 212, ../assets/stylish/mixins/_forms.scss */
+.select {
+  height: 40px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.select:after {
+  font-size: 30px;
+  margin-top: -15px;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Upload custom input */
-/* line 150, ../assets/stylish/global/_forms.scss */
-.upload {
-  position: relative;
-}
-/* line 152, ../assets/stylish/global/_forms.scss */
-.upload input[type=file] {
-  font-size: 29px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  cursor: pointer;
-  left: 0;
-  display: none;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Setup forms layout */
-/* line 161, ../assets/stylish/global/_forms.scss */
-form .field, .form .field {
-  margin-bottom: 20px;
-  position: relative;
-  list-style: none;
-}
-/* line 163, ../assets/stylish/global/_forms.scss */
-form .field.large, .form .field.large {
-  margin-bottom: 40px;
-}
-/* line 164, ../assets/stylish/global/_forms.scss */
-form .field.small, .form .field.small {
-  margin-bottom: 10px;
-}
-/* line 165, ../assets/stylish/global/_forms.scss */
-form .field.last, .form .field.last {
-  margin-bottom: 0;
-}
-/* line 169, ../assets/stylish/global/_forms.scss */
-form .field[data-required="true"] label:after,
-form .field label.required:after, .form .field[data-required="true"] label:after,
-.form .field label.required:after {
-  content: "*";
-  font-size: 14px;
-  font-size: 0.77778rem;
-  padding-left: 3px;
-}
-/* line 172, ../assets/stylish/global/_forms.scss */
-form .field label, .form .field label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-size: 1rem;
-}
-/* line 176, ../assets/stylish/global/_forms.scss */
-form .field label.inline, .form .field label.inline {
-  display: inline-block;
-  margin-bottom: 0;
-  padding-top: 5px;
-}
-/* line 183, ../assets/stylish/global/_forms.scss */
-form .field .checkbox label, form .field.checkbox label,
-form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
-.form .field .radio label, .form .field.radio label {
-  margin: 0;
-  display: table-cell;
-  line-height: 41px;
-  line-height: 2.27778rem;
-}
-/* line 188, ../assets/stylish/global/_forms.scss */
-form .label_correction, .form .label_correction {
-  padding-top: 5px;
-}
-/* line 191, ../assets/stylish/global/_forms.scss */
-form .validation-advice,
-form .error, .form .validation-advice,
-.form .error {
-  color: #cd3a3a;
-  font-size: 14px;
-  font-size: 0.77778rem;
-  margin-top: 10px;
-}
-/* line 194, ../assets/stylish/global/_forms.scss */
-form .validation-advice:before,
-form .error:before, .form .validation-advice:before,
-.form .error:before {
-  padding-right: 10px;
-  vertical-align: bottom;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 20, ../assets/stylish/mixins/_forms.scss */
 .input_large input[type=text],
 .input_large input[type=tel],
@@ -2529,26 +2577,17 @@ form .error:before, .form .validation-advice:before,
   height: 50px;
   font-size: 18px;
   line-height: 18px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 207, ../assets/stylish/global/_forms.scss */
-.input_large .select {
-  height: 50px;
-}
-/* line 142, ../assets/stylish/mixins/_forms.scss */
-.input_large .select:after {
-  font-size: 22px;
-  margin-top: -11px;
-}
-/* line 208, ../assets/stylish/global/_forms.scss */
+/* line 220, ../assets/stylish/mixins/_forms.scss */
 .input_large .checkbox {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 208, ../assets/stylish/global/_forms.scss */
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
   .input_large .checkbox {
     height: 50px;
   }
@@ -2567,21 +2606,21 @@ form .error:before, .form .validation-advice:before,
   width: 50px;
   height: 50px;
   margin-top: -25px;
-  line-height: 36px;
+  line-height: 40px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
 .input_large .checkbox .checkbox_icon:before {
-  font-size: 36px;
-  margin: -18px 0 0 -18px;
-  width: 36px;
-  height: 36px;
+  font-size: 40px;
+  margin: -20px 0 0 -20px;
+  width: 40px;
+  height: 40px;
 }
-/* line 209, ../assets/stylish/global/_forms.scss */
+/* line 221, ../assets/stylish/mixins/_forms.scss */
 .input_large .radio {
   min-height: 50px;
 }
 @-moz-document url-prefix() {
-  /* line 209, ../assets/stylish/global/_forms.scss */
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
   .input_large .radio {
     height: 50px;
   }
@@ -2600,111 +2639,473 @@ form .error:before, .form .validation-advice:before,
   width: 50px;
   height: 50px;
   margin-top: -25px;
-  line-height: 36px;
+  line-height: 40px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
 .input_large .radio .radio_icon:before {
   content: "";
-  margin: -18px 0 0 -18px;
-  width: 36px;
-  height: 36px;
+  margin: -20px 0 0 -20px;
+  width: 40px;
+  height: 40px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_large .select {
+  height: 50px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_large .select:after {
+  font-size: 40px;
+  margin-top: -20px;
 }
 
 /* line 20, ../assets/stylish/mixins/_forms.scss */
-.input_small input[type=text],
-.input_small input[type=tel],
-.input_small input[type=password],
-.input_small input[type=email],
-.input_small input[type=number],
-.input_small input[type=url],
-.input_small input[type=datetime],
-.input_small input[type=search],
-.input_small textarea,
-.input_small select {
-  height: 32px;
+.input_huge input[type=text],
+.input_huge input[type=tel],
+.input_huge input[type=password],
+.input_huge input[type=email],
+.input_huge input[type=number],
+.input_huge input[type=url],
+.input_huge input[type=datetime],
+.input_huge input[type=search],
+.input_huge textarea,
+.input_huge select {
+  height: 60px;
   font-size: 18px;
   line-height: 18px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 221, ../assets/stylish/global/_forms.scss */
-.input_small .select {
-  height: 32px;
-}
-/* line 142, ../assets/stylish/mixins/_forms.scss */
-.input_small .select:after {
-  font-size: 15px;
-  margin-top: -7.5px;
-}
-/* line 222, ../assets/stylish/global/_forms.scss */
-.input_small .checkbox {
-  min-height: 32px;
+/* line 220, ../assets/stylish/mixins/_forms.scss */
+.input_huge .checkbox {
+  min-height: 60px;
 }
 @-moz-document url-prefix() {
-  /* line 222, ../assets/stylish/global/_forms.scss */
-  .input_small .checkbox {
-    height: 32px;
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
+  .input_huge .checkbox {
+    height: 60px;
   }
 }
 /* line 68, ../assets/stylish/mixins/_forms.scss */
-.input_small .checkbox label {
-  padding-left: 47px;
+.input_huge .checkbox label {
+  padding-left: 75px;
 }
 /* line 70, ../assets/stylish/mixins/_forms.scss */
-.input_small .checkbox label.empty {
+.input_huge .checkbox label.empty {
   padding-left: 0;
-  width: 32px;
+  width: 60px;
 }
 /* line 74, ../assets/stylish/mixins/_forms.scss */
-.input_small .checkbox .checkbox_icon {
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  line-height: 18px;
+.input_huge .checkbox .checkbox_icon {
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  line-height: 50px;
 }
 /* line 76, ../assets/stylish/mixins/_forms.scss */
-.input_small .checkbox .checkbox_icon:before {
-  font-size: 18px;
-  margin: -9px 0 0 -9px;
-  width: 18px;
-  height: 18px;
+.input_huge .checkbox .checkbox_icon:before {
+  font-size: 50px;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
 }
-/* line 223, ../assets/stylish/global/_forms.scss */
-.input_small .radio {
-  min-height: 32px;
+/* line 221, ../assets/stylish/mixins/_forms.scss */
+.input_huge .radio {
+  min-height: 60px;
 }
 @-moz-document url-prefix() {
-  /* line 223, ../assets/stylish/global/_forms.scss */
-  .input_small .radio {
-    height: 32px;
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
+  .input_huge .radio {
+    height: 60px;
   }
 }
 /* line 114, ../assets/stylish/mixins/_forms.scss */
-.input_small .radio label {
-  padding-left: 47px;
+.input_huge .radio label {
+  padding-left: 75px;
 }
 /* line 116, ../assets/stylish/mixins/_forms.scss */
-.input_small .radio label.empty {
+.input_huge .radio label.empty {
   padding-left: 0;
-  width: 32px;
+  width: 60px;
 }
 /* line 120, ../assets/stylish/mixins/_forms.scss */
-.input_small .radio .radio_icon {
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  line-height: 18px;
+.input_huge .radio .radio_icon {
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  line-height: 50px;
 }
 /* line 122, ../assets/stylish/mixins/_forms.scss */
-.input_small .radio .radio_icon:before {
+.input_huge .radio .radio_icon:before {
   content: "";
-  margin: -9px 0 0 -9px;
-  width: 18px;
-  height: 18px;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_huge .select {
+  height: 60px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_huge .select:after {
+  font-size: 50px;
+  margin-top: -25px;
 }
 
+/* line 20, ../assets/stylish/mixins/_forms.scss */
+.input_giant input[type=text],
+.input_giant input[type=tel],
+.input_giant input[type=password],
+.input_giant input[type=email],
+.input_giant input[type=number],
+.input_giant input[type=url],
+.input_giant input[type=datetime],
+.input_giant input[type=search],
+.input_giant textarea,
+.input_giant select {
+  height: 70px;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 220, ../assets/stylish/mixins/_forms.scss */
+.input_giant .checkbox {
+  min-height: 70px;
+}
+@-moz-document url-prefix() {
+  /* line 220, ../assets/stylish/mixins/_forms.scss */
+  .input_giant .checkbox {
+    height: 70px;
+  }
+}
+/* line 68, ../assets/stylish/mixins/_forms.scss */
+.input_giant .checkbox label {
+  padding-left: 85px;
+}
+/* line 70, ../assets/stylish/mixins/_forms.scss */
+.input_giant .checkbox label.empty {
+  padding-left: 0;
+  width: 70px;
+}
+/* line 74, ../assets/stylish/mixins/_forms.scss */
+.input_giant .checkbox .checkbox_icon {
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  line-height: 60px;
+}
+/* line 76, ../assets/stylish/mixins/_forms.scss */
+.input_giant .checkbox .checkbox_icon:before {
+  font-size: 60px;
+  margin: -30px 0 0 -30px;
+  width: 60px;
+  height: 60px;
+}
+/* line 221, ../assets/stylish/mixins/_forms.scss */
+.input_giant .radio {
+  min-height: 70px;
+}
+@-moz-document url-prefix() {
+  /* line 221, ../assets/stylish/mixins/_forms.scss */
+  .input_giant .radio {
+    height: 70px;
+  }
+}
+/* line 114, ../assets/stylish/mixins/_forms.scss */
+.input_giant .radio label {
+  padding-left: 85px;
+}
+/* line 116, ../assets/stylish/mixins/_forms.scss */
+.input_giant .radio label.empty {
+  padding-left: 0;
+  width: 70px;
+}
+/* line 120, ../assets/stylish/mixins/_forms.scss */
+.input_giant .radio .radio_icon {
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  line-height: 60px;
+}
+/* line 122, ../assets/stylish/mixins/_forms.scss */
+.input_giant .radio .radio_icon:before {
+  content: "";
+  margin: -30px 0 0 -30px;
+  width: 60px;
+  height: 60px;
+}
+/* line 222, ../assets/stylish/mixins/_forms.scss */
+.input_giant .select {
+  height: 70px;
+}
+/* line 142, ../assets/stylish/mixins/_forms.scss */
+.input_giant .select:after {
+  font-size: 60px;
+  margin-top: -30px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Setup custom select input */
+/* line 38, ../assets/stylish/global/_forms.scss */
+.select {
+  position: relative;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 41, ../assets/stylish/global/_forms.scss */
+.select:after {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  z-index: 5;
+  text-align: center;
+  color: #272727;
+}
+/* line 42, ../assets/stylish/global/_forms.scss */
+.select select {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 44, ../assets/stylish/global/_forms.scss */
+.select select:focus {
+  outline: none;
+}
+/* line 48, ../assets/stylish/global/_forms.scss */
+.select.focus {
+  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Checkbox and Radio input Global setup */
+/* line 59, ../assets/stylish/global/_forms.scss */
+.checkbox, .radio {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+}
+/* line 62, ../assets/stylish/global/_forms.scss */
+.checkbox label, .radio label {
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 64, ../assets/stylish/global/_forms.scss */
+.checkbox label a, .radio label a {
+  text-decoration: underline;
+}
+/* line 68, ../assets/stylish/global/_forms.scss */
+.checkbox .checkbox_icon,
+.checkbox .radio_icon, .radio .checkbox_icon,
+.radio .radio_icon {
+  text-align: center;
+  border: 1px solid;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+/* line 72, ../assets/stylish/global/_forms.scss */
+.checkbox .checkbox_icon:before,
+.checkbox .radio_icon:before, .radio .checkbox_icon:before,
+.radio .radio_icon:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+/* line 77, ../assets/stylish/global/_forms.scss */
+.checkbox.focus .checkbox_icon,
+.checkbox.focus .radio_icon, .radio.focus .checkbox_icon,
+.radio.focus .radio_icon {
+  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+}
+/* line 84, ../assets/stylish/global/_forms.scss */
+.checkbox input[type=checkbox],
+.checkbox input[type=radio], .radio input[type=checkbox],
+.radio input[type=radio] {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* Setup custom checkbox input */
+/* line 92, ../assets/stylish/global/_forms.scss */
+.checkbox .checkbox_icon {
+  color: #ffffff;
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+}
+/* line 96, ../assets/stylish/global/_forms.scss */
+.checkbox label.checked .checkbox_icon {
+  color: #cd3a3a;
+}
+/* line 103, ../assets/stylish/global/_forms.scss */
+.checkbox label.disabled .checkbox_icon {
+  background-color: #e5e5e5;
+  color: #e5e5e5;
+}
+/* line 105, ../assets/stylish/global/_forms.scss */
+.checkbox label.disabled.checked .checkbox_icon {
+  color: #cd3a3a;
+}
+
+/* Setup custom radio input */
+/* line 114, ../assets/stylish/global/_forms.scss */
+.radio .radio_icon {
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 116, ../assets/stylish/global/_forms.scss */
+.radio .radio_icon:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 121, ../assets/stylish/global/_forms.scss */
+.radio label.checked .radio_icon:before {
+  background-color: #cd3a3a;
+}
+/* line 128, ../assets/stylish/global/_forms.scss */
+.radio label.disabled .radio_icon:before {
+  background-color: #e5e5e5;
+}
+
+/* line 136, ../assets/stylish/global/_forms.scss */
+html.show_input .checkbox input[type=checkbox],
+html.show_input .checkbox input[type=radio], html.show_input .radio input[type=checkbox],
+html.show_input .radio input[type=radio] {
+  left: -20px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  z-index: auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Upload custom input */
+/* line 146, ../assets/stylish/global/_forms.scss */
+.upload {
+  position: relative;
+}
+/* line 148, ../assets/stylish/global/_forms.scss */
+.upload input[type=file] {
+  font-size: 29px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  left: 0;
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Setup forms layout */
+/* line 157, ../assets/stylish/global/_forms.scss */
+form .field, .form .field {
+  margin-bottom: 20px;
+  position: relative;
+  list-style: none;
+}
+/* line 159, ../assets/stylish/global/_forms.scss */
+form .field.large, .form .field.large {
+  margin-bottom: 40px;
+}
+/* line 160, ../assets/stylish/global/_forms.scss */
+form .field.small, .form .field.small {
+  margin-bottom: 10px;
+}
+/* line 161, ../assets/stylish/global/_forms.scss */
+form .field.last, .form .field.last {
+  margin-bottom: 0;
+}
+/* line 165, ../assets/stylish/global/_forms.scss */
+form .field[data-required="true"] label:after,
+form .field label.required:after, .form .field[data-required="true"] label:after,
+.form .field label.required:after {
+  content: "*";
+  font-size: 14px;
+  font-size: 0.77778rem;
+  padding-left: 3px;
+}
+/* line 168, ../assets/stylish/global/_forms.scss */
+form .field label, .form .field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-size: 1rem;
+}
+/* line 172, ../assets/stylish/global/_forms.scss */
+form .field label.inline, .form .field label.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+/* line 179, ../assets/stylish/global/_forms.scss */
+form .field .checkbox label, form .field.checkbox label,
+form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
+.form .field .radio label, .form .field.radio label {
+  margin: 0;
+  display: table-cell;
+  line-height: 23px;
+  line-height: 1.27778rem;
+}
+/* line 184, ../assets/stylish/global/_forms.scss */
+form .label_correction, .form .label_correction {
+  padding-top: 5px;
+}
+/* line 187, ../assets/stylish/global/_forms.scss */
+form .validation-advice,
+form .error, .form .validation-advice,
+.form .error {
+  color: #cd3a3a;
+  font-size: 14px;
+  font-size: 0.77778rem;
+  margin-top: 10px;
+}
+/* line 190, ../assets/stylish/global/_forms.scss */
+form .validation-advice:before,
+form .error:before, .form .validation-advice:before,
+.form .error:before {
+  padding-right: 10px;
+  vertical-align: bottom;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* BUTTONS */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 5, ../assets/stylish/global/_buttons.scss */
@@ -2721,9 +3122,9 @@ input[type=reset] {
   border-width: 1px;
   border-style: solid;
   text-align: center;
-  width: 100%;
+  width: auto;
   font-weight: normal;
-  display: block;
+  display: inline-block;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
@@ -2732,61 +3133,546 @@ input[type=reset] {
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  height: 42px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  -moz-transition: all 0.35s ease-in;
+  -o-transition: all 0.35s ease-in;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
   padding-left: 40px;
   padding-right: 40px;
-  font-size: 16px;
-  line-height: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
   /* Buttons Colors */
 }
-/* line 20, ../assets/stylish/global/_buttons.scss */
-.btn.btn_large, .btn[data-size="large"],
-button.btn_large,
-button[data-size="large"],
-input[type=submit].btn_large,
-input[type=submit][data-size="large"],
-input[type=button].btn_large,
-input[type=button][data-size="large"],
-input[type=reset].btn_large,
-input[type=reset][data-size="large"] {
-  height: 50px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 20px;
-  line-height: 24px;
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny,
+button.btn_tiny,
+input[type=submit].btn_tiny,
+input[type=button].btn_tiny,
+input[type=reset].btn_tiny {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-/* line 23, ../assets/stylish/global/_buttons.scss */
-.btn.btn_small, .btn[data-size="small"],
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_tiny,
+button.btn_tiny.btn_move_in_h_tiny,
+input[type=submit].btn_tiny.btn_move_in_h_tiny,
+input[type=button].btn_tiny.btn_move_in_h_tiny,
+input[type=reset].btn_tiny.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_small,
+button.btn_tiny.btn_move_in_h_small,
+input[type=submit].btn_tiny.btn_move_in_h_small,
+input[type=button].btn_tiny.btn_move_in_h_small,
+input[type=reset].btn_tiny.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_medium,
+button.btn_tiny.btn_move_in_h_medium,
+input[type=submit].btn_tiny.btn_move_in_h_medium,
+input[type=button].btn_tiny.btn_move_in_h_medium,
+input[type=reset].btn_tiny.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_default,
+button.btn_tiny.btn_move_in_h_default,
+input[type=submit].btn_tiny.btn_move_in_h_default,
+input[type=button].btn_tiny.btn_move_in_h_default,
+input[type=reset].btn_tiny.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_large,
+button.btn_tiny.btn_move_in_h_large,
+input[type=submit].btn_tiny.btn_move_in_h_large,
+input[type=button].btn_tiny.btn_move_in_h_large,
+input[type=reset].btn_tiny.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_huge,
+button.btn_tiny.btn_move_in_h_huge,
+input[type=submit].btn_tiny.btn_move_in_h_huge,
+input[type=button].btn_tiny.btn_move_in_h_huge,
+input[type=reset].btn_tiny.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_tiny.btn_move_in_h_giant,
+button.btn_tiny.btn_move_in_h_giant,
+input[type=submit].btn_tiny.btn_move_in_h_giant,
+input[type=button].btn_tiny.btn_move_in_h_giant,
+input[type=reset].btn_tiny.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small,
 button.btn_small,
-button[data-size="small"],
 input[type=submit].btn_small,
-input[type=submit][data-size="small"],
 input[type=button].btn_small,
-input[type=button][data-size="small"],
-input[type=reset].btn_small,
-input[type=reset][data-size="small"] {
-  height: 32px;
-  padding-top: 6.5px;
-  padding-bottom: 6.5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 13px;
-  line-height: 17px;
+input[type=reset].btn_small {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-/* line 26, ../assets/stylish/global/_buttons.scss */
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_tiny,
+button.btn_small.btn_move_in_h_tiny,
+input[type=submit].btn_small.btn_move_in_h_tiny,
+input[type=button].btn_small.btn_move_in_h_tiny,
+input[type=reset].btn_small.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_small,
+button.btn_small.btn_move_in_h_small,
+input[type=submit].btn_small.btn_move_in_h_small,
+input[type=button].btn_small.btn_move_in_h_small,
+input[type=reset].btn_small.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_medium,
+button.btn_small.btn_move_in_h_medium,
+input[type=submit].btn_small.btn_move_in_h_medium,
+input[type=button].btn_small.btn_move_in_h_medium,
+input[type=reset].btn_small.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_default,
+button.btn_small.btn_move_in_h_default,
+input[type=submit].btn_small.btn_move_in_h_default,
+input[type=button].btn_small.btn_move_in_h_default,
+input[type=reset].btn_small.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_large,
+button.btn_small.btn_move_in_h_large,
+input[type=submit].btn_small.btn_move_in_h_large,
+input[type=button].btn_small.btn_move_in_h_large,
+input[type=reset].btn_small.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_huge,
+button.btn_small.btn_move_in_h_huge,
+input[type=submit].btn_small.btn_move_in_h_huge,
+input[type=button].btn_small.btn_move_in_h_huge,
+input[type=reset].btn_small.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_small.btn_move_in_h_giant,
+button.btn_small.btn_move_in_h_giant,
+input[type=submit].btn_small.btn_move_in_h_giant,
+input[type=button].btn_small.btn_move_in_h_giant,
+input[type=reset].btn_small.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium,
+button.btn_medium,
+input[type=submit].btn_medium,
+input[type=button].btn_medium,
+input[type=reset].btn_medium {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_tiny,
+button.btn_medium.btn_move_in_h_tiny,
+input[type=submit].btn_medium.btn_move_in_h_tiny,
+input[type=button].btn_medium.btn_move_in_h_tiny,
+input[type=reset].btn_medium.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_small,
+button.btn_medium.btn_move_in_h_small,
+input[type=submit].btn_medium.btn_move_in_h_small,
+input[type=button].btn_medium.btn_move_in_h_small,
+input[type=reset].btn_medium.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_medium,
+button.btn_medium.btn_move_in_h_medium,
+input[type=submit].btn_medium.btn_move_in_h_medium,
+input[type=button].btn_medium.btn_move_in_h_medium,
+input[type=reset].btn_medium.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_default,
+button.btn_medium.btn_move_in_h_default,
+input[type=submit].btn_medium.btn_move_in_h_default,
+input[type=button].btn_medium.btn_move_in_h_default,
+input[type=reset].btn_medium.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_large,
+button.btn_medium.btn_move_in_h_large,
+input[type=submit].btn_medium.btn_move_in_h_large,
+input[type=button].btn_medium.btn_move_in_h_large,
+input[type=reset].btn_medium.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_huge,
+button.btn_medium.btn_move_in_h_huge,
+input[type=submit].btn_medium.btn_move_in_h_huge,
+input[type=button].btn_medium.btn_move_in_h_huge,
+input[type=reset].btn_medium.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_medium.btn_move_in_h_giant,
+button.btn_medium.btn_move_in_h_giant,
+input[type=submit].btn_medium.btn_move_in_h_giant,
+input[type=button].btn_medium.btn_move_in_h_giant,
+input[type=reset].btn_medium.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_tiny,
+button.btn_move_in_h_tiny,
+input[type=submit].btn_move_in_h_tiny,
+input[type=button].btn_move_in_h_tiny,
+input[type=reset].btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_small,
+button.btn_move_in_h_small,
+input[type=submit].btn_move_in_h_small,
+input[type=button].btn_move_in_h_small,
+input[type=reset].btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_medium,
+button.btn_move_in_h_medium,
+input[type=submit].btn_move_in_h_medium,
+input[type=button].btn_move_in_h_medium,
+input[type=reset].btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_default,
+button.btn_move_in_h_default,
+input[type=submit].btn_move_in_h_default,
+input[type=button].btn_move_in_h_default,
+input[type=reset].btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_large,
+button.btn_move_in_h_large,
+input[type=submit].btn_move_in_h_large,
+input[type=button].btn_move_in_h_large,
+input[type=reset].btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_huge,
+button.btn_move_in_h_huge,
+input[type=submit].btn_move_in_h_huge,
+input[type=button].btn_move_in_h_huge,
+input[type=reset].btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 86, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_move_in_h_giant,
+button.btn_move_in_h_giant,
+input[type=submit].btn_move_in_h_giant,
+input[type=button].btn_move_in_h_giant,
+input[type=reset].btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large,
+button.btn_large,
+input[type=submit].btn_large,
+input[type=button].btn_large,
+input[type=reset].btn_large {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_tiny,
+button.btn_large.btn_move_in_h_tiny,
+input[type=submit].btn_large.btn_move_in_h_tiny,
+input[type=button].btn_large.btn_move_in_h_tiny,
+input[type=reset].btn_large.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_small,
+button.btn_large.btn_move_in_h_small,
+input[type=submit].btn_large.btn_move_in_h_small,
+input[type=button].btn_large.btn_move_in_h_small,
+input[type=reset].btn_large.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_medium,
+button.btn_large.btn_move_in_h_medium,
+input[type=submit].btn_large.btn_move_in_h_medium,
+input[type=button].btn_large.btn_move_in_h_medium,
+input[type=reset].btn_large.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_default,
+button.btn_large.btn_move_in_h_default,
+input[type=submit].btn_large.btn_move_in_h_default,
+input[type=button].btn_large.btn_move_in_h_default,
+input[type=reset].btn_large.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_large,
+button.btn_large.btn_move_in_h_large,
+input[type=submit].btn_large.btn_move_in_h_large,
+input[type=button].btn_large.btn_move_in_h_large,
+input[type=reset].btn_large.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_huge,
+button.btn_large.btn_move_in_h_huge,
+input[type=submit].btn_large.btn_move_in_h_huge,
+input[type=button].btn_large.btn_move_in_h_huge,
+input[type=reset].btn_large.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_large.btn_move_in_h_giant,
+button.btn_large.btn_move_in_h_giant,
+input[type=submit].btn_large.btn_move_in_h_giant,
+input[type=button].btn_large.btn_move_in_h_giant,
+input[type=reset].btn_large.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge,
+button.btn_huge,
+input[type=submit].btn_huge,
+input[type=button].btn_huge,
+input[type=reset].btn_huge {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_tiny,
+button.btn_huge.btn_move_in_h_tiny,
+input[type=submit].btn_huge.btn_move_in_h_tiny,
+input[type=button].btn_huge.btn_move_in_h_tiny,
+input[type=reset].btn_huge.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_small,
+button.btn_huge.btn_move_in_h_small,
+input[type=submit].btn_huge.btn_move_in_h_small,
+input[type=button].btn_huge.btn_move_in_h_small,
+input[type=reset].btn_huge.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_medium,
+button.btn_huge.btn_move_in_h_medium,
+input[type=submit].btn_huge.btn_move_in_h_medium,
+input[type=button].btn_huge.btn_move_in_h_medium,
+input[type=reset].btn_huge.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_default,
+button.btn_huge.btn_move_in_h_default,
+input[type=submit].btn_huge.btn_move_in_h_default,
+input[type=button].btn_huge.btn_move_in_h_default,
+input[type=reset].btn_huge.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_large,
+button.btn_huge.btn_move_in_h_large,
+input[type=submit].btn_huge.btn_move_in_h_large,
+input[type=button].btn_huge.btn_move_in_h_large,
+input[type=reset].btn_huge.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_huge,
+button.btn_huge.btn_move_in_h_huge,
+input[type=submit].btn_huge.btn_move_in_h_huge,
+input[type=button].btn_huge.btn_move_in_h_huge,
+input[type=reset].btn_huge.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_huge.btn_move_in_h_giant,
+button.btn_huge.btn_move_in_h_giant,
+input[type=submit].btn_huge.btn_move_in_h_giant,
+input[type=button].btn_huge.btn_move_in_h_giant,
+input[type=reset].btn_huge.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 90, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant,
+button.btn_giant,
+input[type=submit].btn_giant,
+input[type=button].btn_giant,
+input[type=reset].btn_giant {
+  height: 40px;
+  font-size: 16px;
+  line-height: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_tiny,
+button.btn_giant.btn_move_in_h_tiny,
+input[type=submit].btn_giant.btn_move_in_h_tiny,
+input[type=button].btn_giant.btn_move_in_h_tiny,
+input[type=reset].btn_giant.btn_move_in_h_tiny {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_small,
+button.btn_giant.btn_move_in_h_small,
+input[type=submit].btn_giant.btn_move_in_h_small,
+input[type=button].btn_giant.btn_move_in_h_small,
+input[type=reset].btn_giant.btn_move_in_h_small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_medium,
+button.btn_giant.btn_move_in_h_medium,
+input[type=submit].btn_giant.btn_move_in_h_medium,
+input[type=button].btn_giant.btn_move_in_h_medium,
+input[type=reset].btn_giant.btn_move_in_h_medium {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_default,
+button.btn_giant.btn_move_in_h_default,
+input[type=submit].btn_giant.btn_move_in_h_default,
+input[type=button].btn_giant.btn_move_in_h_default,
+input[type=reset].btn_giant.btn_move_in_h_default {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_large,
+button.btn_giant.btn_move_in_h_large,
+input[type=submit].btn_giant.btn_move_in_h_large,
+input[type=button].btn_giant.btn_move_in_h_large,
+input[type=reset].btn_giant.btn_move_in_h_large {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_huge,
+button.btn_giant.btn_move_in_h_huge,
+input[type=submit].btn_giant.btn_move_in_h_huge,
+input[type=button].btn_giant.btn_move_in_h_huge,
+input[type=reset].btn_giant.btn_move_in_h_huge {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 99, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_giant.btn_move_in_h_giant,
+button.btn_giant.btn_move_in_h_giant,
+input[type=submit].btn_giant.btn_move_in_h_giant,
+input[type=button].btn_giant.btn_move_in_h_giant,
+input[type=reset].btn_giant.btn_move_in_h_giant {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 19, ../assets/stylish/global/_buttons.scss */
 .btn:focus,
 button:focus,
 input[type=submit]:focus,
@@ -2796,7 +3682,7 @@ input[type=reset]:focus {
   -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
   box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
 }
-/* line 29, ../assets/stylish/global/_buttons.scss */
+/* line 22, ../assets/stylish/global/_buttons.scss */
 .btn.no_radius,
 button.no_radius,
 input[type=submit].no_radius,
@@ -2806,7 +3692,7 @@ input[type=reset].no_radius {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* line 32, ../assets/stylish/global/_buttons.scss */
+/* line 25, ../assets/stylish/global/_buttons.scss */
 .btn.rounded,
 button.rounded,
 input[type=submit].rounded,
@@ -2816,16 +3702,16 @@ input[type=reset].rounded {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 38, ../assets/stylish/global/_buttons.scss */
-.btn.auto_width,
-button.auto_width,
-input[type=submit].auto_width,
-input[type=button].auto_width,
-input[type=reset].auto_width {
-  width: auto;
-  display: inline-block;
+/* line 31, ../assets/stylish/global/_buttons.scss */
+.btn.block,
+button.block,
+input[type=submit].block,
+input[type=button].block,
+input[type=reset].block {
+  width: 100%;
+  display: block;
 }
-/* line 41, ../assets/stylish/global/_buttons.scss */
+/* line 34, ../assets/stylish/global/_buttons.scss */
 .btn.no_word_break,
 button.no_word_break,
 input[type=submit].no_word_break,
@@ -2833,7 +3719,7 @@ input[type=button].no_word_break,
 input[type=reset].no_word_break {
   word-break: normal;
 }
-/* line 47, ../assets/stylish/global/_buttons.scss */
+/* line 40, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon i, .btn.btn_icon .icon, .btn.btn_icon_left i, .btn.btn_icon_left .icon, .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon i,
 button.btn_icon .icon,
@@ -2863,7 +3749,7 @@ input[type=reset].btn_icon_right .icon {
   font-size: 1rem;
   vertical-align: middle;
 }
-/* line 51, ../assets/stylish/global/_buttons.scss */
+/* line 44, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon_left i, .btn.btn_icon_left .icon,
 button.btn_icon_left i,
 button.btn_icon_left .icon,
@@ -2875,7 +3761,7 @@ input[type=reset].btn_icon_left i,
 input[type=reset].btn_icon_left .icon {
   margin-right: 10px;
 }
-/* line 55, ../assets/stylish/global/_buttons.scss */
+/* line 48, ../assets/stylish/global/_buttons.scss */
 .btn.btn_icon_right i, .btn.btn_icon_right .icon,
 button.btn_icon_right i,
 button.btn_icon_right .icon,
@@ -2887,30 +3773,58 @@ input[type=reset].btn_icon_right i,
 input[type=reset].btn_icon_right .icon {
   margin-left: 10px;
 }
-/* line 62, ../assets/stylish/global/_buttons.scss */
-.btn.btn_mine_shaft,
-button.btn_mine_shaft,
-input[type=submit].btn_mine_shaft,
-input[type=button].btn_mine_shaft,
-input[type=reset].btn_mine_shaft {
+/* line 38, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_btn_mine_shaft,
+button.btn_btn_mine_shaft,
+input[type=submit].btn_btn_mine_shaft,
+input[type=button].btn_btn_mine_shaft,
+input[type=reset].btn_btn_mine_shaft {
   background-color: #272727;
   color: #ffffff;
   border-color: #272727;
 }
 /* line 14, ../assets/stylish/mixins/_buttons.scss */
-.btn.btn_mine_shaft:hover, .btn.btn_mine_shaft.active, .btn.btn_mine_shaft.current,
-button.btn_mine_shaft:hover,
-button.btn_mine_shaft.active,
-button.btn_mine_shaft.current,
-input[type=submit].btn_mine_shaft:hover,
-input[type=submit].btn_mine_shaft.active,
-input[type=submit].btn_mine_shaft.current,
-input[type=button].btn_mine_shaft:hover,
-input[type=button].btn_mine_shaft.active,
-input[type=button].btn_mine_shaft.current,
-input[type=reset].btn_mine_shaft:hover,
-input[type=reset].btn_mine_shaft.active,
-input[type=reset].btn_mine_shaft.current {
+.btn.btn_btn_mine_shaft:hover, .btn.btn_btn_mine_shaft.active, .btn.btn_btn_mine_shaft.current,
+button.btn_btn_mine_shaft:hover,
+button.btn_btn_mine_shaft.active,
+button.btn_btn_mine_shaft.current,
+input[type=submit].btn_btn_mine_shaft:hover,
+input[type=submit].btn_btn_mine_shaft.active,
+input[type=submit].btn_btn_mine_shaft.current,
+input[type=button].btn_btn_mine_shaft:hover,
+input[type=button].btn_btn_mine_shaft.active,
+input[type=button].btn_btn_mine_shaft.current,
+input[type=reset].btn_btn_mine_shaft:hover,
+input[type=reset].btn_btn_mine_shaft.active,
+input[type=reset].btn_btn_mine_shaft.current {
+  background-color: #282828;
+  color: #ffffff;
+  border-color: #282828;
+}
+/* line 38, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_btn_mine_shaft_inverse,
+button.btn_btn_mine_shaft_inverse,
+input[type=submit].btn_btn_mine_shaft_inverse,
+input[type=button].btn_btn_mine_shaft_inverse,
+input[type=reset].btn_btn_mine_shaft_inverse {
+  background-color: #272727;
+  color: #ffffff;
+  border-color: #272727;
+}
+/* line 14, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_btn_mine_shaft_inverse:hover, .btn.btn_btn_mine_shaft_inverse.active, .btn.btn_btn_mine_shaft_inverse.current,
+button.btn_btn_mine_shaft_inverse:hover,
+button.btn_btn_mine_shaft_inverse.active,
+button.btn_btn_mine_shaft_inverse.current,
+input[type=submit].btn_btn_mine_shaft_inverse:hover,
+input[type=submit].btn_btn_mine_shaft_inverse.active,
+input[type=submit].btn_btn_mine_shaft_inverse.current,
+input[type=button].btn_btn_mine_shaft_inverse:hover,
+input[type=button].btn_btn_mine_shaft_inverse.active,
+input[type=button].btn_btn_mine_shaft_inverse.current,
+input[type=reset].btn_btn_mine_shaft_inverse:hover,
+input[type=reset].btn_btn_mine_shaft_inverse.active,
+input[type=reset].btn_btn_mine_shaft_inverse.current {
   background-color: #282828;
   color: #ffffff;
   border-color: #282828;
@@ -3056,107 +3970,107 @@ input[type=reset].btn_mine_shaft.current {
 
 /* BLOCK */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../assets/stylish/components/_block.scss */
-.block {
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.block.move_default_bottom, .block.move_bottom_default {
   margin-bottom: 50px;
 }
-/* line 32, ../assets/stylish/mixins/_global.scss */
-.block.move_small_bottom {
-  margin-bottom: 25px;
-}
-/* line 35, ../assets/stylish/mixins/_global.scss */
-.block.move_large_bottom {
-  margin-bottom: 100px;
-}
-/* line 37, ../assets/stylish/mixins/_global.scss */
-.block.move_clear_bottom, .block.move_clean_bottom {
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.block.move_clear_bottom, .block.move_clean_bottom, .block.move_bottom_clear, .block.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 92, ../assets/stylish/mixins/_global.scss */
-.block.border_bottom {
-  border-bottom: 1px solid #272727;
+/* line 76, ../assets/stylish/mixins/_global.scss */
+.block.move_in_default_bottom, .block.move_in_bottom_default {
+  padding-bottom: 25px;
 }
-/* line 10, ../assets/stylish/components/_block.scss */
+/* line 124, ../assets/stylish/mixins/_global.scss */
+.block.move_clear_bottom, .block.move_clean_bottom, .block.move_in_bottom_clear, .block.move_in_bottom_clean {
+  padding-bottom: 0;
+}
+/* line 9, ../assets/stylish/components/_block.scss */
 .block .b_title {
   position: relative;
+}
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_default_bottom, .block .b_title.move_bottom_default {
   margin-bottom: 50px;
 }
-/* line 32, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_small_bottom {
-  margin-bottom: 25px;
-}
-/* line 35, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_large_bottom {
-  margin-bottom: 100px;
-}
-/* line 37, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom {
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom, .block .b_title.move_bottom_clear, .block .b_title.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 92, ../assets/stylish/mixins/_global.scss */
+/* line 76, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_default_bottom, .block .b_title.move_in_bottom_default {
+  padding-bottom: 25px;
+}
+/* line 124, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom, .block .b_title.move_in_bottom_clear, .block .b_title.move_in_bottom_clean {
+  padding-bottom: 0;
+}
+/* line 139, ../assets/stylish/mixins/_global.scss */
 .block .b_title.border_bottom {
   border-bottom: 1px solid #272727;
 }
 /* line 15, ../assets/stylish/components/_block.scss */
 .block .b_title .title {
   position: relative;
+}
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_default_bottom, .block .b_title .title.move_bottom_default {
   margin-bottom: 50px;
 }
-/* line 32, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_small_bottom {
-  margin-bottom: 25px;
-}
-/* line 35, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_large_bottom {
-  margin-bottom: 100px;
-}
-/* line 37, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom {
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom, .block .b_title .title.move_bottom_clear, .block .b_title .title.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 92, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.border_bottom {
-  border-bottom: 1px solid #272727;
+/* line 76, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_default_bottom, .block .b_title .title.move_in_bottom_default {
+  padding-bottom: 25px;
 }
-/* line 20, ../assets/stylish/components/_block.scss */
-.block .b_title .subtitle {
-  font-size: 16px;
-  font-size: 0.88889rem;
-  line-height: 17px;
-  line-height: 0.94444rem;
+/* line 124, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom, .block .b_title .title.move_in_bottom_clear, .block .b_title .title.move_in_bottom_clean {
+  padding-bottom: 0;
 }
 
-/* line 26, ../assets/stylish/components/_block.scss */
+/* line 11, ../assets/stylish/mixins/_global.scss */
 .block_wrap
-.block_wrapper {
+.block_wrapper.move_default_bottom, .block_wrap
+.block_wrapper.move_bottom_default {
   margin-bottom: -50px;
 }
-/* line 32, ../assets/stylish/mixins/_global.scss */
-.block_wrap
-.block_wrapper.move_small_bottom {
-  margin-bottom: -25px;
-}
-/* line 35, ../assets/stylish/mixins/_global.scss */
-.block_wrap
-.block_wrapper.move_large_bottom {
-  margin-bottom: -100px;
-}
-/* line 37, ../assets/stylish/mixins/_global.scss */
+/* line 59, ../assets/stylish/mixins/_global.scss */
 .block_wrap
 .block_wrapper.move_clear_bottom, .block_wrap
-.block_wrapper.move_clean_bottom {
+.block_wrapper.move_clean_bottom, .block_wrap
+.block_wrapper.move_bottom_clear, .block_wrap
+.block_wrapper.move_bottom_clean {
   margin-bottom: 0;
 }
 
 /* line 33, ../assets/stylish/components/_block.scss */
 .btn_set {
-  margin-bottom: -10px;
   overflow: hidden;
 }
-/* line 35, ../assets/stylish/components/_block.scss */
-.btn_set .btn,
-.btn_set .btn_link {
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_default_bottom, .btn_set.move_bottom_default {
+  margin-bottom: -10px;
+}
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_clear_bottom, .btn_set.move_clean_bottom, .btn_set.move_bottom_clear, .btn_set.move_bottom_clean {
+  margin-bottom: 0;
+}
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_default_bottom, .btn_set .btn.move_bottom_default,
+.btn_set .btn_link.move_default_bottom,
+.btn_set .btn_link.move_bottom_default {
   margin-bottom: 10px;
+}
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_clear_bottom, .btn_set .btn.move_clean_bottom, .btn_set .btn.move_bottom_clear, .btn_set .btn.move_bottom_clean,
+.btn_set .btn_link.move_clear_bottom,
+.btn_set .btn_link.move_clean_bottom,
+.btn_set .btn_link.move_bottom_clear,
+.btn_set .btn_link.move_bottom_clean {
+  margin-bottom: 0;
 }
 /* line 37, ../assets/stylish/components/_block.scss */
 .btn_set .btn_link {
@@ -3185,52 +4099,34 @@ input[type=reset].btn_mine_shaft.current {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.divider.move_default_top, .divider.move_top_default {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
-/* line 13, ../assets/stylish/mixins/_global.scss */
-.divider.move_small_top {
-  margin-top: 25px;
-}
-/* line 16, ../assets/stylish/mixins/_global.scss */
-.divider.move_large_top {
-  margin-top: 100px;
-}
-/* line 18, ../assets/stylish/mixins/_global.scss */
-.divider.move_clear_top, .divider.move_clean_top {
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.divider.move_clear_top, .divider.move_clean_top, .divider.move_top_clear, .divider.move_top_clean {
   margin-top: 0;
 }
-/* line 32, ../assets/stylish/mixins/_global.scss */
-.divider.move_small_bottom {
-  margin-bottom: 25px;
+/* line 11, ../assets/stylish/mixins/_global.scss */
+.divider.move_default_bottom, .divider.move_bottom_default {
+  margin-bottom: 50px;
 }
-/* line 35, ../assets/stylish/mixins/_global.scss */
-.divider.move_large_bottom {
-  margin-bottom: 100px;
-}
-/* line 37, ../assets/stylish/mixins/_global.scss */
-.divider.move_clear_bottom, .divider.move_clean_bottom {
+/* line 59, ../assets/stylish/mixins/_global.scss */
+.divider.move_clear_bottom, .divider.move_clean_bottom, .divider.move_bottom_clear, .divider.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 92, ../assets/stylish/mixins/_global.scss */
+/* line 139, ../assets/stylish/mixins/_global.scss */
 .divider.border_bottom {
   border-bottom: 1px solid #999999;
 }
 
-/* line 15, ../assets/stylish/components/_divider.scss */
-.spacer {
+/* line 151, ../assets/stylish/mixins/_global.scss */
+.spacer.height_default {
   height: 50px;
 }
-/* line 108, ../assets/stylish/mixins/_global.scss */
-.spacer.move_small {
-  height: 25px;
-}
-/* line 112, ../assets/stylish/mixins/_global.scss */
-.spacer.move_large {
-  height: 100px;
-}
-/* line 115, ../assets/stylish/mixins/_global.scss */
-.spacer.move_clear, .spacer.move_clean {
+/* line 192, ../assets/stylish/mixins/_global.scss */
+.spacer.height_clear, .spacer.height_clean {
   height: 0;
 }
 
@@ -3259,14 +4155,10 @@ input[type=reset].btn_mine_shaft.current {
   z-index: 2;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -moz-transition: opacity 0.35s ease-in;
+  -o-transition: opacity 0.35s ease-in;
+  -webkit-transition: opacity 0.35s ease-in;
+  transition: opacity 0.35s ease-in;
 }
 /* line 12, ../assets/stylish/components/_modal.scss */
 .modal .m_wrap {
@@ -3290,14 +4182,10 @@ input[type=reset].btn_mine_shaft.current {
   background-color: #ffffff;
   position: relative;
   z-index: 3;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 /* line 22, ../assets/stylish/components/_modal.scss */
 .modal .m_content_wrap .m_head {
@@ -3638,43 +4526,25 @@ html.modal_active body {
 
 /* GENERAL */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 8, ../assets/stylish/components/_other.scss */
-.loader.active,
-.loading.active {
+/* line 6, ../assets/stylish/components/_other.scss */
+.loader,
+.loading {
+  display: block;
   position: absolute;
   z-index: 5;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-}
-/* line 10, ../assets/stylish/components/_other.scss */
-.loader.active.bg_color,
-.loading.active.bg_color {
-  background-color: rgba(39, 39, 39, 0.4);
-}
-/* line 11, ../assets/stylish/components/_other.scss */
-.loader.active:after,
-.loading.active:after {
-  position: absolute;
   left: 50%;
   top: 50%;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  color: #272727;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  -moz-transition: all 0.35s ease-in;
+  -o-transition: all 0.35s ease-in;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
 }
 
-/* line 18, ../assets/stylish/components/_other.scss */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* line 17, ../assets/stylish/components/_other.scss */
 .overlay.active {
   position: fixed;
   left: 0;
@@ -3682,9 +4552,73 @@ html.modal_active body {
   width: 100%;
   height: 100%;
 }
-/* line 20, ../assets/stylish/components/_other.scss */
+/* line 19, ../assets/stylish/components/_other.scss */
 .overlay.active.bg_color {
   background-color: rgba(39, 39, 39, 0.4);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* line 28, ../assets/stylish/components/_other.scss */
+.bg_img {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in;
+  -o-transition: opacity 0.35s ease-in;
+  -webkit-transition: opacity 0.35s ease-in;
+  transition: opacity 0.35s ease-in;
+}
+/* line 31, ../assets/stylish/components/_other.scss */
+.bg_img.loaded {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 33, ../assets/stylish/components/_other.scss */
+.bg_img img {
+  display: none;
+}
+/* line 35, ../assets/stylish/components/_other.scss */
+.bg_img.contain, .bg_img[data-bgsize="contain"] {
+  background-size: contain;
+}
+/* line 204, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="left"][data-bg-v="top"] {
+  background-position: left top;
+}
+/* line 205, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="left"][data-bg-v="center"] {
+  background-position: left center;
+}
+/* line 206, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="left"][data-bg-v="bottom"] {
+  background-position: left bottom;
+}
+/* line 210, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="center"][data-bg-v="top"] {
+  background-position: center top;
+}
+/* line 211, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="center"][data-bg-v="center"] {
+  background-position: center center;
+}
+/* line 212, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="center"][data-bg-v="bottom"] {
+  background-position: center bottom;
+}
+/* line 216, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="right"][data-bg-v="top"] {
+  background-position: right top;
+}
+/* line 217, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="right"][data-bg-v="center"] {
+  background-position: right center;
+}
+/* line 218, ../assets/stylish/mixins/_global.scss */
+.bg_img[data-bg-h="right"][data-bg-v="bottom"] {
+  background-position: right bottom;
 }
 
 /* PAGINATION */
@@ -3708,14 +4642,10 @@ html.modal_active body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  -moz-transition-property: color, background-color;
-  -o-transition-property: color, background-color;
-  -webkit-transition-property: color, background-color;
-  transition-property: color, background-color;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -moz-transition: color, background-color 0.35s ease-in;
+  -o-transition: color, background-color 0.35s ease-in;
+  -webkit-transition: color, background-color 0.35s ease-in;
+  transition: color, background-color 0.35s ease-in;
 }
 /* line 12, ../assets/stylish/components/_paginations.scss */
 .pagination > li > a:hover {
@@ -3814,14 +4744,10 @@ table th.last, table td.last {
 /* line 10, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head > li {
   cursor: pointer;
-  -moz-transition-property: background-color;
-  -o-transition-property: background-color;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -moz-transition: background-color 0.35s ease-in;
+  -o-transition: background-color 0.35s ease-in;
+  -webkit-transition: background-color 0.35s ease-in;
+  transition: background-color 0.35s ease-in;
   padding: 10px 0;
   white-space: nowrap;
   overflow: hidden;

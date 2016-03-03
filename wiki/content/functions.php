@@ -3,6 +3,8 @@
 $pageTitle = 'Stylish Framework';
 
 $base = 'http://stylish.mustra-designs.com/wiki/';
+$base_skin = 'http://stylish.mustra-designs.com/wiki/skin/';
+$framework_base = 'http://stylish.mustra-designs.com/framework/';
 
 $accordion_link      = $base . 'parts/accordion.php';
 $block_link          = $base . 'parts/block.php';

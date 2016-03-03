@@ -6,7 +6,7 @@
                 <div class="grid_clean">
                     <div class="col_l_4">
                         <a href="<?php echo $base ?>" id="logo">
-                            <img src="<?php echo $base ?>skin/images/logo.svg" alt="<?php echo $pageTitle ?>" title="<?php echo $pageTitle ?>" />
+                            <img src="<?php echo $base_skin ?>images/logo.svg" alt="<?php echo $pageTitle ?>" title="<?php echo $pageTitle ?>" />
                         </a>
                     </div>
                     <div class="col_l_8">

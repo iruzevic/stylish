@@ -6,7 +6,7 @@
   position:fixed; left:0; top:0; width:100%; height:100%;visibility:hidden;@include opacity(0);z-index:-50;
 
   //Overlay
-  .m_overlay{position:fixed; left:0; top:0; width:100%; height:100%; visibility: hidden; z-index: 2;@include opacity(0);@include transition-property(opacity);@include transition-duration(.3s);}
+  .m_overlay{position:fixed; left:0; top:0; width:100%; height:100%; visibility: hidden; z-index: 2;@include opacity(0);@include single-transition(opacity, .35s, ease-in);}
 
   //Position modal in the middle of the screen on scale
   .m_wrap{ display: block; height: 100%; position: relative; max-width: $modal_max_width; margin: 0 auto}
@@ -16,7 +16,7 @@
     position:absolute; top:0;width: 100%; height: 100%; z-index: 2;
 
     //Content wrapper to input content
-    .m_content{ padding: $modal_content_padding; background-color: $modal_bg_color; position: relative; z-index: 3; @include transition-property(all);@include transition-duration(.4s);}
+    .m_content{ padding: $modal_content_padding; background-color: $modal_bg_color; position: relative; z-index: 3;@include single-transition(all, .4s, ease-in);}
 
     //Content Structure
     .m_head{

@@ -7,7 +7,7 @@
   >li{
     margin: 0 $pag_item_move;
     >a, >span{
-      background-color: $pag_item_bg; color: $pag_item_text; @include font_style($pag_item_txt_size); padding: $pag_item_padding_v $pag_item_padding_h; display: block; @include border-radius($global_radius); @include transition-property(color, background-color); @include transition-duration(.3s);
+      background-color: $pag_item_bg; color: $pag_item_text; @include font_style($pag_item_txt_size); padding: $pag_item_padding_v $pag_item_padding_h; display: block; @include border-radius($global_radius); @include single-transition((color, background-color), .35s, ease-in);
     }
     >a:hover{background-color: darken($pag_item_bg, 8%)}
 

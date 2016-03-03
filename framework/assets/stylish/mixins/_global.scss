@@ -2,40 +2,64 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Margin
-@mixin move_top($margin_top:false, $small:false, $large:false){
+//Move - margin (Standard - default, tiny, small, medium, large, huge, giant)
+@mixin move($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
 
-  //Margin top
-  @if $margin_top{
-    margin-top: $margin_top;
+  @if $orientation{
+
+    @if $default{
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $default;
+      }
+    }
+
+    @if $tiny{
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $tiny;
+      }
+    }
 
     @if $small{
-      &.move_small_top{ margin-top: $margin_top/$small}
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $small;
+      }
     }
+
+    @if $medium{
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $medium;
+      }
+    }
+
     @if $large{
-      &.move_large_top{ margin-top: $margin_top*$large }
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $large;
+      }
     }
-    &.move_clear_top,
-    &.move_clean_top{ margin-top: 0; }
-  }
-}
 
-
-@mixin move_bottom($margin_bottom:false, $small:false, $large:false){
-
-  //Margin bottom
-  @if $margin_bottom{
-
-    margin-bottom: $margin_bottom;
-
-    @if $small{
-      &.move_small_bottom{ margin-bottom: $margin_bottom/$small }
+    @if $huge{
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $huge;
+      }
     }
-    @if $large{
-      &.move_large_bottom{ margin-bottom: $margin_bottom*$large }
+
+    @if $giant{
+      &.move_default_#{$orientation},
+      &.move_#{$orientation}_default{
+        margin-#{$orientation}: $giant;
+      }
     }
-    &.move_clear_bottom,
-    &.move_clean_bottom{ margin-bottom: 0; }
+
+    &.move_clear_#{$orientation},
+    &.move_clean_#{$orientation},
+    &.move_#{$orientation}_clear,
+    &.move_#{$orientation}_clean { margin-#{$orientation}: 0; }
   }
 }
 
@@ -43,53 +67,76 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Padding
-@mixin move_in_top($padding_top:false, $small:false, $large:false){
-  //Padding top
-  @if $padding_top{
+//Move In - padding (Standard - default, tiny, small, medium, large, huge, giant)
+@mixin move_in($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
 
-    padding-top: $padding_top;
+  @if $orientation{
+
+    @if $default{
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $default;
+      }
+    }
+
+    @if $tiny{
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $tiny;
+      }
+    }
 
     @if $small{
-      &.move_in_small_top{ padding-top: $padding_top/$small }
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $small;
+      }
     }
+
+    @if $medium{
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $medium;
+      }
+    }
+
     @if $large{
-      &.move_in_large_top{ padding-top: $padding_top*$large }
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $large;
+      }
     }
-    &.move_in_clear_top,
-    &.move_in_clean_top{ padding-top: 0;}
+
+    @if $huge{
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $huge;
+      }
+    }
+
+    @if $giant{
+      &.move_in_default_#{$orientation},
+      &.move_in_#{$orientation}_default{
+        padding-#{$orientation}: $giant;
+      }
+    }
+
+    &.move_clear_#{$orientation},
+    &.move_clean_#{$orientation},
+    &.move_in_#{$orientation}_clear,
+    &.move_in_#{$orientation}_clean { padding-#{$orientation}: 0; }
   }
 }
 
-
-//Padding
-@mixin move_in_bottom($padding_bottom:false, $small:false, $large:false){
-
-  // Padding bottom
-  @if $padding_bottom{
-
-    padding-bottom: $padding_bottom;
-
-    @if $small{
-      &.move_in_small_bottom{ padding-bottom: $padding_bottom/$small }
-    }
-    @if $large{
-      &.move_in_large_bottom{ padding-bottom: $padding_bottom*$large }
-
-    }
-    &.move_in_clear_bottom,
-    &.move_in_clean_bottom{ padding-bottom: 0;}
-  }
-}
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 //Border
-@mixin border($border_position:false, $border_width:false, $border_style:false, $border_color:false){
-  @if $border_position AND $border_width AND $border_style AND $border_color{
-    &.border_#{$border_position}{ border-#{$border_position}: $border_width $border_style $border_color; }
+@mixin border($position:false, $width:false, $style:false, $color:false){
+  @if $position AND $width AND $style AND $color{
+    &.border_#{$position}{ border-#{$position}: $width $style $color; }
   }
 }
 
@@ -97,22 +144,77 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//Height
-@mixin height($height:false, $small:false, $large:false){
+//Height (Standard - default, tiny, small, medium, large, huge, giant)
+@mixin height($default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
 
-  @if $height{
-
-    height: $height;
-
-    @if $small{
-      &.move_small{ height: $height/$small }
+  @if $default{
+    &.height_default{
+      height: $default;
     }
+  }
 
-    @if $large{
-      &.move_large{ height: $height*$large }
+  @if $tiny{
+    &.height_tiny{
+      height: $tiny;
     }
+  }
 
-    &.move_clear,
-    &.move_clean{height: 0}
+  @if $small{
+    &.height_small{
+      height: $small;
+    }
+  }
+
+  @if $medium{
+    &.height_medium{
+      height: $medium;
+    }
+  }
+
+  @if $large{
+    &.height_large{
+      height: $large;
+    }
+  }
+
+  @if $huge{
+    &.height_huge{
+      height: $huge;
+    }
+  }
+
+  @if $giant{
+    &.height_giant{
+      height: $giant;
+    }
+  }
+
+  &.height_clear,
+  &.height_clean{height: 0}
+
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Generate background image positions
+@mixin bg_img_position(){
+  &[data-bg-h="left"]{
+    &[data-bg-v="top"]    { background-position: left top; }
+    &[data-bg-v="center"] { background-position: left center;}
+    &[data-bg-v="bottom"] { background-position: left bottom;}
+  }
+
+  &[data-bg-h="center"]{
+    &[data-bg-v="top"]    { background-position: center top; }
+    &[data-bg-v="center"] { background-position: center center;}
+    &[data-bg-v="bottom"] { background-position: center bottom;}
+  }
+
+  &[data-bg-h="right"]{
+    &[data-bg-v="top"]    { background-position: right top; }
+    &[data-bg-v="center"] { background-position: right center;}
+    &[data-bg-v="bottom"] { background-position: right bottom;}
   }
 }

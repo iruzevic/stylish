@@ -28,8 +28,7 @@ p, li   { @include font_style( $p , $plh  )}
 
 a:not(.btn) {
   @include link_color($link_color, $link_color_hover, none, pointer);
-  @include transition-property(color);
-  @include transition-duration(.3s);
+  @include single-transition(color, .35s, ease-in);
   &.underline{ text-decoration: underline;}
   &.disabled{ cursor: default;}
 }
@@ -92,6 +91,15 @@ a:not(.btn) {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* Text colors */
-@include txt_color_generator;
-@include bg_color_generator;
+//Text color generate classes (.txt_name)
+@include txt_color_generate();
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Background color generate classes (.bg_name)
+@include bg_color_generate();
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */

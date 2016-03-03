@@ -210,7 +210,7 @@
 
 
 //Generating text colors
-@mixin txt_color_generator(){
+@mixin txt_color_generate(){
   @each $scheme in $color_schemes {
 
     $name:  nth($scheme, 1);
@@ -227,7 +227,7 @@
 
 
 //Generating bg colors
-@mixin bg_color_generator(){
+@mixin bg_color_generate(){
   @each $scheme in $color_schemes {
 
     $name:  nth($scheme, 1);
