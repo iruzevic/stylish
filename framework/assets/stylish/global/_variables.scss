@@ -25,8 +25,7 @@ $color_notice:                #c0cddc;  //notice  notification color
 
 
 //Create color scheme
-// (Name) - (Color)
-$color_schemes:
+$color_schemes:(
         'sushi'       $color_sushi,
         'mine_shaft'  $color_mine_shaft,
         'tundora'     $color_tundora,
@@ -40,7 +39,8 @@ $color_schemes:
         'rust'        $color_rust,
         'astral'      $color_astral,
         'turmeric'    $color_turmeric
-        'white'       $color_white;
+        'white'       $color_white
+);
 
 
 //Naming conventions
@@ -246,16 +246,102 @@ $input_txt_disabled:          $color_alto;
 
 
     // ---------------------------------------- //
+    //Input setup specific sizes
+    $input_size_tiny:(
+        height:         10px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  5px,
+        radio_icon:     5px,
+        select_icon:    5px
+    );
+
+    $input_size_small:(
+        height:         20px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  10px,
+        radio_icon:     10px,
+        select_icon:    10px
+    );
+
+    $input_size_medium:(
+        height:         30px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  20px,
+        radio_icon:     20px,
+        select_icon:    20px
+    );
+
+    $input_size_default:(
+        height:         40px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  30px,
+        radio_icon:     30px,
+        select_icon:    30px
+    );
+
+    $input_size_large:(
+        height:         50px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  40px,
+        radio_icon:     40px,
+        select_icon:    40px
+    );
+
+    $input_size_huge:(
+        height:         60px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  50px,
+        radio_icon:     50px,
+        select_icon:    50px
+    );
+
+    $input_size_giant:(
+        height:         70px,
+        txt:            $p,
+        line_height:    $p,
+        move_v:         10px,
+        move_h:         10px,
+        border_width:   $input_border_width,
+        checkbox_icon:  60px,
+        radio_icon:     60px,
+        select_icon:    60px
+    );
+
+    // ---------------------------------------- //
     //Input generate sizes
-    // (Name) - (Height) - (Text Size) - (Line Height) - (Padding top,bottom) - (Padding left,right) - (Border Width) - (Checkbox Icon Size) - (Radio Icon Size) - (Select Icon Size)
-    $input_sizes:
-        'tiny'    10px  $p  $p 10px  10px $input_border_width  5px   5px   5px,
-        'small'   20px  $p  $p 10px  10px $input_border_width  10px  10px  10px,
-        'medium'  30px  $p  $p 10px  10px $input_border_width  20px  20px  20px,
-        'default' 40px  $p  $p 10px  10px $input_border_width  30px  30px  30px,
-        'large'   50px  $p  $p 10px  10px $input_border_width  40px  40px  40px,
-        'huge'    60px  $p  $p 10px  10px $input_border_width  50px  50px  50px,
-        'giant'   70px  $p  $p 10px  10px $input_border_width  60px  60px  60px;
+    $input_sizes:(
+      tiny:     $input_size_tiny,
+      small:    $input_size_small,
+      medium:   $input_size_medium,
+      default:  $input_size_default,
+      large:    $input_size_large,
+      huge:     $input_size_huge,
+      giant:    $input_size_giant
+    );
 
 
 
@@ -284,37 +370,124 @@ $btn_icon_move:               10px;
 
     // ---------------------------------------- //
     //Btn move in sizes (padding left,right)
-    $btn_move_in_h_tiny:          10px;
-    $btn_move_in_h_small:         15px;
-    $btn_move_in_h_medium:        20px;
-    $btn_move_in_h_default:       30px;
-    $btn_move_in_h_large:         35px;
-    $btn_move_in_h_huge:          40px;
-    $btn_move_in_h_giant:         45px;
+    $btn_move_in_size:(
+        'tiny':         10px,
+        'small':        15px,
+        'medium':       20px,
+        'default':      30px,
+        'large':        35px,
+        'huge':         40px,
+        'giant':        45px
+    );
 
-
+    // ---------------------------------------- //
     //Btn generate sizes
-    // (Name) - (Height) - (Text Size) - (Line Height) - (Padding top,bottom) - (Padding left,right) - (Border Width)
-    $btn_sizes:
-        'tiny'     20px   10px  10px   4px    $btn_move_in_h_tiny      $btn_border_width,
-        'small'    25px   12px  12px   5px    $btn_move_in_h_small     $btn_border_width,
-        'medium'   30px   14px  14px   7px    $btn_move_in_h_medium    $btn_border_width,
-        'default'  40px   16px  16px   11px   $btn_move_in_h_default   $btn_border_width,
-        'large'    45px   18px  18px   12px   $btn_move_in_h_large     $btn_border_width,
-        'huge'     50px   20px  20px   14px   $btn_move_in_h_huge      $btn_border_width,
-        'giant'    55px   22px  22px   15px   $btn_move_in_h_giant     $btn_border_width;
+    $btn_size_tiny:(
+        height:       20px,
+        txt:          10px,
+        line_height:  10px,
+        move_v:       4px,
+        move_h:       map_get($btn_move_in_size, tiny),
+        border_width: $btn_border_width
+    );
+    $btn_size_small:(
+        height:       25px,
+        txt:          12px,
+        line_height:  12px,
+        move_v:       5px,
+        move_h:       map_get($btn_move_in_size, small),
+        border_width: $btn_border_width
+    );
+    $btn_size_medium:(
+        height:       30px,
+        txt:          14px,
+        line_height:  14px,
+        move_v:       7px,
+        move_h:       map_get($btn_move_in_size, medium),
+        border_width: $btn_border_width
+    );
+    $btn_size_default:(
+        height:       40px,
+        txt:          16px,
+        line_height:  16px,
+        move_v:       11px,
+        move_h:       map_get($btn_move_in_size, default),
+        border_width: $btn_border_width
+    );
+    $btn_size_large:(
+        height:       45px,
+        txt:          18px,
+        line_height:  18px,
+        move_v:       12px,
+        move_h:       map_get($btn_move_in_size, large),
+        border_width: $btn_border_width
+    );
+    $btn_size_huge:(
+        height:       50px,
+        txt:          20px,
+        line_height:  20px,
+        move_v:       14px,
+        move_h:       map_get($btn_move_in_size, huge),
+        border_width: $btn_border_width
+    );
+    $btn_size_giant:(
+        height:       55px,
+        txt:          22px,
+        line_height:  22px,
+        move_v:       15px,
+        move_h:       map_get($btn_move_in_size, giant),
+        border_width: $btn_border_width
+    );
+
+    // ---------------------------------------- //
+    //Btn generate sizes
+    $btn_sizes:(
+      'tiny':     $btn_size_tiny,
+      'small':    $btn_size_small,
+      'medium':   $btn_size_medium,
+      'default':  $btn_size_default,
+      'large':    $btn_size_large,
+      'huge':     $btn_size_huge,
+      'giant':    $btn_size_giant
+    );
 
     // ---------------------------------------- //
 
     //Btn generate colors
-    //Name - Bg - Text - Border - Hover Bg - Hover Text - Hover Border
-    $btn_colors:
-        'mine_shaft'          $color_mine_shaft   $color_white         $color_mine_shaft   transparent        $color_mine_shaft   $color_mine_shaft,
-        'mine_shaft_border'   transparent         $color_mine_shaft    $color_mine_shaft   $color_mine_shaft  $color_white        $color_mine_shaft,
-        'sushi'               $color_sushi        $color_white         $color_sushi        transparent        $color_sushi        $color_sushi,
-        'sushi_border'        transparent         $color_sushi         $color_sushi        $color_sushi       $color_white        $color_sushi;
-
-
+    $btn_colors:(
+        'mine_shaft':(
+            bg:             $color_mine_shaft,
+            txt:            $color_white,
+            border:         $color_mine_shaft,
+            hover_bg:       transparent,
+            hover_txt:      $color_mine_shaft,
+            hover_border:   $color_mine_shaft
+        ),
+        'mine_shaft_border':(
+                bg:             transparent,
+                txt:            $color_mine_shaft,
+                border:         $color_mine_shaft,
+                hover_bg:       $color_mine_shaft,
+                hover_txt:      $color_white,
+                hover_border:   $color_mine_shaft
+        ),
+        'sushi':(
+                bg:             $color_sushi,
+                txt:            $color_white,
+                border:         $color_sushi,
+                hover_bg:       transparent,
+                hover_txt:      $color_sushi,
+                hover_border:   $color_sushi
+        ),
+        'sushi_border':(
+                bg:             transparent,
+                txt:            $color_sushi,
+                border:         $color_sushi,
+                hover_bg:       $color_sushi,
+                hover_txt:      $color_white,
+                hover_border:   $color_sushi
+        )
+    );
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 // COMPONENTS
@@ -361,15 +534,15 @@ $divider_border_width:        1px;
 $divider_border_style:        solid;
 $divider_border_color:        $color_gallery;
 
-$spacer_height_default:       50px;
-$spacer_sizes:
-    'tiny'      10px,
-    'small'     20px,
-    'medium'    30px,
-    'default'   40px,
-    'large'     50px,
-    'huge'      60px,
-    'giant'     70px;
+$spacer_sizes: (
+    'tiny':      10px,
+    'small':     20px,
+    'medium':    30px,
+    'default':   40px,
+    'large':     50px,
+    'huge':      60px,
+    'giant':     70px
+);
 
 
   // ---------------------------------------- //

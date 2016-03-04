@@ -26,16 +26,15 @@
 //Button generate colors based on scheme
 @mixin btn_colors_generate(){
 
-  @each $color in $btn_colors{
-    $name:          nth($color, 1);
-    $bg:            nth($color, 2);
-    $text:          nth($color, 3);
-    $border:        nth($color, 4);
-    $bg_hover:      nth($color, 5);
-    $text_hover:    nth($color, 6);
-    $border_hover:  nth($color, 7);
+  @each $key, $values in $btn_colors{
+    $bg:            map_get($values, bg);
+    $txt:           map_get($values, txt);
+    $border:        map_get($values, border);
+    $bg_hover:      map_get($values, hover_bg);
+    $txt_hover:     map_get($values, hover_txt);
+    $border_hover:  map_get($values, hover_border);
 
-    &.btn_#{$name}{@include btn_color($bg, $text, $border, $bg_hover, $text_hover, $border_hover)}
+    &.btn_#{$key}{@include btn_color($bg, $txt, $border, $bg_hover, $txt_hover, $border_hover)}
   }
 
 }
@@ -64,39 +63,32 @@
 //Button generate sizes based on scheme
 @mixin btn_sizes_generate(){
 
-  @each $size in $btn_sizes{
+  @each $key, $values in $btn_sizes{
 
-    $name:        nth($size, 1);
-    $height:      nth($size, 2);
-    $text_size:   nth($size, 3);
-    $line_height: nth($size, 4);
-    $move_in_v:   nth($size, 5);
-    $move_in_h:   nth($size, 6);
-    $border_width:nth($size, 7);
+    $height:         map_get($values, height);
+    $txt:            map_get($values, txt);
+    $line_height:    map_get($values, line_height);
+    $move_v:         map_get($values, move_v);
+    $move_h:         map_get($values, move_h);
+    $border_width:   map_get($values, border_width);
 
-    @if $name == default{
-      @include btn_size($height, $text_size, $line_height);
-      @include btn_move($padding_horizontal : $move_in_h);
-      @include btn_move($padding_vertical : $move_in_v);
+    @if $key == default{
+      @include btn_size($height, $txt, $line_height);
+      @include btn_move($padding_horizontal : $move_h);
+      @include btn_move($padding_vertical : $move_v);
 
-      @each $size_in in $btn_sizes{
-
-        $name_in:        nth($size_in, 1);
-        $move_in_h_in:   nth($size_in, 6);
-        &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
+      @each $key_in, $value_in in $btn_move_in_size{
+        &.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
       }
 
     }@else{
-      &.btn_#{$name}{
-        @include btn_size($height, $text_size, $line_height);
-        @include btn_move($padding_horizontal : $move_in_h);
-        @include btn_move($padding_vertical : $move_in_v);
+      &.btn_#{$key}{
+        @include btn_size($height, $txt, $line_height);
+        @include btn_move($padding_horizontal : $move_h);
+        @include btn_move($padding_vertical : $move_v);
 
-        @each $size_in in $btn_sizes{
-
-          $name_in:        nth($size_in, 1);
-          $move_in_h_in:   nth($size_in, 6);
-          &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
+        @each $key_in, $value_in in $btn_move_in_size{
+          &.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
         }
 
       }

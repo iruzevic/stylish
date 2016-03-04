@@ -211,15 +211,13 @@
 
 //Generating text colors
 @mixin txt_color_generate(){
-  @each $scheme in $color_schemes {
 
-    $name:  nth($scheme, 1);
-    $color: nth($scheme, 2);
-
-    .txt_#{$name}{
-      color: $color;
+  @each $key, $values in $color_schemes{
+    .txt_#{$key}{
+      color: $values;
     }
   }
+
 }
 
 
@@ -228,13 +226,11 @@
 
 //Generating bg colors
 @mixin bg_color_generate(){
-  @each $scheme in $color_schemes {
 
-    $name:  nth($scheme, 1);
-    $color: nth($scheme, 2);
-
-    .bg_#{$name}{
-      background-color: $color;
+  @each $key, $values in $color_schemes{
+    .bg_#{$key}{
+      background-color: $values;
     }
   }
+
 }

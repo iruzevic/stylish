@@ -165,7 +165,7 @@ form, .form{
     }
 
     label{
-      display: block; margin-bottom: $form_label_move; @include font_style($p);
+      display: block; margin-bottom: $form_label_move; @extend .p;
 
       //label inline with field
       &.inline{ display: inline-block; margin-bottom: 0; padding-top: 5px;}
@@ -181,13 +181,17 @@ form, .form{
   }
 
   .label_correction{padding-top: 5px}
+}
 
-  //validation error (validation-advice for magento)
-  .validation-advice,
-  .error{
-    color: $form_error; @include font_style(14px); margin-top: $form_error_move_default;
-    &:before{@extend .sy_icon; @extend .sy_remove_round:before; padding-right: 10px; vertical-align: bottom}
-  }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//validation error (validation-advice for magento)
+.validation-advice,
+.error{
+  color: $form_error; @include font_style(14px); margin-top: $form_error_move_default;
+  &:before{@extend .sy_icon; @extend .sy_remove_round:before; padding-right: 10px; vertical-align: bottom}
 }
 
 

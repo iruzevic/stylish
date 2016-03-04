@@ -189,37 +189,36 @@
 //Button generate sizes based on scheme
 @mixin input_sizes_generate(){
 
-  @each $size in $input_sizes{
+  @each $key, $values in $input_sizes{
 
-    $name:                nth($size, 1);
-    $height:              nth($size, 2);
-    $text_size:           nth($size, 3);
-    $line_height:         nth($size, 4);
-    $move_in_v:           nth($size, 5);
-    $move_in_h:           nth($size, 6);
-    $border_width:        nth($size, 7);
-    $checkbox_icon_size:  nth($size, 8);
-    $radio_icon_size:     nth($size, 9);
-    $select_icon_size:    nth($size, 10);
+    $height:         map_get($values, height);
+    $txt:            map_get($values, txt);
+    $line_height:    map_get($values, line_height);
+    $move_v:         map_get($values, move_v);
+    $move_h:         map_get($values, move_h);
+    $border_width:   map_get($values, border_width);
+    $checkbox_icon:  map_get($values, checkbox_icon);
+    $radio_icon:     map_get($values, radio_icon);
+    $select_icon:    map_get($values, select_icon);
 
-    @if $name == default{
+    @if $key == default{
 
       @include form_fields{
-        @include input_size($height, $text_size, $line_height, $move_in_v, $move_in_h);
+        @include input_size($height, $txt, $line_height, $move_v, $move_h);
       }
-      .checkbox { @include checkbox_size($height, $checkbox_icon_size); }
-      .radio    { @include radio_size($height, $radio_icon_size); }
-      .select   { @include select_size($height, $select_icon_size); }
+      .checkbox { @include checkbox_size($height, $checkbox_icon); }
+      .radio    { @include radio_size($height, $radio_icon); }
+      .select   { @include select_size($height, $select_icon); }
 
     }@else{
 
-      .input_#{$name}{
+      .input_#{$key}{
         @include form_fields{
-          @include input_size($height, $text_size, $line_height, $move_in_v, $move_in_h);
+          @include input_size($height, $txt, $line_height, $move_v, $move_h);
         }
-        .checkbox { @include checkbox_size($height, $checkbox_icon_size); }
-        .radio    { @include radio_size($height, $radio_icon_size); }
-        .select   { @include select_size($height, $select_icon_size); }
+        .checkbox { @include checkbox_size($height, $checkbox_icon); }
+        .radio    { @include radio_size($height, $radio_icon); }
+        .select   { @include select_size($height, $select_icon); }
       }
 
     }

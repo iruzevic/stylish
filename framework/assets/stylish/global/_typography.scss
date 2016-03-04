@@ -14,13 +14,13 @@
 html {font-size: $body_base_size;}
 body {color:$body_txt_color; background:$body_bg_color; font-family:$body_font_family; font-weight: $body_font_weight; @include font-smoothing();}
 
-h1      { @include font_style( $h1, $h1lh )}
-h2      { @include font_style( $h2, $h2lh )}
-h3      { @include font_style( $h3, $h3lh )}
-h4      { @include font_style( $h4, $h4lh )}
-h5      { @include font_style( $h5, $h5lh )}
-h6      { @include font_style( $h6, $h6lh )}
-p, li   { @include font_style( $p , $plh  )}
+h1,.h1     { @include font_style( $h1, $h1lh )}
+h2,.h2     { @include font_style( $h2, $h2lh )}
+h3,.h3     { @include font_style( $h3, $h3lh )}
+h4,.h4     { @include font_style( $h4, $h4lh )}
+h5,.h5     { @include font_style( $h5, $h5lh )}
+h6,.h6     { @include font_style( $h6, $h6lh )}
+p, li, .p  { @include font_style( $p , $plh  )}
 
 .medium {@include font_style( $medium, $mediumlh )}
 .small  {@include font_style( $small,  $smalllh )}

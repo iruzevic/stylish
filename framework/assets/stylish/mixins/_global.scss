@@ -19,43 +19,43 @@
     }
 
     @if $tiny{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_tiny_#{$orientation},
+      &.move_#{$orientation}_tiny{
         margin-#{$orientation}: $tiny;
       }
     }
 
     @if $small{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_small_#{$orientation},
+      &.move_#{$orientation}_small{
         margin-#{$orientation}: $small;
       }
     }
 
     @if $medium{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_medium_#{$orientation},
+      &.move_#{$orientation}_medium{
         margin-#{$orientation}: $medium;
       }
     }
 
     @if $large{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_large_#{$orientation},
+      &.move_#{$orientation}_large{
         margin-#{$orientation}: $large;
       }
     }
 
     @if $huge{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_huge_#{$orientation},
+      &.move_#{$orientation}_huge{
         margin-#{$orientation}: $huge;
       }
     }
 
     @if $giant{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      &.move_giant_#{$orientation},
+      &.move_#{$orientation}_giant{
         margin-#{$orientation}: $giant;
       }
     }
@@ -88,49 +88,49 @@
     }
 
     @if $tiny{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_tiny_#{$orientation},
+      &.move_in_#{$orientation}_tiny{
         padding-#{$orientation}: $tiny;
       }
     }
 
     @if $small{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_small_#{$orientation},
+      &.move_in_#{$orientation}_small{
         padding-#{$orientation}: $small;
       }
     }
 
     @if $medium{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_medium_#{$orientation},
+      &.move_in_#{$orientation}_medium{
         padding-#{$orientation}: $medium;
       }
     }
 
     @if $large{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_large_#{$orientation},
+      &.move_in_#{$orientation}_large{
         padding-#{$orientation}: $large;
       }
     }
 
     @if $huge{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_huge_#{$orientation},
+      &.move_in_#{$orientation}_huge{
         padding-#{$orientation}: $huge;
       }
     }
 
     @if $giant{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      &.move_in_giant_#{$orientation},
+      &.move_in_#{$orientation}_giant{
         padding-#{$orientation}: $giant;
       }
     }
 
-    &.move_clear_#{$orientation},
-    &.move_clean_#{$orientation},
+    &.move_in_clear_#{$orientation},
+    &.move_in_clean_#{$orientation},
     &.move_in_#{$orientation}_clear,
     &.move_in_#{$orientation}_clean { padding-#{$orientation}: 0; }
   }
@@ -243,15 +243,13 @@
 //Spacer generate sizes based on scheme
 @mixin spacer_sizes_generate(){
 
-  @each $size in $spacer_sizes{
-    $name:   nth($size, 1);
-    $height: nth($size, 2);
+  @each $key, $values in $spacer_sizes{
 
-    @if $name == default{
-        height: $height;
+    @if $key == default{
+      height: $values;
     }@else{
-      &.height_#{$name}{
-        height: $height;
+      &.height_#{$key}{
+        height: $values;
       }
 
     }
