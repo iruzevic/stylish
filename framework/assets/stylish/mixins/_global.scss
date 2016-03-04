@@ -3,14 +3,18 @@
 
 
 //Move - margin (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin move($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
+@mixin move($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
 
   @if $orientation{
 
     @if $default{
-      &.move_default_#{$orientation},
-      &.move_#{$orientation}_default{
+      @if $default_show{
         margin-#{$orientation}: $default;
+      }@else{
+        &.move_default_#{$orientation},
+        &.move_#{$orientation}_default{
+          margin-#{$orientation}: $default;
+        }
       }
     }
 
@@ -68,14 +72,18 @@
 
 
 //Move In - padding (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin move_in($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
+@mixin move_in($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
 
   @if $orientation{
 
     @if $default{
-      &.move_in_default_#{$orientation},
-      &.move_in_#{$orientation}_default{
+      @if $default_show{
         padding-#{$orientation}: $default;
+      }@else{
+        &.move_in_default_#{$orientation},
+        &.move_in_#{$orientation}_default{
+          padding-#{$orientation}: $default;
+        }
       }
     }
 
@@ -134,9 +142,13 @@
 
 
 //Border
-@mixin border($position:false, $width:false, $style:false, $color:false){
+@mixin border($position:false, $width:false, $style:false, $color:false, $default_show:false){
   @if $position AND $width AND $style AND $color{
-    &.border_#{$position}{ border-#{$position}: $width $style $color; }
+    @if $default_show{
+      border-#{$position}: $width $style $color;
+    }@else{
+      &.border_#{$position}{ border-#{$position}: $width $style $color; }
+    }
   }
 }
 
@@ -145,11 +157,16 @@
 
 
 //Height (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin height($default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false ){
+@mixin height($default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
 
   @if $default{
-    &.height_default{
+    @if $default_show{
       height: $default;
+    } @else {
+      &.height_default{
+        height: $default;
+      }
+
     }
   }
 
@@ -217,4 +234,27 @@
     &[data-bg-v="center"] { background-position: right center;}
     &[data-bg-v="bottom"] { background-position: right bottom;}
   }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+//Spacer generate sizes based on scheme
+@mixin spacer_sizes_generate(){
+
+  @each $size in $spacer_sizes{
+    $name:   nth($size, 1);
+    $height: nth($size, 2);
+
+    @if $name == default{
+        height: $height;
+    }@else{
+      &.height_#{$name}{
+        height: $height;
+      }
+
+    }
+  }
+
 }

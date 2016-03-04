@@ -24,13 +24,18 @@
             <a href="<?php echo $forms_link ?>"><i class="sy_Forms"></i>Forms*</a>
             <ul class="drop">
                 <li><a class="scroll_to" href="#Forms">Forms</a></li>
-                <li><a class="scroll_to" href="#Forms_Large">Form Large</a></li>
-                <li><a class="scroll_to" href="#Forms_Small">Form Small</a></li>
                 <li><a class="scroll_to" href="#Select">Select</a></li>
                 <li><a class="scroll_to" href="#Radio">Radio</a></li>
                 <li><a class="scroll_to" href="#Checkbox">Checkbox</a></li>
                 <li><a class="scroll_to" href="#Upload">Upload</a></li>
                 <li><a class="scroll_to" href="#Error">Error</a></li>
+                <li><a class="scroll_to" href="#Forms_Giant">Form Giant</a></li>
+                <li><a class="scroll_to" href="#Forms_Huge">Form Huge</a></li>
+                <li><a class="scroll_to" href="#Forms_Large">Form Large</a></li>
+                <li><a class="scroll_to" href="#Forms_Default">Form Default</a></li>
+                <li><a class="scroll_to" href="#Forms_Medium">Form Medium</a></li>
+                <li><a class="scroll_to" href="#Forms_Small">Form Small</a></li>
+                <li><a class="scroll_to" href="#Forms_Tiny">Form Tiny</a></li>
             </ul>
         </li>
         <li data-has-drop="true">

@@ -18,10 +18,6 @@ module.exports = function(grunt){
 
     //Js files to combine
     var $jsFiles = [
-        $jsDir + 'modernizr.min.js',
-        $jsDir + 'equalHeight.min.js',
-        $jsDir + 'placeholder.min.js',
-        $jsDir + 'script.js',
         $jsDir + 'custom.js',
         $jsDir + 'syntaxhighlighter/shCore.js',
         $jsDir + 'syntaxhighlighter/shBrushJScript.js',

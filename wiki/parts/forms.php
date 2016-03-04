@@ -1,9 +1,9 @@
 <?php include('../content/head.php') ?>
 <?php include('../content/header.php') ?>
 
-    <div class="block move_clear_bottom" id="Forms">
+    <div class="block " id="Forms">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Regular Size</h1>
+            <h1 class="title ">Regular Size</h1>
             <p class="subtitle">Standard multi-column responsive form - medium input field size</p>
         </div>
         <div class="b_content">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </form>
-            <div class="spacer move_small"></div>
+            <div class="spacer"></div>
             <pre class="brush: xml;">
                <form action="" method="">
                    <div class="field">
@@ -41,95 +41,11 @@
         </div>
     </div>
 
-    <div class="divider border_bottom"></div>
+    <div class="divider"></div>
 
-    <div class="block move_clear_bottom" id="Forms_Large">
+    <div class="block " id="Select">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Large Size</h1>
-            <p class="subtitle">Standard multi-column responsive form - large input field size</p>
-        </div>
-        <div class="b_content">
-            <form class="input_large">
-                <div class="grid_fluid">
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="text">Text Field Label</label>
-                            <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
-                        </div>
-                    </div>
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="tel">Phone Field Label</label>
-                            <input type="tel" value="" placeholder="Placeholder phone" name="tel" id="tel" />
-                        </div>
-                    </div>
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="email">Email Field Label</label>
-                            <input type="email" value="" placeholder="Placeholder email" name="email" id="email" />
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="spacer move_small"></div>
-            <pre class="brush: xml;">
-               <form action="" method="" class="input_large">
-                   <div class="field">
-                       <label for="text">Text Field Label</label>
-                       <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
-                   </div>
-               </form>
-            </pre>
-        </div>
-    </div>
-
-    <div class="divider border_bottom"></div>
-
-    <div class="block move_clear_bottom" id="Forms_Small">
-        <div class="b_title">
-            <h1 class="title move_small_bottom">Small Size</h1>
-            <p class="subtitle">Standard multi-column responsive form - small input field size</p>
-        </div>
-        <div class="b_content">
-            <form class="input_small">
-                <div class="grid_fluid">
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="text">Text Field Label</label>
-                            <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
-                        </div>
-                    </div>
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="tel">Phone Field Label</label>
-                            <input type="tel" value="" placeholder="Placeholder phone" name="tel" id="tel" />
-                        </div>
-                    </div>
-                    <div class="col_l_4">
-                        <div class="field">
-                            <label for="email">Email Field Label</label>
-                            <input type="email" value="" placeholder="Placeholder email" name="email" id="email" />
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="spacer move_small"></div>
-            <pre class="brush: xml;">
-               <form action="" method="" class="input_small">
-                   <div class="field">
-                       <label for="text">Text Field Label</label>
-                       <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
-                   </div>
-               </form>
-            </pre>
-        </div>
-    </div>
-
-    <div class="divider border_bottom"></div>
-
-    <div class="block move_clear_bottom" id="Select">
-        <div class="b_title">
-            <h1 class="title move_small_bottom">Select</h1>
+            <h1 class="title ">Select</h1>
             <p class="subtitle">Standard responsive drop-down menu with support for keyboard shortcuts</p>
         </div>
         <div class="b_content">
@@ -144,7 +60,7 @@
                     </select>
                 </div>
             </form>
-            <div class="spacer move_small"></div>
+            <div class="spacer"></div>
             <pre class="brush: xml;">
                <form action="" method="">
                    <div class="field">
@@ -161,13 +77,13 @@
         </div>
     </div>
 
-    <div class="divider border_bottom"></div>
+    <div class="divider"></div>
 
     <div class="grid_fluid">
         <div class="col_l_6">
-            <div class="block move_clear_bottom" id="Checkbox">
+            <div class="block " id="Checkbox">
                 <div class="b_title">
-                    <h1 class="title move_small_bottom">Checkbox</h1>
+                    <h1 class="title ">Checkbox</h1>
                     <p class="subtitle">Standard responsive checkbox-type input with support for keyboard shortcuts - use Space key to toggle the state</p>
                 </div>
                 <div class="b_content">
@@ -197,7 +113,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="spacer move_small"></div>
+                    <div class="spacer"></div>
                     <pre class="brush: xml;">
                         <div class="checkbox">
                             <input type="checkbox" id="card1" name="card_name1" />
@@ -218,9 +134,9 @@
             </div>
         </div>
         <div class="col_l_6">
-            <div class="block move_clear_bottom" id="Radio">
+            <div class="block " id="Radio">
                 <div class="b_title">
-                    <h1 class="title move_small_bottom">Radio</h1>
+                    <h1 class="title ">Radio</h1>
                     <p class="subtitle">Standard responsive radio button input with support for keyboard shortcuts - use arrow keys to navigate</p>
                 </div>
                 <div class="b_content">
@@ -250,7 +166,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="spacer move_small"></div>
+                    <div class="spacer"></div>
                     <pre class="brush: xml;">
                         <div class="radio" data-group="radio_name">
                             <input type="radio" name="radio_name" id="radio2"  />
@@ -272,11 +188,11 @@
         </div>
     </div>
 
-    <div class="divider border_bottom"></div>
+    <div class="divider"></div>
 
-    <div class="block move_clear_bottom" id="Upload">
+    <div class="block " id="Upload">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Upload</h1>
+            <h1 class="title ">Upload</h1>
             <p class="subtitle">Standard responsive file upload dialog (triggered by a click on the field or the button)</p>
         </div>
         <div class="b_content">
@@ -298,7 +214,7 @@
                     </div>
                 </div>
             </form>
-            <div class="spacer move_small"></div>
+            <div class="spacer"></div>
             <pre class="brush: xml;">
                 <div class="upload">
                     <div class="grid_half">
@@ -318,11 +234,11 @@
         </div>
     </div>
 
-    <div class="divider border_bottom"></div>
+    <div class="divider"></div>
 
-    <div class="block move_clear_bottom" id="Error">
+    <div class="block " id="Error">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Input error</h1>
+            <h1 class="title ">Input error</h1>
             <p class="subtitle">Standard input field validation error message</p>
         </div>
         <div class="b_content">
@@ -333,7 +249,7 @@
                     <div class="error">Error message</div>
                 </div>
             </form>
-            <div class="spacer move_small"></div>
+            <div class="spacer"></div>
             <pre class="brush: xml;">
                 <div class="field">
                     <label for="text">Text Field Label</label>
@@ -343,6 +259,41 @@
             </pre>
         </div>
     </div>
+
+    <div class="divider"></div>
+
+    <?php
+    $sizes = ['giant', 'huge', 'large', 'default', 'medium', 'small', 'tiny'];
+    $i = 1; $count = count($sizes);
+    foreach($sizes as $size){ ?>
+
+        <div class="block" id="Forms_<?php echo ucfirst($size) ?>">
+            <div class="b_title">
+                <h1 class="title "><?php echo ucfirst($size) ?> Size</h1>
+                <p class="subtitle">Standard multi-column responsive form - <?php echo ucfirst($size) ?> input field size</p>
+            </div>
+            <div class="b_content">
+                <form class="input_<?php echo $size; ?>">
+                    <div class="field">
+                        <label for="text">Text Field Label</label>
+                        <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
+                    </div>
+                </form>
+                <div class="spacer"></div>
+                <pre class="brush: xml;">
+                   <form class="input_<?php echo $size; ?>">
+                       <div class="field">
+                           <label for="text">Text Field Label</label>
+                           <input type="text" value="" placeholder="Placeholder text" name="text" id="text" />
+                       </div>
+                   </form>
+                </pre>
+            </div>
+        </div>
+        <?php if($i < $count){ ?>
+            <div class="divider"></div>
+        <?php } ?>
+    <?php $i++; } ?>
 
 
 <?php include('../content/footer.php') ?>

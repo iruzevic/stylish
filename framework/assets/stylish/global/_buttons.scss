@@ -28,7 +28,7 @@ input[type=reset]{
   &.disabled, &:disabled{ }
 
   //Set button to full width
-  &.block{width: 100%; display: block;}
+  &.btn_block{width: 100%; display: block;}
 
   //Force btn not to break
   &.no_word_break{ word-break: normal }

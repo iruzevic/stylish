@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 4.1
+Version: 4.1.1
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -173,6 +173,7 @@ table.word_break td {
 /* MIXINS FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* GLOBAL */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -1687,7 +1688,7 @@ html {
 
 /* line 15, ../assets/stylish/global/_typography.scss */
 body {
-  color: #272727;
+  color: #373737;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -1697,10 +1698,10 @@ body {
 
 /* line 17, ../assets/stylish/global/_typography.scss */
 h1 {
-  font-size: 38px;
-  font-size: 2.11111rem;
-  line-height: 43px;
-  line-height: 2.38889rem;
+  font-size: 42px;
+  font-size: 2.33333rem;
+  line-height: 47px;
+  line-height: 2.61111rem;
 }
 
 /* line 18, ../assets/stylish/global/_typography.scss */
@@ -1777,7 +1778,7 @@ p, li {
 
 /* line 29, ../assets/stylish/global/_typography.scss */
 a:not(.btn) {
-  color: #cd3a3a;
+  color: #dd3501;
   text-decoration: none;
   cursor: pointer;
   -moz-transition: color 0.35s ease-in;
@@ -1787,11 +1788,11 @@ a:not(.btn) {
 }
 /* line 100, ../assets/stylish/mixins/_typography.scss */
 a:not(.btn):hover, a:not(.btn).active, a:not(.btn).current, a:not(.btn):focus {
-  color: #cd3a3a;
+  color: #912301;
 }
 /* line 102, ../assets/stylish/mixins/_typography.scss */
 a:not(.btn).disabled {
-  color: #cd3a3a;
+  color: #dd3501;
 }
 /* line 32, ../assets/stylish/global/_typography.scss */
 a:not(.btn).underline {
@@ -1810,10 +1811,10 @@ a:not(.btn).disabled {
 }
 /* line 46, ../assets/stylish/global/_typography.scss */
 .content_style h1 {
-  font-size: 38px;
-  font-size: 2.11111rem;
-  line-height: 43px;
-  line-height: 2.38889rem;
+  font-size: 42px;
+  font-size: 2.33333rem;
+  line-height: 47px;
+  line-height: 2.61111rem;
 }
 /* line 47, ../assets/stylish/global/_typography.scss */
 .content_style h2 {
@@ -1963,124 +1964,134 @@ a:not(.btn).disabled {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_sushi {
+  color: #dd3501;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
 .txt_mine_shaft {
-  color: #272727;
+  color: #373737;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_havelock_blue {
-  color: #3a89cd;
+.txt_tundora {
+  color: #474747;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_flush_mahogany {
-  color: #cd3a3a;
+.txt_chicago {
+  color: #5b5b59;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_emerald {
-  color: #3acd60;
-}
-
-/* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_earls_green {
-  color: #cdc43a;
-}
-
-/* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_amethyst {
-  color: #bd3acd;
-}
-
-/* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_raw_sienna {
-  color: #cd833a;
-}
-
-/* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_dove_gray {
-  color: #666666;
-}
-
-/* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_dove_gray_light {
-  color: #999999;
+.txt_gray {
+  color: #898989;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
 .txt_silver {
-  color: #c5c5c5;
+  color: #bbbbbb;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_mercury {
-  color: #e5e5e5;
+.txt_alto {
+  color: #dbdbdb;
 }
 
 /* line 219, ../assets/stylish/mixins/_typography.scss */
-.txt_white {
-  color: #ffffff;
+.txt_seashell {
+  color: #f1f1f1;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_gallery {
+  color: #eaeaea;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_pampas {
+  color: #f7f6f2;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_rust {
+  color: #a54c3b;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_astral {
+  color: #3b79a5;
+}
+
+/* line 219, ../assets/stylish/mixins/_typography.scss */
+.txt_turmeric {
+  color: #c7c545;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_sushi {
+  background-color: #dd3501;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
 .bg_mine_shaft {
-  background-color: #272727;
+  background-color: #373737;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_havelock_blue {
-  background-color: #3a89cd;
+.bg_tundora {
+  background-color: #474747;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_flush_mahogany {
-  background-color: #cd3a3a;
+.bg_chicago {
+  background-color: #5b5b59;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_emerald {
-  background-color: #3acd60;
-}
-
-/* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_earls_green {
-  background-color: #cdc43a;
-}
-
-/* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_amethyst {
-  background-color: #bd3acd;
-}
-
-/* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_raw_sienna {
-  background-color: #cd833a;
-}
-
-/* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_dove_gray {
-  background-color: #666666;
-}
-
-/* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_dove_gray_light {
-  background-color: #999999;
+.bg_gray {
+  background-color: #898989;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
 .bg_silver {
-  background-color: #c5c5c5;
+  background-color: #bbbbbb;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_mercury {
-  background-color: #e5e5e5;
+.bg_alto {
+  background-color: #dbdbdb;
 }
 
 /* line 236, ../assets/stylish/mixins/_typography.scss */
-.bg_white {
-  background-color: #ffffff;
+.bg_seashell {
+  background-color: #f1f1f1;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_gallery {
+  background-color: #eaeaea;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_pampas {
+  background-color: #f7f6f2;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_rust {
+  background-color: #a54c3b;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_astral {
+  background-color: #3b79a5;
+}
+
+/* line 236, ../assets/stylish/mixins/_typography.scss */
+.bg_turmeric {
+  background-color: #c7c545;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -2097,11 +2108,11 @@ input[type=datetime],
 input[type=search],
 textarea,
 select {
-  color: #272727;
+  color: #373737;
   background-color: #ffffff;
   border-width: 1px;
   border-style: solid;
-  border-color: #e5e5e5;
+  border-color: #dbdbdb;
   margin: 0;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -2138,9 +2149,9 @@ input[type=datetime]:focus,
 input[type=search]:focus,
 textarea:focus,
 select:focus {
-  -moz-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
+  -moz-box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
+  -webkit-box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
+  box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
 }
 
 /* line 19, ../assets/stylish/global/_forms.scss */
@@ -2151,32 +2162,32 @@ textarea {
 /* Stylize Placeholder */
 /* line 7, ../assets/stylish/mixins/_forms.scss */
 ::-webkit-input-placeholder {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* line 8, ../assets/stylish/mixins/_forms.scss */
 :-moz-placeholder {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* line 9, ../assets/stylish/mixins/_forms.scss */
 ::-moz-placeholder {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* line 10, ../assets/stylish/mixins/_forms.scss */
 :-ms-input-placeholder {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* line 11, ../assets/stylish/mixins/_forms.scss */
 .placeholder {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* line 12, ../assets/stylish/mixins/_forms.scss */
 .placeholderjs {
-  color: #e5e5e5;
+  color: #dbdbdb;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -2853,7 +2864,7 @@ select {
 /* line 38, ../assets/stylish/global/_forms.scss */
 .select {
   position: relative;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #dbdbdb;
   cursor: pointer;
   overflow: hidden;
   background-color: #ffffff;
@@ -2869,7 +2880,7 @@ select {
   top: 50%;
   z-index: 5;
   text-align: center;
-  color: #272727;
+  color: #373737;
 }
 /* line 42, ../assets/stylish/global/_forms.scss */
 .select select {
@@ -2892,9 +2903,9 @@ select {
 }
 /* line 48, ../assets/stylish/global/_forms.scss */
 .select.focus {
-  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  -moz-box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
+  -webkit-box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
+  box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -2943,9 +2954,9 @@ select {
 .checkbox.focus .checkbox_icon,
 .checkbox.focus .radio_icon, .radio.focus .checkbox_icon,
 .radio.focus .radio_icon {
-  -moz-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.3) 0 0 10px;
+  -moz-box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
+  -webkit-box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
+  box-shadow: rgba(221, 53, 1, 0.3) 0 0 10px;
 }
 /* line 84, ../assets/stylish/global/_forms.scss */
 .checkbox input[type=checkbox],
@@ -2966,27 +2977,27 @@ select {
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
-  border-color: #e5e5e5;
+  border-color: #dbdbdb;
 }
 /* line 96, ../assets/stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
-  color: #cd3a3a;
+  color: #dd3501;
 }
 /* line 103, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
-  background-color: #e5e5e5;
-  color: #e5e5e5;
+  background-color: #dbdbdb;
+  color: #dbdbdb;
 }
 /* line 105, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
-  color: #cd3a3a;
+  color: #dd3501;
 }
 
 /* Setup custom radio input */
 /* line 114, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
-  border-color: #e5e5e5;
+  border-color: #dbdbdb;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -2999,11 +3010,11 @@ select {
 }
 /* line 121, ../assets/stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
-  background-color: #cd3a3a;
+  background-color: #dd3501;
 }
 /* line 128, ../assets/stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
-  background-color: #e5e5e5;
+  background-color: #dbdbdb;
 }
 
 /* line 136, ../assets/stylish/global/_forms.scss */
@@ -3037,23 +3048,19 @@ html.show_input .radio input[type=radio] {
 /* Setup forms layout */
 /* line 157, ../assets/stylish/global/_forms.scss */
 form .field, .form .field {
-  margin-bottom: 20px;
   position: relative;
   list-style: none;
+  margin-bottom: 20px;
 }
-/* line 159, ../assets/stylish/global/_forms.scss */
-form .field.large, .form .field.large {
-  margin-bottom: 40px;
+/* line 63, ../assets/stylish/mixins/_global.scss */
+form .field.move_clear_bottom, form .field.move_clean_bottom, form .field.move_bottom_clear, form .field.move_bottom_clean, .form .field.move_clear_bottom, .form .field.move_clean_bottom, .form .field.move_bottom_clear, .form .field.move_bottom_clean {
+  margin-bottom: 0;
 }
 /* line 160, ../assets/stylish/global/_forms.scss */
-form .field.small, .form .field.small {
-  margin-bottom: 10px;
-}
-/* line 161, ../assets/stylish/global/_forms.scss */
 form .field.last, .form .field.last {
   margin-bottom: 0;
 }
-/* line 165, ../assets/stylish/global/_forms.scss */
+/* line 164, ../assets/stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
@@ -3062,20 +3069,20 @@ form .field label.required:after, .form .field[data-required="true"] label:after
   font-size: 0.77778rem;
   padding-left: 3px;
 }
-/* line 168, ../assets/stylish/global/_forms.scss */
+/* line 167, ../assets/stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
   font-size: 1rem;
 }
-/* line 172, ../assets/stylish/global/_forms.scss */
+/* line 171, ../assets/stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 179, ../assets/stylish/global/_forms.scss */
+/* line 178, ../assets/stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
@@ -3084,20 +3091,20 @@ form .field .radio label, form .field.radio label, .form .field .checkbox label,
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 184, ../assets/stylish/global/_forms.scss */
+/* line 183, ../assets/stylish/global/_forms.scss */
 form .label_correction, .form .label_correction {
   padding-top: 5px;
 }
-/* line 187, ../assets/stylish/global/_forms.scss */
+/* line 186, ../assets/stylish/global/_forms.scss */
 form .validation-advice,
 form .error, .form .validation-advice,
 .form .error {
-  color: #cd3a3a;
+  color: #f2a89c;
   font-size: 14px;
   font-size: 0.77778rem;
   margin-top: 10px;
 }
-/* line 190, ../assets/stylish/global/_forms.scss */
+/* line 189, ../assets/stylish/global/_forms.scss */
 form .validation-advice:before,
 form .error:before, .form .validation-advice:before,
 .form .error:before {
@@ -3119,7 +3126,7 @@ input[type=reset] {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   text-align: center;
   width: auto;
@@ -3139,11 +3146,11 @@ input[type=reset] {
   transition: all 0.35s ease-in;
   height: 40px;
   font-size: 16px;
-  line-height: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  line-height: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
   /* Buttons Colors */
 }
@@ -3153,13 +3160,13 @@ button.btn_tiny,
 input[type=submit].btn_tiny,
 input[type=button].btn_tiny,
 input[type=reset].btn_tiny {
-  height: 40px;
-  font-size: 16px;
+  height: 20px;
+  font-size: 10px;
   line-height: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_tiny,
@@ -3167,8 +3174,8 @@ button.btn_tiny.btn_move_in_h_tiny,
 input[type=submit].btn_tiny.btn_move_in_h_tiny,
 input[type=button].btn_tiny.btn_move_in_h_tiny,
 input[type=reset].btn_tiny.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_small,
@@ -3176,8 +3183,8 @@ button.btn_tiny.btn_move_in_h_small,
 input[type=submit].btn_tiny.btn_move_in_h_small,
 input[type=button].btn_tiny.btn_move_in_h_small,
 input[type=reset].btn_tiny.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_medium,
@@ -3194,8 +3201,8 @@ button.btn_tiny.btn_move_in_h_default,
 input[type=submit].btn_tiny.btn_move_in_h_default,
 input[type=button].btn_tiny.btn_move_in_h_default,
 input[type=reset].btn_tiny.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_large,
@@ -3203,8 +3210,8 @@ button.btn_tiny.btn_move_in_h_large,
 input[type=submit].btn_tiny.btn_move_in_h_large,
 input[type=button].btn_tiny.btn_move_in_h_large,
 input[type=reset].btn_tiny.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_huge,
@@ -3212,8 +3219,8 @@ button.btn_tiny.btn_move_in_h_huge,
 input[type=submit].btn_tiny.btn_move_in_h_huge,
 input[type=button].btn_tiny.btn_move_in_h_huge,
 input[type=reset].btn_tiny.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_tiny.btn_move_in_h_giant,
@@ -3221,8 +3228,8 @@ button.btn_tiny.btn_move_in_h_giant,
 input[type=submit].btn_tiny.btn_move_in_h_giant,
 input[type=button].btn_tiny.btn_move_in_h_giant,
 input[type=reset].btn_tiny.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 90, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small,
@@ -3230,13 +3237,13 @@ button.btn_small,
 input[type=submit].btn_small,
 input[type=button].btn_small,
 input[type=reset].btn_small {
-  height: 40px;
-  font-size: 16px;
-  line-height: 10px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 12px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_tiny,
@@ -3244,8 +3251,8 @@ button.btn_small.btn_move_in_h_tiny,
 input[type=submit].btn_small.btn_move_in_h_tiny,
 input[type=button].btn_small.btn_move_in_h_tiny,
 input[type=reset].btn_small.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_small,
@@ -3253,8 +3260,8 @@ button.btn_small.btn_move_in_h_small,
 input[type=submit].btn_small.btn_move_in_h_small,
 input[type=button].btn_small.btn_move_in_h_small,
 input[type=reset].btn_small.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_medium,
@@ -3271,8 +3278,8 @@ button.btn_small.btn_move_in_h_default,
 input[type=submit].btn_small.btn_move_in_h_default,
 input[type=button].btn_small.btn_move_in_h_default,
 input[type=reset].btn_small.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_large,
@@ -3280,8 +3287,8 @@ button.btn_small.btn_move_in_h_large,
 input[type=submit].btn_small.btn_move_in_h_large,
 input[type=button].btn_small.btn_move_in_h_large,
 input[type=reset].btn_small.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_huge,
@@ -3289,8 +3296,8 @@ button.btn_small.btn_move_in_h_huge,
 input[type=submit].btn_small.btn_move_in_h_huge,
 input[type=button].btn_small.btn_move_in_h_huge,
 input[type=reset].btn_small.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_small.btn_move_in_h_giant,
@@ -3298,8 +3305,8 @@ button.btn_small.btn_move_in_h_giant,
 input[type=submit].btn_small.btn_move_in_h_giant,
 input[type=button].btn_small.btn_move_in_h_giant,
 input[type=reset].btn_small.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 90, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium,
@@ -3307,13 +3314,13 @@ button.btn_medium,
 input[type=submit].btn_medium,
 input[type=button].btn_medium,
 input[type=reset].btn_medium {
-  height: 40px;
-  font-size: 16px;
-  line-height: 10px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 14px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_tiny,
@@ -3321,8 +3328,8 @@ button.btn_medium.btn_move_in_h_tiny,
 input[type=submit].btn_medium.btn_move_in_h_tiny,
 input[type=button].btn_medium.btn_move_in_h_tiny,
 input[type=reset].btn_medium.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_small,
@@ -3330,8 +3337,8 @@ button.btn_medium.btn_move_in_h_small,
 input[type=submit].btn_medium.btn_move_in_h_small,
 input[type=button].btn_medium.btn_move_in_h_small,
 input[type=reset].btn_medium.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_medium,
@@ -3348,8 +3355,8 @@ button.btn_medium.btn_move_in_h_default,
 input[type=submit].btn_medium.btn_move_in_h_default,
 input[type=button].btn_medium.btn_move_in_h_default,
 input[type=reset].btn_medium.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_large,
@@ -3357,8 +3364,8 @@ button.btn_medium.btn_move_in_h_large,
 input[type=submit].btn_medium.btn_move_in_h_large,
 input[type=button].btn_medium.btn_move_in_h_large,
 input[type=reset].btn_medium.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_huge,
@@ -3366,8 +3373,8 @@ button.btn_medium.btn_move_in_h_huge,
 input[type=submit].btn_medium.btn_move_in_h_huge,
 input[type=button].btn_medium.btn_move_in_h_huge,
 input[type=reset].btn_medium.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_medium.btn_move_in_h_giant,
@@ -3375,8 +3382,8 @@ button.btn_medium.btn_move_in_h_giant,
 input[type=submit].btn_medium.btn_move_in_h_giant,
 input[type=button].btn_medium.btn_move_in_h_giant,
 input[type=reset].btn_medium.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_tiny,
@@ -3384,8 +3391,8 @@ button.btn_move_in_h_tiny,
 input[type=submit].btn_move_in_h_tiny,
 input[type=button].btn_move_in_h_tiny,
 input[type=reset].btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_small,
@@ -3393,8 +3400,8 @@ button.btn_move_in_h_small,
 input[type=submit].btn_move_in_h_small,
 input[type=button].btn_move_in_h_small,
 input[type=reset].btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_medium,
@@ -3411,8 +3418,8 @@ button.btn_move_in_h_default,
 input[type=submit].btn_move_in_h_default,
 input[type=button].btn_move_in_h_default,
 input[type=reset].btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_large,
@@ -3420,8 +3427,8 @@ button.btn_move_in_h_large,
 input[type=submit].btn_move_in_h_large,
 input[type=button].btn_move_in_h_large,
 input[type=reset].btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_huge,
@@ -3429,8 +3436,8 @@ button.btn_move_in_h_huge,
 input[type=submit].btn_move_in_h_huge,
 input[type=button].btn_move_in_h_huge,
 input[type=reset].btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 86, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_move_in_h_giant,
@@ -3438,8 +3445,8 @@ button.btn_move_in_h_giant,
 input[type=submit].btn_move_in_h_giant,
 input[type=button].btn_move_in_h_giant,
 input[type=reset].btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 90, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large,
@@ -3447,13 +3454,13 @@ button.btn_large,
 input[type=submit].btn_large,
 input[type=button].btn_large,
 input[type=reset].btn_large {
-  height: 40px;
-  font-size: 16px;
-  line-height: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 45px;
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_tiny,
@@ -3461,8 +3468,8 @@ button.btn_large.btn_move_in_h_tiny,
 input[type=submit].btn_large.btn_move_in_h_tiny,
 input[type=button].btn_large.btn_move_in_h_tiny,
 input[type=reset].btn_large.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_small,
@@ -3470,8 +3477,8 @@ button.btn_large.btn_move_in_h_small,
 input[type=submit].btn_large.btn_move_in_h_small,
 input[type=button].btn_large.btn_move_in_h_small,
 input[type=reset].btn_large.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_medium,
@@ -3488,8 +3495,8 @@ button.btn_large.btn_move_in_h_default,
 input[type=submit].btn_large.btn_move_in_h_default,
 input[type=button].btn_large.btn_move_in_h_default,
 input[type=reset].btn_large.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_large,
@@ -3497,8 +3504,8 @@ button.btn_large.btn_move_in_h_large,
 input[type=submit].btn_large.btn_move_in_h_large,
 input[type=button].btn_large.btn_move_in_h_large,
 input[type=reset].btn_large.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_huge,
@@ -3506,8 +3513,8 @@ button.btn_large.btn_move_in_h_huge,
 input[type=submit].btn_large.btn_move_in_h_huge,
 input[type=button].btn_large.btn_move_in_h_huge,
 input[type=reset].btn_large.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_large.btn_move_in_h_giant,
@@ -3515,8 +3522,8 @@ button.btn_large.btn_move_in_h_giant,
 input[type=submit].btn_large.btn_move_in_h_giant,
 input[type=button].btn_large.btn_move_in_h_giant,
 input[type=reset].btn_large.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 90, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge,
@@ -3524,13 +3531,13 @@ button.btn_huge,
 input[type=submit].btn_huge,
 input[type=button].btn_huge,
 input[type=reset].btn_huge {
-  height: 40px;
-  font-size: 16px;
-  line-height: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_tiny,
@@ -3538,8 +3545,8 @@ button.btn_huge.btn_move_in_h_tiny,
 input[type=submit].btn_huge.btn_move_in_h_tiny,
 input[type=button].btn_huge.btn_move_in_h_tiny,
 input[type=reset].btn_huge.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_small,
@@ -3547,8 +3554,8 @@ button.btn_huge.btn_move_in_h_small,
 input[type=submit].btn_huge.btn_move_in_h_small,
 input[type=button].btn_huge.btn_move_in_h_small,
 input[type=reset].btn_huge.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_medium,
@@ -3565,8 +3572,8 @@ button.btn_huge.btn_move_in_h_default,
 input[type=submit].btn_huge.btn_move_in_h_default,
 input[type=button].btn_huge.btn_move_in_h_default,
 input[type=reset].btn_huge.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_large,
@@ -3574,8 +3581,8 @@ button.btn_huge.btn_move_in_h_large,
 input[type=submit].btn_huge.btn_move_in_h_large,
 input[type=button].btn_huge.btn_move_in_h_large,
 input[type=reset].btn_huge.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_huge,
@@ -3583,8 +3590,8 @@ button.btn_huge.btn_move_in_h_huge,
 input[type=submit].btn_huge.btn_move_in_h_huge,
 input[type=button].btn_huge.btn_move_in_h_huge,
 input[type=reset].btn_huge.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_huge.btn_move_in_h_giant,
@@ -3592,8 +3599,8 @@ button.btn_huge.btn_move_in_h_giant,
 input[type=submit].btn_huge.btn_move_in_h_giant,
 input[type=button].btn_huge.btn_move_in_h_giant,
 input[type=reset].btn_huge.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 90, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant,
@@ -3601,13 +3608,13 @@ button.btn_giant,
 input[type=submit].btn_giant,
 input[type=button].btn_giant,
 input[type=reset].btn_giant {
-  height: 40px;
-  font-size: 16px;
-  line-height: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 55px;
+  font-size: 22px;
+  line-height: 22px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_tiny,
@@ -3615,8 +3622,8 @@ button.btn_giant.btn_move_in_h_tiny,
 input[type=submit].btn_giant.btn_move_in_h_tiny,
 input[type=button].btn_giant.btn_move_in_h_tiny,
 input[type=reset].btn_giant.btn_move_in_h_tiny {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_small,
@@ -3624,8 +3631,8 @@ button.btn_giant.btn_move_in_h_small,
 input[type=submit].btn_giant.btn_move_in_h_small,
 input[type=button].btn_giant.btn_move_in_h_small,
 input[type=reset].btn_giant.btn_move_in_h_small {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_medium,
@@ -3642,8 +3649,8 @@ button.btn_giant.btn_move_in_h_default,
 input[type=submit].btn_giant.btn_move_in_h_default,
 input[type=button].btn_giant.btn_move_in_h_default,
 input[type=reset].btn_giant.btn_move_in_h_default {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_large,
@@ -3651,8 +3658,8 @@ button.btn_giant.btn_move_in_h_large,
 input[type=submit].btn_giant.btn_move_in_h_large,
 input[type=button].btn_giant.btn_move_in_h_large,
 input[type=reset].btn_giant.btn_move_in_h_large {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_huge,
@@ -3660,8 +3667,8 @@ button.btn_giant.btn_move_in_h_huge,
 input[type=submit].btn_giant.btn_move_in_h_huge,
 input[type=button].btn_giant.btn_move_in_h_huge,
 input[type=reset].btn_giant.btn_move_in_h_huge {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /* line 99, ../assets/stylish/mixins/_buttons.scss */
 .btn.btn_giant.btn_move_in_h_giant,
@@ -3669,8 +3676,8 @@ button.btn_giant.btn_move_in_h_giant,
 input[type=submit].btn_giant.btn_move_in_h_giant,
 input[type=button].btn_giant.btn_move_in_h_giant,
 input[type=reset].btn_giant.btn_move_in_h_giant {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 /* line 19, ../assets/stylish/global/_buttons.scss */
 .btn:focus,
@@ -3678,9 +3685,9 @@ button:focus,
 input[type=submit]:focus,
 input[type=button]:focus,
 input[type=reset]:focus {
-  -moz-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
-  -webkit-box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
-  box-shadow: rgba(205, 58, 58, 0.2) 0 0 10px;
+  -moz-box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
+  -webkit-box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
+  box-shadow: rgba(221, 53, 1, 0.2) 0 0 10px;
 }
 /* line 22, ../assets/stylish/global/_buttons.scss */
 .btn.no_radius,
@@ -3703,11 +3710,11 @@ input[type=reset].rounded {
   border-radius: 20px;
 }
 /* line 31, ../assets/stylish/global/_buttons.scss */
-.btn.block,
-button.block,
-input[type=submit].block,
-input[type=button].block,
-input[type=reset].block {
+.btn.btn_block,
+button.btn_block,
+input[type=submit].btn_block,
+input[type=button].btn_block,
+input[type=reset].btn_block {
   width: 100%;
   display: block;
 }
@@ -3774,60 +3781,116 @@ input[type=reset].btn_icon_right .icon {
   margin-left: 10px;
 }
 /* line 38, ../assets/stylish/mixins/_buttons.scss */
-.btn.btn_btn_mine_shaft,
-button.btn_btn_mine_shaft,
-input[type=submit].btn_btn_mine_shaft,
-input[type=button].btn_btn_mine_shaft,
-input[type=reset].btn_btn_mine_shaft {
-  background-color: #272727;
+.btn.btn_mine_shaft,
+button.btn_mine_shaft,
+input[type=submit].btn_mine_shaft,
+input[type=button].btn_mine_shaft,
+input[type=reset].btn_mine_shaft {
+  background-color: #373737;
   color: #ffffff;
-  border-color: #272727;
+  border-color: #373737;
 }
 /* line 14, ../assets/stylish/mixins/_buttons.scss */
-.btn.btn_btn_mine_shaft:hover, .btn.btn_btn_mine_shaft.active, .btn.btn_btn_mine_shaft.current,
-button.btn_btn_mine_shaft:hover,
-button.btn_btn_mine_shaft.active,
-button.btn_btn_mine_shaft.current,
-input[type=submit].btn_btn_mine_shaft:hover,
-input[type=submit].btn_btn_mine_shaft.active,
-input[type=submit].btn_btn_mine_shaft.current,
-input[type=button].btn_btn_mine_shaft:hover,
-input[type=button].btn_btn_mine_shaft.active,
-input[type=button].btn_btn_mine_shaft.current,
-input[type=reset].btn_btn_mine_shaft:hover,
-input[type=reset].btn_btn_mine_shaft.active,
-input[type=reset].btn_btn_mine_shaft.current {
-  background-color: #282828;
-  color: #ffffff;
-  border-color: #282828;
+.btn.btn_mine_shaft:hover, .btn.btn_mine_shaft.active, .btn.btn_mine_shaft.current,
+button.btn_mine_shaft:hover,
+button.btn_mine_shaft.active,
+button.btn_mine_shaft.current,
+input[type=submit].btn_mine_shaft:hover,
+input[type=submit].btn_mine_shaft.active,
+input[type=submit].btn_mine_shaft.current,
+input[type=button].btn_mine_shaft:hover,
+input[type=button].btn_mine_shaft.active,
+input[type=button].btn_mine_shaft.current,
+input[type=reset].btn_mine_shaft:hover,
+input[type=reset].btn_mine_shaft.active,
+input[type=reset].btn_mine_shaft.current {
+  background-color: transparent;
+  color: #373737;
+  border-color: #373737;
 }
 /* line 38, ../assets/stylish/mixins/_buttons.scss */
-.btn.btn_btn_mine_shaft_inverse,
-button.btn_btn_mine_shaft_inverse,
-input[type=submit].btn_btn_mine_shaft_inverse,
-input[type=button].btn_btn_mine_shaft_inverse,
-input[type=reset].btn_btn_mine_shaft_inverse {
-  background-color: #272727;
-  color: #ffffff;
-  border-color: #272727;
+.btn.btn_mine_shaft_border,
+button.btn_mine_shaft_border,
+input[type=submit].btn_mine_shaft_border,
+input[type=button].btn_mine_shaft_border,
+input[type=reset].btn_mine_shaft_border {
+  background-color: transparent;
+  color: #373737;
+  border-color: #373737;
 }
 /* line 14, ../assets/stylish/mixins/_buttons.scss */
-.btn.btn_btn_mine_shaft_inverse:hover, .btn.btn_btn_mine_shaft_inverse.active, .btn.btn_btn_mine_shaft_inverse.current,
-button.btn_btn_mine_shaft_inverse:hover,
-button.btn_btn_mine_shaft_inverse.active,
-button.btn_btn_mine_shaft_inverse.current,
-input[type=submit].btn_btn_mine_shaft_inverse:hover,
-input[type=submit].btn_btn_mine_shaft_inverse.active,
-input[type=submit].btn_btn_mine_shaft_inverse.current,
-input[type=button].btn_btn_mine_shaft_inverse:hover,
-input[type=button].btn_btn_mine_shaft_inverse.active,
-input[type=button].btn_btn_mine_shaft_inverse.current,
-input[type=reset].btn_btn_mine_shaft_inverse:hover,
-input[type=reset].btn_btn_mine_shaft_inverse.active,
-input[type=reset].btn_btn_mine_shaft_inverse.current {
-  background-color: #282828;
+.btn.btn_mine_shaft_border:hover, .btn.btn_mine_shaft_border.active, .btn.btn_mine_shaft_border.current,
+button.btn_mine_shaft_border:hover,
+button.btn_mine_shaft_border.active,
+button.btn_mine_shaft_border.current,
+input[type=submit].btn_mine_shaft_border:hover,
+input[type=submit].btn_mine_shaft_border.active,
+input[type=submit].btn_mine_shaft_border.current,
+input[type=button].btn_mine_shaft_border:hover,
+input[type=button].btn_mine_shaft_border.active,
+input[type=button].btn_mine_shaft_border.current,
+input[type=reset].btn_mine_shaft_border:hover,
+input[type=reset].btn_mine_shaft_border.active,
+input[type=reset].btn_mine_shaft_border.current {
+  background-color: #373737;
   color: #ffffff;
-  border-color: #282828;
+  border-color: #373737;
+}
+/* line 38, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_sushi,
+button.btn_sushi,
+input[type=submit].btn_sushi,
+input[type=button].btn_sushi,
+input[type=reset].btn_sushi {
+  background-color: #dd3501;
+  color: #ffffff;
+  border-color: #dd3501;
+}
+/* line 14, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_sushi:hover, .btn.btn_sushi.active, .btn.btn_sushi.current,
+button.btn_sushi:hover,
+button.btn_sushi.active,
+button.btn_sushi.current,
+input[type=submit].btn_sushi:hover,
+input[type=submit].btn_sushi.active,
+input[type=submit].btn_sushi.current,
+input[type=button].btn_sushi:hover,
+input[type=button].btn_sushi.active,
+input[type=button].btn_sushi.current,
+input[type=reset].btn_sushi:hover,
+input[type=reset].btn_sushi.active,
+input[type=reset].btn_sushi.current {
+  background-color: transparent;
+  color: #dd3501;
+  border-color: #dd3501;
+}
+/* line 38, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_sushi_border,
+button.btn_sushi_border,
+input[type=submit].btn_sushi_border,
+input[type=button].btn_sushi_border,
+input[type=reset].btn_sushi_border {
+  background-color: transparent;
+  color: #dd3501;
+  border-color: #dd3501;
+}
+/* line 14, ../assets/stylish/mixins/_buttons.scss */
+.btn.btn_sushi_border:hover, .btn.btn_sushi_border.active, .btn.btn_sushi_border.current,
+button.btn_sushi_border:hover,
+button.btn_sushi_border.active,
+button.btn_sushi_border.current,
+input[type=submit].btn_sushi_border:hover,
+input[type=submit].btn_sushi_border.active,
+input[type=submit].btn_sushi_border.current,
+input[type=button].btn_sushi_border:hover,
+input[type=button].btn_sushi_border.active,
+input[type=button].btn_sushi_border.current,
+input[type=reset].btn_sushi_border:hover,
+input[type=reset].btn_sushi_border.active,
+input[type=reset].btn_sushi_border.current {
+  background-color: #dd3501;
+  color: #ffffff;
+  border-color: #dd3501;
 }
 
 /* GRID */
@@ -3939,7 +4002,7 @@ input[type=reset].btn_btn_mine_shaft_inverse.current {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 6, ../assets/stylish/components/_accordion.scss */
 .accordion .a_head {
-  background-color: #c5c5c5;
+  background-color: #bbbbbb;
   padding: 10px;
   cursor: pointer;
 }
@@ -3970,74 +4033,71 @@ input[type=reset].btn_btn_mine_shaft_inverse.current {
 
 /* BLOCK */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 11, ../assets/stylish/mixins/_global.scss */
+/* line 14, ../assets/stylish/mixins/_global.scss */
 .block.move_default_bottom, .block.move_bottom_default {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .block.move_clear_bottom, .block.move_clean_bottom, .block.move_bottom_clear, .block.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 76, ../assets/stylish/mixins/_global.scss */
+/* line 83, ../assets/stylish/mixins/_global.scss */
 .block.move_in_default_bottom, .block.move_in_bottom_default {
   padding-bottom: 25px;
 }
-/* line 124, ../assets/stylish/mixins/_global.scss */
+/* line 132, ../assets/stylish/mixins/_global.scss */
 .block.move_clear_bottom, .block.move_clean_bottom, .block.move_in_bottom_clear, .block.move_in_bottom_clean {
   padding-bottom: 0;
 }
 /* line 9, ../assets/stylish/components/_block.scss */
 .block .b_title {
   position: relative;
+  margin-bottom: 25px;
 }
-/* line 11, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_default_bottom, .block .b_title.move_bottom_default {
-  margin-bottom: 50px;
-}
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom, .block .b_title.move_bottom_clear, .block .b_title.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 76, ../assets/stylish/mixins/_global.scss */
+/* line 83, ../assets/stylish/mixins/_global.scss */
 .block .b_title.move_in_default_bottom, .block .b_title.move_in_bottom_default {
   padding-bottom: 25px;
 }
-/* line 124, ../assets/stylish/mixins/_global.scss */
+/* line 132, ../assets/stylish/mixins/_global.scss */
 .block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom, .block .b_title.move_in_bottom_clear, .block .b_title.move_in_bottom_clean {
   padding-bottom: 0;
 }
-/* line 139, ../assets/stylish/mixins/_global.scss */
+/* line 150, ../assets/stylish/mixins/_global.scss */
 .block .b_title.border_bottom {
-  border-bottom: 1px solid #272727;
+  border-bottom: 1px solid #373737;
 }
 /* line 15, ../assets/stylish/components/_block.scss */
 .block .b_title .title {
   position: relative;
 }
-/* line 11, ../assets/stylish/mixins/_global.scss */
+/* line 14, ../assets/stylish/mixins/_global.scss */
 .block .b_title .title.move_default_bottom, .block .b_title .title.move_bottom_default {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom, .block .b_title .title.move_bottom_clear, .block .b_title .title.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 76, ../assets/stylish/mixins/_global.scss */
+/* line 83, ../assets/stylish/mixins/_global.scss */
 .block .b_title .title.move_in_default_bottom, .block .b_title .title.move_in_bottom_default {
   padding-bottom: 25px;
 }
-/* line 124, ../assets/stylish/mixins/_global.scss */
+/* line 132, ../assets/stylish/mixins/_global.scss */
 .block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom, .block .b_title .title.move_in_bottom_clear, .block .b_title .title.move_in_bottom_clean {
   padding-bottom: 0;
 }
 
-/* line 11, ../assets/stylish/mixins/_global.scss */
+/* line 14, ../assets/stylish/mixins/_global.scss */
 .block_wrap
 .block_wrapper.move_default_bottom, .block_wrap
 .block_wrapper.move_bottom_default {
-  margin-bottom: -50px;
+  margin-bottom: -80px;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .block_wrap
 .block_wrapper.move_clear_bottom, .block_wrap
 .block_wrapper.move_clean_bottom, .block_wrap
@@ -4050,21 +4110,21 @@ input[type=reset].btn_btn_mine_shaft_inverse.current {
 .btn_set {
   overflow: hidden;
 }
-/* line 11, ../assets/stylish/mixins/_global.scss */
+/* line 14, ../assets/stylish/mixins/_global.scss */
 .btn_set.move_default_bottom, .btn_set.move_bottom_default {
   margin-bottom: -10px;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .btn_set.move_clear_bottom, .btn_set.move_clean_bottom, .btn_set.move_bottom_clear, .btn_set.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 11, ../assets/stylish/mixins/_global.scss */
+/* line 14, ../assets/stylish/mixins/_global.scss */
 .btn_set .btn.move_default_bottom, .btn_set .btn.move_bottom_default,
 .btn_set .btn_link.move_default_bottom,
 .btn_set .btn_link.move_bottom_default {
   margin-bottom: 10px;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .btn_set .btn.move_clear_bottom, .btn_set .btn.move_clean_bottom, .btn_set .btn.move_bottom_clear, .btn_set .btn.move_bottom_clean,
 .btn_set .btn_link.move_clear_bottom,
 .btn_set .btn_link.move_clean_bottom,
@@ -4099,35 +4159,46 @@ input[type=reset].btn_btn_mine_shaft_inverse.current {
   display: block;
   margin-right: auto;
   margin-left: auto;
-}
-/* line 11, ../assets/stylish/mixins/_global.scss */
-.divider.move_default_top, .divider.move_top_default {
   margin-top: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #eaeaea;
 }
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .divider.move_clear_top, .divider.move_clean_top, .divider.move_top_clear, .divider.move_top_clean {
   margin-top: 0;
 }
-/* line 11, ../assets/stylish/mixins/_global.scss */
-.divider.move_default_bottom, .divider.move_bottom_default {
-  margin-bottom: 50px;
-}
-/* line 59, ../assets/stylish/mixins/_global.scss */
+/* line 63, ../assets/stylish/mixins/_global.scss */
 .divider.move_clear_bottom, .divider.move_clean_bottom, .divider.move_bottom_clear, .divider.move_bottom_clean {
   margin-bottom: 0;
 }
-/* line 139, ../assets/stylish/mixins/_global.scss */
-.divider.border_bottom {
-  border-bottom: 1px solid #999999;
-}
 
-/* line 151, ../assets/stylish/mixins/_global.scss */
-.spacer.height_default {
+/* line 15, ../assets/stylish/components/_divider.scss */
+.spacer {
+  height: 40px;
+}
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_tiny {
+  height: 10px;
+}
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_small {
+  height: 20px;
+}
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_medium {
+  height: 30px;
+}
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_large {
   height: 50px;
 }
-/* line 192, ../assets/stylish/mixins/_global.scss */
-.spacer.height_clear, .spacer.height_clean {
-  height: 0;
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_huge {
+  height: 60px;
+}
+/* line 253, ../assets/stylish/mixins/_global.scss */
+.spacer.height_giant {
+  height: 70px;
 }
 
 /* MODAL */
@@ -4211,7 +4282,7 @@ input[type=reset].btn_btn_mine_shaft_inverse.current {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible;
-  background-color: rgba(39, 39, 39, 0.7);
+  background-color: rgba(55, 55, 55, 0.7);
 }
 /* line 36, ../assets/stylish/components/_modal.scss */
 .modal .close_modal {
@@ -4288,7 +4359,7 @@ html.modal_active body {
 }
 /* line 13, ../assets/stylish/components/_msg.scss */
 .messages > li, .msg > li {
-  color: #272727;
+  color: #373737;
   padding: 10px 10px 10px 50px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -4554,7 +4625,7 @@ html.modal_active body {
 }
 /* line 19, ../assets/stylish/components/_other.scss */
 .overlay.active.bg_color {
-  background-color: rgba(39, 39, 39, 0.4);
+  background-color: rgba(55, 55, 55, 0.4);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -4584,39 +4655,39 @@ html.modal_active body {
 .bg_img.contain, .bg_img[data-bgsize="contain"] {
   background-size: contain;
 }
-/* line 204, ../assets/stylish/mixins/_global.scss */
+/* line 221, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="top"] {
   background-position: left top;
 }
-/* line 205, ../assets/stylish/mixins/_global.scss */
+/* line 222, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="center"] {
   background-position: left center;
 }
-/* line 206, ../assets/stylish/mixins/_global.scss */
+/* line 223, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="bottom"] {
   background-position: left bottom;
 }
-/* line 210, ../assets/stylish/mixins/_global.scss */
+/* line 227, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="top"] {
   background-position: center top;
 }
-/* line 211, ../assets/stylish/mixins/_global.scss */
+/* line 228, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="center"] {
   background-position: center center;
 }
-/* line 212, ../assets/stylish/mixins/_global.scss */
+/* line 229, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="bottom"] {
   background-position: center bottom;
 }
-/* line 216, ../assets/stylish/mixins/_global.scss */
+/* line 233, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="top"] {
   background-position: right top;
 }
-/* line 217, ../assets/stylish/mixins/_global.scss */
+/* line 234, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="center"] {
   background-position: right center;
 }
-/* line 218, ../assets/stylish/mixins/_global.scss */
+/* line 235, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="bottom"] {
   background-position: right bottom;
 }
@@ -4633,8 +4704,8 @@ html.modal_active body {
 }
 /* line 9, ../assets/stylish/components/_paginations.scss */
 .pagination > li > a, .pagination > li > span {
-  background-color: #e5e5e5;
-  color: #272727;
+  background-color: #ffffff;
+  color: #373737;
   font-size: 18px;
   font-size: 1rem;
   padding: 10px 15px;
@@ -4649,11 +4720,11 @@ html.modal_active body {
 }
 /* line 12, ../assets/stylish/components/_paginations.scss */
 .pagination > li > a:hover {
-  background-color: #d1d1d1;
+  background-color: #ebebeb;
 }
 /* line 16, ../assets/stylish/components/_paginations.scss */
 .pagination > li.current > a, .pagination > li.current > span {
-  background-color: #cd3a3a;
+  background-color: #dd3501;
   color: #ffffff;
 }
 
@@ -4670,24 +4741,24 @@ table th, table td {
 }
 /* line 13, ../assets/stylish/components/_table.scss */
 table thead th, table thead td {
-  border-bottom-color: #cd3a3a;
+  border-bottom-color: #eaeaea;
   padding: 5px 10px;
   font-weight: bold;
   text-transform: uppercase;
 }
 /* line 18, ../assets/stylish/components/_table.scss */
 table tbody th, table tbody td {
-  border-bottom-color: #e5e5e5;
+  border-bottom-color: #eaeaea;
   padding: 5px 10px;
 }
 /* line 23, ../assets/stylish/components/_table.scss */
 table tfoot th, table tfoot td {
-  border-bottom-color: #cd3a3a;
+  border-bottom-color: #eaeaea;
   padding: 5px 10px;
 }
 /* line 36, ../assets/stylish/components/_table.scss */
 table.row_color tbody tr:nth-child(odd) td {
-  background-color: #f7f7f7;
+  background-color: #fcfcfc;
 }
 /* line 43, ../assets/stylish/components/_table.scss */
 table.cozy_view th, table.cozy_view td {
@@ -4739,7 +4810,7 @@ table th.last, table td.last {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 8, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head {
-  background-color: #e5e5e5;
+  background-color: #eaeaea;
 }
 /* line 10, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head > li {
@@ -4755,7 +4826,7 @@ table th.last, table td.last {
 }
 /* line 12, ../assets/stylish/components/_tabs.scss */
 .tabs .t_head > li.active {
-  color: #272727;
+  color: #373737;
   background-color: #ffffff;
 }
 /* line 19, ../assets/stylish/components/_tabs.scss */
@@ -4796,13 +4867,13 @@ table th.last, table td.last {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  -moz-box-shadow: rgba(39, 39, 39, 0.1) 1px 1px 2px 0px;
-  -webkit-box-shadow: rgba(39, 39, 39, 0.1) 1px 1px 2px 0px;
-  box-shadow: rgba(39, 39, 39, 0.1) 1px 1px 2px 0px;
+  -moz-box-shadow: rgba(55, 55, 55, 0.1) 1px 1px 2px 0px;
+  -webkit-box-shadow: rgba(55, 55, 55, 0.1) 1px 1px 2px 0px;
+  box-shadow: rgba(55, 55, 55, 0.1) 1px 1px 2px 0px;
   z-index: 500;
   background: #ffffff;
-  color: #272727;
-  border: 1px solid #e5e5e5;
+  color: #373737;
+  border: 1px solid #eaeaea;
 }
 /* line 16, ../assets/stylish/components/_tooltip.scss */
 .tip:after, .tip:before {
@@ -4900,19 +4971,19 @@ table th.last, table td.last {
 }
 /* line 12, ../assets/stylish/mixins/_tooltip.scss */
 .tip[data-tip-position="top"]:before {
-  border-top-color: #e5e5e5;
+  border-top-color: #eaeaea;
 }
 /* line 13, ../assets/stylish/mixins/_tooltip.scss */
 .tip[data-tip-position="bottom"]:before {
-  border-bottom-color: #e5e5e5;
+  border-bottom-color: #eaeaea;
 }
 /* line 14, ../assets/stylish/mixins/_tooltip.scss */
 .tip[data-tip-position="left"]:before {
-  border-left-color: #e5e5e5;
+  border-left-color: #eaeaea;
 }
 /* line 15, ../assets/stylish/mixins/_tooltip.scss */
 .tip[data-tip-position="right"]:before {
-  border-right-color: #e5e5e5;
+  border-right-color: #eaeaea;
 }
 /* line 83, ../assets/stylish/components/_tooltip.scss */
 .tip .tip_title {

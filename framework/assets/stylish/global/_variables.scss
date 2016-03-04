@@ -3,17 +3,19 @@
 
 
 // Setup Colors (http://chir.ag/projects/name-that-color/)
-$color_mine_shaft:            #272727;
-$color_havelock_blue:         #3a89cd;
-$color_flush_mahogany:        #cd3a3a;
-$color_emerald:               #3acd60;
-$color_earls_green:           #cdc43a;
-$color_amethyst:              #bd3acd;
-$color_raw_sienna:            #cd833a;
-$color_dove_gray:             #666666;
-$color_dove_gray_light:       #999999;
-$color_silver:                #c5c5c5;
-$color_mercury:               #e5e5e5;
+$color_sushi:                 #dd3501;
+$color_mine_shaft:            #373737;
+$color_tundora:               #474747;
+$color_chicago:               #5b5b59;
+$color_gray:                  #898989;
+$color_silver:                #bbbbbb;
+$color_alto:                  #dbdbdb;
+$color_gallery:               #eaeaea;
+$color_seashell:              #f1f1f1;
+$color_pampas:                #f7f6f2;
+$color_rust:                  #a54c3b;
+$color_astral:                #3b79a5;
+$color_turmeric:              #c7c545;
 $color_white:                 #ffffff;
 
 
@@ -25,18 +27,20 @@ $color_notice:                #c0cddc;  //notice  notification color
 //Create color scheme
 // (Name) - (Color)
 $color_schemes:
-  'mine_shaft'         $color_mine_shaft,
-  'havelock_blue'      $color_havelock_blue,
-  'flush_mahogany'     $color_flush_mahogany,
-  'emerald'            $color_emerald,
-  'earls_green'        $color_earls_green,
-  'amethyst'           $color_amethyst,
-  'raw_sienna'         $color_raw_sienna,
-  'dove_gray'          $color_dove_gray,
-  'dove_gray_light'    $color_dove_gray_light,
-  'silver'             $color_silver,
-  'mercury'            $color_mercury,
-  'white'              $color_white;
+        'sushi'       $color_sushi,
+        'mine_shaft'  $color_mine_shaft,
+        'tundora'     $color_tundora,
+        'chicago'     $color_chicago,
+        'gray'        $color_gray,
+        'silver'      $color_silver,
+        'alto'        $color_alto,
+        'seashell'    $color_seashell,
+        'gallery'     $color_gallery,
+        'pampas'      $color_pampas,
+        'rust'        $color_rust,
+        'astral'      $color_astral,
+        'turmeric'    $color_turmeric
+        'white'       $color_white;
 
 
 //Naming conventions
@@ -53,8 +57,8 @@ $global_radius:               4px; //Setup global border radius (buttons, forms 
 
 
 // Default Link color
-$link_color:                  $color_flush_mahogany;
-$link_color_hover:            $color_flush_mahogany;
+$link_color:                  $color_sushi;
+$link_color_hover:            darken($color_sushi, 15%);;
 
 
 $body_font_family:            Arial, Helvetica, sans-serif;
@@ -74,7 +78,7 @@ $body_base_size_xs:           13px;
 
 
 //Headers and paragraph
-$h1:                          38px;
+$h1:                          42px;
 $h2:                          35px;
 $h3:                          32px;
 $h4:                          29px;
@@ -195,18 +199,18 @@ $input_txt_color:             $color_mine_shaft;
 $input_bg_color:              $color_white;
 $input_border_width:          1px;
 $input_border_style:          solid;
-$input_border_color:          $color_mercury;
+$input_border_color:          $color_alto;
 $input_margin:                0;
 $input_width:                 100%;
 $input_font_family:           $body_font_family; //(use web safe font for cross-browser compatibility)
 $input_radius:                $global_radius;
 $input_weight:                normal;
-$input_focus:                 $color_flush_mahogany;
-$input_placeholder:           $color_mercury;
+$input_focus:                 $color_sushi;
+$input_placeholder:           $color_alto;
 $input_rem:                   false;
 
 $input_bg_disabled:           $color_silver;
-$input_txt_disabled:          $color_dove_gray;
+$input_txt_disabled:          $color_alto;
 
 
     // ---------------------------------------- //
@@ -218,7 +222,7 @@ $input_txt_disabled:          $color_dove_gray;
     //checkbox
     $checkbox_bg:                 $input_bg_color;
     $checkbox_border:             $input_border_color;
-    $checkbox_active:             $color_flush_mahogany;
+    $checkbox_active:             $color_sushi;
 
 
     // ---------------------------------------- //
@@ -230,12 +234,10 @@ $input_txt_disabled:          $color_dove_gray;
 
     // ---------------------------------------- //
     //form style
-    $form_error:                  $color_flush_mahogany;
-    $form_error_move:             10px;
+    $form_error:                  $color_error;
+    $form_error_move_default:     10px;
 
-    $form_field_move:             20px;
-    $form_field_move_large:       $form_field_move*2;
-    $form_field_move_small:       $form_field_move/2;
+    $form_field_move_default:     20px;
 
     $form_required_move:          3px;
     $form_required_size:          14px;
@@ -264,7 +266,7 @@ $input_txt_disabled:          $color_dove_gray;
 $btn_transform:               uppercase;
 $btn_font_family:             $body_font_family;
 $btn_radius:                  $global_radius;
-$btn_border_width:            1px;
+$btn_border_width:            2px;
 $btn_border_style:            solid;
 $btn_txt_align:               center;
 $btn_width:                   auto;
@@ -282,33 +284,35 @@ $btn_icon_move:               10px;
 
     // ---------------------------------------- //
     //Btn move in sizes (padding left,right)
-    $btn_move_in_h_default:       40px;
     $btn_move_in_h_tiny:          10px;
     $btn_move_in_h_small:         15px;
     $btn_move_in_h_medium:        20px;
-    $btn_move_in_h_large:         25px;
-    $btn_move_in_h_huge:          30px;
-    $btn_move_in_h_giant:         35px;
+    $btn_move_in_h_default:       30px;
+    $btn_move_in_h_large:         35px;
+    $btn_move_in_h_huge:          40px;
+    $btn_move_in_h_giant:         45px;
 
 
     //Btn generate sizes
     // (Name) - (Height) - (Text Size) - (Line Height) - (Padding top,bottom) - (Padding left,right) - (Border Width)
     $btn_sizes:
-        'tiny'     40px   16px  10px   20px   $btn_move_in_h_tiny      $btn_border_width,
-        'small'    40px   16px  10px   20px   $btn_move_in_h_small     $btn_border_width,
-        'medium'   40px   16px  10px   20px   $btn_move_in_h_medium    $btn_border_width,
-        'default'  40px   16px  10px   20px   $btn_move_in_h_default   $btn_border_width,
-        'large'    40px   16px  10px   20px   $btn_move_in_h_large     $btn_border_width,
-        'huge'     40px   16px  10px   20px   $btn_move_in_h_huge      $btn_border_width,
-        'giant'    40px   16px  10px   20px   $btn_move_in_h_giant     $btn_border_width;
+        'tiny'     20px   10px  10px   4px    $btn_move_in_h_tiny      $btn_border_width,
+        'small'    25px   12px  12px   5px    $btn_move_in_h_small     $btn_border_width,
+        'medium'   30px   14px  14px   7px    $btn_move_in_h_medium    $btn_border_width,
+        'default'  40px   16px  16px   11px   $btn_move_in_h_default   $btn_border_width,
+        'large'    45px   18px  18px   12px   $btn_move_in_h_large     $btn_border_width,
+        'huge'     50px   20px  20px   14px   $btn_move_in_h_huge      $btn_border_width,
+        'giant'    55px   22px  22px   15px   $btn_move_in_h_giant     $btn_border_width;
 
     // ---------------------------------------- //
 
     //Btn generate colors
     //Name - Bg - Text - Border - Hover Bg - Hover Text - Hover Border
     $btn_colors:
-        'btn_mine_shaft'          $color_mine_shaft   $color_white    $color_mine_shaft   lighten($color_mine_shaft, .5)   $color_white   lighten($color_mine_shaft, .5),
-        'btn_mine_shaft_inverse'  $color_mine_shaft   $color_white    $color_mine_shaft   lighten($color_mine_shaft, .5)   $color_white   lighten($color_mine_shaft, .5);
+        'mine_shaft'          $color_mine_shaft   $color_white         $color_mine_shaft   transparent        $color_mine_shaft   $color_mine_shaft,
+        'mine_shaft_border'   transparent         $color_mine_shaft    $color_mine_shaft   $color_mine_shaft  $color_white        $color_mine_shaft,
+        'sushi'               $color_sushi        $color_white         $color_sushi        transparent        $color_sushi        $color_sushi,
+        'sushi_border'        transparent         $color_sushi         $color_sushi        $color_sushi       $color_white        $color_sushi;
 
 
 
@@ -325,9 +329,9 @@ $acc_content_padding:         20px;
 
 // ---------------------------------------- //
 //Block
-$block_move_bottom:           50px;
-$block_b_title_move_bottom:   50px;
-$block_title_move_bottom:     50px;
+$block_move_bottom:           80px;
+$block_b_title_move_bottom:   25px;
+$block_title_move_bottom:     25px;
 
 $block_move_in_bottom:        25px;
 $block_b_title_move_in_bottom:25px;
@@ -350,17 +354,25 @@ $crumb_separator_padding:     10px;
 
 // ---------------------------------------- //
 //Divider and spacer
-$divider_move:                50px;
+$divider_move_default:        50px;
 
 $divider_border_position:     bottom;
 $divider_border_width:        1px;
 $divider_border_style:        solid;
-$divider_border_color:        $color_dove_gray_light;
+$divider_border_color:        $color_gallery;
 
-$spacer_height:               50px;
+$spacer_height_default:       50px;
+$spacer_sizes:
+    'tiny'      10px,
+    'small'     20px,
+    'medium'    30px,
+    'default'   40px,
+    'large'     50px,
+    'huge'      60px,
+    'giant'     70px;
 
 
-// ---------------------------------------- //
+  // ---------------------------------------- //
 //Modal
 $modal_max_width:             600px;
 $modal_overlay_opacity:       0.7;
@@ -397,9 +409,9 @@ $overlay_bg_opacity:          0.4;
 //Pagination
 $pag_item_move:               3px;
 $pag_item_txt_size:           $p;
-$pag_item_bg:                 $color_mercury;
+$pag_item_bg:                 $color_white;
 $pag_item_text:               $color_mine_shaft;
-$pag_item_current_bg:         $color_flush_mahogany;
+$pag_item_current_bg:         $color_sushi;
 $pag_item_current_text:       $color_white;
 $pag_item_padding_v:          10px;
 $pag_item_padding_h:          15px;
@@ -410,11 +422,11 @@ $pag_item_padding_h:          15px;
 $table_padding_v:             5px;
 $table_padding_h:             10px;
 
-$table_head_border:           $color_flush_mahogany;
+$table_head_border:           $color_gallery;
 $table_head_padding_v:        5px;
 $table_head_padding_h:        10px;
 
-$table_body_border:           $color_mercury;
+$table_body_border:           $color_gallery;
 $table_body_padding_v:        5px;
 $table_body_padding_h:        10px;
 
@@ -429,7 +441,7 @@ $status_item_padding_h:       5px;
 
 // ---------------------------------------- //
 //Tabs
-$tabs_head_color:             $color_mercury;
+$tabs_head_color:             $color_gallery;
 $tabs_head_bg_color_active:   $color_white;
 $tabs_head_color_active:      $color_mine_shaft;
 $tabs_head_item_padding_v:    10px;
@@ -441,7 +453,7 @@ $tabs_content_padding_h:      0;
 // ---------------------------------------- //
 //Tooltip
 $tooltip_arrow:               10px;
-$tooltip_border:              $color_mercury;
+$tooltip_border:              $color_gallery;
 $tooltip_bg:                  $color_white;
 $tooltip_txt:                 $color_mine_shaft;
 $tooltip_content_shadow:      $color_mine_shaft;

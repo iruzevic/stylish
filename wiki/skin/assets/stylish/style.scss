@@ -1,137 +1,444 @@
-@charset "UTF-8";
-/*
-Theme Name: Stylish Framework
-Description:
-Author: Mustra-designs (Ivan Ružević)
-Author URI: www.mustra-designs.com
-Help: stylish.mustra-designs.com
-Version: 4.0.1
-*/
-
-/* Compass Framework Import */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
 
+@import "../../../../framework/assets/stylish/global/variables";
+@import "../../../../framework/assets/stylish/global/reset";
+@import "../../../../framework/assets/stylish/mixins/typography";
 
-
-/* GLOBAL FILES MERGE */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "global/reset";
-@import "global/variables";
+@import "global/icons";
 @import "global/variables_project";
 
 
+body{font-family:$body_font_family; font-weight: $body_font_weight;}
 
-/* MIXINS FILES MERGE */
+
+#header{
+  background-color:$color_white; height: $header_height; border-bottom: 1px solid $color_gallery; width: 100%; left: 0; top: 0; z-index: $header_z_index;
+;
+
+  #logo{
+    display: block; padding:12px 0; height: $header_height;
+    img{ width: auto; height: 100%; max-height: $header_height;}
+  }
+
+  .nav{
+    border-left: 1px solid $color_gallery;height: $header_height;
+    >li{
+      border-right: 1px solid $color_gallery; padding: 0 25px;height: 100%;
+      &.link{
+        a{ padding-top: $header_nav_link_padding; padding-bottom: $header_nav_link_padding; height:$header_height; @include font_style($medium, $mediumlh); @include link_color($color_silver, $color_sushi)}
+      }
+
+      &.link_btn{
+        padding-top: $header_nav_link_btn_padding; padding-bottom: $header_nav_link_btn_padding;
+        a{}
+      }
+
+      &.clear_border{ border-right: none;}
+      &.clear_padding_right{ padding-right: 0}
+    }
+  }
+
+}
+
+
+
+
+/* CONTENT */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "mixins/global";
-@import "mixins/buttons";
-@import "mixins/forms";
-@import "mixins/grid";
-@import "mixins/grid_fluid";
-@import "mixins/tooltip";
-@import "mixins/typography";
-@import "mixins/mixins_project";
 
 
+#wrapper{
+  padding-left: $sidebar_width;@include transition-duration(.3s); @include transition-property(padding-left);
+  #wrap{position:relative;}
+}
 
-/* GLOBAL FOLDER MERGE */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "global/icons";
-@import "global/typography";
-@import "global/forms";
-@import "global/buttons";
-@import "global/grid/grid";
-@import "global/grid/grid_fixed";
+#main_content{  padding: $header_height+60 $gutter 60px; position: relative }
 
 
+.grid_block{ background-color: $color_seashell; height: 50px; padding: 15px 10px}
 
-/* COMPONENTS FILES MERGE */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "components/accordion";
-@import "components/block";
-@import "components/breadcrumbs";
-@import "components/divider";
-@import "components/modal";
-@import "components/msg";
-@import "components/nav";
-@import "components/other";
-@import "components/paginations";
-@import "components/table";
-@import "components/tabs";
-@import "components/tooltip";
-
-
-
-/* LAYOUT FILES MERGE */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "layout/header";
-@import "layout/common";
-@import "layout/content";
-@import "layout/sidebar";
-@import "layout/footer";
-
-
-
-/* LAYOUT PROJECT FILES MERGE */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-//@import "layout/magento/cart";
-//@import "layout/magento/category";
-//@import "layout/magento/checkout";
-//@import "layout/magento/customer";
-//@import "layout/magento/product";
-//@import "layout/magento/static";
-//
-//
-//@import "layout/wordpress/category";
-//@import "layout/wordpress/error";
-//@import "layout/wordpress/home";
-//@import "layout/wordpress/page";
-//@import "layout/wordpress/single";
-
-
-
-/* HELPERS GLOBAL */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-@import "global/helpers";
-
-
-
-/* RESPONSIVE MEDIA QUERIES (Desktop first) */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-//@media screen and ($responsive_first: $screen_desk){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_hybrid){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_xsmall){ @if $responsive == true{
-//}}
+.btn_nav{
+  li{
+    margin-right: 10px;
+    &:last-child{ margin-right: 0}
+  }
+}
 
 
 
 
-/* RESPONSIVE MEDIA QUERIES (Mobile first) */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-//@media screen and ($responsive_first: $screen_small){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_hybrid){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_medium){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_desk){ @if $responsive == true{
-//}}
-//
-//@media screen and ($responsive_first: $screen_large){ @if $responsive == true{
-//}}
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ *
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  min-height: inherit !important;
+  min-height: auto !important;
+}
+
+.syntaxhighlighter {
+  padding: 30px 50px;
+  width: 100% !important;
+  position: relative !important;
+  overflow: auto !important;
+  @include font_style($small, $small+10)
+}
+.syntaxhighlighter.source {
+  overflow: hidden !important;
+}
+.syntaxhighlighter .bold {
+  font-weight: bold !important;
+}
+.syntaxhighlighter .italic {
+  font-style: italic !important;
+}
+.syntaxhighlighter .line {
+  white-space: pre !important;
+}
+.syntaxhighlighter table {
+  width: 100% !important;
+}
+.syntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important;
+}
+.syntaxhighlighter table td.code {
+  width: 100% !important;
+}
+.syntaxhighlighter table td.code .container {
+  position: relative !important;
+}
+.syntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: $color_seashell !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important;
+}
+.syntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+.syntaxhighlighter table td.code .line {
+  padding: 0 1em !important;
+}
+.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important;
+}
+.syntaxhighlighter.show {
+  display: block !important;
+}
+.syntaxhighlighter.collapsed table {
+  display: none !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+.syntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important;
+}
+.syntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important;
+}
+.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important;
+}
+.syntaxhighlighter .toolbar {
+  display: none;
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important;
+}
+.syntaxhighlighter .toolbar span.title {
+  display: inline !important;
+}
+.syntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important;
+}
+.syntaxhighlighter .toolbar a.expandSource {
+  display: none !important;
+}
+.syntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important;
+}
+.syntaxhighlighter.ie .toolbar {
+  line-height: 8px !important;
+}
+.syntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important;
+}
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important;
+}
+.syntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important;
+}
+.syntaxhighlighter.printing .line .content {
+  color: black !important;
+}
+.syntaxhighlighter.printing .toolbar {
+  display: none !important;
+}
+.syntaxhighlighter.printing a {
+  text-decoration: none !important;
+}
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+  color: black !important;
+}
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+  color: #008200 !important;
+}
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+  color: blue !important;
+}
+.syntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: bold !important;
+}
+.syntaxhighlighter.printing .preprocessor {
+  color: gray !important;
+}
+.syntaxhighlighter.printing .variable {
+  color: #aa7700 !important;
+}
+.syntaxhighlighter.printing .value {
+  color: #009900 !important;
+}
+.syntaxhighlighter.printing .functions {
+  color: #ff1493 !important;
+}
+.syntaxhighlighter.printing .constants {
+  color: #0066cc !important;
+}
+.syntaxhighlighter.printing .script {
+  font-weight: bold !important;
+}
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+  color: gray !important;
+}
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+  color: #ff1493 !important;
+}
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+  color: red !important;
+}
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a {
+  color: black !important;
+}
+
+.syntaxhighlighter {
+  background-color: $color_pampas !important;
+}
+.syntaxhighlighter .line.alt1 {
+  background-color: $color_pampas !important;
+}
+.syntaxhighlighter .line.alt2 {
+  background-color: $color_pampas !important;
+}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+.syntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+.syntaxhighlighter table caption {
+  color: black !important;
+}
+.syntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+.syntaxhighlighter .gutter .line {
+  border-right: 1px solid $color_alto !important;
+}
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: $color_alto !important;
+  color: white !important;
+}
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid $color_alto !important;
+}
+.syntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+.syntaxhighlighter .toolbar {
+  color: white !important;
+  background: $color_alto !important;
+  border: none !important;
+}
+.syntaxhighlighter .toolbar a {
+  color: white !important;
+}
+.syntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: black !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #008200 !important;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: blue !important;
+}
+.syntaxhighlighter .keyword {
+  color: #006699 !important;
+}
+.syntaxhighlighter .preprocessor {
+  color: gray !important;
+}
+.syntaxhighlighter .variable {
+  color: #aa7700 !important;
+}
+.syntaxhighlighter .value {
+  color: #009900 !important;
+}
+.syntaxhighlighter .functions {
+  color: #ff1493 !important;
+}
+.syntaxhighlighter .constants {
+  color: #0066cc !important;
+}
+.syntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: gray !important;
+}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: #ff1493 !important;
+}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: red !important;
+}
+
+.syntaxhighlighter .keyword {
+  font-weight: bold !important;
+}
+
+
+
+
+#sidebar{
+  width: $sidebar_width; height: 100%; z-index: $sidebar_z_index; overflow-x: hidden; background-color:$color_tundora; position: fixed; left: 0; top: 0; padding-top: $header_height; @include transition-duration(.3s); @include transition-property(width);
+
+  .navigation{
+    width: $sidebar_width;
+    list-style: none;
+    >li{
+      display: block; position:relative;
+      &[data-has-drop="true"] > a:after{ @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; position: absolute; right: 30px; top:50%; margin-top:-9px; color:$color_white;  }
+
+      >a{
+        position: relative; border-bottom:1px solid $color_chicago; padding: 12px 50px 12px $gutter/2; display: block; font-weight: 300; @include link_color($color_white, $color_sushi); @include font_style($medium, $mediumlh, 500);@extend .nobr;
+        i{ margin-right:10px; vertical-align: middle; font-size: 24px; @include transition-duration(.3s); @include transition-property(margin-right);}
+        &:hover{ background-color: $color_mine_shaft; }
+      }
+
+      //Drop down menu
+      ul.drop{
+        background-color:$color_mine_shaft; padding: 20px 0; position: relative; display: none; border-bottom:1px solid $color_chicago;
+        &:after,
+        &:before{
+          content: ""; position: absolute; top:-1px; left:($gutter/2)-6;  width: 0; height: 0; border:12px solid transparent; border-top-color:$color_tundora;
+        }
+        &:before{ border-top-color: $color_chicago; top:0;}
+        >li{
+          >a{ display: block; @include font_style($small, $smalllh, 300); padding: 7px $gutter/2;@include link_color($color_white, lighten($link_color, 10%)); }
+        }
+      }
+
+      //Open/active state
+      &.active{
+        >a{
+          color:$link_color;
+          &:after{@include rotate(180deg)
+          };
+        }
+        ul.drop{ display: block}
+      }
+
+    }
+  }
+}

@@ -1,9 +1,9 @@
 <?php include('../content/head.php') ?>
 <?php include('../content/header.php') ?>
 
-    <div class="block move_clear_bottom">
+    <div class="block ">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Pagination</h1>
+            <h1 class="title ">Pagination</h1>
             <p class="subtitle">Pagination style mockup, add class current for current state</p>
         </div>
         <div class="b_content">
@@ -20,7 +20,7 @@
                 <li><a href="#">Last</a></li>
             </ul>
 
-            <div class="spacer move_small"></div>
+            <div class="spacer"></div>
             <pre class="brush: xml;">
                 <ul class="pagination navi">
                     <li><a href="#">First</a></li>

@@ -3,7 +3,7 @@
 
     <div class="block">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Typography</h1>
+            <h1 class="title ">Typography</h1>
             <p class="subtitle">Headers, Lists, Paragraphs, Blockquotes, and other necessary elements</p>
         </div>
     </div>

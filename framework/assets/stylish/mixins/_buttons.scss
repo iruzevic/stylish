@@ -82,7 +82,7 @@
       @each $size_in in $btn_sizes{
 
         $name_in:        nth($size_in, 1);
-        $move_in_h_in:   nth($size_in, 5);
+        $move_in_h_in:   nth($size_in, 6);
         &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
       }
 
@@ -95,7 +95,7 @@
         @each $size_in in $btn_sizes{
 
           $name_in:        nth($size_in, 1);
-          $move_in_h_in:   nth($size_in, 5);
+          $move_in_h_in:   nth($size_in, 6);
           &.btn_move_in_h_#{$name_in}{ @include btn_move($move_in_h_in) }
         }
 
