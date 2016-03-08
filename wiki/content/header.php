@@ -15,6 +15,9 @@
                                 <a href="http://mustra-designs.com/" class="link" target="_blank">Mustra-Designs</a>
                             </li>
                             <li class="link">
+                                <a href="<?php echo $base; ?>install.php" class="link">Instalation</a>
+                            </li>
+                            <li class="link">
                                 <a href="<?php echo $base; ?>author.php" class="link">Info</a>
                             </li>
                             <li class="link_btn clear_border clear_padding_right">

@@ -1,9 +1,9 @@
 <?php include('content/head.php') ?>
 <?php include('content/header.php') ?>
 
-    <div class="block" id="Error">
+    <div class="block move_clean_bottom" id="Author">
         <div class="b_title">
-            <h1 class="title move_small_bottom">Ivan Ružević</h1>
+            <h1 class="title">Ivan Ružević</h1>
             <p class="subtitle">If you are stuck and need help please contact me.</p>
         </div>
         <div class="b_content content_style">
