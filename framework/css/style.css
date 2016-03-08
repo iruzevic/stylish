@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 4.2
+Version: 4.2.1
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -1807,49 +1807,49 @@ a:not(.btn).disabled {
   margin-bottom: 5px;
 }
 /* line 46, ../assets/stylish/global/_typography.scss */
-.content_style h1 {
+.content_style h1, .content_style .h1 {
   font-size: 42px;
   font-size: 2.33333rem;
   line-height: 47px;
   line-height: 2.61111rem;
 }
 /* line 47, ../assets/stylish/global/_typography.scss */
-.content_style h2 {
+.content_style h2, .content_style .h2 {
   font-size: 35px;
   font-size: 1.94444rem;
   line-height: 40px;
   line-height: 2.22222rem;
 }
 /* line 48, ../assets/stylish/global/_typography.scss */
-.content_style h3 {
+.content_style h3, .content_style .h3 {
   font-size: 32px;
   font-size: 1.77778rem;
   line-height: 37px;
   line-height: 2.05556rem;
 }
 /* line 49, ../assets/stylish/global/_typography.scss */
-.content_style h4 {
+.content_style h4, .content_style .h4 {
   font-size: 29px;
   font-size: 1.61111rem;
   line-height: 34px;
   line-height: 1.88889rem;
 }
 /* line 50, ../assets/stylish/global/_typography.scss */
-.content_style h5 {
+.content_style h5, .content_style .h5 {
   font-size: 26px;
   font-size: 1.44444rem;
   line-height: 31px;
   line-height: 1.72222rem;
 }
 /* line 51, ../assets/stylish/global/_typography.scss */
-.content_style h6 {
+.content_style h6, .content_style .h6 {
   font-size: 23px;
   font-size: 1.27778rem;
   line-height: 28px;
   line-height: 1.55556rem;
 }
 /* line 52, ../assets/stylish/global/_typography.scss */
-.content_style p {
+.content_style p, .content_style .p, .content_style form .field label, form .field .content_style label, .content_style .form .field label, .form .field .content_style label {
   font-size: 18px;
   font-size: 1rem;
   line-height: 23px;
@@ -1857,33 +1857,37 @@ a:not(.btn).disabled {
   margin-bottom: 20px;
 }
 /* line 54, ../assets/stylish/global/_typography.scss */
+.content_style p:last-child, .content_style .p:last-child, .content_style form .field label:last-child, form .field .content_style label:last-child, .content_style .form .field label:last-child, .form .field .content_style label:last-child {
+  margin-bottom: 0;
+}
+/* line 58, ../assets/stylish/global/_typography.scss */
 .content_style .medium {
   font-size: 16px;
   font-size: 0.88889rem;
   line-height: 21px;
   line-height: 1.16667rem;
 }
-/* line 55, ../assets/stylish/global/_typography.scss */
+/* line 59, ../assets/stylish/global/_typography.scss */
 .content_style .small {
   font-size: 14px;
   font-size: 0.77778rem;
   line-height: 19px;
   line-height: 1.05556rem;
 }
-/* line 56, ../assets/stylish/global/_typography.scss */
+/* line 60, ../assets/stylish/global/_typography.scss */
 .content_style .tiny {
   font-size: 12px;
   font-size: 0.66667rem;
   line-height: 17px;
   line-height: 0.94444rem;
 }
-/* line 59, ../assets/stylish/global/_typography.scss */
+/* line 63, ../assets/stylish/global/_typography.scss */
 .content_style ul, .content_style ol {
   overflow: hidden;
   margin-left: 0;
   margin-bottom: 20px;
 }
-/* line 61, ../assets/stylish/global/_typography.scss */
+/* line 65, ../assets/stylish/global/_typography.scss */
 .content_style ul li, .content_style ol li {
   font-size: 18px;
   font-size: 1rem;
@@ -1891,11 +1895,11 @@ a:not(.btn).disabled {
   line-height: 1.27778rem;
   margin-bottom: 5px;
 }
-/* line 63, ../assets/stylish/global/_typography.scss */
+/* line 67, ../assets/stylish/global/_typography.scss */
 .content_style ul li {
   margin-left: 30px;
 }
-/* line 64, ../assets/stylish/global/_typography.scss */
+/* line 68, ../assets/stylish/global/_typography.scss */
 .content_style ol li {
   margin-left: 40px;
   font-size: 18px;
@@ -1903,27 +1907,27 @@ a:not(.btn).disabled {
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 67, ../assets/stylish/global/_typography.scss */
+/* line 71, ../assets/stylish/global/_typography.scss */
 .content_style address {
   font-size: 18px;
   font-size: 1rem;
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 68, ../assets/stylish/global/_typography.scss */
+/* line 72, ../assets/stylish/global/_typography.scss */
 .content_style .italic {
   font-style: italic;
 }
-/* line 69, ../assets/stylish/global/_typography.scss */
+/* line 73, ../assets/stylish/global/_typography.scss */
 .content_style strong,
 .content_style .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
-/* line 71, ../assets/stylish/global/_typography.scss */
+/* line 75, ../assets/stylish/global/_typography.scss */
 .content_style .underline {
   text-decoration: underline;
 }
-/* line 74, ../assets/stylish/global/_typography.scss */
+/* line 78, ../assets/stylish/global/_typography.scss */
 .content_style img,
 .content_style iframe {
   width: auto;
@@ -1931,27 +1935,27 @@ a:not(.btn).disabled {
   max-width: 100%;
   margin-bottom: 20px;
 }
-/* line 78, ../assets/stylish/global/_typography.scss */
+/* line 82, ../assets/stylish/global/_typography.scss */
 .content_style img.alignleft,
 .content_style iframe.alignleft {
   clear: left;
   float: left;
   margin-right: 20px;
 }
-/* line 79, ../assets/stylish/global/_typography.scss */
+/* line 83, ../assets/stylish/global/_typography.scss */
 .content_style img.alignright,
 .content_style iframe.alignright {
   clear: right;
   float: right;
   margin-left: 20px;
 }
-/* line 82, ../assets/stylish/global/_typography.scss */
+/* line 86, ../assets/stylish/global/_typography.scss */
 .content_style img.full,
 .content_style iframe.full {
   width: 100%;
   height: auto;
 }
-/* line 85, ../assets/stylish/global/_typography.scss */
+/* line 89, ../assets/stylish/global/_typography.scss */
 .content_style img.rounded,
 .content_style iframe.rounded {
   -moz-border-radius: 50%;

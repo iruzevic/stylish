@@ -43,13 +43,17 @@ a:not(.btn) {
 
   //Headers and paragraph
   #{headers()}{ margin-bottom: $cs_move_headers; }
-  h1   {@include font_style($cs_h1, $cs_h1lh )}
-  h2   {@include font_style($cs_h2, $cs_h2lh )}
-  h3   {@include font_style($cs_h3, $cs_h3lh )}
-  h4   {@include font_style($cs_h4, $cs_h4lh )}
-  h5   {@include font_style($cs_h5, $cs_h5lh )}
-  h6   {@include font_style($cs_h6, $cs_h6lh )}
-  p    {@include font_style($cs_p,  $cs_plh); margin-bottom:$cs_move;}
+  h1, .h1   {@include font_style($cs_h1, $cs_h1lh )}
+  h2, .h2   {@include font_style($cs_h2, $cs_h2lh )}
+  h3, .h3   {@include font_style($cs_h3, $cs_h3lh )}
+  h4, .h4   {@include font_style($cs_h4, $cs_h4lh )}
+  h5, .h5   {@include font_style($cs_h5, $cs_h5lh )}
+  h6, .h6   {@include font_style($cs_h6, $cs_h6lh )}
+  p,  .p    {
+    @include font_style($cs_p,  $cs_plh); margin-bottom:$cs_move;
+    &:last-child{margin-bottom: 0}
+  }
+
 
   .medium {@include font_style( $cs_medium, $cs_mediumlh )}
   .small  {@include font_style( $cs_small,  $cs_smalllh )}
@@ -67,7 +71,7 @@ a:not(.btn) {
   address{@include font_style($p, $cs_plh)}
   .italic{ font-style: italic}
   strong,
-  .bold{ font-weight: bold;}
+  .bold{ font-weight: 700;}
   .underline{ text-decoration: underline;}
 
   //Images and iframe
