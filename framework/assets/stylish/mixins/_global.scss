@@ -1,214 +1,15 @@
 /* GLOBAL */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-
-//Move - margin (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin move($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
-
-  @if $orientation{
-
-    @if $default{
-      @if $default_show{
-        margin-#{$orientation}: $default;
-      }@else{
-        &.move_default_#{$orientation},
-        &.move_#{$orientation}_default{
-          margin-#{$orientation}: $default;
-        }
-      }
-    }
-
-    @if $tiny{
-      &.move_tiny_#{$orientation},
-      &.move_#{$orientation}_tiny{
-        margin-#{$orientation}: $tiny;
-      }
-    }
-
-    @if $small{
-      &.move_small_#{$orientation},
-      &.move_#{$orientation}_small{
-        margin-#{$orientation}: $small;
-      }
-    }
-
-    @if $medium{
-      &.move_medium_#{$orientation},
-      &.move_#{$orientation}_medium{
-        margin-#{$orientation}: $medium;
-      }
-    }
-
-    @if $large{
-      &.move_large_#{$orientation},
-      &.move_#{$orientation}_large{
-        margin-#{$orientation}: $large;
-      }
-    }
-
-    @if $huge{
-      &.move_huge_#{$orientation},
-      &.move_#{$orientation}_huge{
-        margin-#{$orientation}: $huge;
-      }
-    }
-
-    @if $giant{
-      &.move_giant_#{$orientation},
-      &.move_#{$orientation}_giant{
-        margin-#{$orientation}: $giant;
-      }
-    }
-
-    &.move_clear_#{$orientation},
-    &.move_clean_#{$orientation},
-    &.move_#{$orientation}_clear,
-    &.move_#{$orientation}_clean { margin-#{$orientation}: 0; }
-  }
-}
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//Move In - padding (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin move_in($orientation:false, $default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
-
-  @if $orientation{
-
-    @if $default{
-      @if $default_show{
-        padding-#{$orientation}: $default;
-      }@else{
-        &.move_in_default_#{$orientation},
-        &.move_in_#{$orientation}_default{
-          padding-#{$orientation}: $default;
-        }
-      }
-    }
-
-    @if $tiny{
-      &.move_in_tiny_#{$orientation},
-      &.move_in_#{$orientation}_tiny{
-        padding-#{$orientation}: $tiny;
-      }
-    }
-
-    @if $small{
-      &.move_in_small_#{$orientation},
-      &.move_in_#{$orientation}_small{
-        padding-#{$orientation}: $small;
-      }
-    }
-
-    @if $medium{
-      &.move_in_medium_#{$orientation},
-      &.move_in_#{$orientation}_medium{
-        padding-#{$orientation}: $medium;
-      }
-    }
-
-    @if $large{
-      &.move_in_large_#{$orientation},
-      &.move_in_#{$orientation}_large{
-        padding-#{$orientation}: $large;
-      }
-    }
-
-    @if $huge{
-      &.move_in_huge_#{$orientation},
-      &.move_in_#{$orientation}_huge{
-        padding-#{$orientation}: $huge;
-      }
-    }
-
-    @if $giant{
-      &.move_in_giant_#{$orientation},
-      &.move_in_#{$orientation}_giant{
-        padding-#{$orientation}: $giant;
-      }
-    }
-
-    &.move_in_clear_#{$orientation},
-    &.move_in_clean_#{$orientation},
-    &.move_in_#{$orientation}_clear,
-    &.move_in_#{$orientation}_clean { padding-#{$orientation}: 0; }
-  }
-}
-
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
 //Border
 @mixin border($position:false, $width:false, $style:false, $color:false, $default_show:false){
-  @if $position AND $width AND $style AND $color{
-    @if $default_show{
-      border-#{$position}: $width $style $color;
-    }@else{
-      &.border_#{$position}{ border-#{$position}: $width $style $color; }
-    }
-  }
-}
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-
-
-//Height (Standard - default, tiny, small, medium, large, huge, giant)
-@mixin height($default:false, $tiny:false, $small:false, $medium:false, $large:false, $huge:false, $giant:false, $default_show:false ){
-
-  @if $default{
-    @if $default_show{
-      height: $default;
-    } @else {
-      &.height_default{
-        height: $default;
-      }
-
-    }
-  }
-
-  @if $tiny{
-    &.height_tiny{
-      height: $tiny;
-    }
-  }
-
-  @if $small{
-    &.height_small{
-      height: $small;
-    }
-  }
-
-  @if $medium{
-    &.height_medium{
-      height: $medium;
-    }
-  }
-
-  @if $large{
-    &.height_large{
-      height: $large;
-    }
-  }
-
-  @if $huge{
-    &.height_huge{
-      height: $huge;
-    }
-  }
-
-  @if $giant{
-    &.height_giant{
-      height: $giant;
-    }
-  }
-
-  &.height_clear,
-  &.height_clean{height: 0}
-
+	@if $position AND $width AND $style AND $color{
+		@if $default_show{
+			border-#{$position}: $width $style $color;
+		}@else{
+			&.border_#{$position}{ border-#{$position}: $width $style $color; }
+		}
+	}
 }
 
 
@@ -217,42 +18,68 @@
 
 //Generate background image positions
 @mixin bg_img_position(){
-  &[data-bg-h="left"]{
-    &[data-bg-v="top"]    { background-position: left top; }
-    &[data-bg-v="center"] { background-position: left center;}
-    &[data-bg-v="bottom"] { background-position: left bottom;}
-  }
+	&[data-bg-h="left"]{
+		&[data-bg-v="top"]    { background-position: left top; }
+		&[data-bg-v="center"] { background-position: left center;}
+		&[data-bg-v="bottom"] { background-position: left bottom;}
+	}
 
-  &[data-bg-h="center"]{
-    &[data-bg-v="top"]    { background-position: center top; }
-    &[data-bg-v="center"] { background-position: center center;}
-    &[data-bg-v="bottom"] { background-position: center bottom;}
-  }
+	&[data-bg-h="center"]{
+		&[data-bg-v="top"]    { background-position: center top; }
+		&[data-bg-v="center"] { background-position: center center;}
+		&[data-bg-v="bottom"] { background-position: center bottom;}
+	}
 
-  &[data-bg-h="right"]{
-    &[data-bg-v="top"]    { background-position: right top; }
-    &[data-bg-v="center"] { background-position: right center;}
-    &[data-bg-v="bottom"] { background-position: right bottom;}
-  }
+	&[data-bg-h="right"]{
+		&[data-bg-v="top"]    { background-position: right top; }
+		&[data-bg-v="center"] { background-position: right center;}
+		&[data-bg-v="bottom"] { background-position: right bottom;}
+	}
 }
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
+
 //Spacer generate sizes based on scheme
-@mixin spacer_sizes_generate(){
+@mixin map_property_generate($map: false, $class:false, $property:false, $orientation:false, $default_show:false, $negative:false){
 
-  @each $key, $values in $spacer_sizes{
+	@if $orientation {
+		$property: #{$property}-#{$orientation};
+		$orientation : _#{$orientation};
+	}@else{
+		$property: #{$property};
+		$orientation : '';
+	}
 
-    @if $key == default{
-      height: $values;
-    }@else{
-      &.height_#{$key}{
-        height: $values;
-      }
+	@if $negative{
+		$negative: '-';
+	}@else {
+		$negative: '';
+	}
 
-    }
-  }
 
+	@each $key, $values in $map{
+		@if $default_show{
+			@if $key == default{
+				#{$property}: #{$negative}$values;
+			}@else{
+				&.#{$class}#{$orientation}_#{$key},
+				&.#{$class}_#{$key}#{$orientation}
+				{#{$property}: #{$negative}$values;}
+			}
+		}@else{
+			&.#{$class}#{$orientation}_#{$key},
+			&.#{$class}_#{$key}#{$orientation}
+			{#{$property}: #{$negative}$values;}
+		}
+
+	}
+
+	&.#{$class}#{$orientation}_clean,
+	&.#{$class}#{$orientation}_clear,
+	&.#{$class}_clear#{$orientation},
+	&.#{$class}_clean#{$orientation}
+	{ #{$property}: 0;}
 }

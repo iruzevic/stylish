@@ -5,13 +5,13 @@
 // Divider
 .divider{
   width: 100%; display: block; margin-right: auto; margin-left: auto;
-  @include move(top, $divider_move_default, $default_show:true);
-  @include move(bottom, $divider_move_default, $default_show:true);
-  @include border($divider_border_position, $divider_border_width, $divider_border_style, $divider_border_color, true);
+	@include map_property_generate($divider_sizes, move, margin, top, true);
+	@include map_property_generate($divider_sizes, move, margin, bottom, true);
+    @include border($divider_border_position, $divider_border_width, $divider_border_style, $divider_border_color, true);
 }
 
 
 //Spacer
 .spacer{
-  @include spacer_sizes_generate();
+	display: block; @include map_property_generate($spacer_sizes, height, height, false, true);
 }

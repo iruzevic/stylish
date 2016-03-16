@@ -237,7 +237,15 @@ $input_txt_disabled:          $color_alto;
     $form_error:                  $color_error;
     $form_error_move_default:     10px;
 
-    $form_field_move_default:     20px;
+	$form_field_move_sizes:(
+			'tiny':      5px,
+			'small':     10px,
+			'medium':    15px,
+			'default':   20px,
+			'large':     25px,
+			'huge':      30px,
+			'giant':     35px
+	);
 
     $form_required_move:          3px;
     $form_required_size:          14px;
@@ -502,13 +510,33 @@ $acc_content_padding:         20px;
 
 // ---------------------------------------- //
 //Block
-$block_move_bottom:           80px;
-$block_b_title_move_bottom:   25px;
-$block_title_move_bottom:     25px;
-
-$block_move_in_bottom:        25px;
-$block_b_title_move_in_bottom:25px;
-$block_title_move_in_bottom:  25px;
+$block_move_sizes:(
+		'tiny':      20px,
+		'small':     40px,
+		'medium':    60px,
+		'default':   80px,
+		'large':     100px,
+		'huge':      120px,
+		'giant':     140px
+);
+$block_b_title_move_sizes:(
+		'tiny':      10px,
+		'small':     15px,
+		'medium':    20px,
+		'default':   25px,
+		'large':     30px,
+		'huge':      35px,
+		'giant':     40px
+);
+$block_title_move_sizes:(
+		'tiny':      10px,
+		'small':     15px,
+		'medium':    20px,
+		'default':   25px,
+		'large':     30px,
+		'huge':      35px,
+		'giant':     40px
+);
 
 $block_border_position:       bottom;
 $block_border_width:          1px;
@@ -516,7 +544,15 @@ $block_border_style:          solid;
 $block_border_color:          $color_mine_shaft;
 
 
-$btn_set_btn_move:            10px;
+$btn_set_btn_move_sizes:(
+		'tiny':      5px,
+		'small':     10px,
+		'medium':    15px,
+		'default':   20px,
+		'large':     25px,
+		'huge':      30px,
+		'giant':     35px
+);
 
 
 // ---------------------------------------- //
@@ -527,7 +563,15 @@ $crumb_separator_padding:     10px;
 
 // ---------------------------------------- //
 //Divider and spacer
-$divider_move_default:        50px;
+$divider_sizes: (
+		'tiny':      5px,
+		'small':     10px,
+		'medium':    30px,
+		'default':   50px,
+		'large':     70px,
+		'huge':      900px,
+		'giant':     110px
+);
 
 $divider_border_position:     bottom;
 $divider_border_width:        1px;
@@ -535,13 +579,13 @@ $divider_border_style:        solid;
 $divider_border_color:        $color_gallery;
 
 $spacer_sizes: (
-    'tiny':      10px,
-    'small':     20px,
-    'medium':    30px,
-    'default':   40px,
-    'large':     50px,
-    'huge':      60px,
-    'giant':     70px
+		'tiny':      10px,
+		'small':     20px,
+		'medium':    30px,
+		'default':   40px,
+		'large':     50px,
+		'huge':      60px,
+		'giant':     70px
 );
 
 

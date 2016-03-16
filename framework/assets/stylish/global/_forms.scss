@@ -155,7 +155,7 @@ html.show_input{
 /* Setup forms layout */
 form, .form{
   .field{
-    position: relative; list-style: none; @include move(bottom, $form_field_move_default, $default_show:true);
+    position: relative; list-style: none; @include map_property_generate($form_field_move_sizes, move, margin, bottom, true);
 
     &.last{ margin-bottom: 0}
 

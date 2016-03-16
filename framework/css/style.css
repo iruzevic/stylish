@@ -5,7 +5,7 @@ Description:
 Author: Mustra-designs (Ivan Ružević)
 Author URI: www.mustra-designs.com
 Help: stylish.mustra-designs.com
-Version: 4.2.1
+Version: 4.2.2
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -173,9 +173,6 @@ table.word_break td {
 /* MIXINS FILES MERGE */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* GLOBAL */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -3053,9 +3050,29 @@ form .field, .form .field {
   list-style: none;
   margin-bottom: 20px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-form .field.move_clear_bottom, form .field.move_clean_bottom, form .field.move_bottom_clear, form .field.move_bottom_clean, .form .field.move_clear_bottom, .form .field.move_clean_bottom, .form .field.move_bottom_clear, .form .field.move_bottom_clean {
-  margin-bottom: 0;
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_tiny, form .field.move_tiny_bottom, .form .field.move_bottom_tiny, .form .field.move_tiny_bottom {
+  margin-bottom: 5px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_small, form .field.move_small_bottom, .form .field.move_bottom_small, .form .field.move_small_bottom {
+  margin-bottom: 10px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_medium, form .field.move_medium_bottom, .form .field.move_bottom_medium, .form .field.move_medium_bottom {
+  margin-bottom: 15px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_large, form .field.move_large_bottom, .form .field.move_bottom_large, .form .field.move_large_bottom {
+  margin-bottom: 25px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_huge, form .field.move_huge_bottom, .form .field.move_bottom_huge, .form .field.move_huge_bottom {
+  margin-bottom: 30px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+form .field.move_bottom_giant, form .field.move_giant_bottom, .form .field.move_bottom_giant, .form .field.move_giant_bottom {
+  margin-bottom: 35px;
 }
 /* line 160, ../assets/stylish/global/_forms.scss */
 form .field.last, .form .field.last {
@@ -4032,40 +4049,120 @@ input[type=reset].btn_sushi_border.current {
 
 /* BLOCK */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 14, ../assets/stylish/mixins/_global.scss */
-.block.move_default_bottom, .block.move_bottom_default {
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_tiny, .block.move_tiny_bottom {
+  margin-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_small, .block.move_small_bottom {
+  margin-bottom: 40px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_medium, .block.move_medium_bottom {
+  margin-bottom: 60px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_default, .block.move_default_bottom {
   margin-bottom: 80px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.block.move_clear_bottom, .block.move_clean_bottom, .block.move_bottom_clear, .block.move_bottom_clean {
-  margin-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_large, .block.move_large_bottom {
+  margin-bottom: 100px;
 }
-/* line 83, ../assets/stylish/mixins/_global.scss */
-.block.move_in_default_bottom, .block.move_in_bottom_default {
-  padding-bottom: 25px;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_huge, .block.move_huge_bottom {
+  margin-bottom: 120px;
 }
-/* line 132, ../assets/stylish/mixins/_global.scss */
-.block.move_in_clear_bottom, .block.move_in_clean_bottom, .block.move_in_bottom_clear, .block.move_in_bottom_clean {
-  padding-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_bottom_giant, .block.move_giant_bottom {
+  margin-bottom: 140px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_tiny, .block.move_in_tiny_bottom {
+  padding-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_small, .block.move_in_small_bottom {
+  padding-bottom: 40px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_medium, .block.move_in_medium_bottom {
+  padding-bottom: 60px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_default, .block.move_in_default_bottom {
+  padding-bottom: 80px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_large, .block.move_in_large_bottom {
+  padding-bottom: 100px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_huge, .block.move_in_huge_bottom {
+  padding-bottom: 120px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block.move_in_bottom_giant, .block.move_in_giant_bottom {
+  padding-bottom: 140px;
 }
 /* line 9, ../assets/stylish/components/_block.scss */
 .block .b_title {
   position: relative;
   margin-bottom: 25px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_clear_bottom, .block .b_title.move_clean_bottom, .block .b_title.move_bottom_clear, .block .b_title.move_bottom_clean {
-  margin-bottom: 0;
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_tiny, .block .b_title.move_tiny_bottom {
+  margin-bottom: 10px;
 }
-/* line 83, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_in_default_bottom, .block .b_title.move_in_bottom_default {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_small, .block .b_title.move_small_bottom {
+  margin-bottom: 15px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_medium, .block .b_title.move_medium_bottom {
+  margin-bottom: 20px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_large, .block .b_title.move_large_bottom {
+  margin-bottom: 30px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_huge, .block .b_title.move_huge_bottom {
+  margin-bottom: 35px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_bottom_giant, .block .b_title.move_giant_bottom {
+  margin-bottom: 40px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_tiny, .block .b_title.move_in_tiny_bottom {
+  padding-bottom: 10px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_small, .block .b_title.move_in_small_bottom {
+  padding-bottom: 15px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_medium, .block .b_title.move_in_medium_bottom {
+  padding-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_default, .block .b_title.move_in_default_bottom {
   padding-bottom: 25px;
 }
-/* line 132, ../assets/stylish/mixins/_global.scss */
-.block .b_title.move_in_clear_bottom, .block .b_title.move_in_clean_bottom, .block .b_title.move_in_bottom_clear, .block .b_title.move_in_bottom_clean {
-  padding-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_large, .block .b_title.move_in_large_bottom {
+  padding-bottom: 30px;
 }
-/* line 150, ../assets/stylish/mixins/_global.scss */
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_huge, .block .b_title.move_in_huge_bottom {
+  padding-bottom: 35px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title.move_in_bottom_giant, .block .b_title.move_in_giant_bottom {
+  padding-bottom: 40px;
+}
+/* line 10, ../assets/stylish/mixins/_global.scss */
 .block .b_title.border_bottom {
   border-bottom: 1px solid #373737;
 }
@@ -4073,63 +4170,179 @@ input[type=reset].btn_sushi_border.current {
 .block .b_title .title {
   position: relative;
 }
-/* line 14, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_default_bottom, .block .b_title .title.move_bottom_default {
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_tiny, .block .b_title .title.move_tiny_bottom {
+  margin-bottom: 10px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_small, .block .b_title .title.move_small_bottom {
+  margin-bottom: 15px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_medium, .block .b_title .title.move_medium_bottom {
+  margin-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_default, .block .b_title .title.move_default_bottom {
   margin-bottom: 25px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_clear_bottom, .block .b_title .title.move_clean_bottom, .block .b_title .title.move_bottom_clear, .block .b_title .title.move_bottom_clean {
-  margin-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_large, .block .b_title .title.move_large_bottom {
+  margin-bottom: 30px;
 }
-/* line 83, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_in_default_bottom, .block .b_title .title.move_in_bottom_default {
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_huge, .block .b_title .title.move_huge_bottom {
+  margin-bottom: 35px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_bottom_giant, .block .b_title .title.move_giant_bottom {
+  margin-bottom: 40px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_tiny, .block .b_title .title.move_in_tiny_bottom {
+  padding-bottom: 10px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_small, .block .b_title .title.move_in_small_bottom {
+  padding-bottom: 15px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_medium, .block .b_title .title.move_in_medium_bottom {
+  padding-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_default, .block .b_title .title.move_in_default_bottom {
   padding-bottom: 25px;
 }
-/* line 132, ../assets/stylish/mixins/_global.scss */
-.block .b_title .title.move_in_clear_bottom, .block .b_title .title.move_in_clean_bottom, .block .b_title .title.move_in_bottom_clear, .block .b_title .title.move_in_bottom_clean {
-  padding-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_large, .block .b_title .title.move_in_large_bottom {
+  padding-bottom: 30px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_huge, .block .b_title .title.move_in_huge_bottom {
+  padding-bottom: 35px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block .b_title .title.move_in_bottom_giant, .block .b_title .title.move_in_giant_bottom {
+  padding-bottom: 40px;
 }
 
-/* line 14, ../assets/stylish/mixins/_global.scss */
+/* line 73, ../assets/stylish/mixins/_global.scss */
 .block_wrap
-.block_wrapper.move_default_bottom, .block_wrap
-.block_wrapper.move_bottom_default {
-  margin-bottom: -80px;
+.block_wrapper.move_bottom_tiny, .block_wrap
+.block_wrapper.move_tiny_bottom {
+  margin-bottom: -5px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
+/* line 73, ../assets/stylish/mixins/_global.scss */
 .block_wrap
-.block_wrapper.move_clear_bottom, .block_wrap
-.block_wrapper.move_clean_bottom, .block_wrap
-.block_wrapper.move_bottom_clear, .block_wrap
-.block_wrapper.move_bottom_clean {
-  margin-bottom: 0;
+.block_wrapper.move_bottom_small, .block_wrap
+.block_wrapper.move_small_bottom {
+  margin-bottom: -10px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block_wrap
+.block_wrapper.move_bottom_medium, .block_wrap
+.block_wrapper.move_medium_bottom {
+  margin-bottom: -15px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block_wrap
+.block_wrapper.move_bottom_default, .block_wrap
+.block_wrapper.move_default_bottom {
+  margin-bottom: -20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block_wrap
+.block_wrapper.move_bottom_large, .block_wrap
+.block_wrapper.move_large_bottom {
+  margin-bottom: -25px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block_wrap
+.block_wrapper.move_bottom_huge, .block_wrap
+.block_wrapper.move_huge_bottom {
+  margin-bottom: -30px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.block_wrap
+.block_wrapper.move_bottom_giant, .block_wrap
+.block_wrapper.move_giant_bottom {
+  margin-bottom: -35px;
 }
 
 /* line 33, ../assets/stylish/components/_block.scss */
 .btn_set {
   overflow: hidden;
 }
-/* line 14, ../assets/stylish/mixins/_global.scss */
-.btn_set.move_default_bottom, .btn_set.move_bottom_default {
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_tiny, .btn_set.move_tiny_bottom {
+  margin-bottom: -5px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_small, .btn_set.move_small_bottom {
   margin-bottom: -10px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.btn_set.move_clear_bottom, .btn_set.move_clean_bottom, .btn_set.move_bottom_clear, .btn_set.move_bottom_clean {
-  margin-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_medium, .btn_set.move_medium_bottom {
+  margin-bottom: -15px;
 }
-/* line 14, ../assets/stylish/mixins/_global.scss */
-.btn_set .btn.move_default_bottom, .btn_set .btn.move_bottom_default,
-.btn_set .btn_link.move_default_bottom,
-.btn_set .btn_link.move_bottom_default {
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_default, .btn_set.move_default_bottom {
+  margin-bottom: -20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_large, .btn_set.move_large_bottom {
+  margin-bottom: -25px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_huge, .btn_set.move_huge_bottom {
+  margin-bottom: -30px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set.move_bottom_giant, .btn_set.move_giant_bottom {
+  margin-bottom: -35px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_tiny, .btn_set .btn.move_tiny_bottom,
+.btn_set .btn_link.move_bottom_tiny,
+.btn_set .btn_link.move_tiny_bottom {
+  margin-bottom: 5px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_small, .btn_set .btn.move_small_bottom,
+.btn_set .btn_link.move_bottom_small,
+.btn_set .btn_link.move_small_bottom {
   margin-bottom: 10px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.btn_set .btn.move_clear_bottom, .btn_set .btn.move_clean_bottom, .btn_set .btn.move_bottom_clear, .btn_set .btn.move_bottom_clean,
-.btn_set .btn_link.move_clear_bottom,
-.btn_set .btn_link.move_clean_bottom,
-.btn_set .btn_link.move_bottom_clear,
-.btn_set .btn_link.move_bottom_clean {
-  margin-bottom: 0;
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_medium, .btn_set .btn.move_medium_bottom,
+.btn_set .btn_link.move_bottom_medium,
+.btn_set .btn_link.move_medium_bottom {
+  margin-bottom: 15px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_default, .btn_set .btn.move_default_bottom,
+.btn_set .btn_link.move_bottom_default,
+.btn_set .btn_link.move_default_bottom {
+  margin-bottom: 20px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_large, .btn_set .btn.move_large_bottom,
+.btn_set .btn_link.move_bottom_large,
+.btn_set .btn_link.move_large_bottom {
+  margin-bottom: 25px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_huge, .btn_set .btn.move_huge_bottom,
+.btn_set .btn_link.move_bottom_huge,
+.btn_set .btn_link.move_huge_bottom {
+  margin-bottom: 30px;
+}
+/* line 73, ../assets/stylish/mixins/_global.scss */
+.btn_set .btn.move_bottom_giant, .btn_set .btn.move_giant_bottom,
+.btn_set .btn_link.move_bottom_giant,
+.btn_set .btn_link.move_giant_bottom {
+  margin-bottom: 35px;
 }
 /* line 37, ../assets/stylish/components/_block.scss */
 .btn_set .btn_link {
@@ -4162,41 +4375,82 @@ input[type=reset].btn_sushi_border.current {
   margin-bottom: 50px;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.divider.move_clear_top, .divider.move_clean_top, .divider.move_top_clear, .divider.move_top_clean {
-  margin-top: 0;
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_tiny, .divider.move_tiny_top {
+  margin-top: 5px;
 }
-/* line 63, ../assets/stylish/mixins/_global.scss */
-.divider.move_clear_bottom, .divider.move_clean_bottom, .divider.move_bottom_clear, .divider.move_bottom_clean {
-  margin-bottom: 0;
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_small, .divider.move_small_top {
+  margin-top: 10px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_medium, .divider.move_medium_top {
+  margin-top: 30px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_large, .divider.move_large_top {
+  margin-top: 70px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_huge, .divider.move_huge_top {
+  margin-top: 900px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_top_giant, .divider.move_giant_top {
+  margin-top: 110px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_tiny, .divider.move_tiny_bottom {
+  margin-bottom: 5px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_small, .divider.move_small_bottom {
+  margin-bottom: 10px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_medium, .divider.move_medium_bottom {
+  margin-bottom: 30px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_large, .divider.move_large_bottom {
+  margin-bottom: 70px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_huge, .divider.move_huge_bottom {
+  margin-bottom: 900px;
+}
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.divider.move_bottom_giant, .divider.move_giant_bottom {
+  margin-bottom: 110px;
 }
 
 /* line 15, ../assets/stylish/components/_divider.scss */
 .spacer {
+  display: block;
   height: 40px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_tiny {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_tiny, .spacer.height_tiny {
   height: 10px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_small {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_small, .spacer.height_small {
   height: 20px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_medium {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_medium, .spacer.height_medium {
   height: 30px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_large {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_large, .spacer.height_large {
   height: 50px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_huge {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_huge, .spacer.height_huge {
   height: 60px;
 }
-/* line 251, ../assets/stylish/mixins/_global.scss */
-.spacer.height_giant {
+/* line 68, ../assets/stylish/mixins/_global.scss */
+.spacer.height_giant, .spacer.height_giant {
   height: 70px;
 }
 
@@ -4654,39 +4908,39 @@ html.modal_active body {
 .bg_img.contain, .bg_img[data-bgsize="contain"] {
   background-size: contain;
 }
-/* line 221, ../assets/stylish/mixins/_global.scss */
+/* line 22, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="top"] {
   background-position: left top;
 }
-/* line 222, ../assets/stylish/mixins/_global.scss */
+/* line 23, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="center"] {
   background-position: left center;
 }
-/* line 223, ../assets/stylish/mixins/_global.scss */
+/* line 24, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="left"][data-bg-v="bottom"] {
   background-position: left bottom;
 }
-/* line 227, ../assets/stylish/mixins/_global.scss */
+/* line 28, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="top"] {
   background-position: center top;
 }
-/* line 228, ../assets/stylish/mixins/_global.scss */
+/* line 29, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="center"] {
   background-position: center center;
 }
-/* line 229, ../assets/stylish/mixins/_global.scss */
+/* line 30, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="center"][data-bg-v="bottom"] {
   background-position: center bottom;
 }
-/* line 233, ../assets/stylish/mixins/_global.scss */
+/* line 34, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="top"] {
   background-position: right top;
 }
-/* line 234, ../assets/stylish/mixins/_global.scss */
+/* line 35, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="center"] {
   background-position: right center;
 }
-/* line 235, ../assets/stylish/mixins/_global.scss */
+/* line 36, ../assets/stylish/mixins/_global.scss */
 .bg_img[data-bg-h="right"][data-bg-v="bottom"] {
   background-position: right bottom;
 }
