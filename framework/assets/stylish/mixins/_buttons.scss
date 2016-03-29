@@ -1,4 +1,7 @@
-/* BUTTONS */
+/*
+BUTTONS
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -24,9 +27,9 @@
 
 
 //Button generate colors based on scheme
-@mixin btn_colors_generate(){
+@mixin btn_colors_generate($map: false){
 
-  @each $key, $values in $btn_colors{
+  @each $key, $values in $map{
     $bg:            map_get($values, bg);
     $txt:           map_get($values, txt);
     $border:        map_get($values, border);
@@ -61,9 +64,9 @@
 
 
 //Button generate sizes based on scheme
-@mixin btn_sizes_generate(){
+@mixin btn_sizes_generate($map:false){
 
-  @each $key, $values in $btn_sizes{
+  @each $key, $values in $map{
 
     $height:         map_get($values, height);
     $txt:            map_get($values, txt);

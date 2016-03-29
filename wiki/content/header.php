@@ -1,6 +1,7 @@
 <div id="wrapper">
     <div id="wrap">
 
+		<!-- Header START -->
         <div id="header" class="sticky">
             <div class="container liquid">
                 <div class="grid_clean">
@@ -28,6 +29,7 @@
                 </div>
             </div>
         </div>
+		<!-- Header END -->
 
         <div id="main_content">
             <div class="container liquid">

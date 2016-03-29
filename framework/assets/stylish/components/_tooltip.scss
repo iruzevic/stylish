@@ -1,4 +1,7 @@
-/* TOOLTIP */
+/*
+TOOLTIP
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -76,7 +79,7 @@
 
 
   //Generate default color style
-  @include tooltip_color();
+  @include tooltip_color($tooltip_bg, $tooltip_txt, $tooltip_border);
 
 
   //Tip Details Style

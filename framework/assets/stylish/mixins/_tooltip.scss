@@ -1,8 +1,11 @@
-/* TOOLTIP */
+/*
+TOOLTIP
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 //Tooltip colors
-@mixin tooltip_color($tip_color:$tooltip_bg, $tip_txt: $tooltip_txt, $tip_border: $tooltip_border){
+@mixin tooltip_color($tip_color:false, $tip_txt: false, $tip_border: false){
   background: $tip_color; color: $tip_txt; border: 1px solid $tip_border;
   &[data-tip-position="top"]:after{ border-top-color: $tip_color; }
   &[data-tip-position="bottom"]:after{ border-bottom-color: $tip_color; }

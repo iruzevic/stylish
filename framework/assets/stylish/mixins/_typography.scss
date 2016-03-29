@@ -1,4 +1,7 @@
-/* TYPOGRAPHY */
+/*
+TYPOGRAPHY
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -210,9 +213,9 @@
 
 
 //Generating text colors
-@mixin txt_color_generate(){
+@mixin txt_color_generate($map:false){
 
-  @each $key, $values in $color_schemes{
+  @each $key, $values in $map{
     .txt_#{$key}{
       color: $values;
     }
@@ -225,9 +228,9 @@
 
 
 //Generating bg colors
-@mixin bg_color_generate(){
+@mixin bg_color_generate($map:false){
 
-  @each $key, $values in $color_schemes{
+  @each $key, $values in $map{
     .bg_#{$key}{
       background-color: $values;
     }

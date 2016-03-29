@@ -1,4 +1,7 @@
-/* FORMS */
+/*
+FORMS
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -187,9 +190,9 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 //Button generate sizes based on scheme
-@mixin input_sizes_generate(){
+@mixin input_sizes_generate($map:false){
 
-  @each $key, $values in $input_sizes{
+  @each $key, $values in $map{
 
     $height:         map_get($values, height);
     $txt:            map_get($values, txt);

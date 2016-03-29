@@ -1,4 +1,7 @@
-/* BUTTONS */
+/*
+BUTTONS
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -13,7 +16,7 @@ input[type=reset]{
   @include single-transition(all, .35s, ease-in);
 
   //Button Sizes
-  @include btn_sizes_generate();
+  @include btn_sizes_generate($btn_sizes);
 
   //Focus state
   &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
@@ -52,7 +55,7 @@ input[type=reset]{
   /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
   /* Buttons Colors */
-  @include btn_colors_generate();
+	@include btn_colors_generate($btn_colors);
 
 }
 

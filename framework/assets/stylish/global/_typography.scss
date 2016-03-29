@@ -1,4 +1,7 @@
-/* TYPOGRAPHY */
+/*
+TYPOGRAPHY
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -96,14 +99,14 @@ a:not(.btn) {
 
 
 //Text color generate classes (.txt_name)
-@include txt_color_generate();
+@include txt_color_generate($color_schemes);
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
 //Background color generate classes (.bg_name)
-@include bg_color_generate();
+@include bg_color_generate($color_schemes);
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
