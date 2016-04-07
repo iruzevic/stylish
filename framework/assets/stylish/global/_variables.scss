@@ -29,20 +29,20 @@ $color_notice:                #c0cddc;  //notice  notification color
 
 //Create color scheme
 $color_schemes:(
-        'sushi'       $color_sushi,
-        'mine_shaft'  $color_mine_shaft,
-        'tundora'     $color_tundora,
-        'chicago'     $color_chicago,
-        'gray'        $color_gray,
-        'silver'      $color_silver,
-        'alto'        $color_alto,
-        'seashell'    $color_seashell,
-        'gallery'     $color_gallery,
-        'pampas'      $color_pampas,
-        'rust'        $color_rust,
-        'astral'      $color_astral,
-        'turmeric'    $color_turmeric
-        'white'       $color_white
+		'sushi'       $color_sushi,
+		'mine_shaft'  $color_mine_shaft,
+		'tundora'     $color_tundora,
+		'chicago'     $color_chicago,
+		'gray'        $color_gray,
+		'silver'      $color_silver,
+		'alto'        $color_alto,
+		'seashell'    $color_seashell,
+		'gallery'     $color_gallery,
+		'pampas'      $color_pampas,
+		'rust'        $color_rust,
+		'astral'      $color_astral,
+		'turmeric'    $color_turmeric
+		'white'       $color_white
 );
 
 
@@ -216,143 +216,143 @@ $input_bg_disabled:           $color_silver;
 $input_txt_disabled:          $color_alto;
 
 
-    // ---------------------------------------- //
-    //select fields
-    $select_icon_color:           $color_mine_shaft;
+// ---------------------------------------- //
+//select fields
+$select_icon_color:           $color_mine_shaft;
 
 
-    // ---------------------------------------- //
-    //checkbox
-    $checkbox_bg:                 $input_bg_color;
-    $checkbox_border:             $input_border_color;
-    $checkbox_active:             $color_sushi;
+// ---------------------------------------- //
+//checkbox
+$checkbox_bg:                 $input_bg_color;
+$checkbox_border:             $input_border_color;
+$checkbox_active:             $color_sushi;
 
 
-    // ---------------------------------------- //
-    //radio
-    $radio_bg:                    $input_bg_color;
-    $radio_border:                $input_border_color;
-    $radio_active:                $checkbox_active;
+// ---------------------------------------- //
+//radio
+$radio_bg:                    $input_bg_color;
+$radio_border:                $input_border_color;
+$radio_active:                $checkbox_active;
 
 
-    // ---------------------------------------- //
-    //form style
-    $form_error:                  $color_error;
-    $form_error_move_default:     10px;
+// ---------------------------------------- //
+//form style
+$form_error:                  $color_error;
+$form_error_move_default:     10px;
 
-	$form_field_move_sizes:(
-			'tiny':      5px,
-			'small':     10px,
-			'medium':    15px,
-			'default':   20px,
-			'large':     25px,
-			'huge':      30px,
-			'giant':     35px
-	);
+$form_field_move_sizes:(
+		'tiny':      5px,
+		'small':     10px,
+		'medium':    15px,
+		'default':   20px,
+		'large':     25px,
+		'huge':      30px,
+		'giant':     35px
+);
 
-    $form_required_move:          3px;
-    $form_required_size:          14px;
+$form_required_move:          3px;
+$form_required_size:          14px;
 
-    $form_label_move:             5px;
+$form_label_move:             5px;
 
 
-    // ---------------------------------------- //
-    //Input setup specific sizes
-    $input_size_tiny:(
-        height:         10px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  5px,
-        radio_icon:     5px,
-        select_icon:    5px
-    );
+// ---------------------------------------- //
+//Input setup specific sizes
+$input_size_tiny:(
+		height:         10px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  5px,
+		radio_icon:     5px,
+		select_icon:    5px
+);
 
-    $input_size_small:(
-        height:         20px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  10px,
-        radio_icon:     10px,
-        select_icon:    10px
-    );
+$input_size_small:(
+		height:         20px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  10px,
+		radio_icon:     10px,
+		select_icon:    10px
+);
 
-    $input_size_medium:(
-        height:         30px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  20px,
-        radio_icon:     20px,
-        select_icon:    20px
-    );
+$input_size_medium:(
+		height:         30px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  20px,
+		radio_icon:     20px,
+		select_icon:    20px
+);
 
-    $input_size_default:(
-        height:         40px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  30px,
-        radio_icon:     30px,
-        select_icon:    30px
-    );
+$input_size_default:(
+		height:         40px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  30px,
+		radio_icon:     30px,
+		select_icon:    30px
+);
 
-    $input_size_large:(
-        height:         50px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  40px,
-        radio_icon:     40px,
-        select_icon:    40px
-    );
+$input_size_large:(
+		height:         50px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  40px,
+		radio_icon:     40px,
+		select_icon:    40px
+);
 
-    $input_size_huge:(
-        height:         60px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  50px,
-        radio_icon:     50px,
-        select_icon:    50px
-    );
+$input_size_huge:(
+		height:         60px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  50px,
+		radio_icon:     50px,
+		select_icon:    50px
+);
 
-    $input_size_giant:(
-        height:         70px,
-        txt:            $p,
-        line_height:    $p,
-        move_v:         10px,
-        move_h:         10px,
-        border_width:   $input_border_width,
-        checkbox_icon:  60px,
-        radio_icon:     60px,
-        select_icon:    60px
-    );
+$input_size_giant:(
+		height:         70px,
+		txt:            $p,
+		line_height:    $p,
+		move_v:         10px,
+		move_h:         10px,
+		border_width:   $input_border_width,
+		checkbox_icon:  60px,
+		radio_icon:     60px,
+		select_icon:    60px
+);
 
-    // ---------------------------------------- //
-    //Input generate sizes
-    $input_sizes:(
-      tiny:     $input_size_tiny,
-      small:    $input_size_small,
-      medium:   $input_size_medium,
-      default:  $input_size_default,
-      large:    $input_size_large,
-      huge:     $input_size_huge,
-      giant:    $input_size_giant
-    );
+// ---------------------------------------- //
+//Input generate sizes
+$input_sizes:(
+		tiny:     $input_size_tiny,
+		small:    $input_size_small,
+		medium:   $input_size_medium,
+		default:  $input_size_default,
+		large:    $input_size_large,
+		huge:     $input_size_huge,
+		giant:    $input_size_giant
+);
 
 
 
@@ -379,126 +379,126 @@ $btn_icon_size:               18px;
 $btn_icon_move:               10px;
 
 
-    // ---------------------------------------- //
-    //Btn move in sizes (padding left,right)
-    $btn_move_in_size:(
-        'tiny':         10px,
-        'small':        15px,
-        'medium':       20px,
-        'default':      30px,
-        'large':        35px,
-        'huge':         40px,
-        'giant':        45px
-    );
+// ---------------------------------------- //
+//Btn move in sizes (padding left,right)
+$btn_move_in_size:(
+		'tiny':         10px,
+		'small':        15px,
+		'medium':       20px,
+		'default':      30px,
+		'large':        35px,
+		'huge':         40px,
+		'giant':        45px
+);
 
-    // ---------------------------------------- //
-    //Btn generate sizes
-    $btn_size_tiny:(
-        height:       20px,
-        txt:          10px,
-        line_height:  10px,
-        move_v:       4px,
-        move_h:       map_get($btn_move_in_size, tiny),
-        border_width: $btn_border_width
-    );
-    $btn_size_small:(
-        height:       25px,
-        txt:          12px,
-        line_height:  12px,
-        move_v:       5px,
-        move_h:       map_get($btn_move_in_size, small),
-        border_width: $btn_border_width
-    );
-    $btn_size_medium:(
-        height:       30px,
-        txt:          14px,
-        line_height:  14px,
-        move_v:       7px,
-        move_h:       map_get($btn_move_in_size, medium),
-        border_width: $btn_border_width
-    );
-    $btn_size_default:(
-        height:       40px,
-        txt:          16px,
-        line_height:  16px,
-        move_v:       11px,
-        move_h:       map_get($btn_move_in_size, default),
-        border_width: $btn_border_width
-    );
-    $btn_size_large:(
-        height:       45px,
-        txt:          18px,
-        line_height:  18px,
-        move_v:       12px,
-        move_h:       map_get($btn_move_in_size, large),
-        border_width: $btn_border_width
-    );
-    $btn_size_huge:(
-        height:       50px,
-        txt:          20px,
-        line_height:  20px,
-        move_v:       14px,
-        move_h:       map_get($btn_move_in_size, huge),
-        border_width: $btn_border_width
-    );
-    $btn_size_giant:(
-        height:       55px,
-        txt:          22px,
-        line_height:  22px,
-        move_v:       15px,
-        move_h:       map_get($btn_move_in_size, giant),
-        border_width: $btn_border_width
-    );
+// ---------------------------------------- //
+//Btn generate sizes
+$btn_size_tiny:(
+		height:       20px,
+		txt:          10px,
+		line_height:  10px,
+		move_v:       4px,
+		move_h:       map_get($btn_move_in_size, tiny),
+		border_width: $btn_border_width
+);
+$btn_size_small:(
+		height:       25px,
+		txt:          12px,
+		line_height:  12px,
+		move_v:       5px,
+		move_h:       map_get($btn_move_in_size, small),
+		border_width: $btn_border_width
+);
+$btn_size_medium:(
+		height:       30px,
+		txt:          14px,
+		line_height:  14px,
+		move_v:       7px,
+		move_h:       map_get($btn_move_in_size, medium),
+		border_width: $btn_border_width
+);
+$btn_size_default:(
+		height:       40px,
+		txt:          16px,
+		line_height:  16px,
+		move_v:       11px,
+		move_h:       map_get($btn_move_in_size, default),
+		border_width: $btn_border_width
+);
+$btn_size_large:(
+		height:       45px,
+		txt:          18px,
+		line_height:  18px,
+		move_v:       12px,
+		move_h:       map_get($btn_move_in_size, large),
+		border_width: $btn_border_width
+);
+$btn_size_huge:(
+		height:       50px,
+		txt:          20px,
+		line_height:  20px,
+		move_v:       14px,
+		move_h:       map_get($btn_move_in_size, huge),
+		border_width: $btn_border_width
+);
+$btn_size_giant:(
+		height:       55px,
+		txt:          22px,
+		line_height:  22px,
+		move_v:       15px,
+		move_h:       map_get($btn_move_in_size, giant),
+		border_width: $btn_border_width
+);
 
-    // ---------------------------------------- //
-    //Btn generate sizes
-    $btn_sizes:(
-      'tiny':     $btn_size_tiny,
-      'small':    $btn_size_small,
-      'medium':   $btn_size_medium,
-      'default':  $btn_size_default,
-      'large':    $btn_size_large,
-      'huge':     $btn_size_huge,
-      'giant':    $btn_size_giant
-    );
+// ---------------------------------------- //
+//Btn generate sizes
+$btn_sizes:(
+		'tiny':     $btn_size_tiny,
+		'small':    $btn_size_small,
+		'medium':   $btn_size_medium,
+		'default':  $btn_size_default,
+		'large':    $btn_size_large,
+		'huge':     $btn_size_huge,
+		'giant':    $btn_size_giant
+);
 
-    // ---------------------------------------- //
+// ---------------------------------------- //
 
-    //Btn generate colors
-    $btn_colors:(
-        'mine_shaft':(
-            bg:             $color_mine_shaft,
-            txt:            $color_white,
-            border:         $color_mine_shaft,
-            hover_bg:       transparent,
-            hover_txt:      $color_mine_shaft,
-            hover_border:   $color_mine_shaft
-        ),
-        'mine_shaft_border':(
-                bg:             transparent,
-                txt:            $color_mine_shaft,
-                border:         $color_mine_shaft,
-                hover_bg:       $color_mine_shaft,
-                hover_txt:      $color_white,
-                hover_border:   $color_mine_shaft
-        ),
-        'sushi':(
-                bg:             $color_sushi,
-                txt:            $color_white,
-                border:         $color_sushi,
-                hover_bg:       transparent,
-                hover_txt:      $color_sushi,
-                hover_border:   $color_sushi
-        ),
-        'sushi_border':(
-                bg:             transparent,
-                txt:            $color_sushi,
-                border:         $color_sushi,
-                hover_bg:       $color_sushi,
-                hover_txt:      $color_white,
-                hover_border:   $color_sushi
-        )
-    );
+//Btn generate colors
+$btn_colors:(
+		'mine_shaft':(
+				bg:             $color_mine_shaft,
+				txt:            $color_white,
+				border:         $color_mine_shaft,
+				hover_bg:       transparent,
+				hover_txt:      $color_mine_shaft,
+				hover_border:   $color_mine_shaft
+		),
+		'mine_shaft_border':(
+				bg:             transparent,
+				txt:            $color_mine_shaft,
+				border:         $color_mine_shaft,
+				hover_bg:       $color_mine_shaft,
+				hover_txt:      $color_white,
+				hover_border:   $color_mine_shaft
+		),
+		'sushi':(
+				bg:             $color_sushi,
+				txt:            $color_white,
+				border:         $color_sushi,
+				hover_bg:       transparent,
+				hover_txt:      $color_sushi,
+				hover_border:   $color_sushi
+		),
+		'sushi_border':(
+				bg:             transparent,
+				txt:            $color_sushi,
+				border:         $color_sushi,
+				hover_bg:       $color_sushi,
+				hover_txt:      $color_white,
+				hover_border:   $color_sushi
+		)
+);
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 // COMPONENTS
@@ -592,7 +592,7 @@ $spacer_sizes: (
 );
 
 
-  // ---------------------------------------- //
+// ---------------------------------------- //
 //Modal
 $modal_max_width:             600px;
 $modal_overlay_opacity:       0.7;

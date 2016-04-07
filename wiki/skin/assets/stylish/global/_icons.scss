@@ -15,26 +15,26 @@
 
 // Make icons spin
 .icon_spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
+	-webkit-animation: spin 2s infinite linear;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
 }
 @-moz-keyframes spin {
-  0% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(359deg); }
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(359deg); }
 }
 @-webkit-keyframes spin {
-  0%   { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
+	0%   { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(359deg); }
 }
 @-o-keyframes spin {
-  0% { -o-transform: rotate(0deg); }
-  100% { -o-transform: rotate(359deg); }
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(359deg); }
 }
 @keyframes spin {
-  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
 }
 
 
@@ -45,15 +45,15 @@
 .txt_icon,
 .txt_icon_left,
 .txt_icon_right{
-  i, .icon{ vertical-align: middle; }
+	i, .icon{ vertical-align: middle; }
 }
 
 .txt_icon_left{
-  i, .icon{   margin-right: 10px;  }
+	i, .icon{   margin-right: 10px;  }
 }
 
 .txt_icon_right{
-  i, .icon{  margin-left: 10px; }
+	i, .icon{  margin-left: 10px; }
 }
 
 
@@ -72,108 +72,108 @@
 /* Icons */
 
 .sy_Pagination:before {
-  content: "\e911";
+	content: "\e911";
 }
 .sy_Tables_2:before {
-  content: "\e912";
+	content: "\e912";
 }
 .sy_Accordion:before {
-  content: "\e900";
+	content: "\e900";
 }
 .sy_Block_1:before {
-  content: "\e901";
+	content: "\e901";
 }
 .sy_Block_2:before {
-  content: "\e902";
+	content: "\e902";
 }
 .sy_Breadcrumbs:before {
-  content: "\e903";
+	content: "\e903";
 }
 .sy_Buttons:before {
-  content: "\e904";
+	content: "\e904";
 }
 .sy_Dividers:before {
-  content: "\e905";
+	content: "\e905";
 }
 .sy_Forms_2:before {
-  content: "\e906";
+	content: "\e906";
 }
 .sy_Forms:before {
-  content: "\e907";
+	content: "\e907";
 }
 .sy_Grid:before {
-  content: "\e908";
+	content: "\e908";
 }
 .sy_Helpers:before {
-  content: "\e909";
+	content: "\e909";
 }
 .sy_Icons:before {
-  content: "\e90a";
+	content: "\e90a";
 }
 .sy_Messages:before {
-  content: "\e90b";
+	content: "\e90b";
 }
 .sy_Mixins:before {
-  content: "\e90c";
+	content: "\e90c";
 }
 .sy_Modal_2:before {
-  content: "\e90d";
+	content: "\e90d";
 }
 .sy_Modal:before {
-  content: "\e90e";
+	content: "\e90e";
 }
 .sy_Navigation:before {
-  content: "\e90f";
+	content: "\e90f";
 }
 .sy_Other:before {
-  content: "\e910";
+	content: "\e910";
 }
 .sy_Tables:before {
-  content: "\e913";
+	content: "\e913";
 }
 .sy_Tabs:before {
-  content: "\e914";
+	content: "\e914";
 }
 .sy_Tooltips:before {
-  content: "\e915";
+	content: "\e915";
 }
 .sy_Typography:before {
-  content: "\e916";
+	content: "\e916";
 }
 .sy_spinner:before {
-  content: "\e60e";
+	content: "\e60e";
 }
 .sy_arrow:before {
-  content: "\e603";
+	content: "\e603";
 }
 .sy_check:before {
-  content: "\e604";
+	content: "\e604";
 }
 .sy_check_round:before {
-  content: "\e605";
+	content: "\e605";
 }
 .sy_circle:before {
-  content: "\e606";
+	content: "\e606";
 }
 .sy_info:before {
-  content: "\e607";
+	content: "\e607";
 }
 .sy_info_round:before {
-  content: "\e608";
+	content: "\e608";
 }
 .sy_menu:before {
-  content: "\e609";
+	content: "\e609";
 }
 .sy_plus:before {
-  content: "\e60a";
+	content: "\e60a";
 }
 .sy_remove:before {
-  content: "\e60b";
+	content: "\e60b";
 }
 .sy_remove_round:before {
-  content: "\e60c";
+	content: "\e60c";
 }
 .sy_warning:before {
-  content: "\e60d";
+	content: "\e60d";
 }
 

@@ -7,24 +7,24 @@ Version: 1.0
 
 @include form_fields{
 
-  @include input_style($input_txt_color, $input_bg_color, $input_border_width, $input_border_style, $input_border_color, $input_margin, $input_width, $input_font_family, $input_radius, $input_weight);
-  @include appearance(none);
-  @include font-smoothing();
+	@include input_style($input_txt_color, $input_bg_color, $input_border_width, $input_border_style, $input_border_color, $input_margin, $input_width, $input_font_family, $input_radius, $input_weight);
+	@include appearance(none);
+	@include font-smoothing();
 
-  &.auto_width{ width: auto }
+	&.auto_width{ width: auto }
 
-  //Focus state
-  &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
+	//Focus state
+	&:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
 
-  //Disabled state
-  &:disabled, .disabled{ }
+	//Disabled state
+	&:disabled, .disabled{ }
 }
 textarea{ height: 150px; }
 
 
 /* Stylize Placeholder */
 @include placeholder{
-  color: $input_placeholder
+	color: $input_placeholder
 }
 
 
@@ -39,18 +39,18 @@ textarea{ height: 150px; }
 
 /* Setup custom select input */
 .select {
-  position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
+	position: relative;border: $input_border_width $input_border_style $input_border_color;cursor: pointer;overflow:hidden; background-color: $input_bg_color; display: block;@include border-radius($global_radius);
 
-  &:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; }
-  select{
-    position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; width: 100%; left: 0; top: 0; font-family: Arial, Helvetica, sans-serif;
-    &:focus{outline: none;}
-  }
+	&:after{ position: absolute; right: 15px; top: 50%;  z-index: 5; text-align: center; color: $select_icon_color; @extend .sy_icon; @extend .sy_arrow:before; @extend .icon_orientation_down; }
+	select{
+		position: absolute; cursor:pointer;z-index: 10;background-color: transparent;@include border-radius(0); border:none; width: 100%; left: 0; top: 0; font-family: Arial, Helvetica, sans-serif;
+		&:focus{outline: none;}
+	}
 
-  //Focus state
-  &.focus{
-    @include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
-  }
+	//Focus state
+	&.focus{
+		@include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
+	}
 
 }
 
@@ -60,85 +60,85 @@ textarea{ height: 150px; }
 
 /* Checkbox and Radio input Global setup */
 .checkbox, .radio{
-  position: relative;display: table; table-layout: fixed;
+	position: relative;display: table; table-layout: fixed;
 
-  label {
-    cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle; height:100%;
-    a{ text-decoration: underline}
-  }
+	label {
+		cursor: pointer;@include user-select(none); margin: 0; display: table-cell; vertical-align: middle; height:100%;
+		a{ text-decoration: underline}
+	}
 
-  //Icon
-  .checkbox_icon,
-  .radio_icon{
-    text-align:center; border: 1px solid; @extend .sy_icon; position: absolute; left: 0; top: 50%;
+	//Icon
+	.checkbox_icon,
+	.radio_icon{
+		text-align:center; border: 1px solid; @extend .sy_icon; position: absolute; left: 0; top: 50%;
 
-    &:before{ position: absolute; left: 50%; top: 50%; }
-  }
+		&:before{ position: absolute; left: 50%; top: 50%; }
+	}
 
-  //Focus state
-  &.focus{
-    .checkbox_icon,
-    .radio_icon{
-      @include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
-    }
-  }
+	//Focus state
+	&.focus{
+		.checkbox_icon,
+		.radio_icon{
+			@include box-shadow(rgba($input_focus, 0.3) 0 0 10px);
+		}
+	}
 
-  //move real input out from viewpoint, don't use display:none because of IE7-8
-  input[type=checkbox],
-  input[type=radio] {position: absolute;left: 5px; top: 5px; z-index: -1; margin: 0; padding: 0; @include opacity(0)}
+	//move real input out from viewpoint, don't use display:none because of IE7-8
+	input[type=checkbox],
+	input[type=radio] {position: absolute;left: 5px; top: 5px; z-index: -1; margin: 0; padding: 0; @include opacity(0)}
 }
 
 /* Setup custom checkbox input */
 .checkbox{
 
-  // icon
-  .checkbox_icon { color:$checkbox_bg;background-color: $checkbox_bg;border-color: $checkbox_border; }
+	// icon
+	.checkbox_icon { color:$checkbox_bg;background-color: $checkbox_bg;border-color: $checkbox_border; }
 
-  // checked state
-  label.checked{
-    .checkbox_icon{
-      color: $checkbox_active;
-    }
-  }
+	// checked state
+	label.checked{
+		.checkbox_icon{
+			color: $checkbox_active;
+		}
+	}
 
-  //disabled state
-  label.disabled{
-    .checkbox_icon{ background-color: $checkbox_border; color:$checkbox_border}
-    &.checked{
-      .checkbox_icon{color:$checkbox_active}
-    }
-  }
+	//disabled state
+	label.disabled{
+		.checkbox_icon{ background-color: $checkbox_border; color:$checkbox_border}
+		&.checked{
+			.checkbox_icon{color:$checkbox_active}
+		}
+	}
 }
 
 /* Setup custom radio input */
 .radio{
 
-  // icon
-  .radio_icon {
-    background-color: $radio_bg;border-color: $radio_border; @include border-radius(50%);
-    &:before{@include border-radius(50%)}
-  }
+	// icon
+	.radio_icon {
+		background-color: $radio_bg;border-color: $radio_border; @include border-radius(50%);
+		&:before{@include border-radius(50%)}
+	}
 
-  // checked state
-  label.checked{
-    .radio_icon:before{
-      background-color: $radio_active;
-    }
-  }
+	// checked state
+	label.checked{
+		.radio_icon:before{
+			background-color: $radio_active;
+		}
+	}
 
-  //disabled state
-  label.disabled{
-    .radio_icon:before{ background-color: $radio_border; }
-  }
+	//disabled state
+	label.disabled{
+		.radio_icon:before{ background-color: $radio_border; }
+	}
 }
 
 
 //Show for debug
 html.show_input{
-  .checkbox, .radio{
-    input[type=checkbox],
-    input[type=radio]{ left: -20px; @include opacity(1); z-index: auto; }
-  }
+	.checkbox, .radio{
+		input[type=checkbox],
+		input[type=radio]{ left: -20px; @include opacity(1); z-index: auto; }
+	}
 }
 
 
@@ -147,8 +147,8 @@ html.show_input{
 
 /* Upload custom input */
 .upload{
-  position:relative;
-  input[type=file]{font-size:29px;width:100%;position:absolute;top:0;cursor:pointer;left:0;display:none}
+	position:relative;
+	input[type=file]{font-size:29px;width:100%;position:absolute;top:0;cursor:pointer;left:0;display:none}
 }
 
 
@@ -157,33 +157,33 @@ html.show_input{
 
 /* Setup forms layout */
 form, .form{
-  .field{
-    position: relative; list-style: none; @include map_property_generate($form_field_move_sizes, move, margin, bottom, true);
+	.field{
+		position: relative; list-style: none; @include map_property_generate($form_field_move_sizes, move, margin, bottom, true);
 
-    &.last{ margin-bottom: 0}
+		&.last{ margin-bottom: 0}
 
-    &[data-required="true"] label,
-    label.required{
-      &:after{ content: "*"; @include font_style($form_required_size); padding-left: $form_required_move}
-    }
+		&[data-required="true"] label,
+		label.required{
+			&:after{ content: "*"; @include font_style($form_required_size); padding-left: $form_required_move}
+		}
 
-    label{
-      display: block; margin-bottom: $form_label_move; @extend .p;
+		label{
+			display: block; margin-bottom: $form_label_move; @extend .p;
 
-      //label inline with field
-      &.inline{ display: inline-block; margin-bottom: 0; padding-top: 5px;}
-    }
+			//label inline with field
+			&.inline{ display: inline-block; margin-bottom: 0; padding-top: 5px;}
+		}
 
-    .checkbox,
-    &.checkbox,
-    .radio,
-    &.radio{
-      label{ margin:0; display: table-cell;@include rem(line-height, $plh) }
-    }
+		.checkbox,
+		&.checkbox,
+		.radio,
+		&.radio{
+			label{ margin:0; display: table-cell;@include rem(line-height, $plh) }
+		}
 
-  }
+	}
 
-  .label_correction{padding-top: 5px}
+	.label_correction{padding-top: 5px}
 }
 
 
@@ -193,8 +193,8 @@ form, .form{
 //validation error (validation-advice for magento)
 .validation-advice,
 .error{
-  color: $form_error; @include font_style(14px); margin-top: $form_error_move_default;
-  &:before{@extend .sy_icon; @extend .sy_remove_round:before; padding-right: 10px; vertical-align: bottom}
+	color: $form_error; @include font_style(14px); margin-top: $form_error_move_default;
+	&:before{@extend .sy_icon; @extend .sy_remove_round:before; padding-right: 10px; vertical-align: bottom}
 }
 
 

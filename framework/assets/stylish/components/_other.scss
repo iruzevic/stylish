@@ -8,7 +8,7 @@ Version: 1.0
 //Loader
 .loader,
 .loading{
-  display: block; position: absolute; z-index: 5; left: 50%; top: 50%; width: $loading_size; height: $loading_size; margin: (-$loading_size/2) 0 0 (-$loading_size/2);@include single-transition(all, .35s, ease-in);
+	display: block; position: absolute; z-index: 5; left: 50%; top: 50%; width: $loading_size; height: $loading_size; margin: (-$loading_size/2) 0 0 (-$loading_size/2);@include single-transition(all, .35s, ease-in);
 }
 
 
@@ -17,10 +17,10 @@ Version: 1.0
 
 //Overlay
 .overlay{
-  &.active{
-    position: fixed; left: 0; top: 0; width: 100%; height: 100%;
-    &.bg_color{background-color: rgba($overlay_bg_color, $overlay_bg_opacity);}
-  }
+	&.active{
+		position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+		&.bg_color{background-color: rgba($overlay_bg_color, $overlay_bg_opacity);}
+	}
 }
 
 
@@ -29,15 +29,15 @@ Version: 1.0
 
 //Image Background
 .bg_img{
-  background-position: center top; background-repeat: no-repeat; background-size: cover; height: 100%; @include opacity(0); @include single-transition(opacity, .35s, ease-in);
+	background-position: center top; background-repeat: no-repeat; background-size: cover; height: 100%; @include opacity(0); @include single-transition(opacity, .35s, ease-in);
 
-  &.loaded{@include opacity(1);}
+	&.loaded{@include opacity(1);}
 
-  img{display: none;}
+	img{display: none;}
 
-  &.contain,
-  &[data-bgsize="contain"]{background-size: contain}
+	&.contain,
+	&[data-bgsize="contain"]{background-size: contain}
 
-  //Background Image position
-  @include bg_img_position();
+	//Background Image position
+	@include bg_img_position();
 }

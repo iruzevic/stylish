@@ -9,19 +9,19 @@ Version: 1.0
 	@include map_property_generate($block_move_sizes, move, margin, bottom);
 	@include map_property_generate($block_move_sizes, move_in, padding, bottom);
 
-  .b_title{
-    position: relative;
-	  @include map_property_generate($block_b_title_move_sizes, move, margin, bottom, true);
-	  @include map_property_generate($block_b_title_move_sizes, move_in, padding, bottom);
-    @include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
+	.b_title{
+		position: relative;
+		@include map_property_generate($block_b_title_move_sizes, move, margin, bottom, true);
+		@include map_property_generate($block_b_title_move_sizes, move_in, padding, bottom);
+		@include border($block_border_position, $block_border_width, $block_border_style, $block_border_color);
 
-    .title{
-      position: relative;
-		@include map_property_generate($block_title_move_sizes, move, margin, bottom);
-		@include map_property_generate($block_title_move_sizes, move_in, padding, bottom);
-    }
-    .subtitle{}
-  }
+		.title{
+			position: relative;
+			@include map_property_generate($block_title_move_sizes, move, margin, bottom);
+			@include map_property_generate($block_title_move_sizes, move_in, padding, bottom);
+		}
+		.subtitle{}
+	}
 }
 
 
@@ -35,7 +35,7 @@ Version: 1.0
 //Button set to move btn on responsive
 .btn_set{
 	@include map_property_generate($btn_set_btn_move_sizes, move, margin, bottom, false, true); overflow: hidden;
-  .btn,
-  .btn_link{ @include map_property_generate($btn_set_btn_move_sizes, move, margin, bottom);}
-  .btn_link{ display: block}
+	.btn,
+	.btn_link{ @include map_property_generate($btn_set_btn_move_sizes, move, margin, bottom);}
+	.btn_link{ display: block}
 }

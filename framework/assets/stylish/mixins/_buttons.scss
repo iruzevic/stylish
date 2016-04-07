@@ -8,18 +8,18 @@ Version: 1.0
 //Button single color item
 @mixin btn_color($bg:false, $text:false, $border:false, $bg_hover:false, $text_hover:false, $border_hover:false){
 
-  @if $bg     { background-color: $bg;}
-  @if $text   { color: $text;}
-  @if $border { border-color: $border}
+	@if $bg     { background-color: $bg;}
+	@if $text   { color: $text;}
+	@if $border { border-color: $border}
 
 
-  @if $bg_hover OR $text_hover OR $border_hover{
-    &:hover, &.active, &.current{
-      @if $bg_hover     { background-color: $bg_hover;}
-      @if $text_hover   { color: $text_hover;}
-      @if $border_hover { border-color: $border_hover}
-    }
-  }
+	@if $bg_hover OR $text_hover OR $border_hover{
+		&:hover, &.active, &.current{
+			@if $bg_hover     { background-color: $bg_hover;}
+			@if $text_hover   { color: $text_hover;}
+			@if $border_hover { border-color: $border_hover}
+		}
+	}
 }
 
 
@@ -29,16 +29,16 @@ Version: 1.0
 //Button generate colors based on scheme
 @mixin btn_colors_generate($map: false){
 
-  @each $key, $values in $map{
-    $bg:            map_get($values, bg);
-    $txt:           map_get($values, txt);
-    $border:        map_get($values, border);
-    $bg_hover:      map_get($values, hover_bg);
-    $txt_hover:     map_get($values, hover_txt);
-    $border_hover:  map_get($values, hover_border);
+	@each $key, $values in $map{
+		$bg:            map_get($values, bg);
+		$txt:           map_get($values, txt);
+		$border:        map_get($values, border);
+		$bg_hover:      map_get($values, hover_bg);
+		$txt_hover:     map_get($values, hover_txt);
+		$border_hover:  map_get($values, hover_border);
 
-    &.btn_#{$key}{@include btn_color($bg, $txt, $border, $bg_hover, $txt_hover, $border_hover)}
-  }
+		&.btn_#{$key}{@include btn_color($bg, $txt, $border, $bg_hover, $txt_hover, $border_hover)}
+	}
 
 }
 
@@ -48,15 +48,15 @@ Version: 1.0
 
 //Button size
 @mixin btn_size($height: false, $font_size:false, $line_height:false, $rem:false){
-  @if $rem{
-    @if $height             { @include rem(height, $height); }
-    @if $font_size          { @include rem(font-size, $font_size); }
-    @if $line_height        { @include rem(line-height, $line_height); }
-  }@else{
-    @if $height             { height: $height; }
-    @if $font_size          { font-size: $font_size; }
-    @if $line_height        { line-height: $line_height; }
-  }
+	@if $rem{
+		@if $height             { @include rem(height, $height); }
+		@if $font_size          { @include rem(font-size, $font_size); }
+		@if $line_height        { @include rem(line-height, $line_height); }
+	}@else{
+		@if $height             { height: $height; }
+		@if $font_size          { font-size: $font_size; }
+		@if $line_height        { line-height: $line_height; }
+	}
 }
 
 
@@ -66,37 +66,37 @@ Version: 1.0
 //Button generate sizes based on scheme
 @mixin btn_sizes_generate($map:false){
 
-  @each $key, $values in $map{
+	@each $key, $values in $map{
 
-    $height:         map_get($values, height);
-    $txt:            map_get($values, txt);
-    $line_height:    map_get($values, line_height);
-    $move_v:         map_get($values, move_v);
-    $move_h:         map_get($values, move_h);
-    $border_width:   map_get($values, border_width);
+		$height:         map_get($values, height);
+		$txt:            map_get($values, txt);
+		$line_height:    map_get($values, line_height);
+		$move_v:         map_get($values, move_v);
+		$move_h:         map_get($values, move_h);
+		$border_width:   map_get($values, border_width);
 
-    @if $key == default{
-      @include btn_size($height, $txt, $line_height);
-      @include btn_move($padding_horizontal : $move_h);
-      @include btn_move($padding_vertical : $move_v);
+		@if $key == default{
+			@include btn_size($height, $txt, $line_height);
+			@include btn_move($padding_horizontal : $move_h);
+			@include btn_move($padding_vertical : $move_v);
 
-      @each $key_in, $value_in in $btn_move_in_size{
-        &.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
-      }
+			@each $key_in, $value_in in $btn_move_in_size{
+				&.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
+			}
 
-    }@else{
-      &.btn_#{$key}{
-        @include btn_size($height, $txt, $line_height);
-        @include btn_move($padding_horizontal : $move_h);
-        @include btn_move($padding_vertical : $move_v);
+		}@else{
+			&.btn_#{$key}{
+				@include btn_size($height, $txt, $line_height);
+				@include btn_move($padding_horizontal : $move_h);
+				@include btn_move($padding_vertical : $move_v);
 
-        @each $key_in, $value_in in $btn_move_in_size{
-          &.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
-        }
+				@each $key_in, $value_in in $btn_move_in_size{
+					&.btn_move_in_h_#{$key_in}{ @include btn_move($value_in) }
+				}
 
-      }
-    }
-  }
+			}
+		}
+	}
 }
 
 
@@ -104,13 +104,13 @@ Version: 1.0
 
 //Button Move padding
 @mixin btn_move( $padding_horizontal:false, $padding_vertical:false, $rem:false){
-  @if $rem{
-    @if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
-    @if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
-  }@else{
-    @if $padding_vertical{ padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
-    @if $padding_horizontal{ padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
-  }
+	@if $rem{
+		@if $padding_vertical   { @include rem(padding-top, $padding_vertical); @include rem(padding-bottom, $padding_vertical); }
+		@if $padding_horizontal { @include rem(padding-left, $padding_horizontal); @include rem(padding-right, $padding_horizontal); }
+	}@else{
+		@if $padding_vertical{ padding-top: $padding_vertical; padding-bottom: $padding_vertical; }
+		@if $padding_horizontal{ padding-left: $padding_horizontal; padding-right: $padding_horizontal; }
+	}
 }
 
 
@@ -119,19 +119,19 @@ Version: 1.0
 
 //Button default style
 @mixin btn_style($text_transform: false, $font_family:false, $radius:false, $border_width:false, $border_style:false,$text_align:false, $width:false, $font_weight:false, $display:false, $white_space:false, $text_decoration: false, $cursor:false, $margin:false){
-  @if $text_transform    {text-transform:$text_transform;}
-  @if $font_family       {font-family:$font_family;}
-  @if $radius            {@include border-radius($radius);}
-  @if $border_width      {border-width:$border_width;}
-  @if $border_style      {border-style:$border_style;}
-  @if $text_align        {text-align:$text_align;}
-  @if $width             {width:$width;}
-  @if $font_weight       {font-weight:$font_weight;}
-  @if $display           {display:$display;}
-  @if $white_space       {white-space:$white_space;}
-  @if $text_decoration   {text-decoration:$text_decoration;}
-  @if $cursor            {cursor:$cursor;}
-  @if $margin            {margin:$margin;}
+	@if $text_transform    {text-transform:$text_transform;}
+	@if $font_family       {font-family:$font_family;}
+	@if $radius            {@include border-radius($radius);}
+	@if $border_width      {border-width:$border_width;}
+	@if $border_style      {border-style:$border_style;}
+	@if $text_align        {text-align:$text_align;}
+	@if $width             {width:$width;}
+	@if $font_weight       {font-weight:$font_weight;}
+	@if $display           {display:$display;}
+	@if $white_space       {white-space:$white_space;}
+	@if $text_decoration   {text-decoration:$text_decoration;}
+	@if $cursor            {cursor:$cursor;}
+	@if $margin            {margin:$margin;}
 }
 
 

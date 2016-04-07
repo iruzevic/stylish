@@ -30,10 +30,10 @@ p, li, .p  { @include font_style( $p , $plh  )}
 .tiny   {@include font_style( $tiny,   $tinylh )}
 
 a:not(.btn) {
-  @include link_color($link_color, $link_color_hover, none, pointer);
-  @include single-transition(color, .35s, ease-in);
-  &.underline{ text-decoration: underline;}
-  &.disabled{ cursor: default;}
+	@include link_color($link_color, $link_color_hover, none, pointer);
+	@include single-transition(color, .35s, ease-in);
+	&.underline{ text-decoration: underline;}
+	&.disabled{ cursor: default;}
 }
 
 
@@ -44,53 +44,53 @@ a:not(.btn) {
 /* Setup content style for large texts */
 .content_style{
 
-  //Headers and paragraph
-  #{headers()}{ margin-bottom: $cs_move_headers; }
-  h1, .h1   {@include font_style($cs_h1, $cs_h1lh )}
-  h2, .h2   {@include font_style($cs_h2, $cs_h2lh )}
-  h3, .h3   {@include font_style($cs_h3, $cs_h3lh )}
-  h4, .h4   {@include font_style($cs_h4, $cs_h4lh )}
-  h5, .h5   {@include font_style($cs_h5, $cs_h5lh )}
-  h6, .h6   {@include font_style($cs_h6, $cs_h6lh )}
-  p,  .p    {
-    @include font_style($cs_p,  $cs_plh); margin-bottom:$cs_move;
-    &:last-child{margin-bottom: 0}
-  }
+	//Headers and paragraph
+	#{headers()}{ margin-bottom: $cs_move_headers; }
+	h1, .h1   {@include font_style($cs_h1, $cs_h1lh )}
+	h2, .h2   {@include font_style($cs_h2, $cs_h2lh )}
+	h3, .h3   {@include font_style($cs_h3, $cs_h3lh )}
+	h4, .h4   {@include font_style($cs_h4, $cs_h4lh )}
+	h5, .h5   {@include font_style($cs_h5, $cs_h5lh )}
+	h6, .h6   {@include font_style($cs_h6, $cs_h6lh )}
+	p,  .p    {
+		@include font_style($cs_p,  $cs_plh); margin-bottom:$cs_move;
+		&:last-child{margin-bottom: 0}
+	}
 
 
-  .medium {@include font_style( $cs_medium, $cs_mediumlh )}
-  .small  {@include font_style( $cs_small,  $cs_smalllh )}
-  .tiny   {@include font_style( $cs_tiny,   $cs_tinylh )}
+	.medium {@include font_style( $cs_medium, $cs_mediumlh )}
+	.small  {@include font_style( $cs_small,  $cs_smalllh )}
+	.tiny   {@include font_style( $cs_tiny,   $cs_tinylh )}
 
-  //Lists
-  ul, ol {
-    overflow: hidden; margin-left:0; margin-bottom: $cs_move;
-    li{@include font_style($p, $cs_plh); margin-bottom: $cs_move_li}
-  }
-  ul li { margin-left:$cs_move+10px;}
-  ol li { margin-left:$cs_move+20px;@include font_style($p, $cs_plh)}
+	//Lists
+	ul, ol {
+		overflow: hidden; margin-left:0; margin-bottom: $cs_move;
+		li{@include font_style($p, $cs_plh); margin-bottom: $cs_move_li}
+	}
+	ul li { margin-left:$cs_move+10px;}
+	ol li { margin-left:$cs_move+20px;@include font_style($p, $cs_plh)}
 
-  //Common
-  address{@include font_style($p, $cs_plh)}
-  .italic{ font-style: italic}
-  strong,
-  .bold{ font-weight: 700;}
-  .underline{ text-decoration: underline;}
+	//Common
+	address{@include font_style($p, $cs_plh)}
+	.italic{ font-style: italic}
+	strong,
+	.bold{ font-weight: 700;}
+	.underline{ text-decoration: underline;}
 
-  //Images and iframe
-  img,
-  iframe{
-    width: auto; height: auto; max-width: 100%; margin-bottom:$cs_move;
+	//Images and iframe
+	img,
+	iframe{
+		width: auto; height: auto; max-width: 100%; margin-bottom:$cs_move;
 
-    &.alignleft {clear: left;float: left;margin-right:$cs_move;}
-    &.alignright {clear: right;float: right;margin-left:$cs_move;}
+		&.alignleft {clear: left;float: left;margin-right:$cs_move;}
+		&.alignright {clear: right;float: right;margin-left:$cs_move;}
 
-    //Image full width
-    &.full{width: 100%; height: auto;}
+		//Image full width
+		&.full{width: 100%; height: auto;}
 
-    //Rounded
-    &.rounded{@include border-radius(50%);}
-  }
+		//Rounded
+		&.rounded{@include border-radius(50%);}
+	}
 
 }
 

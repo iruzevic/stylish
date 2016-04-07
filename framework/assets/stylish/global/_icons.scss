@@ -18,23 +18,23 @@ Version: 1.0
 
 // Make icons spin
 .icon_spin {
-  @include animation(spin 2s infinite linear);
+	@include animation(spin 2s infinite linear);
 }
 @-moz-keyframes spin {
-  0% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(359deg); }
+	0% { -moz-transform: rotate(0deg); }
+	100% { -moz-transform: rotate(359deg); }
 }
 @-webkit-keyframes spin {
-  0%   { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
+	0%   { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(359deg); }
 }
 @-o-keyframes spin {
-  0% { -o-transform: rotate(0deg); }
-  100% { -o-transform: rotate(359deg); }
+	0% { -o-transform: rotate(0deg); }
+	100% { -o-transform: rotate(359deg); }
 }
 @keyframes spin {
-  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
 }
 
 
@@ -45,15 +45,15 @@ Version: 1.0
 .txt_icon,
 .txt_icon_left,
 .txt_icon_right{
-  i, .icon{ vertical-align: middle; }
+	i, .icon{ vertical-align: middle; }
 }
 
 .txt_icon_left{
-  i, .icon{   margin-right: 10px;  }
+	i, .icon{   margin-right: 10px;  }
 }
 
 .txt_icon_right{
-  i, .icon{  margin-left: 10px; }
+	i, .icon{  margin-left: 10px; }
 }
 
 
@@ -72,39 +72,39 @@ Version: 1.0
 /* Icons */
 
 .sy_spinner:before {
-  content: "\e60e";
+	content: "\e60e";
 }
 .sy_arrow:before {
-  content: "\e603";
+	content: "\e603";
 }
 .sy_check:before {
-  content: "\e604";
+	content: "\e604";
 }
 .sy_check_round:before {
-  content: "\e605";
+	content: "\e605";
 }
 .sy_circle:before {
-  content: "\e606";
+	content: "\e606";
 }
 .sy_info:before {
-  content: "\e607";
+	content: "\e607";
 }
 .sy_info_round:before {
-  content: "\e608";
+	content: "\e608";
 }
 .sy_menu:before {
-  content: "\e609";
+	content: "\e609";
 }
 .sy_plus:before {
-  content: "\e60a";
+	content: "\e60a";
 }
 .sy_remove:before {
-  content: "\e60b";
+	content: "\e60b";
 }
 .sy_remove_round:before {
-  content: "\e60c";
+	content: "\e60c";
 }
 .sy_warning:before {
-  content: "\e60d";
+	content: "\e60d";
 }
 

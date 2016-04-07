@@ -1,10 +1,10 @@
 //Load all Custom functions
 jQuery(function(){
 
-    //sidebar_menu_toggle();
-    sidebar_menu_dropdown();
+	//sidebar_menu_toggle();
+	sidebar_menu_dropdown();
 
-    SyntaxHighlighter.all();
+	SyntaxHighlighter.all();
 });
 
 //Actions on window resize
@@ -37,17 +37,17 @@ jQuery(window).resize(function(){
 //Open/close sidebar dropdown menu
 function sidebar_menu_dropdown(){
 
-    var $hash = window.location.hash,
-        $url,
-        $html = jQuery('html');
+	var $hash = window.location.hash,
+		$url,
+		$html = jQuery('html');
 
-    if(typeof $hash == 'undefined'){
-        $url = window.location.href;
-    }else{
-        $url = window.location.href.split('#')[0];
-    }
+	if(typeof $hash == 'undefined'){
+		$url = window.location.href;
+	}else{
+		$url = window.location.href.split('#')[0];
+	}
 
-    jQuery('#sidebar a[href="'+$url+'"]').closest('li').addClass('active');
-    $html.addClass('menu_closed');
+	jQuery('#sidebar a[href="'+$url+'"]').closest('li').addClass('active');
+	$html.addClass('menu_closed');
 
 }

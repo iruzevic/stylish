@@ -6,38 +6,38 @@ Version: 1.0
 
 
 .messages, .msg{
-  margin-bottom: $msg_move; list-style: none;
+	margin-bottom: $msg_move; list-style: none;
 
-  li{
-    list-style: none; @include font_style($msg_txt_size);
-    &:last-child{ margin-bottom: 0}
-  }
+	li{
+		list-style: none; @include font_style($msg_txt_size);
+		&:last-child{ margin-bottom: 0}
+	}
 
-  > li{
-    color: $msg_txt_color; padding:$msg_item_padding $msg_item_padding $msg_item_padding ($msg_icon_size + ($msg_item_padding*2));@include border-radius($global_radius); position: relative; margin-bottom: $msg_item_move;
-    &:before{@extend .sy_icon;font-size: $msg_icon_size; position: absolute; left: $msg_item_padding; top: 50%; margin-top: -$msg_icon_size/2;}
+	> li{
+		color: $msg_txt_color; padding:$msg_item_padding $msg_item_padding $msg_item_padding ($msg_icon_size + ($msg_item_padding*2));@include border-radius($global_radius); position: relative; margin-bottom: $msg_item_move;
+		&:before{@extend .sy_icon;font-size: $msg_icon_size; position: absolute; left: $msg_item_padding; top: 50%; margin-top: -$msg_icon_size/2;}
 
-    //Error state
-    &.error-msg,
-    &.error_msg{
-      background-color: $color_error;
-      &:before{@extend .sy_remove_round:before; }
-    }
+		//Error state
+		&.error-msg,
+		&.error_msg{
+			background-color: $color_error;
+			&:before{@extend .sy_remove_round:before; }
+		}
 
-    //Success state
-    &.success-msg,
-    &.success_msg{
-      background-color: $color_success;
-      &:before{@extend .sy_check_round:before; }
-    }
+		//Success state
+		&.success-msg,
+		&.success_msg{
+			background-color: $color_success;
+			&:before{@extend .sy_check_round:before; }
+		}
 
-    //Notice state
-    &.notice-msg,
-    &.notice_msg,
-    &.info_msg,
-    &.info-msg{
-      background-color: $color_notice;
-      &:before{@extend .sy_info_round:before; }
-    }
-  }
+		//Notice state
+		&.notice-msg,
+		&.notice_msg,
+		&.info_msg,
+		&.info-msg{
+			background-color: $color_notice;
+			&:before{@extend .sy_info_round:before; }
+		}
+	}
 }

@@ -6,29 +6,29 @@ Version: 1.0
 
 
 .grid_fix{
-  width: 100%;display: inline-block; position: relative;
-  /* Cols Setup */
-  .fluid_col{
-    float:left;width:100%;
-    .fluid_wrap{width: auto}
-  }
-  .fixed_col{width:$sidebar_width;position: absolute;height: 100%;}
+	width: 100%;display: inline-block; position: relative;
+	/* Cols Setup */
+	.fluid_col{
+		float:left;width:100%;
+		.fluid_wrap{width: auto}
+	}
+	.fixed_col{width:$sidebar_width;position: absolute;height: 100%;}
 
-  /* Right Sidebar */
-  &.grid_fix_right{
-    .fluid_col{
-      margin-right:-$sidebar_width;
-      .fluid_wrap{margin-right:$sidebar_width; padding-right:$gutter_fix;}}
+	/* Right Sidebar */
+	&.grid_fix_right{
+		.fluid_col{
+			margin-right:-$sidebar_width;
+			.fluid_wrap{margin-right:$sidebar_width; padding-right:$gutter_fix;}}
 
-    .fixed_col{right: 0}
+		.fixed_col{right: 0}
 
-  }
+	}
 
-  /* Left Sidebar */
-  &.grid_fix_left{
-    .fluid_wrap{margin-left:$sidebar_width;padding-left:$gutter_fix;}
-    .fixed_col{left: 0}
-  }
+	/* Left Sidebar */
+	&.grid_fix_left{
+		.fluid_wrap{margin-left:$sidebar_width;padding-left:$gutter_fix;}
+		.fixed_col{left: 0}
+	}
 }
 
 

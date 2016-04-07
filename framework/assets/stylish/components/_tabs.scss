@@ -7,22 +7,22 @@ Version: 1.0
 
 .tabs{
 
-  //Tabs Head
-  .t_head{
-    background-color: $tabs_head_color;
-    >li{
-      cursor: pointer; @include single-transition(background-color, .35s, ease-in); padding: $tabs_head_item_padding_v $tabs_head_item_padding_h; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      &.active{
-        color: $tabs_head_color_active;  background-color:$tabs_head_bg_color_active;
-      }
-    }
-  }
+	//Tabs Head
+	.t_head{
+		background-color: $tabs_head_color;
+		>li{
+			cursor: pointer; @include single-transition(background-color, .35s, ease-in); padding: $tabs_head_item_padding_v $tabs_head_item_padding_h; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+			&.active{
+				color: $tabs_head_color_active;  background-color:$tabs_head_bg_color_active;
+			}
+		}
+	}
 
-  //Tabs content
-  .t_content{
-    height: 0; overflow: hidden;
-    &.active{ height: 100%;}
+	//Tabs content
+	.t_content{
+		height: 0; overflow: hidden;
+		&.active{ height: 100%;}
 
-    .t_content_wrap{ padding: $tabs_content_padding_v $tabs_content_padding_h; }
-  }
+		.t_content_wrap{ padding: $tabs_content_padding_v $tabs_content_padding_h; }
+	}
 }

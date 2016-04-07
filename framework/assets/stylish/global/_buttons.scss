@@ -10,51 +10,51 @@ button,
 input[type=submit],
 input[type=button],
 input[type=reset]{
-  @include btn_style($btn_transform, $btn_font_family, $btn_radius, $btn_border_width, $btn_border_style, $btn_txt_align, $btn_width, $btn_txt_weight, $btn_display, $btn_white_space, $btn_txt_decoration, $btn_cursor, $btn_margin);
-  @include appearance(none);
-  @include font-smoothing();
-  @include single-transition(all, .35s, ease-in);
+	@include btn_style($btn_transform, $btn_font_family, $btn_radius, $btn_border_width, $btn_border_style, $btn_txt_align, $btn_width, $btn_txt_weight, $btn_display, $btn_white_space, $btn_txt_decoration, $btn_cursor, $btn_margin);
+	@include appearance(none);
+	@include font-smoothing();
+	@include single-transition(all, .35s, ease-in);
 
-  //Button Sizes
-  @include btn_sizes_generate($btn_sizes);
+	//Button Sizes
+	@include btn_sizes_generate($btn_sizes);
 
-  //Focus state
-  &:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
+	//Focus state
+	&:focus{@include box-shadow(rgba($input_focus, 0.2) 0 0 10px);}
 
-  //Set rounded buttons to strait
-  &.no_radius{@include border-radius(0);}
+	//Set rounded buttons to strait
+	&.no_radius{@include border-radius(0);}
 
-  //Full rounded buttons
-  &.rounded{@include border-radius(20px);}
+	//Full rounded buttons
+	&.rounded{@include border-radius(20px);}
 
-  //Disabled buttons
-  &.disabled, &:disabled{ }
+	//Disabled buttons
+	&.disabled, &:disabled{ }
 
-  //Set button to full width
-  &.btn_block{width: 100%; display: block;}
+	//Set button to full width
+	&.btn_block{width: 100%; display: block;}
 
-  //Force btn not to break
-  &.no_word_break{ word-break: normal }
+	//Force btn not to break
+	&.no_word_break{ word-break: normal }
 
-  //Icon in button
-  &.btn_icon,
-  &.btn_icon_left,
-  &.btn_icon_right{
-    i, .icon{ @include font_style($btn_icon_size); vertical-align: middle; }
-  }
+	//Icon in button
+	&.btn_icon,
+	&.btn_icon_left,
+	&.btn_icon_right{
+		i, .icon{ @include font_style($btn_icon_size); vertical-align: middle; }
+	}
 
-  &.btn_icon_left{
-    i, .icon{   margin-right: $btn_icon_move;  }
-  }
+	&.btn_icon_left{
+		i, .icon{   margin-right: $btn_icon_move;  }
+	}
 
-  &.btn_icon_right{
-    i, .icon{  margin-left: $btn_icon_move; }
-  }
+	&.btn_icon_right{
+		i, .icon{  margin-left: $btn_icon_move; }
+	}
 
 
-  /* ---------------------------------------------------------------------------------------------------------------------------------- */
+	/* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-  /* Buttons Colors */
+	/* Buttons Colors */
 	@include btn_colors_generate($btn_colors);
 
 }
