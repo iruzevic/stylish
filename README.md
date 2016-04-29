@@ -1,4 +1,4 @@
-### Stylish Framework is bundle of all styles and components you would need on a project. It is fully modular. The code was created as desktop first. ###
+### Stylish Framework is bundle of all styles and components you would need on a project. It is fully modular. ###
 
 
 
