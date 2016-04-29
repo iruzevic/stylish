@@ -22,7 +22,7 @@
                                 <a href="<?php echo $base; ?>author.php" class="link">Info</a>
                             </li>
                             <li class="link_btn clear_border clear_padding_right">
-                                <a href="https://bitbucket.org/mustra/stylish" target="_blank" class="btn btn_sushi_border rounded">Download</a>
+                                <a href="https://github.com/mustra/stylish" target="_blank" class="btn btn_sushi_border rounded">Download</a>
                             </li>
                         </ul>
                     </div>
