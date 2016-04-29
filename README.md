@@ -25,7 +25,7 @@
 
 ### Details: ###
 
-* Version 3.0
+* Version 4.2.3
 * Preview: http://stylish.mustra-designs.com/
 * Author: Ivan Ružević
 * Porfolio: http://mustra-designs.com/
