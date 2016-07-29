@@ -91,6 +91,9 @@ textarea{ height: 150px; }
 /* Setup custom checkbox input */
 .checkbox{
 
+	//Default size
+	@include checkbox_size();
+
 	// icon
 	.checkbox_icon { color:$checkbox_bg;background-color: $checkbox_bg;border-color: $checkbox_border; }
 
@@ -112,6 +115,9 @@ textarea{ height: 150px; }
 
 /* Setup custom radio input */
 .radio{
+
+	//Default size
+	@include radio_size();
 
 	// icon
 	.radio_icon {
