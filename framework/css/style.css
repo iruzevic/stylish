@@ -9,7 +9,7 @@ Version: 4.2.3
 */
 /* Compass Framework Import */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,45 +31,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -1558,8 +1558,9 @@ Version: 1.0
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* line 20, ../assets/stylish/global/_icons.scss */
 .icon_spin {
-  -moz-animation: spin 2s infinite linear;
   -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
 }
 
@@ -1597,8 +1598,7 @@ Version: 1.0
     transform: rotate(359deg);
   }
 }
-/* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 48, ../assets/stylish/global/_icons.scss */
+/* line 50, ../assets/stylish/global/_icons.scss */
 .txt_icon i, .txt_icon .icon,
 .txt_icon_left i,
 .txt_icon_left .icon,
@@ -1607,19 +1607,39 @@ Version: 1.0
   vertical-align: middle;
 }
 
-/* line 52, ../assets/stylish/global/_icons.scss */
+/* line 54, ../assets/stylish/global/_icons.scss */
 .txt_icon_left i, .txt_icon_left .icon {
   margin-right: 10px;
 }
 
-/* line 56, ../assets/stylish/global/_icons.scss */
+/* line 58, ../assets/stylish/global/_icons.scss */
+.txt_icon_right i, .txt_icon_right .icon {
+  margin-left: 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* line 69, ../assets/stylish/global/_icons.scss */
+.txt_icon i, .txt_icon .icon,
+.txt_icon_left i,
+.txt_icon_left .icon,
+.txt_icon_right i,
+.txt_icon_right .icon {
+  vertical-align: middle;
+}
+
+/* line 73, ../assets/stylish/global/_icons.scss */
+.txt_icon_left i, .txt_icon_left .icon {
+  margin-right: 10px;
+}
+
+/* line 77, ../assets/stylish/global/_icons.scss */
 .txt_icon_right i, .txt_icon_right .icon {
   margin-left: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Icons Rotate */
-/* line 64, ../assets/stylish/global/_icons.scss */
+/* line 85, ../assets/stylish/global/_icons.scss */
 .icon_orientation_right, .breadcrumbs > li > a:after {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -1627,7 +1647,7 @@ Version: 1.0
   transform: rotate(90deg);
 }
 
-/* line 65, ../assets/stylish/global/_icons.scss */
+/* line 86, ../assets/stylish/global/_icons.scss */
 .icon_orientation_down, .select:after {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -1635,7 +1655,7 @@ Version: 1.0
   transform: rotate(180deg);
 }
 
-/* line 66, ../assets/stylish/global/_icons.scss */
+/* line 87, ../assets/stylish/global/_icons.scss */
 .icon_orientation_left {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -1645,63 +1665,63 @@ Version: 1.0
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Icons */
-/* line 74, ../assets/stylish/global/_icons.scss */
+/* line 95, ../assets/stylish/global/_icons.scss */
 .sy_spinner:before {
   content: "\e60e";
 }
 
-/* line 77, ../assets/stylish/global/_icons.scss */
+/* line 98, ../assets/stylish/global/_icons.scss */
 .sy_arrow:before, .select:after, .breadcrumbs > li > a:after {
   content: "\e603";
 }
 
-/* line 80, ../assets/stylish/global/_icons.scss */
+/* line 101, ../assets/stylish/global/_icons.scss */
 .sy_check:before, .input_tiny .checkbox .checkbox_icon:before, .input_small .checkbox .checkbox_icon:before, .input_medium .checkbox .checkbox_icon:before, .checkbox .checkbox_icon:before, .input_large .checkbox .checkbox_icon:before, .input_huge .checkbox .checkbox_icon:before, .input_giant .checkbox .checkbox_icon:before {
   content: "\e604";
 }
 
-/* line 83, ../assets/stylish/global/_icons.scss */
+/* line 104, ../assets/stylish/global/_icons.scss */
 .sy_check_round:before, .messages > li.success-msg:before, .messages > li.success_msg:before, .msg > li.success-msg:before, .msg > li.success_msg:before {
   content: "\e605";
 }
 
-/* line 86, ../assets/stylish/global/_icons.scss */
+/* line 107, ../assets/stylish/global/_icons.scss */
 .sy_circle:before {
   content: "\e606";
 }
 
-/* line 89, ../assets/stylish/global/_icons.scss */
+/* line 110, ../assets/stylish/global/_icons.scss */
 .sy_info:before {
   content: "\e607";
 }
 
-/* line 92, ../assets/stylish/global/_icons.scss */
+/* line 113, ../assets/stylish/global/_icons.scss */
 .sy_info_round:before, .messages > li.notice-msg:before, .messages > li.notice_msg:before, .messages > li.info_msg:before, .messages > li.info-msg:before, .msg > li.notice-msg:before, .msg > li.notice_msg:before, .msg > li.info_msg:before, .msg > li.info-msg:before {
   content: "\e608";
 }
 
-/* line 95, ../assets/stylish/global/_icons.scss */
+/* line 116, ../assets/stylish/global/_icons.scss */
 .sy_menu:before {
   content: "\e609";
 }
 
-/* line 98, ../assets/stylish/global/_icons.scss */
+/* line 119, ../assets/stylish/global/_icons.scss */
 .sy_plus:before {
   content: "\e60a";
 }
 
-/* line 101, ../assets/stylish/global/_icons.scss */
+/* line 122, ../assets/stylish/global/_icons.scss */
 .sy_remove:before, .modal .close_modal:before {
   content: "\e60b";
 }
 
-/* line 104, ../assets/stylish/global/_icons.scss */
+/* line 125, ../assets/stylish/global/_icons.scss */
 .sy_remove_round:before, .validation-advice:before,
 .error:before, .messages > li.error-msg:before, .messages > li.error_msg:before, .msg > li.error-msg:before, .msg > li.error_msg:before {
   content: "\e60c";
 }
 
-/* line 107, ../assets/stylish/global/_icons.scss */
+/* line 128, ../assets/stylish/global/_icons.scss */
 .sy_warning:before {
   content: "\e60d";
 }
@@ -3013,28 +3033,94 @@ select {
 }
 
 /* Setup custom checkbox input */
-/* line 95, ../assets/stylish/global/_forms.scss */
+/* line 92, ../assets/stylish/global/_forms.scss */
+.checkbox {
+  min-height: false;
+}
+@-moz-document url-prefix() {
+  /* line 92, ../assets/stylish/global/_forms.scss */
+  .checkbox {
+    height: false;
+  }
+}
+/* line 71, ../assets/stylish/mixins/_forms.scss */
+.checkbox label {
+  padding-left: false15;
+}
+/* line 73, ../assets/stylish/mixins/_forms.scss */
+.checkbox label.empty {
+  padding-left: 0;
+  width: false;
+}
+/* line 77, ../assets/stylish/mixins/_forms.scss */
+.checkbox .checkbox_icon {
+  width: false;
+  height: false;
+  margin-top: -false/2;
+  line-height: false;
+}
+/* line 79, ../assets/stylish/mixins/_forms.scss */
+.checkbox .checkbox_icon:before {
+  font-size: false;
+  margin: -false/2 0 0 -false/2;
+  width: false;
+  height: false;
+}
+/* line 98, ../assets/stylish/global/_forms.scss */
 .checkbox .checkbox_icon {
   color: #ffffff;
   background-color: #ffffff;
   border-color: #dbdbdb;
 }
-/* line 99, ../assets/stylish/global/_forms.scss */
+/* line 102, ../assets/stylish/global/_forms.scss */
 .checkbox label.checked .checkbox_icon {
   color: #dd3501;
 }
-/* line 106, ../assets/stylish/global/_forms.scss */
+/* line 109, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled .checkbox_icon {
   background-color: #dbdbdb;
   color: #dbdbdb;
 }
-/* line 108, ../assets/stylish/global/_forms.scss */
+/* line 111, ../assets/stylish/global/_forms.scss */
 .checkbox label.disabled.checked .checkbox_icon {
   color: #dd3501;
 }
 
 /* Setup custom radio input */
 /* line 117, ../assets/stylish/global/_forms.scss */
+.radio {
+  min-height: false;
+}
+@-moz-document url-prefix() {
+  /* line 117, ../assets/stylish/global/_forms.scss */
+  .radio {
+    height: false;
+  }
+}
+/* line 117, ../assets/stylish/mixins/_forms.scss */
+.radio label {
+  padding-left: false15;
+}
+/* line 119, ../assets/stylish/mixins/_forms.scss */
+.radio label.empty {
+  padding-left: 0;
+  width: false;
+}
+/* line 123, ../assets/stylish/mixins/_forms.scss */
+.radio .radio_icon {
+  width: false;
+  height: false;
+  margin-top: -false/2;
+  line-height: false;
+}
+/* line 125, ../assets/stylish/mixins/_forms.scss */
+.radio .radio_icon:before {
+  content: "";
+  margin: -false/2 0 0 -false/2;
+  width: false;
+  height: false;
+}
+/* line 123, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon {
   background-color: #ffffff;
   border-color: #dbdbdb;
@@ -3042,22 +3128,22 @@ select {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 119, ../assets/stylish/global/_forms.scss */
+/* line 125, ../assets/stylish/global/_forms.scss */
 .radio .radio_icon:before {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 124, ../assets/stylish/global/_forms.scss */
+/* line 130, ../assets/stylish/global/_forms.scss */
 .radio label.checked .radio_icon:before {
   background-color: #dd3501;
 }
-/* line 131, ../assets/stylish/global/_forms.scss */
+/* line 137, ../assets/stylish/global/_forms.scss */
 .radio label.disabled .radio_icon:before {
   background-color: #dbdbdb;
 }
 
-/* line 139, ../assets/stylish/global/_forms.scss */
+/* line 145, ../assets/stylish/global/_forms.scss */
 html.show_input .checkbox input[type=checkbox],
 html.show_input .checkbox input[type=radio], html.show_input .radio input[type=checkbox],
 html.show_input .radio input[type=radio] {
@@ -3069,11 +3155,11 @@ html.show_input .radio input[type=radio] {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Upload custom input */
-/* line 149, ../assets/stylish/global/_forms.scss */
+/* line 155, ../assets/stylish/global/_forms.scss */
 .upload {
   position: relative;
 }
-/* line 151, ../assets/stylish/global/_forms.scss */
+/* line 157, ../assets/stylish/global/_forms.scss */
 .upload input[type=file] {
   font-size: 29px;
   width: 100%;
@@ -3086,7 +3172,7 @@ html.show_input .radio input[type=radio] {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* Setup forms layout */
-/* line 160, ../assets/stylish/global/_forms.scss */
+/* line 166, ../assets/stylish/global/_forms.scss */
 form .field, .form .field {
   position: relative;
   list-style: none;
@@ -3120,11 +3206,11 @@ form .field.move_bottom_giant, form .field.move_giant_bottom, .form .field.move_
 form .field.move_bottom_clean, form .field.move_bottom_clear, form .field.move_clear_bottom, form .field.move_clean_bottom, .form .field.move_bottom_clean, .form .field.move_bottom_clear, .form .field.move_clear_bottom, .form .field.move_clean_bottom {
   margin-bottom: 0;
 }
-/* line 163, ../assets/stylish/global/_forms.scss */
+/* line 169, ../assets/stylish/global/_forms.scss */
 form .field.last, .form .field.last {
   margin-bottom: 0;
 }
-/* line 167, ../assets/stylish/global/_forms.scss */
+/* line 173, ../assets/stylish/global/_forms.scss */
 form .field[data-required="true"] label:after,
 form .field label.required:after, .form .field[data-required="true"] label:after,
 .form .field label.required:after {
@@ -3133,18 +3219,18 @@ form .field label.required:after, .form .field[data-required="true"] label:after
   font-size: 0.77778rem;
   padding-left: 3px;
 }
-/* line 170, ../assets/stylish/global/_forms.scss */
+/* line 176, ../assets/stylish/global/_forms.scss */
 form .field label, .form .field label {
   display: block;
   margin-bottom: 5px;
 }
-/* line 174, ../assets/stylish/global/_forms.scss */
+/* line 180, ../assets/stylish/global/_forms.scss */
 form .field label.inline, .form .field label.inline {
   display: inline-block;
   margin-bottom: 0;
   padding-top: 5px;
 }
-/* line 181, ../assets/stylish/global/_forms.scss */
+/* line 187, ../assets/stylish/global/_forms.scss */
 form .field .checkbox label, form .field.checkbox label,
 form .field .radio label, form .field.radio label, .form .field .checkbox label, .form .field.checkbox label,
 .form .field .radio label, .form .field.radio label {
@@ -3153,13 +3239,13 @@ form .field .radio label, form .field.radio label, .form .field .checkbox label,
   line-height: 23px;
   line-height: 1.27778rem;
 }
-/* line 186, ../assets/stylish/global/_forms.scss */
+/* line 192, ../assets/stylish/global/_forms.scss */
 form .label_correction, .form .label_correction {
   padding-top: 5px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 194, ../assets/stylish/global/_forms.scss */
+/* line 200, ../assets/stylish/global/_forms.scss */
 .validation-advice,
 .error {
   color: #f2a89c;
@@ -3167,7 +3253,7 @@ form .label_correction, .form .label_correction {
   font-size: 0.77778rem;
   margin-top: 10px;
 }
-/* line 197, ../assets/stylish/global/_forms.scss */
+/* line 203, ../assets/stylish/global/_forms.scss */
 .validation-advice:before,
 .error:before {
   padding-right: 10px;
@@ -4706,17 +4792,13 @@ Version: 1.0
 html.modal_active {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  /*position: absolute; height: 100%; width: 100%;*/
 }
 /* line 79, ../assets/stylish/components/_modal.scss */
 html.modal_active body {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  /*position: absolute; height: 100%; width: 100%;*/
 }
 
 /*

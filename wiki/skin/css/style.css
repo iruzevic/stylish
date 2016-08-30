@@ -1,4 +1,4 @@
-/* line 5, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,50 +20,53 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* VARIABLES */
+/*
+VARIABLES
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -73,66 +76,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* RESET */
+/*
+RESET
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* line 5, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 8, ../../../framework/assets/stylish/global/_reset.scss */
 :focus {
   outline: 0;
 }
 
-/* line 6, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 9, ../../../framework/assets/stylish/global/_reset.scss */
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 7, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 10, ../../../framework/assets/stylish/global/_reset.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 8, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 11, ../../../framework/assets/stylish/global/_reset.scss */
 em, dfn {
   font-style: italic;
 }
 
-/* line 9, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 12, ../../../framework/assets/stylish/global/_reset.scss */
 dfn {
   font-weight: bold;
 }
 
-/* line 10, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 13, ../../../framework/assets/stylish/global/_reset.scss */
 sup, sub {
   line-height: 0;
 }
 
-/* line 11, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 14, ../../../framework/assets/stylish/global/_reset.scss */
 li ul, li ol {
   margin: 0;
   line-height: 1.8;
 }
 
-/* line 12, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 15, ../../../framework/assets/stylish/global/_reset.scss */
 ul {
   list-style-type: disc;
   margin: 0;
 }
 
-/* line 13, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 16, ../../../framework/assets/stylish/global/_reset.scss */
 ol {
   list-style-type: decimal;
   margin: 0;
 }
 
 /* Layout Reset Style */
-/* line 17, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 20, ../../../framework/assets/stylish/global/_reset.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 22, ../../../framework/assets/stylish/global/_reset.scss */
 .no_br,
 .nobr,
 #sidebar .navigation > li > a {
@@ -140,19 +146,22 @@ ol {
 }
 
 /* Floating Clear */
-/* line 23, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 26, ../../../framework/assets/stylish/global/_reset.scss */
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 24, ../../../framework/assets/stylish/global/_reset.scss */
+/* line 27, ../../../framework/assets/stylish/global/_reset.scss */
 .clear {
   clear: both;
 }
 
-/* TYPOGRAPHY */
+/*
+TYPOGRAPHY
+Version: 1.0
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -515,11 +524,11 @@ body {
   line-height: 0.94444rem;
   color: #bbbbbb;
 }
-/* line 100, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 103, ../../../framework/assets/stylish/mixins/_typography.scss */
 #header .nav > li.link a:hover, #header .nav > li.link a.active, #header .nav > li.link a.current, #header .nav > li.link a:focus {
   color: #dd3501;
 }
-/* line 102, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 105, ../../../framework/assets/stylish/mixins/_typography.scss */
 #header .nav > li.link a.disabled {
   color: #bbbbbb;
 }
@@ -1111,11 +1120,11 @@ body {
   line-height: 0.94444rem;
   font-weight: 500;
 }
-/* line 100, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 103, ../../../framework/assets/stylish/mixins/_typography.scss */
 #sidebar .navigation > li > a:hover, #sidebar .navigation > li > a.active, #sidebar .navigation > li > a.current, #sidebar .navigation > li > a:focus {
   color: #dd3501;
 }
-/* line 102, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 105, ../../../framework/assets/stylish/mixins/_typography.scss */
 #sidebar .navigation > li > a.disabled {
   color: #ffffff;
 }
@@ -1172,11 +1181,11 @@ body {
   padding: 7px 20px;
   color: #ffffff;
 }
-/* line 100, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 103, ../../../framework/assets/stylish/mixins/_typography.scss */
 #sidebar .navigation > li ul.drop > li > a:hover, #sidebar .navigation > li ul.drop > li > a.active, #sidebar .navigation > li ul.drop > li > a.current, #sidebar .navigation > li ul.drop > li > a:focus {
   color: #fe4b13;
 }
-/* line 102, ../../../framework/assets/stylish/mixins/_typography.scss */
+/* line 105, ../../../framework/assets/stylish/mixins/_typography.scss */
 #sidebar .navigation > li ul.drop > li > a.disabled {
   color: #ffffff;
 }

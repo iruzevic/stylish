@@ -1,14 +1,10 @@
 //Load all functions
 jQuery(function(){
+	form.init();
+	modal.init();
 	accordion();
 	tabs();
-	upload();
-	checkbox();
-	radio();
-	select();
-	modal();
 	tooltip();
-	//fields_focus();
 	disable();
 	disable_link();
 
@@ -51,264 +47,458 @@ jQuery(window).resize(function(){
 
 });
 
-
 /////////////////////////////////////////////////////////////////////////////////
 
-//Checkbox script
-function checkbox(){
+form = {
+	init: function(){
+		form.radio.init();
+		form.checkbox.init();
+		form.select.init();
+		form.upload.init();
+		form.fieldFocus.init();
+	},
 
-	var $input = jQuery('input[type=checkbox]');
+	//Select input
+	select: {
 
-	//On page load set
-	$input.each(function(){
+		selector: '.select',
+		input: 'select',
 
-		//Check if there is checked class in input
-		if(jQuery(this).is(':checked')){
-			var $id = jQuery(this).attr('id');
-			checkbox_set($id);
+		init: function ($id) {
+
+			var $input = jQuery(form.select.input);
+			if(typeof $id == 'undefined'){
+				$id = form.select.selector;
+			}
+
+			//On init
+			$input.each(function(){
+				var $self = jQuery(this),
+					$style = $self.attr('data-style'),
+					$select = $self.closest($id).outerWidth()+50;
+
+				if($style !== 'false' && $self.parents($id).length == 0){
+					$self.wrap('<div class="select field-row"></div>'); //Field-row class is for magento
+				}
+				if($style !== 'false') {
+					$self.css({minWidth: $select});
+				}
+
+				jQuery(window).resize(function(){
+					$select = $self.closest($id).outerWidth()+50;
+					if($style !== 'false') {
+						$self.css({minWidth: $select});
+					}
+				});
+			});
+
+			//On focus add class to display focus style
+			$input.bind('focus', function(){
+				form.select.onFocus(this);
+			});
+
+			//On blur remove class to display focus style
+			$input.bind('blur', function(){
+				form.select.onBlur(this);
+			})
+		},
+		onFocus: function($this){
+			jQuery($this).closest(form.select.selector).addClass('focus');
+
+		},
+		onBlur: function($this){
+			jQuery($this).closest(form.select.selector).removeClass('focus');
 		}
+	},
 
-		//Check if input is disabled
-		if(jQuery(this).is(':disabled')){
-			jQuery(this).closest('.checkbox').find('label').addClass('disabled');
-		}
-	});
+	//Checkbox input
+	checkbox: {
 
-	//On click action
-	jQuery('.checkbox label').on('click',function(e){
-		var $id = jQuery(this).attr('for');
-		checkbox_change($id);
-	});
+		selector: '.checkbox',
+		labelSelector: '.checkbox label',
+		input: 'input[type="checkbox"]',
 
-	//Fix IE11 force trigger if image is in label
-	jQuery('.checkbox label > img').on('click', function(){
-		var $label = jQuery(this).closest('label'),
-			$id = $label.attr('for');
-		$label.trigger('click');
-		checkbox_change($id);
-	});
+		init: function(){
 
-	//On space click action
-	$input.keypress(function(e) {
-		if (e.keyCode == 0 || e.keyCode == 32) {
-			var $id = jQuery(this).attr('id');
-			checkbox_change($id);
-		}
-	});
+			var $input = jQuery(form.checkbox.input);
 
-	//Stop checkbox from activating if there is a link in label
-	jQuery('.checkbox label a').on('click',function(e){
-		e.stopPropagation();
-	});
+			//On page load set
+			$input.each(function(){
 
-	//On focus add class to display focus style
-	$input.bind('focus', function(){
-		jQuery(this).closest('.checkbox').addClass('focus');
-	});
+				var $self = jQuery(this);
 
-	//On blur remove class to display focus style
-	$input.bind('blur', function(){
-		jQuery(this).closest('.checkbox').removeClass('focus');
-	})
-}
+				//Check if there is checked class in input
+				if($self.is(':checked')){
+					var $id = jQuery(this).attr('id');
+					form.checkbox.onSet($id);
+				}
 
-//Checkbox change state
-function checkbox_change($id){
-	if(typeof $id == 'undefined'){
-		$id ='';
-	}
+				//Check if input is disabled
+				if($self.is(':disabled')){
+					$self.closest(form.checkbox.selector).find('label').addClass('disabled');
+				}
+			});
 
-	$id = escape_string($id);
+			//On click action
+			jQuery(form.checkbox.labelSelector).on('click',function(e){
+				var $id = jQuery(this).attr('for');
+				form.checkbox.onChange($id);
+			});
 
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$label = jQuery('label[for="'+$id+'"]');
-	if(!$input.is(':disabled')){
-		if($input.prop('checked')){
-			$label.removeClass('checked');
-		}else{
+			//Fix IE11 force trigger if image is in label
+			jQuery(form.checkbox.labelSelector + ' > img').on('click', function(){
+				var $label = jQuery(this).closest('label'),
+					$id = $label.attr('for');
+				$label.trigger('click');
+				form.checkbox.onChange($id);
+			});
+
+			//On space click action
+			$input.keypress(function(e) {
+				if (e.keyCode == 0 || e.keyCode == 32) {
+					var $id = jQuery(this).attr('id');
+					form.checkbox.onChange($id);
+				}
+			});
+
+			//Stop checkbox from activating if there is a link in label
+			jQuery(form.checkbox.labelSelector + ' a').on('click',function(e){
+				e.stopPropagation();
+			});
+
+			//On focus add class to display focus style
+			$input.bind('focus', function(){
+				form.checkbox.onFocus(this);
+			});
+
+			//On blur remove class to display focus style
+			$input.bind('blur', function(){
+				form.checkbox.onBlur(this);
+			})
+		},
+		onChange: function($id){
+			if(typeof $id == 'undefined'){
+				$id ='';
+			}
+
+			$id = escape_string($id);
+
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$label = jQuery('label[for="'+$id+'"]');
+
+			if(!$input.is(':disabled')){
+				if($input.prop('checked')){
+					$label.removeClass('checked');
+				}else{
+					$label.addClass('checked');
+				}
+			}else{
+				jQuery(this).addClass('disabled');
+			}
+		},
+		onSet: function($id){
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$label = jQuery('label[for="'+$id+'"]');
 			$label.addClass('checked');
+			$input.prop('checked', true);
+		},
+		onUnset: function($id){
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$label = jQuery('label[for="'+$id+'"]');
+			$label.removeClass('checked');
+			$input.prop('checked', false);
+		},
+		onFocus: function($this){
+			jQuery($this).closest(form.checkbox.selector).addClass('focus');
+
+		},
+		onBlur: function($this){
+			jQuery($this).closest(form.checkbox.selector).removeClass('focus');
 		}
-	}else{
-		jQuery(this).addClass('disabled');
+	},
+
+	//Radio input
+	radio: {
+
+		selector: '.radio',
+		labelSelector: '.radio label',
+		input: 'input[type="radio"]',
+
+		init: function(){
+
+			var $input = jQuery(form.radio.input);
+
+			//On page load set
+			$input.each(function(){
+
+				var $self = jQuery(this);
+
+				//Check if there is checked class in input
+				if($self.is(':checked')){
+					var $id = jQuery(this).attr('id');
+					form.radio.onSet($id);
+				}
+
+				//Check if input is disabled
+				if($self.is(':disabled')){
+					$self.closest(form.radio.selector).find('label').addClass('disabled');
+				}
+			});
+
+			//On click action
+			jQuery(form.radio.labelSelector).on('click', function(){
+				var $id = jQuery(this).attr('for');
+				form.radio.onChange($id);
+			});
+
+			//Fix IE11 force trigger if image is in label
+			jQuery(form.checkbox.labelSelector + ' > img').on('click', function(){
+				var $label = jQuery(this).closest('label'),
+					$id = $label.attr('for');
+				$label.trigger('click');
+				form.radio.onChange($id);
+			});
+
+			//On space click action
+			$input.keypress(function(e) {
+				if (e.keyCode == 0 || e.keyCode == 32) {
+					var $id = jQuery(this).attr('id');
+					form.radio.onChange($id);
+
+					return false;
+				}
+			});
+
+			//On left, right, up, down change radio state
+			$input.keyup(function(e) {
+				if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
+					var $id = jQuery(this).attr('id');
+					form.radio.onChange($id);
+				}
+			});
+
+			//Stop radio from activating if there is a link in label
+			jQuery(form.checkbox.labelSelector + ' a').on('click',function(e){
+				e.stopPropagation();
+			});
+
+			//On focus add class to display focus style
+			$input.bind('focus', function(){
+				form.radio.onFocus(this);
+			});
+
+			//On blur remove class to display focus style
+			$input.bind('blur', function(){
+				form.radio.onBlur(this);
+			})
+		},
+		onChange: function($id){
+			if(typeof $id == 'undefined'){
+				$id ='';
+			}
+
+			$id = escape_string($id);
+
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$groupName = $input.attr('name'),
+				$label = jQuery('label[for="'+$id+'"]');
+
+			if(!$input.is(':disabled')){
+				jQuery('.radio[data-group="'+$groupName+'"] label').removeClass('checked');
+				$label.addClass('checked');
+			}else{
+				jQuery(this).addClass('disabled');
+			}
+		},
+		onSet: function($id){
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$group = $input.attr('name'),
+				$label = jQuery('label[for="'+$id+'"]');
+			jQuery('.radio[data-group="'+$group+'"] label').removeClass('checked');
+			$label.addClass('checked');
+			$input.prop('checked', true);
+		},
+		onUnset: function($id){
+			var $input = jQuery('input[id="'+$id+'"]'),
+				$groupName = $input.attr('name'),
+				$group = jQuery('.radio[data-group="'+$groupName+'"]');
+			$group.find('label').removeClass('checked');
+			$group.find('input[type="radio"]').prop('checked', false);
+		},
+		onUnsetGroup: function(group){
+			var $groupSelector = jQuery('.radio[data-group="'+group+'"]');
+			$groupSelector.find('label').removeClass('checked');
+			$groupSelector.find(form.radio.input).prop('checked', false);
+		},
+		onFocus: function($this){
+			jQuery($this).closest(form.radio.selector).addClass('focus');
+
+		},
+		onBlur: function($this){
+			jQuery($this).closest(form.radio.selector).removeClass('focus');
+		}
+	},
+
+	//Upload files
+	upload: {
+		selector: '.upload',
+		inputSelector: 'input[type=text]',
+		btnSelector: '.btn',
+		inputUploadSelector: 'input[type=file]',
+
+		init: function(){
+			var $uplod = jQuery(form.upload.selector);
+
+			$uplod.find(form.upload.inputSelector).on('click', function () {
+				jQuery(this).closest(form.upload.selector).find(form.upload.inputUploadSelector).trigger('click');
+			});
+
+			$uplod.find(form.upload.btnSelector).on('click', function (e) {
+				e.preventDefault();
+				jQuery(this).closest(form.upload.selector).find(form.upload.inputUploadSelector).trigger('click');
+			});
+
+			$uplod.find(form.upload.inputUploadSelector).on('change', function () {
+				var $self = jQuery(this);
+				$self.closest(form.upload.selector).find(form.upload.inputSelector).val($self.val());
+			});
+
+		}
+	},
+
+	//Add Focus Class on field
+	fieldFocus:{
+
+		selector: 'input, select, textarea',
+		fieldSelector: '.field',
+
+		init: function(){
+			var $selector = jQuery(form.fieldFocus.selector);
+
+			//On focus add class to display focus style
+			$selector.bind('focus', function(){
+				form.fieldFocus.onFocus(this);
+			});
+
+			//On blur remove class to display focus style
+			$selector.bind('blur', function(){
+				form.fieldFocus.onBlur(this);
+			})
+		},
+
+		onFocus: function($this){
+			jQuery($this).closest(form.fieldFocus.fieldSelector).addClass('focus');
+
+		},
+		onBlur: function($this){
+			jQuery($this).closest(form.fieldFocus.fieldSelector).removeClass('focus');
+		}
 	}
 
-}
-
-//Checkbox set by id
-function checkbox_set($id){
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$label = jQuery('label[for="'+$id+'"]');
-	$label.addClass('checked');
-	$input.prop('checked', true);
-}
-
-//Checkbox unset by id
-function checkbox_unset($id){
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$label = jQuery('label[for="'+$id+'"]');
-	$label.removeClass('checked');
-	$input.prop('checked', false);
-}
+};
 
 /////////////////////////////////////////////////////////////////////////////////
 
-//Radio script
-function radio(id){
+//Modal Window script
+modal = {
+	openSelector: '.open_modal, .modal_open',
+	closeSelector: '.close_modal, .modal_close',
+	overlaySelector: '.m_overlay',
+	modalSelector: '.modal',
 
-	var $input = jQuery('input[type=radio]');
+	init: function(){
 
-	//On page load set
-	$input.each(function(){
+		//Open on click
+		jQuery(modal.openSelector).on('click', function(e) {
+			e.preventDefault();
+			var $modalId = jQuery(this).attr('data-modal');
 
-		//Check if there is checked class in input
-		if(jQuery(this).is(':checked')){
-			var $id = jQuery(this).attr('id');
-			radio_set($id);
-		}
+			modal.onOpen($modalId);
+		});
 
-		//Check if input is disabled
-		if(jQuery(this).is(':disabled')){
-			jQuery(this).closest('.radio').find('label').addClass('disabled');
-		}
-	});
-
-	//On click action
-	jQuery('.radio label').on('click', function(){
-		var $id = jQuery(this).attr('for');
-		radio_change($id)
-	});
-
-	//Fix IE11 force trigger if image is in label
-	jQuery('.radio label > img').on('click', function(){
-		var $label = jQuery(this).closest('label'),
-			$id = $label.attr('for');
-		$label.trigger('click');
-		radio_change($id);
-	});
-
-	//On space click action
-	$input.keypress(function(e) {
-		if (e.keyCode == 0 || e.keyCode == 32) {
-			var $id = jQuery(this).attr('id');
-			radio_change($id);
-
-			console.log(e.keyCode);
-			return false;
-		}
-	});
-
-	//On left, right, up, down change radio state
-	$input.keyup(function(e) {
-		if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
-			var $id = jQuery(this).attr('id');
-			radio_change($id);
-		}
-	});
-
-	//Stop radio from activating if there is a link in label
-	jQuery('.radio label a').on('click',function(e){
-		e.stopPropagation();
-	});
-
-	//On focus add class to display focus style
-	$input.bind('focus', function(){
-		jQuery(this).closest('.radio').addClass('focus');
-	});
-
-	//On blur remove class to display focus style
-	$input.bind('blur', function(){
-		jQuery(this).closest('.radio').removeClass('focus');
-	})
-}
-
-//Radio change state
-function radio_change($id){
-	if(typeof $id == 'undefined'){
-		$id ='';
-	}
-
-	$id = escape_string($id);
-
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$input_group = $input.attr('name'),
-		$label = jQuery('label[for="'+$id+'"]');
-
-	if(!$input.is(':disabled')){
-		jQuery('.radio[data-group="'+$input_group+'"] label').removeClass('checked');
-		$label.addClass('checked');
-	}else{
-		jQuery(this).addClass('disabled');
-	}
-}
-
-//Radio set by id
-function radio_set($id){
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$input_group = $input.attr('name'),
-		$label = jQuery('label[for="'+$id+'"]');
-	jQuery('.radio[data-group="'+$input_group+'"] label').removeClass('checked');
-	$label.addClass('checked');
-	$input.prop('checked', true);
-}
-
-//Radio unset by id
-function radio_unset($id){
-	var $input = jQuery('input[id="'+$id+'"]'),
-		$input_group = $input.attr('name'),
-		$group = jQuery('.radio[data-group="'+$input_group+'"]');
-	$group.find('label').removeClass('checked');
-	$group.find('input[type="radio"]').prop('checked', false);
-}
-
-//Radio unset by group name
-function radio_group_unset($input_group){
-	var $group = jQuery('.radio[data-group="'+$input_group+'"]');
-	$group.find('label').removeClass('checked');
-	$group.find('input[type="radio"]').prop('checked', false);
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-
-//Select script
-function select($id){
-
-	if(typeof $id == 'undefined'){
-		$id ='.select';
-	}
-
-	var $input = jQuery('select');
-
-	//On init
-	$input.each(function(){
-		var $this = jQuery(this),
-			$style = $this.attr('data-style'),
-			$select = $this.closest($id).outerWidth()+50;
-
-		if($style !== 'false' && $this.parents($id).length == 0){
-			$this.wrap('<div class="select field-row"></div>'); //Field-row class is for magento
-		}
-		if($style !== 'false') {
-			$this.css({minWidth: $select});
-		}
-
-		jQuery(window).resize(function(){
-			$select = $this.closest($id).outerWidth()+50;
-			if($style !== 'false') {
-				$this.css({minWidth: $select});
+		//Close modal on Esc key
+		jQuery(document).keyup(function (e) {
+			if (e.keyCode == 27) {
+				modal.onClose();
 			}
 		});
-	});
 
-	//On focus add class to display focus style
-	$input.bind('focus', function(){
-		jQuery(this).closest($id).addClass('focus');
-	});
+		//Close modal on .close_modal class
+		jQuery(modal.closeSelector+', '+modal.overlaySelector).on('click', function (e) {
+			e.preventDefault();
+			var $modal = jQuery(this).closest(modal.modalSelector),
+				$modalId = $modal.attr('data-modal'),
+				$closeOnOverlayAction = $modal.attr('data-close-on-overlay');
 
-	//On blur remove class to display focus style
-	$input.bind('blur', function(){
-		jQuery(this).closest($id).removeClass('focus');
-	})
-}
+			if($closeOnOverlayAction !== 'false') {
+				modal.onClose($modalId);
+			}
+
+		});
+
+	},
+
+	//Modal open by id
+	onOpen: function($modalId){
+		var $modal = jQuery(modal.modalSelector+'[data-modal="'+$modalId+'"]');
+
+		$modal.find('.m_content_wrap').css('top', modal.calculatePosition($modalId));
+		$modal.addClass('active');
+
+		jQuery('body').css('paddingRight', modal.calculateScrollBarSize());
+		jQuery('html').addClass('modal_active');
+
+		jQuery(window).resize(function(){
+			$modal.find('.m_content_wrap').css('top', modal.calculatePosition($modalId));
+		});
+	},
+
+	//Modal close by id
+	onClose: function($modalId){
+
+		var $modal;
+		if(typeof $modalId == 'undefined'){
+			$modal = jQuery(modal.modalSelector);
+		}else{
+			$modal = jQuery(modal.modalSelector+'[data-modal="'+$modalId+'"]');
+		}
+
+		$modal.removeClass('active');
+		jQuery('html').removeClass('modal_active');
+		jQuery('body').css('paddingRight', '');
+
+	},
+
+	//Modal Calculate center position if data-slide is scale
+	calculatePosition: function($modalId){
+		var $modal;
+		if(typeof $modalId == 'undefined'){
+			$modal = jQuery(modal.modalSelector);
+		}else{
+			$modal = jQuery(modal.modalSelector+'[data-modal="'+$modalId+'"]');
+		}
+
+		if($modal.attr('data-slide') == 'scale') {
+			var $windowHeight = jQuery(window).height(),
+				$modalHeight = $modal.find('.m_content').outerHeight(),
+				$move;
+
+			//Check calculations
+			if ($windowHeight <= $modalHeight) {
+				$move = 0;
+			} else {
+				$move = ($windowHeight - $modalHeight) / 2;
+			}
+		}
+
+		return $move;
+	},
+
+	//Calculate browsers scrollBar width
+	calculateScrollBarSize: function(){
+		return (window.innerWidth-$(window).width());
+	}
+};
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -457,22 +647,6 @@ function tooltip() {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-//Upload script
-function upload(){
-	jQuery('.upload input[type=text]').click(function() {
-		jQuery(this).closest('.upload').find('input[type=file]').trigger('click');
-	});
-	jQuery('.upload .btn').click(function(e) {
-		e.preventDefault();
-		jQuery(this).closest('.upload').find('input[type=file]').trigger('click');
-	});
-	jQuery('.upload input[type=file]').change(function() {
-		jQuery(this).closest('.upload').find('input[type=text]').val(jQuery(this).val());
-	});
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-
 //Tabs script
 function tabs($tabs_id){
 
@@ -617,105 +791,6 @@ function accordion_close($id, $accordion){
 
 /////////////////////////////////////////////////////////////////////////////////
 
-//Modal Window script
-function modal(){
-
-	var $modal_id = '.modal',
-		$modal = jQuery($modal_id);
-
-	//Open on click
-	jQuery('.open_modal, .modal_open').on('click', function(e) {
-		e.preventDefault();
-		var $id = jQuery(this).attr('data-modal');
-		modal_open($id);
-	});
-
-	//Close modal on Esc key
-	jQuery(document).keyup(function (e) {
-		if (e.keyCode == 27) {
-			modal_close();
-		}
-	});
-
-	//Close modal on overlay click
-	jQuery('.m_overlay').on('click', function () {
-		var $modal = jQuery(this).closest('.modal'),
-			$id = $modal.attr('data-modal'),
-			$action = $modal.attr('data-close-on-overlay');
-
-		if($action !== 'false') {
-			modal_close($id);
-		}
-	});
-
-	//Close modal on .close_modal class
-	jQuery('.close_modal, .modal_close').on('click', function (e) {
-		e.preventDefault();
-		var $modal = jQuery(this).closest('.modal'),
-			$id = $modal.attr('data-modal'),
-			$action = $modal.attr('data-close-on-btn');
-
-		if($action !== 'false') {
-			modal_close($id);
-		}
-	});
-}
-
-//Modal open by id
-function modal_open($id){
-	var $modal = jQuery('.modal[data-modal="'+$id+'"]');
-	modal_calculate_center($id);
-	$modal.addClass('active');
-	jQuery('html').addClass('modal_active');
-
-	jQuery(window).resize(function(){
-		modal_calculate_center($id);
-	});
-}
-
-//Modal close by id
-function modal_close($id){
-
-	var $modal;
-	if(typeof $id == 'undefined'){
-		$modal = jQuery('.modal');
-	}else{
-		$modal = jQuery('.modal[data-modal="'+$id+'"]');
-	}
-
-	$modal.removeClass('active');
-	jQuery('html').removeClass('modal_active');
-}
-
-//Modal Calculate center position if data-slide is scale
-function modal_calculate_center($id){
-
-	var $modal;
-	if(typeof $id == 'undefined'){
-		$modal = jQuery('.modal');
-	}else{
-		$modal = jQuery('.modal[data-modal="'+$id+'"]');
-	}
-
-	if($modal.attr('data-slide') == 'scale') {
-		var $window_height = jQuery(window).height(),
-			$modal_height = $modal.find('.m_content').outerHeight(),
-			$move;
-
-		//Check calculations
-		if ($window_height <= $modal_height) {
-			$move = 0;
-		} else {
-			$move = ($window_height - $modal_height) / 2;
-		}
-
-		//Add value to css
-		$modal.find('.m_content_wrap').css('top', $move);
-	}
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-
 //Make and object stick to the top on scroll
 function sticky($id){
 
@@ -798,20 +873,6 @@ function scrollTo($id, $offset){
 		scrollTop: jQuery($id).offset().top - $offset
 	}, 500);
 	return false;
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-
-//On focus add class to field
-function fields_focus(){
-	var $selector = jQuery('input, select, textarea');
-	$selector.bind('focus', function(){
-		jQuery(this).closest('.field').addClass('focus');
-	});
-
-	$selector.bind('blur', function(){
-		jQuery(this).closest('.field').removeClass('focus');
-	})
 }
 
 /////////////////////////////////////////////////////////////////////////////////

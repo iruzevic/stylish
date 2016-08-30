@@ -75,6 +75,6 @@ Version: 1.0
 
 // Remove scroll on all platforms
 html.modal_active{
-	overflow-y: hidden;-webkit-overflow-scrolling:touch; position: absolute; height: 100%; width: 100%;
-	body{overflow-y: hidden;-webkit-overflow-scrolling:touch; position: absolute; height: 100%; width: 100%;}
+	overflow-y: hidden;-webkit-overflow-scrolling:touch; /*position: absolute; height: 100%; width: 100%;*/
+	body{overflow-y: hidden;-webkit-overflow-scrolling:touch; /*position: absolute; height: 100%; width: 100%;*/}
 }
